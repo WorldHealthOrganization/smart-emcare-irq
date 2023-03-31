@@ -840,7 +840,7 @@
                             }
                         }
                     ],
-                    "linkId": "rppatientid",
+                    "linkId": "relatedpersonid",
                     "type": "string",
                     "required": false,
                     "repeats": false

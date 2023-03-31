@@ -96,31 +96,31 @@
     </parameter>
     <parameter>
       <code value="path-pages" />
-      <value value="ext-ig/cpg"/>
-    </parameter>
-    <parameter>
-      <code value="path-pages" />
-      <value value="ext-ig/who"/>
-    </parameter>
-    <parameter>
-      <code value="path-pages" />
       <value value="input/pagecontent"/>
     </parameter>
     <parameter>
       <code value="path-resource" />
-      <value value="input/resources/activitydefinition"/>
+      <value value="input/ext-ig/cpg/"/>
     </parameter>
     <parameter>
       <code value="path-resource" />
-      <value value="input/resources/library"/>
+      <value value="input/ext_ig/who/"/>
     </parameter>
     <parameter>
       <code value="path-resource" />
-      <value value="input/resources/plandefinition"/>
+      <value value="input/resources/activitydefinition/"/>
     </parameter>
     <parameter>
       <code value="path-resource" />
-      <value value="input/profiles/"/>
+      <value value="input/resources/library/"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource" />
+      <value value="input/resources/plandefinition/"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource" />
+      <value value="input/resources/structuredefinition/"/>
     </parameter>
     <parameter>
       <code value="path-resource" />
@@ -128,19 +128,19 @@
     </parameter>
     <parameter>
       <code value="path-resource" />
-      <value value="input/resources/questionnaire"/>
+      <value value="input/resources/questionnaire/"/>
     </parameter>
     <parameter>
       <code value="path-resource" />
-      <value value="input/resources/structuremap"/>
+      <value value="input/resources/structuremap/"/>
     </parameter>
     <parameter>
       <code value="path-resource" />
-      <value value="input/vocabulary/codesystem"/>
+      <value value="input/vocabulary/codesystem/"/>
     </parameter>
     <parameter>
       <code value="path-resource" />
-      <value value="input/vocabulary/valueset"/>
+      <value value="input/vocabulary/valueset/"/>
     </parameter>
     <parameter>
       <code value="path-liquid"/>

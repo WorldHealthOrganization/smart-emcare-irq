@@ -110,9 +110,9 @@ The model for data elements represented within this implementation guide is base
 
 |Profile|
 |---|
-|[ANC Condition](StructureDefinition-anc-condition.html)|
-|[ANC Observation](StructureDefinition-anc-observation.html)|
-|[ANC Patient](StructureDefinition-anc-patient.html)|
+|[EmCare Condition](structuredefinition-emcare-condition.html)|
+|[EmCare Observation](structuredefinition-emcare-observation.html)|
+|[EmCare Patient](structuredefinition-emcare-patient.html)|
 
 
 #### Data Elements by Activity

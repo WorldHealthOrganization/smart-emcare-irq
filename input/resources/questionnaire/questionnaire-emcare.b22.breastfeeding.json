@@ -296,7 +296,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
-                        "expression": "%resource.repeat(item).where(linkId='EmCare.B22.DE40').answer.first().exists()"
+                        "expression": "%resource.repeat(item).where(linkId='EmCare.B22.DE40').answer.first().exists() and %resource.repeat(item).where(linkId='EmCare.B22.DE35').answer.first().exists() and %resource.repeat(item).where(linkId='EmCare.B22.DE31').answer.first().exists() and %resource.repeat(item).where(linkId='EmCare.B22.DE32').answer.first().exists() and %resource.repeat(item).where(linkId='EmCare.B22.DE33').answer.first().exists()  and %resource.repeat(item).where(linkId='EmCare.B22.DE34').answer.first().exists()"
                     }
                 },
                 {

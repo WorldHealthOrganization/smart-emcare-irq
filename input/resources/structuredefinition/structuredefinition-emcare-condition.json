@@ -6,23 +6,31 @@
     "title": "EmCare Condition",
     "status": "active",
     "experimental": false,
+    "description": "EmCare Condition",
     "fhirVersion": "4.0.1",
     "kind": "resource",
     "abstract": false,
     "type": "Condition",
-    "baseDefinition": "nan",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Condition",
     "derivation": "specialization",
     "differential": {
         "element": [
             {
-                "id": "Condition:postcoordination",
-                "path": "Condition",
+                "id": "Condition",
+                "path": "Condition"
+            },
+            {
+                "id": "Condition.extension:postcoordination",
+                "path": "Condition.extension",
                 "short": "postcoordination",
                 "min": 0,
                 "max": "*",
                 "type": [
                     {
-                        "code": "CodeableConcept"
+                        "code": "Extension",
+                        "profile": [
+                            "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/postcoordination"
+                        ]
                     }
                 ]
             }

@@ -105,12 +105,6 @@
             ]
         },
         {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
-                    "valueCode": "horizontal"
-                }
-            ],
             "linkId": "EmCare.B18S1.DE02",
             "text": "Difficulty with Feeding",
             "type": "choice",
