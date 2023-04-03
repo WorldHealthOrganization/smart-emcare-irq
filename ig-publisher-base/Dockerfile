@@ -1,5 +1,5 @@
-FROM jekyll/jekyll
-
+FROM ruby:latest
+COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 # instalöl python https://stackoverflow.com/a/62555259
 ENV PYTHONUNBUFFERED=1
 #https://github.com/tianon/gosu/blob/master/INSTALL.md
@@ -11,11 +11,7 @@ RUN apk update &&\
 
 RUN python3 -m ensurepip
 RUN pip3 install --no-cache --upgrade pip setuptools
-
-
-
-
-ENV PATH="/usr/local/rvm/bin:/usr/local/rvm/rubies/ruby-2.5.1/bin:${PATH}"
+RUN gem install jekyll 
 
 #RUN  cd /tmp && \
 #     wget --quiet https://nodejs.org/dist/v12.22.12/node-v12.22.12-linux-x64.tar.xz && \
@@ -43,7 +39,7 @@ WORKDIR /home/publisher/ig
 VOLUME /home/publisher/ig
 
 USER root
-COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+
 RUN ["chmod", "+x", "/usr/local/bin/docker-entrypoint.sh"]
 
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
