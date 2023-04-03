@@ -1,17 +1,16 @@
-FROM ruby:latest
+FROM ruby:buster
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 # instalöl python https://stackoverflow.com/a/62555259
 ENV PYTHONUNBUFFERED=1
 #https://github.com/tianon/gosu/blob/master/INSTALL.md
 
-RUN apk update &&\
-    apk add --update --no-cache gosu --repository="http://dl-cdn.alpinelinux.org/alpine/edge/testing"   &&\
-    apk add --update --no-cache  openssl wget graphviz python3  openjdk11 curl &&\
+RUN apt-get update &&\
+    apt-get install -y gosu  openssl wget graphviz python3 python3-pip openjdk-11-jre-headless curl &&\
     ln -sf python3 /usr/bin/python
 
-RUN python3 -m ensurepip
+#RUN python3 -m ensurepip
 RUN pip3 install --no-cache --upgrade pip setuptools
-RUN gem install jekyll 
+RUN gem install jekyll && jekyll -v
 
 #RUN  cd /tmp && \
 #     wget --quiet https://nodejs.org/dist/v12.22.12/node-v12.22.12-linux-x64.tar.xz && \
