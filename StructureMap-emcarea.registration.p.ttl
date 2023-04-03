@@ -1,0 +1,1936 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/who/emcare/StructureMap/emcarea.registration.p> a fhir:StructureMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "emcarea.registration.p"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><pre>map &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcarea.registration.p&quot; = &quot;emcarea.registration.p&quot;\r\n\r\n\r\nuses &quot;http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse&quot; alias 'questionnaireResponse' as source\r\nuses &quot;http://hl7.org/fhir/StructureDefinition/Bundle&quot; alias 'Bundle' as target\r\nuses &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/patient&quot; alias 'Patient' as target\r\nuses &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/relatedperson&quot; alias 'RelatedPerson' as target\r\nuses &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/communicationrequest&quot; alias 'CommunicationRequest' as target\r\nuses &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcarepatient&quot; alias 'EmCare Patient' as produced\r\nuses &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/relatedperson&quot; alias 'RelatedPerson' as produced\r\nuses &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/communicationrequest&quot; alias 'CommunicationRequest' as produced\r\n\r\ngroup bundletrans(source src : questionnaireResponse, target bundle : Bundle) {\r\n  src -&gt; bundle.id = uuid() &quot;id&quot;;\r\n  src -&gt; bundle.type = 'batch' &quot;type&quot;;\r\n  src -&gt; bundle.entry as entry then {\r\n    src.subject as subject then {\r\n      subject.id as idval -&gt;  entry.request as request,  request.method = 'PUT',  request.url = append('/Patient/', idval) &quot;1153aa45&quot;;\r\n    } &quot;cf5b2513&quot;;\r\n    src -&gt; entry.resource = create('Patient') as tgt then {\r\n      src -&gt; tgt then emcarepatient(src, tgt) &quot;77f3ac03&quot;;\r\n    } &quot;75beb242&quot;;\r\n  } &quot;put-emcarepatient&quot;;\r\n  src.item first as itm1 where linkId = 'EmCare.A.DE21.1' then {\r\n    itm1.item first as item where (linkId = 'relatedpersonid') and answer.exists() then {\r\n      src -&gt;  bundle.entry as entry,  entry.request as request,  request.method = 'POST',  entry.resource = create('RelatedPerson') as tgt then {\r\n        src -&gt; tgt then relatedperson(src, tgt) &quot;8f0b9602&quot;;\r\n        item.answer first as a then {\r\n          a.value as val -&gt; request.url = append('/RelatedPerson/', val) &quot;78d8bc69&quot;;\r\n        } &quot;eec70023&quot;;\r\n      } &quot;00574b8e&quot;;\r\n    } &quot;74cc3511&quot;;\r\n  } &quot;54daac33&quot;;\r\n  src.item first as itm1 where linkId = 'EmCare.A.DE21.1' then {\r\n    itm1.item first as item where (linkId = 'EmCare.A.DE38') and answer.exists() then {\r\n      src -&gt; bundle.entry as entry then {\r\n        src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/CommunicationRequest/', uuid) &quot;e5343f50&quot;;\r\n        src -&gt; entry.resource = create('CommunicationRequest') as tgt then {\r\n          src -&gt; tgt then communicationrequestemcareade38(src, tgt) &quot;82d8a873&quot;;\r\n        } &quot;33eeb100&quot;;\r\n      } &quot;d4cd942b&quot;;\r\n    } &quot;5ca7be0f&quot;;\r\n  } &quot;b78fbe33&quot;;\r\n}\r\n\r\ngroup SetOfficalGivenNameemcarepatient(source src, target tgt) {\r\n  src -&gt; tgt.use = 'official' then {\r\n    src.item first as item where (linkId = 'EmCare.A.DE06') and answer.exists() then {\r\n      item.answer first as a then {\r\n        a.value as val -&gt; tgt.family = val &quot;77d1bd4f&quot;;\r\n      } &quot;e0827d5d&quot;;\r\n    } &quot;607c4e16&quot;;\r\n    src.item first as item where (linkId = 'EmCare.A.DE04') and answer.exists() then {\r\n      item.answer first as a then {\r\n        a.value as val -&gt; tgt.given = val &quot;5d3d44f6&quot;;\r\n      } &quot;18edd234&quot;;\r\n    } &quot;e9deb0f3&quot;;\r\n    src.item first as item where (linkId = 'EmCare.A.DE05') and answer.exists() then {\r\n      item.answer first as a then {\r\n        a.value as val -&gt; tgt.given = val &quot;5d3d44f6&quot;;\r\n      } &quot;18edd234&quot;;\r\n    } &quot;d95279c0&quot;;\r\n  } &quot;ef0f6810&quot;;\r\n}\r\n\r\ngroup MapValueSetExtCodeemcareade16(source src, target tgt) {\r\n  src -&gt; tgt then {\r\n    src -&gt; tgt then {\r\n      src where value.code = 'EmCare.A.DE17' -&gt; tgt.gender = 'female' &quot;368f2e2a&quot;;\r\n      src where value.code = 'EmCare.A.DE18' -&gt; tgt.gender = 'male' &quot;2ae3beca&quot;;\r\n      src where value.code = 'EmCare.A.DE19' -&gt; tgt.gender = 'unknown' &quot;de22e8b7&quot;;\r\n    } &quot;mapbase&quot;;\r\n  } &quot;57676688&quot;;\r\n}\r\n\r\ngroup emcarepatient(source src : questionnaireResponse, target tgt : Patient) {\r\n  src.item first as item where (linkId = 'EmCare.A.DE01') and answer.exists() then {\r\n    item.answer first as a then {\r\n      a.value as val -&gt; tgt.identifier = create('Identifier') as identifier then {\r\n        val -&gt;  identifier.value = val,  identifier.use = 'official' &quot;id&quot;;\r\n      } &quot;aemcareade01&quot;;\r\n    } &quot;aemcareade01&quot;;\r\n  } &quot;c243b020&quot;;\r\n  src.item first as item where (linkId = 'EmCare.A.DE03') and answer.exists() then {\r\n    item.answer first as a -&gt;  tgt.extension = create('Extension') as ext,  ext.url = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/anonymous',  ext.value = true &quot;aemcareade03&quot;;\r\n  } &quot;54d12495&quot;;\r\n  src.item first as item where (linkId = 'EmCare.A.DE06') or (linkId = 'EmCare.A.DE04') or ((linkId = 'EmCare.A.DE05') and answer.exists()) then {\r\n    src -&gt;  tgt as target,  target.name as name then SetOfficalGivenNameemcarepatient(src, name) &quot;30643049&quot;;\r\n  } &quot;7483ae2e&quot;;\r\n  src.item first as item where (linkId = 'EmCare.A.DE12') and answer.exists() then {\r\n    item.answer first as a then {\r\n      a.value as val -&gt;  tgt.extension = create('Extension') as ext,  ext.url = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/birthDateEstimator',  ext.value = val &quot;aemcareade12&quot;;\r\n    } &quot;aemcareade12&quot;;\r\n  } &quot;c05cf203&quot;;\r\n  src.item first as item where (linkId = 'EmCare.A.DE08') and answer.exists() then {\r\n    item.answer first as a then {\r\n      a.value as val -&gt; tgt.birthDate = val &quot;aemcareade08&quot;;\r\n    } &quot;aemcareade08&quot;;\r\n  } &quot;bded6ae8&quot;;\r\n  src.item first as item where (linkId = 'EmCare.A.DE16') and answer.exists() then {\r\n    item.answer first as a then MapValueSetExtCodeemcareade16(a, tgt) &quot;225baa79&quot;;\r\n  } &quot;bf4b35f0&quot;;\r\n  src.item first as item where (linkId = 'EmCare.A.DE48') and answer.exists() then {\r\n    item.answer first as a -&gt;  tgt.extension = create('Extension') as ext,  ext.url = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/primarycaregiver',  ext.value = create('Reference') as ref,  ref.reference = 'relatated-person-id' &quot;aemcareade48&quot;;\r\n  } &quot;04772b09&quot;;\r\n  src.item first as itm1 where linkId = 'EmCare.A.DE21.1' then {\r\n    itm1.item first as item where (linkId = 'EmCare.A.DE31') and answer.exists() then {\r\n      item.answer first as a then {\r\n        a.value as val -&gt;  tgt.extension = create('Extension') as ext,  ext.url = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Extension/motherVitalStatus',  ext.value = val &quot;aemcareade31&quot;;\r\n      } &quot;aemcareade31&quot;;\r\n    } &quot;7f408694&quot;;\r\n  } &quot;39f45e5d&quot;;\r\n  src.item first as itm1 where linkId = 'EmCare.A.DE21.1' then {\r\n    itm1.item first as item where (linkId = 'EmCare.A.DE32') and answer.exists() then {\r\n      item.answer first as a then {\r\n        a.value as val -&gt;  tgt.extension = create('Extension') as ext,  ext.url = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Extension/fatherVitalStatus',  ext.value = val &quot;aemcareade32&quot;;\r\n      } &quot;aemcareade32&quot;;\r\n    } &quot;06ec2524&quot;;\r\n  } &quot;f7424037&quot;;\r\n}\r\n\r\ngroup SetOfficalGivenNamerelatedperson(source src, target tgt) {\r\n  src -&gt; tgt.use = 'official' then {\r\n    src.item first as itm1 where linkId = 'EmCare.A.DE21.1' then {\r\n      itm1.item first as item where (linkId = 'EmCare.A.DE23') and answer.exists() then {\r\n        item.answer first as a then {\r\n          a.value as val -&gt; tgt.family = val &quot;77d1bd4f&quot;;\r\n        } &quot;e0827d5d&quot;;\r\n      } &quot;8c426238&quot;;\r\n    } &quot;4cc155ee&quot;;\r\n    src.item first as itm1 where linkId = 'EmCare.A.DE21.1' then {\r\n      itm1.item first as item where (linkId = 'EmCare.A.DE21') and answer.exists() then {\r\n        item.answer first as a then {\r\n          a.value as val -&gt; tgt.given = val &quot;5d3d44f6&quot;;\r\n        } &quot;18edd234&quot;;\r\n      } &quot;ad3fbc15&quot;;\r\n    } &quot;8bc880ed&quot;;\r\n    src.item first as itm1 where linkId = 'EmCare.A.DE21.1' then {\r\n      itm1.item first as item where (linkId = 'EmCare.A.DE22') and answer.exists() then {\r\n        item.answer first as a then {\r\n          a.value as val -&gt; tgt.given = val &quot;5d3d44f6&quot;;\r\n        } &quot;18edd234&quot;;\r\n      } &quot;e9ba83c8&quot;;\r\n    } &quot;17d8d988&quot;;\r\n  } &quot;f41b9847&quot;;\r\n}\r\n\r\ngroup MapValueSetExtCodeemcareade24(source src, target tgt) {\r\n  src -&gt; tgt then {\r\n    src -&gt;  tgt.relationship = create('CodeableConcept') as cc,  cc.coding = create('Coding') as coding then {\r\n      src where value.code = 'EmCare.A.DE25' -&gt;  coding.code = 'MTH',  coding.system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' &quot;abd34a78&quot;;\r\n      src where value.code = 'EmCare.A.DE26' -&gt;  coding.code = 'FTH',  coding.system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' &quot;b53d1d15&quot;;\r\n      src where value.code = 'EmCare.A.DE27' -&gt;  coding.code = 'SIB',  coding.system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' &quot;949ee35f&quot;;\r\n      src where value.code = 'EmCare.A.DE28' -&gt;  coding.code = 'EXT',  coding.system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' &quot;7c5a4400&quot;;\r\n      src where value.code = 'EmCare.A.DE29' -&gt;  coding.code = 'PRNINLAW',  coding.system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' &quot;544df0cc&quot;;\r\n      src where value.code = 'EmCare.A.DE30' -&gt;  coding.code = 'U',  coding.system = 'http://terminology.hl7.org/CodeSystem/v2-0131' &quot;8c2d96fc&quot;;\r\n    } &quot;4a251df5&quot;;\r\n  } &quot;1b7b6d7a&quot;;\r\n}\r\n\r\ngroup relatedperson(source src : questionnaireResponse, target tgt : RelatedPerson) {\r\n  src.item first as item where (linkId = 'emcarerelatedpersoncaregiverid') and answer.exists() then {\r\n    item.answer first as a then {\r\n      a.value as val -&gt;  tgt.extension = create('Extension') as ext,  ext.url = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/primary-caregiver',  ext.value = create('Reference') as ref,  ref.reference = append('/RelatedPerson/', val) &quot;aemcarerelatedpersoncaregiverid&quot;;\r\n    } &quot;aemcarerelatedpersoncaregiverid&quot;;\r\n  } &quot;04cd0ec2&quot;;\r\n  src.item first as itm1 where linkId = 'EmCare.A.DE21.1' then {\r\n    itm1.item first as item where (linkId = 'EmCare.A.DE23') or (linkId = 'EmCare.A.DE21') or ((linkId = 'EmCare.A.DE22') and answer.exists()) then {\r\n      src -&gt;  tgt as target,  target.name as name then SetOfficalGivenNamerelatedperson(src, name) &quot;8e1455ea&quot;;\r\n    } &quot;18dc21d5&quot;;\r\n  } &quot;f0e6459e&quot;;\r\n  src.item first as itm1 where linkId = 'EmCare.A.DE21.1' then {\r\n    itm1.item first as item where (linkId = 'EmCare.A.DE35') and answer.exists() then {\r\n      item.answer first as a then {\r\n        a.value as val -&gt;  tgt.telecom as tel,  tel.system = 'phone',  tel.use = 'mobile',  tel.value = val &quot;aemcareade35&quot;;\r\n      } &quot;aemcareade35&quot;;\r\n    } &quot;9731ba92&quot;;\r\n  } &quot;30b90d37&quot;;\r\n  src.item first as itm1 where linkId = 'EmCare.A.DE21.1' then {\r\n    itm1.item first as item where (linkId = 'relatedpersonid') and answer.exists() then {\r\n      item.answer first as a -&gt; tgt then {\r\n        src.subject as subject -&gt; tgt.patient = subject &quot;patient&quot;;\r\n      } &quot;arelatedpersonid&quot;;\r\n    } &quot;d79d72db&quot;;\r\n  } &quot;d50c1aed&quot;;\r\n  src.item first as itm1 where linkId = 'EmCare.A.DE21.1' then {\r\n    itm1.item first as item where (linkId = 'EmCare.A.DE24') and answer.exists() then {\r\n      item.answer first as a then MapValueSetExtCodeemcareade24(a, tgt) &quot;24e5e488&quot;;\r\n    } &quot;6adb811a&quot;;\r\n  } &quot;92a0e955&quot;;\r\n}\r\n\r\ngroup communicationrequestemcareade38(source src, target tgt) {\r\n  src -&gt;  tgt.category = create('CodeableConcept') as cc,  cc.coding = create('Coding') as c,  c.system = 'http://hl7.org/fhir/ValueSet/communication-category',  c.code = 'notification' &quot;053233cd&quot;;\r\n  src.questionnaire as q -&gt;  tgt.about = create('Reference') as ref,  ref.type = 'Questionnaire',  ref.reference = q &quot;quest&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;fe3bec4d&quot;;\r\n  src -&gt; tgt.recipient = create('Reference') as ref then {\r\n    src -&gt; ref.type = 'RelatedPerson' &quot;c26ab31f&quot;;\r\n    src.item first as item where linkId = 'emcarerelatedpersonCaregiveruuid' -&gt; tgt then {\r\n      item.answer first as a -&gt; tgt then {\r\n        a.value as val -&gt; ref.reference = append('/RelatedPerson/', val) &quot;25b16148&quot;;\r\n      } &quot;00b2016a&quot;;\r\n    } &quot;3c6c4c80&quot;;\r\n  } &quot;eaa7d3cf&quot;;\r\n}\r\n\r\n</pre></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcarea.registration.p"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "emcarea.registration.p"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2023-04-03T14:56:37+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "World Health Organization (WHO)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:structure ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse>
+     ] ;
+     fhir:mode [ fhir:v "source" ] ;
+     fhir:alias [ fhir:v "'questionnaireResponse'" ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/Bundle"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/Bundle>
+     ] ;
+     fhir:mode [ fhir:v "target" ] ;
+     fhir:alias [ fhir:v "'Bundle'" ]
+  ] [
+     fhir:url [
+       fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/patient"^^xsd:anyURI ;
+       fhir:link <https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/patient>
+     ] ;
+     fhir:mode [ fhir:v "target" ] ;
+     fhir:alias [ fhir:v "'Patient'" ]
+  ] [
+     fhir:url [
+       fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/relatedperson"^^xsd:anyURI ;
+       fhir:link <https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/relatedperson>
+     ] ;
+     fhir:mode [ fhir:v "target" ] ;
+     fhir:alias [ fhir:v "'RelatedPerson'" ]
+  ] [
+     fhir:url [
+       fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/communicationrequest"^^xsd:anyURI ;
+       fhir:link <https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/communicationrequest>
+     ] ;
+     fhir:mode [ fhir:v "target" ] ;
+     fhir:alias [ fhir:v "'CommunicationRequest'" ]
+  ] [
+     fhir:url [
+       fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcarepatient"^^xsd:anyURI ;
+       fhir:link <https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcarepatient>
+     ] ;
+     fhir:mode [ fhir:v "produced" ] ;
+     fhir:alias [ fhir:v "'EmCare Patient'" ]
+  ] [
+     fhir:url [
+       fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/relatedperson"^^xsd:anyURI ;
+       fhir:link <https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/relatedperson>
+     ] ;
+     fhir:mode [ fhir:v "produced" ] ;
+     fhir:alias [ fhir:v "'RelatedPerson'" ]
+  ] [
+     fhir:url [
+       fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/communicationrequest"^^xsd:anyURI ;
+       fhir:link <https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/communicationrequest>
+     ] ;
+     fhir:mode [ fhir:v "produced" ] ;
+     fhir:alias [ fhir:v "'CommunicationRequest'" ]
+  ] ) ; # 
+  fhir:group ( [
+     fhir:name [ fhir:v "bundletrans" ] ;
+     fhir:typeMode [ fhir:v "none" ] ;
+     fhir:input ( [
+       fhir:name [ fhir:v "src" ] ;
+       fhir:type [ fhir:v "questionnaireResponse" ] ;
+       fhir:mode [ fhir:v "source" ]
+     ] [
+       fhir:name [ fhir:v "bundle" ] ;
+       fhir:type [ fhir:v "Bundle" ] ;
+       fhir:mode [ fhir:v "target" ]
+     ] ) ;
+     fhir:rule ( [
+       fhir:name [ fhir:v "id" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "bundle" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "id" ] ;
+         fhir:transform [ fhir:v "uuid" ]
+       ] )
+     ] [
+       fhir:name [ fhir:v "type" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "bundle" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "type" ] ;
+         fhir:transform [ fhir:v "copy" ] ;
+         fhir:parameter ( [
+           fhir:value [ fhir:v "batch" ]
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "put-emcarepatient" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "bundle" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "entry" ] ;
+         fhir:variable [ fhir:v "entry" ]
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "cf5b2513" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ] ;
+           fhir:element [ fhir:v "subject" ] ;
+           fhir:variable [ fhir:v "subject" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "1153aa45" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "subject" ] ;
+             fhir:element [ fhir:v "id" ] ;
+             fhir:variable [ fhir:v "idval" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "entry" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "request" ] ;
+             fhir:variable [ fhir:v "request" ]
+           ] [
+             fhir:context [ fhir:v "request" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "method" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "PUT" ]
+             ] )
+           ] [
+             fhir:context [ fhir:v "request" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "url" ] ;
+             fhir:transform [ fhir:v "append" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "/Patient/" ]
+             ] [
+               fhir:value [ fhir:v "idval" ]
+             ] )
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "75beb242" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "entry" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "resource" ] ;
+           fhir:variable [ fhir:v "tgt" ] ;
+           fhir:transform [ fhir:v "create" ] ;
+           fhir:parameter ( [
+             fhir:value [ fhir:v "Patient" ]
+           ] )
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "77f3ac03" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "tgt" ]
+             ] )
+           ] ) ;
+           fhir:dependent ( [
+             fhir:name [ fhir:v "emcarepatient" ] ;
+             fhir:variable ( [
+               fhir:v "src" ;
+               fhir:extension ( [
+                 fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/original-item-type"^^xsd:anyURI ] ;
+                 fhir:value [ fhir:v "id"^^xsd:anyURI ]
+               ] )
+             ] [
+               fhir:v "tgt" ;
+               fhir:extension ( [
+                 fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/original-item-type"^^xsd:anyURI ] ;
+                 fhir:value [ fhir:v "id"^^xsd:anyURI ]
+               ] )
+             ] )
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "54daac33" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "item" ] ;
+         fhir:listMode [ fhir:v "first" ] ;
+         fhir:variable [ fhir:v "itm1" ] ;
+         fhir:condition [ fhir:v "linkId = 'EmCare.A.DE21.1'" ]
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "74cc3511" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "itm1" ] ;
+           fhir:element [ fhir:v "item" ] ;
+           fhir:listMode [ fhir:v "first" ] ;
+           fhir:variable [ fhir:v "item" ] ;
+           fhir:condition [ fhir:v "(linkId = 'relatedpersonid') and answer.exists()" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "00574b8e" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "bundle" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "entry" ] ;
+             fhir:variable [ fhir:v "entry" ]
+           ] [
+             fhir:context [ fhir:v "entry" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "request" ] ;
+             fhir:variable [ fhir:v "request" ]
+           ] [
+             fhir:context [ fhir:v "request" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "method" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "POST" ]
+             ] )
+           ] [
+             fhir:context [ fhir:v "entry" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "resource" ] ;
+             fhir:variable [ fhir:v "tgt" ] ;
+             fhir:transform [ fhir:v "create" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "RelatedPerson" ]
+             ] )
+           ] ) ;
+           fhir:rule ( [
+             fhir:name [ fhir:v "8f0b9602" ] ;
+             fhir:source ( [
+               fhir:context [ fhir:v "src" ]
+             ] ) ;
+             fhir:target ( [
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:transform [ fhir:v "copy" ] ;
+               fhir:parameter ( [
+                 fhir:value [ fhir:v "tgt" ]
+               ] )
+             ] ) ;
+             fhir:dependent ( [
+               fhir:name [ fhir:v "relatedperson" ] ;
+               fhir:variable ( [
+                 fhir:v "src" ;
+                 fhir:extension ( [
+                   fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/original-item-type"^^xsd:anyURI ] ;
+                   fhir:value [ fhir:v "id"^^xsd:anyURI ]
+                 ] )
+               ] [
+                 fhir:v "tgt" ;
+                 fhir:extension ( [
+                   fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/original-item-type"^^xsd:anyURI ] ;
+                   fhir:value [ fhir:v "id"^^xsd:anyURI ]
+                 ] )
+               ] )
+             ] )
+           ] [
+             fhir:name [ fhir:v "eec70023" ] ;
+             fhir:source ( [
+               fhir:context [ fhir:v "item" ] ;
+               fhir:element [ fhir:v "answer" ] ;
+               fhir:listMode [ fhir:v "first" ] ;
+               fhir:variable [ fhir:v "a" ]
+             ] ) ;
+             fhir:rule ( [
+               fhir:name [ fhir:v "78d8bc69" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "a" ] ;
+                 fhir:element [ fhir:v "value" ] ;
+                 fhir:variable [ fhir:v "val" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "request" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "url" ] ;
+                 fhir:transform [ fhir:v "append" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "/RelatedPerson/" ]
+                 ] [
+                   fhir:value [ fhir:v "val" ]
+                 ] )
+               ] )
+             ] )
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "b78fbe33" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "item" ] ;
+         fhir:listMode [ fhir:v "first" ] ;
+         fhir:variable [ fhir:v "itm1" ] ;
+         fhir:condition [ fhir:v "linkId = 'EmCare.A.DE21.1'" ]
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "5ca7be0f" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "itm1" ] ;
+           fhir:element [ fhir:v "item" ] ;
+           fhir:listMode [ fhir:v "first" ] ;
+           fhir:variable [ fhir:v "item" ] ;
+           fhir:condition [ fhir:v "(linkId = 'EmCare.A.DE38') and answer.exists()" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "d4cd942b" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "bundle" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "entry" ] ;
+             fhir:variable [ fhir:v "entry" ]
+           ] ) ;
+           fhir:rule ( [
+             fhir:name [ fhir:v "e5343f50" ] ;
+             fhir:source ( [
+               fhir:context [ fhir:v "src" ]
+             ] ) ;
+             fhir:target ( [
+               fhir:context [ fhir:v "entry" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "request" ] ;
+               fhir:variable [ fhir:v "request" ]
+             ] [
+               fhir:context [ fhir:v "request" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "method" ] ;
+               fhir:transform [ fhir:v "copy" ] ;
+               fhir:parameter ( [
+                 fhir:value [ fhir:v "POST" ]
+               ] )
+             ] [
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:variable [ fhir:v "uuid" ] ;
+               fhir:transform [ fhir:v "uuid" ]
+             ] [
+               fhir:context [ fhir:v "request" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "url" ] ;
+               fhir:transform [ fhir:v "append" ] ;
+               fhir:parameter ( [
+                 fhir:value [ fhir:v "/CommunicationRequest/" ]
+               ] [
+                 fhir:value [ fhir:v "uuid" ]
+               ] )
+             ] )
+           ] [
+             fhir:name [ fhir:v "33eeb100" ] ;
+             fhir:source ( [
+               fhir:context [ fhir:v "src" ]
+             ] ) ;
+             fhir:target ( [
+               fhir:context [ fhir:v "entry" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "resource" ] ;
+               fhir:variable [ fhir:v "tgt" ] ;
+               fhir:transform [ fhir:v "create" ] ;
+               fhir:parameter ( [
+                 fhir:value [ fhir:v "CommunicationRequest" ]
+               ] )
+             ] ) ;
+             fhir:rule ( [
+               fhir:name [ fhir:v "82d8a873" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "src" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:transform [ fhir:v "copy" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "tgt" ]
+                 ] )
+               ] ) ;
+               fhir:dependent ( [
+                 fhir:name [ fhir:v "communicationrequestemcareade38" ] ;
+                 fhir:variable ( [
+                   fhir:v "src" ;
+                   fhir:extension ( [
+                     fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/original-item-type"^^xsd:anyURI ] ;
+                     fhir:value [ fhir:v "id"^^xsd:anyURI ]
+                   ] )
+                 ] [
+                   fhir:v "tgt" ;
+                   fhir:extension ( [
+                     fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/original-item-type"^^xsd:anyURI ] ;
+                     fhir:value [ fhir:v "id"^^xsd:anyURI ]
+                   ] )
+                 ] )
+               ] )
+             ] )
+           ] )
+         ] )
+       ] )
+     ] )
+  ] [
+     fhir:name [ fhir:v "SetOfficalGivenNameemcarepatient" ] ;
+     fhir:typeMode [ fhir:v "none" ] ;
+     fhir:input ( [
+       fhir:name [ fhir:v "src" ] ;
+       fhir:mode [ fhir:v "source" ]
+     ] [
+       fhir:name [ fhir:v "tgt" ] ;
+       fhir:mode [ fhir:v "target" ]
+     ] ) ;
+     fhir:rule ( [
+       fhir:name [ fhir:v "ef0f6810" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "use" ] ;
+         fhir:transform [ fhir:v "copy" ] ;
+         fhir:parameter ( [
+           fhir:value [ fhir:v "official" ]
+         ] )
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "607c4e16" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ] ;
+           fhir:element [ fhir:v "item" ] ;
+           fhir:listMode [ fhir:v "first" ] ;
+           fhir:variable [ fhir:v "item" ] ;
+           fhir:condition [ fhir:v "(linkId = 'EmCare.A.DE06') and answer.exists()" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "e0827d5d" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "item" ] ;
+             fhir:element [ fhir:v "answer" ] ;
+             fhir:listMode [ fhir:v "first" ] ;
+             fhir:variable [ fhir:v "a" ]
+           ] ) ;
+           fhir:rule ( [
+             fhir:name [ fhir:v "77d1bd4f" ] ;
+             fhir:source ( [
+               fhir:context [ fhir:v "a" ] ;
+               fhir:element [ fhir:v "value" ] ;
+               fhir:variable [ fhir:v "val" ]
+             ] ) ;
+             fhir:target ( [
+               fhir:context [ fhir:v "tgt" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "family" ] ;
+               fhir:transform [ fhir:v "copy" ] ;
+               fhir:parameter ( [
+                 fhir:value [ fhir:v "val" ]
+               ] )
+             ] )
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "e9deb0f3" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ] ;
+           fhir:element [ fhir:v "item" ] ;
+           fhir:listMode [ fhir:v "first" ] ;
+           fhir:variable [ fhir:v "item" ] ;
+           fhir:condition [ fhir:v "(linkId = 'EmCare.A.DE04') and answer.exists()" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "18edd234" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "item" ] ;
+             fhir:element [ fhir:v "answer" ] ;
+             fhir:listMode [ fhir:v "first" ] ;
+             fhir:variable [ fhir:v "a" ]
+           ] ) ;
+           fhir:rule ( [
+             fhir:name [ fhir:v "5d3d44f6" ] ;
+             fhir:source ( [
+               fhir:context [ fhir:v "a" ] ;
+               fhir:element [ fhir:v "value" ] ;
+               fhir:variable [ fhir:v "val" ]
+             ] ) ;
+             fhir:target ( [
+               fhir:context [ fhir:v "tgt" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "given" ] ;
+               fhir:transform [ fhir:v "copy" ] ;
+               fhir:parameter ( [
+                 fhir:value [ fhir:v "val" ]
+               ] )
+             ] )
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "d95279c0" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ] ;
+           fhir:element [ fhir:v "item" ] ;
+           fhir:listMode [ fhir:v "first" ] ;
+           fhir:variable [ fhir:v "item" ] ;
+           fhir:condition [ fhir:v "(linkId = 'EmCare.A.DE05') and answer.exists()" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "18edd234" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "item" ] ;
+             fhir:element [ fhir:v "answer" ] ;
+             fhir:listMode [ fhir:v "first" ] ;
+             fhir:variable [ fhir:v "a" ]
+           ] ) ;
+           fhir:rule ( [
+             fhir:name [ fhir:v "5d3d44f6" ] ;
+             fhir:source ( [
+               fhir:context [ fhir:v "a" ] ;
+               fhir:element [ fhir:v "value" ] ;
+               fhir:variable [ fhir:v "val" ]
+             ] ) ;
+             fhir:target ( [
+               fhir:context [ fhir:v "tgt" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "given" ] ;
+               fhir:transform [ fhir:v "copy" ] ;
+               fhir:parameter ( [
+                 fhir:value [ fhir:v "val" ]
+               ] )
+             ] )
+           ] )
+         ] )
+       ] )
+     ] )
+  ] [
+     fhir:name [ fhir:v "MapValueSetExtCodeemcareade16" ] ;
+     fhir:typeMode [ fhir:v "none" ] ;
+     fhir:input ( [
+       fhir:name [ fhir:v "src" ] ;
+       fhir:mode [ fhir:v "source" ]
+     ] [
+       fhir:name [ fhir:v "tgt" ] ;
+       fhir:mode [ fhir:v "target" ]
+     ] ) ;
+     fhir:rule ( [
+       fhir:name [ fhir:v "57676688" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:transform [ fhir:v "copy" ] ;
+         fhir:parameter ( [
+           fhir:value [ fhir:v "tgt" ]
+         ] )
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "mapbase" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [ fhir:v "tgt" ]
+           ] )
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "368f2e2a" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ] ;
+             fhir:condition [ fhir:v "value.code = 'EmCare.A.DE17'" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "tgt" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "gender" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "female" ]
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "2ae3beca" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ] ;
+             fhir:condition [ fhir:v "value.code = 'EmCare.A.DE18'" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "tgt" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "gender" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "male" ]
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "de22e8b7" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ] ;
+             fhir:condition [ fhir:v "value.code = 'EmCare.A.DE19'" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "tgt" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "gender" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "unknown" ]
+             ] )
+           ] )
+         ] )
+       ] )
+     ] )
+  ] [
+     fhir:name [ fhir:v "emcarepatient" ] ;
+     fhir:typeMode [ fhir:v "none" ] ;
+     fhir:input ( [
+       fhir:name [ fhir:v "src" ] ;
+       fhir:type [ fhir:v "questionnaireResponse" ] ;
+       fhir:mode [ fhir:v "source" ]
+     ] [
+       fhir:name [ fhir:v "tgt" ] ;
+       fhir:type [ fhir:v "Patient" ] ;
+       fhir:mode [ fhir:v "target" ]
+     ] ) ;
+     fhir:rule ( [
+       fhir:name [ fhir:v "c243b020" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "item" ] ;
+         fhir:listMode [ fhir:v "first" ] ;
+         fhir:variable [ fhir:v "item" ] ;
+         fhir:condition [ fhir:v "(linkId = 'EmCare.A.DE01') and answer.exists()" ]
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "aemcareade01" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "item" ] ;
+           fhir:element [ fhir:v "answer" ] ;
+           fhir:listMode [ fhir:v "first" ] ;
+           fhir:variable [ fhir:v "a" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "aemcareade01" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "a" ] ;
+             fhir:element [ fhir:v "value" ] ;
+             fhir:variable [ fhir:v "val" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "tgt" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "identifier" ] ;
+             fhir:variable [ fhir:v "identifier" ] ;
+             fhir:transform [ fhir:v "create" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "Identifier" ]
+             ] )
+           ] ) ;
+           fhir:rule ( [
+             fhir:name [ fhir:v "id" ] ;
+             fhir:source ( [
+               fhir:context [ fhir:v "val" ]
+             ] ) ;
+             fhir:target ( [
+               fhir:context [ fhir:v "identifier" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "value" ] ;
+               fhir:transform [ fhir:v "copy" ] ;
+               fhir:parameter ( [
+                 fhir:value [ fhir:v "val" ]
+               ] )
+             ] [
+               fhir:context [ fhir:v "identifier" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "use" ] ;
+               fhir:transform [ fhir:v "copy" ] ;
+               fhir:parameter ( [
+                 fhir:value [ fhir:v "official" ]
+               ] )
+             ] )
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "54d12495" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "item" ] ;
+         fhir:listMode [ fhir:v "first" ] ;
+         fhir:variable [ fhir:v "item" ] ;
+         fhir:condition [ fhir:v "(linkId = 'EmCare.A.DE03') and answer.exists()" ]
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "aemcareade03" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "item" ] ;
+           fhir:element [ fhir:v "answer" ] ;
+           fhir:listMode [ fhir:v "first" ] ;
+           fhir:variable [ fhir:v "a" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "tgt" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "extension" ] ;
+           fhir:variable [ fhir:v "ext" ] ;
+           fhir:transform [ fhir:v "create" ] ;
+           fhir:parameter ( [
+             fhir:value [ fhir:v "Extension" ]
+           ] )
+         ] [
+           fhir:context [ fhir:v "ext" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "url" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [ fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/anonymous" ]
+           ] )
+         ] [
+           fhir:context [ fhir:v "ext" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "value" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [ fhir:v "true"^^xsd:boolean ]
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "7483ae2e" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "item" ] ;
+         fhir:listMode [ fhir:v "first" ] ;
+         fhir:variable [ fhir:v "item" ] ;
+         fhir:condition [ fhir:v "(linkId = 'EmCare.A.DE06') or (linkId = 'EmCare.A.DE04') or ((linkId = 'EmCare.A.DE05') and answer.exists())" ]
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "30643049" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:variable [ fhir:v "target" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [ fhir:v "tgt" ]
+           ] )
+         ] [
+           fhir:context [ fhir:v "target" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "name" ] ;
+           fhir:variable [ fhir:v "name" ]
+         ] ) ;
+         fhir:dependent ( [
+           fhir:name [ fhir:v "SetOfficalGivenNameemcarepatient" ] ;
+           fhir:variable ( [
+             fhir:v "src" ;
+             fhir:extension ( [
+               fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/original-item-type"^^xsd:anyURI ] ;
+               fhir:value [ fhir:v "id"^^xsd:anyURI ]
+             ] )
+           ] [
+             fhir:v "name" ;
+             fhir:extension ( [
+               fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/original-item-type"^^xsd:anyURI ] ;
+               fhir:value [ fhir:v "id"^^xsd:anyURI ]
+             ] )
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "c05cf203" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "item" ] ;
+         fhir:listMode [ fhir:v "first" ] ;
+         fhir:variable [ fhir:v "item" ] ;
+         fhir:condition [ fhir:v "(linkId = 'EmCare.A.DE12') and answer.exists()" ]
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "aemcareade12" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "item" ] ;
+           fhir:element [ fhir:v "answer" ] ;
+           fhir:listMode [ fhir:v "first" ] ;
+           fhir:variable [ fhir:v "a" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "aemcareade12" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "a" ] ;
+             fhir:element [ fhir:v "value" ] ;
+             fhir:variable [ fhir:v "val" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "tgt" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "extension" ] ;
+             fhir:variable [ fhir:v "ext" ] ;
+             fhir:transform [ fhir:v "create" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "Extension" ]
+             ] )
+           ] [
+             fhir:context [ fhir:v "ext" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "url" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/birthDateEstimator" ]
+             ] )
+           ] [
+             fhir:context [ fhir:v "ext" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "value" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "val" ]
+             ] )
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "bded6ae8" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "item" ] ;
+         fhir:listMode [ fhir:v "first" ] ;
+         fhir:variable [ fhir:v "item" ] ;
+         fhir:condition [ fhir:v "(linkId = 'EmCare.A.DE08') and answer.exists()" ]
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "aemcareade08" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "item" ] ;
+           fhir:element [ fhir:v "answer" ] ;
+           fhir:listMode [ fhir:v "first" ] ;
+           fhir:variable [ fhir:v "a" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "aemcareade08" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "a" ] ;
+             fhir:element [ fhir:v "value" ] ;
+             fhir:variable [ fhir:v "val" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "tgt" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "birthDate" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "val" ]
+             ] )
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "bf4b35f0" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "item" ] ;
+         fhir:listMode [ fhir:v "first" ] ;
+         fhir:variable [ fhir:v "item" ] ;
+         fhir:condition [ fhir:v "(linkId = 'EmCare.A.DE16') and answer.exists()" ]
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "225baa79" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "item" ] ;
+           fhir:element [ fhir:v "answer" ] ;
+           fhir:listMode [ fhir:v "first" ] ;
+           fhir:variable [ fhir:v "a" ]
+         ] ) ;
+         fhir:dependent ( [
+           fhir:name [ fhir:v "MapValueSetExtCodeemcareade16" ] ;
+           fhir:variable ( [
+             fhir:v "a" ;
+             fhir:extension ( [
+               fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/original-item-type"^^xsd:anyURI ] ;
+               fhir:value [ fhir:v "id"^^xsd:anyURI ]
+             ] )
+           ] [
+             fhir:v "tgt" ;
+             fhir:extension ( [
+               fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/original-item-type"^^xsd:anyURI ] ;
+               fhir:value [ fhir:v "id"^^xsd:anyURI ]
+             ] )
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "04772b09" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "item" ] ;
+         fhir:listMode [ fhir:v "first" ] ;
+         fhir:variable [ fhir:v "item" ] ;
+         fhir:condition [ fhir:v "(linkId = 'EmCare.A.DE48') and answer.exists()" ]
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "aemcareade48" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "item" ] ;
+           fhir:element [ fhir:v "answer" ] ;
+           fhir:listMode [ fhir:v "first" ] ;
+           fhir:variable [ fhir:v "a" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "tgt" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "extension" ] ;
+           fhir:variable [ fhir:v "ext" ] ;
+           fhir:transform [ fhir:v "create" ] ;
+           fhir:parameter ( [
+             fhir:value [ fhir:v "Extension" ]
+           ] )
+         ] [
+           fhir:context [ fhir:v "ext" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "url" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [ fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/primarycaregiver" ]
+           ] )
+         ] [
+           fhir:context [ fhir:v "ext" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "value" ] ;
+           fhir:variable [ fhir:v "ref" ] ;
+           fhir:transform [ fhir:v "create" ] ;
+           fhir:parameter ( [
+             fhir:value [ fhir:v "Reference" ]
+           ] )
+         ] [
+           fhir:context [ fhir:v "ref" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "reference" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [ fhir:v "relatated-person-id" ]
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "39f45e5d" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "item" ] ;
+         fhir:listMode [ fhir:v "first" ] ;
+         fhir:variable [ fhir:v "itm1" ] ;
+         fhir:condition [ fhir:v "linkId = 'EmCare.A.DE21.1'" ]
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "7f408694" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "itm1" ] ;
+           fhir:element [ fhir:v "item" ] ;
+           fhir:listMode [ fhir:v "first" ] ;
+           fhir:variable [ fhir:v "item" ] ;
+           fhir:condition [ fhir:v "(linkId = 'EmCare.A.DE31') and answer.exists()" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "aemcareade31" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "item" ] ;
+             fhir:element [ fhir:v "answer" ] ;
+             fhir:listMode [ fhir:v "first" ] ;
+             fhir:variable [ fhir:v "a" ]
+           ] ) ;
+           fhir:rule ( [
+             fhir:name [ fhir:v "aemcareade31" ] ;
+             fhir:source ( [
+               fhir:context [ fhir:v "a" ] ;
+               fhir:element [ fhir:v "value" ] ;
+               fhir:variable [ fhir:v "val" ]
+             ] ) ;
+             fhir:target ( [
+               fhir:context [ fhir:v "tgt" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "extension" ] ;
+               fhir:variable [ fhir:v "ext" ] ;
+               fhir:transform [ fhir:v "create" ] ;
+               fhir:parameter ( [
+                 fhir:value [ fhir:v "Extension" ]
+               ] )
+             ] [
+               fhir:context [ fhir:v "ext" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "url" ] ;
+               fhir:transform [ fhir:v "copy" ] ;
+               fhir:parameter ( [
+                 fhir:value [ fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Extension/motherVitalStatus" ]
+               ] )
+             ] [
+               fhir:context [ fhir:v "ext" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "value" ] ;
+               fhir:transform [ fhir:v "copy" ] ;
+               fhir:parameter ( [
+                 fhir:value [ fhir:v "val" ]
+               ] )
+             ] )
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "f7424037" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "item" ] ;
+         fhir:listMode [ fhir:v "first" ] ;
+         fhir:variable [ fhir:v "itm1" ] ;
+         fhir:condition [ fhir:v "linkId = 'EmCare.A.DE21.1'" ]
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "06ec2524" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "itm1" ] ;
+           fhir:element [ fhir:v "item" ] ;
+           fhir:listMode [ fhir:v "first" ] ;
+           fhir:variable [ fhir:v "item" ] ;
+           fhir:condition [ fhir:v "(linkId = 'EmCare.A.DE32') and answer.exists()" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "aemcareade32" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "item" ] ;
+             fhir:element [ fhir:v "answer" ] ;
+             fhir:listMode [ fhir:v "first" ] ;
+             fhir:variable [ fhir:v "a" ]
+           ] ) ;
+           fhir:rule ( [
+             fhir:name [ fhir:v "aemcareade32" ] ;
+             fhir:source ( [
+               fhir:context [ fhir:v "a" ] ;
+               fhir:element [ fhir:v "value" ] ;
+               fhir:variable [ fhir:v "val" ]
+             ] ) ;
+             fhir:target ( [
+               fhir:context [ fhir:v "tgt" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "extension" ] ;
+               fhir:variable [ fhir:v "ext" ] ;
+               fhir:transform [ fhir:v "create" ] ;
+               fhir:parameter ( [
+                 fhir:value [ fhir:v "Extension" ]
+               ] )
+             ] [
+               fhir:context [ fhir:v "ext" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "url" ] ;
+               fhir:transform [ fhir:v "copy" ] ;
+               fhir:parameter ( [
+                 fhir:value [ fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Extension/fatherVitalStatus" ]
+               ] )
+             ] [
+               fhir:context [ fhir:v "ext" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "value" ] ;
+               fhir:transform [ fhir:v "copy" ] ;
+               fhir:parameter ( [
+                 fhir:value [ fhir:v "val" ]
+               ] )
+             ] )
+           ] )
+         ] )
+       ] )
+     ] )
+  ] [
+     fhir:name [ fhir:v "SetOfficalGivenNamerelatedperson" ] ;
+     fhir:typeMode [ fhir:v "none" ] ;
+     fhir:input ( [
+       fhir:name [ fhir:v "src" ] ;
+       fhir:mode [ fhir:v "source" ]
+     ] [
+       fhir:name [ fhir:v "tgt" ] ;
+       fhir:mode [ fhir:v "target" ]
+     ] ) ;
+     fhir:rule ( [
+       fhir:name [ fhir:v "f41b9847" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "use" ] ;
+         fhir:transform [ fhir:v "copy" ] ;
+         fhir:parameter ( [
+           fhir:value [ fhir:v "official" ]
+         ] )
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "4cc155ee" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ] ;
+           fhir:element [ fhir:v "item" ] ;
+           fhir:listMode [ fhir:v "first" ] ;
+           fhir:variable [ fhir:v "itm1" ] ;
+           fhir:condition [ fhir:v "linkId = 'EmCare.A.DE21.1'" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "8c426238" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "itm1" ] ;
+             fhir:element [ fhir:v "item" ] ;
+             fhir:listMode [ fhir:v "first" ] ;
+             fhir:variable [ fhir:v "item" ] ;
+             fhir:condition [ fhir:v "(linkId = 'EmCare.A.DE23') and answer.exists()" ]
+           ] ) ;
+           fhir:rule ( [
+             fhir:name [ fhir:v "e0827d5d" ] ;
+             fhir:source ( [
+               fhir:context [ fhir:v "item" ] ;
+               fhir:element [ fhir:v "answer" ] ;
+               fhir:listMode [ fhir:v "first" ] ;
+               fhir:variable [ fhir:v "a" ]
+             ] ) ;
+             fhir:rule ( [
+               fhir:name [ fhir:v "77d1bd4f" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "a" ] ;
+                 fhir:element [ fhir:v "value" ] ;
+                 fhir:variable [ fhir:v "val" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "tgt" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "family" ] ;
+                 fhir:transform [ fhir:v "copy" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "val" ]
+                 ] )
+               ] )
+             ] )
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "8bc880ed" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ] ;
+           fhir:element [ fhir:v "item" ] ;
+           fhir:listMode [ fhir:v "first" ] ;
+           fhir:variable [ fhir:v "itm1" ] ;
+           fhir:condition [ fhir:v "linkId = 'EmCare.A.DE21.1'" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "ad3fbc15" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "itm1" ] ;
+             fhir:element [ fhir:v "item" ] ;
+             fhir:listMode [ fhir:v "first" ] ;
+             fhir:variable [ fhir:v "item" ] ;
+             fhir:condition [ fhir:v "(linkId = 'EmCare.A.DE21') and answer.exists()" ]
+           ] ) ;
+           fhir:rule ( [
+             fhir:name [ fhir:v "18edd234" ] ;
+             fhir:source ( [
+               fhir:context [ fhir:v "item" ] ;
+               fhir:element [ fhir:v "answer" ] ;
+               fhir:listMode [ fhir:v "first" ] ;
+               fhir:variable [ fhir:v "a" ]
+             ] ) ;
+             fhir:rule ( [
+               fhir:name [ fhir:v "5d3d44f6" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "a" ] ;
+                 fhir:element [ fhir:v "value" ] ;
+                 fhir:variable [ fhir:v "val" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "tgt" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "given" ] ;
+                 fhir:transform [ fhir:v "copy" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "val" ]
+                 ] )
+               ] )
+             ] )
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "17d8d988" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ] ;
+           fhir:element [ fhir:v "item" ] ;
+           fhir:listMode [ fhir:v "first" ] ;
+           fhir:variable [ fhir:v "itm1" ] ;
+           fhir:condition [ fhir:v "linkId = 'EmCare.A.DE21.1'" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "e9ba83c8" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "itm1" ] ;
+             fhir:element [ fhir:v "item" ] ;
+             fhir:listMode [ fhir:v "first" ] ;
+             fhir:variable [ fhir:v "item" ] ;
+             fhir:condition [ fhir:v "(linkId = 'EmCare.A.DE22') and answer.exists()" ]
+           ] ) ;
+           fhir:rule ( [
+             fhir:name [ fhir:v "18edd234" ] ;
+             fhir:source ( [
+               fhir:context [ fhir:v "item" ] ;
+               fhir:element [ fhir:v "answer" ] ;
+               fhir:listMode [ fhir:v "first" ] ;
+               fhir:variable [ fhir:v "a" ]
+             ] ) ;
+             fhir:rule ( [
+               fhir:name [ fhir:v "5d3d44f6" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "a" ] ;
+                 fhir:element [ fhir:v "value" ] ;
+                 fhir:variable [ fhir:v "val" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "tgt" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "given" ] ;
+                 fhir:transform [ fhir:v "copy" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "val" ]
+                 ] )
+               ] )
+             ] )
+           ] )
+         ] )
+       ] )
+     ] )
+  ] [
+     fhir:name [ fhir:v "MapValueSetExtCodeemcareade24" ] ;
+     fhir:typeMode [ fhir:v "none" ] ;
+     fhir:input ( [
+       fhir:name [ fhir:v "src" ] ;
+       fhir:mode [ fhir:v "source" ]
+     ] [
+       fhir:name [ fhir:v "tgt" ] ;
+       fhir:mode [ fhir:v "target" ]
+     ] ) ;
+     fhir:rule ( [
+       fhir:name [ fhir:v "1b7b6d7a" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:transform [ fhir:v "copy" ] ;
+         fhir:parameter ( [
+           fhir:value [ fhir:v "tgt" ]
+         ] )
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "4a251df5" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "tgt" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "relationship" ] ;
+           fhir:variable [ fhir:v "cc" ] ;
+           fhir:transform [ fhir:v "create" ] ;
+           fhir:parameter ( [
+             fhir:value [ fhir:v "CodeableConcept" ]
+           ] )
+         ] [
+           fhir:context [ fhir:v "cc" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "coding" ] ;
+           fhir:variable [ fhir:v "coding" ] ;
+           fhir:transform [ fhir:v "create" ] ;
+           fhir:parameter ( [
+             fhir:value [ fhir:v "Coding" ]
+           ] )
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "abd34a78" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ] ;
+             fhir:condition [ fhir:v "value.code = 'EmCare.A.DE25'" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "coding" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "code" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "MTH" ]
+             ] )
+           ] [
+             fhir:context [ fhir:v "coding" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "system" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode" ]
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "b53d1d15" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ] ;
+             fhir:condition [ fhir:v "value.code = 'EmCare.A.DE26'" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "coding" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "code" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "FTH" ]
+             ] )
+           ] [
+             fhir:context [ fhir:v "coding" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "system" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode" ]
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "949ee35f" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ] ;
+             fhir:condition [ fhir:v "value.code = 'EmCare.A.DE27'" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "coding" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "code" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "SIB" ]
+             ] )
+           ] [
+             fhir:context [ fhir:v "coding" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "system" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode" ]
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "7c5a4400" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ] ;
+             fhir:condition [ fhir:v "value.code = 'EmCare.A.DE28'" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "coding" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "code" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "EXT" ]
+             ] )
+           ] [
+             fhir:context [ fhir:v "coding" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "system" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode" ]
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "544df0cc" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ] ;
+             fhir:condition [ fhir:v "value.code = 'EmCare.A.DE29'" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "coding" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "code" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "PRNINLAW" ]
+             ] )
+           ] [
+             fhir:context [ fhir:v "coding" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "system" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode" ]
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "8c2d96fc" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ] ;
+             fhir:condition [ fhir:v "value.code = 'EmCare.A.DE30'" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "coding" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "code" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "U" ]
+             ] )
+           ] [
+             fhir:context [ fhir:v "coding" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "system" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0131" ]
+             ] )
+           ] )
+         ] )
+       ] )
+     ] )
+  ] [
+     fhir:name [ fhir:v "relatedperson" ] ;
+     fhir:typeMode [ fhir:v "none" ] ;
+     fhir:input ( [
+       fhir:name [ fhir:v "src" ] ;
+       fhir:type [ fhir:v "questionnaireResponse" ] ;
+       fhir:mode [ fhir:v "source" ]
+     ] [
+       fhir:name [ fhir:v "tgt" ] ;
+       fhir:type [ fhir:v "RelatedPerson" ] ;
+       fhir:mode [ fhir:v "target" ]
+     ] ) ;
+     fhir:rule ( [
+       fhir:name [ fhir:v "04cd0ec2" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "item" ] ;
+         fhir:listMode [ fhir:v "first" ] ;
+         fhir:variable [ fhir:v "item" ] ;
+         fhir:condition [ fhir:v "(linkId = 'emcarerelatedpersoncaregiverid') and answer.exists()" ]
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "aemcarerelatedpersoncaregiverid" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "item" ] ;
+           fhir:element [ fhir:v "answer" ] ;
+           fhir:listMode [ fhir:v "first" ] ;
+           fhir:variable [ fhir:v "a" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "aemcarerelatedpersoncaregiverid" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "a" ] ;
+             fhir:element [ fhir:v "value" ] ;
+             fhir:variable [ fhir:v "val" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "tgt" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "extension" ] ;
+             fhir:variable [ fhir:v "ext" ] ;
+             fhir:transform [ fhir:v "create" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "Extension" ]
+             ] )
+           ] [
+             fhir:context [ fhir:v "ext" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "url" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/primary-caregiver" ]
+             ] )
+           ] [
+             fhir:context [ fhir:v "ext" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "value" ] ;
+             fhir:variable [ fhir:v "ref" ] ;
+             fhir:transform [ fhir:v "create" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "Reference" ]
+             ] )
+           ] [
+             fhir:context [ fhir:v "ref" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "reference" ] ;
+             fhir:transform [ fhir:v "append" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "/RelatedPerson/" ]
+             ] [
+               fhir:value [ fhir:v "val" ]
+             ] )
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "f0e6459e" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "item" ] ;
+         fhir:listMode [ fhir:v "first" ] ;
+         fhir:variable [ fhir:v "itm1" ] ;
+         fhir:condition [ fhir:v "linkId = 'EmCare.A.DE21.1'" ]
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "18dc21d5" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "itm1" ] ;
+           fhir:element [ fhir:v "item" ] ;
+           fhir:listMode [ fhir:v "first" ] ;
+           fhir:variable [ fhir:v "item" ] ;
+           fhir:condition [ fhir:v "(linkId = 'EmCare.A.DE23') or (linkId = 'EmCare.A.DE21') or ((linkId = 'EmCare.A.DE22') and answer.exists())" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "8e1455ea" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:variable [ fhir:v "target" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "tgt" ]
+             ] )
+           ] [
+             fhir:context [ fhir:v "target" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "name" ] ;
+             fhir:variable [ fhir:v "name" ]
+           ] ) ;
+           fhir:dependent ( [
+             fhir:name [ fhir:v "SetOfficalGivenNamerelatedperson" ] ;
+             fhir:variable ( [
+               fhir:v "src" ;
+               fhir:extension ( [
+                 fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/original-item-type"^^xsd:anyURI ] ;
+                 fhir:value [ fhir:v "id"^^xsd:anyURI ]
+               ] )
+             ] [
+               fhir:v "name" ;
+               fhir:extension ( [
+                 fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/original-item-type"^^xsd:anyURI ] ;
+                 fhir:value [ fhir:v "id"^^xsd:anyURI ]
+               ] )
+             ] )
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "30b90d37" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "item" ] ;
+         fhir:listMode [ fhir:v "first" ] ;
+         fhir:variable [ fhir:v "itm1" ] ;
+         fhir:condition [ fhir:v "linkId = 'EmCare.A.DE21.1'" ]
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "9731ba92" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "itm1" ] ;
+           fhir:element [ fhir:v "item" ] ;
+           fhir:listMode [ fhir:v "first" ] ;
+           fhir:variable [ fhir:v "item" ] ;
+           fhir:condition [ fhir:v "(linkId = 'EmCare.A.DE35') and answer.exists()" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "aemcareade35" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "item" ] ;
+             fhir:element [ fhir:v "answer" ] ;
+             fhir:listMode [ fhir:v "first" ] ;
+             fhir:variable [ fhir:v "a" ]
+           ] ) ;
+           fhir:rule ( [
+             fhir:name [ fhir:v "aemcareade35" ] ;
+             fhir:source ( [
+               fhir:context [ fhir:v "a" ] ;
+               fhir:element [ fhir:v "value" ] ;
+               fhir:variable [ fhir:v "val" ]
+             ] ) ;
+             fhir:target ( [
+               fhir:context [ fhir:v "tgt" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "telecom" ] ;
+               fhir:variable [ fhir:v "tel" ]
+             ] [
+               fhir:context [ fhir:v "tel" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "system" ] ;
+               fhir:transform [ fhir:v "copy" ] ;
+               fhir:parameter ( [
+                 fhir:value [ fhir:v "phone" ]
+               ] )
+             ] [
+               fhir:context [ fhir:v "tel" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "use" ] ;
+               fhir:transform [ fhir:v "copy" ] ;
+               fhir:parameter ( [
+                 fhir:value [ fhir:v "mobile" ]
+               ] )
+             ] [
+               fhir:context [ fhir:v "tel" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "value" ] ;
+               fhir:transform [ fhir:v "copy" ] ;
+               fhir:parameter ( [
+                 fhir:value [ fhir:v "val" ]
+               ] )
+             ] )
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "d50c1aed" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "item" ] ;
+         fhir:listMode [ fhir:v "first" ] ;
+         fhir:variable [ fhir:v "itm1" ] ;
+         fhir:condition [ fhir:v "linkId = 'EmCare.A.DE21.1'" ]
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "d79d72db" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "itm1" ] ;
+           fhir:element [ fhir:v "item" ] ;
+           fhir:listMode [ fhir:v "first" ] ;
+           fhir:variable [ fhir:v "item" ] ;
+           fhir:condition [ fhir:v "(linkId = 'relatedpersonid') and answer.exists()" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "arelatedpersonid" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "item" ] ;
+             fhir:element [ fhir:v "answer" ] ;
+             fhir:listMode [ fhir:v "first" ] ;
+             fhir:variable [ fhir:v "a" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "tgt" ]
+             ] )
+           ] ) ;
+           fhir:rule ( [
+             fhir:name [ fhir:v "patient" ] ;
+             fhir:source ( [
+               fhir:context [ fhir:v "src" ] ;
+               fhir:element [ fhir:v "subject" ] ;
+               fhir:variable [ fhir:v "subject" ]
+             ] ) ;
+             fhir:target ( [
+               fhir:context [ fhir:v "tgt" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "patient" ] ;
+               fhir:transform [ fhir:v "copy" ] ;
+               fhir:parameter ( [
+                 fhir:value [ fhir:v "subject" ]
+               ] )
+             ] )
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "92a0e955" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "item" ] ;
+         fhir:listMode [ fhir:v "first" ] ;
+         fhir:variable [ fhir:v "itm1" ] ;
+         fhir:condition [ fhir:v "linkId = 'EmCare.A.DE21.1'" ]
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "6adb811a" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "itm1" ] ;
+           fhir:element [ fhir:v "item" ] ;
+           fhir:listMode [ fhir:v "first" ] ;
+           fhir:variable [ fhir:v "item" ] ;
+           fhir:condition [ fhir:v "(linkId = 'EmCare.A.DE24') and answer.exists()" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "24e5e488" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "item" ] ;
+             fhir:element [ fhir:v "answer" ] ;
+             fhir:listMode [ fhir:v "first" ] ;
+             fhir:variable [ fhir:v "a" ]
+           ] ) ;
+           fhir:dependent ( [
+             fhir:name [ fhir:v "MapValueSetExtCodeemcareade24" ] ;
+             fhir:variable ( [
+               fhir:v "a" ;
+               fhir:extension ( [
+                 fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/original-item-type"^^xsd:anyURI ] ;
+                 fhir:value [ fhir:v "id"^^xsd:anyURI ]
+               ] )
+             ] [
+               fhir:v "tgt" ;
+               fhir:extension ( [
+                 fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/original-item-type"^^xsd:anyURI ] ;
+                 fhir:value [ fhir:v "id"^^xsd:anyURI ]
+               ] )
+             ] )
+           ] )
+         ] )
+       ] )
+     ] )
+  ] [
+     fhir:name [ fhir:v "communicationrequestemcareade38" ] ;
+     fhir:typeMode [ fhir:v "none" ] ;
+     fhir:input ( [
+       fhir:name [ fhir:v "src" ] ;
+       fhir:mode [ fhir:v "source" ]
+     ] [
+       fhir:name [ fhir:v "tgt" ] ;
+       fhir:mode [ fhir:v "target" ]
+     ] ) ;
+     fhir:rule ( [
+       fhir:name [ fhir:v "053233cd" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "category" ] ;
+         fhir:variable [ fhir:v "cc" ] ;
+         fhir:transform [ fhir:v "create" ] ;
+         fhir:parameter ( [
+           fhir:value [ fhir:v "CodeableConcept" ]
+         ] )
+       ] [
+         fhir:context [ fhir:v "cc" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "coding" ] ;
+         fhir:variable [ fhir:v "c" ] ;
+         fhir:transform [ fhir:v "create" ] ;
+         fhir:parameter ( [
+           fhir:value [ fhir:v "Coding" ]
+         ] )
+       ] [
+         fhir:context [ fhir:v "c" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "system" ] ;
+         fhir:transform [ fhir:v "copy" ] ;
+         fhir:parameter ( [
+           fhir:value [ fhir:v "http://hl7.org/fhir/ValueSet/communication-category" ]
+         ] )
+       ] [
+         fhir:context [ fhir:v "c" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "code" ] ;
+         fhir:transform [ fhir:v "copy" ] ;
+         fhir:parameter ( [
+           fhir:value [ fhir:v "notification" ]
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "quest" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "questionnaire" ] ;
+         fhir:variable [ fhir:v "q" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "about" ] ;
+         fhir:variable [ fhir:v "ref" ] ;
+         fhir:transform [ fhir:v "create" ] ;
+         fhir:parameter ( [
+           fhir:value [ fhir:v "Reference" ]
+         ] )
+       ] [
+         fhir:context [ fhir:v "ref" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "type" ] ;
+         fhir:transform [ fhir:v "copy" ] ;
+         fhir:parameter ( [
+           fhir:value [ fhir:v "Questionnaire" ]
+         ] )
+       ] [
+         fhir:context [ fhir:v "ref" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "reference" ] ;
+         fhir:transform [ fhir:v "copy" ] ;
+         fhir:parameter ( [
+           fhir:value [ fhir:v "q" ]
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "fe3bec4d" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "subject" ] ;
+         fhir:variable [ fhir:v "subject" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "subject" ] ;
+         fhir:transform [ fhir:v "copy" ] ;
+         fhir:parameter ( [
+           fhir:value [ fhir:v "subject" ]
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "eaa7d3cf" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "recipient" ] ;
+         fhir:variable [ fhir:v "ref" ] ;
+         fhir:transform [ fhir:v "create" ] ;
+         fhir:parameter ( [
+           fhir:value [ fhir:v "Reference" ]
+         ] )
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "c26ab31f" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "ref" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "type" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [ fhir:v "RelatedPerson" ]
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "3c6c4c80" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ] ;
+           fhir:element [ fhir:v "item" ] ;
+           fhir:listMode [ fhir:v "first" ] ;
+           fhir:variable [ fhir:v "item" ] ;
+           fhir:condition [ fhir:v "linkId = 'emcarerelatedpersonCaregiveruuid'" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [ fhir:v "tgt" ]
+           ] )
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "00b2016a" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "item" ] ;
+             fhir:element [ fhir:v "answer" ] ;
+             fhir:listMode [ fhir:v "first" ] ;
+             fhir:variable [ fhir:v "a" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "tgt" ]
+             ] )
+           ] ) ;
+           fhir:rule ( [
+             fhir:name [ fhir:v "25b16148" ] ;
+             fhir:source ( [
+               fhir:context [ fhir:v "a" ] ;
+               fhir:element [ fhir:v "value" ] ;
+               fhir:variable [ fhir:v "val" ]
+             ] ) ;
+             fhir:target ( [
+               fhir:context [ fhir:v "ref" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "reference" ] ;
+               fhir:transform [ fhir:v "append" ] ;
+               fhir:parameter ( [
+                 fhir:value [ fhir:v "/RelatedPerson/" ]
+               ] [
+                 fhir:value [ fhir:v "val" ]
+               ] )
+             ] )
+           ] )
+         ] )
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,1542 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>WHO.FHIR.EMC-CDS\null - JSON Representation - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/who.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"8.181"}
+    h3,h4,h5,h6{--heading-prefix:"8.181"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">WHO Emergency Care Guideline Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - CI Build
+
+
+
+  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="toc.html">Table of Contents</a></li>
+  <li><a href="documentation.html">Documentation</a></li>
+  <li><a href="guidance.html">Guidance</a></li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">FHIR Spec</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://cql.hl7.org/index.html">CQL Spec</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/uv/cpg">FHIR Clinical Guidelines</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="license.html">License</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b></b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">WHO Emergency Care Guideline Implementation Guide - Local Development build (v0.1.0). See the <a href="http://fhir.org/guides/who/emcare/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="ValueSet-emcareobservation.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ValueSet-emcareobservation.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">JSON</a>
+    </li>
+  
+
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: null - JSON Representation</h2>
+  <table class="colsd">
+    <tr>
+
+      <td colspan="2">
+        
+          Draft
+          
+            as of 2023-04-03
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="ValueSet-emcareobservation.json" no-download="true">Raw json</a> | <a href="ValueSet-emcareobservation.json" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="json" style="white-space: pre; overflow: hidden"><code>
+{
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet">resourceType</a>" : "ValueSet",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.id">id</a>" : "emcareobservation",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;ul&gt;&lt;li&gt;Include these codes as defined in &lt;a href=\&quot;CodeSystem-emcare-custom-codes.html\&quot;&gt;&lt;code&gt;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes&lt;/code&gt;&lt;/a&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B3.46DE05\&quot;&gt;EmCare.B3.DE05&lt;/a&gt;&lt;/td&gt;&lt;td&gt;is the child sick today?&lt;/td&gt;&lt;td&gt;The client's visit is for a well child but the child is also presenting as sick&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B7.46DE02\&quot;&gt;EmCare.B7.DE02&lt;/a&gt;&lt;/td&gt;&lt;td&gt;convulsing now&lt;/td&gt;&lt;td&gt;The client is convulsing now&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B7-B8-B9.46DE01\&quot;&gt;EmCare.B7-B8-B9.DE01&lt;/a&gt;&lt;/td&gt;&lt;td&gt;continue to assess sick child&lt;/td&gt;&lt;td&gt;The healthcare worker chooses if they will continue to assess the sick child with a life threatening illness&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B7.46DE03\&quot;&gt;EmCare.B7.DE03&lt;/a&gt;&lt;/td&gt;&lt;td&gt;convulsion(s) in this illness&lt;/td&gt;&lt;td&gt;The client is reported to have had one or more convulsions&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B7.46DE08b\&quot;&gt;EmCare.B7.DE08b&lt;/a&gt;&lt;/td&gt;&lt;td&gt;unconscious or lethargic&lt;/td&gt;&lt;td&gt;The client is unconcious or Lethargic&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B7.46DE08\&quot;&gt;EmCare.B7.DE08&lt;/a&gt;&lt;/td&gt;&lt;td&gt;unconscious&lt;/td&gt;&lt;td&gt;The client is unconcious&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B7.46DE08a\&quot;&gt;EmCare.B7.DE08a&lt;/a&gt;&lt;/td&gt;&lt;td&gt;lethargic&lt;/td&gt;&lt;td&gt;The client is lethargic&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B7.46DE09\&quot;&gt;EmCare.B7.DE09&lt;/a&gt;&lt;/td&gt;&lt;td&gt;not able to drink or breastfeed&lt;/td&gt;&lt;td&gt;The client has reported not to have been able to drink or breastfeed or currently is not able to drink or breastfeed.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B7.46DE10\&quot;&gt;EmCare.B7.DE10&lt;/a&gt;&lt;/td&gt;&lt;td&gt;vomiting everything&lt;/td&gt;&lt;td&gt;The client is reported to be vomiting everything or vomiting but not everything or no vomiting&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B6.46DE01\&quot;&gt;EmCare.B6.DE01&lt;/a&gt;&lt;/td&gt;&lt;td&gt;axillary temperature  (degrees celcius)&lt;/td&gt;&lt;td&gt;The client's axillary temperature in degrees Celsius (temperature taken under the armpit)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B6.46DE04\&quot;&gt;EmCare.B6.DE04&lt;/a&gt;&lt;/td&gt;&lt;td&gt;thermometer not available&lt;/td&gt;&lt;td&gt;A thermometer is not available to accurately measure the client's temperature&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B6.46DE05\&quot;&gt;EmCare.B6.DE05&lt;/a&gt;&lt;/td&gt;&lt;td&gt;hot to touch&lt;/td&gt;&lt;td&gt;The client is hot to touch&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B6.46DE01A\&quot;&gt;EmCare.B6.DE01A&lt;/a&gt;&lt;/td&gt;&lt;td&gt;measured temperature&lt;/td&gt;&lt;td&gt;The client's Temperature has been measured&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B6.46DE06\&quot;&gt;EmCare.B6.DE06&lt;/a&gt;&lt;/td&gt;&lt;td&gt;weight (kg)&lt;/td&gt;&lt;td&gt;The client's weight in Kilograms&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B6.46DE08\&quot;&gt;EmCare.B6.DE08&lt;/a&gt;&lt;/td&gt;&lt;td&gt;estimated weight&lt;/td&gt;&lt;td&gt;The client's weight has been estimated - to be used for treatment dosing only&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B6.46DE09\&quot;&gt;EmCare.B6.DE09&lt;/a&gt;&lt;/td&gt;&lt;td&gt;height&lt;/td&gt;&lt;td&gt;The client's height in Centimeters&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B6.46DE11\&quot;&gt;EmCare.B6.DE11&lt;/a&gt;&lt;/td&gt;&lt;td&gt;height cannot be measured&lt;/td&gt;&lt;td&gt;The client's height cannot be measured&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B6.46DE12\&quot;&gt;EmCare.B6.DE12&lt;/a&gt;&lt;/td&gt;&lt;td&gt;length&lt;/td&gt;&lt;td&gt;The client's length in Centimeters&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B6.46DE16\&quot;&gt;EmCare.B6.DE16&lt;/a&gt;&lt;/td&gt;&lt;td&gt;weight for age (wfa) z scores&lt;/td&gt;&lt;td&gt;The client's weight for age z score&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B6.46DE17\&quot;&gt;EmCare.B6.DE17&lt;/a&gt;&lt;/td&gt;&lt;td&gt;muac (mm)&lt;/td&gt;&lt;td&gt;The client's Mid Upper Arm Circumference in Millimeters (child ≥6 months old)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B6.46DE17a\&quot;&gt;EmCare.B6.DE17a&lt;/a&gt;&lt;/td&gt;&lt;td&gt;muac cannot be measured&lt;/td&gt;&lt;td&gt;The client's Mid Upper Arm Circumference cannot be measured&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B6.46DE18\&quot;&gt;EmCare.B6.DE18&lt;/a&gt;&lt;/td&gt;&lt;td&gt;visually assess for whether underweight (for drug dose calculation)&lt;/td&gt;&lt;td&gt;The health care worker visually assesses for whether underweight (for drug dosing calculations)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B18S1.46DE02\&quot;&gt;EmCare.B18S1.DE02&lt;/a&gt;&lt;/td&gt;&lt;td&gt;difficulty with feeding&lt;/td&gt;&lt;td&gt;The client is reported to have difficulty with Feeding&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B11S1.46DE01\&quot;&gt;EmCare.B11S1.DE01&lt;/a&gt;&lt;/td&gt;&lt;td&gt;diarrhoea&lt;/td&gt;&lt;td&gt;The client is reported to have diarrhoea&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B21S1.46DE06\&quot;&gt;EmCare.B21S1.DE06&lt;/a&gt;&lt;/td&gt;&lt;td&gt;breastfed&lt;/td&gt;&lt;td&gt;The client is breastfed&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B18S2.46DE07\&quot;&gt;EmCare.B18S2.DE07&lt;/a&gt;&lt;/td&gt;&lt;td&gt;severe chest indrawing&lt;/td&gt;&lt;td&gt;The client has severe chest indrawing&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B18S2.46DE08\&quot;&gt;EmCare.B18S2.DE08&lt;/a&gt;&lt;/td&gt;&lt;td&gt;movements&lt;/td&gt;&lt;td&gt;The health care worker's assessments of the client's movements&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B18S2.46DE12\&quot;&gt;EmCare.B18S2.DE12&lt;/a&gt;&lt;/td&gt;&lt;td&gt;umbilicus red or pus draining&lt;/td&gt;&lt;td&gt;The client's umbilicus is red or is draining pus&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B18S2.46DE13\&quot;&gt;EmCare.B18S2.DE13&lt;/a&gt;&lt;/td&gt;&lt;td&gt;skin pustules&lt;/td&gt;&lt;td&gt;The client has skin pustules&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B19S2.46DE01\&quot;&gt;EmCare.B19S2.DE01&lt;/a&gt;&lt;/td&gt;&lt;td&gt;yellow skin&lt;/td&gt;&lt;td&gt;The client has yellow skin&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B19S2.46DE02\&quot;&gt;EmCare.B19S2.DE02&lt;/a&gt;&lt;/td&gt;&lt;td&gt;yellow palms or yellow soles&lt;/td&gt;&lt;td&gt;The client has yellow palms or yellow soles&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B19S2.46DE04\&quot;&gt;EmCare.B19S2.DE04&lt;/a&gt;&lt;/td&gt;&lt;td&gt;when did the jaundice first appear?&lt;/td&gt;&lt;td&gt;The age at which the Jaundice first appeared&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B11S2.46DE01\&quot;&gt;EmCare.B11S2.DE01&lt;/a&gt;&lt;/td&gt;&lt;td&gt;sunken eyes&lt;/td&gt;&lt;td&gt;The client has sunken eyes&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B11S2.46DE02\&quot;&gt;EmCare.B11S2.DE02&lt;/a&gt;&lt;/td&gt;&lt;td&gt;skin pinch of abdomen&lt;/td&gt;&lt;td&gt;The healthcare worker pinches the skin of the client's abdomen for 1 second and then observes how long the skin takes to return to normal once released&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B11S2.46DE06\&quot;&gt;EmCare.B11S2.DE06&lt;/a&gt;&lt;/td&gt;&lt;td&gt;restless and irritable&lt;/td&gt;&lt;td&gt;The client is restless and irritable&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B21S2.46DE01\&quot;&gt;EmCare.B21S2.DE01&lt;/a&gt;&lt;/td&gt;&lt;td&gt;weight status&lt;/td&gt;&lt;td&gt;The client's weight status&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B21S2.46DE05\&quot;&gt;EmCare.B21S2.DE05&lt;/a&gt;&lt;/td&gt;&lt;td&gt;breastfed how many times in 24 hours?&lt;/td&gt;&lt;td&gt;Number of times the client is breastfed in 24 hours&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B21S2.46DE06\&quot;&gt;EmCare.B21S2.DE06&lt;/a&gt;&lt;/td&gt;&lt;td&gt;sufficient feeds&lt;/td&gt;&lt;td&gt;Based on the number of feeds during a 24 hour period the result is auto-calculated to determine sufficient feeds&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B21S2.46DE08\&quot;&gt;EmCare.B21S2.DE08&lt;/a&gt;&lt;/td&gt;&lt;td&gt;young infant receives food or fluids other than breast milk&lt;/td&gt;&lt;td&gt;The client is receiving other food or drinks besides breastmilk&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B21S2.46DE09\&quot;&gt;EmCare.B21S2.DE09&lt;/a&gt;&lt;/td&gt;&lt;td&gt;what milk is being given as a replacement feed?&lt;/td&gt;&lt;td&gt;The health care worker discusses the milk being given to the client as a replacement feed and determines if it is appropriate replacement milk&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B21S2.46DE12\&quot;&gt;EmCare.B21S2.DE12&lt;/a&gt;&lt;/td&gt;&lt;td&gt;how many replacement feeds during the day and night (24 hours)?&lt;/td&gt;&lt;td&gt;How often the client is receiving replacement feeds during the day and night (24 hours)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B21S2.46DE13\&quot;&gt;EmCare.B21S2.DE13&lt;/a&gt;&lt;/td&gt;&lt;td&gt;sufficient replacement feeds (in 24 hours)&lt;/td&gt;&lt;td&gt;Based on the number of feeds during the day and night (24 hours) the result is auto-calculated to determine sufficient replacement feeds&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B21S2.46DE15\&quot;&gt;EmCare.B21S2.DE15&lt;/a&gt;&lt;/td&gt;&lt;td&gt;how much milk is given at each feed (ml)?&lt;/td&gt;&lt;td&gt;The amount of milk given to the client at each feed&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B21S2.46DE16\&quot;&gt;EmCare.B21S2.DE16&lt;/a&gt;&lt;/td&gt;&lt;td&gt;sufficient replacement feeds&lt;/td&gt;&lt;td&gt;The care giver is giving sufficient replacement feeds&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B21S2.46DE18\&quot;&gt;EmCare.B21S2.DE18&lt;/a&gt;&lt;/td&gt;&lt;td&gt;how is the milk prepared?&lt;/td&gt;&lt;td&gt;Description of how the milk is prepared for the client's feed&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B21S2.46DE21\&quot;&gt;EmCare.B21S2.DE21&lt;/a&gt;&lt;/td&gt;&lt;td&gt;how is the milk given?&lt;/td&gt;&lt;td&gt;Description on how the client is given the milk - bottle or cup&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B21S2.46DE24\&quot;&gt;EmCare.B21S2.DE24&lt;/a&gt;&lt;/td&gt;&lt;td&gt;how are the feeding utensils cleaned?&lt;/td&gt;&lt;td&gt;Description of how the feeding utensils are cleaned&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B21S2.46DE27\&quot;&gt;EmCare.B21S2.DE27&lt;/a&gt;&lt;/td&gt;&lt;td&gt;do you give any breastmilk at all?&lt;/td&gt;&lt;td&gt;Does the care giver give the client any breastmilk at all?&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B21S2.46DE30\&quot;&gt;EmCare.B21S2.DE30&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ulcers or white patches in mouth&lt;/td&gt;&lt;td&gt;The client has ulcers or white patches in the mouth&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B21S2.46DE31\&quot;&gt;EmCare.B21S2.DE31&lt;/a&gt;&lt;/td&gt;&lt;td&gt;unable to check if ulcers or white patches in mouth&lt;/td&gt;&lt;td&gt;The healthcare worker is unable to check if the client has ulcers or white patches in the mouth&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B10S1.46DE05\&quot;&gt;EmCare.B10S1.DE05&lt;/a&gt;&lt;/td&gt;&lt;td&gt;cough&lt;/td&gt;&lt;td&gt;The client is reported to have or has had a cough&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B10S1.46DE06\&quot;&gt;EmCare.B10S1.DE06&lt;/a&gt;&lt;/td&gt;&lt;td&gt;cough for how long?&lt;/td&gt;&lt;td&gt;Length of time the client is reported to have or has had the cough&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B10S1.46DE01\&quot;&gt;EmCare.B10S1.DE01&lt;/a&gt;&lt;/td&gt;&lt;td&gt;difficulty breathing&lt;/td&gt;&lt;td&gt;The client is reported to have or has had difficulty breathing&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B10S1.46DE02\&quot;&gt;EmCare.B10S1.DE02&lt;/a&gt;&lt;/td&gt;&lt;td&gt;difficulty breathing for how long?&lt;/td&gt;&lt;td&gt;The length of time the client has or has had difficulty breathing&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B11S1.46DE02\&quot;&gt;EmCare.B11S1.DE02&lt;/a&gt;&lt;/td&gt;&lt;td&gt;diarrhoea for how long?&lt;/td&gt;&lt;td&gt;The length of time the client is reported to have or has had diarrhoea&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B11S1.46DE05\&quot;&gt;EmCare.B11S1.DE05&lt;/a&gt;&lt;/td&gt;&lt;td&gt;blood in the stool in this illness&lt;/td&gt;&lt;td&gt;The client is reported to have or has had blood in the stool in this Illness&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B12S1.46DE02\&quot;&gt;EmCare.B12S1.DE02&lt;/a&gt;&lt;/td&gt;&lt;td&gt;fever reported&lt;/td&gt;&lt;td&gt;The client is reported to have or has had fever&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B12S1.46DE03\&quot;&gt;EmCare.B12S1.DE03&lt;/a&gt;&lt;/td&gt;&lt;td&gt;fever for how long?&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B.46G.46DE06\&quot;&gt;EmCare.B.G.DE06&lt;/a&gt;&lt;/td&gt;&lt;td&gt;fever&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B12S1.46DE06\&quot;&gt;EmCare.B12S1.DE06&lt;/a&gt;&lt;/td&gt;&lt;td&gt;has fever been present every day since the fever started?&lt;/td&gt;&lt;td&gt;The client has had fever present every day since the fever started&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B13S1.46DE01\&quot;&gt;EmCare.B13S1.DE01&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ear problem&lt;/td&gt;&lt;td&gt;The client is reported to have had or has an ear problem&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B13S1.46DE02\&quot;&gt;EmCare.B13S1.DE02&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ear pain&lt;/td&gt;&lt;td&gt;The client is reported to have had or has ear pain&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B13S1.46DE03\&quot;&gt;EmCare.B13S1.DE03&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ear discharge&lt;/td&gt;&lt;td&gt;The client is reported to have or has had ear discharge&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B13S1.46DE04\&quot;&gt;EmCare.B13S1.DE04&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ear discharge for how long?&lt;/td&gt;&lt;td&gt;The length of time client has or has had ear discharge&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S1.46DE03\&quot;&gt;EmCare.B14S1.DE03&lt;/a&gt;&lt;/td&gt;&lt;td&gt;eye problem&lt;/td&gt;&lt;td&gt;The client is reported to have an eye problem&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S1.46DE01\&quot;&gt;EmCare.B14S1.DE01&lt;/a&gt;&lt;/td&gt;&lt;td&gt;skin problem&lt;/td&gt;&lt;td&gt;The client is reported to have or has had a skin problem&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S1.46DE02\&quot;&gt;EmCare.B14S1.DE02&lt;/a&gt;&lt;/td&gt;&lt;td&gt;itchy skin&lt;/td&gt;&lt;td&gt;The client is reported to have itchy skin&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B10S2.46DE03\&quot;&gt;EmCare.B10S2.DE03&lt;/a&gt;&lt;/td&gt;&lt;td&gt;chest indrawing&lt;/td&gt;&lt;td&gt;The client has chest indrawing&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B10S2.46DE04\&quot;&gt;EmCare.B10S2.DE04&lt;/a&gt;&lt;/td&gt;&lt;td&gt;stridor in a calm child&lt;/td&gt;&lt;td&gt;The client has stridor in a calm child while the client is at rest&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B10S2.46DE05\&quot;&gt;EmCare.B10S2.DE05&lt;/a&gt;&lt;/td&gt;&lt;td&gt;wheezing&lt;/td&gt;&lt;td&gt;The client is wheezing&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B10S2.46DE06\&quot;&gt;EmCare.B10S2.DE06&lt;/a&gt;&lt;/td&gt;&lt;td&gt;recurrent wheeze&lt;/td&gt;&lt;td&gt;The client has experienced recurrent wheeze&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B10S2.46DE07\&quot;&gt;EmCare.B10S2.DE07&lt;/a&gt;&lt;/td&gt;&lt;td&gt;oxygen saturation&lt;/td&gt;&lt;td&gt;The client's oxygen saturation measurement&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17S1.46DE01\&quot;&gt;EmCare.B17S1.DE01&lt;/a&gt;&lt;/td&gt;&lt;td&gt;throat problem&lt;/td&gt;&lt;td&gt;The client has a throat problem&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17S1.46DE02\&quot;&gt;EmCare.B17S1.DE02&lt;/a&gt;&lt;/td&gt;&lt;td&gt;specify throat problem&lt;/td&gt;&lt;td&gt;Specify the throat problem the client has&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17S1.46DE06\&quot;&gt;EmCare.B17S1.DE06&lt;/a&gt;&lt;/td&gt;&lt;td&gt;enlarged lymph nodes on front of neck&lt;/td&gt;&lt;td&gt;The client has enlarged lymph node(s) on the front of the neck&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17S1.46DE07\&quot;&gt;EmCare.B17S1.DE07&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ability to swallow&lt;/td&gt;&lt;td&gt;The client's ability to swallow&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B13S2.46DE01\&quot;&gt;EmCare.B13S2.DE01&lt;/a&gt;&lt;/td&gt;&lt;td&gt;tender swelling behind the ear&lt;/td&gt;&lt;td&gt;The client has tender swelling behind the ear&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B13S2.46DE02\&quot;&gt;EmCare.B13S2.DE02&lt;/a&gt;&lt;/td&gt;&lt;td&gt;pus seen draining from the ear&lt;/td&gt;&lt;td&gt;The client has pus draining from the ear which has been seen by the health care worker&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B13S2.46DE03\&quot;&gt;EmCare.B13S2.DE03&lt;/a&gt;&lt;/td&gt;&lt;td&gt;pus seen draining from the ear for how long?&lt;/td&gt;&lt;td&gt;The length of time the client has or has had pus draining from the ear&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B12S2.46DE01\&quot;&gt;EmCare.B12S2.DE01&lt;/a&gt;&lt;/td&gt;&lt;td&gt;stiff neck&lt;/td&gt;&lt;td&gt;The client has a stiff neck&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B12S2.46DE05\&quot;&gt;EmCare.B12S2.DE05&lt;/a&gt;&lt;/td&gt;&lt;td&gt;runny nose&lt;/td&gt;&lt;td&gt;The client has a Runny nose&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE01\&quot;&gt;EmCare.B14S2.DE01&lt;/a&gt;&lt;/td&gt;&lt;td&gt;red eyes&lt;/td&gt;&lt;td&gt;The client has red eyes&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE02\&quot;&gt;EmCare.B14S2.DE02&lt;/a&gt;&lt;/td&gt;&lt;td&gt;pus draining from eye&lt;/td&gt;&lt;td&gt;The client has pus draining from the eye&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE03\&quot;&gt;EmCare.B14S2.DE03&lt;/a&gt;&lt;/td&gt;&lt;td&gt;clouding of the cornea&lt;/td&gt;&lt;td&gt;The client has clouding of the cornea&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE04\&quot;&gt;EmCare.B14S2.DE04&lt;/a&gt;&lt;/td&gt;&lt;td&gt;is clouding of the cornea a new problem&lt;/td&gt;&lt;td&gt;Clouding of the cornea in the client is a new problem&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE05\&quot;&gt;EmCare.B14S2.DE05&lt;/a&gt;&lt;/td&gt;&lt;td&gt;has clouding of the cornea previously been treated&lt;/td&gt;&lt;td&gt;Clouding of the cornea has not been previously treated in the client&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE06\&quot;&gt;EmCare.B14S2.DE06&lt;/a&gt;&lt;/td&gt;&lt;td&gt;generalised or localised skin problem&lt;/td&gt;&lt;td&gt;The client has a generalised or localised skin problem&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE10\&quot;&gt;EmCare.B14S2.DE10&lt;/a&gt;&lt;/td&gt;&lt;td&gt;measles rash&lt;/td&gt;&lt;td&gt;The client has a measles rash&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE11\&quot;&gt;EmCare.B14S2.DE11&lt;/a&gt;&lt;/td&gt;&lt;td&gt;measles within the last 3 months&lt;/td&gt;&lt;td&gt;The client has had measles in the last 3 months&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE12\&quot;&gt;EmCare.B14S2.DE12&lt;/a&gt;&lt;/td&gt;&lt;td&gt;blisters, sores or pustules&lt;/td&gt;&lt;td&gt;The client has blisters, sores or pustules&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE13\&quot;&gt;EmCare.B14S2.DE13&lt;/a&gt;&lt;/td&gt;&lt;td&gt;type of skin problem&lt;/td&gt;&lt;td&gt;The client has a specific type of skin problem(s)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE19a\&quot;&gt;EmCare.B14S2.DE19a&lt;/a&gt;&lt;/td&gt;&lt;td&gt;scalp infection (tinea capitis)&lt;/td&gt;&lt;td&gt;The client has Scalp Infection (tinea capitis)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE22A\&quot;&gt;EmCare.B14S2.DE22A&lt;/a&gt;&lt;/td&gt;&lt;td&gt;severe rash&lt;/td&gt;&lt;td&gt;The client has severe chickenpox rash&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE23a\&quot;&gt;EmCare.B14S2.DE23a&lt;/a&gt;&lt;/td&gt;&lt;td&gt;disseminated herpes zoster&lt;/td&gt;&lt;td&gt;The client has disseminated herpes zoster&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE24\&quot;&gt;EmCare.B14S2.DE24&lt;/a&gt;&lt;/td&gt;&lt;td&gt;eye involvement&lt;/td&gt;&lt;td&gt;The client has Herpes Zoster with Eye Involvement&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE30\&quot;&gt;EmCare.B14S2.DE30&lt;/a&gt;&lt;/td&gt;&lt;td&gt;skin infection extends to muscle&lt;/td&gt;&lt;td&gt;The client has skin infection that extends to muscle&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE30b\&quot;&gt;EmCare.B14S2.DE30b&lt;/a&gt;&lt;/td&gt;&lt;td&gt;extensive impetigo lesions&lt;/td&gt;&lt;td&gt;The client has Extensive impetigo lesions requiring oral antibiotics&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE31a\&quot;&gt;EmCare.B14S2.DE31a&lt;/a&gt;&lt;/td&gt;&lt;td&gt;extensive molluscum lesions&lt;/td&gt;&lt;td&gt;The client has Extensive molluscum lesions&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE31b\&quot;&gt;EmCare.B14S2.DE31b&lt;/a&gt;&lt;/td&gt;&lt;td&gt;molluscum lesions close to the eye&lt;/td&gt;&lt;td&gt;The client has molluscum lesions close to the eye&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE32a\&quot;&gt;EmCare.B14S2.DE32a&lt;/a&gt;&lt;/td&gt;&lt;td&gt;extensive warts&lt;/td&gt;&lt;td&gt;The client has Extensive warts&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE34\&quot;&gt;EmCare.B14S2.DE34&lt;/a&gt;&lt;/td&gt;&lt;td&gt;severe seborrhoeic dermatitis&lt;/td&gt;&lt;td&gt;The client has severe Seborrhoeic Dermatitis&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE36a\&quot;&gt;EmCare.B14S2.DE36a&lt;/a&gt;&lt;/td&gt;&lt;td&gt;secondary bacterial infection of eczema&lt;/td&gt;&lt;td&gt;The client has secondary bacterial infection of eczema&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE36b\&quot;&gt;EmCare.B14S2.DE36b&lt;/a&gt;&lt;/td&gt;&lt;td&gt;severe acute moist or weeping eczema&lt;/td&gt;&lt;td&gt;The client has severe acute moist or weeping eczema&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE36c\&quot;&gt;EmCare.B14S2.DE36c&lt;/a&gt;&lt;/td&gt;&lt;td&gt;secondary herpes infection of eczema (eczema herpeticum)&lt;/td&gt;&lt;td&gt;The client has secondary herpes infection of eczema (eczema herpeticum)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE38\&quot;&gt;EmCare.B14S2.DE38&lt;/a&gt;&lt;/td&gt;&lt;td&gt;oral sores or mouth ulcers&lt;/td&gt;&lt;td&gt;The client has oral sores or mouth ulcers&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE43\&quot;&gt;EmCare.B14S2.DE43&lt;/a&gt;&lt;/td&gt;&lt;td&gt;add a skin or mouth or eye problem&lt;/td&gt;&lt;td&gt;The health care worker would like to add a Skin or Mouth or Eye problem found during the physical exam&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B15S2.46DE01\&quot;&gt;EmCare.B15S2.DE01&lt;/a&gt;&lt;/td&gt;&lt;td&gt;palmar pallor&lt;/td&gt;&lt;td&gt;The client has palmar pallor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B15S2.46DE09\&quot;&gt;EmCare.B15S2.DE09&lt;/a&gt;&lt;/td&gt;&lt;td&gt;mucous membrane pallor&lt;/td&gt;&lt;td&gt;The client has Mucous membrane pallor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE08\&quot;&gt;EmCare.B22.DE08&lt;/a&gt;&lt;/td&gt;&lt;td&gt;oral fluid test results&lt;/td&gt;&lt;td&gt;Oral Fluid Test Results&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE14\&quot;&gt;EmCare.B22.DE14&lt;/a&gt;&lt;/td&gt;&lt;td&gt;unable to perform oral fluid test&lt;/td&gt;&lt;td&gt;The healthcare worker is Unable to Perform Oral Fluid Test&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE14a\&quot;&gt;EmCare.B22.DE14a&lt;/a&gt;&lt;/td&gt;&lt;td&gt;completely unable to drink or vomits immediately / everything&lt;/td&gt;&lt;td&gt;When  are present when the healthcare worker is Unable to Perform Oral Fluid Test it is assumed that the client is completely unable to drink or vomits immediately / everything&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE15\&quot;&gt;EmCare.B22.DE15&lt;/a&gt;&lt;/td&gt;&lt;td&gt;has the child had anything to drink today?&lt;/td&gt;&lt;td&gt;The health care worker asks the caregiver if the client has had anything to drink today&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE16\&quot;&gt;EmCare.B22.DE16&lt;/a&gt;&lt;/td&gt;&lt;td&gt;how did the child last drink&lt;/td&gt;&lt;td&gt;The health care worker asks the caregiver how did the client last drink&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE01\&quot;&gt;EmCare.B22.DE01&lt;/a&gt;&lt;/td&gt;&lt;td&gt;respiratory rate (breaths per minute)&lt;/td&gt;&lt;td&gt;The client's respiratory rate for client's aged 2 months or more&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE02\&quot;&gt;EmCare.B22.DE02&lt;/a&gt;&lt;/td&gt;&lt;td&gt;unable to perform respiratory rate at this time&lt;/td&gt;&lt;td&gt;The client's respiratory rate could not be measured at this time (all ages)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE04\&quot;&gt;EmCare.B22.DE04&lt;/a&gt;&lt;/td&gt;&lt;td&gt;respiratory rate second count (breaths per minute)&lt;/td&gt;&lt;td&gt;The client's respiratory rate for the second Count&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE05\&quot;&gt;EmCare.B22.DE05&lt;/a&gt;&lt;/td&gt;&lt;td&gt;respiratory rate second count not possible&lt;/td&gt;&lt;td&gt;The client's respiratory rate for the second Count was not possible&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE07\&quot;&gt;EmCare.B22.DE07&lt;/a&gt;&lt;/td&gt;&lt;td&gt;fast breathing&lt;/td&gt;&lt;td&gt;The client has fast breathing - auto-calculated based on the respiratory rate and the age of the client - 60 breaths per minute or more (&amp;lt;2 months) after 2 respiratory rate measurements&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE17\&quot;&gt;EmCare.B22.DE17&lt;/a&gt;&lt;/td&gt;&lt;td&gt;inhaled bronchodilator trial results&lt;/td&gt;&lt;td&gt;The Inhaled bronchodilator trial test results&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE22\&quot;&gt;EmCare.B22.DE22&lt;/a&gt;&lt;/td&gt;&lt;td&gt;inhaled bronchodilator trial not feasible or available&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE21\&quot;&gt;EmCare.B22.DE21&lt;/a&gt;&lt;/td&gt;&lt;td&gt;no fast breathing and no chest indrawing (post inhaled bronchodilator trial)&lt;/td&gt;&lt;td&gt;The client has no fast breathing and no chest indrawing&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE41\&quot;&gt;EmCare.B22.DE41&lt;/a&gt;&lt;/td&gt;&lt;td&gt;breastfeeding assessment not possible&lt;/td&gt;&lt;td&gt;The breastfeeding assessment was not possible&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE28\&quot;&gt;EmCare.B22.DE28&lt;/a&gt;&lt;/td&gt;&lt;td&gt;breastfed in the previous hour&lt;/td&gt;&lt;td&gt;The client has breastfed in the previous hour&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE29\&quot;&gt;EmCare.B22.DE29&lt;/a&gt;&lt;/td&gt;&lt;td&gt;mother able to wait until young infant is willing to breastfeed again&lt;/td&gt;&lt;td&gt;The client's mother is able to wait until young infant is willing to breastfeed again&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE30\&quot;&gt;EmCare.B22.DE30&lt;/a&gt;&lt;/td&gt;&lt;td&gt;mother reports difficulty breastfeeding&lt;/td&gt;&lt;td&gt;The client's mother reports that there is difficulty breastfeeding (not observed)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE31\&quot;&gt;EmCare.B22.DE31&lt;/a&gt;&lt;/td&gt;&lt;td&gt;chin touching breast&lt;/td&gt;&lt;td&gt;The client's chin is touching the breast&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE32\&quot;&gt;EmCare.B22.DE32&lt;/a&gt;&lt;/td&gt;&lt;td&gt;mouth wide open&lt;/td&gt;&lt;td&gt;The client's mouth is wide open&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE33\&quot;&gt;EmCare.B22.DE33&lt;/a&gt;&lt;/td&gt;&lt;td&gt;lower lip turned outwards&lt;/td&gt;&lt;td&gt;The client's lower lip is turned outwards&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE34\&quot;&gt;EmCare.B22.DE34&lt;/a&gt;&lt;/td&gt;&lt;td&gt;more areola visible above than below the mouth&lt;/td&gt;&lt;td&gt;The mother has more areola visible above than below the client's mouth&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE35\&quot;&gt;EmCare.B22.DE35&lt;/a&gt;&lt;/td&gt;&lt;td&gt;slow deep sucks, sometimes pausing&lt;/td&gt;&lt;td&gt;The client is taking slow deep sucks, sometimes pausing&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE36\&quot;&gt;EmCare.B22.DE36&lt;/a&gt;&lt;/td&gt;&lt;td&gt;breastfeeding assessment results&lt;/td&gt;&lt;td&gt;The client's breastfeeding results&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE42\&quot;&gt;EmCare.B22.DE42&lt;/a&gt;&lt;/td&gt;&lt;td&gt;difficulty breastfeeding reported&lt;/td&gt;&lt;td&gt;The breastfeeding assessment was not observed however the caregiver has reported difficulty breastfeeding&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE44\&quot;&gt;EmCare.B22.DE44&lt;/a&gt;&lt;/td&gt;&lt;td&gt;difficulty breastfeeding observed&lt;/td&gt;&lt;td&gt;The healthcare worker has observed that the client has difficulty breastfeeding&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE81\&quot;&gt;EmCare.B22.DE81&lt;/a&gt;&lt;/td&gt;&lt;td&gt;hemoglobin (hb) g/dl&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE82\&quot;&gt;EmCare.B22.DE82&lt;/a&gt;&lt;/td&gt;&lt;td&gt;hemoglobin test not available&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE47\&quot;&gt;EmCare.B22.DE47&lt;/a&gt;&lt;/td&gt;&lt;td&gt;axillary temperature (second measurement)&lt;/td&gt;&lt;td&gt;The client's axillary temperature (second measurement) in degrees Celcius (temperature taken under the armpit)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE46\&quot;&gt;EmCare.B22.DE46&lt;/a&gt;&lt;/td&gt;&lt;td&gt;second temperature measurement not feasible&lt;/td&gt;&lt;td&gt;The client's second temperature measurement is feasible&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE50\&quot;&gt;EmCare.B22.DE50&lt;/a&gt;&lt;/td&gt;&lt;td&gt;measured temperature (second measurement)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">url</a>" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/emcareobservation",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">version</a>" : "0.1.0",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.name">name</a>" : "valueset-emcareobservation",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.status">status</a>" : "draft",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.experimental">experimental</a>" : false,
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a>" : "2023-04-03T14:56:37+00:00",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.publisher">publisher</a>" : "World Health Organization (WHO)",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "https://www.who.int"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.description">description</a>" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.jurisdiction">jurisdiction</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "001"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.immutable">immutable</a>" : true,
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose">compose</a>" : {
+    "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include">include</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">system</a>" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept">concept</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B3.DE05",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "is the child sick today?",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client's visit is for a well child but the child is also presenting as sick"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B7.DE02",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "convulsing now",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client is convulsing now"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B7-B8-B9.DE01",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "continue to assess sick child",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The healthcare worker chooses if they will continue to assess the sick child with a life threatening illness"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B7.DE03",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "convulsion(s) in this illness",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client is reported to have had one or more convulsions"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B7.DE08b",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "unconscious or lethargic",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client is unconcious or Lethargic"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B7.DE08",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "unconscious",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client is unconcious"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B7.DE08a",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "lethargic",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client is lethargic"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B7.DE09",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "not able to drink or breastfeed",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has reported not to have been able to drink or breastfeed or currently is not able to drink or breastfeed."
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B7.DE10",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "vomiting everything",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client is reported to be vomiting everything or vomiting but not everything or no vomiting"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B6.DE01",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "axillary temperature  (degrees celcius)",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client's axillary temperature in degrees Celsius (temperature taken under the armpit)"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B6.DE04",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "thermometer not available",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "A thermometer is not available to accurately measure the client's temperature"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B6.DE05",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "hot to touch",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client is hot to touch"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B6.DE01A",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "measured temperature",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client's Temperature has been measured"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B6.DE06",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "weight (kg)",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client's weight in Kilograms"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B6.DE08",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "estimated weight",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client's weight has been estimated - to be used for treatment dosing only"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B6.DE09",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "height",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client's height in Centimeters"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B6.DE11",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "height cannot be measured",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client's height cannot be measured"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B6.DE12",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "length",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client's length in Centimeters"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B6.DE16",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "weight for age (wfa) z scores",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client's weight for age z score"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B6.DE17",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "muac (mm)",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client's Mid Upper Arm Circumference in Millimeters (child ≥6 months old)"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B6.DE17a",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "muac cannot be measured",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client's Mid Upper Arm Circumference cannot be measured"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B6.DE18",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "visually assess for whether underweight (for drug dose calculation)",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The health care worker visually assesses for whether underweight (for drug dosing calculations)"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B18S1.DE02",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "difficulty with feeding",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client is reported to have difficulty with Feeding"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B11S1.DE01",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "diarrhoea",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client is reported to have diarrhoea"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B21S1.DE06",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "breastfed",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client is breastfed"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B18S2.DE07",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "severe chest indrawing",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has severe chest indrawing"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B18S2.DE08",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "movements",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The health care worker's assessments of the client's movements"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B18S2.DE12",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "umbilicus red or pus draining",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client's umbilicus is red or is draining pus"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B18S2.DE13",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "skin pustules",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has skin pustules"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B19S2.DE01",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "yellow skin",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has yellow skin"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B19S2.DE02",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "yellow palms or yellow soles",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has yellow palms or yellow soles"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B19S2.DE04",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "when did the jaundice first appear?",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The age at which the Jaundice first appeared"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B11S2.DE01",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "sunken eyes",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has sunken eyes"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B11S2.DE02",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "skin pinch of abdomen",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The healthcare worker pinches the skin of the client's abdomen for 1 second and then observes how long the skin takes to return to normal once released"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B11S2.DE06",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "restless and irritable",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client is restless and irritable"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B21S2.DE01",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "weight status",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client's weight status"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B21S2.DE05",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "breastfed how many times in 24 hours?",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "Number of times the client is breastfed in 24 hours"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B21S2.DE06",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "sufficient feeds",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "Based on the number of feeds during a 24 hour period the result is auto-calculated to determine sufficient feeds"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B21S2.DE08",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "young infant receives food or fluids other than breast milk",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client is receiving other food or drinks besides breastmilk"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B21S2.DE09",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "what milk is being given as a replacement feed?",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The health care worker discusses the milk being given to the client as a replacement feed and determines if it is appropriate replacement milk"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B21S2.DE12",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "how many replacement feeds during the day and night (24 hours)?",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "How often the client is receiving replacement feeds during the day and night (24 hours)"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B21S2.DE13",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "sufficient replacement feeds (in 24 hours)",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "Based on the number of feeds during the day and night (24 hours) the result is auto-calculated to determine sufficient replacement feeds"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B21S2.DE15",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "how much milk is given at each feed (ml)?",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The amount of milk given to the client at each feed"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B21S2.DE16",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "sufficient replacement feeds",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The care giver is giving sufficient replacement feeds"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B21S2.DE18",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "how is the milk prepared?",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "Description of how the milk is prepared for the client's feed"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B21S2.DE21",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "how is the milk given?",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "Description on how the client is given the milk - bottle or cup"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B21S2.DE24",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "how are the feeding utensils cleaned?",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "Description of how the feeding utensils are cleaned"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B21S2.DE27",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "do you give any breastmilk at all?",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "Does the care giver give the client any breastmilk at all?"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B21S2.DE30",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "ulcers or white patches in mouth",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has ulcers or white patches in the mouth"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B21S2.DE31",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "unable to check if ulcers or white patches in mouth",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The healthcare worker is unable to check if the client has ulcers or white patches in the mouth"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B10S1.DE05",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "cough",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client is reported to have or has had a cough"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B10S1.DE06",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "cough for how long?",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "Length of time the client is reported to have or has had the cough"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B10S1.DE01",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "difficulty breathing",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client is reported to have or has had difficulty breathing"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B10S1.DE02",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "difficulty breathing for how long?",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The length of time the client has or has had difficulty breathing"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B11S1.DE02",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "diarrhoea for how long?",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The length of time the client is reported to have or has had diarrhoea"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B11S1.DE05",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "blood in the stool in this illness",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client is reported to have or has had blood in the stool in this Illness"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B12S1.DE02",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "fever reported",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client is reported to have or has had fever"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B12S1.DE03",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "fever for how long?"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B.G.DE06",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "fever"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B12S1.DE06",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "has fever been present every day since the fever started?",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has had fever present every day since the fever started"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B13S1.DE01",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "ear problem",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client is reported to have had or has an ear problem"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B13S1.DE02",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "ear pain",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client is reported to have had or has ear pain"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B13S1.DE03",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "ear discharge",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client is reported to have or has had ear discharge"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B13S1.DE04",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "ear discharge for how long?",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The length of time client has or has had ear discharge"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S1.DE03",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "eye problem",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client is reported to have an eye problem"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S1.DE01",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "skin problem",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client is reported to have or has had a skin problem"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S1.DE02",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "itchy skin",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client is reported to have itchy skin"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B10S2.DE03",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "chest indrawing",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has chest indrawing"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B10S2.DE04",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "stridor in a calm child",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has stridor in a calm child while the client is at rest"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B10S2.DE05",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "wheezing",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client is wheezing"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B10S2.DE06",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "recurrent wheeze",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has experienced recurrent wheeze"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B10S2.DE07",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "oxygen saturation",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client's oxygen saturation measurement"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B17S1.DE01",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "throat problem",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has a throat problem"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B17S1.DE02",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "specify throat problem",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "Specify the throat problem the client has"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B17S1.DE06",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "enlarged lymph nodes on front of neck",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has enlarged lymph node(s) on the front of the neck"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B17S1.DE07",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "ability to swallow",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client's ability to swallow"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B13S2.DE01",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "tender swelling behind the ear",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has tender swelling behind the ear"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B13S2.DE02",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "pus seen draining from the ear",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has pus draining from the ear which has been seen by the health care worker"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B13S2.DE03",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "pus seen draining from the ear for how long?",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The length of time the client has or has had pus draining from the ear"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B12S2.DE01",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "stiff neck",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has a stiff neck"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B12S2.DE05",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "runny nose",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has a Runny nose"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE01",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "red eyes",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has red eyes"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE02",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "pus draining from eye",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has pus draining from the eye"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE03",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "clouding of the cornea",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has clouding of the cornea"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE04",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "is clouding of the cornea a new problem",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "Clouding of the cornea in the client is a new problem"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE05",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "has clouding of the cornea previously been treated",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "Clouding of the cornea has not been previously treated in the client"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE06",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "generalised or localised skin problem",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has a generalised or localised skin problem"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE10",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "measles rash",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has a measles rash"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE11",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "measles within the last 3 months",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has had measles in the last 3 months"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE12",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "blisters, sores or pustules",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has blisters, sores or pustules"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE13",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "type of skin problem",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has a specific type of skin problem(s)"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE19a",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "scalp infection (tinea capitis)",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has Scalp Infection (tinea capitis)"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE22A",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "severe rash",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has severe chickenpox rash"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE23a",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "disseminated herpes zoster",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has disseminated herpes zoster"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE24",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "eye involvement",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has Herpes Zoster with Eye Involvement"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE30",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "skin infection extends to muscle",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has skin infection that extends to muscle"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE30b",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "extensive impetigo lesions",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has Extensive impetigo lesions requiring oral antibiotics"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE31a",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "extensive molluscum lesions",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has Extensive molluscum lesions"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE31b",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "molluscum lesions close to the eye",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has molluscum lesions close to the eye"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE32a",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "extensive warts",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has Extensive warts"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE34",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "severe seborrhoeic dermatitis",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has severe Seborrhoeic Dermatitis"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE36a",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "secondary bacterial infection of eczema",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has secondary bacterial infection of eczema"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE36b",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "severe acute moist or weeping eczema",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has severe acute moist or weeping eczema"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE36c",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "secondary herpes infection of eczema (eczema herpeticum)",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has secondary herpes infection of eczema (eczema herpeticum)"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE38",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "oral sores or mouth ulcers",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has oral sores or mouth ulcers"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE43",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "add a skin or mouth or eye problem",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The health care worker would like to add a Skin or Mouth or Eye problem found during the physical exam"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B15S2.DE01",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "palmar pallor",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has palmar pallor"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B15S2.DE09",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "mucous membrane pallor",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has Mucous membrane pallor"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE08",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "oral fluid test results",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "Oral Fluid Test Results"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE14",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "unable to perform oral fluid test",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The healthcare worker is Unable to Perform Oral Fluid Test"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE14a",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "completely unable to drink or vomits immediately / everything",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "When  are present when the healthcare worker is Unable to Perform Oral Fluid Test it is assumed that the client is completely unable to drink or vomits immediately / everything"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE15",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "has the child had anything to drink today?",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The health care worker asks the caregiver if the client has had anything to drink today"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE16",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "how did the child last drink",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The health care worker asks the caregiver how did the client last drink"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE01",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "respiratory rate (breaths per minute)",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client's respiratory rate for client's aged 2 months or more"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE02",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "unable to perform respiratory rate at this time",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client's respiratory rate could not be measured at this time (all ages)"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE04",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "respiratory rate second count (breaths per minute)",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client's respiratory rate for the second Count"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE05",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "respiratory rate second count not possible",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client's respiratory rate for the second Count was not possible"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE07",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "fast breathing",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has fast breathing - auto-calculated based on the respiratory rate and the age of the client - 60 breaths per minute or more (&lt;2 months) after 2 respiratory rate measurements"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE17",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "inhaled bronchodilator trial results",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The Inhaled bronchodilator trial test results"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE22",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "inhaled bronchodilator trial not feasible or available"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE21",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "no fast breathing and no chest indrawing (post inhaled bronchodilator trial)",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has no fast breathing and no chest indrawing"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE41",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "breastfeeding assessment not possible",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The breastfeeding assessment was not possible"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE28",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "breastfed in the previous hour",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has breastfed in the previous hour"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE29",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "mother able to wait until young infant is willing to breastfeed again",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client's mother is able to wait until young infant is willing to breastfeed again"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE30",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "mother reports difficulty breastfeeding",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client's mother reports that there is difficulty breastfeeding (not observed)"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE31",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "chin touching breast",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client's chin is touching the breast"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE32",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "mouth wide open",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client's mouth is wide open"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE33",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "lower lip turned outwards",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client's lower lip is turned outwards"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE34",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "more areola visible above than below the mouth",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The mother has more areola visible above than below the client's mouth"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE35",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "slow deep sucks, sometimes pausing",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client is taking slow deep sucks, sometimes pausing"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE36",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "breastfeeding assessment results",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client's breastfeeding results"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE42",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "difficulty breastfeeding reported",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The breastfeeding assessment was not observed however the caregiver has reported difficulty breastfeeding"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE44",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "difficulty breastfeeding observed",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The healthcare worker has observed that the client has difficulty breastfeeding"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE81",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "hemoglobin (hb) g/dl",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client's Hemoglobin (Hb) result"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE82",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "hemoglobin test not available",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "There is no Hemoglobin test available for the client"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE47",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "axillary temperature (second measurement)",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client's axillary temperature (second measurement) in degrees Celcius (temperature taken under the armpit)"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE46",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "second temperature measurement not feasible",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client's second temperature measurement is feasible"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE50",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "measured temperature (second measurement)"
+          }
+        ]
+      }
+    ]
+  }
+}</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.who.int">World Health Organization (WHO)</a>.  Package who.fhir.emc-cds#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 3, 2023 14:56+0000">2023-04-03</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="http://fhir.org/guides/who/emcare/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

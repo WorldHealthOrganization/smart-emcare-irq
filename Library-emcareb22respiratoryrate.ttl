@@ -1,0 +1,71 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/who/emcare/Library/emcareb22respiratoryrate> a fhir:Library ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "emcareb22respiratoryrate"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Parameters</h2><table class=\"grid\"><tr><td>ageinmonths</td><td>out</td><td/><td/><td>integer</td></tr><tr><td>age</td><td>out</td><td/><td/><td>integer</td></tr><tr><td>respiratory rate profile</td><td>out</td><td/><td/><td>Quantity</td></tr><tr><td>force-collection</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>respiratory rate second count profile</td><td>out</td><td/><td/><td>Quantity</td></tr><tr><td>fast breathing profile</td><td>out</td><td/><td/><td>boolean</td></tr></table><h2>Contents</h2></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb22respiratoryrate"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:value [ fhir:v "emcare.b22.respiratoryrate" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "emcareb22respiratoryrate"] ; # 
+  fhir:title [ fhir:v "EmCare.B22.RespiratoryRate"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/ValueSet/library-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "logic-library" ]
+     ] )
+  ] ; # 
+  fhir:date [ fhir:v "2023-04-03T14:56:37+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "World Health Organization (WHO)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "ageinmonths" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "integer" ]
+  ] [
+     fhir:name [ fhir:v "age" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "integer" ]
+  ] [
+     fhir:name [ fhir:v "respiratory rate profile" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "Quantity" ]
+  ] [
+     fhir:name [ fhir:v "force-collection" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "respiratory rate second count profile" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "Quantity" ]
+  ] [
+     fhir:name [ fhir:v "fast breathing profile" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

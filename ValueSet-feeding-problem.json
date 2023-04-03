@@ -1,0 +1,49 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "feeding-problem",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"CodeSystem-emcare-custom-codes.html\"><code>https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B21S2.46DE28\">EmCare.B21S2.DE28</a></td><td>Breastmilk also given</td><td>Breastmilk is also given to the client by the care giver</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B21S2.46DE29\">EmCare.B21S2.DE29</a></td><td>No Breastmilk at all</td><td>The caregiver does not give the client any breastmilk at all</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/feeding-problem",
+  "version" : "0.1.0",
+  "name" : "valueset-feeding-problem",
+  "title" : "EmCare.B21S2.DE27",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2023-04-03T14:56:37+00:00",
+  "publisher" : "World Health Organization (WHO)",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.who.int"
+    }]
+  }],
+  "description" : "Do you give any breastmilk at all?",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001"
+    }]
+  }],
+  "immutable" : true,
+  "compose" : {
+    "include" : [{
+      "system" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+      "concept" : [{
+        "code" : "EmCare.B21S2.DE28",
+        "display" : "Breastmilk also given",
+        "designation" : [{
+          "value" : "Breastmilk is also given to the client by the care giver"
+        }]
+      },
+      {
+        "code" : "EmCare.B21S2.DE29",
+        "display" : "No Breastmilk at all",
+        "designation" : [{
+          "value" : "The caregiver does not give the client any breastmilk at all"
+        }]
+      }]
+    }]
+  }
+}

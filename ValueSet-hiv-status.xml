@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="hiv-status"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include these codes as defined in <a href="CodeSystem-emcare-custom-codes.html"><code>https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B21S1.46DE02">EmCare.B21S1.DE02</a></td><td>Mother HIV Positive</td><td>The client's mother is HIV positive</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B21S1.46DE03">EmCare.B21S1.DE03</a></td><td>Mother HIV Negative</td><td>The client's mother is HIV negative</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B21S1.46DE04">EmCare.B21S1.DE04</a></td><td>Mother HIV Status - Unknown or Not Tested</td><td>The client's mother's HIV Status is unknown or not tested</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B21S1.46DE05">EmCare.B21S1.DE05</a></td><td>Mother HIV Status - Decline to answer</td><td>The client's mother has declined to answer regarging HIV Status</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/hiv-status"/>
+  <version value="0.1.0"/>
+  <name value="valueset-hiv-status"/>
+  <title value="EmCare.B21S1.DE01"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2023-04-03T14:56:37+00:00"/>
+  <publisher value="World Health Organization (WHO)"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.who.int"/>
+    </telecom>
+  </contact>
+  <description value="The client's mother's HIV Status"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <immutable value="true"/>
+  <compose>
+    <include>
+      <system value="https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes"/>
+      <concept>
+        <code value="EmCare.B21S1.DE02"/>
+        <display value="Mother HIV Positive"/>
+        <designation>
+          <value value="The client's mother is HIV positive"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B21S1.DE03"/>
+        <display value="Mother HIV Negative"/>
+        <designation>
+          <value value="The client's mother is HIV negative"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B21S1.DE04"/>
+        <display value="Mother HIV Status - Unknown or Not Tested"/>
+        <designation>
+          <value value="The client's mother's HIV Status is unknown or not tested"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B21S1.DE05"/>
+        <display value="Mother HIV Status - Decline to answer"/>
+        <designation>
+          <value value="The client's mother has declined to answer regarging HIV Status"/>
+        </designation>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

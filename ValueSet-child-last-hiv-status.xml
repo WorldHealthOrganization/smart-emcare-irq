@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="child-last-hiv-status"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include these codes as defined in <a href="CodeSystem-emcare-custom-codes.html"><code>https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17.46DE31">EmCare.B17.DE31</a></td><td>Child HIV Positive - Virological</td><td>The client is HIV Positive (Virological Test)</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17.46DE32">EmCare.B17.DE32</a></td><td>Child HIV Positive - Serological</td><td>The client is HIV Positive (Serological Test)</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17.46DE33">EmCare.B17.DE33</a></td><td>Child HIV Positive - Unknown Type of Test</td><td>The client is HIV Positive (Unknown Type of Test)</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17.46DE34">EmCare.B17.DE34</a></td><td>Child HIV Negative</td><td>The client is HIV Negative</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17.46DE35">EmCare.B17.DE35</a></td><td>Child HIV Status - Unknown or Not Tested</td><td>The client's HIV Status is unknown or the client has not been tested</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17.46DE36">EmCare.B17.DE36</a></td><td>Child HIV Status - Decline to answer</td><td>The client has delined to answer regarding HIV Status</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/child-last-hiv-status"/>
+  <version value="0.1.0"/>
+  <name value="valueset-child-last-hiv-status"/>
+  <title value="EmCare.B17.DE30"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2023-04-03T14:56:37+00:00"/>
+  <publisher value="World Health Organization (WHO)"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.who.int"/>
+    </telecom>
+  </contact>
+  <description value="Child's Last HIV Test Results"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <immutable value="true"/>
+  <compose>
+    <include>
+      <system value="https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes"/>
+      <concept>
+        <code value="EmCare.B17.DE31"/>
+        <display value="Child HIV Positive - Virological"/>
+        <designation>
+          <value value="The client is HIV Positive (Virological Test)"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B17.DE32"/>
+        <display value="Child HIV Positive - Serological"/>
+        <designation>
+          <value value="The client is HIV Positive (Serological Test)"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B17.DE33"/>
+        <display value="Child HIV Positive - Unknown Type of Test"/>
+        <designation>
+          <value value="The client is HIV Positive (Unknown Type of Test)"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B17.DE34"/>
+        <display value="Child HIV Negative"/>
+        <designation>
+          <value value="The client is HIV Negative"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B17.DE35"/>
+        <display value="Child HIV Status - Unknown or Not Tested"/>
+        <designation>
+          <value value="The client's HIV Status is unknown or the client has not been tested"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B17.DE36"/>
+        <display value="Child HIV Status - Decline to answer"/>
+        <designation>
+          <value value="The client has delined to answer regarding HIV Status"/>
+        </designation>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

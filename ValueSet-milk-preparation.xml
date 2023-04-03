@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="milk-preparation"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include these codes as defined in <a href="CodeSystem-emcare-custom-codes.html"><code>https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B21S2.46DE19">EmCare.B21S2.DE19</a></td><td>Correct and hygienic feed preparation</td><td>The care giver is preparing the milk correctly and hygenically</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B21S2.46DE20">EmCare.B21S2.DE20</a></td><td>Incorrect or unhygienic feed preparation</td><td>The care giver is not preparing the milk correctly and hygenically</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/milk-preparation"/>
+  <version value="0.1.0"/>
+  <name value="valueset-milk-preparation"/>
+  <title value="EmCare.B21S2.DE18"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2023-04-03T14:56:37+00:00"/>
+  <publisher value="World Health Organization (WHO)"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.who.int"/>
+    </telecom>
+  </contact>
+  <description value="How much milk is given at each feed?"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <immutable value="true"/>
+  <compose>
+    <include>
+      <system value="https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes"/>
+      <concept>
+        <code value="EmCare.B21S2.DE19"/>
+        <display value="Correct and hygienic feed preparation"/>
+        <designation>
+          <value value="The care giver is preparing the milk correctly and hygenically"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B21S2.DE20"/>
+        <display value="Incorrect or unhygienic feed preparation"/>
+        <designation>
+          <value value="The care giver is not preparing the milk correctly and hygenically"/>
+        </designation>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

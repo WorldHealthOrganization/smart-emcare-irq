@@ -1,0 +1,63 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/who/emcare/ValueSet/sex-of-the-client> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "sex-of-the-client"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"CodeSystem-emcare-custom-codes.html\"><code>https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46A.46DE17\">EmCare.A.DE17</a></td><td>Female</td><td>The client is Female</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46A.46DE18\">EmCare.A.DE18</a></td><td>Male</td><td>The client is Male</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46A.46DE19\">EmCare.A.DE19</a></td><td>Not Specified</td><td>The client's sex is not specified</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/sex-of-the-client"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "valueset-sex-of-the-client"] ; # 
+  fhir:title [ fhir:v "Sex"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-04-03T14:56:37+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "World Health Organization (WHO)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The Sex of the client"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:immutable [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "EmCare.A.DE17" ] ;
+         fhir:display [ fhir:v "Female" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The client is Female" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.A.DE18" ] ;
+         fhir:display [ fhir:v "Male" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The client is Male" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.A.DE19" ] ;
+         fhir:display [ fhir:v "Not Specified" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The client's sex is not specified" ]
+         ] )
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

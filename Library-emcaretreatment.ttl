@@ -1,0 +1,291 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/who/emcare/Library/emcaretreatment> a fhir:Library ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "emcaretreatment"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Parameters</h2><table class=\"grid\"><tr><td>ageinmonths</td><td>out</td><td/><td/><td>integer</td></tr><tr><td>load-emcare.c10.it.de01</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de02</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de03</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de04</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de05</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de06</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de07</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de08</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de09</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de10</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de11</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de12</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de13</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de14</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de15</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de16</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de17</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de18</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de19</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de20</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de21</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de22</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de23</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de24</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de25</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de42</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de43</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de44</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de26</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de27</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de28</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de29</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de30</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de31</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de32</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de33</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de34</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de35</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de36</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de37</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de38</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de39</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de40</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de41</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de45</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de46</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de47</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de48</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de49</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de50</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de51</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de52</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de53</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de54</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de55</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de56</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de57</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de58</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de59</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de60</td><td>out</td><td/><td/><td>boolean</td></tr></table><h2>Contents</h2></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcaretreatment"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:value [ fhir:v "emcare.treatment" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "emcaretreatment"] ; # 
+  fhir:title [ fhir:v "EmCare.Treatment"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/ValueSet/library-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "logic-library" ]
+     ] )
+  ] ; # 
+  fhir:date [ fhir:v "2023-04-03T14:56:37+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "World Health Organization (WHO)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "ageinmonths" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "integer" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de01" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de02" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de03" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de04" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de05" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de06" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de07" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de08" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de09" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de10" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de11" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de12" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de13" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de14" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de15" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de16" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de17" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de18" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de19" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de20" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de21" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de22" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de23" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de24" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de25" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de42" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de43" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de44" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de26" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de27" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de28" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de29" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de30" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de31" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de32" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de33" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de34" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de35" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de36" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de37" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de38" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de39" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de40" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de41" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de45" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de46" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de47" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de48" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de49" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de50" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de51" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de52" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de53" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de54" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de55" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de56" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de57" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de58" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de59" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "load-emcare.c10.it.de60" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

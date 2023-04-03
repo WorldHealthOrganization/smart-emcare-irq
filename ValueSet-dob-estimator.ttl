@@ -1,0 +1,63 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/who/emcare/ValueSet/dob-estimator> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "dob-estimator"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"CodeSystem-emcare-custom-codes.html\"><code>https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46A.46DE13\">EmCare.A.DE13</a></td><td>Estimated age in years/months for child (2 months or older)</td><td>The age of the client is estimated based on physical evidence</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46A.46DE14\">EmCare.A.DE14</a></td><td>Estimated age in weeks/days for young infant (under 2 months old)</td><td>The Caregiver provides the age in weeks/days/hours</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46A.46DE15\">EmCare.A.DE15</a></td><td>Estimated Date of Birth</td><td>Estimated Date of Birth of the Client</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/dob-estimator"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "valueset-dob-estimator"] ; # 
+  fhir:title [ fhir:v "Provide an estimated age or estimated date of birth"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-04-03T14:56:37+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "World Health Organization (WHO)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The client/caregiver will provide an estimated age or estimated date of birth"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:immutable [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "EmCare.A.DE13" ] ;
+         fhir:display [ fhir:v "Estimated age in years/months for child (2 months or older)" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The age of the client is estimated based on physical evidence" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.A.DE14" ] ;
+         fhir:display [ fhir:v "Estimated age in weeks/days for young infant (under 2 months old)" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The Caregiver provides the age in weeks/days/hours" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.A.DE15" ] ;
+         fhir:display [ fhir:v "Estimated Date of Birth" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "Estimated Date of Birth of the Client" ]
+         ] )
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

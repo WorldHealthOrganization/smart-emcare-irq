@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="add-pb"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include these codes as defined in <a href="CodeSystem-emcare-custom-codes.html"><code>https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE44">EmCare.B14S2.DE44</a></td><td>Skin Problem</td><td>The health care worker would like to add a skin problem</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE45">EmCare.B14S2.DE45</a></td><td>Oral Sores or Mouth Ulcers</td><td>The health care worker would like to add an Oral Sores or Mouth Ulcers problem</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE46">EmCare.B14S2.DE46</a></td><td>Eye Problem</td><td>The health care worker would like to add an Eye problem</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE47">EmCare.B14S2.DE47</a></td><td>No - Do not add a Skin or Mouth or Eye Problem</td><td>The healthcare worker would not like to add a Skin or Mouth or Eye Problem</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/add-pb"/>
+  <version value="0.1.0"/>
+  <name value="valueset-add-pb"/>
+  <title value="EmCare.B14S2.DE43"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2023-04-03T14:56:37+00:00"/>
+  <publisher value="World Health Organization (WHO)"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.who.int"/>
+    </telecom>
+  </contact>
+  <description value="Add a Skin or Mouth or Eye Problem"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <immutable value="true"/>
+  <compose>
+    <include>
+      <system value="https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes"/>
+      <concept>
+        <code value="EmCare.B14S2.DE44"/>
+        <display value="Skin Problem"/>
+        <designation>
+          <value value="The health care worker would like to add a skin problem"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B14S2.DE45"/>
+        <display value="Oral Sores or Mouth Ulcers"/>
+        <designation>
+          <value value="The health care worker would like to add an Oral Sores or Mouth Ulcers problem"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B14S2.DE46"/>
+        <display value="Eye Problem"/>
+        <designation>
+          <value value="The health care worker would like to add an Eye problem"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B14S2.DE47"/>
+        <display value="No - Do not add a Skin or Mouth or Eye Problem"/>
+        <designation>
+          <value value="The healthcare worker would not like to add a Skin or Mouth or Eye Problem"/>
+        </designation>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

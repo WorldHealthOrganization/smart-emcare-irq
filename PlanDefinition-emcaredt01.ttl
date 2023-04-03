@@ -1,0 +1,326 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/who/emcare/PlanDefinition/emcaredt01> a fhir:PlanDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "emcaredt01"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: PlanDefinition</b><a name=\"emcaredt01\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource PlanDefinition &quot;emcaredt01&quot; </p></div><p><b>url</b>: <code>https://fhir.dk.swisstph-mis.ch/matchbox/fhir/PlanDefinition/emcaredt01</code></p><p><b>identifier</b>: id: emcaredt01 (use: OFFICIAL)</p><p><b>version</b>: 0.1.0</p><p><b>name</b>: emcaredt01</p><p><b>title</b>: emcaredt01</p><p><b>type</b>: ECA Rule <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-plan-definition-type.html\">PlanDefinitionType</a>#eca-rule)</span></p><p><b>status</b>: active</p><p><b>experimental</b>: false</p><p><b>date</b>: 2023-03-31 13:26:38+0000</p><p><b>publisher</b>: World Health Organization (WHO)</p><p><b>contact</b>: <a href=\"https://www.who.int\">https://www.who.int</a></p><p><b>jurisdiction</b>: Global (Whole world) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (m49.htm#001)</span></p><p><b>library</b>: <a href=\"Library-emcaredt01.html\">emcaredt01</a></p><blockquote><p><b>action</b></p><blockquote><p><b>id</b></p>emcaredt01</blockquote><p><b>description</b>: Register a child &lt; 5 years</p><p><b>type</b>: Registration <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html\">CPG Common Process</a>#registration)</span></p><p><b>definition</b>: <a href=\"ActivityDefinition-emcarea.registration.p.html\">ActivityDefinition[https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcarea.registration.p|0.1.0]</a></p></blockquote><blockquote><p><b>action</b></p><blockquote><p><b>id</b></p>emcaredt02</blockquote><p><b>description</b>: Register the child in the encounter</p><blockquote><p><b>condition</b></p><p><b>kind</b>: applicability</p><h3>Expressions</h3><table class=\"grid\"><tr><td>-</td><td><b>Description</b></td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td>*</td><td>AgeInYears() &lt; 5</td><td>text/cql-identifier</td><td>emcaredt02</td></tr></table></blockquote><p><b>type</b>: History and Physical <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html\">CPG Common Process</a>#history-and-physical)</span></p><p><b>definition</b>: <a href=\"ActivityDefinition-emcareb.registration.e.html\">ActivityDefinition[https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcareb.registration.e|0.1.0]</a></p></blockquote><blockquote><p><b>action</b></p><blockquote><p><b>id</b></p>emcaredt04</blockquote><p><b>description</b>: Evaluate DangerSigns</p><blockquote><p><b>condition</b></p><p><b>kind</b>: applicability</p><h3>Expressions</h3><table class=\"grid\"><tr><td>-</td><td><b>Description</b></td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td>*</td><td>AgeInYears() &lt; 5</td><td>text/cql-identifier</td><td>emcaredt04</td></tr></table></blockquote><h3>RelatedActions</h3><table class=\"grid\"><tr><td>-</td><td><b>ActionId</b></td><td><b>Relationship</b></td></tr><tr><td>*</td><td>EmCareDT0</td><td>after</td></tr></table><p><b>type</b>: Triage <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html\">CPG Common Process</a>#triage)</span></p><p><b>definition</b>: <a href=\"ActivityDefinition-emcare.b7.lti-dangersigns.html\">ActivityDefinition[https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b7.lti-dangersigns|0.1.0]</a></p></blockquote><blockquote><p><b>action</b></p><blockquote><p><b>id</b></p>emcaredt03</blockquote><p><b>description</b>: Determine Basic Anthropometric and others measurement</p><blockquote><p><b>condition</b></p><p><b>kind</b>: applicability</p><h3>Expressions</h3><table class=\"grid\"><tr><td>-</td><td><b>Description</b></td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td>*</td><td>AgeInYears() &lt; 5</td><td>text/cql-identifier</td><td>emcaredt03</td></tr></table></blockquote><h3>RelatedActions</h3><table class=\"grid\"><tr><td>-</td><td><b>ActionId</b></td><td><b>Relationship</b></td></tr><tr><td>*</td><td>EmCareDT04</td><td>after</td></tr></table><p><b>type</b>: Record and Report <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html\">CPG Common Process</a>#record-and-report)</span></p><p><b>definition</b>: <a href=\"ActivityDefinition-emcare.b6.measurements.html\">ActivityDefinition[https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b6.measurements|0.1.0]</a></p></blockquote><blockquote><p><b>action</b></p><blockquote><p><b>id</b></p>emcaredt05</blockquote><p><b>description</b>: Assess sick child for Symptoms 2 m</p><blockquote><p><b>condition</b></p><p><b>kind</b>: applicability</p><h3>Expressions</h3><table class=\"grid\"><tr><td>-</td><td><b>Description</b></td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td>*</td><td>AgeInMonths() &lt; 2</td><td>text/cql-identifier</td><td>emcaredt05</td></tr></table></blockquote><h3>RelatedActions</h3><table class=\"grid\"><tr><td>-</td><td><b>ActionId</b></td><td><b>Relationship</b></td></tr><tr><td>*</td><td>EmCareDT03</td><td>after</td></tr></table><p><b>type</b>: Guideline-based Care <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html\">CPG Common Process</a>#guideline-based-care)</span></p><p><b>definition</b>: <a href=\"ActivityDefinition-emcare.b18-21.symptoms.2m.m.html\">ActivityDefinition[https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b18-21.symptoms.2m.m|0.1.0]</a></p></blockquote><blockquote><p><b>action</b></p><blockquote><p><b>id</b></p>emcaredt06</blockquote><p><b>description</b>: Assess sick child for Symptoms 2p</p><blockquote><p><b>condition</b></p><p><b>kind</b>: applicability</p><h3>Expressions</h3><table class=\"grid\"><tr><td>-</td><td><b>Description</b></td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td>*</td><td>clas.&quot;age &gt;= 2 months to &lt;60 months&quot;</td><td>text/cql-identifier</td><td>emcaredt06</td></tr></table></blockquote><h3>RelatedActions</h3><table class=\"grid\"><tr><td>-</td><td><b>ActionId</b></td><td><b>Relationship</b></td></tr><tr><td>*</td><td>EmCareDT03</td><td>after</td></tr></table><p><b>type</b>: Guideline-based Care <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html\">CPG Common Process</a>#guideline-based-care)</span></p><p><b>definition</b>: <a href=\"ActivityDefinition-emcare.b10-14.symptoms.2m.p.html\">ActivityDefinition[https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b10-14.symptoms.2m.p|0.1.0]</a></p></blockquote><blockquote><p><b>action</b></p><blockquote><p><b>id</b></p>emcaredt07</blockquote><p><b>description</b>: Assess sick child for Signs 2 m</p><blockquote><p><b>condition</b></p><p><b>kind</b>: applicability</p><h3>Expressions</h3><table class=\"grid\"><tr><td>-</td><td><b>Description</b></td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td>*</td><td>AgeInMonths() &lt; 2</td><td>text/cql-identifier</td><td>emcaredt07</td></tr></table></blockquote><h3>RelatedActions</h3><table class=\"grid\"><tr><td>-</td><td><b>ActionId</b></td><td><b>Relationship</b></td></tr><tr><td>*</td><td>EmCareDT05</td><td>after</td></tr></table><p><b>type</b>: Guideline-based Care <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html\">CPG Common Process</a>#guideline-based-care)</span></p><p><b>definition</b>: <a href=\"ActivityDefinition-emcare.b18-21.signs.2m.m.html\">ActivityDefinition[https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b18-21.signs.2m.m|0.1.0]</a></p></blockquote><blockquote><p><b>action</b></p><blockquote><p><b>id</b></p>emcaredt08</blockquote><p><b>description</b>: Assess sick child for Signs 2p</p><blockquote><p><b>condition</b></p><p><b>kind</b>: applicability</p><h3>Expressions</h3><table class=\"grid\"><tr><td>-</td><td><b>Description</b></td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td>*</td><td>clas.&quot;age &gt;= 2 months to &lt;60 months&quot;</td><td>text/cql-identifier</td><td>emcaredt08</td></tr></table></blockquote><h3>RelatedActions</h3><table class=\"grid\"><tr><td>-</td><td><b>ActionId</b></td><td><b>Relationship</b></td></tr><tr><td>*</td><td>EmCareDT06</td><td>after</td></tr></table><p><b>type</b>: Guideline-based Care <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html\">CPG Common Process</a>#guideline-based-care)</span></p><p><b>definition</b>: <a href=\"ActivityDefinition-emcare.b10-16.signs.2m.p.html\">ActivityDefinition[https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b10-16.signs.2m.p|0.1.0]</a></p></blockquote><blockquote><p><b>action</b></p><blockquote><p><b>id</b></p>emcaredt09</blockquote><p><b>description</b>: Propose classification</p><blockquote><p><b>condition</b></p><p><b>kind</b>: applicability</p><h3>Expressions</h3><table class=\"grid\"><tr><td>-</td><td><b>Description</b></td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td>*</td><td>clas.&quot;age &gt;= 2 months to &lt;60 months&quot;</td><td>text/cql-identifier</td><td>emcaredt09</td></tr></table></blockquote><h3>RelatedActions</h3><table class=\"grid\"><tr><td>-</td><td><b>ActionId</b></td><td><b>Relationship</b></td></tr><tr><td>*</td><td>EmCareDT10</td><td>after</td></tr></table><p><b>type</b>: Determine Diagnosis <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html\">CPG Common Process</a>#determine-diagnosis)</span></p><p><b>definition</b>: <a href=\"ActivityDefinition-emcare.b23.classification.html\">ActivityDefinition[https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b23.classification|0.1.0]</a></p></blockquote><blockquote><p><b>action</b></p><blockquote><p><b>id</b></p>emcaredt10</blockquote><p><b>description</b>: Do Test</p><blockquote><p><b>condition</b></p><p><b>kind</b>: applicability</p><h3>Expressions</h3><table class=\"grid\"><tr><td>-</td><td><b>Description</b></td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td>*</td><td>AgeInYears() &lt; 5</td><td>text/cql-identifier</td><td>emcaredt10</td></tr></table></blockquote><blockquote><p><b>relatedAction</b></p><p><b>actionId</b>: EmCareDT07</p><p><b>relationship</b>: after</p></blockquote><blockquote><p><b>relatedAction</b></p><p><b>actionId</b>: EmCareDT08</p><p><b>relationship</b>: after</p></blockquote><p><b>definition</b>: <a href=\"ActivityDefinition-emcare.b22.assessmentstests.html\">ActivityDefinition[https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b22.assessmentstests|0.1.0]</a></p></blockquote><blockquote><p><b>action</b></p><blockquote><p><b>id</b></p>emcaredt11</blockquote><p><b>description</b>: Provide treatment</p><blockquote><p><b>condition</b></p><p><b>kind</b>: applicability</p><h3>Expressions</h3><table class=\"grid\"><tr><td>-</td><td><b>Description</b></td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td>*</td><td>AgeInYears() &lt; 5</td><td>text/cql-identifier</td><td>emcaredt11</td></tr></table></blockquote><blockquote><p><b>relatedAction</b></p><p><b>actionId</b>: EmCareDT12</p><p><b>relationship</b>: after</p></blockquote><blockquote><p><b>relatedAction</b></p><p><b>actionId</b>: EmCareDT09</p><p><b>relationship</b>: after</p></blockquote><p><b>type</b>: Provide Counseling <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html\">CPG Common Process</a>#provide-counseling)</span></p><p><b>definition</b>: <a href=\"ActivityDefinition-emcare.treatment.html\">ActivityDefinition[https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.treatment|0.1.0]</a></p></blockquote><blockquote><p><b>action</b></p><blockquote><p><b>id</b></p>emcaredt12</blockquote><p><b>description</b>: Propose classification 2m</p><blockquote><p><b>condition</b></p><p><b>kind</b>: applicability</p><h3>Expressions</h3><table class=\"grid\"><tr><td>-</td><td><b>Description</b></td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td>*</td><td>AgeInMonths() &lt; 2</td><td>text/cql-identifier</td><td>emcaredt12</td></tr></table></blockquote><p><b>definition</b>: <a href=\"https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b23.classification.2m\">https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b23.classification.2m</a></p></blockquote></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/PlanDefinition/emcaredt01"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:value [ fhir:v "emcaredt01" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "emcaredt01"] ; # 
+  fhir:title [ fhir:v "emcaredt01"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/plan-definition-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "eca-rule" ]
+     ] )
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-03-31T13:26:38+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "World Health Organization (WHO)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:library ( [
+     fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcaredt01"^^xsd:anyURI ;
+     fhir:link <https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcaredt01>
+  ] ) ; # 
+  fhir:action ( [
+     fhir:id [ fhir:v "emcaredt01" ] ;
+     fhir:description [ fhir:v "Register a child < 5 years" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "registration" ]
+       ] )
+     ] ;
+     fhir:definition [
+       fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcarea.registration.p"^^xsd:anyURI ;
+       fhir:link <https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcarea.registration.p>
+     ]
+  ] [
+     fhir:id [ fhir:v "emcaredt02" ] ;
+     fhir:description [ fhir:v "Register the child in the encounter" ] ;
+     fhir:condition ( [
+       fhir:kind [ fhir:v "applicability" ] ;
+       fhir:expression [
+         fhir:description [ fhir:v "AgeInYears() < 5" ] ;
+         fhir:language [ fhir:v "text/cql-identifier" ] ;
+         fhir:expression [ fhir:v "emcaredt02" ]
+       ]
+     ] ) ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "history-and-physical" ]
+       ] )
+     ] ;
+     fhir:definition [
+       fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcareb.registration.e"^^xsd:anyURI ;
+       fhir:link <https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcareb.registration.e>
+     ]
+  ] [
+     fhir:id [ fhir:v "emcaredt04" ] ;
+     fhir:description [ fhir:v "Evaluate DangerSigns" ] ;
+     fhir:condition ( [
+       fhir:kind [ fhir:v "applicability" ] ;
+       fhir:expression [
+         fhir:description [ fhir:v "AgeInYears() < 5" ] ;
+         fhir:language [ fhir:v "text/cql-identifier" ] ;
+         fhir:expression [ fhir:v "emcaredt04" ]
+       ]
+     ] ) ;
+     fhir:relatedAction ( [
+       fhir:actionId [ fhir:v "EmCareDT0" ] ;
+       fhir:relationship [ fhir:v "after" ]
+     ] ) ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "triage" ]
+       ] )
+     ] ;
+     fhir:definition [
+       fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b7.lti-dangersigns"^^xsd:anyURI ;
+       fhir:link <https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b7.lti-dangersigns>
+     ]
+  ] [
+     fhir:id [ fhir:v "emcaredt03" ] ;
+     fhir:description [ fhir:v "Determine Basic Anthropometric and others measurement" ] ;
+     fhir:condition ( [
+       fhir:kind [ fhir:v "applicability" ] ;
+       fhir:expression [
+         fhir:description [ fhir:v "AgeInYears() < 5" ] ;
+         fhir:language [ fhir:v "text/cql-identifier" ] ;
+         fhir:expression [ fhir:v "emcaredt03" ]
+       ]
+     ] ) ;
+     fhir:relatedAction ( [
+       fhir:actionId [ fhir:v "EmCareDT04" ] ;
+       fhir:relationship [ fhir:v "after" ]
+     ] ) ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "record-and-report" ]
+       ] )
+     ] ;
+     fhir:definition [
+       fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b6.measurements"^^xsd:anyURI ;
+       fhir:link <https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b6.measurements>
+     ]
+  ] [
+     fhir:id [ fhir:v "emcaredt05" ] ;
+     fhir:description [ fhir:v "Assess sick child for Symptoms 2 m" ] ;
+     fhir:condition ( [
+       fhir:kind [ fhir:v "applicability" ] ;
+       fhir:expression [
+         fhir:description [ fhir:v "AgeInMonths() < 2" ] ;
+         fhir:language [ fhir:v "text/cql-identifier" ] ;
+         fhir:expression [ fhir:v "emcaredt05" ]
+       ]
+     ] ) ;
+     fhir:relatedAction ( [
+       fhir:actionId [ fhir:v "EmCareDT03" ] ;
+       fhir:relationship [ fhir:v "after" ]
+     ] ) ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "guideline-based-care" ]
+       ] )
+     ] ;
+     fhir:definition [
+       fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b18-21.symptoms.2m.m"^^xsd:anyURI ;
+       fhir:link <https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b18-21.symptoms.2m.m>
+     ]
+  ] [
+     fhir:id [ fhir:v "emcaredt06" ] ;
+     fhir:description [ fhir:v "Assess sick child for Symptoms 2p" ] ;
+     fhir:condition ( [
+       fhir:kind [ fhir:v "applicability" ] ;
+       fhir:expression [
+         fhir:description [ fhir:v "clas.\"age >= 2 months to <60 months\"" ] ;
+         fhir:language [ fhir:v "text/cql-identifier" ] ;
+         fhir:expression [ fhir:v "emcaredt06" ]
+       ]
+     ] ) ;
+     fhir:relatedAction ( [
+       fhir:actionId [ fhir:v "EmCareDT03" ] ;
+       fhir:relationship [ fhir:v "after" ]
+     ] ) ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "guideline-based-care" ]
+       ] )
+     ] ;
+     fhir:definition [
+       fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b10-14.symptoms.2m.p"^^xsd:anyURI ;
+       fhir:link <https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b10-14.symptoms.2m.p>
+     ]
+  ] [
+     fhir:id [ fhir:v "emcaredt07" ] ;
+     fhir:description [ fhir:v "Assess sick child for Signs 2 m" ] ;
+     fhir:condition ( [
+       fhir:kind [ fhir:v "applicability" ] ;
+       fhir:expression [
+         fhir:description [ fhir:v "AgeInMonths() < 2" ] ;
+         fhir:language [ fhir:v "text/cql-identifier" ] ;
+         fhir:expression [ fhir:v "emcaredt07" ]
+       ]
+     ] ) ;
+     fhir:relatedAction ( [
+       fhir:actionId [ fhir:v "EmCareDT05" ] ;
+       fhir:relationship [ fhir:v "after" ]
+     ] ) ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "guideline-based-care" ]
+       ] )
+     ] ;
+     fhir:definition [
+       fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b18-21.signs.2m.m"^^xsd:anyURI ;
+       fhir:link <https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b18-21.signs.2m.m>
+     ]
+  ] [
+     fhir:id [ fhir:v "emcaredt08" ] ;
+     fhir:description [ fhir:v "Assess sick child for Signs 2p" ] ;
+     fhir:condition ( [
+       fhir:kind [ fhir:v "applicability" ] ;
+       fhir:expression [
+         fhir:description [ fhir:v "clas.\"age >= 2 months to <60 months\"" ] ;
+         fhir:language [ fhir:v "text/cql-identifier" ] ;
+         fhir:expression [ fhir:v "emcaredt08" ]
+       ]
+     ] ) ;
+     fhir:relatedAction ( [
+       fhir:actionId [ fhir:v "EmCareDT06" ] ;
+       fhir:relationship [ fhir:v "after" ]
+     ] ) ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "guideline-based-care" ]
+       ] )
+     ] ;
+     fhir:definition [
+       fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b10-16.signs.2m.p"^^xsd:anyURI ;
+       fhir:link <https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b10-16.signs.2m.p>
+     ]
+  ] [
+     fhir:id [ fhir:v "emcaredt09" ] ;
+     fhir:description [ fhir:v "Propose classification" ] ;
+     fhir:condition ( [
+       fhir:kind [ fhir:v "applicability" ] ;
+       fhir:expression [
+         fhir:description [ fhir:v "clas.\"age >= 2 months to <60 months\"" ] ;
+         fhir:language [ fhir:v "text/cql-identifier" ] ;
+         fhir:expression [ fhir:v "emcaredt09" ]
+       ]
+     ] ) ;
+     fhir:relatedAction ( [
+       fhir:actionId [ fhir:v "EmCareDT10" ] ;
+       fhir:relationship [ fhir:v "after" ]
+     ] ) ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "determine-diagnosis" ]
+       ] )
+     ] ;
+     fhir:definition [
+       fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b23.classification"^^xsd:anyURI ;
+       fhir:link <https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b23.classification>
+     ]
+  ] [
+     fhir:id [ fhir:v "emcaredt10" ] ;
+     fhir:description [ fhir:v "Do Test" ] ;
+     fhir:condition ( [
+       fhir:kind [ fhir:v "applicability" ] ;
+       fhir:expression [
+         fhir:description [ fhir:v "AgeInYears() < 5" ] ;
+         fhir:language [ fhir:v "text/cql-identifier" ] ;
+         fhir:expression [ fhir:v "emcaredt10" ]
+       ]
+     ] ) ;
+     fhir:relatedAction ( [
+       fhir:actionId [ fhir:v "EmCareDT07" ] ;
+       fhir:relationship [ fhir:v "after" ]
+     ] [
+       fhir:actionId [ fhir:v "EmCareDT08" ] ;
+       fhir:relationship [ fhir:v "after" ]
+     ] ) ;
+     fhir:definition [
+       fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b22.assessmentstests"^^xsd:anyURI ;
+       fhir:link <https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b22.assessmentstests>
+     ]
+  ] [
+     fhir:id [ fhir:v "emcaredt11" ] ;
+     fhir:description [ fhir:v "Provide treatment" ] ;
+     fhir:condition ( [
+       fhir:kind [ fhir:v "applicability" ] ;
+       fhir:expression [
+         fhir:description [ fhir:v "AgeInYears() < 5" ] ;
+         fhir:language [ fhir:v "text/cql-identifier" ] ;
+         fhir:expression [ fhir:v "emcaredt11" ]
+       ]
+     ] ) ;
+     fhir:relatedAction ( [
+       fhir:actionId [ fhir:v "EmCareDT12" ] ;
+       fhir:relationship [ fhir:v "after" ]
+     ] [
+       fhir:actionId [ fhir:v "EmCareDT09" ] ;
+       fhir:relationship [ fhir:v "after" ]
+     ] ) ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "provide-counseling" ]
+       ] )
+     ] ;
+     fhir:definition [
+       fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.treatment"^^xsd:anyURI ;
+       fhir:link <https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.treatment>
+     ]
+  ] [
+     fhir:id [ fhir:v "emcaredt12" ] ;
+     fhir:description [ fhir:v "Propose classification 2m" ] ;
+     fhir:condition ( [
+       fhir:kind [ fhir:v "applicability" ] ;
+       fhir:expression [
+         fhir:description [ fhir:v "AgeInMonths() < 2" ] ;
+         fhir:language [ fhir:v "text/cql-identifier" ] ;
+         fhir:expression [ fhir:v "emcaredt12" ]
+       ]
+     ] ) ;
+     fhir:definition [
+       fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b23.classification.2m"^^xsd:anyURI ;
+       fhir:link <https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b23.classification.2m>
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,111 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/who/emcare/ValueSet/child-vaccines> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "child-vaccines"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"CodeSystem-emcare-custom-codes.html\"><code>https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17.46DE51\">EmCare.B17.DE51</a></td><td>BCG</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17.46DE52\">EmCare.B17.DE52</a></td><td>OPV</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17.46DE53\">EmCare.B17.DE53</a></td><td>Hep B</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17.46DE54\">EmCare.B17.DE54</a></td><td>DPT</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17.46DE55\">EmCare.B17.DE55</a></td><td>DPT 18 month booster</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17.46DE56\">EmCare.B17.DE56</a></td><td>HIB</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17.46DE57\">EmCare.B17.DE57</a></td><td>RTV</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17.46DE58\">EmCare.B17.DE58</a></td><td>PCV</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17.46DE59\">EmCare.B17.DE59</a></td><td>PCV Booster 1 for Confirmed HIV Infection</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17.46DE60\">EmCare.B17.DE60</a></td><td>PCV Booster 2 for Confirmed HIV Infection</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17.46DE61\">EmCare.B17.DE61</a></td><td>Measles</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/child-vaccines"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "valueset-child-vaccines"] ; # 
+  fhir:title [ fhir:v "EmCare.B17.DE50"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-04-03T14:56:37+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "World Health Organization (WHO)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Immunizations for Age"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:immutable [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "EmCare.B17.DE51" ] ;
+         fhir:display [ fhir:v "BCG" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B17.DE52" ] ;
+         fhir:display [ fhir:v "OPV" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B17.DE53" ] ;
+         fhir:display [ fhir:v "Hep B" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B17.DE54" ] ;
+         fhir:display [ fhir:v "DPT" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B17.DE55" ] ;
+         fhir:display [ fhir:v "DPT 18 month booster" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B17.DE56" ] ;
+         fhir:display [ fhir:v "HIB" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B17.DE57" ] ;
+         fhir:display [ fhir:v "RTV" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B17.DE58" ] ;
+         fhir:display [ fhir:v "PCV" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B17.DE59" ] ;
+         fhir:display [ fhir:v "PCV Booster 1 for Confirmed HIV Infection" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B17.DE60" ] ;
+         fhir:display [ fhir:v "PCV Booster 2 for Confirmed HIV Infection" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B17.DE61" ] ;
+         fhir:display [ fhir:v "Measles" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age" ]
+         ] )
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

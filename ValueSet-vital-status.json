@@ -1,0 +1,56 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "vital-status",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"CodeSystem-emcare-custom-codes.html\"><code>https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46A.46DE46\">EmCare.A.DE46</a></td><td>Dead</td><td>Biological Mother or Father dead</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46A.46DE34\">EmCare.A.DE34</a></td><td>Alive</td><td>Biological Mother or Father Alive</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46A.46DE33\">EmCare.A.DE33</a></td><td>Unknown</td><td>Unknown</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/vital-status",
+  "version" : "0.1.0",
+  "name" : "valueset-vital-status",
+  "title" : "Related Person vital status",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2023-04-03T14:56:37+00:00",
+  "publisher" : "World Health Organization (WHO)",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.who.int"
+    }]
+  }],
+  "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001"
+    }]
+  }],
+  "immutable" : true,
+  "compose" : {
+    "include" : [{
+      "system" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+      "concept" : [{
+        "code" : "EmCare.A.DE46",
+        "display" : "Dead",
+        "designation" : [{
+          "value" : "Biological Mother or Father dead"
+        }]
+      },
+      {
+        "code" : "EmCare.A.DE34",
+        "display" : "Alive",
+        "designation" : [{
+          "value" : "Biological Mother or Father Alive"
+        }]
+      },
+      {
+        "code" : "EmCare.A.DE33",
+        "display" : "Unknown",
+        "designation" : [{
+          "value" : "Biological Mother or Father Vital Status unknown"
+        }]
+      }]
+    }]
+  }
+}

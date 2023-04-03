@@ -1,0 +1,157 @@
+{
+  "resourceType" : "Library",
+  "id" : "emcaredt01",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Parameters</h2><table class=\"grid\"><tr><td>emcaredt01</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>register a child &lt; 5 years</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcaredt02</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>register the child in the encounter</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcaredt04</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>evaluate dangersigns</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcaredt03</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>determine basic anthropometric and others measurement</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcaredt05</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>assess sick child for symptoms 2 m</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcaredt06</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>assess sick child for symptoms 2p</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcaredt07</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>assess sick child for signs 2 m</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcaredt08</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>assess sick child for signs 2p</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcaredt09</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>propose classification</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcaredt10</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>do test</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcaredt11</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>provide treatment</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcaredt12</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>propose classification 2m</td><td>out</td><td/><td/><td>boolean</td></tr></table><h2>Contents</h2></div>"
+  },
+  "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcaredt01",
+  "identifier" : [{
+    "use" : "official",
+    "value" : "emcaredt01"
+  }],
+  "version" : "0.1.0",
+  "name" : "emcaredt01",
+  "title" : "emcaredt01",
+  "status" : "active",
+  "type" : {
+    "coding" : [{
+      "system" : "http://hl7.org/fhir/ValueSet/library-type",
+      "code" : "logic-library"
+    }]
+  },
+  "date" : "2023-04-03T14:56:37+00:00",
+  "publisher" : "World Health Organization (WHO)",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.who.int"
+    }]
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001"
+    }]
+  }],
+  "parameter" : [{
+    "name" : "emcaredt01",
+    "use" : "out",
+    "type" : "boolean"
+  },
+  {
+    "name" : "register a child < 5 years",
+    "use" : "out",
+    "type" : "boolean"
+  },
+  {
+    "name" : "emcaredt02",
+    "use" : "out",
+    "type" : "boolean"
+  },
+  {
+    "name" : "register the child in the encounter",
+    "use" : "out",
+    "type" : "boolean"
+  },
+  {
+    "name" : "emcaredt04",
+    "use" : "out",
+    "type" : "boolean"
+  },
+  {
+    "name" : "evaluate dangersigns",
+    "use" : "out",
+    "type" : "boolean"
+  },
+  {
+    "name" : "emcaredt03",
+    "use" : "out",
+    "type" : "boolean"
+  },
+  {
+    "name" : "determine basic anthropometric and others measurement",
+    "use" : "out",
+    "type" : "boolean"
+  },
+  {
+    "name" : "emcaredt05",
+    "use" : "out",
+    "type" : "boolean"
+  },
+  {
+    "name" : "assess sick child for symptoms 2 m",
+    "use" : "out",
+    "type" : "boolean"
+  },
+  {
+    "name" : "emcaredt06",
+    "use" : "out",
+    "type" : "boolean"
+  },
+  {
+    "name" : "assess sick child for symptoms 2p",
+    "use" : "out",
+    "type" : "boolean"
+  },
+  {
+    "name" : "emcaredt07",
+    "use" : "out",
+    "type" : "boolean"
+  },
+  {
+    "name" : "assess sick child for signs 2 m",
+    "use" : "out",
+    "type" : "boolean"
+  },
+  {
+    "name" : "emcaredt08",
+    "use" : "out",
+    "type" : "boolean"
+  },
+  {
+    "name" : "assess sick child for signs 2p",
+    "use" : "out",
+    "type" : "boolean"
+  },
+  {
+    "name" : "emcaredt09",
+    "use" : "out",
+    "type" : "boolean"
+  },
+  {
+    "name" : "propose classification",
+    "use" : "out",
+    "type" : "boolean"
+  },
+  {
+    "name" : "emcaredt10",
+    "use" : "out",
+    "type" : "boolean"
+  },
+  {
+    "name" : "do test",
+    "use" : "out",
+    "type" : "boolean"
+  },
+  {
+    "name" : "emcaredt11",
+    "use" : "out",
+    "type" : "boolean"
+  },
+  {
+    "name" : "provide treatment",
+    "use" : "out",
+    "type" : "boolean"
+  },
+  {
+    "name" : "emcaredt12",
+    "use" : "out",
+    "type" : "boolean"
+  },
+  {
+    "name" : "propose classification 2m",
+    "use" : "out",
+    "type" : "boolean"
+  }]
+}

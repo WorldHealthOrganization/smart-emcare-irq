@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Library xmlns="http://hl7.org/fhir">
+  <id value="emcarecombineddataelements"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Parameters</h2><table class="grid"><tr><td>child</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>age &gt;= 2 months to &lt;60 months</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>yi</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>age &gt;=28 days to 2 months</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>vyi</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>age &lt; 28 days</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>nb</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>nnb</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcare.b.g.de01</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>danger signs</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcare.b.g.de05</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>severe classification up to assessments and tests excluding severe dehydration</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-23-30</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-23-30b</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-29</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl1-30</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl1-23</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl2-18-03</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl2-18</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl2-01</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-24-32</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl2-19</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-24-32b</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl1-31</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl1-32</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>psbi other than temperature</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>psbi</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>psbi-2</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>yi severe classification other than severe dehydration</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>yi severe classification</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcare.b12s1.de01</td><td>out</td><td/><td/><td>boolean</td></tr></table><h2>Contents</h2></div>
+  </text>
+  <url value="https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcarecombineddataelements"/>
+  <identifier>
+    <use value="official"/>
+    <value value="emcare.combineddataelements"/>
+  </identifier>
+  <version value="0.1.0"/>
+  <name value="emcarecombineddataelements"/>
+  <title value="EmCare.CombinedDataElements"/>
+  <status value="active"/>
+  <type>
+    <coding>
+      <system value="http://hl7.org/fhir/ValueSet/library-type"/>
+      <code value="logic-library"/>
+    </coding>
+  </type>
+  <date value="2023-04-03T14:56:37+00:00"/>
+  <publisher value="World Health Organization (WHO)"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.who.int"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <parameter>
+    <name value="child"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="age &gt;= 2 months to &lt;60 months"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="yi"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="age &gt;=28 days to 2 months"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="vyi"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="age &lt; 28 days"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="nb"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="nnb"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="emcare.b.g.de01"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="danger signs"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="emcare.b.g.de05"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="severe classification up to assessments and tests excluding severe dehydration"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-23-30"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-23-30b"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-29"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-i-cl1-30"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-i-cl1-23"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl2-18-03"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl2-18"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-i-cl2-01"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-24-32"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl2-19"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-24-32b"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-i-cl1-31"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-i-cl1-32"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="psbi other than temperature"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="psbi"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="psbi-2"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="yi severe classification other than severe dehydration"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="yi severe classification"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="emcare.b12s1.de01"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+</Library>

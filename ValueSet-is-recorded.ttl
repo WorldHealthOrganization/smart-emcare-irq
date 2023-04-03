@@ -1,0 +1,75 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/who/emcare/ValueSet/is-recorded> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "is-recorded"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"CodeSystem-emcare-custom-codes.html\"><code>https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17.46DE06\">EmCare.B17.DE06</a></td><td>Yes, Date documented, but not here</td><td>The caregiver is able to provide the Vitamin A supplement date but not Today</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17.46DE07\">EmCare.B17.DE07</a></td><td>No, but last dose given less than 1 month ago</td><td>The caregiver is able to tell the healthcare worker that the last dose was given less than 1 month ago</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17.46DE08\">EmCare.B17.DE08</a></td><td>No, but last dose given between 1 and 6 months ago</td><td>The caregiver is able to tell the healthcare worker that the last dose was given between 1 and 5 months ago</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17.46DE09\">EmCare.B17.DE09</a></td><td>No, but last dose given more than 6 months ago</td><td>The caregiver is able to tell the healthcare worker that the last dose was given more than 6 months ago</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17.46DE10\">EmCare.B17.DE10</a></td><td>No, Do not know when last dose was given</td><td>The caregiver is not able to tell the healthcare worker when the last dose was given</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/is-recorded"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "valueset-is-recorded"] ; # 
+  fhir:title [ fhir:v "EmCare.B17.DE05"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-04-03T14:56:37+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "World Health Organization (WHO)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Can record of Vitamin A Supplementation be obtained at a future visit?"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:immutable [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "EmCare.B17.DE06" ] ;
+         fhir:display [ fhir:v "Yes, Date documented, but not here" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The caregiver is able to provide the Vitamin A supplement date but not Today" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B17.DE07" ] ;
+         fhir:display [ fhir:v "No, but last dose given less than 1 month ago" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The caregiver is able to tell the healthcare worker that the last dose was given less than 1 month ago" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B17.DE08" ] ;
+         fhir:display [ fhir:v "No, but last dose given between 1 and 6 months ago" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The caregiver is able to tell the healthcare worker that the last dose was given between 1 and 5 months ago" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B17.DE09" ] ;
+         fhir:display [ fhir:v "No, but last dose given more than 6 months ago" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The caregiver is able to tell the healthcare worker that the last dose was given more than 6 months ago" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B17.DE10" ] ;
+         fhir:display [ fhir:v "No, Do not know when last dose was given" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The caregiver is not able to tell the healthcare worker when the last dose was given" ]
+         ] )
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

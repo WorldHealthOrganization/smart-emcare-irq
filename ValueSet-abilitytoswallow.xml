@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="abilitytoswallow"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include these codes as defined in <a href="CodeSystem-emcare-custom-codes.html"><code>https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17S1.46DE08">EmCare.B17S1.DE08</a></td><td>Yes, without difficulty</td><td>The client can swallow without difficulty</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17S1.46DE09">EmCare.B17S1.DE09</a></td><td>Difficulty in swallowing</td><td>The client has Difficulty in swallowing</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17S1.46DE10">EmCare.B17S1.DE10</a></td><td>Unable to swallow</td><td>The client is Unable to swallow</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/abilitytoswallow"/>
+  <version value="0.1.0"/>
+  <name value="valueset-abilitytoswallow"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2023-04-03T14:56:37+00:00"/>
+  <publisher value="World Health Organization (WHO)"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.who.int"/>
+    </telecom>
+  </contact>
+  <description value="Codes representing possible values for the Provide an estimated age or estimated date of birth element"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <immutable value="true"/>
+  <compose>
+    <include>
+      <system value="https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes"/>
+      <concept>
+        <code value="EmCare.B17S1.DE08"/>
+        <display value="Yes, without difficulty"/>
+        <designation>
+          <value value="The client can swallow without difficulty"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B17S1.DE09"/>
+        <display value="Difficulty in swallowing"/>
+        <designation>
+          <value value="The client has Difficulty in swallowing"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B17S1.DE10"/>
+        <display value="Unable to swallow"/>
+        <designation>
+          <value value="The client is Unable to swallow"/>
+        </designation>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

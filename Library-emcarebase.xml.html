@@ -1,0 +1,738 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>WHO.FHIR.EMC-CDS\EmCareBase - XML Representation - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/who.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"8.24"}
+    h3,h4,h5,h6{--heading-prefix:"8.24"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">WHO Emergency Care Guideline Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - CI Build
+
+
+
+  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="toc.html">Table of Contents</a></li>
+  <li><a href="documentation.html">Documentation</a></li>
+  <li><a href="guidance.html">Guidance</a></li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">FHIR Spec</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://cql.hl7.org/index.html">CQL Spec</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/uv/cpg">FHIR Clinical Guidelines</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="license.html">License</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>EmCareBase</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 7" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">WHO Emergency Care Guideline Implementation Guide - Local Development build (v0.1.0). See the <a href="http://fhir.org/guides/who/emcare/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="Library-emcarebase.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li class="active">
+      <a href="#">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Library-emcarebase.json.html">JSON</a>
+    </li>
+  
+
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: EmCareBase - XML Representation</h2>
+  <table class="colsi">
+    <tr>
+
+      <td colspan="2">
+        
+          Active
+          
+            as of 2023-04-03
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="Library-emcarebase.xml" no-download="true">Raw xml</a> | <a href="Library-emcarebase.xml" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="xml" style="white-space: pre; overflow: hidden"><code>
+
+&lt;<a href="http://hl7.org/fhir/R4/library.html#Library">Library</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;emcarebase&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;Related Artifacts&lt;/h2&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;depends-on&lt;/td&gt;&lt;td&gt;&lt;code&gt;http://fhir.org/guides/who/anc-cds/Library/FHIRHelpers&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h2&gt;Parameters&lt;/h2&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;encounterid&lt;/td&gt;&lt;td&gt;in&lt;/td&gt;&lt;td/&gt;&lt;td/&gt;&lt;td&gt;string&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h2&gt;Data Requirements&lt;/h2&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Type&lt;/b&gt;: &lt;a href=&quot;http://hl7.org/fhir/R4/patient.html&quot;&gt;Patient&lt;/a&gt; (&lt;a href=&quot;http://hl7.org/fhir/R4/patient.html&quot;&gt;Patient&lt;/a&gt;)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Type&lt;/b&gt;: &lt;a href=&quot;http://hl7.org/fhir/R4/encounter.html&quot;&gt;Encounter&lt;/a&gt; (&lt;a href=&quot;http://hl7.org/fhir/R4/encounter.html&quot;&gt;Encounter&lt;/a&gt;)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h2&gt;Contents&lt;/h2&gt;&lt;p&gt;&lt;code&gt;text/cql&lt;/code&gt;&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot;&gt;/*nter&amp;quot;
+@author: Patrick Delcroix
+@description: This library is part of the project EmCare Project, its allows standardisation for the observation processing
+*/
+
+library emcarebase version '1.0.1.rc12.build.329'
+
+using FHIR version '4.0.1'
+
+include FHIRHelpers version '4.0.1'
+
+parameter &amp;quot;encounterid&amp;quot; String
+//parameter &amp;quot;Encounter&amp;quot; Encounter$
+codesystem &amp;quot;RoleCodeSystem&amp;quot; : 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes'
+code &amp;quot;Mother&amp;quot;: 'MTH' from &amp;quot;RoleCodeSystem&amp;quot;
+
+context Patient
+
+//define encounterid:
+//  &amp;quot;Encounter&amp;quot;.id
+
+
+
+
+define &amp;quot;Yes&amp;quot;:
+  true
+
+define &amp;quot;No&amp;quot;:
+  false 
+
+
+define function IsInEncounter(ref FHIR.Reference):
+    case
+    when encounterid = ref.id then true
+    when ref.identifier is not null and encounterid = ref.identifier.value then true
+    when encounterid = Last(Split(ref.reference, '/')) then true
+    else false
+end
+
+define getEncounters:
+    [Encounter] E 
+      where E.id = &amp;quot;encounterid&amp;quot;
+        return E
+
+define getEncounter:
+    singleton from getEncounters
+
+define function EmCareExtensions(element Patient, id String):
+  element.extension E
+      where E.url = ('https://fhir.dk.swisstph-mis.ch/matchbox/fhir//StructureDefinition/' + id)
+      return E
+
+define function EmCareExtension(element Patient, id String):
+  singleton from EmCareExtensions(element, id)
+
+define getPrimaryCareGiverReference:
+  EmCareExtension(Patient, 'primarycaregiver').value
+
+define getPrimaryCareGiver:
+  [RelatedPerson] RP where RP.id = Last(Split(getPrimaryCareGiverReference.reference, '/'))
+    return RP
+
+define isMotherPrimaryCareGiver:
+  getPrimaryCareGiver is not null and Exists(getPrimaryCareGiver.relationship r where r ~ &amp;quot;Mother&amp;quot;)
+
+define &amp;quot;Biological Mother Vital Status&amp;quot;:
+  EmCareExtension(Patient, 'motherVitalStatus').value
+  
+define &amp;quot;Biological Father Vital Status&amp;quot;:
+  EmCareExtension(Patient, 'fatherVitalStatus').value
+// person accompanying the child is a participant with a null type
+define getRelatedPersonReferenceAccompanyingTheChild:
+  Coalesce(First(getEncounter.participant P where not exists(P.type) ).individual, getPrimaryCareGiverReference)
+
+define getRelatedPersonsAccompanyingTheChild:
+  [RelatedPerson] RP where RP.id = Last(Split(getRelatedPersonReferenceAccompanyingTheChild.reference, '/'))
+    return RP
+
+
+define getRelatedPersonAccompanyingTheChild:
+  singleton from getRelatedPersonsAccompanyingTheChild
+
+
+define &amp;quot;Person accompanying child today's Relationship to Client&amp;quot;:
+  getRelatedPersonAccompanyingTheChild.relationship
+
+
+
+
+define function getValue(O Observation):
+  case  
+      when  O is null then null
+      when O.value is CodeableConcept then Coalesce(First(O.value.coding C where C.system  = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes'), First(O.value.coding))
+      else O.value
+  end
+
+
+define function assesObservation(O Observation):
+  case  
+      when  O is null then null
+      when  O.status in  {'cancelled'} then false
+      when O.value is null then  true
+      else O.value
+  end
+/*      
+define function GetObservationDuringEncounter(idlist List&amp;lt;System.Code&amp;gt;):
+  if GetObservationDuringEncounterDone(idlist ) is null then 
+      GetObservationDuringEncounterDone(idlist )
+  else
+    GetObservationDuringEncounterNotFound(idlist )
+*/
+
+define function GetObservationDuringEncounter(id System.Code):
+  Coalesce(GetObservationDuringEncounterDone(id ), GetObservationDuringEncounterNotFound(id ))
+/*
+define function GetObservationDuringEncounterDone(idlist List&amp;lt;System.Code&amp;gt;):
+      Last([Observation: idlist ] O
+        where   IsInEncounter(O.encounter) 
+        and O.status in { 'final', 'amended', 'corrected'})
+*/
+define function GetObservationDuringEncounterDone(id System.Code):
+      First([Observation: id ] O
+        where   IsInEncounter(O.encounter) 
+        and O.status in { 'final', 'amended', 'corrected'} 
+        sort by issued.value desc) 
+
+
+define function HasObservationCodeDuringEncounterDone(id System.Code, valueCode System.Code):
+    
+    Exists([Observation: id ] O
+        where   IsInEncounter(O.encounter) 
+        and O.status in { 'final', 'amended', 'corrected'}
+        and O.value is FHIR.CodeableConcept
+        and O.value ~ valueCode)
+
+//Exists([Observation] O where O.status in { 'final', 'amended', 'corrected'} and O.value is FHIR.CodeableConcept   and Exists( O.value.coding C where C is FHIR.Coding and C.code = FHIR.code {value: 'EmCare.B20S2.DE04'}) )&amp;quot;
+
+/*
+define function GetObservationDuringEncounterNotFound(idlist List&amp;lt;System.Code&amp;gt;):
+      Last([Observation: idlist] O
+       where  IsInEncounter(O.encounter) 
+          and O.status in {'cancelled'})
+          */
+define function GetObservationDuringEncounterNotFound(id System.Code):
+      First([Observation: id] O
+       where  IsInEncounter(O.encounter) 
+          and O.status in {'cancelled'}
+          sort by issued.value desc)
+/*
+
+define function GetNumberObservationDuringEncounter(idlist List&amp;lt;System.Code&amp;gt;):
+  Count(
+    [Observation: idlist] O
+        where  IsInEncounter( O.encounter) 
+        and O.status in { 'final', 'amended', 'corrected'})
+*/
+define function GetNumberObservationDuringEncounter(id System.Code):
+  Count(
+    [Observation: id] O
+        where  IsInEncounter( O.encounter) 
+        and O.status in { 'final', 'amended', 'corrected'})
+
+// ************************   GetObsValue ************************/
+/*
+define function GetObsValue(idlist List&amp;lt;System.Code&amp;gt;):
+    getValue(GetObservationDuringEncounter(idlist))
+
+define function GetObsValue(id System.Code):
+    getValue(GetObservationDuringEncounter({id}))
+*/
+
+define function GetObsValue(id System.Code):
+    getValue(GetObservationDuringEncounter(id))
+
+define function GetObsValue(id System.String, codesystem System.String):
+    getValue(GetObservationDuringEncounter(coding(id, codesystem)))
+
+define function GetObsValue(id System.String):
+    getValue(GetObservationDuringEncounter(coding(id, 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes')))
+
+define function HasObsValueCode(id System.String, value System.Code):
+   HasObservationCodeDuringEncounterDone(coding(id, 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes') , value )
+  
+define function HasObsValueCode(id System.String, value System.String):
+   HasObservationCodeDuringEncounterDone(coding(id, 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes') , coding(value, 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes') )
+
+define function HasObsValueCode(id System.Code, value System.String):
+   HasObservationCodeDuringEncounterDone(id , coding(value, 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes') )
+
+// ************************   HasObs ************************/
+/*
+define function HasObs(idlist List&amp;lt;System.Code&amp;gt;):
+    assesObservation(GetObservationDuringEncounter(idlist))
+
+define function HasObs(id System.Code):
+    assesObservation(GetObservationDuringEncounter({id}))
+*/
+define function HasObs(id System.Code):
+    assesObservation(GetObservationDuringEncounter(id))
+
+define function HasObs(id System.String, codesystem System.String):
+    assesObservation(GetObservationDuringEncounter(coding(id, codesystem)))
+
+define function HasObs(id System.String):
+    assesObservation(GetObservationDuringEncounter(coding(id)))
+
+define function HasObs(id FHIR.code, codesystem System.String):
+    assesObservation(GetObservationDuringEncounter(coding(id, codesystem)))
+/*
+define function GetHistoricObservation(idlist List&amp;lt;System.Code&amp;gt;, nbdays Integer):
+  if GetHistoricObservationNotfound(idlist , codesystem , nbdays ) is null then 
+      GetHistoricObservationNotfound(idlist , codesystem , nbdays )
+  else
+    GetHistoricObservationNotfound(idlist , codesystem , nbdays )
+*/
+
+define function GetHistoricObservation(id System.Code, nbdays Integer):
+  Coalesce(GetHistoricObservationDone(id ,  nbdays ),  GetHistoricObservationNotfound(id  , nbdays ))
+/*
+define function GetHistoricObservationDone(idlist List&amp;lt;System.Code&amp;gt;, nbdays Integer):
+      Last([Observation: idlist ] O
+        where  O.status in { 'final', 'amended', 'corrected'}
+        and (difference in days between O.issued and Today()) &amp;lt; nbdays)
+*/
+define function GetHistoricObservationDone(id System.Code, nbdays Integer):
+      First([Observation: id ] O
+        where  O.status in { 'final', 'amended', 'corrected'}
+        and (difference in days between O.issued and Today()) &amp;lt; nbdays 
+        sort by issued.value desc )
+
+/*
+define function GetHistoricObservationNotfound(idlist List&amp;lt;System.Code&amp;gt;, nbdays Integer):
+      Last([Observation: idlist] O
+        where  O.status in {'cancelled'}
+*/
+define function GetHistoricObservationNotfound(id System.Code, nbdays Integer):
+      First([Observation: id] O
+        where  O.status in {'cancelled'}
+          and (difference in days between O.issued and Today()) &amp;lt; nbdays 
+        sort by issued.value desc)
+// ************************   HasObsHistory ************************/
+
+/*
+define function HasObsHistory(idlist List&amp;lt;System.Code&amp;gt;,  nbdays Integer):
+  assesObservation(GetHistoricObservation(idlist, nbdays))
+
+
+ define function HasObsHistory(id System.Code, cnbdays Integer):
+  assesObservation(GetHistoricObservation({id}, nbdays))
+*/
+define function HasObsHistory(id System.Code, nbdays Integer):
+  assesObservation(GetHistoricObservation(id, nbdays))
+
+define function HasObsHistory(id System.String, codesystem System.String, nbdays Integer):
+  assesObservation(GetHistoricObservation(coding(id, codesystem), nbdays))
+
+
+define function HasObsHistory(id System.String, nbdays Integer):
+  assesObservation(GetHistoricObservation(coding(id), nbdays))
+
+define function c(s System.String):
+  FHIR.code { value: s }
+
+
+
+define function coding(s System.String, url System.String):
+  System.Code {
+                code:  s ,
+                system:  url 
+            }
+
+define function coding(s FHIR.code, url System.String):
+  System.Code {
+                code:  s.value ,
+                system:  url 
+            }
+
+define function coding(s System.String):
+  System.Code {
+                code:  s ,
+                system:  'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes'
+            }
+
+
+define function ToUrl(s System.String):
+  url {value:s}
+
+
+
+// ************************   GetCond ************************/
+/*
+define function GetCoO.encounterndition(idlist List&amp;lt;System.Code&amp;gt;):
+      Last([Condition: idlist] O
+        where  IsInEncounter( O.encounter) 
+        and exists(O.verificationStatus.coding C where C.code in {'unconfirmed', 'provisional', 'differential', 'confirmed'} 
+        and C.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status'))
+*/
+define function GetCondition(id System.Code):
+      First([Condition: id] O
+        where  IsInEncounter(O.encounter) 
+        and exists(O.verificationStatus.coding C where C.code in {'unconfirmed', 'provisional', 'differential', 'confirmed'} 
+        and C.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status') 
+        sort by recordedDate desc)
+
+
+define function assesCondition(O Condition):
+  if O is null then 
+    false
+  else
+    true
+/*
+define function GetCond(idlist List&amp;lt;System.Code&amp;gt;):
+  GetCondition(idlist)
+
+define function GetCond(id System.Code):
+  GetCondition({id})
+*/
+define function GetCond(id System.Code):
+  (GetCondition(id))
+
+define function GetCond(id System.String, codesystem System.String):
+  (GetCondition(coding(id, codesystem)))
+
+define function GetCond(id System.String):
+  (GetCondition(coding(id)))
+
+// ************************   HasCond ************************/
+/*
+define function HasCond(idlist List&amp;lt;System.Code&amp;gt;):
+  assesCondition(GetCondition(idlist))
+
+
+3518GetCondition(id))
+*/
+define function HasCond(id System.String, codesystem System.String):
+  assesCondition(GetCondition(coding(id, codesystem)))
+
+define function HasCond(id System.String):
+  assesCondition(GetCondition(coding(id)))
+
+define function HasCond(id System.Code):
+  assesCondition(GetCondition(id))
+
+// ************************   PatientHasHistoryOfCondition ************************/
+/*
+define function GetHistoricCondition(idlist List&amp;lt;System.Code&amp;gt;,  nbdays Integer):
+      Last([Condition: idlist] O
+        where  (difference in days between O.recordedDate and Today()) &amp;lt; nbdays
+        and exists(O.verificationStatus.coding C where C.code in {'unconfirmed', 'provisional', 'differential', 'confirmed'} 
+        and C.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status'))
+*/
+
+define function GetHistoricCondition(id System.Code,  nbdays Integer):
+      First([Condition: id] O
+        where  (difference in days between O.recordedDate and Today()) &amp;lt; nbdays
+        and exists(O.verificationStatus.coding C where C.code in {'unconfirmed', 'provisional', 'differential', 'confirmed'} 
+        and C.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status') 
+        sort by recordedDate desc)
+
+
+
+
+/*
+define function HasCondHistory(idlist List&amp;lt;System.Code&amp;gt;,  nbdays Integer):
+  assesCondition(GetHistoricCondition(idlist,  nbdays))
+
+
+define function HasCondHistory(id System.Code,  nbdays Integer):
+  assesCondition(GetHistoricCondition({id}, nbdays))
+*/
+define function HasCondHistory(id System.Code, nbdays Integer):
+  assesCondition(GetHistoricCondition(id,  nbdays))
+
+define function HasCondHistory(id System.String, codesystem System.String, nbdays Integer):
+  assesCondition(GetHistoricCondition(coding(id,codesystem),nbdays))
+
+
+define function HasCondHistory(id System.String, nbdays Integer):
+  assesCondition(GetHistoricCondition(coding(id),  nbdays))
+
+
+
+//define function PatientHasConditionDuringEncounter(id String, codesystem url, duration Integer)):
+
+//define function PatientHasConditionFromValueSetDuringEncounter(id String, codesystem url, duration Integer)):
+
+//define function PatientHasHsistoryCondition(id String,codesystem url , duration Integer):
+//define function PatientHasHsistoryConditionFromValueSet(id String,codesystem url , duration Integer):
+
+
+// PatientHasSymptom(&amp;quot;symptom name&amp;quot;): symptom in the encounter
+
+
+// PatientLastMeasureOf(&amp;quot;measure name&amp;quot;): measure in the encounter
+
+// PatientLastHistoricMeasureOf(&amp;quot;measure name&amp;quot;, duration): measure in the patient history during duration
+
+// PatientHasDiagnostic(&amp;quot;Diagnostic name&amp;quot; ): Diagnostic in the encounter
+
+// PatientHasHistoryOfDiagnostic(&amp;quot;Diagnostic name&amp;quot;, duration ): Diagnostic in the patient history during duration
+
+// PatientHasProposedorConfirmedDianostic(&amp;quot;Diagnostic name&amp;quot; ): Diagnostic in the encounter
+
+// PatientHasHistoryOfProposedorConfirmedDianostic(&amp;quot;Diagnostic name&amp;quot;, duration ): Diagnostic in the patient history during duration
+
+// PatientZScoreWfA(wieght, age)
+
+// PatientWeightFromWfA(age, Muac)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+  &lt;/text&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.url">url</a>
+       <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir//Library/emcarebase&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;0.1.0&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;emcarebase&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;EmCareBase&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.type">type</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/ValueSet/library-type&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;logic-library&quot;/&gt;
+    &lt;/coding&gt;
+  &lt;/type&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2023-04-03T14:56:37+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;World Health Organization (WHO)&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.contact">contact</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;url&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;https://www.who.int&quot;/&gt;
+    &lt;/telecom&gt;
+  &lt;/contact&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.jurisdiction">jurisdiction</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://unstats.un.org/unsd/methods/m49/m49.htm&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;001&quot;/&gt;
+    &lt;/coding&gt;
+  &lt;/jurisdiction&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;depends-on&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a> <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://fhir.org/guides/who/anc-cds/Library/FHIRHelpers&quot;/&gt;
+  &lt;/relatedArtifact&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.parameter">parameter</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;encounterid&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.use">use</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;in&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;string&quot;/&gt;
+  &lt;/parameter&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.dataRequirement">dataRequirement</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Patient&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.profile">profile</a> <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/StructureDefinition/Patient&quot;/&gt;
+  &lt;/dataRequirement&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.dataRequirement">dataRequirement</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Encounter&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.profile">profile</a> <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/StructureDefinition/Encounter&quot;/&gt;
+  &lt;/dataRequirement&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.content">content</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">id</a>=&quot;ig-loader-emcarebase.cql&quot;&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.contentType">contentType</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;text/cql&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.data">data</a>
+          <a href="http://hl7.org/fhir/R4/datatypes.html#base64Binary">value</a>=&quot;LypudGVyIgpAYXV0aG9yOiBQYXRyaWNrIERlbGNyb2l4CkBkZXNjcmlwdGlvbjogVGhpcyBsaWJyYXJ5IGlzIHBhcnQgb2YgdGhlIHByb2plY3QgRW1DYXJlIFByb2plY3QsIGl0cyBhbGxvd3Mgc3RhbmRhcmRpc2F0aW9uIGZvciB0aGUgb2JzZXJ2YXRpb24gcHJvY2Vzc2luZwoqLwoKbGlicmFyeSBlbWNhcmViYXNlIHZlcnNpb24gJzEuMC4xLnJjMTIuYnVpbGQuMzI5JwoKdXNpbmcgRkhJUiB2ZXJzaW9uICc0LjAuMScKCmluY2x1ZGUgRkhJUkhlbHBlcnMgdmVyc2lvbiAnNC4wLjEnCgpwYXJhbWV0ZXIgImVuY291bnRlcmlkIiBTdHJpbmcKLy9wYXJhbWV0ZXIgIkVuY291bnRlciIgRW5jb3VudGVyJApjb2Rlc3lzdGVtICJSb2xlQ29kZVN5c3RlbSIgOiAnaHR0cHM6Ly9maGlyLmRrLnN3aXNzdHBoLW1pcy5jaC9tYXRjaGJveC9maGlyL0NvZGVTeXN0ZW0vZW1jYXJlLWN1c3RvbS1jb2RlcycKY29kZSAiTW90aGVyIjogJ01USCcgZnJvbSAiUm9sZUNvZGVTeXN0ZW0iCgpjb250ZXh0IFBhdGllbnQKCi8vZGVmaW5lIGVuY291bnRlcmlkOgovLyAgIkVuY291bnRlciIuaWQKCgoKCmRlZmluZSAiWWVzIjoKICB0cnVlCgpkZWZpbmUgIk5vIjoKICBmYWxzZSAKCgpkZWZpbmUgZnVuY3Rpb24gSXNJbkVuY291bnRlcihyZWYgRkhJUi5SZWZlcmVuY2UpOgogICAgY2FzZQogICAgd2hlbiBlbmNvdW50ZXJpZCA9IHJlZi5pZCB0aGVuIHRydWUKICAgIHdoZW4gcmVmLmlkZW50aWZpZXIgaXMgbm90IG51bGwgYW5kIGVuY291bnRlcmlkID0gcmVmLmlkZW50aWZpZXIudmFsdWUgdGhlbiB0cnVlCiAgICB3aGVuIGVuY291bnRlcmlkID0gTGFzdChTcGxpdChyZWYucmVmZXJlbmNlLCAnLycpKSB0aGVuIHRydWUKICAgIGVsc2UgZmFsc2UKZW5kCgpkZWZpbmUgZ2V0RW5jb3VudGVyczoKICAgIFtFbmNvdW50ZXJdIEUgCiAgICAgIHdoZXJlIEUuaWQgPSAiZW5jb3VudGVyaWQiCiAgICAgICAgcmV0dXJuIEUKCmRlZmluZSBnZXRFbmNvdW50ZXI6CiAgICBzaW5nbGV0b24gZnJvbSBnZXRFbmNvdW50ZXJzCgpkZWZpbmUgZnVuY3Rpb24gRW1DYXJlRXh0ZW5zaW9ucyhlbGVtZW50IFBhdGllbnQsIGlkIFN0cmluZyk6CiAgZWxlbWVudC5leHRlbnNpb24gRQogICAgICB3aGVyZSBFLnVybCA9ICgnaHR0cHM6Ly9maGlyLmRrLnN3aXNzdHBoLW1pcy5jaC9tYXRjaGJveC9maGlyLy9TdHJ1Y3R1cmVEZWZpbml0aW9uLycgKyBpZCkKICAgICAgcmV0dXJuIEUKCmRlZmluZSBmdW5jdGlvbiBFbUNhcmVFeHRlbnNpb24oZWxlbWVudCBQYXRpZW50LCBpZCBTdHJpbmcpOgogIHNpbmdsZXRvbiBmcm9tIEVtQ2FyZUV4dGVuc2lvbnMoZWxlbWVudCwgaWQpCgpkZWZpbmUgZ2V0UHJpbWFyeUNhcmVHaXZlclJlZmVyZW5jZToKICBFbUNhcmVFeHRlbnNpb24oUGF0aWVudCwgJ3ByaW1hcnljYXJlZ2l2ZXInKS52YWx1ZQoKZGVmaW5lIGdldFByaW1hcnlDYXJlR2l2ZXI6CiAgW1JlbGF0ZWRQZXJzb25dIFJQIHdoZXJlIFJQLmlkID0gTGFzdChTcGxpdChnZXRQcmltYXJ5Q2FyZUdpdmVyUmVmZXJlbmNlLnJlZmVyZW5jZSwgJy8nKSkKICAgIHJldHVybiBSUAoKZGVmaW5lIGlzTW90aGVyUHJpbWFyeUNhcmVHaXZlcjoKICBnZXRQcmltYXJ5Q2FyZUdpdmVyIGlzIG5vdCBudWxsIGFuZCBFeGlzdHMoZ2V0UHJpbWFyeUNhcmVHaXZlci5yZWxhdGlvbnNoaXAgciB3aGVyZSByIH4gIk1vdGhlciIpCgpkZWZpbmUgIkJpb2xvZ2ljYWwgTW90aGVyIFZpdGFsIFN0YXR1cyI6CiAgRW1DYXJlRXh0ZW5zaW9uKFBhdGllbnQsICdtb3RoZXJWaXRhbFN0YXR1cycpLnZhbHVlCiAgCmRlZmluZSAiQmlvbG9naWNhbCBGYXRoZXIgVml0YWwgU3RhdHVzIjoKICBFbUNhcmVFeHRlbnNpb24oUGF0aWVudCwgJ2ZhdGhlclZpdGFsU3RhdHVzJykudmFsdWUKLy8gcGVyc29uIGFjY29tcGFueWluZyB0aGUgY2hpbGQgaXMgYSBwYXJ0aWNpcGFudCB3aXRoIGEgbnVsbCB0eXBlCmRlZmluZSBnZXRSZWxhdGVkUGVyc29uUmVmZXJlbmNlQWNjb21wYW55aW5nVGhlQ2hpbGQ6CiAgQ29hbGVzY2UoRmlyc3QoZ2V0RW5jb3VudGVyLnBhcnRpY2lwYW50IFAgd2hlcmUgbm90IGV4aXN0cyhQLnR5cGUpICkuaW5kaXZpZHVhbCwgZ2V0UHJpbWFyeUNhcmVHaXZlclJlZmVyZW5jZSkKCmRlZmluZSBnZXRSZWxhdGVkUGVyc29uc0FjY29tcGFueWluZ1RoZUNoaWxkOgogIFtSZWxhdGVkUGVyc29uXSBSUCB3aGVyZSBSUC5pZCA9IExhc3QoU3BsaXQoZ2V0UmVsYXRlZFBlcnNvblJlZmVyZW5jZUFjY29tcGFueWluZ1RoZUNoaWxkLnJlZmVyZW5jZSwgJy8nKSkKICAgIHJldHVybiBSUAoKCmRlZmluZSBnZXRSZWxhdGVkUGVyc29uQWNjb21wYW55aW5nVGhlQ2hpbGQ6CiAgc2luZ2xldG9uIGZyb20gZ2V0UmVsYXRlZFBlcnNvbnNBY2NvbXBhbnlpbmdUaGVDaGlsZAoKCmRlZmluZSAiUGVyc29uIGFjY29tcGFueWluZyBjaGlsZCB0b2RheSdzIFJlbGF0aW9uc2hpcCB0byBDbGllbnQiOgogIGdldFJlbGF0ZWRQZXJzb25BY2NvbXBhbnlpbmdUaGVDaGlsZC5yZWxhdGlvbnNoaXAKCgoKCmRlZmluZSBmdW5jdGlvbiBnZXRWYWx1ZShPIE9ic2VydmF0aW9uKToKICBjYXNlICAKICAgICAgd2hlbiAgTyBpcyBudWxsIHRoZW4gbnVsbAogICAgICB3aGVuIE8udmFsdWUgaXMgQ29kZWFibGVDb25jZXB0IHRoZW4gQ29hbGVzY2UoRmlyc3QoTy52YWx1ZS5jb2RpbmcgQyB3aGVyZSBDLnN5c3RlbSAgPSAnaHR0cHM6Ly9maGlyLmRrLnN3aXNzdHBoLW1pcy5jaC9tYXRjaGJveC9maGlyL0NvZGVTeXN0ZW0vZW1jYXJlLWN1c3RvbS1jb2RlcycpLCBGaXJzdChPLnZhbHVlLmNvZGluZykpCiAgICAgIGVsc2UgTy52YWx1ZQogIGVuZAoKCmRlZmluZSBmdW5jdGlvbiBhc3Nlc09ic2VydmF0aW9uKE8gT2JzZXJ2YXRpb24pOgogIGNhc2UgIAogICAgICB3aGVuICBPIGlzIG51bGwgdGhlbiBudWxsCiAgICAgIHdoZW4gIE8uc3RhdHVzIGluICB7J2NhbmNlbGxlZCd9IHRoZW4gZmFsc2UKICAgICAgd2hlbiBPLnZhbHVlIGlzIG51bGwgdGhlbiAgdHJ1ZQogICAgICBlbHNlIE8udmFsdWUKICBlbmQKLyogICAgICAKZGVmaW5lIGZ1bmN0aW9uIEdldE9ic2VydmF0aW9uRHVyaW5nRW5jb3VudGVyKGlkbGlzdCBMaXN0PFN5c3RlbS5Db2RlPik6CiAgaWYgR2V0T2JzZXJ2YXRpb25EdXJpbmdFbmNvdW50ZXJEb25lKGlkbGlzdCApIGlzIG51bGwgdGhlbiAKICAgICAgR2V0T2JzZXJ2YXRpb25EdXJpbmdFbmNvdW50ZXJEb25lKGlkbGlzdCApCiAgZWxzZQogICAgR2V0T2JzZXJ2YXRpb25EdXJpbmdFbmNvdW50ZXJOb3RGb3VuZChpZGxpc3QgKQoqLwoKZGVmaW5lIGZ1bmN0aW9uIEdldE9ic2VydmF0aW9uRHVyaW5nRW5jb3VudGVyKGlkIFN5c3RlbS5Db2RlKToKICBDb2FsZXNjZShHZXRPYnNlcnZhdGlvbkR1cmluZ0VuY291bnRlckRvbmUoaWQgKSwgR2V0T2JzZXJ2YXRpb25EdXJpbmdFbmNvdW50ZXJOb3RGb3VuZChpZCApKQovKgpkZWZpbmUgZnVuY3Rpb24gR2V0T2JzZXJ2YXRpb25EdXJpbmdFbmNvdW50ZXJEb25lKGlkbGlzdCBMaXN0PFN5c3RlbS5Db2RlPik6CiAgICAgIExhc3QoW09ic2VydmF0aW9uOiBpZGxpc3QgXSBPCiAgICAgICAgd2hlcmUgICBJc0luRW5jb3VudGVyKE8uZW5jb3VudGVyKSAKICAgICAgICBhbmQgTy5zdGF0dXMgaW4geyAnZmluYWwnLCAnYW1lbmRlZCcsICdjb3JyZWN0ZWQnfSkKKi8KZGVmaW5lIGZ1bmN0aW9uIEdldE9ic2VydmF0aW9uRHVyaW5nRW5jb3VudGVyRG9uZShpZCBTeXN0ZW0uQ29kZSk6CiAgICAgIEZpcnN0KFtPYnNlcnZhdGlvbjogaWQgXSBPCiAgICAgICAgd2hlcmUgICBJc0luRW5jb3VudGVyKE8uZW5jb3VudGVyKSAKICAgICAgICBhbmQgTy5zdGF0dXMgaW4geyAnZmluYWwnLCAnYW1lbmRlZCcsICdjb3JyZWN0ZWQnfSAKICAgICAgICBzb3J0IGJ5IGlzc3VlZC52YWx1ZSBkZXNjKSAKCgpkZWZpbmUgZnVuY3Rpb24gSGFzT2JzZXJ2YXRpb25Db2RlRHVyaW5nRW5jb3VudGVyRG9uZShpZCBTeXN0ZW0uQ29kZSwgdmFsdWVDb2RlIFN5c3RlbS5Db2RlKToKICAgIAogICAgRXhpc3RzKFtPYnNlcnZhdGlvbjogaWQgXSBPCiAgICAgICAgd2hlcmUgICBJc0luRW5jb3VudGVyKE8uZW5jb3VudGVyKSAKICAgICAgICBhbmQgTy5zdGF0dXMgaW4geyAnZmluYWwnLCAnYW1lbmRlZCcsICdjb3JyZWN0ZWQnfQogICAgICAgIGFuZCBPLnZhbHVlIGlzIEZISVIuQ29kZWFibGVDb25jZXB0CiAgICAgICAgYW5kIE8udmFsdWUgfiB2YWx1ZUNvZGUpCgovL0V4aXN0cyhbT2JzZXJ2YXRpb25dIE8gd2hlcmUgTy5zdGF0dXMgaW4geyAnZmluYWwnLCAnYW1lbmRlZCcsICdjb3JyZWN0ZWQnfSBhbmQgTy52YWx1ZSBpcyBGSElSLkNvZGVhYmxlQ29uY2VwdCAgIGFuZCBFeGlzdHMoIE8udmFsdWUuY29kaW5nIEMgd2hlcmUgQyBpcyBGSElSLkNvZGluZyBhbmQgQy5jb2RlID0gRkhJUi5jb2RlIHt2YWx1ZTogJ0VtQ2FyZS5CMjBTMi5ERTA0J30pICkiCgovKgpkZWZpbmUgZnVuY3Rpb24gR2V0T2JzZXJ2YXRpb25EdXJpbmdFbmNvdW50ZXJOb3RGb3VuZChpZGxpc3QgTGlzdDxTeXN0ZW0uQ29kZT4pOgogICAgICBMYXN0KFtPYnNlcnZhdGlvbjogaWRsaXN0XSBPCiAgICAgICB3aGVyZSAgSXNJbkVuY291bnRlcihPLmVuY291bnRlcikgCiAgICAgICAgICBhbmQgTy5zdGF0dXMgaW4geydjYW5jZWxsZWQnfSkKICAgICAgICAgICovCmRlZmluZSBmdW5jdGlvbiBHZXRPYnNlcnZhdGlvbkR1cmluZ0VuY291bnRlck5vdEZvdW5kKGlkIFN5c3RlbS5Db2RlKToKICAgICAgRmlyc3QoW09ic2VydmF0aW9uOiBpZF0gTwogICAgICAgd2hlcmUgIElzSW5FbmNvdW50ZXIoTy5lbmNvdW50ZXIpIAogICAgICAgICAgYW5kIE8uc3RhdHVzIGluIHsnY2FuY2VsbGVkJ30KICAgICAgICAgIHNvcnQgYnkgaXNzdWVkLnZhbHVlIGRlc2MpCi8qCgpkZWZpbmUgZnVuY3Rpb24gR2V0TnVtYmVyT2JzZXJ2YXRpb25EdXJpbmdFbmNvdW50ZXIoaWRsaXN0IExpc3Q8U3lzdGVtLkNvZGU+KToKICBDb3VudCgKICAgIFtPYnNlcnZhdGlvbjogaWRsaXN0XSBPCiAgICAgICAgd2hlcmUgIElzSW5FbmNvdW50ZXIoIE8uZW5jb3VudGVyKSAKICAgICAgICBhbmQgTy5zdGF0dXMgaW4geyAnZmluYWwnLCAnYW1lbmRlZCcsICdjb3JyZWN0ZWQnfSkKKi8KZGVmaW5lIGZ1bmN0aW9uIEdldE51bWJlck9ic2VydmF0aW9uRHVyaW5nRW5jb3VudGVyKGlkIFN5c3RlbS5Db2RlKToKICBDb3VudCgKICAgIFtPYnNlcnZhdGlvbjogaWRdIE8KICAgICAgICB3aGVyZSAgSXNJbkVuY291bnRlciggTy5lbmNvdW50ZXIpIAogICAgICAgIGFuZCBPLnN0YXR1cyBpbiB7ICdmaW5hbCcsICdhbWVuZGVkJywgJ2NvcnJlY3RlZCd9KQoKLy8gKioqKioqKioqKioqKioqKioqKioqKioqICAgR2V0T2JzVmFsdWUgKioqKioqKioqKioqKioqKioqKioqKioqLwovKgpkZWZpbmUgZnVuY3Rpb24gR2V0T2JzVmFsdWUoaWRsaXN0IExpc3Q8U3lzdGVtLkNvZGU+KToKICAgIGdldFZhbHVlKEdldE9ic2VydmF0aW9uRHVyaW5nRW5jb3VudGVyKGlkbGlzdCkpCgpkZWZpbmUgZnVuY3Rpb24gR2V0T2JzVmFsdWUoaWQgU3lzdGVtLkNvZGUpOgogICAgZ2V0VmFsdWUoR2V0T2JzZXJ2YXRpb25EdXJpbmdFbmNvdW50ZXIoe2lkfSkpCiovCgpkZWZpbmUgZnVuY3Rpb24gR2V0T2JzVmFsdWUoaWQgU3lzdGVtLkNvZGUpOgogICAgZ2V0VmFsdWUoR2V0T2JzZXJ2YXRpb25EdXJpbmdFbmNvdW50ZXIoaWQpKQoKZGVmaW5lIGZ1bmN0aW9uIEdldE9ic1ZhbHVlKGlkIFN5c3RlbS5TdHJpbmcsIGNvZGVzeXN0ZW0gU3lzdGVtLlN0cmluZyk6CiAgICBnZXRWYWx1ZShHZXRPYnNlcnZhdGlvbkR1cmluZ0VuY291bnRlcihjb2RpbmcoaWQsIGNvZGVzeXN0ZW0pKSkKCmRlZmluZSBmdW5jdGlvbiBHZXRPYnNWYWx1ZShpZCBTeXN0ZW0uU3RyaW5nKToKICAgIGdldFZhbHVlKEdldE9ic2VydmF0aW9uRHVyaW5nRW5jb3VudGVyKGNvZGluZyhpZCwgJ2h0dHBzOi8vZmhpci5kay5zd2lzc3RwaC1taXMuY2gvbWF0Y2hib3gvZmhpci9Db2RlU3lzdGVtL2VtY2FyZS1jdXN0b20tY29kZXMnKSkpCgpkZWZpbmUgZnVuY3Rpb24gSGFzT2JzVmFsdWVDb2RlKGlkIFN5c3RlbS5TdHJpbmcsIHZhbHVlIFN5c3RlbS5Db2RlKToKICAgSGFzT2JzZXJ2YXRpb25Db2RlRHVyaW5nRW5jb3VudGVyRG9uZShjb2RpbmcoaWQsICdodHRwczovL2ZoaXIuZGsuc3dpc3N0cGgtbWlzLmNoL21hdGNoYm94L2ZoaXIvQ29kZVN5c3RlbS9lbWNhcmUtY3VzdG9tLWNvZGVzJykgLCB2YWx1ZSApCiAgCmRlZmluZSBmdW5jdGlvbiBIYXNPYnNWYWx1ZUNvZGUoaWQgU3lzdGVtLlN0cmluZywgdmFsdWUgU3lzdGVtLlN0cmluZyk6CiAgIEhhc09ic2VydmF0aW9uQ29kZUR1cmluZ0VuY291bnRlckRvbmUoY29kaW5nKGlkLCAnaHR0cHM6Ly9maGlyLmRrLnN3aXNzdHBoLW1pcy5jaC9tYXRjaGJveC9maGlyL0NvZGVTeXN0ZW0vZW1jYXJlLWN1c3RvbS1jb2RlcycpICwgY29kaW5nKHZhbHVlLCAnaHR0cHM6Ly9maGlyLmRrLnN3aXNzdHBoLW1pcy5jaC9tYXRjaGJveC9maGlyL0NvZGVTeXN0ZW0vZW1jYXJlLWN1c3RvbS1jb2RlcycpICkKCmRlZmluZSBmdW5jdGlvbiBIYXNPYnNWYWx1ZUNvZGUoaWQgU3lzdGVtLkNvZGUsIHZhbHVlIFN5c3RlbS5TdHJpbmcpOgogICBIYXNPYnNlcnZhdGlvbkNvZGVEdXJpbmdFbmNvdW50ZXJEb25lKGlkICwgY29kaW5nKHZhbHVlLCAnaHR0cHM6Ly9maGlyLmRrLnN3aXNzdHBoLW1pcy5jaC9tYXRjaGJveC9maGlyL0NvZGVTeXN0ZW0vZW1jYXJlLWN1c3RvbS1jb2RlcycpICkKCi8vICoqKioqKioqKioqKioqKioqKioqKioqKiAgIEhhc09icyAqKioqKioqKioqKioqKioqKioqKioqKiovCi8qCmRlZmluZSBmdW5jdGlvbiBIYXNPYnMoaWRsaXN0IExpc3Q8U3lzdGVtLkNvZGU+KToKICAgIGFzc2VzT2JzZXJ2YXRpb24oR2V0T2JzZXJ2YXRpb25EdXJpbmdFbmNvdW50ZXIoaWRsaXN0KSkKCmRlZmluZSBmdW5jdGlvbiBIYXNPYnMoaWQgU3lzdGVtLkNvZGUpOgogICAgYXNzZXNPYnNlcnZhdGlvbihHZXRPYnNlcnZhdGlvbkR1cmluZ0VuY291bnRlcih7aWR9KSkKKi8KZGVmaW5lIGZ1bmN0aW9uIEhhc09icyhpZCBTeXN0ZW0uQ29kZSk6CiAgICBhc3Nlc09ic2VydmF0aW9uKEdldE9ic2VydmF0aW9uRHVyaW5nRW5jb3VudGVyKGlkKSkKCmRlZmluZSBmdW5jdGlvbiBIYXNPYnMoaWQgU3lzdGVtLlN0cmluZywgY29kZXN5c3RlbSBTeXN0ZW0uU3RyaW5nKToKICAgIGFzc2VzT2JzZXJ2YXRpb24oR2V0T2JzZXJ2YXRpb25EdXJpbmdFbmNvdW50ZXIoY29kaW5nKGlkLCBjb2Rlc3lzdGVtKSkpCgpkZWZpbmUgZnVuY3Rpb24gSGFzT2JzKGlkIFN5c3RlbS5TdHJpbmcpOgogICAgYXNzZXNPYnNlcnZhdGlvbihHZXRPYnNlcnZhdGlvbkR1cmluZ0VuY291bnRlcihjb2RpbmcoaWQpKSkKCmRlZmluZSBmdW5jdGlvbiBIYXNPYnMoaWQgRkhJUi5jb2RlLCBjb2Rlc3lzdGVtIFN5c3RlbS5TdHJpbmcpOgogICAgYXNzZXNPYnNlcnZhdGlvbihHZXRPYnNlcnZhdGlvbkR1cmluZ0VuY291bnRlcihjb2RpbmcoaWQsIGNvZGVzeXN0ZW0pKSkKLyoKZGVmaW5lIGZ1bmN0aW9uIEdldEhpc3RvcmljT2JzZXJ2YXRpb24oaWRsaXN0IExpc3Q8U3lzdGVtLkNvZGU+LCBuYmRheXMgSW50ZWdlcik6CiAgaWYgR2V0SGlzdG9yaWNPYnNlcnZhdGlvbk5vdGZvdW5kKGlkbGlzdCAsIGNvZGVzeXN0ZW0gLCBuYmRheXMgKSBpcyBudWxsIHRoZW4gCiAgICAgIEdldEhpc3RvcmljT2JzZXJ2YXRpb25Ob3Rmb3VuZChpZGxpc3QgLCBjb2Rlc3lzdGVtICwgbmJkYXlzICkKICBlbHNlCiAgICBHZXRIaXN0b3JpY09ic2VydmF0aW9uTm90Zm91bmQoaWRsaXN0ICwgY29kZXN5c3RlbSAsIG5iZGF5cyApCiovCgpkZWZpbmUgZnVuY3Rpb24gR2V0SGlzdG9yaWNPYnNlcnZhdGlvbihpZCBTeXN0ZW0uQ29kZSwgbmJkYXlzIEludGVnZXIpOgogIENvYWxlc2NlKEdldEhpc3RvcmljT2JzZXJ2YXRpb25Eb25lKGlkICwgIG5iZGF5cyApLCAgR2V0SGlzdG9yaWNPYnNlcnZhdGlvbk5vdGZvdW5kKGlkICAsIG5iZGF5cyApKQovKgpkZWZpbmUgZnVuY3Rpb24gR2V0SGlzdG9yaWNPYnNlcnZhdGlvbkRvbmUoaWRsaXN0IExpc3Q8U3lzdGVtLkNvZGU+LCBuYmRheXMgSW50ZWdlcik6CiAgICAgIExhc3QoW09ic2VydmF0aW9uOiBpZGxpc3QgXSBPCiAgICAgICAgd2hlcmUgIE8uc3RhdHVzIGluIHsgJ2ZpbmFsJywgJ2FtZW5kZWQnLCAnY29ycmVjdGVkJ30KICAgICAgICBhbmQgKGRpZmZlcmVuY2UgaW4gZGF5cyBiZXR3ZWVuIE8uaXNzdWVkIGFuZCBUb2RheSgpKSA8IG5iZGF5cykKKi8KZGVmaW5lIGZ1bmN0aW9uIEdldEhpc3RvcmljT2JzZXJ2YXRpb25Eb25lKGlkIFN5c3RlbS5Db2RlLCBuYmRheXMgSW50ZWdlcik6CiAgICAgIEZpcnN0KFtPYnNlcnZhdGlvbjogaWQgXSBPCiAgICAgICAgd2hlcmUgIE8uc3RhdHVzIGluIHsgJ2ZpbmFsJywgJ2FtZW5kZWQnLCAnY29ycmVjdGVkJ30KICAgICAgICBhbmQgKGRpZmZlcmVuY2UgaW4gZGF5cyBiZXR3ZWVuIE8uaXNzdWVkIGFuZCBUb2RheSgpKSA8IG5iZGF5cyAKICAgICAgICBzb3J0IGJ5IGlzc3VlZC52YWx1ZSBkZXNjICkKCi8qCmRlZmluZSBmdW5jdGlvbiBHZXRIaXN0b3JpY09ic2VydmF0aW9uTm90Zm91bmQoaWRsaXN0IExpc3Q8U3lzdGVtLkNvZGU+LCBuYmRheXMgSW50ZWdlcik6CiAgICAgIExhc3QoW09ic2VydmF0aW9uOiBpZGxpc3RdIE8KICAgICAgICB3aGVyZSAgTy5zdGF0dXMgaW4geydjYW5jZWxsZWQnfQoqLwpkZWZpbmUgZnVuY3Rpb24gR2V0SGlzdG9yaWNPYnNlcnZhdGlvbk5vdGZvdW5kKGlkIFN5c3RlbS5Db2RlLCBuYmRheXMgSW50ZWdlcik6CiAgICAgIEZpcnN0KFtPYnNlcnZhdGlvbjogaWRdIE8KICAgICAgICB3aGVyZSAgTy5zdGF0dXMgaW4geydjYW5jZWxsZWQnfQogICAgICAgICAgYW5kIChkaWZmZXJlbmNlIGluIGRheXMgYmV0d2VlbiBPLmlzc3VlZCBhbmQgVG9kYXkoKSkgPCBuYmRheXMgCiAgICAgICAgc29ydCBieSBpc3N1ZWQudmFsdWUgZGVzYykKLy8gKioqKioqKioqKioqKioqKioqKioqKioqICAgSGFzT2JzSGlzdG9yeSAqKioqKioqKioqKioqKioqKioqKioqKiovCgovKgpkZWZpbmUgZnVuY3Rpb24gSGFzT2JzSGlzdG9yeShpZGxpc3QgTGlzdDxTeXN0ZW0uQ29kZT4sICBuYmRheXMgSW50ZWdlcik6CiAgYXNzZXNPYnNlcnZhdGlvbihHZXRIaXN0b3JpY09ic2VydmF0aW9uKGlkbGlzdCwgbmJkYXlzKSkKCgogZGVmaW5lIGZ1bmN0aW9uIEhhc09ic0hpc3RvcnkoaWQgU3lzdGVtLkNvZGUsIGNuYmRheXMgSW50ZWdlcik6CiAgYXNzZXNPYnNlcnZhdGlvbihHZXRIaXN0b3JpY09ic2VydmF0aW9uKHtpZH0sIG5iZGF5cykpCiovCmRlZmluZSBmdW5jdGlvbiBIYXNPYnNIaXN0b3J5KGlkIFN5c3RlbS5Db2RlLCBuYmRheXMgSW50ZWdlcik6CiAgYXNzZXNPYnNlcnZhdGlvbihHZXRIaXN0b3JpY09ic2VydmF0aW9uKGlkLCBuYmRheXMpKQoKZGVmaW5lIGZ1bmN0aW9uIEhhc09ic0hpc3RvcnkoaWQgU3lzdGVtLlN0cmluZywgY29kZXN5c3RlbSBTeXN0ZW0uU3RyaW5nLCBuYmRheXMgSW50ZWdlcik6CiAgYXNzZXNPYnNlcnZhdGlvbihHZXRIaXN0b3JpY09ic2VydmF0aW9uKGNvZGluZyhpZCwgY29kZXN5c3RlbSksIG5iZGF5cykpCgoKZGVmaW5lIGZ1bmN0aW9uIEhhc09ic0hpc3RvcnkoaWQgU3lzdGVtLlN0cmluZywgbmJkYXlzIEludGVnZXIpOgogIGFzc2VzT2JzZXJ2YXRpb24oR2V0SGlzdG9yaWNPYnNlcnZhdGlvbihjb2RpbmcoaWQpLCBuYmRheXMpKQoKZGVmaW5lIGZ1bmN0aW9uIGMocyBTeXN0ZW0uU3RyaW5nKToKICBGSElSLmNvZGUgeyB2YWx1ZTogcyB9CgoKCmRlZmluZSBmdW5jdGlvbiBjb2RpbmcocyBTeXN0ZW0uU3RyaW5nLCB1cmwgU3lzdGVtLlN0cmluZyk6CiAgU3lzdGVtLkNvZGUgewogICAgICAgICAgICAgICAgY29kZTogIHMgLAogICAgICAgICAgICAgICAgc3lzdGVtOiAgdXJsIAogICAgICAgICAgICB9CgpkZWZpbmUgZnVuY3Rpb24gY29kaW5nKHMgRkhJUi5jb2RlLCB1cmwgU3lzdGVtLlN0cmluZyk6CiAgU3lzdGVtLkNvZGUgewogICAgICAgICAgICAgICAgY29kZTogIHMudmFsdWUgLAogICAgICAgICAgICAgICAgc3lzdGVtOiAgdXJsIAogICAgICAgICAgICB9CgpkZWZpbmUgZnVuY3Rpb24gY29kaW5nKHMgU3lzdGVtLlN0cmluZyk6CiAgU3lzdGVtLkNvZGUgewogICAgICAgICAgICAgICAgY29kZTogIHMgLAogICAgICAgICAgICAgICAgc3lzdGVtOiAgJ2h0dHBzOi8vZmhpci5kay5zd2lzc3RwaC1taXMuY2gvbWF0Y2hib3gvZmhpci9Db2RlU3lzdGVtL2VtY2FyZS1jdXN0b20tY29kZXMnCiAgICAgICAgICAgIH0KCgpkZWZpbmUgZnVuY3Rpb24gVG9VcmwocyBTeXN0ZW0uU3RyaW5nKToKICB1cmwge3ZhbHVlOnN9CgoKCi8vICoqKioqKioqKioqKioqKioqKioqKioqKiAgIEdldENvbmQgKioqKioqKioqKioqKioqKioqKioqKioqLwovKgpkZWZpbmUgZnVuY3Rpb24gR2V0Q29PLmVuY291bnRlcm5kaXRpb24oaWRsaXN0IExpc3Q8U3lzdGVtLkNvZGU+KToKICAgICAgTGFzdChbQ29uZGl0aW9uOiBpZGxpc3RdIE8KICAgICAgICB3aGVyZSAgSXNJbkVuY291bnRlciggTy5lbmNvdW50ZXIpIAogICAgICAgIGFuZCBleGlzdHMoTy52ZXJpZmljYXRpb25TdGF0dXMuY29kaW5nIEMgd2hlcmUgQy5jb2RlIGluIHsndW5jb25maXJtZWQnLCAncHJvdmlzaW9uYWwnLCAnZGlmZmVyZW50aWFsJywgJ2NvbmZpcm1lZCd9IAogICAgICAgIGFuZCBDLnN5c3RlbSA9ICdodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL2NvbmRpdGlvbi12ZXItc3RhdHVzJykpCiovCmRlZmluZSBmdW5jdGlvbiBHZXRDb25kaXRpb24oaWQgU3lzdGVtLkNvZGUpOgogICAgICBGaXJzdChbQ29uZGl0aW9uOiBpZF0gTwogICAgICAgIHdoZXJlICBJc0luRW5jb3VudGVyKE8uZW5jb3VudGVyKSAKICAgICAgICBhbmQgZXhpc3RzKE8udmVyaWZpY2F0aW9uU3RhdHVzLmNvZGluZyBDIHdoZXJlIEMuY29kZSBpbiB7J3VuY29uZmlybWVkJywgJ3Byb3Zpc2lvbmFsJywgJ2RpZmZlcmVudGlhbCcsICdjb25maXJtZWQnfSAKICAgICAgICBhbmQgQy5zeXN0ZW0gPSAnaHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS9jb25kaXRpb24tdmVyLXN0YXR1cycpIAogICAgICAgIHNvcnQgYnkgcmVjb3JkZWREYXRlIGRlc2MpCgoKZGVmaW5lIGZ1bmN0aW9uIGFzc2VzQ29uZGl0aW9uKE8gQ29uZGl0aW9uKToKICBpZiBPIGlzIG51bGwgdGhlbiAKICAgIGZhbHNlCiAgZWxzZQogICAgdHJ1ZQovKgpkZWZpbmUgZnVuY3Rpb24gR2V0Q29uZChpZGxpc3QgTGlzdDxTeXN0ZW0uQ29kZT4pOgogIEdldENvbmRpdGlvbihpZGxpc3QpCgpkZWZpbmUgZnVuY3Rpb24gR2V0Q29uZChpZCBTeXN0ZW0uQ29kZSk6CiAgR2V0Q29uZGl0aW9uKHtpZH0pCiovCmRlZmluZSBmdW5jdGlvbiBHZXRDb25kKGlkIFN5c3RlbS5Db2RlKToKICAoR2V0Q29uZGl0aW9uKGlkKSkKCmRlZmluZSBmdW5jdGlvbiBHZXRDb25kKGlkIFN5c3RlbS5TdHJpbmcsIGNvZGVzeXN0ZW0gU3lzdGVtLlN0cmluZyk6CiAgKEdldENvbmRpdGlvbihjb2RpbmcoaWQsIGNvZGVzeXN0ZW0pKSkKCmRlZmluZSBmdW5jdGlvbiBHZXRDb25kKGlkIFN5c3RlbS5TdHJpbmcpOgogIChHZXRDb25kaXRpb24oY29kaW5nKGlkKSkpCgovLyAqKioqKioqKioqKioqKioqKioqKioqKiogICBIYXNDb25kICoqKioqKioqKioqKioqKioqKioqKioqKi8KLyoKZGVmaW5lIGZ1bmN0aW9uIEhhc0NvbmQoaWRsaXN0IExpc3Q8U3lzdGVtLkNvZGU+KToKICBhc3Nlc0NvbmRpdGlvbihHZXRDb25kaXRpb24oaWRsaXN0KSkKCgozNTE4R2V0Q29uZGl0aW9uKGlkKSkKKi8KZGVmaW5lIGZ1bmN0aW9uIEhhc0NvbmQoaWQgU3lzdGVtLlN0cmluZywgY29kZXN5c3RlbSBTeXN0ZW0uU3RyaW5nKToKICBhc3Nlc0NvbmRpdGlvbihHZXRDb25kaXRpb24oY29kaW5nKGlkLCBjb2Rlc3lzdGVtKSkpCgpkZWZpbmUgZnVuY3Rpb24gSGFzQ29uZChpZCBTeXN0ZW0uU3RyaW5nKToKICBhc3Nlc0NvbmRpdGlvbihHZXRDb25kaXRpb24oY29kaW5nKGlkKSkpCgpkZWZpbmUgZnVuY3Rpb24gSGFzQ29uZChpZCBTeXN0ZW0uQ29kZSk6CiAgYXNzZXNDb25kaXRpb24oR2V0Q29uZGl0aW9uKGlkKSkKCi8vICoqKioqKioqKioqKioqKioqKioqKioqKiAgIFBhdGllbnRIYXNIaXN0b3J5T2ZDb25kaXRpb24gKioqKioqKioqKioqKioqKioqKioqKioqLwovKgpkZWZpbmUgZnVuY3Rpb24gR2V0SGlzdG9yaWNDb25kaXRpb24oaWRsaXN0IExpc3Q8U3lzdGVtLkNvZGU+LCAgbmJkYXlzIEludGVnZXIpOgogICAgICBMYXN0KFtDb25kaXRpb246IGlkbGlzdF0gTwogICAgICAgIHdoZXJlICAoZGlmZmVyZW5jZSBpbiBkYXlzIGJldHdlZW4gTy5yZWNvcmRlZERhdGUgYW5kIFRvZGF5KCkpIDwgbmJkYXlzCiAgICAgICAgYW5kIGV4aXN0cyhPLnZlcmlmaWNhdGlvblN0YXR1cy5jb2RpbmcgQyB3aGVyZSBDLmNvZGUgaW4geyd1bmNvbmZpcm1lZCcsICdwcm92aXNpb25hbCcsICdkaWZmZXJlbnRpYWwnLCAnY29uZmlybWVkJ30gCiAgICAgICAgYW5kIEMuc3lzdGVtID0gJ2h0dHA6Ly90ZXJtaW5vbG9neS5obDcub3JnL0NvZGVTeXN0ZW0vY29uZGl0aW9uLXZlci1zdGF0dXMnKSkKKi8KCmRlZmluZSBmdW5jdGlvbiBHZXRIaXN0b3JpY0NvbmRpdGlvbihpZCBTeXN0ZW0uQ29kZSwgIG5iZGF5cyBJbnRlZ2VyKToKICAgICAgRmlyc3QoW0NvbmRpdGlvbjogaWRdIE8KICAgICAgICB3aGVyZSAgKGRpZmZlcmVuY2UgaW4gZGF5cyBiZXR3ZWVuIE8ucmVjb3JkZWREYXRlIGFuZCBUb2RheSgpKSA8IG5iZGF5cwogICAgICAgIGFuZCBleGlzdHMoTy52ZXJpZmljYXRpb25TdGF0dXMuY29kaW5nIEMgd2hlcmUgQy5jb2RlIGluIHsndW5jb25maXJtZWQnLCAncHJvdmlzaW9uYWwnLCAnZGlmZmVyZW50aWFsJywgJ2NvbmZpcm1lZCd9IAogICAgICAgIGFuZCBDLnN5c3RlbSA9ICdodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL2NvbmRpdGlvbi12ZXItc3RhdHVzJykgCiAgICAgICAgc29ydCBieSByZWNvcmRlZERhdGUgZGVzYykKCgoKCi8qCmRlZmluZSBmdW5jdGlvbiBIYXNDb25kSGlzdG9yeShpZGxpc3QgTGlzdDxTeXN0ZW0uQ29kZT4sICBuYmRheXMgSW50ZWdlcik6CiAgYXNzZXNDb25kaXRpb24oR2V0SGlzdG9yaWNDb25kaXRpb24oaWRsaXN0LCAgbmJkYXlzKSkKCgpkZWZpbmUgZnVuY3Rpb24gSGFzQ29uZEhpc3RvcnkoaWQgU3lzdGVtLkNvZGUsICBuYmRheXMgSW50ZWdlcik6CiAgYXNzZXNDb25kaXRpb24oR2V0SGlzdG9yaWNDb25kaXRpb24oe2lkfSwgbmJkYXlzKSkKKi8KZGVmaW5lIGZ1bmN0aW9uIEhhc0NvbmRIaXN0b3J5KGlkIFN5c3RlbS5Db2RlLCBuYmRheXMgSW50ZWdlcik6CiAgYXNzZXNDb25kaXRpb24oR2V0SGlzdG9yaWNDb25kaXRpb24oaWQsICBuYmRheXMpKQoKZGVmaW5lIGZ1bmN0aW9uIEhhc0NvbmRIaXN0b3J5KGlkIFN5c3RlbS5TdHJpbmcsIGNvZGVzeXN0ZW0gU3lzdGVtLlN0cmluZywgbmJkYXlzIEludGVnZXIpOgogIGFzc2VzQ29uZGl0aW9uKEdldEhpc3RvcmljQ29uZGl0aW9uKGNvZGluZyhpZCxjb2Rlc3lzdGVtKSxuYmRheXMpKQoKCmRlZmluZSBmdW5jdGlvbiBIYXNDb25kSGlzdG9yeShpZCBTeXN0ZW0uU3RyaW5nLCBuYmRheXMgSW50ZWdlcik6CiAgYXNzZXNDb25kaXRpb24oR2V0SGlzdG9yaWNDb25kaXRpb24oY29kaW5nKGlkKSwgIG5iZGF5cykpCgoKCi8vZGVmaW5lIGZ1bmN0aW9uIFBhdGllbnRIYXNDb25kaXRpb25EdXJpbmdFbmNvdW50ZXIoaWQgU3RyaW5nLCBjb2Rlc3lzdGVtIHVybCwgZHVyYXRpb24gSW50ZWdlcikpOgoKLy9kZWZpbmUgZnVuY3Rpb24gUGF0aWVudEhhc0NvbmRpdGlvbkZyb21WYWx1ZVNldER1cmluZ0VuY291bnRlcihpZCBTdHJpbmcsIGNvZGVzeXN0ZW0gdXJsLCBkdXJhdGlvbiBJbnRlZ2VyKSk6CgovL2RlZmluZSBmdW5jdGlvbiBQYXRpZW50SGFzSHNpc3RvcnlDb25kaXRpb24oaWQgU3RyaW5nLGNvZGVzeXN0ZW0gdXJsICwgZHVyYXRpb24gSW50ZWdlcik6Ci8vZGVmaW5lIGZ1bmN0aW9uIFBhdGllbnRIYXNIc2lzdG9yeUNvbmRpdGlvbkZyb21WYWx1ZVNldChpZCBTdHJpbmcsY29kZXN5c3RlbSB1cmwgLCBkdXJhdGlvbiBJbnRlZ2VyKToKCgovLyBQYXRpZW50SGFzU3ltcHRvbSgic3ltcHRvbSBuYW1lIik6IHN5bXB0b20gaW4gdGhlIGVuY291bnRlcgoKCi8vIFBhdGllbnRMYXN0TWVhc3VyZU9mKCJtZWFzdXJlIG5hbWUiKTogbWVhc3VyZSBpbiB0aGUgZW5jb3VudGVyCgovLyBQYXRpZW50TGFzdEhpc3RvcmljTWVhc3VyZU9mKCJtZWFzdXJlIG5hbWUiLCBkdXJhdGlvbik6IG1lYXN1cmUgaW4gdGhlIHBhdGllbnQgaGlzdG9yeSBkdXJpbmcgZHVyYXRpb24KCi8vIFBhdGllbnRIYXNEaWFnbm9zdGljKCJEaWFnbm9zdGljIG5hbWUiICk6IERpYWdub3N0aWMgaW4gdGhlIGVuY291bnRlcgoKLy8gUGF0aWVudEhhc0hpc3RvcnlPZkRpYWdub3N0aWMoIkRpYWdub3N0aWMgbmFtZSIsIGR1cmF0aW9uICk6IERpYWdub3N0aWMgaW4gdGhlIHBhdGllbnQgaGlzdG9yeSBkdXJpbmcgZHVyYXRpb24KCi8vIFBhdGllbnRIYXNQcm9wb3NlZG9yQ29uZmlybWVkRGlhbm9zdGljKCJEaWFnbm9zdGljIG5hbWUiICk6IERpYWdub3N0aWMgaW4gdGhlIGVuY291bnRlcgoKLy8gUGF0aWVudEhhc0hpc3RvcnlPZlByb3Bvc2Vkb3JDb25maXJtZWREaWFub3N0aWMoIkRpYWdub3N0aWMgbmFtZSIsIGR1cmF0aW9uICk6IERpYWdub3N0aWMgaW4gdGhlIHBhdGllbnQgaGlzdG9yeSBkdXJpbmcgZHVyYXRpb24KCi8vIFBhdGllbnRaU2NvcmVXZkEod2llZ2h0LCBhZ2UpCgovLyBQYXRpZW50V2VpZ2h0RnJvbVdmQShhZ2UsIE11YWMpCg==&quot;/&gt;
+  &lt;/content&gt;
+&lt;/Library&gt;</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.who.int">World Health Organization (WHO)</a>.  Package who.fhir.emc-cds#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 3, 2023 14:56+0000">2023-04-03</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="http://fhir.org/guides/who/emcare/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

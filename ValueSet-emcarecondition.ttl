@@ -1,0 +1,227 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/who/emcare/ValueSet/emcarecondition> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "emcarecondition"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"CodeSystem-emcare-custom-codes.html\"><code>https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE83\">EmCare.B23.DE83</a></td><td>possible serious bacterial infection or very severe disease</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE06\">EmCare.B23.DE06</a></td><td>pneumonia</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE85\">EmCare.B23.DE85</a></td><td>local infection</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE86\">EmCare.B23.DE86</a></td><td>infection unlikely</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE106\">EmCare.B23.DE106</a></td><td>very low weight for age</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE87\">EmCare.B23.DE87</a></td><td>severe jaundice</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE88\">EmCare.B23.DE88</a></td><td>jaundice</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE89\">EmCare.B23.DE89</a></td><td>no jaundice</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE13\">EmCare.B23.DE13</a></td><td>severe dehydration</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE14\">EmCare.B23.DE14</a></td><td>some dehydration</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE15\">EmCare.B23.DE15</a></td><td>no dehydration</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE94\">EmCare.B23.DE94</a></td><td>feeding problem and / or low weight for age</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE98\">EmCare.B23.DE98</a></td><td>no feeding problem</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-collector\">collector</a></td><td>add other classifications</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE01\">EmCare.B23.DE01</a></td><td>very severe disease</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE03\">EmCare.B23.DE03</a></td><td>severe pneumonia or very severe disease</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE10\">EmCare.B23.DE10</a></td><td>cough or cold</td><td>The client has Cough or Cold</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE16\">EmCare.B23.DE16</a></td><td>severe persistent diarrhoea</td><td>The client has Severe Persistent Diarrhoea</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE17\">EmCare.B23.DE17</a></td><td>persistent diarrhoea</td><td>The client has Persistent Diarrhoea</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE18\">EmCare.B23.DE18</a></td><td>dysentery</td><td>The client has Dysentery</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE18.46a\">EmCare.B23.DE18.a</a></td><td>possible shigella</td><td>The client has Possible Shigella</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE100\">EmCare.B23.DE100</a></td><td>throat abscess or possible diptheria</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE6101\">EmCare.B23.DE6101</a></td><td>streptococcal sore throat</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE6102\">EmCare.B23.DE6102</a></td><td>non-streptococcal sore throat</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE6103\">EmCare.B23.DE6103</a></td><td>no throat problem</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE30\">EmCare.B23.DE30</a></td><td>mastoiditis</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE31\">EmCare.B23.DE31</a></td><td>acute ear infection</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE32\">EmCare.B23.DE32</a></td><td>chronic ear infection</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE33\">EmCare.B23.DE33</a></td><td>no ear infection</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE19\">EmCare.B23.DE19</a></td><td>very severe febrile disease</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE104\">EmCare.B23.DE104</a></td><td>fever: possible bacterial infection</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE105\">EmCare.B23.DE105</a></td><td>fever: bacterial infection unlikely</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE27\">EmCare.B23.DE27</a></td><td>severe complicated measles</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE28\">EmCare.B23.DE28</a></td><td>measles with eye or mouth complication</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE29\">EmCare.B23.DE29</a></td><td>possible measles</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE62\">EmCare.B23.DE62</a></td><td>severe anaemia</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE63\">EmCare.B23.DE63</a></td><td>anaemia</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE64\">EmCare.B23.DE64</a></td><td>no anaemia</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE34\">EmCare.B23.DE34</a></td><td>eye infection</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE35\">EmCare.B23.DE35</a></td><td>clouding of the cornea</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE41\">EmCare.B23.DE41</a></td><td>papular urticaria or papular pruritic eruptions</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE42\">EmCare.B23.DE42</a></td><td>ringworm (tinea)</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE44\">EmCare.B23.DE44</a></td><td>scabies</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE45\">EmCare.B23.DE45</a></td><td>chickenpox</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE47\">EmCare.B23.DE47</a></td><td>herpes zoster</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE49\">EmCare.B23.DE49</a></td><td>impetigo</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE52\">EmCare.B23.DE52</a></td><td>molluscum contagiosum</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE53\">EmCare.B23.DE53</a></td><td>warts</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE54\">EmCare.B23.DE54</a></td><td>seborrhoeic dermatitis</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE56\">EmCare.B23.DE56</a></td><td>fixed drug reaction</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE57\">EmCare.B23.DE57</a></td><td>eczema</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE58\">EmCare.B23.DE58</a></td><td>steven johnson syndrome (sjs)</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE59\">EmCare.B23.DE59</a></td><td>mouth sores or ulcer</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE61\">EmCare.B23.DE61</a></td><td>oral thrush</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE107\">EmCare.B23.DE107</a></td><td>low weight for age</td><td/></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B23.46DE108\">EmCare.B23.DE108</a></td><td>low muac or visual report of wasting</td><td/></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/emcarecondition"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "valueset-emcarecondition"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-04-03T14:56:37+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "World Health Organization (WHO)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Codes representing possible values for the Provide an estimated age or estimated date of birth element"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:immutable [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "EmCare.B23.DE83" ] ;
+         fhir:display [ fhir:v "possible serious bacterial infection or very severe disease" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE06" ] ;
+         fhir:display [ fhir:v "pneumonia" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE85" ] ;
+         fhir:display [ fhir:v "local infection" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE86" ] ;
+         fhir:display [ fhir:v "infection unlikely" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE106" ] ;
+         fhir:display [ fhir:v "very low weight for age" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE87" ] ;
+         fhir:display [ fhir:v "severe jaundice" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE88" ] ;
+         fhir:display [ fhir:v "jaundice" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE89" ] ;
+         fhir:display [ fhir:v "no jaundice" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE13" ] ;
+         fhir:display [ fhir:v "severe dehydration" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE14" ] ;
+         fhir:display [ fhir:v "some dehydration" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE15" ] ;
+         fhir:display [ fhir:v "no dehydration" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE94" ] ;
+         fhir:display [ fhir:v "feeding problem and / or low weight for age" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE98" ] ;
+         fhir:display [ fhir:v "no feeding problem" ]
+       ] [
+         fhir:code [ fhir:v "collector" ] ;
+         fhir:display [ fhir:v "add other classifications" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE01" ] ;
+         fhir:display [ fhir:v "very severe disease" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE03" ] ;
+         fhir:display [ fhir:v "severe pneumonia or very severe disease" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE10" ] ;
+         fhir:display [ fhir:v "cough or cold" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The client has Cough or Cold" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE16" ] ;
+         fhir:display [ fhir:v "severe persistent diarrhoea" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The client has Severe Persistent Diarrhoea" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE17" ] ;
+         fhir:display [ fhir:v "persistent diarrhoea" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The client has Persistent Diarrhoea" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE18" ] ;
+         fhir:display [ fhir:v "dysentery" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The client has Dysentery" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE18.a" ] ;
+         fhir:display [ fhir:v "possible shigella" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The client has Possible Shigella" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE100" ] ;
+         fhir:display [ fhir:v "throat abscess or possible diptheria" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE6101" ] ;
+         fhir:display [ fhir:v "streptococcal sore throat" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE6102" ] ;
+         fhir:display [ fhir:v "non-streptococcal sore throat" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE6103" ] ;
+         fhir:display [ fhir:v "no throat problem" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE30" ] ;
+         fhir:display [ fhir:v "mastoiditis" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE31" ] ;
+         fhir:display [ fhir:v "acute ear infection" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE32" ] ;
+         fhir:display [ fhir:v "chronic ear infection" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE33" ] ;
+         fhir:display [ fhir:v "no ear infection" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE19" ] ;
+         fhir:display [ fhir:v "very severe febrile disease" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE104" ] ;
+         fhir:display [ fhir:v "fever: possible bacterial infection" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE105" ] ;
+         fhir:display [ fhir:v "fever: bacterial infection unlikely" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE27" ] ;
+         fhir:display [ fhir:v "severe complicated measles" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE28" ] ;
+         fhir:display [ fhir:v "measles with eye or mouth complication" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE29" ] ;
+         fhir:display [ fhir:v "possible measles" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE62" ] ;
+         fhir:display [ fhir:v "severe anaemia" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE63" ] ;
+         fhir:display [ fhir:v "anaemia" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE64" ] ;
+         fhir:display [ fhir:v "no anaemia" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE34" ] ;
+         fhir:display [ fhir:v "eye infection" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE35" ] ;
+         fhir:display [ fhir:v "clouding of the cornea" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE41" ] ;
+         fhir:display [ fhir:v "papular urticaria or papular pruritic eruptions" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE42" ] ;
+         fhir:display [ fhir:v "ringworm (tinea)" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE44" ] ;
+         fhir:display [ fhir:v "scabies" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE45" ] ;
+         fhir:display [ fhir:v "chickenpox" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE47" ] ;
+         fhir:display [ fhir:v "herpes zoster" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE49" ] ;
+         fhir:display [ fhir:v "impetigo" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE52" ] ;
+         fhir:display [ fhir:v "molluscum contagiosum" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE53" ] ;
+         fhir:display [ fhir:v "warts" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE54" ] ;
+         fhir:display [ fhir:v "seborrhoeic dermatitis" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE56" ] ;
+         fhir:display [ fhir:v "fixed drug reaction" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE57" ] ;
+         fhir:display [ fhir:v "eczema" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE58" ] ;
+         fhir:display [ fhir:v "steven johnson syndrome (sjs)" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE59" ] ;
+         fhir:display [ fhir:v "mouth sores or ulcer" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE61" ] ;
+         fhir:display [ fhir:v "oral thrush" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE107" ] ;
+         fhir:display [ fhir:v "low weight for age" ]
+       ] [
+         fhir:code [ fhir:v "EmCare.B23.DE108" ] ;
+         fhir:display [ fhir:v "low muac or visual report of wasting" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

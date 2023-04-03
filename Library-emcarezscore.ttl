@@ -1,0 +1,143 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/who/emcare/Library/emcarezscore> a fhir:Library ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "emcarezscore"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Related Artifacts</h2><table class=\"grid\"><tr><td>depends-on</td><td><code>http://fhir.org/guides/who/anc-cds/Library/FHIRHelpers</code></td></tr><tr><td>depends-on</td><td><code>https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcarebase</code></td></tr><tr><td>depends-on</td><td><code>https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/weightforage</code></td></tr><tr><td>depends-on</td><td><code>https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/anthrobase</code></td></tr><tr><td>depends-on</td><td><code>https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/weightforlength</code></td></tr><tr><td>depends-on</td><td><code>https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/weightforheight</code></td></tr></table><h2>Parameters</h2><table class=\"grid\"><tr><td>encounter</td><td>in</td><td/><td/><td>Encounter</td></tr><tr><td>pastweight</td><td>out</td><td/><td/><td>decimal</td></tr><tr><td>patientsex</td><td>out</td><td/><td/><td>string</td></tr><tr><td>ageatpastweight</td><td>out</td><td/><td/><td>integer</td></tr><tr><td>pastweightzscore</td><td>out</td><td/><td/><td>decimal</td></tr><tr><td>pastweightactualised</td><td>out</td><td/><td/><td>decimal</td></tr><tr><td>WAZ</td><td>out</td><td/><td/><td>decimal</td></tr></table><h2>Data Requirements</h2><table class=\"grid\"><tr><td colspan=\"2\"><b>Type</b>: <a href=\"http://hl7.org/fhir/R4/patient.html\">Patient</a> (<a href=\"http://hl7.org/fhir/R4/patient.html\">Patient</a>)</td></tr></table><table class=\"grid\"><tr><td colspan=\"2\"><b>Type</b>: <a href=\"http://hl7.org/fhir/R4/encounter.html\">Encounter</a> (<a href=\"http://hl7.org/fhir/R4/encounter.html\">Encounter</a>)</td></tr></table><table class=\"grid\"><tr><td colspan=\"2\"><b>Type</b>: <a href=\"http://hl7.org/fhir/R4/observation.html\">Observation</a> (<a href=\"http://hl7.org/fhir/R4/observation.html\">Observation</a>)</td></tr><tr style=\"background-color: #efefef\"><td>Filter</td><td>Value</td></tr><tr><td>code</td><td>One of these codes: [not stated] EmCare.B6.DE06: EmCare.B6.DE06</td></tr></table><h2>Contents</h2><p><code>text/cql</code></p><pre><code class=\"language-sql\">/*\n@author: Patrick Delcroix\n@description: This library is part of the project EmCare\n*/\nlibrary emcarezscore version '1.0.1.rc12.build.329'\nusing FHIR version '4.0.1'\ninclude FHIRHelpers version '4.0.1' called FHIRHelpers \ninclude emcarebase version '1.0.1.rc12.build.329' called Base\ninclude WeightForAge version '1.0.0' called wfa\ninclude WeightForLength version '1.0.0' called wfl\ninclude WeightForHeight version '1.0.0' called wfh\n\ncodesystem &quot;EmCare&quot; : 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes'\n\ncode &quot;Weight&quot;: 'EmCare.B6.DE06' from &quot;EmCare&quot; display 'Weight'\ncode &quot;Estimated Weight&quot;: 'EmCare.B6.DE08' from &quot;EmCare&quot; display 'Estimated Weight'\ncode &quot;MUAC&quot;: 'EmCare.B6.DE17' from &quot;EmCare&quot; display 'MUAC'\ncode &quot;Length&quot;: 'EmCare.B6.DE12' from &quot;EmCare&quot; display 'Length'\ncode &quot;Height&quot;: 'EmCare.B6.DE09' from &quot;EmCare&quot; display 'Height'\ncode &quot;Visually assess&quot;: 'EmCare.B6.DE18' from &quot;EmCare&quot; display 'Visually assess'\ncode &quot;Underweight&quot;: 'EmCare.B6.DE20' from &quot;EmCare&quot; display 'Underweight' \ncode &quot;Severely Underweight&quot;: 'EmCare.B6.DE21' from &quot;EmCare&quot; display 'Severely Underweight' \n\nparameter &quot;encounterid&quot; String\n\ncontext Patient\n\n\n\n\n\n/* pastweight : Previous Weight*/\ndefine &quot;pastweightobs&quot;:\n    if AgeInMonths()&lt; 4 and Base.GetHistoricObservation(&quot;Weight&quot;, 63) is not null then\n      Base.GetHistoricObservation(&quot;Weight&quot;, 63)  as FHIR.Observation\n    else  if AgeInMonths()&lt; 6 and Base.GetHistoricObservation(&quot;Weight&quot;, 94)   is not null then\n      Base.GetHistoricObservation(&quot;Weight&quot;, 94)  as  FHIR.Observation\n    else if AgeInMonths()&lt; 6 and Base.GetHistoricObservation(&quot;Weight&quot;, 126)   is not null then\n       Base.GetHistoricObservation(&quot;Weight&quot;, 126)  as FHIR.Observation\n    else if Base.GetHistoricObservation(&quot;Weight&quot;, 201)  is not null then\n       Base.GetHistoricObservation(&quot;Weight&quot;, 201)  as FHIR.Observation\n    else\n      null\n\ndefine &quot;pastweight&quot;:\n    if &quot;pastweightobs&quot; is not null then\n      &quot;pastweightobs&quot;.value\n    else\n      null\n\n\n/* patientsex : Patient sex*/\ndefine &quot;patientsex&quot;:\n    if Patient.gender = 'female' then 'female' else 'male'\n\n/* ageatpastweight : Age at Previous Weight*/\ndefine &quot;ageatpastweight&quot;:\n    if &quot;pastweight&quot; is not null  then\n      (difference in days between Patient.birthDate and ToDate(&quot;pastweightobs&quot;.issued) ) * ( 1.0 as System.Decimal )\n    else\n     null\n\n/* pastweightzscore : Z-Score at Previous Weight*/\ndefine &quot;pastweightzscore&quot;:\n    if &quot;pastweight&quot; is not null  then\n      wfa.generateZScoreWeightForAge(&quot;patientsex&quot;, &quot;ageatpastweight&quot; , ((convert &quot;pastweight&quot; to 'kg').value * ( 1.0 as System.Decimal)))\n    else\n      null\n\n/* pastweightactualised : Weight from  at Previous Weight*/\ndefine &quot;pastweightactualised&quot;:\n    if &quot;pastweightzscore&quot; is not null then\n      System.Quantity { value: Round(wfa.generateWeightFromAge(&quot;patientsex&quot;,AgeInDays() * ( 1.0 as System.Decimal ),  &quot;pastweightzscore&quot; ),2), unit: 'kg'} \n    else \n       null\n\ndefine existingweight:\n  Base.GetObsValue(&quot;Weight&quot;)\n\ndefine existingestimnatedweight:\n  if existingweight is null then  \n    Base.GetObsValue(&quot;Estimated Weight&quot;)\n  else \n    null\n\ndefine existingheight:\n  Base.GetObsValue(&quot;Height&quot;)\n\ndefine existinglength:\n  Base.GetObsValue(&quot;Length&quot;)\n\ndefine existingvisual:\n  Base.GetObsValue(&quot;Visually assess&quot;)\n\ndefine existingmuac:\n  Base.GetObsValue(&quot;MUAC&quot;)\n\n\n\n\ndefine zscorefrommuac:\n  if existingmuac is null then 0.0\n  else if existingmuac &lt; 115 'mnm' then -3.0\n  else if existingmuac &lt; 125 'mnm' then -2.0\n  else 0.0\n\ndefine estimatedweight:\n  case  \n  when existingweight is not null then null\n  when existingestimnatedweight is not null then existingestimnatedweight\n  when pastweightactualised is not null then pastweightactualised\n  when AgeInMonths()&gt;24 and existingheight then weightfromheight\n  when AgeInMonths()&lt;=24 and existinglength then weightfromlength\n  else weightfromage\n  end\n\ndefine zscorefromvisual:\n    if existingvisual is not null then\n      case  \n        when existingvisual ~ &quot;Severely Underweight&quot; then -3.0\n        when existingvisual ~ &quot;Underweight&quot; then -2.0\n        else 0.0\n      end\n    else  null\n\n\ndefine weightfromlength:\n    System.Quantity { value: Round(wfl.generateWeightFromLength(&quot;patientsex&quot;,(convert existinglength to 'cm').value * ( 1.0 as System.Decimal ), zscorefrommuac),2), unit: 'kg'}\n\ndefine weightfromheight:\n    System.Quantity { value:Round(wfh.generateWeightFromHeight(&quot;patientsex&quot;,(convert existingheight to 'cm').value * ( 1.0 as System.Decimal ), zscorefrommuac),2), unit: 'kg'}\n\ndefine weightfromage:\n    System.Quantity { value:Round(wfa.generateWeightFromAge(&quot;patientsex&quot;,AgeInDays() * ( 1.0 as System.Decimal ), zscorefrommuac),2), unit: 'kg'}\n/*\n(convert Base.HasObs(&quot;Weight&quot;) to 'Kg') does not work, so let's assume the weight is in Kg\n*/\ndefine &quot;WAZ&quot;:\n    if existingweight is not null then\n         wfa.generateZScoreWeightForAge(&quot;patientsex&quot;, AgeInDays() * ( 1.0 as System.Decimal ) ,  (convert existingweight to 'kg').value * ( 1.0 as System.Decimal ))\n    else if existingmuac is not null then\n        zscorefrommuac\n    else if existingvisual then\n        zscorefromvisual\n    else null\n\n</code></pre></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir//Library/emcarezscore"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:value [ fhir:v "EmCareZScore" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "emcarezscore"] ; # 
+  fhir:title [ fhir:v "EmCare.Z.Score"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/ValueSet/library-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "logic-library" ]
+     ] )
+  ] ; # 
+  fhir:date [ fhir:v "2023-04-03T14:56:37+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "World Health Organization (WHO)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:relatedArtifact ( [
+     fhir:type [ fhir:v "depends-on" ] ;
+     fhir:resource [
+       fhir:v "http://fhir.org/guides/who/anc-cds/Library/FHIRHelpers"^^xsd:anyURI ;
+       fhir:link <http://fhir.org/guides/who/anc-cds/Library/FHIRHelpers>
+     ]
+  ] [
+     fhir:type [ fhir:v "depends-on" ] ;
+     fhir:resource [
+       fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcarebase"^^xsd:anyURI ;
+       fhir:link <https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcarebase>
+     ]
+  ] [
+     fhir:type [ fhir:v "depends-on" ] ;
+     fhir:resource [
+       fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/weightforage"^^xsd:anyURI ;
+       fhir:link <https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/weightforage>
+     ]
+  ] [
+     fhir:type [ fhir:v "depends-on" ] ;
+     fhir:resource [
+       fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/anthrobase"^^xsd:anyURI ;
+       fhir:link <https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/anthrobase>
+     ]
+  ] [
+     fhir:type [ fhir:v "depends-on" ] ;
+     fhir:resource [
+       fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/weightforlength"^^xsd:anyURI ;
+       fhir:link <https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/weightforlength>
+     ]
+  ] [
+     fhir:type [ fhir:v "depends-on" ] ;
+     fhir:resource [
+       fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/weightforheight"^^xsd:anyURI ;
+       fhir:link <https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/weightforheight>
+     ]
+  ] ) ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "encounter" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:type [ fhir:v "Encounter" ]
+  ] [
+     fhir:name [ fhir:v "pastweight" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "decimal" ]
+  ] [
+     fhir:name [ fhir:v "patientsex" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "string" ]
+  ] [
+     fhir:name [ fhir:v "ageatpastweight" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "integer" ]
+  ] [
+     fhir:name [ fhir:v "pastweightzscore" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "decimal" ]
+  ] [
+     fhir:name [ fhir:v "pastweightactualised" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "decimal" ]
+  ] [
+     fhir:name [ fhir:v "WAZ" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "decimal" ]
+  ] ) ; # 
+  fhir:dataRequirement ( [
+     fhir:type [ fhir:v "Patient" ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/Patient"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/Patient>
+     ] )
+  ] [
+     fhir:type [ fhir:v "Encounter" ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/Encounter"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/Encounter>
+     ] )
+  ] [
+     fhir:type [ fhir:v "Observation" ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/Observation"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/Observation>
+     ] ) ;
+     fhir:mustSupport ( [ fhir:v "code" ] [ fhir:v "encounter.reference" ] [ fhir:v "encounter" ] [ fhir:v "value" ] [ fhir:v "status" ] ) ;
+     fhir:codeFilter ( [
+       fhir:path [ fhir:v "code" ] ;
+       fhir:code ( [
+         fhir:code [ fhir:v "EmCare.B6.DE06" ]
+       ] )
+     ] )
+  ] ) ; # 
+  fhir:content ( [
+     fhir:id [ fhir:v "ig-loader-emcarezscore.cql" ] ;
+     fhir:contentType [ fhir:v "text/cql" ] ;
+     fhir:data [ fhir:v "LyoKQGF1dGhvcjogUGF0cmljayBEZWxjcm9peApAZGVzY3JpcHRpb246IFRoaXMgbGlicmFyeSBpcyBwYXJ0IG9mIHRoZSBwcm9qZWN0IEVtQ2FyZQoqLwpsaWJyYXJ5IGVtY2FyZXpzY29yZSB2ZXJzaW9uICcxLjAuMS5yYzEyLmJ1aWxkLjMyOScKdXNpbmcgRkhJUiB2ZXJzaW9uICc0LjAuMScKaW5jbHVkZSBGSElSSGVscGVycyB2ZXJzaW9uICc0LjAuMScgY2FsbGVkIEZISVJIZWxwZXJzIAppbmNsdWRlIGVtY2FyZWJhc2UgdmVyc2lvbiAnMS4wLjEucmMxMi5idWlsZC4zMjknIGNhbGxlZCBCYXNlCmluY2x1ZGUgV2VpZ2h0Rm9yQWdlIHZlcnNpb24gJzEuMC4wJyBjYWxsZWQgd2ZhCmluY2x1ZGUgV2VpZ2h0Rm9yTGVuZ3RoIHZlcnNpb24gJzEuMC4wJyBjYWxsZWQgd2ZsCmluY2x1ZGUgV2VpZ2h0Rm9ySGVpZ2h0IHZlcnNpb24gJzEuMC4wJyBjYWxsZWQgd2ZoCgpjb2Rlc3lzdGVtICJFbUNhcmUiIDogJ2h0dHBzOi8vZmhpci5kay5zd2lzc3RwaC1taXMuY2gvbWF0Y2hib3gvZmhpci9Db2RlU3lzdGVtL2VtY2FyZS1jdXN0b20tY29kZXMnCgpjb2RlICJXZWlnaHQiOiAnRW1DYXJlLkI2LkRFMDYnIGZyb20gIkVtQ2FyZSIgZGlzcGxheSAnV2VpZ2h0Jwpjb2RlICJFc3RpbWF0ZWQgV2VpZ2h0IjogJ0VtQ2FyZS5CNi5ERTA4JyBmcm9tICJFbUNhcmUiIGRpc3BsYXkgJ0VzdGltYXRlZCBXZWlnaHQnCmNvZGUgIk1VQUMiOiAnRW1DYXJlLkI2LkRFMTcnIGZyb20gIkVtQ2FyZSIgZGlzcGxheSAnTVVBQycKY29kZSAiTGVuZ3RoIjogJ0VtQ2FyZS5CNi5ERTEyJyBmcm9tICJFbUNhcmUiIGRpc3BsYXkgJ0xlbmd0aCcKY29kZSAiSGVpZ2h0IjogJ0VtQ2FyZS5CNi5ERTA5JyBmcm9tICJFbUNhcmUiIGRpc3BsYXkgJ0hlaWdodCcKY29kZSAiVmlzdWFsbHkgYXNzZXNzIjogJ0VtQ2FyZS5CNi5ERTE4JyBmcm9tICJFbUNhcmUiIGRpc3BsYXkgJ1Zpc3VhbGx5IGFzc2VzcycKY29kZSAiVW5kZXJ3ZWlnaHQiOiAnRW1DYXJlLkI2LkRFMjAnIGZyb20gIkVtQ2FyZSIgZGlzcGxheSAnVW5kZXJ3ZWlnaHQnIApjb2RlICJTZXZlcmVseSBVbmRlcndlaWdodCI6ICdFbUNhcmUuQjYuREUyMScgZnJvbSAiRW1DYXJlIiBkaXNwbGF5ICdTZXZlcmVseSBVbmRlcndlaWdodCcgCgpwYXJhbWV0ZXIgImVuY291bnRlcmlkIiBTdHJpbmcKCmNvbnRleHQgUGF0aWVudAoKCgoKCi8qIHBhc3R3ZWlnaHQgOiBQcmV2aW91cyBXZWlnaHQqLwpkZWZpbmUgInBhc3R3ZWlnaHRvYnMiOgogICAgaWYgQWdlSW5Nb250aHMoKTwgNCBhbmQgQmFzZS5HZXRIaXN0b3JpY09ic2VydmF0aW9uKCJXZWlnaHQiLCA2MykgaXMgbm90IG51bGwgdGhlbgogICAgICBCYXNlLkdldEhpc3RvcmljT2JzZXJ2YXRpb24oIldlaWdodCIsIDYzKSAgYXMgRkhJUi5PYnNlcnZhdGlvbgogICAgZWxzZSAgaWYgQWdlSW5Nb250aHMoKTwgNiBhbmQgQmFzZS5HZXRIaXN0b3JpY09ic2VydmF0aW9uKCJXZWlnaHQiLCA5NCkgICBpcyBub3QgbnVsbCB0aGVuCiAgICAgIEJhc2UuR2V0SGlzdG9yaWNPYnNlcnZhdGlvbigiV2VpZ2h0IiwgOTQpICBhcyAgRkhJUi5PYnNlcnZhdGlvbgogICAgZWxzZSBpZiBBZ2VJbk1vbnRocygpPCA2IGFuZCBCYXNlLkdldEhpc3RvcmljT2JzZXJ2YXRpb24oIldlaWdodCIsIDEyNikgICBpcyBub3QgbnVsbCB0aGVuCiAgICAgICBCYXNlLkdldEhpc3RvcmljT2JzZXJ2YXRpb24oIldlaWdodCIsIDEyNikgIGFzIEZISVIuT2JzZXJ2YXRpb24KICAgIGVsc2UgaWYgQmFzZS5HZXRIaXN0b3JpY09ic2VydmF0aW9uKCJXZWlnaHQiLCAyMDEpICBpcyBub3QgbnVsbCB0aGVuCiAgICAgICBCYXNlLkdldEhpc3RvcmljT2JzZXJ2YXRpb24oIldlaWdodCIsIDIwMSkgIGFzIEZISVIuT2JzZXJ2YXRpb24KICAgIGVsc2UKICAgICAgbnVsbAoKZGVmaW5lICJwYXN0d2VpZ2h0IjoKICAgIGlmICJwYXN0d2VpZ2h0b2JzIiBpcyBub3QgbnVsbCB0aGVuCiAgICAgICJwYXN0d2VpZ2h0b2JzIi52YWx1ZQogICAgZWxzZQogICAgICBudWxsCgoKLyogcGF0aWVudHNleCA6IFBhdGllbnQgc2V4Ki8KZGVmaW5lICJwYXRpZW50c2V4IjoKICAgIGlmIFBhdGllbnQuZ2VuZGVyID0gJ2ZlbWFsZScgdGhlbiAnZmVtYWxlJyBlbHNlICdtYWxlJwoKLyogYWdlYXRwYXN0d2VpZ2h0IDogQWdlIGF0IFByZXZpb3VzIFdlaWdodCovCmRlZmluZSAiYWdlYXRwYXN0d2VpZ2h0IjoKICAgIGlmICJwYXN0d2VpZ2h0IiBpcyBub3QgbnVsbCAgdGhlbgogICAgICAoZGlmZmVyZW5jZSBpbiBkYXlzIGJldHdlZW4gUGF0aWVudC5iaXJ0aERhdGUgYW5kIFRvRGF0ZSgicGFzdHdlaWdodG9icyIuaXNzdWVkKSApICogKCAxLjAgYXMgU3lzdGVtLkRlY2ltYWwgKQogICAgZWxzZQogICAgIG51bGwKCi8qIHBhc3R3ZWlnaHR6c2NvcmUgOiBaLVNjb3JlIGF0IFByZXZpb3VzIFdlaWdodCovCmRlZmluZSAicGFzdHdlaWdodHpzY29yZSI6CiAgICBpZiAicGFzdHdlaWdodCIgaXMgbm90IG51bGwgIHRoZW4KICAgICAgd2ZhLmdlbmVyYXRlWlNjb3JlV2VpZ2h0Rm9yQWdlKCJwYXRpZW50c2V4IiwgImFnZWF0cGFzdHdlaWdodCIgLCAoKGNvbnZlcnQgInBhc3R3ZWlnaHQiIHRvICdrZycpLnZhbHVlICogKCAxLjAgYXMgU3lzdGVtLkRlY2ltYWwpKSkKICAgIGVsc2UKICAgICAgbnVsbAoKLyogcGFzdHdlaWdodGFjdHVhbGlzZWQgOiBXZWlnaHQgZnJvbSAgYXQgUHJldmlvdXMgV2VpZ2h0Ki8KZGVmaW5lICJwYXN0d2VpZ2h0YWN0dWFsaXNlZCI6CiAgICBpZiAicGFzdHdlaWdodHpzY29yZSIgaXMgbm90IG51bGwgdGhlbgogICAgICBTeXN0ZW0uUXVhbnRpdHkgeyB2YWx1ZTogUm91bmQod2ZhLmdlbmVyYXRlV2VpZ2h0RnJvbUFnZSgicGF0aWVudHNleCIsQWdlSW5EYXlzKCkgKiAoIDEuMCBhcyBTeXN0ZW0uRGVjaW1hbCApLCAgInBhc3R3ZWlnaHR6c2NvcmUiICksMiksIHVuaXQ6ICdrZyd9IAogICAgZWxzZSAKICAgICAgIG51bGwKCmRlZmluZSBleGlzdGluZ3dlaWdodDoKICBCYXNlLkdldE9ic1ZhbHVlKCJXZWlnaHQiKQoKZGVmaW5lIGV4aXN0aW5nZXN0aW1uYXRlZHdlaWdodDoKICBpZiBleGlzdGluZ3dlaWdodCBpcyBudWxsIHRoZW4gIAogICAgQmFzZS5HZXRPYnNWYWx1ZSgiRXN0aW1hdGVkIFdlaWdodCIpCiAgZWxzZSAKICAgIG51bGwKCmRlZmluZSBleGlzdGluZ2hlaWdodDoKICBCYXNlLkdldE9ic1ZhbHVlKCJIZWlnaHQiKQoKZGVmaW5lIGV4aXN0aW5nbGVuZ3RoOgogIEJhc2UuR2V0T2JzVmFsdWUoIkxlbmd0aCIpCgpkZWZpbmUgZXhpc3Rpbmd2aXN1YWw6CiAgQmFzZS5HZXRPYnNWYWx1ZSgiVmlzdWFsbHkgYXNzZXNzIikKCmRlZmluZSBleGlzdGluZ211YWM6CiAgQmFzZS5HZXRPYnNWYWx1ZSgiTVVBQyIpCgoKCgpkZWZpbmUgenNjb3JlZnJvbW11YWM6CiAgaWYgZXhpc3RpbmdtdWFjIGlzIG51bGwgdGhlbiAwLjAKICBlbHNlIGlmIGV4aXN0aW5nbXVhYyA8IDExNSAnbW5tJyB0aGVuIC0zLjAKICBlbHNlIGlmIGV4aXN0aW5nbXVhYyA8IDEyNSAnbW5tJyB0aGVuIC0yLjAKICBlbHNlIDAuMAoKZGVmaW5lIGVzdGltYXRlZHdlaWdodDoKICBjYXNlICAKICB3aGVuIGV4aXN0aW5nd2VpZ2h0IGlzIG5vdCBudWxsIHRoZW4gbnVsbAogIHdoZW4gZXhpc3Rpbmdlc3RpbW5hdGVkd2VpZ2h0IGlzIG5vdCBudWxsIHRoZW4gZXhpc3Rpbmdlc3RpbW5hdGVkd2VpZ2h0CiAgd2hlbiBwYXN0d2VpZ2h0YWN0dWFsaXNlZCBpcyBub3QgbnVsbCB0aGVuIHBhc3R3ZWlnaHRhY3R1YWxpc2VkCiAgd2hlbiBBZ2VJbk1vbnRocygpPjI0IGFuZCBleGlzdGluZ2hlaWdodCB0aGVuIHdlaWdodGZyb21oZWlnaHQKICB3aGVuIEFnZUluTW9udGhzKCk8PTI0IGFuZCBleGlzdGluZ2xlbmd0aCB0aGVuIHdlaWdodGZyb21sZW5ndGgKICBlbHNlIHdlaWdodGZyb21hZ2UKICBlbmQKCmRlZmluZSB6c2NvcmVmcm9tdmlzdWFsOgogICAgaWYgZXhpc3Rpbmd2aXN1YWwgaXMgbm90IG51bGwgdGhlbgogICAgICBjYXNlICAKICAgICAgICB3aGVuIGV4aXN0aW5ndmlzdWFsIH4gIlNldmVyZWx5IFVuZGVyd2VpZ2h0IiB0aGVuIC0zLjAKICAgICAgICB3aGVuIGV4aXN0aW5ndmlzdWFsIH4gIlVuZGVyd2VpZ2h0IiB0aGVuIC0yLjAKICAgICAgICBlbHNlIDAuMAogICAgICBlbmQKICAgIGVsc2UgIG51bGwKCgpkZWZpbmUgd2VpZ2h0ZnJvbWxlbmd0aDoKICAgIFN5c3RlbS5RdWFudGl0eSB7IHZhbHVlOiBSb3VuZCh3ZmwuZ2VuZXJhdGVXZWlnaHRGcm9tTGVuZ3RoKCJwYXRpZW50c2V4IiwoY29udmVydCBleGlzdGluZ2xlbmd0aCB0byAnY20nKS52YWx1ZSAqICggMS4wIGFzIFN5c3RlbS5EZWNpbWFsICksIHpzY29yZWZyb21tdWFjKSwyKSwgdW5pdDogJ2tnJ30KCmRlZmluZSB3ZWlnaHRmcm9taGVpZ2h0OgogICAgU3lzdGVtLlF1YW50aXR5IHsgdmFsdWU6Um91bmQod2ZoLmdlbmVyYXRlV2VpZ2h0RnJvbUhlaWdodCgicGF0aWVudHNleCIsKGNvbnZlcnQgZXhpc3RpbmdoZWlnaHQgdG8gJ2NtJykudmFsdWUgKiAoIDEuMCBhcyBTeXN0ZW0uRGVjaW1hbCApLCB6c2NvcmVmcm9tbXVhYyksMiksIHVuaXQ6ICdrZyd9CgpkZWZpbmUgd2VpZ2h0ZnJvbWFnZToKICAgIFN5c3RlbS5RdWFudGl0eSB7IHZhbHVlOlJvdW5kKHdmYS5nZW5lcmF0ZVdlaWdodEZyb21BZ2UoInBhdGllbnRzZXgiLEFnZUluRGF5cygpICogKCAxLjAgYXMgU3lzdGVtLkRlY2ltYWwgKSwgenNjb3JlZnJvbW11YWMpLDIpLCB1bml0OiAna2cnfQovKgooY29udmVydCBCYXNlLkhhc09icygiV2VpZ2h0IikgdG8gJ0tnJykgZG9lcyBub3Qgd29yaywgc28gbGV0J3MgYXNzdW1lIHRoZSB3ZWlnaHQgaXMgaW4gS2cKKi8KZGVmaW5lICJXQVoiOgogICAgaWYgZXhpc3Rpbmd3ZWlnaHQgaXMgbm90IG51bGwgdGhlbgogICAgICAgICB3ZmEuZ2VuZXJhdGVaU2NvcmVXZWlnaHRGb3JBZ2UoInBhdGllbnRzZXgiLCBBZ2VJbkRheXMoKSAqICggMS4wIGFzIFN5c3RlbS5EZWNpbWFsICkgLCAgKGNvbnZlcnQgZXhpc3Rpbmd3ZWlnaHQgdG8gJ2tnJykudmFsdWUgKiAoIDEuMCBhcyBTeXN0ZW0uRGVjaW1hbCApKQogICAgZWxzZSBpZiBleGlzdGluZ211YWMgaXMgbm90IG51bGwgdGhlbgogICAgICAgIHpzY29yZWZyb21tdWFjCiAgICBlbHNlIGlmIGV4aXN0aW5ndmlzdWFsIHRoZW4KICAgICAgICB6c2NvcmVmcm9tdmlzdWFsCiAgICBlbHNlIG51bGwKCg=="^^xsd:base64Binary ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

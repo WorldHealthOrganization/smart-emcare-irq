@@ -1,0 +1,171 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/who/emcare/Library/emcarecombineddataelements> a fhir:Library ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "emcarecombineddataelements"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Parameters</h2><table class=\"grid\"><tr><td>child</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>age &gt;= 2 months to &lt;60 months</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>yi</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>age &gt;=28 days to 2 months</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>vyi</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>age &lt; 28 days</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>nb</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>nnb</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcare.b.g.de01</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>danger signs</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcare.b.g.de05</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>severe classification up to assessments and tests excluding severe dehydration</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-23-30</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-23-30b</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-29</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl1-30</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl1-23</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl2-18-03</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl2-18</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl2-01</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-24-32</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl2-19</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-24-32b</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl1-31</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl1-32</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>psbi other than temperature</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>psbi</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>psbi-2</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>yi severe classification other than severe dehydration</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>yi severe classification</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcare.b12s1.de01</td><td>out</td><td/><td/><td>boolean</td></tr></table><h2>Contents</h2></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcarecombineddataelements"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:value [ fhir:v "emcare.combineddataelements" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "emcarecombineddataelements"] ; # 
+  fhir:title [ fhir:v "EmCare.CombinedDataElements"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/ValueSet/library-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "logic-library" ]
+     ] )
+  ] ; # 
+  fhir:date [ fhir:v "2023-04-03T14:56:37+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "World Health Organization (WHO)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "child" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "age >= 2 months to <60 months" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "yi" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "age >=28 days to 2 months" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "vyi" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "age < 28 days" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "nb" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "nnb" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "emcare.b.g.de01" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "danger signs" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "emcare.b.g.de05" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "severe classification up to assessments and tests excluding severe dehydration" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl1-23-30" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl1-23-30b" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl1-29" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-i-cl1-30" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-i-cl1-23" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl2-18-03" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl2-18" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-i-cl2-01" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl1-24-32" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl2-19" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl1-24-32b" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-i-cl1-31" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-i-cl1-32" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "psbi other than temperature" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "psbi" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "psbi-2" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "yi severe classification other than severe dehydration" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "yi severe classification" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "emcare.b12s1.de01" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

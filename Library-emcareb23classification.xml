@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Library xmlns="http://hl7.org/fhir">
+  <id value="emcareb23classification"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Parameters</h2><table class="grid"><tr><td>dl-xxxx</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcare.b6.de06</td><td>out</td><td/><td/><td>Quantity</td></tr><tr><td>weight</td><td>out</td><td/><td/><td>Quantity</td></tr><tr><td>emcare.b6.de08-old</td><td>out</td><td/><td/><td>Quantity</td></tr><tr><td>profile weight</td><td>out</td><td/><td/><td>Quantity</td></tr><tr><td>emcare.b6.de08</td><td>out</td><td/><td/><td>Quantity</td></tr><tr><td>estimated weight</td><td>out</td><td/><td/><td>Quantity</td></tr><tr><td>dl-g-cl1-07</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>severe pneumonia or very severe disease</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcare.b23.de04</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>the client has severe pneumonia or very severe disease with low oxygen saturation (spo2 &lt; 90%)</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcare.b23.de05</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>the client has severe pneumonia or very severe disease with wheezing</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcare.b23.de08</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>measles in last 3 months</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-14</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-19</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-23-30</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-24-32</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-30</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-31</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-32</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-33</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl1-01</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl1-05</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl1-06</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl1-07</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl1-09</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-73</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-74-76</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-74</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-75</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-76</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl1-11-12</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl1-11</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl1-12</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcare.b23.de32a</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-79</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-34</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl1-03</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcare.b23.de26a</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl1-26</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl1-16-66</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl1-16-67a</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-67a</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl1-16-67</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-67</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-16</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl1-66</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-69-70</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-69</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-68-17</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-68</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl1-17</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-71</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-109</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-110</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-111</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-80</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-83</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcare.b23.de36</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-81</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-82</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-88</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-90</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcare.b23.de43a</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-91</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-93</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcare.b23.de46a</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcare.b23.de46</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-95</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcare.b23.de48</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcare.b23.de48a</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-98</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcare.b23.de50</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcare.b23.de50a</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-99</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcare.b23.de52a</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-100</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcare.b23.de53a</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-102</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcare.b23.de55</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-103</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-104</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcare.b23.de57a</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcare.b23.de57b</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcare.b23.de57c</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-105</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-106</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcare.b23.de60</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl1-108</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl1-28</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl1-33</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl1-34</td><td>out</td><td/><td/><td>boolean</td></tr></table><h2>Contents</h2></div>
+  </text>
+  <url value="https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb23classification"/>
+  <identifier>
+    <use value="official"/>
+    <value value="emcare.b23.classification"/>
+  </identifier>
+  <version value="0.1.0"/>
+  <name value="emcareb23classification"/>
+  <title value="EmCare.B23.Classification"/>
+  <status value="active"/>
+  <type>
+    <coding>
+      <system value="http://hl7.org/fhir/ValueSet/library-type"/>
+      <code value="logic-library"/>
+    </coding>
+  </type>
+  <date value="2023-04-03T14:56:37+00:00"/>
+  <publisher value="World Health Organization (WHO)"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.who.int"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <parameter>
+    <name value="dl-xxxx"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="emcare.b6.de06"/>
+    <use value="out"/>
+    <type value="Quantity"/>
+  </parameter>
+  <parameter>
+    <name value="weight"/>
+    <use value="out"/>
+    <type value="Quantity"/>
+  </parameter>
+  <parameter>
+    <name value="emcare.b6.de08-old"/>
+    <use value="out"/>
+    <type value="Quantity"/>
+  </parameter>
+  <parameter>
+    <name value="profile weight"/>
+    <use value="out"/>
+    <type value="Quantity"/>
+  </parameter>
+  <parameter>
+    <name value="emcare.b6.de08"/>
+    <use value="out"/>
+    <type value="Quantity"/>
+  </parameter>
+  <parameter>
+    <name value="estimated weight"/>
+    <use value="out"/>
+    <type value="Quantity"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-07"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="severe pneumonia or very severe disease"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="emcare.b23.de04"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="the client has severe pneumonia or very severe disease with low oxygen saturation (spo2 &lt; 90%)"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="emcare.b23.de05"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="the client has severe pneumonia or very severe disease with wheezing"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="emcare.b23.de08"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="measles in last 3 months"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-14"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-19"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-23-30"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-24-32"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-30"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-31"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-32"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-33"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-i-cl1-01"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-i-cl1-05"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-i-cl1-06"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-i-cl1-07"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-i-cl1-09"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-73"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-74-76"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-74"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-75"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-76"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-i-cl1-11-12"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-i-cl1-11"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-i-cl1-12"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="emcare.b23.de32a"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-79"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-34"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-i-cl1-03"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="emcare.b23.de26a"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-i-cl1-26"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-i-cl1-16-66"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-i-cl1-16-67a"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-67a"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-i-cl1-16-67"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-67"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-16"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-i-cl1-66"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-69-70"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-69"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-68-17"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-68"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-i-cl1-17"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-71"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-109"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-110"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-111"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-80"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-83"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="emcare.b23.de36"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-81"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-82"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-88"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-90"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="emcare.b23.de43a"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-91"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-93"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="emcare.b23.de46a"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="emcare.b23.de46"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-95"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="emcare.b23.de48"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="emcare.b23.de48a"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-98"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="emcare.b23.de50"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="emcare.b23.de50a"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-99"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="emcare.b23.de52a"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-100"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="emcare.b23.de53a"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-102"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="emcare.b23.de55"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-103"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-104"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="emcare.b23.de57a"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="emcare.b23.de57b"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="emcare.b23.de57c"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-105"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-106"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="emcare.b23.de60"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-g-cl1-108"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-i-cl1-28"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-i-cl1-33"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="dl-i-cl1-34"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+</Library>

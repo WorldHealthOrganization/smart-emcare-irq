@@ -1,0 +1,1517 @@
+[
+  {
+    "id" : "consenttocontact",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/consenttocontact",
+    "version" : "0.1.0",
+    "name" : "consentToContact"
+  },
+  {
+    "id" : "educationlevel",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/educationlevel",
+    "version" : "0.1.0",
+    "name" : "educationLevel"
+  },
+  {
+    "id" : "estimatedage",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/estimatedage",
+    "version" : "0.1.0",
+    "name" : "estimatedAge"
+  },
+  {
+    "id" : "insurance",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/insurance",
+    "version" : "0.1.0",
+    "name" : "insurance"
+  },
+  {
+    "id" : "method",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/method",
+    "version" : "0.1.0",
+    "name" : "method"
+  },
+  {
+    "id" : "occupation",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/occupation",
+    "version" : "0.1.0",
+    "name" : "Occupation"
+  },
+  {
+    "id" : "reminder",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/reminder",
+    "version" : "0.1.0",
+    "name" : "reminder"
+  },
+  {
+    "id" : "requestertype",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/requestertype",
+    "version" : "0.1.0",
+    "name" : "requesterType"
+  },
+  {
+    "id" : "stage",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/stage",
+    "version" : "0.1.0",
+    "name" : "stage"
+  },
+  {
+    "id" : "who-core-allergyintolerance",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-allergyintolerance",
+    "version" : "0.1.0",
+    "name" : "WHO-Core AllergyIntolerance"
+  },
+  {
+    "id" : "who-core-allergyintolerance-drug-allergies",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-allergyintolerance-drug-allergies",
+    "version" : "0.1.0",
+    "name" : "WHO-Core AllergyIntolerance (Drug Allergies)"
+  },
+  {
+    "id" : "who-core-appointment-return-visit",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-appointment-return-visit",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Appointment (Return Visit)"
+  },
+  {
+    "id" : "who-core-appointment-visit",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-appointment-visit",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Appointment (Visit)"
+  },
+  {
+    "id" : "who-core-careplan-follow-up",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-careplan-follow-up",
+    "version" : "0.1.0",
+    "name" : "WHO-Core CarePlan (Follow-up)"
+  },
+  {
+    "id" : "who-core-careplan-intake-contraceptive-method",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-careplan-intake-contraceptive-method",
+    "version" : "0.1.0",
+    "name" : "WHO-Core CarePlan (Intake Contraceptive Method)"
+  },
+  {
+    "id" : "who-core-careplan-prior-contraceptive-methods",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-careplan-prior-contraceptive-methods",
+    "version" : "0.1.0",
+    "name" : "WHO-Core CarePlan (Prior Contraceptive Methods)"
+  },
+  {
+    "id" : "who-core-coverage-insurance",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-coverage-insurance",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Coverage (Insurance)"
+  },
+  {
+    "id" : "who-core-deviceusestatement-intake-contraceptive-method",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-deviceusestatement-intake-contraceptive-method",
+    "version" : "0.1.0",
+    "name" : "WHO-Core DeviceUseStatement (Intake Contraceptive Method)"
+  },
+  {
+    "id" : "who-core-deviceusestatement-prior-contraceptive-methods",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-deviceusestatement-prior-contraceptive-methods",
+    "version" : "0.1.0",
+    "name" : "WHO-Core DeviceUseStatement (Prior Contraceptive Methods)"
+  },
+  {
+    "id" : "who-core-medicationstatement-current-contraceptive-methods",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-medicationstatement-current-contraceptive-methods",
+    "version" : "0.1.0",
+    "name" : "WHO-Core MedicationStatement (Current Contraceptive Methods)"
+  },
+  {
+    "id" : "who-core-medicationstatement-current-medication",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-medicationstatement-current-medication",
+    "version" : "0.1.0",
+    "name" : "WHO-Core MedicationStatement (Current Medication)"
+  },
+  {
+    "id" : "who-core-medicationstatement-prior-contraceptive-methods",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-medicationstatement-prior-contraceptive-methods",
+    "version" : "0.1.0",
+    "name" : "WHO-Core MedicationStatement (Prior Contraceptive Methods)"
+  },
+  {
+    "id" : "who-core-observation-bmi",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-observation-bmi",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Observation (BMI) "
+  },
+  {
+    "id" : "who-core-observation-body-height",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-observation-body-height",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Observation (Body Height)"
+  },
+  {
+    "id" : "who-core-observation-body-weight",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-observation-body-weight",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Observation (Body Weight)"
+  },
+  {
+    "id" : "who-core-observation-breastfeeding",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-observation-breastfeeding",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Observation (Breastfeeding)"
+  },
+  {
+    "id" : "who-core-observation-clinical-observations",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-observation-clinical-observations",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Observation (Clinical Observations)"
+  },
+  {
+    "id" : "who-core-observation-date-of-delivery",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-observation-date-of-delivery",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Observation (Date of Delivery)"
+  },
+  {
+    "id" : "who-core-observation-days-since-unprotected-sex",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-observation-days-since-unprotected-sex",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Observation (Days since Unprotected Sex)"
+  },
+  {
+    "id" : "who-core-observation-gender-based-violence-risk-factors",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-observation-gender-based-violence-risk-factors",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Observation (Gender-based Violence Risk Factors)"
+  },
+  {
+    "id" : "who-core-observation-gender-based-violence-victim",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-observation-gender-based-violence-victim",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Observation (Gender-based Violence Victim)"
+  },
+  {
+    "id" : "who-core-observation-hiv-care-enrollment",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-observation-hiv-care-enrollment",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Observation (HIV Care Enrollment)"
+  },
+  {
+    "id" : "who-core-observation-hiv-stage",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-observation-hiv-stage",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Observation (HIV Stage)"
+  },
+  {
+    "id" : "who-core-observation-hiv-status",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-observation-hiv-status",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Observation (HIV Status)"
+  },
+  {
+    "id" : "who-core-observation-hiv-test",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-observation-hiv-test",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Observation (HIV Test)"
+  },
+  {
+    "id" : "who-core-observation-last-normal-menses",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-observation-last-normal-menses",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Observation (Last Normal Menses)"
+  },
+  {
+    "id" : "who-core-observation-miscarriage-or-abortion",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-observation-miscarriage-or-abortion",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Observation (Miscarriage or Abortion)"
+  },
+  {
+    "id" : "who-core-observation-never-used-contraception",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-observation-never-used-contraception",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Observation (Never used contraception)"
+  },
+  {
+    "id" : "who-core-observation-number-of-births",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-observation-number-of-births",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Observation (Number of births)"
+  },
+  {
+    "id" : "who-core-observation-number-of-pregnancies",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-observation-number-of-pregnancies",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Observation (Number of Pregnancies)"
+  },
+  {
+    "id" : "who-core-observation-postpartum",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-observation-postpartum",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Observation (Postpartum)"
+  },
+  {
+    "id" : "who-core-observation-pregnancy-status",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-observation-pregnancy-status",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Observation (Pregnancy Status)"
+  },
+  {
+    "id" : "who-core-observation-prep-status",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-observation-prep-status",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Observation (PrEP Status)"
+  },
+  {
+    "id" : "who-core-observation-reason-for-no-contraceptive-method-at-intake",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-observation-reason-for-no-contraceptive-method-at-intake",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Observation (Reason for no contraceptive method at intake)"
+  },
+  {
+    "id" : "who-core-observation-recent-sexual-history",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-observation-recent-sexual-history",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Observation (Recent Sexual History)"
+  },
+  {
+    "id" : "who-core-observation-sexual-history",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-observation-sexual-history",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Observation (Sexual History)"
+  },
+  {
+    "id" : "who-core-observation-sexually-active",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-observation-sexually-active",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Observation (Sexually Active)"
+  },
+  {
+    "id" : "who-core-observation-sti-risk-factors",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-observation-sti-risk-factors",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Observation (STI Risk Factors)"
+  },
+  {
+    "id" : "who-core-observation-temperature",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-observation-temperature",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Observation (Temperature)"
+  },
+  {
+    "id" : "who-core-observation-time-postpartum",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-observation-time-postpartum",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Observation (Time Postpartum)"
+  },
+  {
+    "id" : "who-core-patient",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-patient",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Patient"
+  },
+  {
+    "id" : "who-core-practitioner",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-practitioner",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Practitioner"
+  },
+  {
+    "id" : "who-core-procedure-intake-contraceptive-method",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-procedure-intake-contraceptive-method",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Procedure (Intake Contraceptive Method)"
+  },
+  {
+    "id" : "who-core-procedure-prior-contraceptive-methods",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-procedure-prior-contraceptive-methods",
+    "version" : "0.1.0",
+    "name" : "WHO-Core Procedure (Prior Contraceptive Methods)"
+  },
+  {
+    "id" : "who-core-servicerequest-referral",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-core-servicerequest-referral",
+    "version" : "0.1.0",
+    "name" : "WHO-Core ServiceRequest (Referral)"
+  },
+  {
+    "id" : "who-encounter",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-encounter",
+    "version" : "0.1.0",
+    "name" : "WHOEncounter"
+  },
+  {
+    "id" : "who-patient",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.org/guides/who/core/StructureDefinition/who-patient",
+    "version" : "0.1.0",
+    "name" : "WHOPatient"
+  },
+  {
+    "id" : "careplanbirthcontrolmethods-values",
+    "type" : "ValueSet",
+    "url" : "http://fhir.org/guides/who/core/ValueSet/careplanbirthcontrolmethods-values",
+    "version" : "0.1.0",
+    "name" : "careplanbirthcontrolmethods-values"
+  },
+  {
+    "id" : "current-medications-values",
+    "type" : "ValueSet",
+    "url" : "http://fhir.org/guides/who/core/ValueSet/current-medications-values",
+    "version" : "0.1.0",
+    "name" : "current-medications-values"
+  },
+  {
+    "id" : "devicebirthcontrolmethods-values",
+    "type" : "ValueSet",
+    "url" : "http://fhir.org/guides/who/core/ValueSet/devicebirthcontrolmethods-values",
+    "version" : "0.1.0",
+    "name" : "devicebirthcontrolmethods-values"
+  },
+  {
+    "id" : "drug-allergies-values",
+    "type" : "ValueSet",
+    "url" : "http://fhir.org/guides/who/core/ValueSet/drug-allergies-values",
+    "version" : "0.1.0",
+    "name" : "drug-allergies-values"
+  },
+  {
+    "id" : "gender-values",
+    "type" : "ValueSet",
+    "url" : "http://fhir.org/guides/who/core/ValueSet/gender-values",
+    "version" : "0.1.0",
+    "name" : "gender-values"
+  },
+  {
+    "id" : "highest-level-of-education-achieved-values",
+    "type" : "ValueSet",
+    "url" : "http://fhir.org/guides/who/core/ValueSet/highest-level-of-education-achieved-values",
+    "version" : "0.1.0",
+    "name" : "highest-level-of-education-achieved-values"
+  },
+  {
+    "id" : "hiv-stage-values",
+    "type" : "ValueSet",
+    "url" : "http://fhir.org/guides/who/core/ValueSet/hiv-stage-values",
+    "version" : "0.1.0",
+    "name" : "hiv-stage-values"
+  },
+  {
+    "id" : "hiv-test-result-values",
+    "type" : "ValueSet",
+    "url" : "http://fhir.org/guides/who/core/ValueSet/hiv-test-result-values",
+    "version" : "0.1.0",
+    "name" : "hiv-test-result-values"
+  },
+  {
+    "id" : "marital-status-values",
+    "type" : "ValueSet",
+    "url" : "http://fhir.org/guides/who/core/ValueSet/marital-status-values",
+    "version" : "0.1.0",
+    "name" : "marital-status-values"
+  },
+  {
+    "id" : "medicationbirthcontrolmethods-values",
+    "type" : "ValueSet",
+    "url" : "http://fhir.org/guides/who/core/ValueSet/medicationbirthcontrolmethods-values",
+    "version" : "0.1.0",
+    "name" : "medicationbirthcontrolmethods-values"
+  },
+  {
+    "id" : "miscarriage-or-abortion-stage-of-pregnancy-values",
+    "type" : "ValueSet",
+    "url" : "http://fhir.org/guides/who/core/ValueSet/miscarriage-or-abortion-stage-of-pregnancy-values",
+    "version" : "0.1.0",
+    "name" : "miscarriage-or-abortion-stage-of-pregnancy-values"
+  },
+  {
+    "id" : "miscarriage-or-abortion-values",
+    "type" : "ValueSet",
+    "url" : "http://fhir.org/guides/who/core/ValueSet/miscarriage-or-abortion-values",
+    "version" : "0.1.0",
+    "name" : "miscarriage-or-abortion-values"
+  },
+  {
+    "id" : "nobirthcontrolmethod-values",
+    "type" : "ValueSet",
+    "url" : "http://fhir.org/guides/who/core/ValueSet/nobirthcontrolmethod-values",
+    "version" : "0.1.0",
+    "name" : "nobirthcontrolmethod-values"
+  },
+  {
+    "id" : "occupation-values",
+    "type" : "ValueSet",
+    "url" : "http://fhir.org/guides/who/core/ValueSet/occupation-values",
+    "version" : "0.1.0",
+    "name" : "occupation-values"
+  },
+  {
+    "id" : "payment-method-values",
+    "type" : "ValueSet",
+    "url" : "http://fhir.org/guides/who/core/ValueSet/payment-method-values",
+    "version" : "0.1.0",
+    "name" : "payment-method-values"
+  },
+  {
+    "id" : "pregnancystatus-values",
+    "type" : "ValueSet",
+    "url" : "http://fhir.org/guides/who/core/ValueSet/pregnancystatus-values",
+    "version" : "0.1.0",
+    "name" : "pregnancystatus-values"
+  },
+  {
+    "id" : "procedurebirthcontrolmethods-values",
+    "type" : "ValueSet",
+    "url" : "http://fhir.org/guides/who/core/ValueSet/procedurebirthcontrolmethods-values",
+    "version" : "0.1.0",
+    "name" : "procedurebirthcontrolmethods-values"
+  },
+  {
+    "id" : "reason-for-referral-values",
+    "type" : "ValueSet",
+    "url" : "http://fhir.org/guides/who/core/ValueSet/reason-for-referral-values",
+    "version" : "0.1.0",
+    "name" : "reason-for-referral-values"
+  },
+  {
+    "id" : "referred-by-values",
+    "type" : "ValueSet",
+    "url" : "http://fhir.org/guides/who/core/ValueSet/referred-by-values",
+    "version" : "0.1.0",
+    "name" : "referred-by-values"
+  },
+  {
+    "id" : "sti-risk-assessment-factors-values",
+    "type" : "ValueSet",
+    "url" : "http://fhir.org/guides/who/core/ValueSet/sti-risk-assessment-factors-values",
+    "version" : "0.1.0",
+    "name" : "sti-risk-assessment-factors-values"
+  },
+  {
+    "id" : "visit-type-values",
+    "type" : "ValueSet",
+    "url" : "http://fhir.org/guides/who/core/ValueSet/visit-type-values",
+    "version" : "0.1.0",
+    "name" : "visit-type-values"
+  },
+  {
+    "id" : "who.fhir.emc-cds",
+    "type" : "ImplementationGuide",
+    "url" : "http://fhir.org/guides/who/emcare/ImplementationGuide/who.fhir.emc-cds",
+    "version" : "0.1.0",
+    "name" : "EMC-CDS"
+  },
+  {
+    "id" : "extended-content-codes",
+    "type" : "CodeSystem",
+    "url" : "http://who.int/cg/CodeSystem/extended-content-codes",
+    "version" : "0.1.0",
+    "name" : "extended-content_codes"
+  },
+  {
+    "id" : "emcarebase",
+    "type" : "Library",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir//Library/emcarebase",
+    "version" : "0.1.0",
+    "name" : "emcarebase"
+  },
+  {
+    "id" : "emcarezscore",
+    "type" : "Library",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir//Library/emcarezscore",
+    "version" : "0.1.0",
+    "name" : "emcarezscore"
+  },
+  {
+    "id" : "emcare.b10-14.symptoms.2m.p",
+    "type" : "ActivityDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b10-14.symptoms.2m.p",
+    "version" : "0.1.0"
+  },
+  {
+    "id" : "emcare.b10-16.signs.2m.p",
+    "type" : "ActivityDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b10-16.signs.2m.p",
+    "version" : "0.1.0"
+  },
+  {
+    "id" : "emcare.b18-21.signs.2m.m",
+    "type" : "ActivityDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b18-21.signs.2m.m",
+    "version" : "0.1.0"
+  },
+  {
+    "id" : "emcare.b18-21.symptoms.2m.m",
+    "type" : "ActivityDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b18-21.symptoms.2m.m",
+    "version" : "0.1.0"
+  },
+  {
+    "id" : "emcare.b22.assessmentstests",
+    "type" : "ActivityDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b22.assessmentstests",
+    "version" : "0.1.0"
+  },
+  {
+    "id" : "emcare.b22.breastfeeding",
+    "type" : "ActivityDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b22.breastfeeding",
+    "version" : "0.1.0"
+  },
+  {
+    "id" : "emcare.b22.bronchodilatortest",
+    "type" : "ActivityDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b22.bronchodilatortest",
+    "version" : "0.1.0"
+  },
+  {
+    "id" : "emcare.b22.fluidtest",
+    "type" : "ActivityDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b22.fluidtest",
+    "version" : "0.1.0"
+  },
+  {
+    "id" : "emcare.b22.hemoglobin",
+    "type" : "ActivityDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b22.hemoglobin",
+    "version" : "0.1.0"
+  },
+  {
+    "id" : "emcare.b22.respiratoryrate",
+    "type" : "ActivityDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b22.respiratoryrate",
+    "version" : "0.1.0"
+  },
+  {
+    "id" : "emcare.b22.secondtemperature",
+    "type" : "ActivityDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b22.secondtemperature",
+    "version" : "0.1.0"
+  },
+  {
+    "id" : "emcare.b23.classification",
+    "type" : "ActivityDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b23.classification",
+    "version" : "0.1.0"
+  },
+  {
+    "id" : "emcare.b23.classification.m",
+    "type" : "ActivityDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b23.classification.m",
+    "version" : "0.1.0"
+  },
+  {
+    "id" : "emcare.b6.measurements",
+    "type" : "ActivityDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b6.measurements",
+    "version" : "0.1.0"
+  },
+  {
+    "id" : "emcare.b7.lti-dangersigns",
+    "type" : "ActivityDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b7.lti-dangersigns",
+    "version" : "0.1.0"
+  },
+  {
+    "id" : "emcare.treatment",
+    "type" : "ActivityDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.treatment",
+    "version" : "0.1.0"
+  },
+  {
+    "id" : "emcarea.registration.p",
+    "type" : "ActivityDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcarea.registration.p",
+    "version" : "0.1.0"
+  },
+  {
+    "id" : "emcareb.registration.e",
+    "type" : "ActivityDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcareb.registration.e",
+    "version" : "0.1.0"
+  },
+  {
+    "id" : "emcare-custom-codes",
+    "type" : "CodeSystem",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+    "version" : "0.1.0",
+    "name" : "emcare"
+  },
+  {
+    "id" : "emcareb1014symptoms2mp",
+    "type" : "Library",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb1014symptoms2mp",
+    "version" : "0.1.0",
+    "name" : "emcareb1014symptoms2mp"
+  },
+  {
+    "id" : "emcareb1016signs2mp",
+    "type" : "Library",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb1016signs2mp",
+    "version" : "0.1.0",
+    "name" : "emcareb1016signs2mp"
+  },
+  {
+    "id" : "emcareb1821signs2mm",
+    "type" : "Library",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb1821signs2mm",
+    "version" : "0.1.0",
+    "name" : "emcareb1821signs2mm"
+  },
+  {
+    "id" : "emcareb1821symptoms2mm",
+    "type" : "Library",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb1821symptoms2mm",
+    "version" : "0.1.0",
+    "name" : "emcareb1821symptoms2mm"
+  },
+  {
+    "id" : "emcareb22assessmentstests",
+    "type" : "Library",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb22assessmentstests",
+    "version" : "0.1.0",
+    "name" : "emcareb22assessmentstests"
+  },
+  {
+    "id" : "emcareb22breastfeeding",
+    "type" : "Library",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb22breastfeeding",
+    "version" : "0.1.0",
+    "name" : "emcareb22breastfeeding"
+  },
+  {
+    "id" : "emcareb22fluidtest",
+    "type" : "Library",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb22fluidtest",
+    "version" : "0.1.0",
+    "name" : "emcareb22fluidtest"
+  },
+  {
+    "id" : "emcareb22respiratoryrate",
+    "type" : "Library",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb22respiratoryrate",
+    "version" : "0.1.0",
+    "name" : "emcareb22respiratoryrate"
+  },
+  {
+    "id" : "emcareb22secondtemperature",
+    "type" : "Library",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb22secondtemperature",
+    "version" : "0.1.0",
+    "name" : "emcareb22secondtemperature"
+  },
+  {
+    "id" : "emcareb23classification",
+    "type" : "Library",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb23classification",
+    "version" : "0.1.0",
+    "name" : "emcareb23classification"
+  },
+  {
+    "id" : "emcareb23classificationm",
+    "type" : "Library",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb23classificationm",
+    "version" : "0.1.0",
+    "name" : "emcareb23classificationm"
+  },
+  {
+    "id" : "emcareb6measurements",
+    "type" : "Library",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb6measurements",
+    "version" : "0.1.0",
+    "name" : "emcareb6measurements"
+  },
+  {
+    "id" : "emcareb7ltidangersigns",
+    "type" : "Library",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb7ltidangersigns",
+    "version" : "0.1.0",
+    "name" : "emcareb7ltidangersigns"
+  },
+  {
+    "id" : "emcarecombineddataelements",
+    "type" : "Library",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcarecombineddataelements",
+    "version" : "0.1.0",
+    "name" : "emcarecombineddataelements"
+  },
+  {
+    "id" : "emcarecondition",
+    "type" : "Library",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcarecondition",
+    "version" : "0.1.0",
+    "name" : "emcarecondition"
+  },
+  {
+    "id" : "emcaredt01",
+    "type" : "Library",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcaredt01",
+    "version" : "0.1.0",
+    "name" : "emcaredt01"
+  },
+  {
+    "id" : "emcareobservation",
+    "type" : "Library",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareobservation",
+    "version" : "0.1.0",
+    "name" : "emcareobservation"
+  },
+  {
+    "id" : "emcareobservationvalueset",
+    "type" : "Library",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareobservationvalueset",
+    "version" : "0.1.0",
+    "name" : "emcareobservationValueset"
+  },
+  {
+    "id" : "emcaretreatment",
+    "type" : "Library",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcaretreatment",
+    "version" : "0.1.0",
+    "name" : "emcaretreatment"
+  },
+  {
+    "id" : "emcarevalueset",
+    "type" : "Library",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcarevalueset",
+    "version" : "0.1.0",
+    "name" : "emcarevalueset"
+  },
+  {
+    "id" : "emcaredt01",
+    "type" : "PlanDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/PlanDefinition/emcaredt01",
+    "version" : "0.1.0",
+    "name" : "emcaredt01"
+  },
+  {
+    "id" : "emcare.b10-14.symptoms.2m.p",
+    "type" : "Questionnaire",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b10-14.symptoms.2m.p",
+    "version" : "0.1.0",
+    "name" : "EmCare.B10-14.Symptoms.2m.p"
+  },
+  {
+    "id" : "emcare.b10-16.signs.2m.p",
+    "type" : "Questionnaire",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b10-16.signs.2m.p",
+    "version" : "0.1.0",
+    "name" : "EmCare.B10-16.Signs.2m.p"
+  },
+  {
+    "id" : "emcare.b18-21.signs.2m.m",
+    "type" : "Questionnaire",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b18-21.signs.2m.m",
+    "version" : "0.1.0",
+    "name" : "EmCare.B18-21.Signs.2m.m"
+  },
+  {
+    "id" : "emcare.b18-21.symptoms.2m.m",
+    "type" : "Questionnaire",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b18-21.symptoms.2m.m",
+    "version" : "0.1.0",
+    "name" : "EmCare.B18-21.Symptoms.2m.m"
+  },
+  {
+    "id" : "emcare.b22.assessmentstests",
+    "type" : "Questionnaire",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b22.assessmentstests",
+    "version" : "0.1.0",
+    "name" : "EmCare.B22.AssessmentsTests"
+  },
+  {
+    "id" : "emcare.b22.breastfeeding",
+    "type" : "Questionnaire",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b22.breastfeeding",
+    "version" : "0.1.0",
+    "name" : "EmCare.B22.BreastFeeding"
+  },
+  {
+    "id" : "emcare.b22.bronchodilatortest",
+    "type" : "Questionnaire",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b22.bronchodilatortest",
+    "version" : "0.1.0",
+    "name" : "EmCare.B22.BronchodilatorTest"
+  },
+  {
+    "id" : "emcare.b22.fluidtest",
+    "type" : "Questionnaire",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b22.fluidtest",
+    "version" : "0.1.0",
+    "name" : "EmCare.B22.FluidTest"
+  },
+  {
+    "id" : "emcare.b22.hemoglobin",
+    "type" : "Questionnaire",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b22.hemoglobin",
+    "version" : "0.1.0",
+    "name" : "EmCare.B22.Hemoglobin"
+  },
+  {
+    "id" : "emcare.b22.respiratoryrate",
+    "type" : "Questionnaire",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b22.respiratoryrate",
+    "version" : "0.1.0",
+    "name" : "EmCare.B22.RespiratoryRate"
+  },
+  {
+    "id" : "emcare.b22.secondtemperature",
+    "type" : "Questionnaire",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b22.secondtemperature",
+    "version" : "0.1.0",
+    "name" : "EmCare.B22.SecondTemperature"
+  },
+  {
+    "id" : "emcare.b23.classification",
+    "type" : "Questionnaire",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b23.classification",
+    "version" : "0.1.0",
+    "name" : "EmCare.B23.Classification"
+  },
+  {
+    "id" : "emcare.b23.classification.m",
+    "type" : "Questionnaire",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b23.classification.m",
+    "version" : "0.1.0",
+    "name" : "EmCare.B23.Classification.m"
+  },
+  {
+    "id" : "emcare.b6.measurements",
+    "type" : "Questionnaire",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b6.measurements",
+    "version" : "0.1.0",
+    "name" : "EmCare.B6.Measurements"
+  },
+  {
+    "id" : "emcare.b7.lti-dangersigns",
+    "type" : "Questionnaire",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b7.lti-dangersigns",
+    "version" : "0.1.0",
+    "name" : "EmCare.B7.LTI-DangerSigns"
+  },
+  {
+    "id" : "emcare.treatment",
+    "type" : "Questionnaire",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.treatment",
+    "version" : "0.1.0",
+    "name" : "EmCare.Treatment"
+  },
+  {
+    "id" : "emcarea.registration.p",
+    "type" : "Questionnaire",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcarea.registration.p",
+    "version" : "0.1.0",
+    "name" : "EmCareA.Registration.P"
+  },
+  {
+    "id" : "emcareb.registration.e",
+    "type" : "Questionnaire",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcareb.registration.e",
+    "version" : "0.1.0",
+    "name" : "EmCareB.Registration.E"
+  },
+  {
+    "id" : "anonymous",
+    "type" : "StructureDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/anonymous",
+    "version" : "0.1.0",
+    "name" : "Anonymous"
+  },
+  {
+    "id" : "birthdateestimator",
+    "type" : "StructureDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/birthdateestimator",
+    "version" : "0.1.0",
+    "name" : "Birthday Estimator"
+  },
+  {
+    "id" : "birthdatetime",
+    "type" : "StructureDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/birthdatetime",
+    "version" : "0.1.0",
+    "name" : "DOB time Extension"
+  },
+  {
+    "id" : "birthtime",
+    "type" : "StructureDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/birthtime",
+    "version" : "0.1.0",
+    "name" : "Time Extension"
+  },
+  {
+    "id" : "emcare-condition",
+    "type" : "StructureDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcare-condition",
+    "version" : "0.1.0",
+    "name" : "EmCare Condition"
+  },
+  {
+    "id" : "emcare-observation",
+    "type" : "StructureDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcare-observation",
+    "version" : "0.1.0",
+    "name" : "EmCare Observation"
+  },
+  {
+    "id" : "emcare-patient",
+    "type" : "StructureDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcare-patient",
+    "version" : "0.1.0",
+    "name" : "EmCare Patient"
+  },
+  {
+    "id" : "fathervitalstatus",
+    "type" : "StructureDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/fathervitalstatus",
+    "version" : "0.1.0",
+    "name" : "Father Vital Status"
+  },
+  {
+    "id" : "mothervitalstatus",
+    "type" : "StructureDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/mothervitalstatus",
+    "version" : "0.1.0",
+    "name" : "Mother Vital Status"
+  },
+  {
+    "id" : "postcoordination",
+    "type" : "StructureDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/postcoordination",
+    "version" : "0.1.0",
+    "name" : "Post-coordination"
+  },
+  {
+    "id" : "primarycaregiver",
+    "type" : "StructureDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/primarycaregiver",
+    "version" : "0.1.0",
+    "name" : "Primary Care Giver"
+  },
+  {
+    "id" : "smsnotifications",
+    "type" : "StructureDefinition",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/smsnotifications",
+    "version" : "0.1.0",
+    "name" : "SMS Notifications"
+  },
+  {
+    "id" : "emcare.b10-14.symptoms.2m.p",
+    "type" : "StructureMap",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcare.b10-14.symptoms.2m.p",
+    "version" : "0.1.0",
+    "name" : "emcare.b10-14.symptoms.2m.p"
+  },
+  {
+    "id" : "emcare.b10-16.signs.2m.p",
+    "type" : "StructureMap",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcare.b10-16.signs.2m.p",
+    "version" : "0.1.0",
+    "name" : "emcare.b10-16.signs.2m.p"
+  },
+  {
+    "id" : "emcare.b18-21.signs.2m.m",
+    "type" : "StructureMap",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcare.b18-21.signs.2m.m",
+    "version" : "0.1.0",
+    "name" : "emcare.b18-21.signs.2m.m"
+  },
+  {
+    "id" : "emcare.b18-21.symptoms.2m.m",
+    "type" : "StructureMap",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcare.b18-21.symptoms.2m.m",
+    "version" : "0.1.0",
+    "name" : "emcare.b18-21.symptoms.2m.m"
+  },
+  {
+    "id" : "emcare.b22.assessmentstests",
+    "type" : "StructureMap",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcare.b22.assessmentstests",
+    "version" : "0.1.0",
+    "name" : "emcare.b22.assessmentstests"
+  },
+  {
+    "id" : "emcare.b22.breastfeeding",
+    "type" : "StructureMap",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcare.b22.breastfeeding",
+    "version" : "0.1.0",
+    "name" : "emcare.b22.breastfeeding"
+  },
+  {
+    "id" : "emcare.b22.bronchodilatortest",
+    "type" : "StructureMap",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcare.b22.bronchodilatortest",
+    "version" : "0.1.0",
+    "name" : "emcare.b22.bronchodilatortest"
+  },
+  {
+    "id" : "emcare.b22.fluidtest",
+    "type" : "StructureMap",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcare.b22.fluidtest",
+    "version" : "0.1.0",
+    "name" : "emcare.b22.fluidtest"
+  },
+  {
+    "id" : "emcare.b22.hemoglobin",
+    "type" : "StructureMap",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcare.b22.hemoglobin",
+    "version" : "0.1.0",
+    "name" : "emcare.b22.hemoglobin"
+  },
+  {
+    "id" : "emcare.b22.respiratoryrate",
+    "type" : "StructureMap",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcare.b22.respiratoryrate",
+    "version" : "0.1.0",
+    "name" : "emcare.b22.respiratoryrate"
+  },
+  {
+    "id" : "emcare.b22.secondtemperature",
+    "type" : "StructureMap",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcare.b22.secondtemperature",
+    "version" : "0.1.0",
+    "name" : "emcare.b22.secondtemperature"
+  },
+  {
+    "id" : "emcare.b23.classification",
+    "type" : "StructureMap",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcare.b23.classification",
+    "version" : "0.1.0",
+    "name" : "emcare.b23.classification"
+  },
+  {
+    "id" : "emcare.b23.classification.m",
+    "type" : "StructureMap",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcare.b23.classification.m",
+    "version" : "0.1.0",
+    "name" : "emcare.b23.classification.m"
+  },
+  {
+    "id" : "emcare.b6.measurements",
+    "type" : "StructureMap",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcare.b6.measurements",
+    "version" : "0.1.0",
+    "name" : "emcare.b6.measurements"
+  },
+  {
+    "id" : "emcare.b7.lti-dangersigns",
+    "type" : "StructureMap",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcare.b7.lti-dangersigns",
+    "version" : "0.1.0",
+    "name" : "emcare.b7.lti-dangersigns"
+  },
+  {
+    "id" : "emcare.treatment",
+    "type" : "StructureMap",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcare.treatment",
+    "version" : "0.1.0",
+    "name" : "emcare.treatment"
+  },
+  {
+    "id" : "emcarea.registration.p",
+    "type" : "StructureMap",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcarea.registration.p",
+    "version" : "0.1.0",
+    "name" : "emcarea.registration.p"
+  },
+  {
+    "id" : "emcareb.registration.e",
+    "type" : "StructureMap",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcareb.registration.e",
+    "version" : "0.1.0",
+    "name" : "emcareb.registration.e"
+  },
+  {
+    "id" : "abilitytoswallow",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/abilitytoswallow",
+    "version" : "0.1.0",
+    "name" : "valueset-abilitytoswallow"
+  },
+  {
+    "id" : "add-pb",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/add-pb",
+    "version" : "0.1.0",
+    "name" : "valueset-add-pb"
+  },
+  {
+    "id" : "agreedisagree",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/agreedisagree",
+    "version" : "0.1.0",
+    "name" : "valueset-agreedisagree"
+  },
+  {
+    "id" : "appetite-test",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/appetite-test",
+    "version" : "0.1.0",
+    "name" : "valueset-appetite-test"
+  },
+  {
+    "id" : "breastfeed-assessment",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/breastfeed-assessment",
+    "version" : "0.1.0",
+    "name" : "valueset-breastfeed-assessment"
+  },
+  {
+    "id" : "child-last-hiv-status",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/child-last-hiv-status",
+    "version" : "0.1.0",
+    "name" : "valueset-child-last-hiv-status"
+  },
+  {
+    "id" : "child-vaccination-status",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/child-vaccination-status",
+    "version" : "0.1.0",
+    "name" : "valueset-child-vaccination-status"
+  },
+  {
+    "id" : "child-vaccines",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/child-vaccines",
+    "version" : "0.1.0",
+    "name" : "valueset-child-vaccines"
+  },
+  {
+    "id" : "consultation-status",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/consultation-status",
+    "version" : "0.1.0",
+    "name" : "valueset-consultation-status"
+  },
+  {
+    "id" : "consultation-type",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/consultation-type",
+    "version" : "0.1.0",
+    "name" : "valueset-consultation-type"
+  },
+  {
+    "id" : "difficulty-feeding",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/difficulty-feeding",
+    "version" : "0.1.0",
+    "name" : "valueset-difficulty-feeding"
+  },
+  {
+    "id" : "dob-estimator",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/dob-estimator",
+    "version" : "0.1.0",
+    "name" : "valueset-dob-estimator"
+  },
+  {
+    "id" : "emcarecondition",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/emcarecondition",
+    "version" : "0.1.0",
+    "name" : "valueset-emcarecondition"
+  },
+  {
+    "id" : "emcareobservation",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/emcareobservation",
+    "version" : "0.1.0",
+    "name" : "valueset-emcareobservation"
+  },
+  {
+    "id" : "emcareobservationvalueset",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/emcareobservationvalueset",
+    "version" : "0.1.0",
+    "name" : "valueset-emcareobservationvalueset"
+  },
+  {
+    "id" : "feeding-problem",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/feeding-problem",
+    "version" : "0.1.0",
+    "name" : "valueset-feeding-problem"
+  },
+  {
+    "id" : "hiv-prevalence",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/hiv-prevalence",
+    "version" : "0.1.0",
+    "name" : "valueset-hiv-prevalence"
+  },
+  {
+    "id" : "hiv-status",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/hiv-status",
+    "version" : "0.1.0",
+    "name" : "valueset-hiv-status"
+  },
+  {
+    "id" : "inhaled-bronchodilator-trial",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/inhaled-bronchodilator-trial",
+    "version" : "0.1.0",
+    "name" : "valueset-inhaled-bronchodilator-trial"
+  },
+  {
+    "id" : "is-recorded",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/is-recorded",
+    "version" : "0.1.0",
+    "name" : "valueset-is-recorded"
+  },
+  {
+    "id" : "malaria-microscopy-species",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/malaria-microscopy-species",
+    "version" : "0.1.0",
+    "name" : "valueset-malaria-microscopy-species"
+  },
+  {
+    "id" : "milk-given",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/milk-given",
+    "version" : "0.1.0",
+    "name" : "valueset-milk-given"
+  },
+  {
+    "id" : "milk-preparation",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/milk-preparation",
+    "version" : "0.1.0",
+    "name" : "valueset-milk-preparation"
+  },
+  {
+    "id" : "more-than-14d",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/more-than-14d",
+    "version" : "0.1.0",
+    "name" : "valueset-more-than-14d"
+  },
+  {
+    "id" : "more-than-7d",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/more-than-7d",
+    "version" : "0.1.0",
+    "name" : "valueset-more-than-7d"
+  },
+  {
+    "id" : "movements",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/movements",
+    "version" : "0.1.0",
+    "name" : "valueset-movements"
+  },
+  {
+    "id" : "mucus-membrane-pallor",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/mucus-membrane-pallor",
+    "version" : "0.1.0",
+    "name" : "valueset-mucus-membrane-pallor"
+  },
+  {
+    "id" : "number-of-convulsions",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/number-of-convulsions",
+    "version" : "0.1.0",
+    "name" : "valueset-number-of-convulsions"
+  },
+  {
+    "id" : "oral-fluid-test",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/oral-fluid-test",
+    "version" : "0.1.0",
+    "name" : "valueset-oral-fluid-test"
+  },
+  {
+    "id" : "oral-sores",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/oral-sores",
+    "version" : "0.1.0",
+    "name" : "valueset-oral-sores"
+  },
+  {
+    "id" : "oxygen-saturation",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/oxygen-saturation",
+    "version" : "0.1.0",
+    "name" : "valueset-oxygen-saturation"
+  },
+  {
+    "id" : "palmar-pallor",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/palmar-pallor",
+    "version" : "0.1.0",
+    "name" : "valueset-palmar-pallor"
+  },
+  {
+    "id" : "reason-consultation",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/reason-consultation",
+    "version" : "0.1.0",
+    "name" : "valueset-reason-consultation"
+  },
+  {
+    "id" : "relatedperson",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/relatedperson",
+    "version" : "0.1.0",
+    "name" : "valueset-relatedperson"
+  },
+  {
+    "id" : "relationship-to-client",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/relationship-to-client",
+    "version" : "0.1.0",
+    "name" : "valueset-relationship-to-client"
+  },
+  {
+    "id" : "replacement-milk",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/replacement-milk",
+    "version" : "0.1.0",
+    "name" : "valueset-replacement-milk"
+  },
+  {
+    "id" : "sex-of-the-client",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/sex-of-the-client",
+    "version" : "0.1.0",
+    "name" : "valueset-sex-of-the-client"
+  },
+  {
+    "id" : "skin-pb",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/skin-pb",
+    "version" : "0.1.0",
+    "name" : "valueset-skin-pb"
+  },
+  {
+    "id" : "skin-pb-location",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/skin-pb-location",
+    "version" : "0.1.0",
+    "name" : "valueset-skin-pb-location"
+  },
+  {
+    "id" : "skin-pinch-abdomen",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/skin-pinch-abdomen",
+    "version" : "0.1.0",
+    "name" : "valueset-skin-pinch-abdomen"
+  },
+  {
+    "id" : "temperature-measurement",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/temperature-measurement",
+    "version" : "0.1.0",
+    "name" : "valueset-temperature-measurement"
+  },
+  {
+    "id" : "throatproblem",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/throatproblem",
+    "version" : "0.1.0",
+    "name" : "valueset-throatproblem"
+  },
+  {
+    "id" : "underweight",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/underweight",
+    "version" : "0.1.0",
+    "name" : "valueset-underweight"
+  },
+  {
+    "id" : "utensils-cleaned",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/utensils-cleaned",
+    "version" : "0.1.0",
+    "name" : "valueset-utensils-cleaned"
+  },
+  {
+    "id" : "visit-type",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/visit-type",
+    "version" : "0.1.0",
+    "name" : "valueset-visit-type"
+  },
+  {
+    "id" : "vital-status",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/vital-status",
+    "version" : "0.1.0",
+    "name" : "valueset-vital-status"
+  },
+  {
+    "id" : "weight-status",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/weight-status",
+    "version" : "0.1.0",
+    "name" : "valueset-weight-status"
+  },
+  {
+    "id" : "yesno",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/yesno",
+    "version" : "0.1.0",
+    "name" : "valueset-yesno"
+  },
+  {
+    "id" : "yesnox",
+    "type" : "ValueSet",
+    "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/yesnox",
+    "version" : "0.1.0",
+    "name" : "valueset-yesnox"
+  }
+]

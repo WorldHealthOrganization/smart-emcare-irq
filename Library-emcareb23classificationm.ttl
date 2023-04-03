@@ -1,0 +1,171 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/who/emcare/Library/emcareb23classificationm> a fhir:Library ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "emcareb23classificationm"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Parameters</h2><table class=\"grid\"><tr><td>ageindays</td><td>out</td><td/><td/><td>integer</td></tr><tr><td>ageinmonths</td><td>out</td><td/><td/><td>integer</td></tr><tr><td>measured temperature (second measurement)</td><td>out</td><td/><td/><td>Quantity</td></tr><tr><td>dl-g-cl2-04-08</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl2-04</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl2-06</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl2-07</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl2-08</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl2-05</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl2-10</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl2-11</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl2-12</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl2-26</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl2-13-14</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl2-13</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl2-13a</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl2-14</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl2-15-43</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl2-17</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl2-18</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl2-19</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl2-25</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl2-04-30</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl2-04-29</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl2-04</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl2-29</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl2-30</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl2-32</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl2-42</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-i-cl2-04-42</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>dl-g-cl2-50</td><td>out</td><td/><td/><td>boolean</td></tr></table><h2>Contents</h2></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb23classificationm"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:value [ fhir:v "emcare.b23.classification.m" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "emcareb23classificationm"] ; # 
+  fhir:title [ fhir:v "EmCare.B23.Classification.m"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/ValueSet/library-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "logic-library" ]
+     ] )
+  ] ; # 
+  fhir:date [ fhir:v "2023-04-03T14:56:37+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "World Health Organization (WHO)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "ageindays" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "integer" ]
+  ] [
+     fhir:name [ fhir:v "ageinmonths" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "integer" ]
+  ] [
+     fhir:name [ fhir:v "measured temperature (second measurement)" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "Quantity" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl2-04-08" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl2-04" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl2-06" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl2-07" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl2-08" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl2-05" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl2-10" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl2-11" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl2-12" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl2-26" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl2-13-14" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl2-13" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl2-13a" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl2-14" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl2-15-43" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl2-17" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl2-18" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl2-19" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl2-25" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-i-cl2-04-30" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-i-cl2-04-29" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-i-cl2-04" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl2-29" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl2-30" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl2-32" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl2-42" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-i-cl2-04-42" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "dl-g-cl2-50" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,1569 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/who/emcare/CodeSystem/emcare-custom-codes> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "emcare-custom-codes"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE01<a name=\"emcare-custom-codes-EmCare.46A.46DE01\"> </a></td><td>National Unique identification</td><td>Unique identifier provided or a universal ID, if used in the country</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE03<a name=\"emcare-custom-codes-EmCare.46A.46DE03\"> </a></td><td>Child's Identity unknown/prefer to remain anonymous</td><td>The client's identity is unknown or the client's prefers to remain anonymous</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE04<a name=\"emcare-custom-codes-EmCare.46A.46DE04\"> </a></td><td>First Name</td><td>Client's first name</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE05<a name=\"emcare-custom-codes-EmCare.46A.46DE05\"> </a></td><td>Middle Name</td><td>Client's middle name</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE06<a name=\"emcare-custom-codes-EmCare.46A.46DE06\"> </a></td><td>Last Name</td><td>Client's family name or last name</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE11<a name=\"emcare-custom-codes-EmCare.46A.46DE11\"> </a></td><td>Date of Birth not known</td><td>The client and/or Caregiver does not know the date of birth of the client</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE12<a name=\"emcare-custom-codes-EmCare.46A.46DE12\"> </a></td><td>Provide an estimated age or estimated date of birth</td><td>The client/Caregiver will provide an estimated age or estimated date of birth</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE15.1<a name=\"emcare-custom-codes-EmCare.46A.46DE15.461\"> </a></td><td>Estimated Date of Birth</td><td>Estimated Date of Birth of the Client</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE08<a name=\"emcare-custom-codes-EmCare.46A.46DE08\"> </a></td><td>Consolidated Date of Birth</td><td>Estimated Date of Birth of the Client</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE16<a name=\"emcare-custom-codes-EmCare.46A.46DE16\"> </a></td><td>Sex</td><td>The Sex of the client</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE48<a name=\"emcare-custom-codes-EmCare.46A.46DE48\"> </a></td><td>Caregiver</td><td>the child could have been created from the mother therefore a relatedpersom may already exist\nselect_one RelatedPerson\ncandidateExpression</td></tr><tr><td style=\"white-space:nowrap\">emcarerelatedpersoncaregiverid<a name=\"emcare-custom-codes-emcarerelatedpersoncaregiverid\"> </a></td><td/><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE21<a name=\"emcare-custom-codes-EmCare.46A.46DE21\"> </a></td><td>Caregiver First Name</td><td>The client's Caregiver's first name</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE22<a name=\"emcare-custom-codes-EmCare.46A.46DE22\"> </a></td><td>Caregiver Middle Name</td><td>The client's Caregiver's middle name</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE23<a name=\"emcare-custom-codes-EmCare.46A.46DE23\"> </a></td><td>Caregiver Last Name</td><td>The client's Caregiver's last name</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE35<a name=\"emcare-custom-codes-EmCare.46A.46DE35\"> </a></td><td>Primary Caregiver's Mobile telephone number</td><td>Client's Caregiver's mobile telephone number</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE24<a name=\"emcare-custom-codes-EmCare.46A.46DE24\"> </a></td><td>Caregiver's Relationship to Client</td><td>The relationship of the Caregiver to the client</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE31<a name=\"emcare-custom-codes-EmCare.46A.46DE31\"> </a></td><td>Biological Mother Vital Status</td><td>The client's mother and father's vital status</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE32<a name=\"emcare-custom-codes-EmCare.46A.46DE32\"> </a></td><td>Biological Father Vital Status</td><td>The client's mother and father's vital status</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE38<a name=\"emcare-custom-codes-EmCare.46A.46DE38\"> </a></td><td>Caregiver wants to receive SMS or other messages regarding the child's visits and health status</td><td>The Caregiver wants to receive SMS or other messages regarding the client's contacts/visits and health status</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B3.DE01<a name=\"emcare-custom-codes-EmCare.46B3.46DE01\"> </a></td><td>Reason for Consultation</td><td>The reason for the client's consultation</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B3.DE05<a name=\"emcare-custom-codes-EmCare.46B3.46DE05\"> </a></td><td>Is the child sick Today?</td><td>The client's visit is for a well child but the child is also presenting as sick</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B3.DE06<a name=\"emcare-custom-codes-EmCare.46B3.46DE06\"> </a></td><td>Type of Consultation</td><td>The client's visit is for a new consultation</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B7.DE02<a name=\"emcare-custom-codes-EmCare.46B7.46DE02\"> </a></td><td>Convulsing Now</td><td>The client is convulsing now</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B7-B8-B9.DE01<a name=\"emcare-custom-codes-EmCare.46B7-B8-B9.46DE01\"> </a></td><td>Continue to Assess Sick Child</td><td>The healthcare worker chooses if they will continue to assess the sick child with a life threatening illness</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B7.DE03<a name=\"emcare-custom-codes-EmCare.46B7.46DE03\"> </a></td><td>Convulsion(s) in this Illness</td><td>The client is reported to have had one or more convulsions</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B7.DE08b<a name=\"emcare-custom-codes-EmCare.46B7.46DE08b\"> </a></td><td>Unconscious or Lethargic</td><td>The client is unconcious or Lethargic</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B7.DE08<a name=\"emcare-custom-codes-EmCare.46B7.46DE08\"> </a></td><td>Unconscious</td><td>The client is unconcious</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B7.DE08a<a name=\"emcare-custom-codes-EmCare.46B7.46DE08a\"> </a></td><td>Lethargic</td><td>The client is lethargic</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B7.DE09<a name=\"emcare-custom-codes-EmCare.46B7.46DE09\"> </a></td><td>Not able to drink or breastfeed</td><td>The client has reported not to have been able to drink or breastfeed or currently is not able to drink or breastfeed.</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B7.DE10<a name=\"emcare-custom-codes-EmCare.46B7.46DE10\"> </a></td><td>Vomiting Everything</td><td>The client is reported to be vomiting everything or vomiting but not everything or no vomiting</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B6.DE01<a name=\"emcare-custom-codes-EmCare.46B6.46DE01\"> </a></td><td>Axillary Temperature  (degrees Celcius)</td><td>The client's axillary temperature in degrees Celsius (temperature taken under the armpit)</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B6.DE04<a name=\"emcare-custom-codes-EmCare.46B6.46DE04\"> </a></td><td>Thermometer not available</td><td>A thermometer is not available to accurately measure the client's temperature</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B6.DE05<a name=\"emcare-custom-codes-EmCare.46B6.46DE05\"> </a></td><td>Hot to Touch</td><td>The client is hot to touch</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B6.DE01A<a name=\"emcare-custom-codes-EmCare.46B6.46DE01A\"> </a></td><td>Measured Temperature</td><td>The client's Temperature has been measured</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B6.DE06<a name=\"emcare-custom-codes-EmCare.46B6.46DE06\"> </a></td><td>Weight (Kg)</td><td>The client's weight in Kilograms</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B6.DE07<a name=\"emcare-custom-codes-EmCare.46B6.46DE07\"> </a></td><td>Weight cannot be measured</td><td>The client's weight cannot be measured</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B6.DE08<a name=\"emcare-custom-codes-EmCare.46B6.46DE08\"> </a></td><td>Estimated Weight</td><td>The client's weight has been estimated - to be used for treatment dosing only</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B6.DE10<a name=\"emcare-custom-codes-EmCare.46B6.46DE10\"> </a></td><td>Prefer to measure length</td><td>The health care worker would prefer to measure the client using length</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B6.DE09<a name=\"emcare-custom-codes-EmCare.46B6.46DE09\"> </a></td><td>Height</td><td>The client's height in Centimeters</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B6.DE11<a name=\"emcare-custom-codes-EmCare.46B6.46DE11\"> </a></td><td>Height cannot be measured</td><td>The client's height cannot be measured</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B6.DE12<a name=\"emcare-custom-codes-EmCare.46B6.46DE12\"> </a></td><td>Length</td><td>The client's length in Centimeters</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B6.DE13<a name=\"emcare-custom-codes-EmCare.46B6.46DE13\"> </a></td><td>Length cannot be measured</td><td>The client's length cannot be measured</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B6.DE16<a name=\"emcare-custom-codes-EmCare.46B6.46DE16\"> </a></td><td>Weight for Age (WFA) Z Scores</td><td>The client's weight for age z score</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B6.DE17<a name=\"emcare-custom-codes-EmCare.46B6.46DE17\"> </a></td><td>MUAC (mm)</td><td>The client's Mid Upper Arm Circumference in Millimeters (child ≥6 months old)</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B6.DE17a<a name=\"emcare-custom-codes-EmCare.46B6.46DE17a\"> </a></td><td>MUAC cannot be measured</td><td>The client's Mid Upper Arm Circumference cannot be measured</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B6.DE18<a name=\"emcare-custom-codes-EmCare.46B6.46DE18\"> </a></td><td>Visually assess for whether underweight (for drug dose calculation)</td><td>The health care worker visually assesses for whether underweight (for drug dosing calculations)</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B7.DE03<a name=\"emcare-custom-codes-EmCare.46B7.46DE03\"> </a></td><td>Convulsion(s) in this Illness</td><td>The client is reported to have had one or more convulsions</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B18S1.DE02<a name=\"emcare-custom-codes-EmCare.46B18S1.46DE02\"> </a></td><td>Difficulty with Feeding</td><td>The client is reported to have difficulty with Feeding</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B11S1.DE01<a name=\"emcare-custom-codes-EmCare.46B11S1.46DE01\"> </a></td><td>Diarrhoea</td><td>The client is reported to have diarrhoea</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S1.DE06<a name=\"emcare-custom-codes-EmCare.46B21S1.46DE06\"> </a></td><td>Breastfed</td><td>The client is breastfed</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B18S2.DE07<a name=\"emcare-custom-codes-EmCare.46B18S2.46DE07\"> </a></td><td>Severe Chest Indrawing</td><td>The client has severe chest indrawing</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B18S2.DE08<a name=\"emcare-custom-codes-EmCare.46B18S2.46DE08\"> </a></td><td>Movements</td><td>The health care worker's assessments of the client's movements</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B18S2.DE12<a name=\"emcare-custom-codes-EmCare.46B18S2.46DE12\"> </a></td><td>Umbilicus Red or Pus Draining</td><td>The client's umbilicus is red or is draining pus</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B18S2.DE13<a name=\"emcare-custom-codes-EmCare.46B18S2.46DE13\"> </a></td><td>Skin Pustules</td><td>The client has skin pustules</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B19S2.DE01<a name=\"emcare-custom-codes-EmCare.46B19S2.46DE01\"> </a></td><td>Yellow Skin</td><td>The client has yellow skin</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B19S2.DE02<a name=\"emcare-custom-codes-EmCare.46B19S2.46DE02\"> </a></td><td>Yellow Palms or Yellow Soles</td><td>The client has yellow palms or yellow soles</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B19S2.DE04<a name=\"emcare-custom-codes-EmCare.46B19S2.46DE04\"> </a></td><td>When did the Jaundice first appear?</td><td>The age at which the Jaundice first appeared</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B11S2.DE01<a name=\"emcare-custom-codes-EmCare.46B11S2.46DE01\"> </a></td><td>Sunken Eyes</td><td>The client has sunken eyes</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B11S2.DE02<a name=\"emcare-custom-codes-EmCare.46B11S2.46DE02\"> </a></td><td>Skin pinch of Abdomen</td><td>The healthcare worker pinches the skin of the client's abdomen for 1 second and then observes how long the skin takes to return to normal once released</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B11S2.DE06<a name=\"emcare-custom-codes-EmCare.46B11S2.46DE06\"> </a></td><td>Restless and Irritable</td><td>The client is restless and irritable</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S2.DE01<a name=\"emcare-custom-codes-EmCare.46B21S2.46DE01\"> </a></td><td>Weight Status</td><td>The client's weight status</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S2.DE05<a name=\"emcare-custom-codes-EmCare.46B21S2.46DE05\"> </a></td><td>Breastfed how many times in 24 hours?</td><td>Number of times the client is breastfed in 24 hours</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S2.DE06<a name=\"emcare-custom-codes-EmCare.46B21S2.46DE06\"> </a></td><td>Sufficient feeds</td><td>Based on the number of feeds during a 24 hour period the result is auto-calculated to determine sufficient feeds</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S2.DE08<a name=\"emcare-custom-codes-EmCare.46B21S2.46DE08\"> </a></td><td>Young Infant receives food or fluids other than breast milk</td><td>The client is receiving other food or drinks besides breastmilk</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S2.DE09<a name=\"emcare-custom-codes-EmCare.46B21S2.46DE09\"> </a></td><td>What milk is being given as a replacement feed?</td><td>The health care worker discusses the milk being given to the client as a replacement feed and determines if it is appropriate replacement milk</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S2.DE12<a name=\"emcare-custom-codes-EmCare.46B21S2.46DE12\"> </a></td><td>How many replacement feeds during the day and night (24 hours)?</td><td>How often the client is receiving replacement feeds during the day and night (24 hours)</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S2.DE13<a name=\"emcare-custom-codes-EmCare.46B21S2.46DE13\"> </a></td><td>Sufficient replacement feeds (in 24 hours)</td><td>Based on the number of feeds during the day and night (24 hours) the result is auto-calculated to determine sufficient replacement feeds</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S2.DE15<a name=\"emcare-custom-codes-EmCare.46B21S2.46DE15\"> </a></td><td>How much milk is given at each feed (ml)?</td><td>The amount of milk given to the client at each feed</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S2.DE16<a name=\"emcare-custom-codes-EmCare.46B21S2.46DE16\"> </a></td><td>Sufficient replacement feeds</td><td>The care giver is giving sufficient replacement feeds</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S2.DE18<a name=\"emcare-custom-codes-EmCare.46B21S2.46DE18\"> </a></td><td>How is the milk prepared?</td><td>Description of how the milk is prepared for the client's feed</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S2.DE21<a name=\"emcare-custom-codes-EmCare.46B21S2.46DE21\"> </a></td><td>How is the milk given?</td><td>Description on how the client is given the milk - bottle or cup</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S2.DE24<a name=\"emcare-custom-codes-EmCare.46B21S2.46DE24\"> </a></td><td>How are the feeding utensils cleaned?</td><td>Description of how the feeding utensils are cleaned</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S2.DE27<a name=\"emcare-custom-codes-EmCare.46B21S2.46DE27\"> </a></td><td>Do you give any breastmilk at all?</td><td>Does the care giver give the client any breastmilk at all?</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S2.DE30<a name=\"emcare-custom-codes-EmCare.46B21S2.46DE30\"> </a></td><td>Ulcers or White Patches in Mouth</td><td>The client has ulcers or white patches in the mouth</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S2.DE31<a name=\"emcare-custom-codes-EmCare.46B21S2.46DE31\"> </a></td><td>Unable to check if Ulcers or White Patches in Mouth</td><td>The healthcare worker is unable to check if the client has ulcers or white patches in the mouth</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B10S1.DE05<a name=\"emcare-custom-codes-EmCare.46B10S1.46DE05\"> </a></td><td>Cough</td><td>The client is reported to have or has had a cough</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B10S1.DE06<a name=\"emcare-custom-codes-EmCare.46B10S1.46DE06\"> </a></td><td>Cough for how long?</td><td>Length of time the client is reported to have or has had the cough</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B10S1.DE01<a name=\"emcare-custom-codes-EmCare.46B10S1.46DE01\"> </a></td><td>Difficulty Breathing</td><td>The client is reported to have or has had difficulty breathing</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B10S1.DE02<a name=\"emcare-custom-codes-EmCare.46B10S1.46DE02\"> </a></td><td>Difficulty breathing for how long?</td><td>The length of time the client has or has had difficulty breathing</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B11S1.DE01<a name=\"emcare-custom-codes-EmCare.46B11S1.46DE01\"> </a></td><td>Diarrhoea</td><td>The client is reported to have or has had diarrhoea</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B11S1.DE02<a name=\"emcare-custom-codes-EmCare.46B11S1.46DE02\"> </a></td><td>Diarrhoea for how long?</td><td>The length of time the client is reported to have or has had diarrhoea</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B11S1.DE05<a name=\"emcare-custom-codes-EmCare.46B11S1.46DE05\"> </a></td><td>Blood in the stool in this Illness</td><td>The client is reported to have or has had blood in the stool in this Illness</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B12S1.DE02<a name=\"emcare-custom-codes-EmCare.46B12S1.46DE02\"> </a></td><td>Fever Reported</td><td>The client is reported to have or has had fever</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B12S1.DE03<a name=\"emcare-custom-codes-EmCare.46B12S1.46DE03\"> </a></td><td>Fever for how long?</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B.G.DE06<a name=\"emcare-custom-codes-EmCare.46B.46G.46DE06\"> </a></td><td>Fever</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B12S1.DE06<a name=\"emcare-custom-codes-EmCare.46B12S1.46DE06\"> </a></td><td>Has Fever been present every day since the Fever started?</td><td>The client has had fever present every day since the fever started</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B13S1.DE01<a name=\"emcare-custom-codes-EmCare.46B13S1.46DE01\"> </a></td><td>Ear problem</td><td>The client is reported to have had or has an ear problem</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B13S1.DE02<a name=\"emcare-custom-codes-EmCare.46B13S1.46DE02\"> </a></td><td>Ear pain</td><td>The client is reported to have had or has ear pain</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B13S1.DE03<a name=\"emcare-custom-codes-EmCare.46B13S1.46DE03\"> </a></td><td>Ear discharge</td><td>The client is reported to have or has had ear discharge</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B13S1.DE04<a name=\"emcare-custom-codes-EmCare.46B13S1.46DE04\"> </a></td><td>Ear discharge for how long?</td><td>The length of time client has or has had ear discharge</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S1.DE03<a name=\"emcare-custom-codes-EmCare.46B14S1.46DE03\"> </a></td><td>Eye Problem</td><td>The client is reported to have an eye problem</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S1.DE01<a name=\"emcare-custom-codes-EmCare.46B14S1.46DE01\"> </a></td><td>Skin Problem</td><td>The client is reported to have or has had a skin problem</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S1.DE02<a name=\"emcare-custom-codes-EmCare.46B14S1.46DE02\"> </a></td><td>Itchy Skin</td><td>The client is reported to have itchy skin</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.RespiratoryRate<a name=\"emcare-custom-codes-EmCare.46B22.46RespiratoryRate\"> </a></td><td/><td>The client's respiratory rate</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B10S2.DE03<a name=\"emcare-custom-codes-EmCare.46B10S2.46DE03\"> </a></td><td>Chest Indrawing</td><td>The client has chest indrawing</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B10S2.DE04<a name=\"emcare-custom-codes-EmCare.46B10S2.46DE04\"> </a></td><td>Stridor in a calm child</td><td>The client has stridor in a calm child while the client is at rest</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B10S2.DE05<a name=\"emcare-custom-codes-EmCare.46B10S2.46DE05\"> </a></td><td>Wheezing</td><td>The client is wheezing</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B10S2.DE06<a name=\"emcare-custom-codes-EmCare.46B10S2.46DE06\"> </a></td><td>Recurrent Wheeze</td><td>The client has experienced recurrent wheeze</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B10S2.DE07<a name=\"emcare-custom-codes-EmCare.46B10S2.46DE07\"> </a></td><td>Oxygen Saturation</td><td>The client's oxygen saturation measurement</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B10S2.DE08<a name=\"emcare-custom-codes-EmCare.46B10S2.46DE08\"> </a></td><td>Oxygen Saturation &lt; 90 %</td><td>The client's oxygen saturation is less than 90 %</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B11S2.DE01<a name=\"emcare-custom-codes-EmCare.46B11S2.46DE01\"> </a></td><td>Sunken eyes</td><td>The client has sunken eyes</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B11S2.DE02<a name=\"emcare-custom-codes-EmCare.46B11S2.46DE02\"> </a></td><td>Skin pinch of Abdomen</td><td>The healthcare worker pinches the skin of the client's abdomen for 1 second and then observes how long the skin takes to return to normal once released</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B11S2.DE06<a name=\"emcare-custom-codes-EmCare.46B11S2.46DE06\"> </a></td><td>Restless and Irritable</td><td>The client is restless and irritable</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17S1.DE01<a name=\"emcare-custom-codes-EmCare.46B17S1.46DE01\"> </a></td><td>Throat problem</td><td>The client has a throat problem</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17S1.DE02<a name=\"emcare-custom-codes-EmCare.46B17S1.46DE02\"> </a></td><td>Specify Throat problem</td><td>Specify the throat problem the client has</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17S1.DE06<a name=\"emcare-custom-codes-EmCare.46B17S1.46DE06\"> </a></td><td>Enlarged lymph nodes on front of neck</td><td>The client has enlarged lymph node(s) on the front of the neck</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17S1.DE07<a name=\"emcare-custom-codes-EmCare.46B17S1.46DE07\"> </a></td><td>Ability to swallow</td><td>The client's ability to swallow</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B13S2.DE01<a name=\"emcare-custom-codes-EmCare.46B13S2.46DE01\"> </a></td><td>Tender swelling behind the ear</td><td>The client has tender swelling behind the ear</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B13S2.DE02<a name=\"emcare-custom-codes-EmCare.46B13S2.46DE02\"> </a></td><td>Pus Seen Draining from the Ear</td><td>The client has pus draining from the ear which has been seen by the health care worker</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B13S2.DE03<a name=\"emcare-custom-codes-EmCare.46B13S2.46DE03\"> </a></td><td>Pus Seen Draining from the Ear for how long?</td><td>The length of time the client has or has had pus draining from the ear</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B12S2.DE01<a name=\"emcare-custom-codes-EmCare.46B12S2.46DE01\"> </a></td><td>Stiff neck</td><td>The client has a stiff neck</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B12S2.DE05<a name=\"emcare-custom-codes-EmCare.46B12S2.46DE05\"> </a></td><td>Runny nose</td><td>The client has a Runny nose</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE01<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE01\"> </a></td><td>Red eyes</td><td>The client has red eyes</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE02<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE02\"> </a></td><td>Pus Draining from Eye</td><td>The client has pus draining from the eye</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE03<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE03\"> </a></td><td>Clouding of the Cornea</td><td>The client has clouding of the cornea</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE04<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE04\"> </a></td><td>Is Clouding of the Cornea a new problem</td><td>Clouding of the cornea in the client is a new problem</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE05<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE05\"> </a></td><td>Has Clouding of the Cornea previously been treated</td><td>Clouding of the cornea has not been previously treated in the client</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE06<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE06\"> </a></td><td>Generalised or Localised Skin Problem</td><td>The client has a generalised or localised skin problem</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE10<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE10\"> </a></td><td>Measles Rash</td><td>The client has a measles rash</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE11<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE11\"> </a></td><td>Measles within the last 3 months</td><td>The client has had measles in the last 3 months</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE12<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE12\"> </a></td><td>Blisters, Sores or Pustules</td><td>The client has blisters, sores or pustules</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE13<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE13\"> </a></td><td>Type of Skin Problem</td><td>The client has a specific type of skin problem(s)</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE19a<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE19a\"> </a></td><td>Scalp Infection (tinea capitis)</td><td>The client has Scalp Infection (tinea capitis)</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE22A<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE22A\"> </a></td><td>Severe rash</td><td>The client has severe chickenpox rash</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE23a<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE23a\"> </a></td><td>Disseminated Herpes Zoster</td><td>The client has disseminated herpes zoster</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE24<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE24\"> </a></td><td>Eye Involvement</td><td>The client has Herpes Zoster with Eye Involvement</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE30<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE30\"> </a></td><td>Skin Infection extends to Muscle</td><td>The client has skin infection that extends to muscle</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE30b<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE30b\"> </a></td><td>Extensive impetigo lesions</td><td>The client has Extensive impetigo lesions requiring oral antibiotics</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE31a<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE31a\"> </a></td><td>Extensive molluscum lesions</td><td>The client has Extensive molluscum lesions</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE31b<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE31b\"> </a></td><td>Molluscum lesions close to the eye</td><td>The client has molluscum lesions close to the eye</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE32a<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE32a\"> </a></td><td>Extensive warts</td><td>The client has Extensive warts</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE34<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE34\"> </a></td><td>Severe Seborrhoeic Dermatitis</td><td>The client has severe Seborrhoeic Dermatitis</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE36a<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE36a\"> </a></td><td>Secondary bacterial infection of eczema</td><td>The client has secondary bacterial infection of eczema</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE36b<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE36b\"> </a></td><td>Severe acute moist or weeping eczema</td><td>The client has severe acute moist or weeping eczema</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE36c<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE36c\"> </a></td><td>Secondary herpes infection of eczema (eczema herpeticum)</td><td>The client has secondary herpes infection of eczema (eczema herpeticum)</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE38<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE38\"> </a></td><td>Oral sores or Mouth Ulcers</td><td>The client has oral sores or mouth ulcers</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE43<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE43\"> </a></td><td>Add a Skin or Mouth or Eye Problem</td><td>The health care worker would like to add a Skin or Mouth or Eye problem found during the physical exam</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B15S2.DE01<a name=\"emcare-custom-codes-EmCare.46B15S2.46DE01\"> </a></td><td>Palmar Pallor</td><td>The client has palmar pallor</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B15S2.DE09<a name=\"emcare-custom-codes-EmCare.46B15S2.46DE09\"> </a></td><td>Mucous membrane pallor</td><td>The client has Mucous membrane pallor</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE08<a name=\"emcare-custom-codes-EmCare.46B22.46DE08\"> </a></td><td>Oral Fluid Test Results</td><td>Oral Fluid Test Results</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE14<a name=\"emcare-custom-codes-EmCare.46B22.46DE14\"> </a></td><td>Unable to Perform Oral Fluid Test</td><td>The healthcare worker is Unable to Perform Oral Fluid Test</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE14a<a name=\"emcare-custom-codes-EmCare.46B22.46DE14a\"> </a></td><td>Completely Unable to Drink or Vomits Immediately / Everything</td><td>When  are present when the healthcare worker is Unable to Perform Oral Fluid Test it is assumed that the client is completely unable to drink or vomits immediately / everything</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE15<a name=\"emcare-custom-codes-EmCare.46B22.46DE15\"> </a></td><td>Has the Child had anything to drink today?</td><td>The health care worker asks the caregiver if the client has had anything to drink today</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE16<a name=\"emcare-custom-codes-EmCare.46B22.46DE16\"> </a></td><td>How did the child last drink</td><td>The health care worker asks the caregiver how did the client last drink</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE01<a name=\"emcare-custom-codes-EmCare.46B22.46DE01\"> </a></td><td>Respiratory Rate (breaths per minute)</td><td>The client's respiratory rate for client's aged 2 months or more</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE02<a name=\"emcare-custom-codes-EmCare.46B22.46DE02\"> </a></td><td>Unable to perform Respiratory Rate at this time</td><td>The client's respiratory rate could not be measured at this time (all ages)</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE04<a name=\"emcare-custom-codes-EmCare.46B22.46DE04\"> </a></td><td>Respiratory Rate Second Count (breaths per minute)</td><td>The client's respiratory rate for the second Count</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE05<a name=\"emcare-custom-codes-EmCare.46B22.46DE05\"> </a></td><td>Respiratory Rate Second Count Not Possible</td><td>The client's respiratory rate for the second Count was not possible</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE07<a name=\"emcare-custom-codes-EmCare.46B22.46DE07\"> </a></td><td>Fast Breathing</td><td>The client has fast breathing - auto-calculated based on the respiratory rate and the age of the client - 60 breaths per minute or more (&lt;2 months) after 2 respiratory rate measurements</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE17<a name=\"emcare-custom-codes-EmCare.46B22.46DE17\"> </a></td><td>Inhaled Bronchodilator Trial Results</td><td>The Inhaled bronchodilator trial test results</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE22<a name=\"emcare-custom-codes-EmCare.46B22.46DE22\"> </a></td><td>Inhaled Bronchodilator Trial Not Feasible or Available</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE21<a name=\"emcare-custom-codes-EmCare.46B22.46DE21\"> </a></td><td>No Fast Breathing and No Chest Indrawing (post Inhaled Bronchodilator Trial)</td><td>The client has no fast breathing and no chest indrawing</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE27<a name=\"emcare-custom-codes-EmCare.46B22.46DE27\"> </a></td><td>Breastfeeding Assessment</td><td>Breastfeeding Assessment to ensure the client does not have difficulty breastfeeding</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE41<a name=\"emcare-custom-codes-EmCare.46B22.46DE41\"> </a></td><td>Breastfeeding Assessment Not Possible</td><td>The breastfeeding assessment was not possible</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE28<a name=\"emcare-custom-codes-EmCare.46B22.46DE28\"> </a></td><td>Breastfed in the previous hour</td><td>The client has breastfed in the previous hour</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE29<a name=\"emcare-custom-codes-EmCare.46B22.46DE29\"> </a></td><td>Mother able to wait until young infant is willing to breastfeed again</td><td>The client's mother is able to wait until young infant is willing to breastfeed again</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE30<a name=\"emcare-custom-codes-EmCare.46B22.46DE30\"> </a></td><td>Mother reports difficulty breastfeeding</td><td>The client's mother reports that there is difficulty breastfeeding (not observed)</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE31<a name=\"emcare-custom-codes-EmCare.46B22.46DE31\"> </a></td><td>Chin Touching Breast</td><td>The client's chin is touching the breast</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE32<a name=\"emcare-custom-codes-EmCare.46B22.46DE32\"> </a></td><td>Mouth Wide Open</td><td>The client's mouth is wide open</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE33<a name=\"emcare-custom-codes-EmCare.46B22.46DE33\"> </a></td><td>Lower Lip Turned Outwards</td><td>The client's lower lip is turned outwards</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE34<a name=\"emcare-custom-codes-EmCare.46B22.46DE34\"> </a></td><td>More Areola Visible above than below the Mouth</td><td>The mother has more areola visible above than below the client's mouth</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE35<a name=\"emcare-custom-codes-EmCare.46B22.46DE35\"> </a></td><td>Slow Deep Sucks, Sometimes Pausing</td><td>The client is taking slow deep sucks, sometimes pausing</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE36<a name=\"emcare-custom-codes-EmCare.46B22.46DE36\"> </a></td><td>Breastfeeding Assessment Results</td><td>The client's breastfeeding results</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE42<a name=\"emcare-custom-codes-EmCare.46B22.46DE42\"> </a></td><td>Difficulty Breastfeeding Reported</td><td>The breastfeeding assessment was not observed however the caregiver has reported difficulty breastfeeding</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE44<a name=\"emcare-custom-codes-EmCare.46B22.46DE44\"> </a></td><td>Difficulty Breastfeeding Observed</td><td>The healthcare worker has observed that the client has difficulty breastfeeding</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE47<a name=\"emcare-custom-codes-EmCare.46B22.46DE47\"> </a></td><td>Axillary Temperature (second measurement)</td><td>The client's axillary temperature (second measurement) in degrees Celcius (temperature taken under the armpit)</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE46<a name=\"emcare-custom-codes-EmCare.46B22.46DE46\"> </a></td><td>Second Temperature Measurement Not Feasible</td><td>The client's second temperature measurement is feasible</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE50<a name=\"emcare-custom-codes-EmCare.46B22.46DE50\"> </a></td><td>Measured Temperature (second measurement)</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE83<a name=\"emcare-custom-codes-EmCare.46B23.46DE83\"> </a></td><td>Possible Serious Bacterial Infection OR Very Severe Disease</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE06<a name=\"emcare-custom-codes-EmCare.46B23.46DE06\"> </a></td><td>Pneumonia</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE85<a name=\"emcare-custom-codes-EmCare.46B23.46DE85\"> </a></td><td>Local Infection</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE86<a name=\"emcare-custom-codes-EmCare.46B23.46DE86\"> </a></td><td>Infection Unlikely</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE106<a name=\"emcare-custom-codes-EmCare.46B23.46DE106\"> </a></td><td>Very Low Weight for Age</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE87<a name=\"emcare-custom-codes-EmCare.46B23.46DE87\"> </a></td><td>Severe Jaundice</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE88<a name=\"emcare-custom-codes-EmCare.46B23.46DE88\"> </a></td><td>Jaundice</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE89<a name=\"emcare-custom-codes-EmCare.46B23.46DE89\"> </a></td><td>No Jaundice</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE13<a name=\"emcare-custom-codes-EmCare.46B23.46DE13\"> </a></td><td>Severe Dehydration</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE14<a name=\"emcare-custom-codes-EmCare.46B23.46DE14\"> </a></td><td>Some Dehydration</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE15<a name=\"emcare-custom-codes-EmCare.46B23.46DE15\"> </a></td><td>No Dehydration</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE94<a name=\"emcare-custom-codes-EmCare.46B23.46DE94\"> </a></td><td>Feeding Problem and / or Low Weight for Age</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE98<a name=\"emcare-custom-codes-EmCare.46B23.46DE98\"> </a></td><td>No Feeding Problem</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE01<a name=\"emcare-custom-codes-EmCare.46B23.46DE01\"> </a></td><td>Very Severe Disease</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE03<a name=\"emcare-custom-codes-EmCare.46B23.46DE03\"> </a></td><td>Severe Pneumonia or Very Severe Disease</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE04_l<a name=\"emcare-custom-codes-EmCare.46B23.46DE04_l\"> </a></td><td>with low oxygen saturation (SPO2 &lt; 90%)</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE05_l<a name=\"emcare-custom-codes-EmCare.46B23.46DE05_l\"> </a></td><td>with wheezing</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE06<a name=\"emcare-custom-codes-EmCare.46B23.46DE06\"> </a></td><td>Pneumonia</td><td>The client has Pneumonia</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE05_l<a name=\"emcare-custom-codes-EmCare.46B23.46DE05_l\"> </a></td><td>with wheezing</td><td>The client has Pneumonia with wheezing</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE08_l<a name=\"emcare-custom-codes-EmCare.46B23.46DE08_l\"> </a></td><td>with cough or difficulty breathing for 14 days or more or recurrent wheeze</td><td>The client has Pneumonia with cough or difficulty breathing for 14 days or more or recurrent wheeze</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE10<a name=\"emcare-custom-codes-EmCare.46B23.46DE10\"> </a></td><td>Cough or Cold</td><td>The client has Cough or Cold</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE05_l<a name=\"emcare-custom-codes-EmCare.46B23.46DE05_l\"> </a></td><td>with wheezing</td><td>The client has Cough or Cold with wheezing</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE08_l<a name=\"emcare-custom-codes-EmCare.46B23.46DE08_l\"> </a></td><td>with cough or difficulty breathing for 14 days or more or recurrent wheeze</td><td>The client has with cough for more than 14 days or difficulty breathing for more than 14 days or recurrent wheeze</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE13<a name=\"emcare-custom-codes-EmCare.46B23.46DE13\"> </a></td><td>Severe Dehydration</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE14<a name=\"emcare-custom-codes-EmCare.46B23.46DE14\"> </a></td><td>Some Dehydration</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE15<a name=\"emcare-custom-codes-EmCare.46B23.46DE15\"> </a></td><td>No Dehydration</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE16<a name=\"emcare-custom-codes-EmCare.46B23.46DE16\"> </a></td><td>Severe Persistent Diarrhoea</td><td>The client has Severe Persistent Diarrhoea</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE17<a name=\"emcare-custom-codes-EmCare.46B23.46DE17\"> </a></td><td>Persistent Diarrhoea</td><td>The client has Persistent Diarrhoea</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE18<a name=\"emcare-custom-codes-EmCare.46B23.46DE18\"> </a></td><td>Dysentery</td><td>The client has Dysentery</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE18.a<a name=\"emcare-custom-codes-EmCare.46B23.46DE18.46a\"> </a></td><td>Possible Shigella</td><td>The client has Possible Shigella</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE100<a name=\"emcare-custom-codes-EmCare.46B23.46DE100\"> </a></td><td>Throat Abscess or Possible Diptheria</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE6101<a name=\"emcare-custom-codes-EmCare.46B23.46DE6101\"> </a></td><td>Streptococcal Sore Throat</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE6102<a name=\"emcare-custom-codes-EmCare.46B23.46DE6102\"> </a></td><td>Non-Streptococcal Sore Throat</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE6103<a name=\"emcare-custom-codes-EmCare.46B23.46DE6103\"> </a></td><td>No Throat Problem</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE30<a name=\"emcare-custom-codes-EmCare.46B23.46DE30\"> </a></td><td>Mastoiditis</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE31<a name=\"emcare-custom-codes-EmCare.46B23.46DE31\"> </a></td><td>Acute Ear Infection</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE32<a name=\"emcare-custom-codes-EmCare.46B23.46DE32\"> </a></td><td>Chronic Ear Infection</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE32a_l<a name=\"emcare-custom-codes-EmCare.46B23.46DE32a_l\"> </a></td><td>with ear pain or fever</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE33<a name=\"emcare-custom-codes-EmCare.46B23.46DE33\"> </a></td><td>No Ear Infection</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE19<a name=\"emcare-custom-codes-EmCare.46B23.46DE19\"> </a></td><td>Very Severe Febrile Disease</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE104<a name=\"emcare-custom-codes-EmCare.46B23.46DE104\"> </a></td><td>Fever: possible bacterial infection</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE26a_l<a name=\"emcare-custom-codes-EmCare.46B23.46DE26a_l\"> </a></td><td>Fever present every day for 7 Days or more</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE105<a name=\"emcare-custom-codes-EmCare.46B23.46DE105\"> </a></td><td>Fever: bacterial infection unlikely</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE27<a name=\"emcare-custom-codes-EmCare.46B23.46DE27\"> </a></td><td>Severe Complicated Measles</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE28<a name=\"emcare-custom-codes-EmCare.46B23.46DE28\"> </a></td><td>Measles with Eye or Mouth Complication</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE29<a name=\"emcare-custom-codes-EmCare.46B23.46DE29\"> </a></td><td>Possible Measles</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE62<a name=\"emcare-custom-codes-EmCare.46B23.46DE62\"> </a></td><td>Severe Anaemia</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE63<a name=\"emcare-custom-codes-EmCare.46B23.46DE63\"> </a></td><td>Anaemia</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE64<a name=\"emcare-custom-codes-EmCare.46B23.46DE64\"> </a></td><td>No Anaemia</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE34<a name=\"emcare-custom-codes-EmCare.46B23.46DE34\"> </a></td><td>Eye Infection</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE35<a name=\"emcare-custom-codes-EmCare.46B23.46DE35\"> </a></td><td>Clouding of the Cornea</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE36_l<a name=\"emcare-custom-codes-EmCare.46B23.46DE36_l\"> </a></td><td>New or not previously treated</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE41<a name=\"emcare-custom-codes-EmCare.46B23.46DE41\"> </a></td><td>Papular Urticaria or Papular Pruritic Eruptions</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE42<a name=\"emcare-custom-codes-EmCare.46B23.46DE42\"> </a></td><td>Ringworm (Tinea)</td><td/></tr><tr><td style=\"white-space:nowrap\">DL-I-CL1-15<a name=\"emcare-custom-codes-DL-I-CL1-15\"> </a></td><td>Scalp Infection (tinea capitis)</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE44<a name=\"emcare-custom-codes-EmCare.46B23.46DE44\"> </a></td><td>Scabies</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE45<a name=\"emcare-custom-codes-EmCare.46B23.46DE45\"> </a></td><td>Chickenpox</td><td/></tr><tr><td style=\"white-space:nowrap\">DL-I-CL1-16<a name=\"emcare-custom-codes-DL-I-CL1-16\"> </a></td><td>with Severe Rash</td><td/></tr><tr><td style=\"white-space:nowrap\">DL-G-CL1-92<a name=\"emcare-custom-codes-DL-G-CL1-92\"> </a></td><td>with Pneumonia</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE47<a name=\"emcare-custom-codes-EmCare.46B23.46DE47\"> </a></td><td>Herpes Zoster</td><td/></tr><tr><td style=\"white-space:nowrap\">DL-G-CL1-94<a name=\"emcare-custom-codes-DL-G-CL1-94\"> </a></td><td>with eye involvement</td><td/></tr><tr><td style=\"white-space:nowrap\">DL-I-CL1-17<a name=\"emcare-custom-codes-DL-I-CL1-17\"> </a></td><td>with Disseminated Herpes Zoste</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE49<a name=\"emcare-custom-codes-EmCare.46B23.46DE49\"> </a></td><td>Impetigo</td><td/></tr><tr><td style=\"white-space:nowrap\">DL-G-CL1-96<a name=\"emcare-custom-codes-DL-G-CL1-96\"> </a></td><td>extends to muscle or with measured fever</td><td/></tr><tr><td style=\"white-space:nowrap\">DL-I-CL1-18<a name=\"emcare-custom-codes-DL-I-CL1-18\"> </a></td><td>with extensive lesions</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE52<a name=\"emcare-custom-codes-EmCare.46B23.46DE52\"> </a></td><td>Molluscum Contagiosum</td><td/></tr><tr><td style=\"white-space:nowrap\">DL-I-CL1-19<a name=\"emcare-custom-codes-DL-I-CL1-19\"> </a></td><td>with extensive lesions or lesions close to the eye</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE53<a name=\"emcare-custom-codes-EmCare.46B23.46DE53\"> </a></td><td>Warts</td><td/></tr><tr><td style=\"white-space:nowrap\">DL-I-CL1-20<a name=\"emcare-custom-codes-DL-I-CL1-20\"> </a></td><td>Extensive warts</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE54<a name=\"emcare-custom-codes-EmCare.46B23.46DE54\"> </a></td><td>Seborrhoeic Dermatitis</td><td/></tr><tr><td style=\"white-space:nowrap\">DL-G-CL1-101<a name=\"emcare-custom-codes-DL-G-CL1-101\"> </a></td><td>Severe Seborrhoeic Dermatitis</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE56<a name=\"emcare-custom-codes-EmCare.46B23.46DE56\"> </a></td><td>Fixed Drug Reaction</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE57<a name=\"emcare-custom-codes-EmCare.46B23.46DE57\"> </a></td><td>Eczema</td><td/></tr><tr><td style=\"white-space:nowrap\">DL-I-CL1-21<a name=\"emcare-custom-codes-DL-I-CL1-21\"> </a></td><td>Severe acute moist or weeping eczema</td><td/></tr><tr><td style=\"white-space:nowrap\">DL-I-CL1-22<a name=\"emcare-custom-codes-DL-I-CL1-22\"> </a></td><td>Secondary bacterial infection of eczema</td><td/></tr><tr><td style=\"white-space:nowrap\">DL-I-CL1-23<a name=\"emcare-custom-codes-DL-I-CL1-23\"> </a></td><td>Secondary herpes infection (eczema herpeticum)</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE58<a name=\"emcare-custom-codes-EmCare.46B23.46DE58\"> </a></td><td>Steven Johnson Syndrome (SJS)</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE59<a name=\"emcare-custom-codes-EmCare.46B23.46DE59\"> </a></td><td>Mouth Sores or Ulcer</td><td/></tr><tr><td style=\"white-space:nowrap\">DL-G-CL1-107<a name=\"emcare-custom-codes-DL-G-CL1-107\"> </a></td><td>Deep or Extensive</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE61<a name=\"emcare-custom-codes-EmCare.46B23.46DE61\"> </a></td><td>Oral Thrush</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE106<a name=\"emcare-custom-codes-EmCare.46B23.46DE106\"> </a></td><td>Very Low Weight for Age</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE107<a name=\"emcare-custom-codes-EmCare.46B23.46DE107\"> </a></td><td>Low Weight for Age</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B23.DE108<a name=\"emcare-custom-codes-EmCare.46B23.46DE108\"> </a></td><td>Low MUAC or visual report of wasting</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE17<a name=\"emcare-custom-codes-EmCare.46A.46DE17\"> </a></td><td>female</td><td>The client is Female</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE18<a name=\"emcare-custom-codes-EmCare.46A.46DE18\"> </a></td><td>male</td><td>The client is Male</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE19<a name=\"emcare-custom-codes-EmCare.46A.46DE19\"> </a></td><td>not specified</td><td>The client's sex is not specified</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE13<a name=\"emcare-custom-codes-EmCare.46A.46DE13\"> </a></td><td>estimated age in years/months for child (2 months or older)</td><td>The age of the client is estimated based on physical evidence</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE14<a name=\"emcare-custom-codes-EmCare.46A.46DE14\"> </a></td><td>estimated age in weeks/days for young infant (under 2 months old)</td><td>The Caregiver provides the age in weeks/days/hours</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE15<a name=\"emcare-custom-codes-EmCare.46A.46DE15\"> </a></td><td>estimated date of birth</td><td>Estimated Date of Birth of the Client</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE25<a name=\"emcare-custom-codes-EmCare.46A.46DE25\"> </a></td><td>mother</td><td>The Caregiver is the client's mother</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE26<a name=\"emcare-custom-codes-EmCare.46A.46DE26\"> </a></td><td>father</td><td>The Caregiver is the client's father</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE27<a name=\"emcare-custom-codes-EmCare.46A.46DE27\"> </a></td><td>sibling</td><td>The Caregiver is the client's sibling</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE28<a name=\"emcare-custom-codes-EmCare.46A.46DE28\"> </a></td><td>extended family</td><td>The Caregiver is the client's extended family</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE29<a name=\"emcare-custom-codes-EmCare.46A.46DE29\"> </a></td><td>legal guardian</td><td>The Caregiver is the client's legal guardian</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE30<a name=\"emcare-custom-codes-EmCare.46A.46DE30\"> </a></td><td>not related</td><td>The Caregiver is not related to the client</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE46<a name=\"emcare-custom-codes-EmCare.46A.46DE46\"> </a></td><td>dead</td><td>Biological Mother or Father dead</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE34<a name=\"emcare-custom-codes-EmCare.46A.46DE34\"> </a></td><td>alive</td><td>Biological Mother or Father Alive</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B2.DE02<a name=\"emcare-custom-codes-EmCare.46B2.46DE02\"> </a></td><td>planned</td><td>The visit is planned</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B2.DE03<a name=\"emcare-custom-codes-EmCare.46B2.46DE03\"> </a></td><td>unplanned</td><td>The visit is unplanned</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B3.DE03<a name=\"emcare-custom-codes-EmCare.46B3.46DE03\"> </a></td><td>sick child</td><td>The client's visit is for a sick child consultation</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B3.DE04<a name=\"emcare-custom-codes-EmCare.46B3.46DE04\"> </a></td><td>routine visit (well child/infant)</td><td>The client's visit is for a well child consultation</td></tr><tr><td style=\"white-space:nowrap\">yes<a name=\"emcare-custom-codes-yes\"> </a></td><td>yes</td><td>Yes</td></tr><tr><td style=\"white-space:nowrap\">no<a name=\"emcare-custom-codes-no\"> </a></td><td>no</td><td>No</td></tr><tr><td style=\"white-space:nowrap\">EmCare.A.DE33<a name=\"emcare-custom-codes-EmCare.46A.46DE33\"> </a></td><td>unknown</td><td>Unknown</td></tr><tr><td style=\"white-space:nowrap\">agree<a name=\"emcare-custom-codes-agree\"> </a></td><td>agree</td><td>Agree</td></tr><tr><td style=\"white-space:nowrap\">disagree<a name=\"emcare-custom-codes-disagree\"> </a></td><td>disagree</td><td>Disagree</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B3.DE07<a name=\"emcare-custom-codes-EmCare.46B3.46DE07\"> </a></td><td>initial visit</td><td>The client's visit is for a new consultation</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B3.DE08<a name=\"emcare-custom-codes-EmCare.46B3.46DE08\"> </a></td><td>follow up</td><td>The client's visit is for a follow up consultation</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B12S1.DE05<a name=\"emcare-custom-codes-EmCare.46B12S1.46DE05\"> </a></td><td>7 days or more</td><td>The client has had fever for 7 days or more</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B12S1.DE04<a name=\"emcare-custom-codes-EmCare.46B12S1.46DE04\"> </a></td><td>less than 7 days</td><td>The client has had fever for less than 7 days</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B10S1.DE08<a name=\"emcare-custom-codes-EmCare.46B10S1.46DE08\"> </a></td><td>14 days or more</td><td>The client has had ear discharge for 14 days or more</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B10S1.DE07<a name=\"emcare-custom-codes-EmCare.46B10S1.46DE07\"> </a></td><td>less than 14 days</td><td>The client has had ear discharge for less than 14 days</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B10S2.DE09<a name=\"emcare-custom-codes-EmCare.46B10S2.46DE09\"> </a></td><td>oxygen saturation not measured</td><td>The clients oxygen saturation was not measured</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B7.DE06<a name=\"emcare-custom-codes-EmCare.46B7.46DE06\"> </a></td><td>two or more convulsions</td><td>The client is reported to have had two or more convulsions in this illness</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B7.DE05<a name=\"emcare-custom-codes-EmCare.46B7.46DE05\"> </a></td><td>one convulsion</td><td>The client is reported to have had one convulsion in this illness</td></tr><tr><td style=\"white-space:nowrap\">Low<a name=\"emcare-custom-codes-Low\"> </a></td><td>low</td><td>The client has a low body temperature based on the second  measurement</td></tr><tr><td style=\"white-space:nowrap\">Normal<a name=\"emcare-custom-codes-Normal\"> </a></td><td>normal</td><td/></tr><tr><td style=\"white-space:nowrap\">High<a name=\"emcare-custom-codes-High\"> </a></td><td>high</td><td/></tr><tr><td style=\"white-space:nowrap\">2<a name=\"emcare-custom-codes-2\"> </a></td><td>very high</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B20S2.DE03<a name=\"emcare-custom-codes-EmCare.46B20S2.46DE03\"> </a></td><td>skin pinch goes back very slowly (more than 2 seconds)</td><td>The client's skin goes back very slowly after Skin pinch of Abdomen (More than 2 seconds)</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B20S2.DE04<a name=\"emcare-custom-codes-EmCare.46B20S2.46DE04\"> </a></td><td>skin pinch goes back slowly (2 seconds or fewer, but not immediately)</td><td>The client's skin goes back slowly after Skin pinch of Abdomen (2 seconds or fewer, but not immediately)</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B20S2.DE05<a name=\"emcare-custom-codes-EmCare.46B20S2.46DE05\"> </a></td><td>skin pinch goes back normally (immediately)</td><td>The client's skin goes back normally after Skin pinch of Abdomen (immediately)</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE41<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE41\"> </a></td><td>mouth sores or mouth ulcers - deep and extensive</td><td>The client has mouth sores or mouth ulcers that are deep and extensive</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE42<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE42\"> </a></td><td>mouth sores or mouth ulcers - not deep and extensive</td><td>The client has mouth sores or mouth ulcers that are not deep and extensive</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE40<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE40\"> </a></td><td>oral thrush</td><td>The client has oral thrush</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE39<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE39\"> </a></td><td>no oral sores or mouth ulcers</td><td>The client is not reported to have oral sores or mouth ulcers</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B15S2.DE02<a name=\"emcare-custom-codes-EmCare.46B15S2.46DE02\"> </a></td><td>severe palmar pallor</td><td>The client has severe palmar pallor</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B15S2.DE03<a name=\"emcare-custom-codes-EmCare.46B15S2.46DE03\"> </a></td><td>some palmar pallor</td><td>The client has some palmar pallor</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B15S2.DE04<a name=\"emcare-custom-codes-EmCare.46B15S2.46DE04\"> </a></td><td>no palmar pallor</td><td>The client has no palmar pallor</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B18S1.DE03<a name=\"emcare-custom-codes-EmCare.46B18S1.46DE03\"> </a></td><td>not able to feed at all</td><td>The client is reported not to be able to feed at all</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B18S1.DE04<a name=\"emcare-custom-codes-EmCare.46B18S1.46DE04\"> </a></td><td>not feeding well</td><td>The client is reported to not be feeding well</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B18S1.DE05<a name=\"emcare-custom-codes-EmCare.46B18S1.46DE05\"> </a></td><td>feeding well</td><td>The client is reported to be feeding well</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B18S2.DE11<a name=\"emcare-custom-codes-EmCare.46B18S2.46DE11\"> </a></td><td>moves on his or her own or moves spontaneously or without stimulation</td><td>The client moves on his or her own or moves spontaneously or without stimulation</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B18S2.DE10<a name=\"emcare-custom-codes-EmCare.46B18S2.46DE10\"> </a></td><td>movement only when stimulated but then stops</td><td>The client has movement but only when stimulated and then movement stops</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B18S2.DE09<a name=\"emcare-custom-codes-EmCare.46B18S2.46DE09\"> </a></td><td>no movement at all</td><td>The client has no movement at all even after stimulation</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B19S2.DE05<a name=\"emcare-custom-codes-EmCare.46B19S2.46DE05\"> </a></td><td>within less than 24 hours of birth</td><td>The client's Jaundice appeared less than 24 hours after birth</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B19S2.DE06<a name=\"emcare-custom-codes-EmCare.46B19S2.46DE06\"> </a></td><td>24 hours or more after birth</td><td>The client's Jaundice appeared 24 hours or more after birth</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B19S2.DE07<a name=\"emcare-custom-codes-EmCare.46B19S2.46DE07\"> </a></td><td>unknown when jaundice first appeared</td><td>The caregiver does not know when the Jaundice first appeared if it is a first visit for jaundice and in the first 3 weeks of life</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S2.DE02<a name=\"emcare-custom-codes-EmCare.46B21S2.46DE02\"> </a></td><td>very low weight for age</td><td>The client has a very low weight for age (Weight &lt; 2Kg and &lt;7 Days old)</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S2.DE03<a name=\"emcare-custom-codes-EmCare.46B21S2.46DE03\"> </a></td><td>low weight for age</td><td>The client has a low weight for age (derived from a WFA Z Score is &lt; -2)</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S2.DE04<a name=\"emcare-custom-codes-EmCare.46B21S2.46DE04\"> </a></td><td>normal weight for age</td><td>The client is a normal weight for age (derived from a normal WFA Z Score is ≥ -2</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S2.DE28<a name=\"emcare-custom-codes-EmCare.46B21S2.46DE28\"> </a></td><td>breastmilk also given</td><td>Breastmilk is also given to the client by the care giver</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B7-B8-B9.DE03<a name=\"emcare-custom-codes-EmCare.46B7-B8-B9.46DE03\"> </a></td><td>end consultation</td><td>The client has not been stabilised and the healthcare worker willend the consultation</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B7-B8-B9.DE02<a name=\"emcare-custom-codes-EmCare.46B7-B8-B9.46DE02\"> </a></td><td>stabilised, continue consultation</td><td>The client has been stabilised and the healthcare worker will continue the consultation</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S1.DE02<a name=\"emcare-custom-codes-EmCare.46B21S1.46DE02\"> </a></td><td>mother hiv positive</td><td>The client's mother is HIV positive</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S1.DE03<a name=\"emcare-custom-codes-EmCare.46B21S1.46DE03\"> </a></td><td>mother hiv negative</td><td>The client's mother is HIV negative</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S1.DE04<a name=\"emcare-custom-codes-EmCare.46B21S1.46DE04\"> </a></td><td>mother hiv status - unknown or not tested</td><td>The client's mother's HIV Status is unknown or not tested</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S1.DE05<a name=\"emcare-custom-codes-EmCare.46B21S1.46DE05\"> </a></td><td>mother hiv status - decline to answer</td><td>The client's mother has declined to answer regarging HIV Status</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S2.DE19<a name=\"emcare-custom-codes-EmCare.46B21S2.46DE19\"> </a></td><td>correct and hygienic feed preparation</td><td>The care giver is preparing the milk correctly and hygenically</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S2.DE20<a name=\"emcare-custom-codes-EmCare.46B21S2.46DE20\"> </a></td><td>incorrect or unhygienic feed preparation</td><td>The care giver is not preparing the milk correctly and hygenically</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S2.DE22<a name=\"emcare-custom-codes-EmCare.46B21S2.46DE22\"> </a></td><td>cup</td><td>The milk is given to the client using a cup</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S2.DE23<a name=\"emcare-custom-codes-EmCare.46B21S2.46DE23\"> </a></td><td>bottle</td><td>The milk is given to the client using a bottle</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S2.DE26<a name=\"emcare-custom-codes-EmCare.46B21S2.46DE26\"> </a></td><td>feeding utensils not cleaned hygienically</td><td>The care giver is not cleaning the feeding utensils hygienically</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S2.DE25<a name=\"emcare-custom-codes-EmCare.46B21S2.46DE25\"> </a></td><td>feeding utensils cleaned hygienically</td><td>The care giver is cleaning the feeding utensils hygienically</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17.DE06<a name=\"emcare-custom-codes-EmCare.46B17.46DE06\"> </a></td><td>yes, date documented, but not here</td><td>The caregiver is able to provide the Vitamin A supplement date but not Today</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17.DE07<a name=\"emcare-custom-codes-EmCare.46B17.46DE07\"> </a></td><td>no, but last dose given less than 1 month ago</td><td>The caregiver is able to tell the healthcare worker that the last dose was given less than 1 month ago</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17.DE08<a name=\"emcare-custom-codes-EmCare.46B17.46DE08\"> </a></td><td>no, but last dose given between 1 and 6 months ago</td><td>The caregiver is able to tell the healthcare worker that the last dose was given between 1 and 5 months ago</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17.DE09<a name=\"emcare-custom-codes-EmCare.46B17.46DE09\"> </a></td><td>no, but last dose given more than 6 months ago</td><td>The caregiver is able to tell the healthcare worker that the last dose was given more than 6 months ago</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17.DE10<a name=\"emcare-custom-codes-EmCare.46B17.46DE10\"> </a></td><td>no, do not know when last dose was given</td><td>The caregiver is not able to tell the healthcare worker when the last dose was given</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17.DE23<a name=\"emcare-custom-codes-EmCare.46B17.46DE23\"> </a></td><td>high hiv risk</td><td>The client is in an area of HIV prevalence of high HIV risk.</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17.DE24<a name=\"emcare-custom-codes-EmCare.46B17.46DE24\"> </a></td><td>low hiv risk</td><td>The client is in an area of HIV prevalence of low HIV risk.</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17.DE31<a name=\"emcare-custom-codes-EmCare.46B17.46DE31\"> </a></td><td>child hiv positive - virological</td><td>The client is HIV Positive (Virological Test)</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17.DE32<a name=\"emcare-custom-codes-EmCare.46B17.46DE32\"> </a></td><td>child hiv positive - serological</td><td>The client is HIV Positive (Serological Test)</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17.DE33<a name=\"emcare-custom-codes-EmCare.46B17.46DE33\"> </a></td><td>child hiv positive - unknown type of test</td><td>The client is HIV Positive (Unknown Type of Test)</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17.DE34<a name=\"emcare-custom-codes-EmCare.46B17.46DE34\"> </a></td><td>child hiv negative</td><td>The client is HIV Negative</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17.DE35<a name=\"emcare-custom-codes-EmCare.46B17.46DE35\"> </a></td><td>child hiv status - unknown or not tested</td><td>The client's HIV Status is unknown or the client has not been tested</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17.DE36<a name=\"emcare-custom-codes-EmCare.46B17.46DE36\"> </a></td><td>child hiv status - decline to answer</td><td>The client has delined to answer regarding HIV Status</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17.DE46<a name=\"emcare-custom-codes-EmCare.46B17.46DE46\"> </a></td><td>yes</td><td>The client has received all vaccinations for age</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17.DE47<a name=\"emcare-custom-codes-EmCare.46B17.46DE47\"> </a></td><td>no, incomplete vaccination</td><td>The client has not received all vaccinations for age</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17.DE48<a name=\"emcare-custom-codes-EmCare.46B17.46DE48\"> </a></td><td>no, the child has never received any vaccinations to date</td><td>The client has never received any vaccinations to date</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17.DE49<a name=\"emcare-custom-codes-EmCare.46B17.46DE49\"> </a></td><td>unknown</td><td>It is not known if the client has received any vaccination</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17.DE51<a name=\"emcare-custom-codes-EmCare.46B17.46DE51\"> </a></td><td>bcg</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17.DE52<a name=\"emcare-custom-codes-EmCare.46B17.46DE52\"> </a></td><td>opv</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17.DE53<a name=\"emcare-custom-codes-EmCare.46B17.46DE53\"> </a></td><td>hep b</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17.DE54<a name=\"emcare-custom-codes-EmCare.46B17.46DE54\"> </a></td><td>dpt</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17.DE55<a name=\"emcare-custom-codes-EmCare.46B17.46DE55\"> </a></td><td>dpt 18 month booster</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17.DE56<a name=\"emcare-custom-codes-EmCare.46B17.46DE56\"> </a></td><td>hib</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17.DE57<a name=\"emcare-custom-codes-EmCare.46B17.46DE57\"> </a></td><td>rtv</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17.DE58<a name=\"emcare-custom-codes-EmCare.46B17.46DE58\"> </a></td><td>pcv</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17.DE59<a name=\"emcare-custom-codes-EmCare.46B17.46DE59\"> </a></td><td>pcv booster 1 for confirmed hiv infection</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17.DE60<a name=\"emcare-custom-codes-EmCare.46B17.46DE60\"> </a></td><td>pcv booster 2 for confirmed hiv infection</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17.DE61<a name=\"emcare-custom-codes-EmCare.46B17.46DE61\"> </a></td><td>measles</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE09<a name=\"emcare-custom-codes-EmCare.46B22.46DE09\"> </a></td><td>completely unable to drink</td><td>The client is completely unable to drink</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE10<a name=\"emcare-custom-codes-EmCare.46B22.46DE10\"> </a></td><td>vomits immediately / everything</td><td>The client vomits immediately / everything</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE11<a name=\"emcare-custom-codes-EmCare.46B22.46DE11\"> </a></td><td>drinks poorly</td><td>The client drinks poorly</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE12<a name=\"emcare-custom-codes-EmCare.46B22.46DE12\"> </a></td><td>drinks eagerly / thirstily</td><td>The client drinks eagerly / thirstily</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE13<a name=\"emcare-custom-codes-EmCare.46B22.46DE13\"> </a></td><td>drinks normally</td><td>The client drinks normally</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE24<a name=\"emcare-custom-codes-EmCare.46B22.46DE24\"> </a></td><td>able to finish rutf</td><td>The client was able to finish the RUTF (the client was able to finish the minimum amount of RTUF (at least one-third of a packet of RUTF portion (92g) or 3 teaspoons from a pot within 30 minutes)</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE25<a name=\"emcare-custom-codes-EmCare.46B22.46DE25\"> </a></td><td>unable to finish rutf</td><td>The client was unable to finish the RUTF (the client was unable to eat one-third of a packet of RUTF portion (92g) or 3 teaspoons from a pot within 30 minutes)</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE26<a name=\"emcare-custom-codes-EmCare.46B22.46DE26\"> </a></td><td>rutf not available</td><td>The healthcare worker did not have any RUTF available to carry out the appetite test</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE37<a name=\"emcare-custom-codes-EmCare.46B22.46DE37\"> </a></td><td>not well attached to breast</td><td>The client is not well attached to breast</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE38<a name=\"emcare-custom-codes-EmCare.46B22.46DE38\"> </a></td><td>good attachment</td><td>The client has a good attachment</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE39<a name=\"emcare-custom-codes-EmCare.46B22.46DE39\"> </a></td><td>not sucking effectively</td><td>The client is not sucking effectively</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE40<a name=\"emcare-custom-codes-EmCare.46B22.46DE40\"> </a></td><td>sucking effectively</td><td>The client is sucking effectively</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE75<a name=\"emcare-custom-codes-EmCare.46B22.46DE75\"> </a></td><td>no species reported</td><td>The client's Microscopy species result is no species reported</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17S1.DE03<a name=\"emcare-custom-codes-EmCare.46B17S1.46DE03\"> </a></td><td>red (congested) throat</td><td>The client has a Red (congested) throat</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17S1.DE04<a name=\"emcare-custom-codes-EmCare.46B17S1.46DE04\"> </a></td><td>exudate on throat</td><td>The client has Exudate on Throat</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17S1.DE05<a name=\"emcare-custom-codes-EmCare.46B17S1.46DE05\"> </a></td><td>membrane on throat</td><td>The client has Membrane on throat</td></tr><tr><td style=\"white-space:nowrap\">none<a name=\"emcare-custom-codes-none\"> </a></td><td>none of the listed throat problems observed</td><td>The client has None of the listed throat problems observed</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17S1.DE08<a name=\"emcare-custom-codes-EmCare.46B17S1.46DE08\"> </a></td><td>yes, without difficulty</td><td>The client can swallow without difficulty</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17S1.DE09<a name=\"emcare-custom-codes-EmCare.46B17S1.46DE09\"> </a></td><td>difficulty in swallowing</td><td>The client has Difficulty in swallowing</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B17S1.DE10<a name=\"emcare-custom-codes-EmCare.46B17S1.46DE10\"> </a></td><td>unable to swallow</td><td>The client is Unable to swallow</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B6.DE19<a name=\"emcare-custom-codes-EmCare.46B6.46DE19\"> </a></td><td>does not appear to be underweight</td><td>The client is visually assessed for whether underweight by the health care worker and does not appear to be underweight (estimated weight based on height or age would be equivalent to WHZ= 0 / WAZ= 0)</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B6.DE20<a name=\"emcare-custom-codes-EmCare.46B6.46DE20\"> </a></td><td>appears to be underweight</td><td>The client is visually assessed for whether underweight by the health care worker and appears to be underweight (as an aide for dosing calculations) (estimated weight based on height or age would be equivalent to WHZ= -1 / WAZ= -1)</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B6.DE21<a name=\"emcare-custom-codes-EmCare.46B6.46DE21\"> </a></td><td>appears to be severely underweight</td><td>The client is visually assessed for whether underweight and appears to be severely underweight (as an aide for dosing calculations) (estimated weight based on height or age would be equivalent to WHZ= -2 / WAZ= -2)</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B15S2.DE10<a name=\"emcare-custom-codes-EmCare.46B15S2.46DE10\"> </a></td><td>severe mucous membrane pallor</td><td>The client has severe mucous membrane pallor</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B15S2.DE11<a name=\"emcare-custom-codes-EmCare.46B15S2.46DE11\"> </a></td><td>some mucous membrane pallor</td><td>The client has some mucous membrane pallor</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B15S2.DE12<a name=\"emcare-custom-codes-EmCare.46B15S2.46DE12\"> </a></td><td>no mucous membrane pallor</td><td>The client has no mucous membrane pallor</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE07<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE07\"> </a></td><td>generalised skin problem</td><td>The client has a generalised skin problem</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE08<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE08\"> </a></td><td>localised skin problem</td><td>The client has a localised skin problem</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE09<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE09\"> </a></td><td>no problem</td><td>The client does not have a generalised or localised skin problem</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE18<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE18\"> </a></td><td>papular urticaria or papular pruritic eruptions</td><td>The client has Papular Urticaria or Papular Pruritic Eruptions \n• Itchy papules at different stages of evolution.\n• Found on the arms and legs.\n• Healed lesions are often dark/ hyperpigmented.\n• The itch is difficult to manage.\n• Essential to exclude scabies.</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE19<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE19\"> </a></td><td>ringworm (tinea)</td><td>The client has Ringworm (Tinea) - \n• An itchy circular lesion with a raised edge and fine scaly area.\n• Scalp lesions may result in loss of hair</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE21<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE21\"> </a></td><td>scabies</td><td>The client has Scabies -\n• Intense itching, more severe at night.\n• Small burrows between fingers, tows, elbow areas and buttocks.\n• Secondary infection may occur.\n• Small babies may have vesicles and pustules on the palms and soles and face.\n• The infestation spreads easily, usually affecting more than one person in the household</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE22<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE22\"> </a></td><td>chickenpox</td><td>The client has Chickenpox - Mild fever preceding the rash.\n• Rash begins on the trunk and face,\nlater spreads to the arms and legs.\n• Vesicles appear progressively over days and forms scabs\nafter they rupture.\n• Contagious from the fever starts until all lesions have\ncrusted.\n• Usually lasts for about 1 week.</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE23<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE23\"> </a></td><td>herpes zoster</td><td>The client has Herpes Zoster -  Vesicles in one area on one side of body with intense pain or scars plus shooting pain.\n• They are uncommon in children except when they are immune-compromised</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE25<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE25\"> </a></td><td>impetigo</td><td>The client has Impetigo- Pustules and papules with honey -coloured crusts.\n• Commonly starts on the face or buttocks, then spreads to the neck, hands, arms and legs.</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE31<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE31\"> </a></td><td>molluscum contagiosum</td><td>The client has Molluscum Contagiosum -Caused by a poxvirus.\n• Dome-shaped papules with a central depression\n(umblication).\n• Most commonly seen on the face and trunk in children</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE32<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE32\"> </a></td><td>warts</td><td>The client has Warts - Appears as papules or nodules with a rough surface.\n• Seen most often on the hands and fingers, but can be\nfound anywhere on\nthe body.</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE33<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE33\"> </a></td><td>seborrhoeic dermatitis</td><td>The client has Seborrhoeic Dermatitis - Greasy scales and redness on central face, body folds.\n• The scalp, face, ears and skin folds (e.g. axillae, groins, under the breasts) are commonly affected.</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE35<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE35\"> </a></td><td>fixed drug reaction</td><td>The client has Fixed Drug Reaction - One or more dark round or oval skin lesions with central vesicles .\n• The lesions recur on the same spot, and increase in number with each successive attack</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE36<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE36\"> </a></td><td>eczema</td><td>The client has Eczema - Erythematous (red), sometimes scaly plaques found on the face, flexures, trunk and extensors.\n• Yellow pustules which crust indicate\nsecondary bacterial infection.</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE37<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE37\"> </a></td><td>steven johnson syndrome (sjs)</td><td>The client has Steven Johnson Syndrome (SJS) - Severe and acute reaction due to many drugs, the commonest being cotrimoxazole or nevirapine.\n• Lesions involve the skin as well as the mucous membranes (e.g. eyes, mouth and genitalia).\n• May start as widespread red irregular rash with or without blisters. The blisters rupture leaving denuded areas of skin.\n• May cause difficulty in breathing.</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE44<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE44\"> </a></td><td>skin problem</td><td>The health care worker would like to add a skin problem</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE45<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE45\"> </a></td><td>oral sores or mouth ulcers</td><td>The health care worker would like to add an Oral Sores or Mouth Ulcers problem</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE46<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE46\"> </a></td><td>eye problem</td><td>The health care worker would like to add an Eye problem</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B14S2.DE47<a name=\"emcare-custom-codes-EmCare.46B14S2.46DE47\"> </a></td><td>no - do not add a skin or mouth or eye problem</td><td>The healthcare worker would not like to add a Skin or Mouth or Eye Problem</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S2.DE29<a name=\"emcare-custom-codes-EmCare.46B21S2.46DE29\"> </a></td><td>no breastmilk at all</td><td>The caregiver does not give the client any breastmilk at all</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S2.DE11<a name=\"emcare-custom-codes-EmCare.46B21S2.46DE11\"> </a></td><td>inappropriate replacement milk</td><td>The care giver is giving inappropriate replacement milk</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B21S2.DE10<a name=\"emcare-custom-codes-EmCare.46B21S2.46DE10\"> </a></td><td>appropriate replacement milk</td><td>The care giver is giving appropriate  replacement milk</td></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE18<a name=\"emcare-custom-codes-EmCare.46B22.46DE18\"> </a></td><td>chest indrawing (post inhaled bronchodilator trial)</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE19<a name=\"emcare-custom-codes-EmCare.46B22.46DE19\"> </a></td><td>respiratory rate (post inhaled bronchodilator trial)</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE20<a name=\"emcare-custom-codes-EmCare.46B22.46DE20\"> </a></td><td>fast breathing (post inhaled bronchodilator trial)</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE21<a name=\"emcare-custom-codes-EmCare.46B22.46DE21\"> </a></td><td>no fast breathing and no chest indrawing (post inhaled bronchodilator trial)</td><td/></tr><tr><td style=\"white-space:nowrap\">EmCare.B22.DE22<a name=\"emcare-custom-codes-EmCare.46B22.46DE22\"> </a></td><td>inhaled bronchodilator trial not feasible or available</td><td/></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "emcare"] ; # 
+  fhir:title [ fhir:v "Extended Codes CodeSystem"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-04-03T14:56:37+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "World Health Organization (WHO)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Set of codes identified as being needed but not found in existing Code Systems"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "EmCare.A.DE01" ] ;
+     fhir:display [ fhir:v "National Unique identification" ] ;
+     fhir:definition [ fhir:v "Unique identifier provided or a universal ID, if used in the country" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE03" ] ;
+     fhir:display [ fhir:v "Child's Identity unknown/prefer to remain anonymous" ] ;
+     fhir:definition [ fhir:v "The client's identity is unknown or the client's prefers to remain anonymous" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE04" ] ;
+     fhir:display [ fhir:v "First Name" ] ;
+     fhir:definition [ fhir:v "Client's first name" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE05" ] ;
+     fhir:display [ fhir:v "Middle Name" ] ;
+     fhir:definition [ fhir:v "Client's middle name" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE06" ] ;
+     fhir:display [ fhir:v "Last Name" ] ;
+     fhir:definition [ fhir:v "Client's family name or last name" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE11" ] ;
+     fhir:display [ fhir:v "Date of Birth not known" ] ;
+     fhir:definition [ fhir:v "The client and/or Caregiver does not know the date of birth of the client" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE12" ] ;
+     fhir:display [ fhir:v "Provide an estimated age or estimated date of birth" ] ;
+     fhir:definition [ fhir:v "The client/Caregiver will provide an estimated age or estimated date of birth" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE15.1" ] ;
+     fhir:display [ fhir:v "Estimated Date of Birth" ] ;
+     fhir:definition [ fhir:v "Estimated Date of Birth of the Client" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE08" ] ;
+     fhir:display [ fhir:v "Consolidated Date of Birth" ] ;
+     fhir:definition [ fhir:v "Estimated Date of Birth of the Client" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE16" ] ;
+     fhir:display [ fhir:v "Sex" ] ;
+     fhir:definition [ fhir:v "The Sex of the client" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE48" ] ;
+     fhir:display [ fhir:v "Caregiver" ] ;
+     fhir:definition [ fhir:v "the child could have been created from the mother therefore a relatedpersom may already exist\nselect_one RelatedPerson\ncandidateExpression" ]
+  ] [
+     fhir:code [ fhir:v "emcarerelatedpersoncaregiverid" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE21" ] ;
+     fhir:display [ fhir:v "Caregiver First Name" ] ;
+     fhir:definition [ fhir:v "The client's Caregiver's first name" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE22" ] ;
+     fhir:display [ fhir:v "Caregiver Middle Name" ] ;
+     fhir:definition [ fhir:v "The client's Caregiver's middle name" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE23" ] ;
+     fhir:display [ fhir:v "Caregiver Last Name" ] ;
+     fhir:definition [ fhir:v "The client's Caregiver's last name" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE35" ] ;
+     fhir:display [ fhir:v "Primary Caregiver's Mobile telephone number" ] ;
+     fhir:definition [ fhir:v "Client's Caregiver's mobile telephone number" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE24" ] ;
+     fhir:display [ fhir:v "Caregiver's Relationship to Client" ] ;
+     fhir:definition [ fhir:v "The relationship of the Caregiver to the client" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE31" ] ;
+     fhir:display [ fhir:v "Biological Mother Vital Status" ] ;
+     fhir:definition [ fhir:v "The client's mother and father's vital status" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE32" ] ;
+     fhir:display [ fhir:v "Biological Father Vital Status" ] ;
+     fhir:definition [ fhir:v "The client's mother and father's vital status" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE38" ] ;
+     fhir:display [ fhir:v "Caregiver wants to receive SMS or other messages regarding the child's visits and health status" ] ;
+     fhir:definition [ fhir:v "The Caregiver wants to receive SMS or other messages regarding the client's contacts/visits and health status" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B3.DE01" ] ;
+     fhir:display [ fhir:v "Reason for Consultation" ] ;
+     fhir:definition [ fhir:v "The reason for the client's consultation" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B3.DE05" ] ;
+     fhir:display [ fhir:v "Is the child sick Today?" ] ;
+     fhir:definition [ fhir:v "The client's visit is for a well child but the child is also presenting as sick" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B3.DE06" ] ;
+     fhir:display [ fhir:v "Type of Consultation" ] ;
+     fhir:definition [ fhir:v "The client's visit is for a new consultation" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B7.DE02" ] ;
+     fhir:display [ fhir:v "Convulsing Now" ] ;
+     fhir:definition [ fhir:v "The client is convulsing now" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B7-B8-B9.DE01" ] ;
+     fhir:display [ fhir:v "Continue to Assess Sick Child" ] ;
+     fhir:definition [ fhir:v "The healthcare worker chooses if they will continue to assess the sick child with a life threatening illness" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B7.DE03" ] ;
+     fhir:display [ fhir:v "Convulsion(s) in this Illness" ] ;
+     fhir:definition [ fhir:v "The client is reported to have had one or more convulsions" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B7.DE08b" ] ;
+     fhir:display [ fhir:v "Unconscious or Lethargic" ] ;
+     fhir:definition [ fhir:v "The client is unconcious or Lethargic" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B7.DE08" ] ;
+     fhir:display [ fhir:v "Unconscious" ] ;
+     fhir:definition [ fhir:v "The client is unconcious" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B7.DE08a" ] ;
+     fhir:display [ fhir:v "Lethargic" ] ;
+     fhir:definition [ fhir:v "The client is lethargic" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B7.DE09" ] ;
+     fhir:display [ fhir:v "Not able to drink or breastfeed" ] ;
+     fhir:definition [ fhir:v "The client has reported not to have been able to drink or breastfeed or currently is not able to drink or breastfeed." ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B7.DE10" ] ;
+     fhir:display [ fhir:v "Vomiting Everything" ] ;
+     fhir:definition [ fhir:v "The client is reported to be vomiting everything or vomiting but not everything or no vomiting" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B6.DE01" ] ;
+     fhir:display [ fhir:v "Axillary Temperature  (degrees Celcius)" ] ;
+     fhir:definition [ fhir:v "The client's axillary temperature in degrees Celsius (temperature taken under the armpit)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B6.DE04" ] ;
+     fhir:display [ fhir:v "Thermometer not available" ] ;
+     fhir:definition [ fhir:v "A thermometer is not available to accurately measure the client's temperature" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B6.DE05" ] ;
+     fhir:display [ fhir:v "Hot to Touch" ] ;
+     fhir:definition [ fhir:v "The client is hot to touch" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B6.DE01A" ] ;
+     fhir:display [ fhir:v "Measured Temperature" ] ;
+     fhir:definition [ fhir:v "The client's Temperature has been measured" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B6.DE06" ] ;
+     fhir:display [ fhir:v "Weight (Kg)" ] ;
+     fhir:definition [ fhir:v "The client's weight in Kilograms" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B6.DE07" ] ;
+     fhir:display [ fhir:v "Weight cannot be measured" ] ;
+     fhir:definition [ fhir:v "The client's weight cannot be measured" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B6.DE08" ] ;
+     fhir:display [ fhir:v "Estimated Weight" ] ;
+     fhir:definition [ fhir:v "The client's weight has been estimated - to be used for treatment dosing only" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B6.DE10" ] ;
+     fhir:display [ fhir:v "Prefer to measure length" ] ;
+     fhir:definition [ fhir:v "The health care worker would prefer to measure the client using length" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B6.DE09" ] ;
+     fhir:display [ fhir:v "Height" ] ;
+     fhir:definition [ fhir:v "The client's height in Centimeters" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B6.DE11" ] ;
+     fhir:display [ fhir:v "Height cannot be measured" ] ;
+     fhir:definition [ fhir:v "The client's height cannot be measured" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B6.DE12" ] ;
+     fhir:display [ fhir:v "Length" ] ;
+     fhir:definition [ fhir:v "The client's length in Centimeters" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B6.DE13" ] ;
+     fhir:display [ fhir:v "Length cannot be measured" ] ;
+     fhir:definition [ fhir:v "The client's length cannot be measured" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B6.DE16" ] ;
+     fhir:display [ fhir:v "Weight for Age (WFA) Z Scores" ] ;
+     fhir:definition [ fhir:v "The client's weight for age z score" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B6.DE17" ] ;
+     fhir:display [ fhir:v "MUAC (mm)" ] ;
+     fhir:definition [ fhir:v "The client's Mid Upper Arm Circumference in Millimeters (child ≥6 months old)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B6.DE17a" ] ;
+     fhir:display [ fhir:v "MUAC cannot be measured" ] ;
+     fhir:definition [ fhir:v "The client's Mid Upper Arm Circumference cannot be measured" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B6.DE18" ] ;
+     fhir:display [ fhir:v "Visually assess for whether underweight (for drug dose calculation)" ] ;
+     fhir:definition [ fhir:v "The health care worker visually assesses for whether underweight (for drug dosing calculations)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B7.DE03" ] ;
+     fhir:display [ fhir:v "Convulsion(s) in this Illness" ] ;
+     fhir:definition [ fhir:v "The client is reported to have had one or more convulsions" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B18S1.DE02" ] ;
+     fhir:display [ fhir:v "Difficulty with Feeding" ] ;
+     fhir:definition [ fhir:v "The client is reported to have difficulty with Feeding" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B11S1.DE01" ] ;
+     fhir:display [ fhir:v "Diarrhoea" ] ;
+     fhir:definition [ fhir:v "The client is reported to have diarrhoea" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S1.DE06" ] ;
+     fhir:display [ fhir:v "Breastfed" ] ;
+     fhir:definition [ fhir:v "The client is breastfed" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B18S2.DE07" ] ;
+     fhir:display [ fhir:v "Severe Chest Indrawing" ] ;
+     fhir:definition [ fhir:v "The client has severe chest indrawing" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B18S2.DE08" ] ;
+     fhir:display [ fhir:v "Movements" ] ;
+     fhir:definition [ fhir:v "The health care worker's assessments of the client's movements" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B18S2.DE12" ] ;
+     fhir:display [ fhir:v "Umbilicus Red or Pus Draining" ] ;
+     fhir:definition [ fhir:v "The client's umbilicus is red or is draining pus" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B18S2.DE13" ] ;
+     fhir:display [ fhir:v "Skin Pustules" ] ;
+     fhir:definition [ fhir:v "The client has skin pustules" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B19S2.DE01" ] ;
+     fhir:display [ fhir:v "Yellow Skin" ] ;
+     fhir:definition [ fhir:v "The client has yellow skin" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B19S2.DE02" ] ;
+     fhir:display [ fhir:v "Yellow Palms or Yellow Soles" ] ;
+     fhir:definition [ fhir:v "The client has yellow palms or yellow soles" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B19S2.DE04" ] ;
+     fhir:display [ fhir:v "When did the Jaundice first appear?" ] ;
+     fhir:definition [ fhir:v "The age at which the Jaundice first appeared" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B11S2.DE01" ] ;
+     fhir:display [ fhir:v "Sunken Eyes" ] ;
+     fhir:definition [ fhir:v "The client has sunken eyes" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B11S2.DE02" ] ;
+     fhir:display [ fhir:v "Skin pinch of Abdomen" ] ;
+     fhir:definition [ fhir:v "The healthcare worker pinches the skin of the client's abdomen for 1 second and then observes how long the skin takes to return to normal once released" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B11S2.DE06" ] ;
+     fhir:display [ fhir:v "Restless and Irritable" ] ;
+     fhir:definition [ fhir:v "The client is restless and irritable" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S2.DE01" ] ;
+     fhir:display [ fhir:v "Weight Status" ] ;
+     fhir:definition [ fhir:v "The client's weight status" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S2.DE05" ] ;
+     fhir:display [ fhir:v "Breastfed how many times in 24 hours?" ] ;
+     fhir:definition [ fhir:v "Number of times the client is breastfed in 24 hours" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S2.DE06" ] ;
+     fhir:display [ fhir:v "Sufficient feeds" ] ;
+     fhir:definition [ fhir:v "Based on the number of feeds during a 24 hour period the result is auto-calculated to determine sufficient feeds" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S2.DE08" ] ;
+     fhir:display [ fhir:v "Young Infant receives food or fluids other than breast milk" ] ;
+     fhir:definition [ fhir:v "The client is receiving other food or drinks besides breastmilk" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S2.DE09" ] ;
+     fhir:display [ fhir:v "What milk is being given as a replacement feed?" ] ;
+     fhir:definition [ fhir:v "The health care worker discusses the milk being given to the client as a replacement feed and determines if it is appropriate replacement milk" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S2.DE12" ] ;
+     fhir:display [ fhir:v "How many replacement feeds during the day and night (24 hours)?" ] ;
+     fhir:definition [ fhir:v "How often the client is receiving replacement feeds during the day and night (24 hours)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S2.DE13" ] ;
+     fhir:display [ fhir:v "Sufficient replacement feeds (in 24 hours)" ] ;
+     fhir:definition [ fhir:v "Based on the number of feeds during the day and night (24 hours) the result is auto-calculated to determine sufficient replacement feeds" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S2.DE15" ] ;
+     fhir:display [ fhir:v "How much milk is given at each feed (ml)?" ] ;
+     fhir:definition [ fhir:v "The amount of milk given to the client at each feed" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S2.DE16" ] ;
+     fhir:display [ fhir:v "Sufficient replacement feeds" ] ;
+     fhir:definition [ fhir:v "The care giver is giving sufficient replacement feeds" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S2.DE18" ] ;
+     fhir:display [ fhir:v "How is the milk prepared?" ] ;
+     fhir:definition [ fhir:v "Description of how the milk is prepared for the client's feed" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S2.DE21" ] ;
+     fhir:display [ fhir:v "How is the milk given?" ] ;
+     fhir:definition [ fhir:v "Description on how the client is given the milk - bottle or cup" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S2.DE24" ] ;
+     fhir:display [ fhir:v "How are the feeding utensils cleaned?" ] ;
+     fhir:definition [ fhir:v "Description of how the feeding utensils are cleaned" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S2.DE27" ] ;
+     fhir:display [ fhir:v "Do you give any breastmilk at all?" ] ;
+     fhir:definition [ fhir:v "Does the care giver give the client any breastmilk at all?" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S2.DE30" ] ;
+     fhir:display [ fhir:v "Ulcers or White Patches in Mouth" ] ;
+     fhir:definition [ fhir:v "The client has ulcers or white patches in the mouth" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S2.DE31" ] ;
+     fhir:display [ fhir:v "Unable to check if Ulcers or White Patches in Mouth" ] ;
+     fhir:definition [ fhir:v "The healthcare worker is unable to check if the client has ulcers or white patches in the mouth" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B10S1.DE05" ] ;
+     fhir:display [ fhir:v "Cough" ] ;
+     fhir:definition [ fhir:v "The client is reported to have or has had a cough" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B10S1.DE06" ] ;
+     fhir:display [ fhir:v "Cough for how long?" ] ;
+     fhir:definition [ fhir:v "Length of time the client is reported to have or has had the cough" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B10S1.DE01" ] ;
+     fhir:display [ fhir:v "Difficulty Breathing" ] ;
+     fhir:definition [ fhir:v "The client is reported to have or has had difficulty breathing" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B10S1.DE02" ] ;
+     fhir:display [ fhir:v "Difficulty breathing for how long?" ] ;
+     fhir:definition [ fhir:v "The length of time the client has or has had difficulty breathing" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B11S1.DE01" ] ;
+     fhir:display [ fhir:v "Diarrhoea" ] ;
+     fhir:definition [ fhir:v "The client is reported to have or has had diarrhoea" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B11S1.DE02" ] ;
+     fhir:display [ fhir:v "Diarrhoea for how long?" ] ;
+     fhir:definition [ fhir:v "The length of time the client is reported to have or has had diarrhoea" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B11S1.DE05" ] ;
+     fhir:display [ fhir:v "Blood in the stool in this Illness" ] ;
+     fhir:definition [ fhir:v "The client is reported to have or has had blood in the stool in this Illness" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B12S1.DE02" ] ;
+     fhir:display [ fhir:v "Fever Reported" ] ;
+     fhir:definition [ fhir:v "The client is reported to have or has had fever" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B12S1.DE03" ] ;
+     fhir:display [ fhir:v "Fever for how long?" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B.G.DE06" ] ;
+     fhir:display [ fhir:v "Fever" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B12S1.DE06" ] ;
+     fhir:display [ fhir:v "Has Fever been present every day since the Fever started?" ] ;
+     fhir:definition [ fhir:v "The client has had fever present every day since the fever started" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B13S1.DE01" ] ;
+     fhir:display [ fhir:v "Ear problem" ] ;
+     fhir:definition [ fhir:v "The client is reported to have had or has an ear problem" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B13S1.DE02" ] ;
+     fhir:display [ fhir:v "Ear pain" ] ;
+     fhir:definition [ fhir:v "The client is reported to have had or has ear pain" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B13S1.DE03" ] ;
+     fhir:display [ fhir:v "Ear discharge" ] ;
+     fhir:definition [ fhir:v "The client is reported to have or has had ear discharge" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B13S1.DE04" ] ;
+     fhir:display [ fhir:v "Ear discharge for how long?" ] ;
+     fhir:definition [ fhir:v "The length of time client has or has had ear discharge" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S1.DE03" ] ;
+     fhir:display [ fhir:v "Eye Problem" ] ;
+     fhir:definition [ fhir:v "The client is reported to have an eye problem" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S1.DE01" ] ;
+     fhir:display [ fhir:v "Skin Problem" ] ;
+     fhir:definition [ fhir:v "The client is reported to have or has had a skin problem" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S1.DE02" ] ;
+     fhir:display [ fhir:v "Itchy Skin" ] ;
+     fhir:definition [ fhir:v "The client is reported to have itchy skin" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.RespiratoryRate" ] ;
+     fhir:definition [ fhir:v "The client's respiratory rate" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B10S2.DE03" ] ;
+     fhir:display [ fhir:v "Chest Indrawing" ] ;
+     fhir:definition [ fhir:v "The client has chest indrawing" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B10S2.DE04" ] ;
+     fhir:display [ fhir:v "Stridor in a calm child" ] ;
+     fhir:definition [ fhir:v "The client has stridor in a calm child while the client is at rest" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B10S2.DE05" ] ;
+     fhir:display [ fhir:v "Wheezing" ] ;
+     fhir:definition [ fhir:v "The client is wheezing" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B10S2.DE06" ] ;
+     fhir:display [ fhir:v "Recurrent Wheeze" ] ;
+     fhir:definition [ fhir:v "The client has experienced recurrent wheeze" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B10S2.DE07" ] ;
+     fhir:display [ fhir:v "Oxygen Saturation" ] ;
+     fhir:definition [ fhir:v "The client's oxygen saturation measurement" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B10S2.DE08" ] ;
+     fhir:display [ fhir:v "Oxygen Saturation < 90 %" ] ;
+     fhir:definition [ fhir:v "The client's oxygen saturation is less than 90 %" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B11S2.DE01" ] ;
+     fhir:display [ fhir:v "Sunken eyes" ] ;
+     fhir:definition [ fhir:v "The client has sunken eyes" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B11S2.DE02" ] ;
+     fhir:display [ fhir:v "Skin pinch of Abdomen" ] ;
+     fhir:definition [ fhir:v "The healthcare worker pinches the skin of the client's abdomen for 1 second and then observes how long the skin takes to return to normal once released" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B11S2.DE06" ] ;
+     fhir:display [ fhir:v "Restless and Irritable" ] ;
+     fhir:definition [ fhir:v "The client is restless and irritable" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17S1.DE01" ] ;
+     fhir:display [ fhir:v "Throat problem" ] ;
+     fhir:definition [ fhir:v "The client has a throat problem" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17S1.DE02" ] ;
+     fhir:display [ fhir:v "Specify Throat problem" ] ;
+     fhir:definition [ fhir:v "Specify the throat problem the client has" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17S1.DE06" ] ;
+     fhir:display [ fhir:v "Enlarged lymph nodes on front of neck" ] ;
+     fhir:definition [ fhir:v "The client has enlarged lymph node(s) on the front of the neck" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17S1.DE07" ] ;
+     fhir:display [ fhir:v "Ability to swallow" ] ;
+     fhir:definition [ fhir:v "The client's ability to swallow" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B13S2.DE01" ] ;
+     fhir:display [ fhir:v "Tender swelling behind the ear" ] ;
+     fhir:definition [ fhir:v "The client has tender swelling behind the ear" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B13S2.DE02" ] ;
+     fhir:display [ fhir:v "Pus Seen Draining from the Ear" ] ;
+     fhir:definition [ fhir:v "The client has pus draining from the ear which has been seen by the health care worker" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B13S2.DE03" ] ;
+     fhir:display [ fhir:v "Pus Seen Draining from the Ear for how long?" ] ;
+     fhir:definition [ fhir:v "The length of time the client has or has had pus draining from the ear" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B12S2.DE01" ] ;
+     fhir:display [ fhir:v "Stiff neck" ] ;
+     fhir:definition [ fhir:v "The client has a stiff neck" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B12S2.DE05" ] ;
+     fhir:display [ fhir:v "Runny nose" ] ;
+     fhir:definition [ fhir:v "The client has a Runny nose" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE01" ] ;
+     fhir:display [ fhir:v "Red eyes" ] ;
+     fhir:definition [ fhir:v "The client has red eyes" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE02" ] ;
+     fhir:display [ fhir:v "Pus Draining from Eye" ] ;
+     fhir:definition [ fhir:v "The client has pus draining from the eye" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE03" ] ;
+     fhir:display [ fhir:v "Clouding of the Cornea" ] ;
+     fhir:definition [ fhir:v "The client has clouding of the cornea" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE04" ] ;
+     fhir:display [ fhir:v "Is Clouding of the Cornea a new problem" ] ;
+     fhir:definition [ fhir:v "Clouding of the cornea in the client is a new problem" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE05" ] ;
+     fhir:display [ fhir:v "Has Clouding of the Cornea previously been treated" ] ;
+     fhir:definition [ fhir:v "Clouding of the cornea has not been previously treated in the client" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE06" ] ;
+     fhir:display [ fhir:v "Generalised or Localised Skin Problem" ] ;
+     fhir:definition [ fhir:v "The client has a generalised or localised skin problem" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE10" ] ;
+     fhir:display [ fhir:v "Measles Rash" ] ;
+     fhir:definition [ fhir:v "The client has a measles rash" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE11" ] ;
+     fhir:display [ fhir:v "Measles within the last 3 months" ] ;
+     fhir:definition [ fhir:v "The client has had measles in the last 3 months" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE12" ] ;
+     fhir:display [ fhir:v "Blisters, Sores or Pustules" ] ;
+     fhir:definition [ fhir:v "The client has blisters, sores or pustules" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE13" ] ;
+     fhir:display [ fhir:v "Type of Skin Problem" ] ;
+     fhir:definition [ fhir:v "The client has a specific type of skin problem(s)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE19a" ] ;
+     fhir:display [ fhir:v "Scalp Infection (tinea capitis)" ] ;
+     fhir:definition [ fhir:v "The client has Scalp Infection (tinea capitis)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE22A" ] ;
+     fhir:display [ fhir:v "Severe rash" ] ;
+     fhir:definition [ fhir:v "The client has severe chickenpox rash" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE23a" ] ;
+     fhir:display [ fhir:v "Disseminated Herpes Zoster" ] ;
+     fhir:definition [ fhir:v "The client has disseminated herpes zoster" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE24" ] ;
+     fhir:display [ fhir:v "Eye Involvement" ] ;
+     fhir:definition [ fhir:v "The client has Herpes Zoster with Eye Involvement" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE30" ] ;
+     fhir:display [ fhir:v "Skin Infection extends to Muscle" ] ;
+     fhir:definition [ fhir:v "The client has skin infection that extends to muscle" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE30b" ] ;
+     fhir:display [ fhir:v "Extensive impetigo lesions" ] ;
+     fhir:definition [ fhir:v "The client has Extensive impetigo lesions requiring oral antibiotics" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE31a" ] ;
+     fhir:display [ fhir:v "Extensive molluscum lesions" ] ;
+     fhir:definition [ fhir:v "The client has Extensive molluscum lesions" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE31b" ] ;
+     fhir:display [ fhir:v "Molluscum lesions close to the eye" ] ;
+     fhir:definition [ fhir:v "The client has molluscum lesions close to the eye" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE32a" ] ;
+     fhir:display [ fhir:v "Extensive warts" ] ;
+     fhir:definition [ fhir:v "The client has Extensive warts" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE34" ] ;
+     fhir:display [ fhir:v "Severe Seborrhoeic Dermatitis" ] ;
+     fhir:definition [ fhir:v "The client has severe Seborrhoeic Dermatitis" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE36a" ] ;
+     fhir:display [ fhir:v "Secondary bacterial infection of eczema" ] ;
+     fhir:definition [ fhir:v "The client has secondary bacterial infection of eczema" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE36b" ] ;
+     fhir:display [ fhir:v "Severe acute moist or weeping eczema" ] ;
+     fhir:definition [ fhir:v "The client has severe acute moist or weeping eczema" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE36c" ] ;
+     fhir:display [ fhir:v "Secondary herpes infection of eczema (eczema herpeticum)" ] ;
+     fhir:definition [ fhir:v "The client has secondary herpes infection of eczema (eczema herpeticum)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE38" ] ;
+     fhir:display [ fhir:v "Oral sores or Mouth Ulcers" ] ;
+     fhir:definition [ fhir:v "The client has oral sores or mouth ulcers" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE43" ] ;
+     fhir:display [ fhir:v "Add a Skin or Mouth or Eye Problem" ] ;
+     fhir:definition [ fhir:v "The health care worker would like to add a Skin or Mouth or Eye problem found during the physical exam" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B15S2.DE01" ] ;
+     fhir:display [ fhir:v "Palmar Pallor" ] ;
+     fhir:definition [ fhir:v "The client has palmar pallor" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B15S2.DE09" ] ;
+     fhir:display [ fhir:v "Mucous membrane pallor" ] ;
+     fhir:definition [ fhir:v "The client has Mucous membrane pallor" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE08" ] ;
+     fhir:display [ fhir:v "Oral Fluid Test Results" ] ;
+     fhir:definition [ fhir:v "Oral Fluid Test Results" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE14" ] ;
+     fhir:display [ fhir:v "Unable to Perform Oral Fluid Test" ] ;
+     fhir:definition [ fhir:v "The healthcare worker is Unable to Perform Oral Fluid Test" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE14a" ] ;
+     fhir:display [ fhir:v "Completely Unable to Drink or Vomits Immediately / Everything" ] ;
+     fhir:definition [ fhir:v "When  are present when the healthcare worker is Unable to Perform Oral Fluid Test it is assumed that the client is completely unable to drink or vomits immediately / everything" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE15" ] ;
+     fhir:display [ fhir:v "Has the Child had anything to drink today?" ] ;
+     fhir:definition [ fhir:v "The health care worker asks the caregiver if the client has had anything to drink today" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE16" ] ;
+     fhir:display [ fhir:v "How did the child last drink" ] ;
+     fhir:definition [ fhir:v "The health care worker asks the caregiver how did the client last drink" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE01" ] ;
+     fhir:display [ fhir:v "Respiratory Rate (breaths per minute)" ] ;
+     fhir:definition [ fhir:v "The client's respiratory rate for client's aged 2 months or more" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE02" ] ;
+     fhir:display [ fhir:v "Unable to perform Respiratory Rate at this time" ] ;
+     fhir:definition [ fhir:v "The client's respiratory rate could not be measured at this time (all ages)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE04" ] ;
+     fhir:display [ fhir:v "Respiratory Rate Second Count (breaths per minute)" ] ;
+     fhir:definition [ fhir:v "The client's respiratory rate for the second Count" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE05" ] ;
+     fhir:display [ fhir:v "Respiratory Rate Second Count Not Possible" ] ;
+     fhir:definition [ fhir:v "The client's respiratory rate for the second Count was not possible" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE07" ] ;
+     fhir:display [ fhir:v "Fast Breathing" ] ;
+     fhir:definition [ fhir:v "The client has fast breathing - auto-calculated based on the respiratory rate and the age of the client - 60 breaths per minute or more (<2 months) after 2 respiratory rate measurements" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE17" ] ;
+     fhir:display [ fhir:v "Inhaled Bronchodilator Trial Results" ] ;
+     fhir:definition [ fhir:v "The Inhaled bronchodilator trial test results" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE22" ] ;
+     fhir:display [ fhir:v "Inhaled Bronchodilator Trial Not Feasible or Available" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE21" ] ;
+     fhir:display [ fhir:v "No Fast Breathing and No Chest Indrawing (post Inhaled Bronchodilator Trial)" ] ;
+     fhir:definition [ fhir:v "The client has no fast breathing and no chest indrawing" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE27" ] ;
+     fhir:display [ fhir:v "Breastfeeding Assessment" ] ;
+     fhir:definition [ fhir:v "Breastfeeding Assessment to ensure the client does not have difficulty breastfeeding" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE41" ] ;
+     fhir:display [ fhir:v "Breastfeeding Assessment Not Possible" ] ;
+     fhir:definition [ fhir:v "The breastfeeding assessment was not possible" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE28" ] ;
+     fhir:display [ fhir:v "Breastfed in the previous hour" ] ;
+     fhir:definition [ fhir:v "The client has breastfed in the previous hour" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE29" ] ;
+     fhir:display [ fhir:v "Mother able to wait until young infant is willing to breastfeed again" ] ;
+     fhir:definition [ fhir:v "The client's mother is able to wait until young infant is willing to breastfeed again" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE30" ] ;
+     fhir:display [ fhir:v "Mother reports difficulty breastfeeding" ] ;
+     fhir:definition [ fhir:v "The client's mother reports that there is difficulty breastfeeding (not observed)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE31" ] ;
+     fhir:display [ fhir:v "Chin Touching Breast" ] ;
+     fhir:definition [ fhir:v "The client's chin is touching the breast" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE32" ] ;
+     fhir:display [ fhir:v "Mouth Wide Open" ] ;
+     fhir:definition [ fhir:v "The client's mouth is wide open" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE33" ] ;
+     fhir:display [ fhir:v "Lower Lip Turned Outwards" ] ;
+     fhir:definition [ fhir:v "The client's lower lip is turned outwards" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE34" ] ;
+     fhir:display [ fhir:v "More Areola Visible above than below the Mouth" ] ;
+     fhir:definition [ fhir:v "The mother has more areola visible above than below the client's mouth" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE35" ] ;
+     fhir:display [ fhir:v "Slow Deep Sucks, Sometimes Pausing" ] ;
+     fhir:definition [ fhir:v "The client is taking slow deep sucks, sometimes pausing" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE36" ] ;
+     fhir:display [ fhir:v "Breastfeeding Assessment Results" ] ;
+     fhir:definition [ fhir:v "The client's breastfeeding results" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE42" ] ;
+     fhir:display [ fhir:v "Difficulty Breastfeeding Reported" ] ;
+     fhir:definition [ fhir:v "The breastfeeding assessment was not observed however the caregiver has reported difficulty breastfeeding" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE44" ] ;
+     fhir:display [ fhir:v "Difficulty Breastfeeding Observed" ] ;
+     fhir:definition [ fhir:v "The healthcare worker has observed that the client has difficulty breastfeeding" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE47" ] ;
+     fhir:display [ fhir:v "Axillary Temperature (second measurement)" ] ;
+     fhir:definition [ fhir:v "The client's axillary temperature (second measurement) in degrees Celcius (temperature taken under the armpit)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE46" ] ;
+     fhir:display [ fhir:v "Second Temperature Measurement Not Feasible" ] ;
+     fhir:definition [ fhir:v "The client's second temperature measurement is feasible" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE50" ] ;
+     fhir:display [ fhir:v "Measured Temperature (second measurement)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE83" ] ;
+     fhir:display [ fhir:v "Possible Serious Bacterial Infection OR Very Severe Disease" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE06" ] ;
+     fhir:display [ fhir:v "Pneumonia" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE85" ] ;
+     fhir:display [ fhir:v "Local Infection" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE86" ] ;
+     fhir:display [ fhir:v "Infection Unlikely" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE106" ] ;
+     fhir:display [ fhir:v "Very Low Weight for Age" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE87" ] ;
+     fhir:display [ fhir:v "Severe Jaundice" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE88" ] ;
+     fhir:display [ fhir:v "Jaundice" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE89" ] ;
+     fhir:display [ fhir:v "No Jaundice" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE13" ] ;
+     fhir:display [ fhir:v "Severe Dehydration" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE14" ] ;
+     fhir:display [ fhir:v "Some Dehydration" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE15" ] ;
+     fhir:display [ fhir:v "No Dehydration" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE94" ] ;
+     fhir:display [ fhir:v "Feeding Problem and / or Low Weight for Age" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE98" ] ;
+     fhir:display [ fhir:v "No Feeding Problem" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE01" ] ;
+     fhir:display [ fhir:v "Very Severe Disease" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE03" ] ;
+     fhir:display [ fhir:v "Severe Pneumonia or Very Severe Disease" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE04_l" ] ;
+     fhir:display [ fhir:v "with low oxygen saturation (SPO2 < 90%)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE05_l" ] ;
+     fhir:display [ fhir:v "with wheezing" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE06" ] ;
+     fhir:display [ fhir:v "Pneumonia" ] ;
+     fhir:definition [ fhir:v "The client has Pneumonia" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE05_l" ] ;
+     fhir:display [ fhir:v "with wheezing" ] ;
+     fhir:definition [ fhir:v "The client has Pneumonia with wheezing" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE08_l" ] ;
+     fhir:display [ fhir:v "with cough or difficulty breathing for 14 days or more or recurrent wheeze" ] ;
+     fhir:definition [ fhir:v "The client has Pneumonia with cough or difficulty breathing for 14 days or more or recurrent wheeze" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE10" ] ;
+     fhir:display [ fhir:v "Cough or Cold" ] ;
+     fhir:definition [ fhir:v "The client has Cough or Cold" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE05_l" ] ;
+     fhir:display [ fhir:v "with wheezing" ] ;
+     fhir:definition [ fhir:v "The client has Cough or Cold with wheezing" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE08_l" ] ;
+     fhir:display [ fhir:v "with cough or difficulty breathing for 14 days or more or recurrent wheeze" ] ;
+     fhir:definition [ fhir:v "The client has with cough for more than 14 days or difficulty breathing for more than 14 days or recurrent wheeze" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE13" ] ;
+     fhir:display [ fhir:v "Severe Dehydration" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE14" ] ;
+     fhir:display [ fhir:v "Some Dehydration" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE15" ] ;
+     fhir:display [ fhir:v "No Dehydration" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE16" ] ;
+     fhir:display [ fhir:v "Severe Persistent Diarrhoea" ] ;
+     fhir:definition [ fhir:v "The client has Severe Persistent Diarrhoea" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE17" ] ;
+     fhir:display [ fhir:v "Persistent Diarrhoea" ] ;
+     fhir:definition [ fhir:v "The client has Persistent Diarrhoea" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE18" ] ;
+     fhir:display [ fhir:v "Dysentery" ] ;
+     fhir:definition [ fhir:v "The client has Dysentery" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE18.a" ] ;
+     fhir:display [ fhir:v "Possible Shigella" ] ;
+     fhir:definition [ fhir:v "The client has Possible Shigella" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE100" ] ;
+     fhir:display [ fhir:v "Throat Abscess or Possible Diptheria" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE6101" ] ;
+     fhir:display [ fhir:v "Streptococcal Sore Throat" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE6102" ] ;
+     fhir:display [ fhir:v "Non-Streptococcal Sore Throat" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE6103" ] ;
+     fhir:display [ fhir:v "No Throat Problem" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE30" ] ;
+     fhir:display [ fhir:v "Mastoiditis" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE31" ] ;
+     fhir:display [ fhir:v "Acute Ear Infection" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE32" ] ;
+     fhir:display [ fhir:v "Chronic Ear Infection" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE32a_l" ] ;
+     fhir:display [ fhir:v "with ear pain or fever" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE33" ] ;
+     fhir:display [ fhir:v "No Ear Infection" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE19" ] ;
+     fhir:display [ fhir:v "Very Severe Febrile Disease" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE104" ] ;
+     fhir:display [ fhir:v "Fever: possible bacterial infection" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE26a_l" ] ;
+     fhir:display [ fhir:v "Fever present every day for 7 Days or more" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE105" ] ;
+     fhir:display [ fhir:v "Fever: bacterial infection unlikely" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE27" ] ;
+     fhir:display [ fhir:v "Severe Complicated Measles" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE28" ] ;
+     fhir:display [ fhir:v "Measles with Eye or Mouth Complication" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE29" ] ;
+     fhir:display [ fhir:v "Possible Measles" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE62" ] ;
+     fhir:display [ fhir:v "Severe Anaemia" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE63" ] ;
+     fhir:display [ fhir:v "Anaemia" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE64" ] ;
+     fhir:display [ fhir:v "No Anaemia" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE34" ] ;
+     fhir:display [ fhir:v "Eye Infection" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE35" ] ;
+     fhir:display [ fhir:v "Clouding of the Cornea" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE36_l" ] ;
+     fhir:display [ fhir:v "New or not previously treated" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE41" ] ;
+     fhir:display [ fhir:v "Papular Urticaria or Papular Pruritic Eruptions" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE42" ] ;
+     fhir:display [ fhir:v "Ringworm (Tinea)" ]
+  ] [
+     fhir:code [ fhir:v "DL-I-CL1-15" ] ;
+     fhir:display [ fhir:v "Scalp Infection (tinea capitis)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE44" ] ;
+     fhir:display [ fhir:v "Scabies" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE45" ] ;
+     fhir:display [ fhir:v "Chickenpox" ]
+  ] [
+     fhir:code [ fhir:v "DL-I-CL1-16" ] ;
+     fhir:display [ fhir:v "with Severe Rash" ]
+  ] [
+     fhir:code [ fhir:v "DL-G-CL1-92" ] ;
+     fhir:display [ fhir:v "with Pneumonia" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE47" ] ;
+     fhir:display [ fhir:v "Herpes Zoster" ]
+  ] [
+     fhir:code [ fhir:v "DL-G-CL1-94" ] ;
+     fhir:display [ fhir:v "with eye involvement" ]
+  ] [
+     fhir:code [ fhir:v "DL-I-CL1-17" ] ;
+     fhir:display [ fhir:v "with Disseminated Herpes Zoste" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE49" ] ;
+     fhir:display [ fhir:v "Impetigo" ]
+  ] [
+     fhir:code [ fhir:v "DL-G-CL1-96" ] ;
+     fhir:display [ fhir:v "extends to muscle or with measured fever" ]
+  ] [
+     fhir:code [ fhir:v "DL-I-CL1-18" ] ;
+     fhir:display [ fhir:v "with extensive lesions" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE52" ] ;
+     fhir:display [ fhir:v "Molluscum Contagiosum" ]
+  ] [
+     fhir:code [ fhir:v "DL-I-CL1-19" ] ;
+     fhir:display [ fhir:v "with extensive lesions or lesions close to the eye" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE53" ] ;
+     fhir:display [ fhir:v "Warts" ]
+  ] [
+     fhir:code [ fhir:v "DL-I-CL1-20" ] ;
+     fhir:display [ fhir:v "Extensive warts" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE54" ] ;
+     fhir:display [ fhir:v "Seborrhoeic Dermatitis" ]
+  ] [
+     fhir:code [ fhir:v "DL-G-CL1-101" ] ;
+     fhir:display [ fhir:v "Severe Seborrhoeic Dermatitis" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE56" ] ;
+     fhir:display [ fhir:v "Fixed Drug Reaction" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE57" ] ;
+     fhir:display [ fhir:v "Eczema" ]
+  ] [
+     fhir:code [ fhir:v "DL-I-CL1-21" ] ;
+     fhir:display [ fhir:v "Severe acute moist or weeping eczema" ]
+  ] [
+     fhir:code [ fhir:v "DL-I-CL1-22" ] ;
+     fhir:display [ fhir:v "Secondary bacterial infection of eczema" ]
+  ] [
+     fhir:code [ fhir:v "DL-I-CL1-23" ] ;
+     fhir:display [ fhir:v "Secondary herpes infection (eczema herpeticum)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE58" ] ;
+     fhir:display [ fhir:v "Steven Johnson Syndrome (SJS)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE59" ] ;
+     fhir:display [ fhir:v "Mouth Sores or Ulcer" ]
+  ] [
+     fhir:code [ fhir:v "DL-G-CL1-107" ] ;
+     fhir:display [ fhir:v "Deep or Extensive" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE61" ] ;
+     fhir:display [ fhir:v "Oral Thrush" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE106" ] ;
+     fhir:display [ fhir:v "Very Low Weight for Age" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE107" ] ;
+     fhir:display [ fhir:v "Low Weight for Age" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B23.DE108" ] ;
+     fhir:display [ fhir:v "Low MUAC or visual report of wasting" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE17" ] ;
+     fhir:display [ fhir:v "female" ] ;
+     fhir:definition [ fhir:v "The client is Female" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE18" ] ;
+     fhir:display [ fhir:v "male" ] ;
+     fhir:definition [ fhir:v "The client is Male" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE19" ] ;
+     fhir:display [ fhir:v "not specified" ] ;
+     fhir:definition [ fhir:v "The client's sex is not specified" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE13" ] ;
+     fhir:display [ fhir:v "estimated age in years/months for child (2 months or older)" ] ;
+     fhir:definition [ fhir:v "The age of the client is estimated based on physical evidence" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE14" ] ;
+     fhir:display [ fhir:v "estimated age in weeks/days for young infant (under 2 months old)" ] ;
+     fhir:definition [ fhir:v "The Caregiver provides the age in weeks/days/hours" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE15" ] ;
+     fhir:display [ fhir:v "estimated date of birth" ] ;
+     fhir:definition [ fhir:v "Estimated Date of Birth of the Client" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE25" ] ;
+     fhir:display [ fhir:v "mother" ] ;
+     fhir:definition [ fhir:v "The Caregiver is the client's mother" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE26" ] ;
+     fhir:display [ fhir:v "father" ] ;
+     fhir:definition [ fhir:v "The Caregiver is the client's father" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE27" ] ;
+     fhir:display [ fhir:v "sibling" ] ;
+     fhir:definition [ fhir:v "The Caregiver is the client's sibling" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE28" ] ;
+     fhir:display [ fhir:v "extended family" ] ;
+     fhir:definition [ fhir:v "The Caregiver is the client's extended family" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE29" ] ;
+     fhir:display [ fhir:v "legal guardian" ] ;
+     fhir:definition [ fhir:v "The Caregiver is the client's legal guardian" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE30" ] ;
+     fhir:display [ fhir:v "not related" ] ;
+     fhir:definition [ fhir:v "The Caregiver is not related to the client" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE46" ] ;
+     fhir:display [ fhir:v "dead" ] ;
+     fhir:definition [ fhir:v "Biological Mother or Father dead" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE34" ] ;
+     fhir:display [ fhir:v "alive" ] ;
+     fhir:definition [ fhir:v "Biological Mother or Father Alive" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B2.DE02" ] ;
+     fhir:display [ fhir:v "planned" ] ;
+     fhir:definition [ fhir:v "The visit is planned" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B2.DE03" ] ;
+     fhir:display [ fhir:v "unplanned" ] ;
+     fhir:definition [ fhir:v "The visit is unplanned" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B3.DE03" ] ;
+     fhir:display [ fhir:v "sick child" ] ;
+     fhir:definition [ fhir:v "The client's visit is for a sick child consultation" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B3.DE04" ] ;
+     fhir:display [ fhir:v "routine visit (well child/infant)" ] ;
+     fhir:definition [ fhir:v "The client's visit is for a well child consultation" ]
+  ] [
+     fhir:code [ fhir:v "yes" ] ;
+     fhir:display [ fhir:v "yes" ] ;
+     fhir:definition [ fhir:v "Yes" ]
+  ] [
+     fhir:code [ fhir:v "no" ] ;
+     fhir:display [ fhir:v "no" ] ;
+     fhir:definition [ fhir:v "No" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.A.DE33" ] ;
+     fhir:display [ fhir:v "unknown" ] ;
+     fhir:definition [ fhir:v "Unknown" ]
+  ] [
+     fhir:code [ fhir:v "agree" ] ;
+     fhir:display [ fhir:v "agree" ] ;
+     fhir:definition [ fhir:v "Agree" ]
+  ] [
+     fhir:code [ fhir:v "disagree" ] ;
+     fhir:display [ fhir:v "disagree" ] ;
+     fhir:definition [ fhir:v "Disagree" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B3.DE07" ] ;
+     fhir:display [ fhir:v "initial visit" ] ;
+     fhir:definition [ fhir:v "The client's visit is for a new consultation" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B3.DE08" ] ;
+     fhir:display [ fhir:v "follow up" ] ;
+     fhir:definition [ fhir:v "The client's visit is for a follow up consultation" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B12S1.DE05" ] ;
+     fhir:display [ fhir:v "7 days or more" ] ;
+     fhir:definition [ fhir:v "The client has had fever for 7 days or more" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B12S1.DE04" ] ;
+     fhir:display [ fhir:v "less than 7 days" ] ;
+     fhir:definition [ fhir:v "The client has had fever for less than 7 days" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B10S1.DE08" ] ;
+     fhir:display [ fhir:v "14 days or more" ] ;
+     fhir:definition [ fhir:v "The client has had ear discharge for 14 days or more" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B10S1.DE07" ] ;
+     fhir:display [ fhir:v "less than 14 days" ] ;
+     fhir:definition [ fhir:v "The client has had ear discharge for less than 14 days" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B10S2.DE09" ] ;
+     fhir:display [ fhir:v "oxygen saturation not measured" ] ;
+     fhir:definition [ fhir:v "The clients oxygen saturation was not measured" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B7.DE06" ] ;
+     fhir:display [ fhir:v "two or more convulsions" ] ;
+     fhir:definition [ fhir:v "The client is reported to have had two or more convulsions in this illness" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B7.DE05" ] ;
+     fhir:display [ fhir:v "one convulsion" ] ;
+     fhir:definition [ fhir:v "The client is reported to have had one convulsion in this illness" ]
+  ] [
+     fhir:code [ fhir:v "Low" ] ;
+     fhir:display [ fhir:v "low" ] ;
+     fhir:definition [ fhir:v "The client has a low body temperature based on the second  measurement" ]
+  ] [
+     fhir:code [ fhir:v "Normal" ] ;
+     fhir:display [ fhir:v "normal" ]
+  ] [
+     fhir:code [ fhir:v "High" ] ;
+     fhir:display [ fhir:v "high" ]
+  ] [
+     fhir:code [ fhir:v "2" ] ;
+     fhir:display [ fhir:v "very high" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B20S2.DE03" ] ;
+     fhir:display [ fhir:v "skin pinch goes back very slowly (more than 2 seconds)" ] ;
+     fhir:definition [ fhir:v "The client's skin goes back very slowly after Skin pinch of Abdomen (More than 2 seconds)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B20S2.DE04" ] ;
+     fhir:display [ fhir:v "skin pinch goes back slowly (2 seconds or fewer, but not immediately)" ] ;
+     fhir:definition [ fhir:v "The client's skin goes back slowly after Skin pinch of Abdomen (2 seconds or fewer, but not immediately)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B20S2.DE05" ] ;
+     fhir:display [ fhir:v "skin pinch goes back normally (immediately)" ] ;
+     fhir:definition [ fhir:v "The client's skin goes back normally after Skin pinch of Abdomen (immediately)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE41" ] ;
+     fhir:display [ fhir:v "mouth sores or mouth ulcers - deep and extensive" ] ;
+     fhir:definition [ fhir:v "The client has mouth sores or mouth ulcers that are deep and extensive" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE42" ] ;
+     fhir:display [ fhir:v "mouth sores or mouth ulcers - not deep and extensive" ] ;
+     fhir:definition [ fhir:v "The client has mouth sores or mouth ulcers that are not deep and extensive" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE40" ] ;
+     fhir:display [ fhir:v "oral thrush" ] ;
+     fhir:definition [ fhir:v "The client has oral thrush" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE39" ] ;
+     fhir:display [ fhir:v "no oral sores or mouth ulcers" ] ;
+     fhir:definition [ fhir:v "The client is not reported to have oral sores or mouth ulcers" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B15S2.DE02" ] ;
+     fhir:display [ fhir:v "severe palmar pallor" ] ;
+     fhir:definition [ fhir:v "The client has severe palmar pallor" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B15S2.DE03" ] ;
+     fhir:display [ fhir:v "some palmar pallor" ] ;
+     fhir:definition [ fhir:v "The client has some palmar pallor" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B15S2.DE04" ] ;
+     fhir:display [ fhir:v "no palmar pallor" ] ;
+     fhir:definition [ fhir:v "The client has no palmar pallor" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B18S1.DE03" ] ;
+     fhir:display [ fhir:v "not able to feed at all" ] ;
+     fhir:definition [ fhir:v "The client is reported not to be able to feed at all" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B18S1.DE04" ] ;
+     fhir:display [ fhir:v "not feeding well" ] ;
+     fhir:definition [ fhir:v "The client is reported to not be feeding well" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B18S1.DE05" ] ;
+     fhir:display [ fhir:v "feeding well" ] ;
+     fhir:definition [ fhir:v "The client is reported to be feeding well" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B18S2.DE11" ] ;
+     fhir:display [ fhir:v "moves on his or her own or moves spontaneously or without stimulation" ] ;
+     fhir:definition [ fhir:v "The client moves on his or her own or moves spontaneously or without stimulation" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B18S2.DE10" ] ;
+     fhir:display [ fhir:v "movement only when stimulated but then stops" ] ;
+     fhir:definition [ fhir:v "The client has movement but only when stimulated and then movement stops" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B18S2.DE09" ] ;
+     fhir:display [ fhir:v "no movement at all" ] ;
+     fhir:definition [ fhir:v "The client has no movement at all even after stimulation" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B19S2.DE05" ] ;
+     fhir:display [ fhir:v "within less than 24 hours of birth" ] ;
+     fhir:definition [ fhir:v "The client's Jaundice appeared less than 24 hours after birth" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B19S2.DE06" ] ;
+     fhir:display [ fhir:v "24 hours or more after birth" ] ;
+     fhir:definition [ fhir:v "The client's Jaundice appeared 24 hours or more after birth" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B19S2.DE07" ] ;
+     fhir:display [ fhir:v "unknown when jaundice first appeared" ] ;
+     fhir:definition [ fhir:v "The caregiver does not know when the Jaundice first appeared if it is a first visit for jaundice and in the first 3 weeks of life" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S2.DE02" ] ;
+     fhir:display [ fhir:v "very low weight for age" ] ;
+     fhir:definition [ fhir:v "The client has a very low weight for age (Weight < 2Kg and <7 Days old)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S2.DE03" ] ;
+     fhir:display [ fhir:v "low weight for age" ] ;
+     fhir:definition [ fhir:v "The client has a low weight for age (derived from a WFA Z Score is < -2)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S2.DE04" ] ;
+     fhir:display [ fhir:v "normal weight for age" ] ;
+     fhir:definition [ fhir:v "The client is a normal weight for age (derived from a normal WFA Z Score is ≥ -2" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S2.DE28" ] ;
+     fhir:display [ fhir:v "breastmilk also given" ] ;
+     fhir:definition [ fhir:v "Breastmilk is also given to the client by the care giver" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B7-B8-B9.DE03" ] ;
+     fhir:display [ fhir:v "end consultation" ] ;
+     fhir:definition [ fhir:v "The client has not been stabilised and the healthcare worker willend the consultation" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B7-B8-B9.DE02" ] ;
+     fhir:display [ fhir:v "stabilised, continue consultation" ] ;
+     fhir:definition [ fhir:v "The client has been stabilised and the healthcare worker will continue the consultation" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S1.DE02" ] ;
+     fhir:display [ fhir:v "mother hiv positive" ] ;
+     fhir:definition [ fhir:v "The client's mother is HIV positive" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S1.DE03" ] ;
+     fhir:display [ fhir:v "mother hiv negative" ] ;
+     fhir:definition [ fhir:v "The client's mother is HIV negative" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S1.DE04" ] ;
+     fhir:display [ fhir:v "mother hiv status - unknown or not tested" ] ;
+     fhir:definition [ fhir:v "The client's mother's HIV Status is unknown or not tested" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S1.DE05" ] ;
+     fhir:display [ fhir:v "mother hiv status - decline to answer" ] ;
+     fhir:definition [ fhir:v "The client's mother has declined to answer regarging HIV Status" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S2.DE19" ] ;
+     fhir:display [ fhir:v "correct and hygienic feed preparation" ] ;
+     fhir:definition [ fhir:v "The care giver is preparing the milk correctly and hygenically" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S2.DE20" ] ;
+     fhir:display [ fhir:v "incorrect or unhygienic feed preparation" ] ;
+     fhir:definition [ fhir:v "The care giver is not preparing the milk correctly and hygenically" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S2.DE22" ] ;
+     fhir:display [ fhir:v "cup" ] ;
+     fhir:definition [ fhir:v "The milk is given to the client using a cup" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S2.DE23" ] ;
+     fhir:display [ fhir:v "bottle" ] ;
+     fhir:definition [ fhir:v "The milk is given to the client using a bottle" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S2.DE26" ] ;
+     fhir:display [ fhir:v "feeding utensils not cleaned hygienically" ] ;
+     fhir:definition [ fhir:v "The care giver is not cleaning the feeding utensils hygienically" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S2.DE25" ] ;
+     fhir:display [ fhir:v "feeding utensils cleaned hygienically" ] ;
+     fhir:definition [ fhir:v "The care giver is cleaning the feeding utensils hygienically" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17.DE06" ] ;
+     fhir:display [ fhir:v "yes, date documented, but not here" ] ;
+     fhir:definition [ fhir:v "The caregiver is able to provide the Vitamin A supplement date but not Today" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17.DE07" ] ;
+     fhir:display [ fhir:v "no, but last dose given less than 1 month ago" ] ;
+     fhir:definition [ fhir:v "The caregiver is able to tell the healthcare worker that the last dose was given less than 1 month ago" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17.DE08" ] ;
+     fhir:display [ fhir:v "no, but last dose given between 1 and 6 months ago" ] ;
+     fhir:definition [ fhir:v "The caregiver is able to tell the healthcare worker that the last dose was given between 1 and 5 months ago" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17.DE09" ] ;
+     fhir:display [ fhir:v "no, but last dose given more than 6 months ago" ] ;
+     fhir:definition [ fhir:v "The caregiver is able to tell the healthcare worker that the last dose was given more than 6 months ago" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17.DE10" ] ;
+     fhir:display [ fhir:v "no, do not know when last dose was given" ] ;
+     fhir:definition [ fhir:v "The caregiver is not able to tell the healthcare worker when the last dose was given" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17.DE23" ] ;
+     fhir:display [ fhir:v "high hiv risk" ] ;
+     fhir:definition [ fhir:v "The client is in an area of HIV prevalence of high HIV risk." ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17.DE24" ] ;
+     fhir:display [ fhir:v "low hiv risk" ] ;
+     fhir:definition [ fhir:v "The client is in an area of HIV prevalence of low HIV risk." ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17.DE31" ] ;
+     fhir:display [ fhir:v "child hiv positive - virological" ] ;
+     fhir:definition [ fhir:v "The client is HIV Positive (Virological Test)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17.DE32" ] ;
+     fhir:display [ fhir:v "child hiv positive - serological" ] ;
+     fhir:definition [ fhir:v "The client is HIV Positive (Serological Test)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17.DE33" ] ;
+     fhir:display [ fhir:v "child hiv positive - unknown type of test" ] ;
+     fhir:definition [ fhir:v "The client is HIV Positive (Unknown Type of Test)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17.DE34" ] ;
+     fhir:display [ fhir:v "child hiv negative" ] ;
+     fhir:definition [ fhir:v "The client is HIV Negative" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17.DE35" ] ;
+     fhir:display [ fhir:v "child hiv status - unknown or not tested" ] ;
+     fhir:definition [ fhir:v "The client's HIV Status is unknown or the client has not been tested" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17.DE36" ] ;
+     fhir:display [ fhir:v "child hiv status - decline to answer" ] ;
+     fhir:definition [ fhir:v "The client has delined to answer regarding HIV Status" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17.DE46" ] ;
+     fhir:display [ fhir:v "yes" ] ;
+     fhir:definition [ fhir:v "The client has received all vaccinations for age" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17.DE47" ] ;
+     fhir:display [ fhir:v "no, incomplete vaccination" ] ;
+     fhir:definition [ fhir:v "The client has not received all vaccinations for age" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17.DE48" ] ;
+     fhir:display [ fhir:v "no, the child has never received any vaccinations to date" ] ;
+     fhir:definition [ fhir:v "The client has never received any vaccinations to date" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17.DE49" ] ;
+     fhir:display [ fhir:v "unknown" ] ;
+     fhir:definition [ fhir:v "It is not known if the client has received any vaccination" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17.DE51" ] ;
+     fhir:display [ fhir:v "bcg" ] ;
+     fhir:definition [ fhir:v "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17.DE52" ] ;
+     fhir:display [ fhir:v "opv" ] ;
+     fhir:definition [ fhir:v "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17.DE53" ] ;
+     fhir:display [ fhir:v "hep b" ] ;
+     fhir:definition [ fhir:v "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17.DE54" ] ;
+     fhir:display [ fhir:v "dpt" ] ;
+     fhir:definition [ fhir:v "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17.DE55" ] ;
+     fhir:display [ fhir:v "dpt 18 month booster" ] ;
+     fhir:definition [ fhir:v "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17.DE56" ] ;
+     fhir:display [ fhir:v "hib" ] ;
+     fhir:definition [ fhir:v "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17.DE57" ] ;
+     fhir:display [ fhir:v "rtv" ] ;
+     fhir:definition [ fhir:v "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17.DE58" ] ;
+     fhir:display [ fhir:v "pcv" ] ;
+     fhir:definition [ fhir:v "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17.DE59" ] ;
+     fhir:display [ fhir:v "pcv booster 1 for confirmed hiv infection" ] ;
+     fhir:definition [ fhir:v "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17.DE60" ] ;
+     fhir:display [ fhir:v "pcv booster 2 for confirmed hiv infection" ] ;
+     fhir:definition [ fhir:v "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17.DE61" ] ;
+     fhir:display [ fhir:v "measles" ] ;
+     fhir:definition [ fhir:v "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE09" ] ;
+     fhir:display [ fhir:v "completely unable to drink" ] ;
+     fhir:definition [ fhir:v "The client is completely unable to drink" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE10" ] ;
+     fhir:display [ fhir:v "vomits immediately / everything" ] ;
+     fhir:definition [ fhir:v "The client vomits immediately / everything" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE11" ] ;
+     fhir:display [ fhir:v "drinks poorly" ] ;
+     fhir:definition [ fhir:v "The client drinks poorly" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE12" ] ;
+     fhir:display [ fhir:v "drinks eagerly / thirstily" ] ;
+     fhir:definition [ fhir:v "The client drinks eagerly / thirstily" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE13" ] ;
+     fhir:display [ fhir:v "drinks normally" ] ;
+     fhir:definition [ fhir:v "The client drinks normally" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE24" ] ;
+     fhir:display [ fhir:v "able to finish rutf" ] ;
+     fhir:definition [ fhir:v "The client was able to finish the RUTF (the client was able to finish the minimum amount of RTUF (at least one-third of a packet of RUTF portion (92g) or 3 teaspoons from a pot within 30 minutes)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE25" ] ;
+     fhir:display [ fhir:v "unable to finish rutf" ] ;
+     fhir:definition [ fhir:v "The client was unable to finish the RUTF (the client was unable to eat one-third of a packet of RUTF portion (92g) or 3 teaspoons from a pot within 30 minutes)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE26" ] ;
+     fhir:display [ fhir:v "rutf not available" ] ;
+     fhir:definition [ fhir:v "The healthcare worker did not have any RUTF available to carry out the appetite test" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE37" ] ;
+     fhir:display [ fhir:v "not well attached to breast" ] ;
+     fhir:definition [ fhir:v "The client is not well attached to breast" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE38" ] ;
+     fhir:display [ fhir:v "good attachment" ] ;
+     fhir:definition [ fhir:v "The client has a good attachment" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE39" ] ;
+     fhir:display [ fhir:v "not sucking effectively" ] ;
+     fhir:definition [ fhir:v "The client is not sucking effectively" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE40" ] ;
+     fhir:display [ fhir:v "sucking effectively" ] ;
+     fhir:definition [ fhir:v "The client is sucking effectively" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE75" ] ;
+     fhir:display [ fhir:v "no species reported" ] ;
+     fhir:definition [ fhir:v "The client's Microscopy species result is no species reported" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17S1.DE03" ] ;
+     fhir:display [ fhir:v "red (congested) throat" ] ;
+     fhir:definition [ fhir:v "The client has a Red (congested) throat" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17S1.DE04" ] ;
+     fhir:display [ fhir:v "exudate on throat" ] ;
+     fhir:definition [ fhir:v "The client has Exudate on Throat" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17S1.DE05" ] ;
+     fhir:display [ fhir:v "membrane on throat" ] ;
+     fhir:definition [ fhir:v "The client has Membrane on throat" ]
+  ] [
+     fhir:code [ fhir:v "none" ] ;
+     fhir:display [ fhir:v "none of the listed throat problems observed" ] ;
+     fhir:definition [ fhir:v "The client has None of the listed throat problems observed" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17S1.DE08" ] ;
+     fhir:display [ fhir:v "yes, without difficulty" ] ;
+     fhir:definition [ fhir:v "The client can swallow without difficulty" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17S1.DE09" ] ;
+     fhir:display [ fhir:v "difficulty in swallowing" ] ;
+     fhir:definition [ fhir:v "The client has Difficulty in swallowing" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B17S1.DE10" ] ;
+     fhir:display [ fhir:v "unable to swallow" ] ;
+     fhir:definition [ fhir:v "The client is Unable to swallow" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B6.DE19" ] ;
+     fhir:display [ fhir:v "does not appear to be underweight" ] ;
+     fhir:definition [ fhir:v "The client is visually assessed for whether underweight by the health care worker and does not appear to be underweight (estimated weight based on height or age would be equivalent to WHZ= 0 / WAZ= 0)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B6.DE20" ] ;
+     fhir:display [ fhir:v "appears to be underweight" ] ;
+     fhir:definition [ fhir:v "The client is visually assessed for whether underweight by the health care worker and appears to be underweight (as an aide for dosing calculations) (estimated weight based on height or age would be equivalent to WHZ= -1 / WAZ= -1)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B6.DE21" ] ;
+     fhir:display [ fhir:v "appears to be severely underweight" ] ;
+     fhir:definition [ fhir:v "The client is visually assessed for whether underweight and appears to be severely underweight (as an aide for dosing calculations) (estimated weight based on height or age would be equivalent to WHZ= -2 / WAZ= -2)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B15S2.DE10" ] ;
+     fhir:display [ fhir:v "severe mucous membrane pallor" ] ;
+     fhir:definition [ fhir:v "The client has severe mucous membrane pallor" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B15S2.DE11" ] ;
+     fhir:display [ fhir:v "some mucous membrane pallor" ] ;
+     fhir:definition [ fhir:v "The client has some mucous membrane pallor" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B15S2.DE12" ] ;
+     fhir:display [ fhir:v "no mucous membrane pallor" ] ;
+     fhir:definition [ fhir:v "The client has no mucous membrane pallor" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE07" ] ;
+     fhir:display [ fhir:v "generalised skin problem" ] ;
+     fhir:definition [ fhir:v "The client has a generalised skin problem" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE08" ] ;
+     fhir:display [ fhir:v "localised skin problem" ] ;
+     fhir:definition [ fhir:v "The client has a localised skin problem" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE09" ] ;
+     fhir:display [ fhir:v "no problem" ] ;
+     fhir:definition [ fhir:v "The client does not have a generalised or localised skin problem" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE18" ] ;
+     fhir:display [ fhir:v "papular urticaria or papular pruritic eruptions" ] ;
+     fhir:definition [ fhir:v "The client has Papular Urticaria or Papular Pruritic Eruptions \n• Itchy papules at different stages of evolution.\n• Found on the arms and legs.\n• Healed lesions are often dark/ hyperpigmented.\n• The itch is difficult to manage.\n• Essential to exclude scabies." ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE19" ] ;
+     fhir:display [ fhir:v "ringworm (tinea)" ] ;
+     fhir:definition [ fhir:v "The client has Ringworm (Tinea) - \n• An itchy circular lesion with a raised edge and fine scaly area.\n• Scalp lesions may result in loss of hair" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE21" ] ;
+     fhir:display [ fhir:v "scabies" ] ;
+     fhir:definition [ fhir:v "The client has Scabies -\n• Intense itching, more severe at night.\n• Small burrows between fingers, tows, elbow areas and buttocks.\n• Secondary infection may occur.\n• Small babies may have vesicles and pustules on the palms and soles and face.\n• The infestation spreads easily, usually affecting more than one person in the household" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE22" ] ;
+     fhir:display [ fhir:v "chickenpox" ] ;
+     fhir:definition [ fhir:v "The client has Chickenpox - Mild fever preceding the rash.\n• Rash begins on the trunk and face,\nlater spreads to the arms and legs.\n• Vesicles appear progressively over days and forms scabs\nafter they rupture.\n• Contagious from the fever starts until all lesions have\ncrusted.\n• Usually lasts for about 1 week." ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE23" ] ;
+     fhir:display [ fhir:v "herpes zoster" ] ;
+     fhir:definition [ fhir:v "The client has Herpes Zoster -  Vesicles in one area on one side of body with intense pain or scars plus shooting pain.\n• They are uncommon in children except when they are immune-compromised" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE25" ] ;
+     fhir:display [ fhir:v "impetigo" ] ;
+     fhir:definition [ fhir:v "The client has Impetigo- Pustules and papules with honey -coloured crusts.\n• Commonly starts on the face or buttocks, then spreads to the neck, hands, arms and legs." ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE31" ] ;
+     fhir:display [ fhir:v "molluscum contagiosum" ] ;
+     fhir:definition [ fhir:v "The client has Molluscum Contagiosum -Caused by a poxvirus.\n• Dome-shaped papules with a central depression\n(umblication).\n• Most commonly seen on the face and trunk in children" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE32" ] ;
+     fhir:display [ fhir:v "warts" ] ;
+     fhir:definition [ fhir:v "The client has Warts - Appears as papules or nodules with a rough surface.\n• Seen most often on the hands and fingers, but can be\nfound anywhere on\nthe body." ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE33" ] ;
+     fhir:display [ fhir:v "seborrhoeic dermatitis" ] ;
+     fhir:definition [ fhir:v "The client has Seborrhoeic Dermatitis - Greasy scales and redness on central face, body folds.\n• The scalp, face, ears and skin folds (e.g. axillae, groins, under the breasts) are commonly affected." ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE35" ] ;
+     fhir:display [ fhir:v "fixed drug reaction" ] ;
+     fhir:definition [ fhir:v "The client has Fixed Drug Reaction - One or more dark round or oval skin lesions with central vesicles .\n• The lesions recur on the same spot, and increase in number with each successive attack" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE36" ] ;
+     fhir:display [ fhir:v "eczema" ] ;
+     fhir:definition [ fhir:v "The client has Eczema - Erythematous (red), sometimes scaly plaques found on the face, flexures, trunk and extensors.\n• Yellow pustules which crust indicate\nsecondary bacterial infection." ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE37" ] ;
+     fhir:display [ fhir:v "steven johnson syndrome (sjs)" ] ;
+     fhir:definition [ fhir:v "The client has Steven Johnson Syndrome (SJS) - Severe and acute reaction due to many drugs, the commonest being cotrimoxazole or nevirapine.\n• Lesions involve the skin as well as the mucous membranes (e.g. eyes, mouth and genitalia).\n• May start as widespread red irregular rash with or without blisters. The blisters rupture leaving denuded areas of skin.\n• May cause difficulty in breathing." ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE44" ] ;
+     fhir:display [ fhir:v "skin problem" ] ;
+     fhir:definition [ fhir:v "The health care worker would like to add a skin problem" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE45" ] ;
+     fhir:display [ fhir:v "oral sores or mouth ulcers" ] ;
+     fhir:definition [ fhir:v "The health care worker would like to add an Oral Sores or Mouth Ulcers problem" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE46" ] ;
+     fhir:display [ fhir:v "eye problem" ] ;
+     fhir:definition [ fhir:v "The health care worker would like to add an Eye problem" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B14S2.DE47" ] ;
+     fhir:display [ fhir:v "no - do not add a skin or mouth or eye problem" ] ;
+     fhir:definition [ fhir:v "The healthcare worker would not like to add a Skin or Mouth or Eye Problem" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S2.DE29" ] ;
+     fhir:display [ fhir:v "no breastmilk at all" ] ;
+     fhir:definition [ fhir:v "The caregiver does not give the client any breastmilk at all" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S2.DE11" ] ;
+     fhir:display [ fhir:v "inappropriate replacement milk" ] ;
+     fhir:definition [ fhir:v "The care giver is giving inappropriate replacement milk" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B21S2.DE10" ] ;
+     fhir:display [ fhir:v "appropriate replacement milk" ] ;
+     fhir:definition [ fhir:v "The care giver is giving appropriate  replacement milk" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE18" ] ;
+     fhir:display [ fhir:v "chest indrawing (post inhaled bronchodilator trial)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE19" ] ;
+     fhir:display [ fhir:v "respiratory rate (post inhaled bronchodilator trial)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE20" ] ;
+     fhir:display [ fhir:v "fast breathing (post inhaled bronchodilator trial)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE21" ] ;
+     fhir:display [ fhir:v "no fast breathing and no chest indrawing (post inhaled bronchodilator trial)" ]
+  ] [
+     fhir:code [ fhir:v "EmCare.B22.DE22" ] ;
+     fhir:display [ fhir:v "inhaled bronchodilator trial not feasible or available" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

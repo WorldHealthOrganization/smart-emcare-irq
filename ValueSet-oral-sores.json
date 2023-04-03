@@ -1,0 +1,63 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "oral-sores",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"CodeSystem-emcare-custom-codes.html\"><code>https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE41\">EmCare.B14S2.DE41</a></td><td>Mouth Sores or Mouth Ulcers - Deep and Extensive</td><td>The client has mouth sores or mouth ulcers that are deep and extensive</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE42\">EmCare.B14S2.DE42</a></td><td>Mouth Sores or Mouth Ulcers - Not Deep and Extensive</td><td>The client has mouth sores or mouth ulcers that are not deep and extensive</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE40\">EmCare.B14S2.DE40</a></td><td>Oral Thrush</td><td>The client has oral thrush</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE39\">EmCare.B14S2.DE39</a></td><td>No Oral Sores or Mouth Ulcers</td><td>The client is not reported to have oral sores or mouth ulcers</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/oral-sores",
+  "version" : "0.1.0",
+  "name" : "valueset-oral-sores",
+  "title" : "EmCare.B14S2.DE38",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2023-04-03T14:56:37+00:00",
+  "publisher" : "World Health Organization (WHO)",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.who.int"
+    }]
+  }],
+  "description" : "Oral sores or Mouth Ulcers",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001"
+    }]
+  }],
+  "immutable" : true,
+  "compose" : {
+    "include" : [{
+      "system" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+      "concept" : [{
+        "code" : "EmCare.B14S2.DE41",
+        "display" : "Mouth Sores or Mouth Ulcers - Deep and Extensive",
+        "designation" : [{
+          "value" : "The client has mouth sores or mouth ulcers that are deep and extensive"
+        }]
+      },
+      {
+        "code" : "EmCare.B14S2.DE42",
+        "display" : "Mouth Sores or Mouth Ulcers - Not Deep and Extensive",
+        "designation" : [{
+          "value" : "The client has mouth sores or mouth ulcers that are not deep and extensive"
+        }]
+      },
+      {
+        "code" : "EmCare.B14S2.DE40",
+        "display" : "Oral Thrush",
+        "designation" : [{
+          "value" : "The client has oral thrush"
+        }]
+      },
+      {
+        "code" : "EmCare.B14S2.DE39",
+        "display" : "No Oral Sores or Mouth Ulcers",
+        "designation" : [{
+          "value" : "The client is not reported to have oral sores or mouth ulcers"
+        }]
+      }]
+    }]
+  }
+}

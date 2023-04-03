@@ -1,0 +1,32 @@
+{
+  "resourceType" : "Library",
+  "id" : "emcarecondition",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Contents</h2></div>"
+  },
+  "url" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcarecondition",
+  "version" : "0.1.0",
+  "name" : "emcarecondition",
+  "status" : "active",
+  "type" : {
+    "coding" : [{
+      "system" : "http://hl7.org/fhir/ValueSet/library-type",
+      "code" : "logic-library"
+    }]
+  },
+  "date" : "2023-04-03T14:56:37+00:00",
+  "publisher" : "World Health Organization (WHO)",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.who.int"
+    }]
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001"
+    }]
+  }]
+}

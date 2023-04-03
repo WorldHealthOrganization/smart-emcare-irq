@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Library xmlns="http://hl7.org/fhir">
+  <id value="emcareb22assessmentstests"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Parameters</h2><table class="grid"><tr><td>force-collection</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>ageinmonths</td><td>out</td><td/><td/><td>integer</td></tr><tr><td>age auto-calculated (presented as number of years, months, days) of the client based on date of birth or estimated age or based on auto-calculation from estimaged date of birth</td><td>out</td><td/><td/><td>integer</td></tr><tr><td>ageindays</td><td>out</td><td/><td/><td>integer</td></tr><tr><td>a-breastfeedingtest</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>a-respiratoryrate</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>a-bronchodilatortest</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>a-hemoglobin</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>a-secondtemperature</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>a-fluidtest</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>respiratory rate profile</td><td>out</td><td/><td/><td>Quantity</td></tr><tr><td>respiratory rate second count profile</td><td>out</td><td/><td/><td>Quantity</td></tr><tr><td>fast breathing profile</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>oftrp</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>ds</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcare.b7.de09</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>emcare.b7.de10</td><td>out</td><td/><td/><td>boolean</td></tr></table><h2>Contents</h2></div>
+  </text>
+  <url value="https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb22assessmentstests"/>
+  <identifier>
+    <use value="official"/>
+    <value value="emcare.b22.assessmentstests"/>
+  </identifier>
+  <version value="0.1.0"/>
+  <name value="emcareb22assessmentstests"/>
+  <title value="EmCare.B22.AssessmentsTests"/>
+  <status value="active"/>
+  <type>
+    <coding>
+      <system value="http://hl7.org/fhir/ValueSet/library-type"/>
+      <code value="logic-library"/>
+    </coding>
+  </type>
+  <date value="2023-04-03T14:56:37+00:00"/>
+  <publisher value="World Health Organization (WHO)"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.who.int"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <parameter>
+    <name value="force-collection"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="ageinmonths"/>
+    <use value="out"/>
+    <type value="integer"/>
+  </parameter>
+  <parameter>
+    <name value="age auto-calculated (presented as number of years, months, days) of the client based on date of birth or estimated age or based on auto-calculation from estimaged date of birth"/>
+    <use value="out"/>
+    <type value="integer"/>
+  </parameter>
+  <parameter>
+    <name value="ageindays"/>
+    <use value="out"/>
+    <type value="integer"/>
+  </parameter>
+  <parameter>
+    <name value="a-breastfeedingtest"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="a-respiratoryrate"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="a-bronchodilatortest"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="a-hemoglobin"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="a-secondtemperature"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="a-fluidtest"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="respiratory rate profile"/>
+    <use value="out"/>
+    <type value="Quantity"/>
+  </parameter>
+  <parameter>
+    <name value="respiratory rate second count profile"/>
+    <use value="out"/>
+    <type value="Quantity"/>
+  </parameter>
+  <parameter>
+    <name value="fast breathing profile"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="oftrp"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="ds"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="emcare.b7.de09"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="emcare.b7.de10"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+</Library>

@@ -1,0 +1,403 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>WHO.FHIR.EMC-CDS\EmCare.Z.Score - TTL Representation - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/who.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"8.38"}
+    h3,h4,h5,h6{--heading-prefix:"8.38"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">WHO Emergency Care Guideline Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - CI Build
+
+
+
+  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="toc.html">Table of Contents</a></li>
+  <li><a href="documentation.html">Documentation</a></li>
+  <li><a href="guidance.html">Guidance</a></li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">FHIR Spec</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://cql.hl7.org/index.html">CQL Spec</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/uv/cpg">FHIR Clinical Guidelines</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="license.html">License</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>EmCare.Z.Score</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 9" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">WHO Emergency Care Guideline Implementation Guide - Local Development build (v0.1.0). See the <a href="http://fhir.org/guides/who/emcare/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="Library-emcarezscore.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="Library-emcarezscore.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Library-emcarezscore.json.html">JSON</a>
+    </li>
+  
+
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: EmCare.Z.Score - TTL Representation</h2>
+  <table class="colsi">
+    <tr>
+
+      <td colspan="2">
+        
+          Active
+          
+            as of 2023-04-03
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="Library-emcarezscore.ttl" no-download="true">Raw ttl</a> | <a href="Library-emcarezscore.ttl" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="rdf" style="white-space: pre; overflow: hidden">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+ a fhir:Library ;
+  <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
+  <a href="http://hl7.org/fhir/R4/library.html#Library.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;emcarezscore&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/library.html#Library.text">fhir:text</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
+fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;Related Artifacts&lt;/h2&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;depends-on&lt;/td&gt;&lt;td&gt;&lt;code&gt;http://fhir.org/guides/who/anc-cds/Library/FHIRHelpers&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;depends-on&lt;/td&gt;&lt;td&gt;&lt;code&gt;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcarebase&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;depends-on&lt;/td&gt;&lt;td&gt;&lt;code&gt;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/weightforage&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;depends-on&lt;/td&gt;&lt;td&gt;&lt;code&gt;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/anthrobase&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;depends-on&lt;/td&gt;&lt;td&gt;&lt;code&gt;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/weightforlength&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;depends-on&lt;/td&gt;&lt;td&gt;&lt;code&gt;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/weightforheight&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h2&gt;Parameters&lt;/h2&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;encounter&lt;/td&gt;&lt;td&gt;in&lt;/td&gt;&lt;td/&gt;&lt;td/&gt;&lt;td&gt;Encounter&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;pastweight&lt;/td&gt;&lt;td&gt;out&lt;/td&gt;&lt;td/&gt;&lt;td/&gt;&lt;td&gt;decimal&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;patientsex&lt;/td&gt;&lt;td&gt;out&lt;/td&gt;&lt;td/&gt;&lt;td/&gt;&lt;td&gt;string&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ageatpastweight&lt;/td&gt;&lt;td&gt;out&lt;/td&gt;&lt;td/&gt;&lt;td/&gt;&lt;td&gt;integer&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;pastweightzscore&lt;/td&gt;&lt;td&gt;out&lt;/td&gt;&lt;td/&gt;&lt;td/&gt;&lt;td&gt;decimal&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;pastweightactualised&lt;/td&gt;&lt;td&gt;out&lt;/td&gt;&lt;td/&gt;&lt;td/&gt;&lt;td&gt;decimal&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;WAZ&lt;/td&gt;&lt;td&gt;out&lt;/td&gt;&lt;td/&gt;&lt;td/&gt;&lt;td&gt;decimal&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h2&gt;Data Requirements&lt;/h2&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td colspan=\&quot;2\&quot;&gt;&lt;b&gt;Type&lt;/b&gt;: &lt;a href=\&quot;http://hl7.org/fhir/R4/patient.html\&quot;&gt;Patient&lt;/a&gt; (&lt;a href=\&quot;http://hl7.org/fhir/R4/patient.html\&quot;&gt;Patient&lt;/a&gt;)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td colspan=\&quot;2\&quot;&gt;&lt;b&gt;Type&lt;/b&gt;: &lt;a href=\&quot;http://hl7.org/fhir/R4/encounter.html\&quot;&gt;Encounter&lt;/a&gt; (&lt;a href=\&quot;http://hl7.org/fhir/R4/encounter.html\&quot;&gt;Encounter&lt;/a&gt;)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td colspan=\&quot;2\&quot;&gt;&lt;b&gt;Type&lt;/b&gt;: &lt;a href=\&quot;http://hl7.org/fhir/R4/observation.html\&quot;&gt;Observation&lt;/a&gt; (&lt;a href=\&quot;http://hl7.org/fhir/R4/observation.html\&quot;&gt;Observation&lt;/a&gt;)&lt;/td&gt;&lt;/tr&gt;&lt;tr style=\&quot;background-color: #efefef\&quot;&gt;&lt;td&gt;Filter&lt;/td&gt;&lt;td&gt;Value&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;code&lt;/td&gt;&lt;td&gt;One of these codes: [not stated] EmCare.B6.DE06: EmCare.B6.DE06&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h2&gt;Contents&lt;/h2&gt;&lt;p&gt;&lt;code&gt;text/cql&lt;/code&gt;&lt;/p&gt;&lt;pre&gt;&lt;code class=\&quot;language-sql\&quot;&gt;/*\n@author: Patrick Delcroix\n@description: This library is part of the project EmCare\n*/\nlibrary emcarezscore version '1.0.1.rc12.build.329'\nusing FHIR version '4.0.1'\ninclude FHIRHelpers version '4.0.1' called FHIRHelpers \ninclude emcarebase version '1.0.1.rc12.build.329' called Base\ninclude WeightForAge version '1.0.0' called wfa\ninclude WeightForLength version '1.0.0' called wfl\ninclude WeightForHeight version '1.0.0' called wfh\n\ncodesystem &amp;quot;EmCare&amp;quot; : 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes'\n\ncode &amp;quot;Weight&amp;quot;: 'EmCare.B6.DE06' from &amp;quot;EmCare&amp;quot; display 'Weight'\ncode &amp;quot;Estimated Weight&amp;quot;: 'EmCare.B6.DE08' from &amp;quot;EmCare&amp;quot; display 'Estimated Weight'\ncode &amp;quot;MUAC&amp;quot;: 'EmCare.B6.DE17' from &amp;quot;EmCare&amp;quot; display 'MUAC'\ncode &amp;quot;Length&amp;quot;: 'EmCare.B6.DE12' from &amp;quot;EmCare&amp;quot; display 'Length'\ncode &amp;quot;Height&amp;quot;: 'EmCare.B6.DE09' from &amp;quot;EmCare&amp;quot; display 'Height'\ncode &amp;quot;Visually assess&amp;quot;: 'EmCare.B6.DE18' from &amp;quot;EmCare&amp;quot; display 'Visually assess'\ncode &amp;quot;Underweight&amp;quot;: 'EmCare.B6.DE20' from &amp;quot;EmCare&amp;quot; display 'Underweight' \ncode &amp;quot;Severely Underweight&amp;quot;: 'EmCare.B6.DE21' from &amp;quot;EmCare&amp;quot; display 'Severely Underweight' \n\nparameter &amp;quot;encounterid&amp;quot; String\n\ncontext Patient\n\n\n\n\n\n/* pastweight : Previous Weight*/\ndefine &amp;quot;pastweightobs&amp;quot;:\n    if AgeInMonths()&amp;lt; 4 and Base.GetHistoricObservation(&amp;quot;Weight&amp;quot;, 63) is not null then\n      Base.GetHistoricObservation(&amp;quot;Weight&amp;quot;, 63)  as FHIR.Observation\n    else  if AgeInMonths()&amp;lt; 6 and Base.GetHistoricObservation(&amp;quot;Weight&amp;quot;, 94)   is not null then\n      Base.GetHistoricObservation(&amp;quot;Weight&amp;quot;, 94)  as  FHIR.Observation\n    else if AgeInMonths()&amp;lt; 6 and Base.GetHistoricObservation(&amp;quot;Weight&amp;quot;, 126)   is not null then\n       Base.GetHistoricObservation(&amp;quot;Weight&amp;quot;, 126)  as FHIR.Observation\n    else if Base.GetHistoricObservation(&amp;quot;Weight&amp;quot;, 201)  is not null then\n       Base.GetHistoricObservation(&amp;quot;Weight&amp;quot;, 201)  as FHIR.Observation\n    else\n      null\n\ndefine &amp;quot;pastweight&amp;quot;:\n    if &amp;quot;pastweightobs&amp;quot; is not null then\n      &amp;quot;pastweightobs&amp;quot;.value\n    else\n      null\n\n\n/* patientsex : Patient sex*/\ndefine &amp;quot;patientsex&amp;quot;:\n    if Patient.gender = 'female' then 'female' else 'male'\n\n/* ageatpastweight : Age at Previous Weight*/\ndefine &amp;quot;ageatpastweight&amp;quot;:\n    if &amp;quot;pastweight&amp;quot; is not null  then\n      (difference in days between Patient.birthDate and ToDate(&amp;quot;pastweightobs&amp;quot;.issued) ) * ( 1.0 as System.Decimal )\n    else\n     null\n\n/* pastweightzscore : Z-Score at Previous Weight*/\ndefine &amp;quot;pastweightzscore&amp;quot;:\n    if &amp;quot;pastweight&amp;quot; is not null  then\n      wfa.generateZScoreWeightForAge(&amp;quot;patientsex&amp;quot;, &amp;quot;ageatpastweight&amp;quot; , ((convert &amp;quot;pastweight&amp;quot; to 'kg').value * ( 1.0 as System.Decimal)))\n    else\n      null\n\n/* pastweightactualised : Weight from  at Previous Weight*/\ndefine &amp;quot;pastweightactualised&amp;quot;:\n    if &amp;quot;pastweightzscore&amp;quot; is not null then\n      System.Quantity { value: Round(wfa.generateWeightFromAge(&amp;quot;patientsex&amp;quot;,AgeInDays() * ( 1.0 as System.Decimal ),  &amp;quot;pastweightzscore&amp;quot; ),2), unit: 'kg'} \n    else \n       null\n\ndefine existingweight:\n  Base.GetObsValue(&amp;quot;Weight&amp;quot;)\n\ndefine existingestimnatedweight:\n  if existingweight is null then  \n    Base.GetObsValue(&amp;quot;Estimated Weight&amp;quot;)\n  else \n    null\n\ndefine existingheight:\n  Base.GetObsValue(&amp;quot;Height&amp;quot;)\n\ndefine existinglength:\n  Base.GetObsValue(&amp;quot;Length&amp;quot;)\n\ndefine existingvisual:\n  Base.GetObsValue(&amp;quot;Visually assess&amp;quot;)\n\ndefine existingmuac:\n  Base.GetObsValue(&amp;quot;MUAC&amp;quot;)\n\n\n\n\ndefine zscorefrommuac:\n  if existingmuac is null then 0.0\n  else if existingmuac &amp;lt; 115 'mnm' then -3.0\n  else if existingmuac &amp;lt; 125 'mnm' then -2.0\n  else 0.0\n\ndefine estimatedweight:\n  case  \n  when existingweight is not null then null\n  when existingestimnatedweight is not null then existingestimnatedweight\n  when pastweightactualised is not null then pastweightactualised\n  when AgeInMonths()&amp;gt;24 and existingheight then weightfromheight\n  when AgeInMonths()&amp;lt;=24 and existinglength then weightfromlength\n  else weightfromage\n  end\n\ndefine zscorefromvisual:\n    if existingvisual is not null then\n      case  \n        when existingvisual ~ &amp;quot;Severely Underweight&amp;quot; then -3.0\n        when existingvisual ~ &amp;quot;Underweight&amp;quot; then -2.0\n        else 0.0\n      end\n    else  null\n\n\ndefine weightfromlength:\n    System.Quantity { value: Round(wfl.generateWeightFromLength(&amp;quot;patientsex&amp;quot;,(convert existinglength to 'cm').value * ( 1.0 as System.Decimal ), zscorefrommuac),2), unit: 'kg'}\n\ndefine weightfromheight:\n    System.Quantity { value:Round(wfh.generateWeightFromHeight(&amp;quot;patientsex&amp;quot;,(convert existingheight to 'cm').value * ( 1.0 as System.Decimal ), zscorefrommuac),2), unit: 'kg'}\n\ndefine weightfromage:\n    System.Quantity { value:Round(wfa.generateWeightFromAge(&amp;quot;patientsex&amp;quot;,AgeInDays() * ( 1.0 as System.Decimal ), zscorefrommuac),2), unit: 'kg'}\n/*\n(convert Base.HasObs(&amp;quot;Weight&amp;quot;) to 'Kg') does not work, so let's assume the weight is in Kg\n*/\ndefine &amp;quot;WAZ&amp;quot;:\n    if existingweight is not null then\n         wfa.generateZScoreWeightForAge(&amp;quot;patientsex&amp;quot;, AgeInDays() * ( 1.0 as System.Decimal ) ,  (convert existingweight to 'kg').value * ( 1.0 as System.Decimal ))\n    else if existingmuac is not null then\n        zscorefrommuac\n    else if existingvisual then\n        zscorefromvisual\n    else null\n\n&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&quot;
+  ] ; # 
+  <a href="http://hl7.org/fhir/R4/library.html#Library.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir//Library/emcarezscore&quot;^^xsd:anyURI] ; # 
+  <a href="http://hl7.org/fhir/R4/library.html#Library.identifier">fhir:identifier</a> ( [
+<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.use">fhir:use</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;official&quot; ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;EmCareZScore&quot; ]
+  ] ) ; # 
+  <a href="http://hl7.org/fhir/R4/library.html#Library.version">fhir:version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;0.1.0&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/library.html#Library.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;emcarezscore&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/library.html#Library.title">fhir:title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;EmCare.Z.Score&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/library.html#Library.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;active&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/library.html#Library.type">fhir:type</a> [
+    ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/ValueSet/library-type&quot;^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;logic-library&quot; ]     ] )
+  ] ; # 
+  <a href="http://hl7.org/fhir/R4/library.html#Library.date">fhir:date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2023-04-03T14:56:37+00:00&quot;^^xsd:dateTime] ; # 
+  <a href="http://hl7.org/fhir/R4/library.html#Library.publisher">fhir:publisher</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;World Health Organization (WHO)&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/library.html#Library.contact">fhir:contact</a> ( [
+    ( <a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">fhir:telecom</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;url&quot; ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;https://www.who.int&quot; ]     ] )
+  ] ) ; # 
+  <a href="http://hl7.org/fhir/R4/library.html#Library.jurisdiction">fhir:jurisdiction</a> ( [
+    ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://unstats.un.org/unsd/methods/m49/m49.htm&quot;^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;001&quot; ]     ] )
+  ] ) ; # 
+  <a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">fhir:relatedArtifact</a> ( [
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">fhir:type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;depends-on&quot; ] ;
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">fhir:resource</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.org/guides/who/anc-cds/Library/FHIRHelpers&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/who/anc-cds/Library/FHIRHelpers&gt;     ]
+  ] [
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">fhir:type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;depends-on&quot; ] ;
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">fhir:resource</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcarebase&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcarebase&gt;     ]
+  ] [
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">fhir:type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;depends-on&quot; ] ;
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">fhir:resource</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/weightforage&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/weightforage&gt;     ]
+  ] [
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">fhir:type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;depends-on&quot; ] ;
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">fhir:resource</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/anthrobase&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/anthrobase&gt;     ]
+  ] [
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">fhir:type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;depends-on&quot; ] ;
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">fhir:resource</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/weightforlength&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/weightforlength&gt;     ]
+  ] [
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">fhir:type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;depends-on&quot; ] ;
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">fhir:resource</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/weightforheight&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/weightforheight&gt;     ]
+  ] ) ; # 
+  <a href="http://hl7.org/fhir/R4/library.html#Library.parameter">fhir:parameter</a> ( [
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;encounter&quot; ] ;
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.use">fhir:use</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;in&quot; ] ;
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.type">fhir:type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;Encounter&quot; ]
+  ] [
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;pastweight&quot; ] ;
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.use">fhir:use</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;out&quot; ] ;
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.type">fhir:type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;decimal&quot; ]
+  ] [
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;patientsex&quot; ] ;
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.use">fhir:use</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;out&quot; ] ;
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.type">fhir:type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;string&quot; ]
+  ] [
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;ageatpastweight&quot; ] ;
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.use">fhir:use</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;out&quot; ] ;
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.type">fhir:type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;integer&quot; ]
+  ] [
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;pastweightzscore&quot; ] ;
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.use">fhir:use</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;out&quot; ] ;
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.type">fhir:type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;decimal&quot; ]
+  ] [
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;pastweightactualised&quot; ] ;
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.use">fhir:use</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;out&quot; ] ;
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.type">fhir:type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;decimal&quot; ]
+  ] [
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;WAZ&quot; ] ;
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.use">fhir:use</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;out&quot; ] ;
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.type">fhir:type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;decimal&quot; ]
+  ] ) ; # 
+  <a href="http://hl7.org/fhir/R4/library.html#Library.dataRequirement">fhir:dataRequirement</a> ( [
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.type">fhir:type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;Patient&quot; ] ;
+    ( <a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.profile">fhir:profile</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/Patient&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/StructureDefinition/Patient&gt;     ] )
+  ] [
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.type">fhir:type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;Encounter&quot; ] ;
+    ( <a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.profile">fhir:profile</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/Encounter&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/StructureDefinition/Encounter&gt;     ] )
+  ] [
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.type">fhir:type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;Observation&quot; ] ;
+    ( <a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.profile">fhir:profile</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/Observation&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/StructureDefinition/Observation&gt;     ] ) ;
+    ( <a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.mustSupport">fhir:mustSupport</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;code&quot; ] [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;encounter.reference&quot; ] [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;encounter&quot; ] [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;value&quot; ] [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;status&quot; ] ) ;
+    ( <a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.codeFilter">fhir:codeFilter</a> [
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.codeFilter.path">fhir:path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;code&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.codeFilter.code">fhir:code</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;EmCare.B6.DE06&quot; ]       ] )     ] )
+  ] ) ; # 
+  <a href="http://hl7.org/fhir/R4/library.html#Library.content">fhir:content</a> ( [
+<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ig-loader-emcarezscore.cql&quot; ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.contentType">fhir:contentType</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;text/cql&quot; ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.data">fhir:data</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#base64Binary">fhir:v</a> &quot;LyoKQGF1dGhvcjogUGF0cmljayBEZWxjcm9peApAZGVzY3JpcHRpb246IFRoaXMgbGlicmFyeSBpcyBwYXJ0IG9mIHRoZSBwcm9qZWN0IEVtQ2FyZQoqLwpsaWJyYXJ5IGVtY2FyZXpzY29yZSB2ZXJzaW9uICcxLjAuMS5yYzEyLmJ1aWxkLjMyOScKdXNpbmcgRkhJUiB2ZXJzaW9uICc0LjAuMScKaW5jbHVkZSBGSElSSGVscGVycyB2ZXJzaW9uICc0LjAuMScgY2FsbGVkIEZISVJIZWxwZXJzIAppbmNsdWRlIGVtY2FyZWJhc2UgdmVyc2lvbiAnMS4wLjEucmMxMi5idWlsZC4zMjknIGNhbGxlZCBCYXNlCmluY2x1ZGUgV2VpZ2h0Rm9yQWdlIHZlcnNpb24gJzEuMC4wJyBjYWxsZWQgd2ZhCmluY2x1ZGUgV2VpZ2h0Rm9yTGVuZ3RoIHZlcnNpb24gJzEuMC4wJyBjYWxsZWQgd2ZsCmluY2x1ZGUgV2VpZ2h0Rm9ySGVpZ2h0IHZlcnNpb24gJzEuMC4wJyBjYWxsZWQgd2ZoCgpjb2Rlc3lzdGVtICJFbUNhcmUiIDogJ2h0dHBzOi8vZmhpci5kay5zd2lzc3RwaC1taXMuY2gvbWF0Y2hib3gvZmhpci9Db2RlU3lzdGVtL2VtY2FyZS1jdXN0b20tY29kZXMnCgpjb2RlICJXZWlnaHQiOiAnRW1DYXJlLkI2LkRFMDYnIGZyb20gIkVtQ2FyZSIgZGlzcGxheSAnV2VpZ2h0Jwpjb2RlICJFc3RpbWF0ZWQgV2VpZ2h0IjogJ0VtQ2FyZS5CNi5ERTA4JyBmcm9tICJFbUNhcmUiIGRpc3BsYXkgJ0VzdGltYXRlZCBXZWlnaHQnCmNvZGUgIk1VQUMiOiAnRW1DYXJlLkI2LkRFMTcnIGZyb20gIkVtQ2FyZSIgZGlzcGxheSAnTVVBQycKY29kZSAiTGVuZ3RoIjogJ0VtQ2FyZS5CNi5ERTEyJyBmcm9tICJFbUNhcmUiIGRpc3BsYXkgJ0xlbmd0aCcKY29kZSAiSGVpZ2h0IjogJ0VtQ2FyZS5CNi5ERTA5JyBmcm9tICJFbUNhcmUiIGRpc3BsYXkgJ0hlaWdodCcKY29kZSAiVmlzdWFsbHkgYXNzZXNzIjogJ0VtQ2FyZS5CNi5ERTE4JyBmcm9tICJFbUNhcmUiIGRpc3BsYXkgJ1Zpc3VhbGx5IGFzc2VzcycKY29kZSAiVW5kZXJ3ZWlnaHQiOiAnRW1DYXJlLkI2LkRFMjAnIGZyb20gIkVtQ2FyZSIgZGlzcGxheSAnVW5kZXJ3ZWlnaHQnIApjb2RlICJTZXZlcmVseSBVbmRlcndlaWdodCI6ICdFbUNhcmUuQjYuREUyMScgZnJvbSAiRW1DYXJlIiBkaXNwbGF5ICdTZXZlcmVseSBVbmRlcndlaWdodCcgCgpwYXJhbWV0ZXIgImVuY291bnRlcmlkIiBTdHJpbmcKCmNvbnRleHQgUGF0aWVudAoKCgoKCi8qIHBhc3R3ZWlnaHQgOiBQcmV2aW91cyBXZWlnaHQqLwpkZWZpbmUgInBhc3R3ZWlnaHRvYnMiOgogICAgaWYgQWdlSW5Nb250aHMoKTwgNCBhbmQgQmFzZS5HZXRIaXN0b3JpY09ic2VydmF0aW9uKCJXZWlnaHQiLCA2MykgaXMgbm90IG51bGwgdGhlbgogICAgICBCYXNlLkdldEhpc3RvcmljT2JzZXJ2YXRpb24oIldlaWdodCIsIDYzKSAgYXMgRkhJUi5PYnNlcnZhdGlvbgogICAgZWxzZSAgaWYgQWdlSW5Nb250aHMoKTwgNiBhbmQgQmFzZS5HZXRIaXN0b3JpY09ic2VydmF0aW9uKCJXZWlnaHQiLCA5NCkgICBpcyBub3QgbnVsbCB0aGVuCiAgICAgIEJhc2UuR2V0SGlzdG9yaWNPYnNlcnZhdGlvbigiV2VpZ2h0IiwgOTQpICBhcyAgRkhJUi5PYnNlcnZhdGlvbgogICAgZWxzZSBpZiBBZ2VJbk1vbnRocygpPCA2IGFuZCBCYXNlLkdldEhpc3RvcmljT2JzZXJ2YXRpb24oIldlaWdodCIsIDEyNikgICBpcyBub3QgbnVsbCB0aGVuCiAgICAgICBCYXNlLkdldEhpc3RvcmljT2JzZXJ2YXRpb24oIldlaWdodCIsIDEyNikgIGFzIEZISVIuT2JzZXJ2YXRpb24KICAgIGVsc2UgaWYgQmFzZS5HZXRIaXN0b3JpY09ic2VydmF0aW9uKCJXZWlnaHQiLCAyMDEpICBpcyBub3QgbnVsbCB0aGVuCiAgICAgICBCYXNlLkdldEhpc3RvcmljT2JzZXJ2YXRpb24oIldlaWdodCIsIDIwMSkgIGFzIEZISVIuT2JzZXJ2YXRpb24KICAgIGVsc2UKICAgICAgbnVsbAoKZGVmaW5lICJwYXN0d2VpZ2h0IjoKICAgIGlmICJwYXN0d2VpZ2h0b2JzIiBpcyBub3QgbnVsbCB0aGVuCiAgICAgICJwYXN0d2VpZ2h0b2JzIi52YWx1ZQogICAgZWxzZQogICAgICBudWxsCgoKLyogcGF0aWVudHNleCA6IFBhdGllbnQgc2V4Ki8KZGVmaW5lICJwYXRpZW50c2V4IjoKICAgIGlmIFBhdGllbnQuZ2VuZGVyID0gJ2ZlbWFsZScgdGhlbiAnZmVtYWxlJyBlbHNlICdtYWxlJwoKLyogYWdlYXRwYXN0d2VpZ2h0IDogQWdlIGF0IFByZXZpb3VzIFdlaWdodCovCmRlZmluZSAiYWdlYXRwYXN0d2VpZ2h0IjoKICAgIGlmICJwYXN0d2VpZ2h0IiBpcyBub3QgbnVsbCAgdGhlbgogICAgICAoZGlmZmVyZW5jZSBpbiBkYXlzIGJldHdlZW4gUGF0aWVudC5iaXJ0aERhdGUgYW5kIFRvRGF0ZSgicGFzdHdlaWdodG9icyIuaXNzdWVkKSApICogKCAxLjAgYXMgU3lzdGVtLkRlY2ltYWwgKQogICAgZWxzZQogICAgIG51bGwKCi8qIHBhc3R3ZWlnaHR6c2NvcmUgOiBaLVNjb3JlIGF0IFByZXZpb3VzIFdlaWdodCovCmRlZmluZSAicGFzdHdlaWdodHpzY29yZSI6CiAgICBpZiAicGFzdHdlaWdodCIgaXMgbm90IG51bGwgIHRoZW4KICAgICAgd2ZhLmdlbmVyYXRlWlNjb3JlV2VpZ2h0Rm9yQWdlKCJwYXRpZW50c2V4IiwgImFnZWF0cGFzdHdlaWdodCIgLCAoKGNvbnZlcnQgInBhc3R3ZWlnaHQiIHRvICdrZycpLnZhbHVlICogKCAxLjAgYXMgU3lzdGVtLkRlY2ltYWwpKSkKICAgIGVsc2UKICAgICAgbnVsbAoKLyogcGFzdHdlaWdodGFjdHVhbGlzZWQgOiBXZWlnaHQgZnJvbSAgYXQgUHJldmlvdXMgV2VpZ2h0Ki8KZGVmaW5lICJwYXN0d2VpZ2h0YWN0dWFsaXNlZCI6CiAgICBpZiAicGFzdHdlaWdodHpzY29yZSIgaXMgbm90IG51bGwgdGhlbgogICAgICBTeXN0ZW0uUXVhbnRpdHkgeyB2YWx1ZTogUm91bmQod2ZhLmdlbmVyYXRlV2VpZ2h0RnJvbUFnZSgicGF0aWVudHNleCIsQWdlSW5EYXlzKCkgKiAoIDEuMCBhcyBTeXN0ZW0uRGVjaW1hbCApLCAgInBhc3R3ZWlnaHR6c2NvcmUiICksMiksIHVuaXQ6ICdrZyd9IAogICAgZWxzZSAKICAgICAgIG51bGwKCmRlZmluZSBleGlzdGluZ3dlaWdodDoKICBCYXNlLkdldE9ic1ZhbHVlKCJXZWlnaHQiKQoKZGVmaW5lIGV4aXN0aW5nZXN0aW1uYXRlZHdlaWdodDoKICBpZiBleGlzdGluZ3dlaWdodCBpcyBudWxsIHRoZW4gIAogICAgQmFzZS5HZXRPYnNWYWx1ZSgiRXN0aW1hdGVkIFdlaWdodCIpCiAgZWxzZSAKICAgIG51bGwKCmRlZmluZSBleGlzdGluZ2hlaWdodDoKICBCYXNlLkdldE9ic1ZhbHVlKCJIZWlnaHQiKQoKZGVmaW5lIGV4aXN0aW5nbGVuZ3RoOgogIEJhc2UuR2V0T2JzVmFsdWUoIkxlbmd0aCIpCgpkZWZpbmUgZXhpc3Rpbmd2aXN1YWw6CiAgQmFzZS5HZXRPYnNWYWx1ZSgiVmlzdWFsbHkgYXNzZXNzIikKCmRlZmluZSBleGlzdGluZ211YWM6CiAgQmFzZS5HZXRPYnNWYWx1ZSgiTVVBQyIpCgoKCgpkZWZpbmUgenNjb3JlZnJvbW11YWM6CiAgaWYgZXhpc3RpbmdtdWFjIGlzIG51bGwgdGhlbiAwLjAKICBlbHNlIGlmIGV4aXN0aW5nbXVhYyA8IDExNSAnbW5tJyB0aGVuIC0zLjAKICBlbHNlIGlmIGV4aXN0aW5nbXVhYyA8IDEyNSAnbW5tJyB0aGVuIC0yLjAKICBlbHNlIDAuMAoKZGVmaW5lIGVzdGltYXRlZHdlaWdodDoKICBjYXNlICAKICB3aGVuIGV4aXN0aW5nd2VpZ2h0IGlzIG5vdCBudWxsIHRoZW4gbnVsbAogIHdoZW4gZXhpc3Rpbmdlc3RpbW5hdGVkd2VpZ2h0IGlzIG5vdCBudWxsIHRoZW4gZXhpc3Rpbmdlc3RpbW5hdGVkd2VpZ2h0CiAgd2hlbiBwYXN0d2VpZ2h0YWN0dWFsaXNlZCBpcyBub3QgbnVsbCB0aGVuIHBhc3R3ZWlnaHRhY3R1YWxpc2VkCiAgd2hlbiBBZ2VJbk1vbnRocygpPjI0IGFuZCBleGlzdGluZ2hlaWdodCB0aGVuIHdlaWdodGZyb21oZWlnaHQKICB3aGVuIEFnZUluTW9udGhzKCk8PTI0IGFuZCBleGlzdGluZ2xlbmd0aCB0aGVuIHdlaWdodGZyb21sZW5ndGgKICBlbHNlIHdlaWdodGZyb21hZ2UKICBlbmQKCmRlZmluZSB6c2NvcmVmcm9tdmlzdWFsOgogICAgaWYgZXhpc3Rpbmd2aXN1YWwgaXMgbm90IG51bGwgdGhlbgogICAgICBjYXNlICAKICAgICAgICB3aGVuIGV4aXN0aW5ndmlzdWFsIH4gIlNldmVyZWx5IFVuZGVyd2VpZ2h0IiB0aGVuIC0zLjAKICAgICAgICB3aGVuIGV4aXN0aW5ndmlzdWFsIH4gIlVuZGVyd2VpZ2h0IiB0aGVuIC0yLjAKICAgICAgICBlbHNlIDAuMAogICAgICBlbmQKICAgIGVsc2UgIG51bGwKCgpkZWZpbmUgd2VpZ2h0ZnJvbWxlbmd0aDoKICAgIFN5c3RlbS5RdWFudGl0eSB7IHZhbHVlOiBSb3VuZCh3ZmwuZ2VuZXJhdGVXZWlnaHRGcm9tTGVuZ3RoKCJwYXRpZW50c2V4IiwoY29udmVydCBleGlzdGluZ2xlbmd0aCB0byAnY20nKS52YWx1ZSAqICggMS4wIGFzIFN5c3RlbS5EZWNpbWFsICksIHpzY29yZWZyb21tdWFjKSwyKSwgdW5pdDogJ2tnJ30KCmRlZmluZSB3ZWlnaHRmcm9taGVpZ2h0OgogICAgU3lzdGVtLlF1YW50aXR5IHsgdmFsdWU6Um91bmQod2ZoLmdlbmVyYXRlV2VpZ2h0RnJvbUhlaWdodCgicGF0aWVudHNleCIsKGNvbnZlcnQgZXhpc3RpbmdoZWlnaHQgdG8gJ2NtJykudmFsdWUgKiAoIDEuMCBhcyBTeXN0ZW0uRGVjaW1hbCApLCB6c2NvcmVmcm9tbXVhYyksMiksIHVuaXQ6ICdrZyd9CgpkZWZpbmUgd2VpZ2h0ZnJvbWFnZToKICAgIFN5c3RlbS5RdWFudGl0eSB7IHZhbHVlOlJvdW5kKHdmYS5nZW5lcmF0ZVdlaWdodEZyb21BZ2UoInBhdGllbnRzZXgiLEFnZUluRGF5cygpICogKCAxLjAgYXMgU3lzdGVtLkRlY2ltYWwgKSwgenNjb3JlZnJvbW11YWMpLDIpLCB1bml0OiAna2cnfQovKgooY29udmVydCBCYXNlLkhhc09icygiV2VpZ2h0IikgdG8gJ0tnJykgZG9lcyBub3Qgd29yaywgc28gbGV0J3MgYXNzdW1lIHRoZSB3ZWlnaHQgaXMgaW4gS2cKKi8KZGVmaW5lICJXQVoiOgogICAgaWYgZXhpc3Rpbmd3ZWlnaHQgaXMgbm90IG51bGwgdGhlbgogICAgICAgICB3ZmEuZ2VuZXJhdGVaU2NvcmVXZWlnaHRGb3JBZ2UoInBhdGllbnRzZXgiLCBBZ2VJbkRheXMoKSAqICggMS4wIGFzIFN5c3RlbS5EZWNpbWFsICkgLCAgKGNvbnZlcnQgZXhpc3Rpbmd3ZWlnaHQgdG8gJ2tnJykudmFsdWUgKiAoIDEuMCBhcyBTeXN0ZW0uRGVjaW1hbCApKQogICAgZWxzZSBpZiBleGlzdGluZ211YWMgaXMgbm90IG51bGwgdGhlbgogICAgICAgIHpzY29yZWZyb21tdWFjCiAgICBlbHNlIGlmIGV4aXN0aW5ndmlzdWFsIHRoZW4KICAgICAgICB6c2NvcmVmcm9tdmlzdWFsCiAgICBlbHNlIG51bGwKCg==&quot;^^xsd:base64Binary ]
+  ] ) . # 
+
+</pre>
+
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.who.int">World Health Organization (WHO)</a>.  Package who.fhir.emc-cds#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 3, 2023 14:56+0000">2023-04-03</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="http://fhir.org/guides/who/emcare/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

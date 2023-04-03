@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Library xmlns="http://hl7.org/fhir">
+  <id value="emcaretreatment"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Parameters</h2><table class="grid"><tr><td>ageinmonths</td><td>out</td><td/><td/><td>integer</td></tr><tr><td>load-emcare.c10.it.de01</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de02</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de03</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de04</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de05</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de06</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de07</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de08</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de09</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de10</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de11</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de12</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de13</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de14</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de15</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de16</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de17</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de18</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de19</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de20</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de21</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de22</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de23</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de24</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de25</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de42</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de43</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de44</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de26</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de27</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de28</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de29</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de30</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de31</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de32</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de33</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de34</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de35</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de36</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de37</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de38</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de39</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de40</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de41</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de45</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de46</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de47</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de48</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de49</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de50</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de51</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de52</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de53</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de54</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de55</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de56</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de57</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de58</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de59</td><td>out</td><td/><td/><td>boolean</td></tr><tr><td>load-emcare.c10.it.de60</td><td>out</td><td/><td/><td>boolean</td></tr></table><h2>Contents</h2></div>
+  </text>
+  <url value="https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcaretreatment"/>
+  <identifier>
+    <use value="official"/>
+    <value value="emcare.treatment"/>
+  </identifier>
+  <version value="0.1.0"/>
+  <name value="emcaretreatment"/>
+  <title value="EmCare.Treatment"/>
+  <status value="active"/>
+  <type>
+    <coding>
+      <system value="http://hl7.org/fhir/ValueSet/library-type"/>
+      <code value="logic-library"/>
+    </coding>
+  </type>
+  <date value="2023-04-03T14:56:37+00:00"/>
+  <publisher value="World Health Organization (WHO)"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.who.int"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <parameter>
+    <name value="ageinmonths"/>
+    <use value="out"/>
+    <type value="integer"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de01"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de02"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de03"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de04"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de05"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de06"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de07"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de08"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de09"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de10"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de11"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de12"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de13"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de14"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de15"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de16"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de17"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de18"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de19"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de20"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de21"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de22"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de23"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de24"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de25"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de42"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de43"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de44"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de26"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de27"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de28"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de29"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de30"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de31"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de32"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de33"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de34"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de35"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de36"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de37"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de38"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de39"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de40"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de41"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de45"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de46"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de47"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de48"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de49"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de50"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de51"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de52"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de53"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de54"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de55"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de56"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de57"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de58"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de59"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="load-emcare.c10.it.de60"/>
+    <use value="out"/>
+    <type value="boolean"/>
+  </parameter>
+</Library>

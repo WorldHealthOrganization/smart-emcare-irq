@@ -1,0 +1,68 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/who/emcare/ValueSet/throatproblem> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "throatproblem"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"CodeSystem-emcare-custom-codes.html\"><code>https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17S1.46DE03\">EmCare.B17S1.DE03</a></td><td>Red (congested) throat</td><td>The client has a Red (congested) throat</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17S1.46DE04\">EmCare.B17S1.DE04</a></td><td>Exudate on Throat</td><td>The client has Exudate on Throat</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17S1.46DE05\">EmCare.B17S1.DE05</a></td><td>Membrane on throat</td><td>The client has Membrane on throat</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-none\">none</a></td><td>None of the listed throat problems observed</td><td>The client has None of the listed throat problems observed</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/throatproblem"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "valueset-throatproblem"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-04-03T14:56:37+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "World Health Organization (WHO)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Codes representing possible values for the Provide an estimated age or estimated date of birth element"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:immutable [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "EmCare.B17S1.DE03" ] ;
+         fhir:display [ fhir:v "Red (congested) throat" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The client has a Red (congested) throat" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B17S1.DE04" ] ;
+         fhir:display [ fhir:v "Exudate on Throat" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The client has Exudate on Throat" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B17S1.DE05" ] ;
+         fhir:display [ fhir:v "Membrane on throat" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The client has Membrane on throat" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "none" ] ;
+         fhir:display [ fhir:v "None of the listed throat problems observed" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The client has None of the listed throat problems observed" ]
+         ] )
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

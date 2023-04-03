@@ -1,0 +1,538 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>WHO.FHIR.EMC-CDS\null - JSON Representation - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/who.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"8.189"}
+    h3,h4,h5,h6{--heading-prefix:"8.189"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">WHO Emergency Care Guideline Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - CI Build
+
+
+
+  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="toc.html">Table of Contents</a></li>
+  <li><a href="documentation.html">Documentation</a></li>
+  <li><a href="guidance.html">Guidance</a></li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">FHIR Spec</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://cql.hl7.org/index.html">CQL Spec</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/uv/cpg">FHIR Clinical Guidelines</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="license.html">License</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b></b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">WHO Emergency Care Guideline Implementation Guide - Local Development build (v0.1.0). See the <a href="http://fhir.org/guides/who/emcare/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="ValueSet-emcareobservationvalueset.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ValueSet-emcareobservationvalueset.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">JSON</a>
+    </li>
+  
+
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: null - JSON Representation</h2>
+  <table class="colsd">
+    <tr>
+
+      <td colspan="2">
+        
+          Draft
+          
+            as of 2023-04-03
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="ValueSet-emcareobservationvalueset.json" no-download="true">Raw json</a> | <a href="ValueSet-emcareobservationvalueset.json" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="json" style="white-space: pre; overflow: hidden"><code>
+{
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet">resourceType</a>" : "ValueSet",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.id">id</a>" : "emcareobservationvalueset",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;ul&gt;&lt;li&gt;Include these codes as defined in &lt;a href=\&quot;CodeSystem-emcare-custom-codes.html\&quot;&gt;&lt;code&gt;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes&lt;/code&gt;&lt;/a&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE07\&quot;&gt;EmCare.B14S2.DE07&lt;/a&gt;&lt;/td&gt;&lt;td&gt;generalised skin problem&lt;/td&gt;&lt;td&gt;The client has a generalised skin problem&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE08\&quot;&gt;EmCare.B14S2.DE08&lt;/a&gt;&lt;/td&gt;&lt;td&gt;localised skin problem&lt;/td&gt;&lt;td&gt;The client has a localised skin problem&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE09\&quot;&gt;EmCare.B14S2.DE09&lt;/a&gt;&lt;/td&gt;&lt;td&gt;no problem&lt;/td&gt;&lt;td&gt;The client does not have a generalised or localised skin problem&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE18\&quot;&gt;EmCare.B14S2.DE18&lt;/a&gt;&lt;/td&gt;&lt;td&gt;papular urticaria or papular pruritic eruptions&lt;/td&gt;&lt;td&gt;The client has Papular Urticaria or Papular Pruritic Eruptions \n• Itchy papules at different stages of evolution.\n• Found on the arms and legs.\n• Healed lesions are often dark/ hyperpigmented.\n• The itch is difficult to manage.\n• Essential to exclude scabies.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE19\&quot;&gt;EmCare.B14S2.DE19&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ringworm (tinea)&lt;/td&gt;&lt;td&gt;The client has Ringworm (Tinea) - \n• An itchy circular lesion with a raised edge and fine scaly area.\n• Scalp lesions may result in loss of hair&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE21\&quot;&gt;EmCare.B14S2.DE21&lt;/a&gt;&lt;/td&gt;&lt;td&gt;scabies&lt;/td&gt;&lt;td&gt;The client has Scabies -\n• Intense itching, more severe at night.\n• Small burrows between fingers, tows, elbow areas and buttocks.\n• Secondary infection may occur.\n• Small babies may have vesicles and pustules on the palms and soles and face.\n• The infestation spreads easily, usually affecting more than one person in the household&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE22\&quot;&gt;EmCare.B14S2.DE22&lt;/a&gt;&lt;/td&gt;&lt;td&gt;chickenpox&lt;/td&gt;&lt;td&gt;The client has Chickenpox - Mild fever preceding the rash.\n• Rash begins on the trunk and face,\nlater spreads to the arms and legs.\n• Vesicles appear progressively over days and forms scabs\nafter they rupture.\n• Contagious from the fever starts until all lesions have\ncrusted.\n• Usually lasts for about 1 week.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE23\&quot;&gt;EmCare.B14S2.DE23&lt;/a&gt;&lt;/td&gt;&lt;td&gt;herpes zoster&lt;/td&gt;&lt;td&gt;The client has Herpes Zoster -  Vesicles in one area on one side of body with intense pain or scars plus shooting pain.\n• They are uncommon in children except when they are immune-compromised&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE25\&quot;&gt;EmCare.B14S2.DE25&lt;/a&gt;&lt;/td&gt;&lt;td&gt;impetigo&lt;/td&gt;&lt;td&gt;The client has Impetigo- Pustules and papules with honey -coloured crusts.\n• Commonly starts on the face or buttocks, then spreads to the neck, hands, arms and legs.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE31\&quot;&gt;EmCare.B14S2.DE31&lt;/a&gt;&lt;/td&gt;&lt;td&gt;molluscum contagiosum&lt;/td&gt;&lt;td&gt;The client has Molluscum Contagiosum -Caused by a poxvirus.\n• Dome-shaped papules with a central depression\n(umblication).\n• Most commonly seen on the face and trunk in children&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE32\&quot;&gt;EmCare.B14S2.DE32&lt;/a&gt;&lt;/td&gt;&lt;td&gt;warts&lt;/td&gt;&lt;td&gt;The client has Warts - Appears as papules or nodules with a rough surface.\n• Seen most often on the hands and fingers, but can be\nfound anywhere on\nthe body.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE33\&quot;&gt;EmCare.B14S2.DE33&lt;/a&gt;&lt;/td&gt;&lt;td&gt;seborrhoeic dermatitis&lt;/td&gt;&lt;td&gt;The client has Seborrhoeic Dermatitis - Greasy scales and redness on central face, body folds.\n• The scalp, face, ears and skin folds (e.g. axillae, groins, under the breasts) are commonly affected.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE35\&quot;&gt;EmCare.B14S2.DE35&lt;/a&gt;&lt;/td&gt;&lt;td&gt;fixed drug reaction&lt;/td&gt;&lt;td&gt;The client has Fixed Drug Reaction - One or more dark round or oval skin lesions with central vesicles .\n• The lesions recur on the same spot, and increase in number with each successive attack&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE36\&quot;&gt;EmCare.B14S2.DE36&lt;/a&gt;&lt;/td&gt;&lt;td&gt;eczema&lt;/td&gt;&lt;td&gt;The client has Eczema - Erythematous (red), sometimes scaly plaques found on the face, flexures, trunk and extensors.\n• Yellow pustules which crust indicate\nsecondary bacterial infection.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE37\&quot;&gt;EmCare.B14S2.DE37&lt;/a&gt;&lt;/td&gt;&lt;td&gt;steven johnson syndrome (sjs)&lt;/td&gt;&lt;td&gt;The client has Steven Johnson Syndrome (SJS) - Severe and acute reaction due to many drugs, the commonest being cotrimoxazole or nevirapine.\n• Lesions involve the skin as well as the mucous membranes (e.g. eyes, mouth and genitalia).\n• May start as widespread red irregular rash with or without blisters. The blisters rupture leaving denuded areas of skin.\n• May cause difficulty in breathing.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE44\&quot;&gt;EmCare.B14S2.DE44&lt;/a&gt;&lt;/td&gt;&lt;td&gt;skin problem&lt;/td&gt;&lt;td&gt;The health care worker would like to add a skin problem&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE45\&quot;&gt;EmCare.B14S2.DE45&lt;/a&gt;&lt;/td&gt;&lt;td&gt;oral sores or mouth ulcers&lt;/td&gt;&lt;td&gt;The health care worker would like to add an Oral Sores or Mouth Ulcers problem&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE46\&quot;&gt;EmCare.B14S2.DE46&lt;/a&gt;&lt;/td&gt;&lt;td&gt;eye problem&lt;/td&gt;&lt;td&gt;The health care worker would like to add an Eye problem&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE47\&quot;&gt;EmCare.B14S2.DE47&lt;/a&gt;&lt;/td&gt;&lt;td&gt;no - do not add a skin or mouth or eye problem&lt;/td&gt;&lt;td&gt;The healthcare worker would not like to add a Skin or Mouth or Eye Problem&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B21S2.46DE29\&quot;&gt;EmCare.B21S2.DE29&lt;/a&gt;&lt;/td&gt;&lt;td&gt;no breastmilk at all&lt;/td&gt;&lt;td&gt;The caregiver does not give the client any breastmilk at all&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B21S2.46DE11\&quot;&gt;EmCare.B21S2.DE11&lt;/a&gt;&lt;/td&gt;&lt;td&gt;inappropriate replacement milk&lt;/td&gt;&lt;td&gt;The care giver is giving inappropriate replacement milk&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B21S2.46DE10\&quot;&gt;EmCare.B21S2.DE10&lt;/a&gt;&lt;/td&gt;&lt;td&gt;appropriate replacement milk&lt;/td&gt;&lt;td&gt;The care giver is giving appropriate  replacement milk&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE18\&quot;&gt;EmCare.B22.DE18&lt;/a&gt;&lt;/td&gt;&lt;td&gt;chest indrawing (post inhaled bronchodilator trial)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE19\&quot;&gt;EmCare.B22.DE19&lt;/a&gt;&lt;/td&gt;&lt;td&gt;respiratory rate (post inhaled bronchodilator trial)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE20\&quot;&gt;EmCare.B22.DE20&lt;/a&gt;&lt;/td&gt;&lt;td&gt;fast breathing (post inhaled bronchodilator trial)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE21\&quot;&gt;EmCare.B22.DE21&lt;/a&gt;&lt;/td&gt;&lt;td&gt;no fast breathing and no chest indrawing (post inhaled bronchodilator trial)&lt;/td&gt;&lt;td&gt;The client has no fast breathing and no chest indrawing&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE22\&quot;&gt;EmCare.B22.DE22&lt;/a&gt;&lt;/td&gt;&lt;td&gt;inhaled bronchodilator trial not feasible or available&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">url</a>" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/emcareobservationvalueset",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">version</a>" : "0.1.0",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.name">name</a>" : "valueset-emcareobservationvalueset",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.status">status</a>" : "draft",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.experimental">experimental</a>" : false,
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a>" : "2023-04-03T14:56:37+00:00",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.publisher">publisher</a>" : "World Health Organization (WHO)",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "https://www.who.int"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.description">description</a>" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.jurisdiction">jurisdiction</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "001"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.immutable">immutable</a>" : true,
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose">compose</a>" : {
+    "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include">include</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">system</a>" : "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept">concept</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE07",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "generalised skin problem",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has a generalised skin problem"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE08",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "localised skin problem",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has a localised skin problem"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE09",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "no problem",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client does not have a generalised or localised skin problem"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE18",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "papular urticaria or papular pruritic eruptions",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has Papular Urticaria or Papular Pruritic Eruptions \n• Itchy papules at different stages of evolution.\n• Found on the arms and legs.\n• Healed lesions are often dark/ hyperpigmented.\n• The itch is difficult to manage.\n• Essential to exclude scabies."
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE19",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "ringworm (tinea)",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has Ringworm (Tinea) - \n• An itchy circular lesion with a raised edge and fine scaly area.\n• Scalp lesions may result in loss of hair"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE21",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "scabies",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has Scabies -\n• Intense itching, more severe at night.\n• Small burrows between fingers, tows, elbow areas and buttocks.\n• Secondary infection may occur.\n• Small babies may have vesicles and pustules on the palms and soles and face.\n• The infestation spreads easily, usually affecting more than one person in the household"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE22",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "chickenpox",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has Chickenpox - Mild fever preceding the rash.\n• Rash begins on the trunk and face,\nlater spreads to the arms and legs.\n• Vesicles appear progressively over days and forms scabs\nafter they rupture.\n• Contagious from the fever starts until all lesions have\ncrusted.\n• Usually lasts for about 1 week."
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE23",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "herpes zoster",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has Herpes Zoster -  Vesicles in one area on one side of body with intense pain or scars plus shooting pain.\n• They are uncommon in children except when they are immune-compromised"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE25",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "impetigo",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has Impetigo- Pustules and papules with honey -coloured crusts.\n• Commonly starts on the face or buttocks, then spreads to the neck, hands, arms and legs."
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE31",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "molluscum contagiosum",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has Molluscum Contagiosum -Caused by a poxvirus.\n• Dome-shaped papules with a central depression\n(umblication).\n• Most commonly seen on the face and trunk in children"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE32",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "warts",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has Warts - Appears as papules or nodules with a rough surface.\n• Seen most often on the hands and fingers, but can be\nfound anywhere on\nthe body."
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE33",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "seborrhoeic dermatitis",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has Seborrhoeic Dermatitis - Greasy scales and redness on central face, body folds.\n• The scalp, face, ears and skin folds (e.g. axillae, groins, under the breasts) are commonly affected."
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE35",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "fixed drug reaction",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has Fixed Drug Reaction - One or more dark round or oval skin lesions with central vesicles .\n• The lesions recur on the same spot, and increase in number with each successive attack"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE36",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "eczema",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has Eczema - Erythematous (red), sometimes scaly plaques found on the face, flexures, trunk and extensors.\n• Yellow pustules which crust indicate\nsecondary bacterial infection."
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE37",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "steven johnson syndrome (sjs)",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The client has Steven Johnson Syndrome (SJS) - Severe and acute reaction due to many drugs, the commonest being cotrimoxazole or nevirapine.\n• Lesions involve the skin as well as the mucous membranes (e.g. eyes, mouth and genitalia).\n• May start as widespread red irregular rash with or without blisters. The blisters rupture leaving denuded areas of skin.\n• May cause difficulty in breathing."
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE44",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "skin problem",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The health care worker would like to add a skin problem"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE45",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "oral sores or mouth ulcers",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The health care worker would like to add an Oral Sores or Mouth Ulcers problem"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE46",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "eye problem",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The health care worker would like to add an Eye problem"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B14S2.DE47",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "no - do not add a skin or mouth or eye problem",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The healthcare worker would not like to add a Skin or Mouth or Eye Problem"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B21S2.DE29",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "no breastmilk at all",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The caregiver does not give the client any breastmilk at all"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B21S2.DE11",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "inappropriate replacement milk",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The care giver is giving inappropriate replacement milk"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B21S2.DE10",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "appropriate replacement milk",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation">designation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.designation.value">value</a>" : "The care giver is giving appropriate  replacement milk"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE18",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "chest indrawing (post inhaled bronchodilator trial)"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE19",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "respiratory rate (post inhaled bronchodilator trial)"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE20",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "fast breathing (post inhaled bronchodilator trial)"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE21",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "no fast breathing and no chest indrawing (post inhaled bronchodilator trial)"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EmCare.B22.DE22",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "inhaled bronchodilator trial not feasible or available"
+          }
+        ]
+      }
+    ]
+  }
+}</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.who.int">World Health Organization (WHO)</a>.  Package who.fhir.emc-cds#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 3, 2023 14:56+0000">2023-04-03</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="http://fhir.org/guides/who/emcare/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

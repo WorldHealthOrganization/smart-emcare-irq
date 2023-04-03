@@ -1,0 +1,117 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/who/emcare/ValueSet/skin-pb> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "skin-pb"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"CodeSystem-emcare-custom-codes.html\"><code>https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE18\">EmCare.B14S2.DE18</a></td><td>Papular Urticaria or Papular Pruritic Eruptions</td><td>The client has Papular Urticaria or Papular Pruritic Eruptions \n• Itchy papules at different stages of evolution.\n• Found on the arms and legs.\n• Healed lesions are often dark/ hyperpigmented.\n• The itch is difficult to manage.\n• Essential to exclude scabies.</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE19\">EmCare.B14S2.DE19</a></td><td>Ringworm (Tinea)</td><td>The client has Ringworm (Tinea) - \n• An itchy circular lesion with a raised edge and fine scaly area.\n• Scalp lesions may result in loss of hair</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE21\">EmCare.B14S2.DE21</a></td><td>Scabies</td><td>The client has Scabies -\n• Intense itching, more severe at night.\n• Small burrows between fingers, tows, elbow areas and buttocks.\n• Secondary infection may occur.\n• Small babies may have vesicles and pustules on the palms and soles and face.\n• The infestation spreads easily, usually affecting more than one person in the household</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE22\">EmCare.B14S2.DE22</a></td><td>Chickenpox</td><td>The client has Chickenpox - Mild fever preceding the rash.\n• Rash begins on the trunk and face,\nlater spreads to the arms and legs.\n• Vesicles appear progressively over days and forms scabs\nafter they rupture.\n• Contagious from the fever starts until all lesions have\ncrusted.\n• Usually lasts for about 1 week.</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE23\">EmCare.B14S2.DE23</a></td><td>Herpes Zoster</td><td>The client has Herpes Zoster -  Vesicles in one area on one side of body with intense pain or scars plus shooting pain.\n• They are uncommon in children except when they are immune-compromised</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE25\">EmCare.B14S2.DE25</a></td><td>Impetigo</td><td>The client has Impetigo- Pustules and papules with honey -coloured crusts.\n• Commonly starts on the face or buttocks, then spreads to the neck, hands, arms and legs.</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE31\">EmCare.B14S2.DE31</a></td><td>Molluscum Contagiosum</td><td>The client has Molluscum Contagiosum -Caused by a poxvirus.\n• Dome-shaped papules with a central depression\n(umblication).\n• Most commonly seen on the face and trunk in children</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE32\">EmCare.B14S2.DE32</a></td><td>Warts</td><td>The client has Warts - Appears as papules or nodules with a rough surface.\n• Seen most often on the hands and fingers, but can be\nfound anywhere on\nthe body.</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE33\">EmCare.B14S2.DE33</a></td><td>Seborrhoeic Dermatitis</td><td>The client has Seborrhoeic Dermatitis - Greasy scales and redness on central face, body folds.\n• The scalp, face, ears and skin folds (e.g. axillae, groins, under the breasts) are commonly affected.</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE35\">EmCare.B14S2.DE35</a></td><td>Fixed Drug Reaction</td><td>The client has Fixed Drug Reaction - One or more dark round or oval skin lesions with central vesicles .\n• The lesions recur on the same spot, and increase in number with each successive attack</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE36\">EmCare.B14S2.DE36</a></td><td>Eczema</td><td>The client has Eczema - Erythematous (red), sometimes scaly plaques found on the face, flexures, trunk and extensors.\n• Yellow pustules which crust indicate\nsecondary bacterial infection.</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE37\">EmCare.B14S2.DE37</a></td><td>Steven Johnson Syndrome (SJS)</td><td>The client has Steven Johnson Syndrome (SJS) - Severe and acute reaction due to many drugs, the commonest being cotrimoxazole or nevirapine.\n• Lesions involve the skin as well as the mucous membranes (e.g. eyes, mouth and genitalia).\n• May start as widespread red irregular rash with or without blisters. The blisters rupture leaving denuded areas of skin.\n• May cause difficulty in breathing.</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/skin-pb"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "valueset-skin-pb"] ; # 
+  fhir:title [ fhir:v "EmCare.B14S2.DE13"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-04-03T14:56:37+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "World Health Organization (WHO)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Type of Skin Problem"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:immutable [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "EmCare.B14S2.DE18" ] ;
+         fhir:display [ fhir:v "Papular Urticaria or Papular Pruritic Eruptions" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The client has Papular Urticaria or Papular Pruritic Eruptions \n• Itchy papules at different stages of evolution.\n• Found on the arms and legs.\n• Healed lesions are often dark/ hyperpigmented.\n• The itch is difficult to manage.\n• Essential to exclude scabies." ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B14S2.DE19" ] ;
+         fhir:display [ fhir:v "Ringworm (Tinea)" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The client has Ringworm (Tinea) - \n• An itchy circular lesion with a raised edge and fine scaly area.\n• Scalp lesions may result in loss of hair" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B14S2.DE21" ] ;
+         fhir:display [ fhir:v "Scabies" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The client has Scabies -\n• Intense itching, more severe at night.\n• Small burrows between fingers, tows, elbow areas and buttocks.\n• Secondary infection may occur.\n• Small babies may have vesicles and pustules on the palms and soles and face.\n• The infestation spreads easily, usually affecting more than one person in the household" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B14S2.DE22" ] ;
+         fhir:display [ fhir:v "Chickenpox" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The client has Chickenpox - Mild fever preceding the rash.\n• Rash begins on the trunk and face,\nlater spreads to the arms and legs.\n• Vesicles appear progressively over days and forms scabs\nafter they rupture.\n• Contagious from the fever starts until all lesions have\ncrusted.\n• Usually lasts for about 1 week." ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B14S2.DE23" ] ;
+         fhir:display [ fhir:v "Herpes Zoster" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The client has Herpes Zoster -  Vesicles in one area on one side of body with intense pain or scars plus shooting pain.\n• They are uncommon in children except when they are immune-compromised" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B14S2.DE25" ] ;
+         fhir:display [ fhir:v "Impetigo" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The client has Impetigo- Pustules and papules with honey -coloured crusts.\n• Commonly starts on the face or buttocks, then spreads to the neck, hands, arms and legs." ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B14S2.DE31" ] ;
+         fhir:display [ fhir:v "Molluscum Contagiosum" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The client has Molluscum Contagiosum -Caused by a poxvirus.\n• Dome-shaped papules with a central depression\n(umblication).\n• Most commonly seen on the face and trunk in children" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B14S2.DE32" ] ;
+         fhir:display [ fhir:v "Warts" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The client has Warts - Appears as papules or nodules with a rough surface.\n• Seen most often on the hands and fingers, but can be\nfound anywhere on\nthe body." ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B14S2.DE33" ] ;
+         fhir:display [ fhir:v "Seborrhoeic Dermatitis" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The client has Seborrhoeic Dermatitis - Greasy scales and redness on central face, body folds.\n• The scalp, face, ears and skin folds (e.g. axillae, groins, under the breasts) are commonly affected." ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B14S2.DE35" ] ;
+         fhir:display [ fhir:v "Fixed Drug Reaction" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The client has Fixed Drug Reaction - One or more dark round or oval skin lesions with central vesicles .\n• The lesions recur on the same spot, and increase in number with each successive attack" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B14S2.DE36" ] ;
+         fhir:display [ fhir:v "Eczema" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The client has Eczema - Erythematous (red), sometimes scaly plaques found on the face, flexures, trunk and extensors.\n• Yellow pustules which crust indicate\nsecondary bacterial infection." ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B14S2.DE37" ] ;
+         fhir:display [ fhir:v "Steven Johnson Syndrome (SJS)" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The client has Steven Johnson Syndrome (SJS) - Severe and acute reaction due to many drugs, the commonest being cotrimoxazole or nevirapine.\n• Lesions involve the skin as well as the mucous membranes (e.g. eyes, mouth and genitalia).\n• May start as widespread red irregular rash with or without blisters. The blisters rupture leaving denuded areas of skin.\n• May cause difficulty in breathing." ]
+         ] )
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

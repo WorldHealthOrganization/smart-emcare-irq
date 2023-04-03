@@ -1,0 +1,1999 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="emcare-custom-codes"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system <code>https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">EmCare.A.DE01<a name="emcare-custom-codes-EmCare.46A.46DE01"> </a></td><td>National Unique identification</td><td>Unique identifier provided or a universal ID, if used in the country</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE03<a name="emcare-custom-codes-EmCare.46A.46DE03"> </a></td><td>Child's Identity unknown/prefer to remain anonymous</td><td>The client's identity is unknown or the client's prefers to remain anonymous</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE04<a name="emcare-custom-codes-EmCare.46A.46DE04"> </a></td><td>First Name</td><td>Client's first name</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE05<a name="emcare-custom-codes-EmCare.46A.46DE05"> </a></td><td>Middle Name</td><td>Client's middle name</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE06<a name="emcare-custom-codes-EmCare.46A.46DE06"> </a></td><td>Last Name</td><td>Client's family name or last name</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE11<a name="emcare-custom-codes-EmCare.46A.46DE11"> </a></td><td>Date of Birth not known</td><td>The client and/or Caregiver does not know the date of birth of the client</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE12<a name="emcare-custom-codes-EmCare.46A.46DE12"> </a></td><td>Provide an estimated age or estimated date of birth</td><td>The client/Caregiver will provide an estimated age or estimated date of birth</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE15.1<a name="emcare-custom-codes-EmCare.46A.46DE15.461"> </a></td><td>Estimated Date of Birth</td><td>Estimated Date of Birth of the Client</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE08<a name="emcare-custom-codes-EmCare.46A.46DE08"> </a></td><td>Consolidated Date of Birth</td><td>Estimated Date of Birth of the Client</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE16<a name="emcare-custom-codes-EmCare.46A.46DE16"> </a></td><td>Sex</td><td>The Sex of the client</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE48<a name="emcare-custom-codes-EmCare.46A.46DE48"> </a></td><td>Caregiver</td><td>the child could have been created from the mother therefore a relatedpersom may already exist
+select_one RelatedPerson
+candidateExpression</td></tr><tr><td style="white-space:nowrap">emcarerelatedpersoncaregiverid<a name="emcare-custom-codes-emcarerelatedpersoncaregiverid"> </a></td><td/><td/></tr><tr><td style="white-space:nowrap">EmCare.A.DE21<a name="emcare-custom-codes-EmCare.46A.46DE21"> </a></td><td>Caregiver First Name</td><td>The client's Caregiver's first name</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE22<a name="emcare-custom-codes-EmCare.46A.46DE22"> </a></td><td>Caregiver Middle Name</td><td>The client's Caregiver's middle name</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE23<a name="emcare-custom-codes-EmCare.46A.46DE23"> </a></td><td>Caregiver Last Name</td><td>The client's Caregiver's last name</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE35<a name="emcare-custom-codes-EmCare.46A.46DE35"> </a></td><td>Primary Caregiver's Mobile telephone number</td><td>Client's Caregiver's mobile telephone number</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE24<a name="emcare-custom-codes-EmCare.46A.46DE24"> </a></td><td>Caregiver's Relationship to Client</td><td>The relationship of the Caregiver to the client</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE31<a name="emcare-custom-codes-EmCare.46A.46DE31"> </a></td><td>Biological Mother Vital Status</td><td>The client's mother and father's vital status</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE32<a name="emcare-custom-codes-EmCare.46A.46DE32"> </a></td><td>Biological Father Vital Status</td><td>The client's mother and father's vital status</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE38<a name="emcare-custom-codes-EmCare.46A.46DE38"> </a></td><td>Caregiver wants to receive SMS or other messages regarding the child's visits and health status</td><td>The Caregiver wants to receive SMS or other messages regarding the client's contacts/visits and health status</td></tr><tr><td style="white-space:nowrap">EmCare.B3.DE01<a name="emcare-custom-codes-EmCare.46B3.46DE01"> </a></td><td>Reason for Consultation</td><td>The reason for the client's consultation</td></tr><tr><td style="white-space:nowrap">EmCare.B3.DE05<a name="emcare-custom-codes-EmCare.46B3.46DE05"> </a></td><td>Is the child sick Today?</td><td>The client's visit is for a well child but the child is also presenting as sick</td></tr><tr><td style="white-space:nowrap">EmCare.B3.DE06<a name="emcare-custom-codes-EmCare.46B3.46DE06"> </a></td><td>Type of Consultation</td><td>The client's visit is for a new consultation</td></tr><tr><td style="white-space:nowrap">EmCare.B7.DE02<a name="emcare-custom-codes-EmCare.46B7.46DE02"> </a></td><td>Convulsing Now</td><td>The client is convulsing now</td></tr><tr><td style="white-space:nowrap">EmCare.B7-B8-B9.DE01<a name="emcare-custom-codes-EmCare.46B7-B8-B9.46DE01"> </a></td><td>Continue to Assess Sick Child</td><td>The healthcare worker chooses if they will continue to assess the sick child with a life threatening illness</td></tr><tr><td style="white-space:nowrap">EmCare.B7.DE03<a name="emcare-custom-codes-EmCare.46B7.46DE03"> </a></td><td>Convulsion(s) in this Illness</td><td>The client is reported to have had one or more convulsions</td></tr><tr><td style="white-space:nowrap">EmCare.B7.DE08b<a name="emcare-custom-codes-EmCare.46B7.46DE08b"> </a></td><td>Unconscious or Lethargic</td><td>The client is unconcious or Lethargic</td></tr><tr><td style="white-space:nowrap">EmCare.B7.DE08<a name="emcare-custom-codes-EmCare.46B7.46DE08"> </a></td><td>Unconscious</td><td>The client is unconcious</td></tr><tr><td style="white-space:nowrap">EmCare.B7.DE08a<a name="emcare-custom-codes-EmCare.46B7.46DE08a"> </a></td><td>Lethargic</td><td>The client is lethargic</td></tr><tr><td style="white-space:nowrap">EmCare.B7.DE09<a name="emcare-custom-codes-EmCare.46B7.46DE09"> </a></td><td>Not able to drink or breastfeed</td><td>The client has reported not to have been able to drink or breastfeed or currently is not able to drink or breastfeed.</td></tr><tr><td style="white-space:nowrap">EmCare.B7.DE10<a name="emcare-custom-codes-EmCare.46B7.46DE10"> </a></td><td>Vomiting Everything</td><td>The client is reported to be vomiting everything or vomiting but not everything or no vomiting</td></tr><tr><td style="white-space:nowrap">EmCare.B6.DE01<a name="emcare-custom-codes-EmCare.46B6.46DE01"> </a></td><td>Axillary Temperature  (degrees Celcius)</td><td>The client's axillary temperature in degrees Celsius (temperature taken under the armpit)</td></tr><tr><td style="white-space:nowrap">EmCare.B6.DE04<a name="emcare-custom-codes-EmCare.46B6.46DE04"> </a></td><td>Thermometer not available</td><td>A thermometer is not available to accurately measure the client's temperature</td></tr><tr><td style="white-space:nowrap">EmCare.B6.DE05<a name="emcare-custom-codes-EmCare.46B6.46DE05"> </a></td><td>Hot to Touch</td><td>The client is hot to touch</td></tr><tr><td style="white-space:nowrap">EmCare.B6.DE01A<a name="emcare-custom-codes-EmCare.46B6.46DE01A"> </a></td><td>Measured Temperature</td><td>The client's Temperature has been measured</td></tr><tr><td style="white-space:nowrap">EmCare.B6.DE06<a name="emcare-custom-codes-EmCare.46B6.46DE06"> </a></td><td>Weight (Kg)</td><td>The client's weight in Kilograms</td></tr><tr><td style="white-space:nowrap">EmCare.B6.DE07<a name="emcare-custom-codes-EmCare.46B6.46DE07"> </a></td><td>Weight cannot be measured</td><td>The client's weight cannot be measured</td></tr><tr><td style="white-space:nowrap">EmCare.B6.DE08<a name="emcare-custom-codes-EmCare.46B6.46DE08"> </a></td><td>Estimated Weight</td><td>The client's weight has been estimated - to be used for treatment dosing only</td></tr><tr><td style="white-space:nowrap">EmCare.B6.DE10<a name="emcare-custom-codes-EmCare.46B6.46DE10"> </a></td><td>Prefer to measure length</td><td>The health care worker would prefer to measure the client using length</td></tr><tr><td style="white-space:nowrap">EmCare.B6.DE09<a name="emcare-custom-codes-EmCare.46B6.46DE09"> </a></td><td>Height</td><td>The client's height in Centimeters</td></tr><tr><td style="white-space:nowrap">EmCare.B6.DE11<a name="emcare-custom-codes-EmCare.46B6.46DE11"> </a></td><td>Height cannot be measured</td><td>The client's height cannot be measured</td></tr><tr><td style="white-space:nowrap">EmCare.B6.DE12<a name="emcare-custom-codes-EmCare.46B6.46DE12"> </a></td><td>Length</td><td>The client's length in Centimeters</td></tr><tr><td style="white-space:nowrap">EmCare.B6.DE13<a name="emcare-custom-codes-EmCare.46B6.46DE13"> </a></td><td>Length cannot be measured</td><td>The client's length cannot be measured</td></tr><tr><td style="white-space:nowrap">EmCare.B6.DE16<a name="emcare-custom-codes-EmCare.46B6.46DE16"> </a></td><td>Weight for Age (WFA) Z Scores</td><td>The client's weight for age z score</td></tr><tr><td style="white-space:nowrap">EmCare.B6.DE17<a name="emcare-custom-codes-EmCare.46B6.46DE17"> </a></td><td>MUAC (mm)</td><td>The client's Mid Upper Arm Circumference in Millimeters (child ≥6 months old)</td></tr><tr><td style="white-space:nowrap">EmCare.B6.DE17a<a name="emcare-custom-codes-EmCare.46B6.46DE17a"> </a></td><td>MUAC cannot be measured</td><td>The client's Mid Upper Arm Circumference cannot be measured</td></tr><tr><td style="white-space:nowrap">EmCare.B6.DE18<a name="emcare-custom-codes-EmCare.46B6.46DE18"> </a></td><td>Visually assess for whether underweight (for drug dose calculation)</td><td>The health care worker visually assesses for whether underweight (for drug dosing calculations)</td></tr><tr><td style="white-space:nowrap">EmCare.B7.DE03<a name="emcare-custom-codes-EmCare.46B7.46DE03"> </a></td><td>Convulsion(s) in this Illness</td><td>The client is reported to have had one or more convulsions</td></tr><tr><td style="white-space:nowrap">EmCare.B18S1.DE02<a name="emcare-custom-codes-EmCare.46B18S1.46DE02"> </a></td><td>Difficulty with Feeding</td><td>The client is reported to have difficulty with Feeding</td></tr><tr><td style="white-space:nowrap">EmCare.B11S1.DE01<a name="emcare-custom-codes-EmCare.46B11S1.46DE01"> </a></td><td>Diarrhoea</td><td>The client is reported to have diarrhoea</td></tr><tr><td style="white-space:nowrap">EmCare.B21S1.DE06<a name="emcare-custom-codes-EmCare.46B21S1.46DE06"> </a></td><td>Breastfed</td><td>The client is breastfed</td></tr><tr><td style="white-space:nowrap">EmCare.B18S2.DE07<a name="emcare-custom-codes-EmCare.46B18S2.46DE07"> </a></td><td>Severe Chest Indrawing</td><td>The client has severe chest indrawing</td></tr><tr><td style="white-space:nowrap">EmCare.B18S2.DE08<a name="emcare-custom-codes-EmCare.46B18S2.46DE08"> </a></td><td>Movements</td><td>The health care worker's assessments of the client's movements</td></tr><tr><td style="white-space:nowrap">EmCare.B18S2.DE12<a name="emcare-custom-codes-EmCare.46B18S2.46DE12"> </a></td><td>Umbilicus Red or Pus Draining</td><td>The client's umbilicus is red or is draining pus</td></tr><tr><td style="white-space:nowrap">EmCare.B18S2.DE13<a name="emcare-custom-codes-EmCare.46B18S2.46DE13"> </a></td><td>Skin Pustules</td><td>The client has skin pustules</td></tr><tr><td style="white-space:nowrap">EmCare.B19S2.DE01<a name="emcare-custom-codes-EmCare.46B19S2.46DE01"> </a></td><td>Yellow Skin</td><td>The client has yellow skin</td></tr><tr><td style="white-space:nowrap">EmCare.B19S2.DE02<a name="emcare-custom-codes-EmCare.46B19S2.46DE02"> </a></td><td>Yellow Palms or Yellow Soles</td><td>The client has yellow palms or yellow soles</td></tr><tr><td style="white-space:nowrap">EmCare.B19S2.DE04<a name="emcare-custom-codes-EmCare.46B19S2.46DE04"> </a></td><td>When did the Jaundice first appear?</td><td>The age at which the Jaundice first appeared</td></tr><tr><td style="white-space:nowrap">EmCare.B11S2.DE01<a name="emcare-custom-codes-EmCare.46B11S2.46DE01"> </a></td><td>Sunken Eyes</td><td>The client has sunken eyes</td></tr><tr><td style="white-space:nowrap">EmCare.B11S2.DE02<a name="emcare-custom-codes-EmCare.46B11S2.46DE02"> </a></td><td>Skin pinch of Abdomen</td><td>The healthcare worker pinches the skin of the client's abdomen for 1 second and then observes how long the skin takes to return to normal once released</td></tr><tr><td style="white-space:nowrap">EmCare.B11S2.DE06<a name="emcare-custom-codes-EmCare.46B11S2.46DE06"> </a></td><td>Restless and Irritable</td><td>The client is restless and irritable</td></tr><tr><td style="white-space:nowrap">EmCare.B21S2.DE01<a name="emcare-custom-codes-EmCare.46B21S2.46DE01"> </a></td><td>Weight Status</td><td>The client's weight status</td></tr><tr><td style="white-space:nowrap">EmCare.B21S2.DE05<a name="emcare-custom-codes-EmCare.46B21S2.46DE05"> </a></td><td>Breastfed how many times in 24 hours?</td><td>Number of times the client is breastfed in 24 hours</td></tr><tr><td style="white-space:nowrap">EmCare.B21S2.DE06<a name="emcare-custom-codes-EmCare.46B21S2.46DE06"> </a></td><td>Sufficient feeds</td><td>Based on the number of feeds during a 24 hour period the result is auto-calculated to determine sufficient feeds</td></tr><tr><td style="white-space:nowrap">EmCare.B21S2.DE08<a name="emcare-custom-codes-EmCare.46B21S2.46DE08"> </a></td><td>Young Infant receives food or fluids other than breast milk</td><td>The client is receiving other food or drinks besides breastmilk</td></tr><tr><td style="white-space:nowrap">EmCare.B21S2.DE09<a name="emcare-custom-codes-EmCare.46B21S2.46DE09"> </a></td><td>What milk is being given as a replacement feed?</td><td>The health care worker discusses the milk being given to the client as a replacement feed and determines if it is appropriate replacement milk</td></tr><tr><td style="white-space:nowrap">EmCare.B21S2.DE12<a name="emcare-custom-codes-EmCare.46B21S2.46DE12"> </a></td><td>How many replacement feeds during the day and night (24 hours)?</td><td>How often the client is receiving replacement feeds during the day and night (24 hours)</td></tr><tr><td style="white-space:nowrap">EmCare.B21S2.DE13<a name="emcare-custom-codes-EmCare.46B21S2.46DE13"> </a></td><td>Sufficient replacement feeds (in 24 hours)</td><td>Based on the number of feeds during the day and night (24 hours) the result is auto-calculated to determine sufficient replacement feeds</td></tr><tr><td style="white-space:nowrap">EmCare.B21S2.DE15<a name="emcare-custom-codes-EmCare.46B21S2.46DE15"> </a></td><td>How much milk is given at each feed (ml)?</td><td>The amount of milk given to the client at each feed</td></tr><tr><td style="white-space:nowrap">EmCare.B21S2.DE16<a name="emcare-custom-codes-EmCare.46B21S2.46DE16"> </a></td><td>Sufficient replacement feeds</td><td>The care giver is giving sufficient replacement feeds</td></tr><tr><td style="white-space:nowrap">EmCare.B21S2.DE18<a name="emcare-custom-codes-EmCare.46B21S2.46DE18"> </a></td><td>How is the milk prepared?</td><td>Description of how the milk is prepared for the client's feed</td></tr><tr><td style="white-space:nowrap">EmCare.B21S2.DE21<a name="emcare-custom-codes-EmCare.46B21S2.46DE21"> </a></td><td>How is the milk given?</td><td>Description on how the client is given the milk - bottle or cup</td></tr><tr><td style="white-space:nowrap">EmCare.B21S2.DE24<a name="emcare-custom-codes-EmCare.46B21S2.46DE24"> </a></td><td>How are the feeding utensils cleaned?</td><td>Description of how the feeding utensils are cleaned</td></tr><tr><td style="white-space:nowrap">EmCare.B21S2.DE27<a name="emcare-custom-codes-EmCare.46B21S2.46DE27"> </a></td><td>Do you give any breastmilk at all?</td><td>Does the care giver give the client any breastmilk at all?</td></tr><tr><td style="white-space:nowrap">EmCare.B21S2.DE30<a name="emcare-custom-codes-EmCare.46B21S2.46DE30"> </a></td><td>Ulcers or White Patches in Mouth</td><td>The client has ulcers or white patches in the mouth</td></tr><tr><td style="white-space:nowrap">EmCare.B21S2.DE31<a name="emcare-custom-codes-EmCare.46B21S2.46DE31"> </a></td><td>Unable to check if Ulcers or White Patches in Mouth</td><td>The healthcare worker is unable to check if the client has ulcers or white patches in the mouth</td></tr><tr><td style="white-space:nowrap">EmCare.B10S1.DE05<a name="emcare-custom-codes-EmCare.46B10S1.46DE05"> </a></td><td>Cough</td><td>The client is reported to have or has had a cough</td></tr><tr><td style="white-space:nowrap">EmCare.B10S1.DE06<a name="emcare-custom-codes-EmCare.46B10S1.46DE06"> </a></td><td>Cough for how long?</td><td>Length of time the client is reported to have or has had the cough</td></tr><tr><td style="white-space:nowrap">EmCare.B10S1.DE01<a name="emcare-custom-codes-EmCare.46B10S1.46DE01"> </a></td><td>Difficulty Breathing</td><td>The client is reported to have or has had difficulty breathing</td></tr><tr><td style="white-space:nowrap">EmCare.B10S1.DE02<a name="emcare-custom-codes-EmCare.46B10S1.46DE02"> </a></td><td>Difficulty breathing for how long?</td><td>The length of time the client has or has had difficulty breathing</td></tr><tr><td style="white-space:nowrap">EmCare.B11S1.DE01<a name="emcare-custom-codes-EmCare.46B11S1.46DE01"> </a></td><td>Diarrhoea</td><td>The client is reported to have or has had diarrhoea</td></tr><tr><td style="white-space:nowrap">EmCare.B11S1.DE02<a name="emcare-custom-codes-EmCare.46B11S1.46DE02"> </a></td><td>Diarrhoea for how long?</td><td>The length of time the client is reported to have or has had diarrhoea</td></tr><tr><td style="white-space:nowrap">EmCare.B11S1.DE05<a name="emcare-custom-codes-EmCare.46B11S1.46DE05"> </a></td><td>Blood in the stool in this Illness</td><td>The client is reported to have or has had blood in the stool in this Illness</td></tr><tr><td style="white-space:nowrap">EmCare.B12S1.DE02<a name="emcare-custom-codes-EmCare.46B12S1.46DE02"> </a></td><td>Fever Reported</td><td>The client is reported to have or has had fever</td></tr><tr><td style="white-space:nowrap">EmCare.B12S1.DE03<a name="emcare-custom-codes-EmCare.46B12S1.46DE03"> </a></td><td>Fever for how long?</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B.G.DE06<a name="emcare-custom-codes-EmCare.46B.46G.46DE06"> </a></td><td>Fever</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B12S1.DE06<a name="emcare-custom-codes-EmCare.46B12S1.46DE06"> </a></td><td>Has Fever been present every day since the Fever started?</td><td>The client has had fever present every day since the fever started</td></tr><tr><td style="white-space:nowrap">EmCare.B13S1.DE01<a name="emcare-custom-codes-EmCare.46B13S1.46DE01"> </a></td><td>Ear problem</td><td>The client is reported to have had or has an ear problem</td></tr><tr><td style="white-space:nowrap">EmCare.B13S1.DE02<a name="emcare-custom-codes-EmCare.46B13S1.46DE02"> </a></td><td>Ear pain</td><td>The client is reported to have had or has ear pain</td></tr><tr><td style="white-space:nowrap">EmCare.B13S1.DE03<a name="emcare-custom-codes-EmCare.46B13S1.46DE03"> </a></td><td>Ear discharge</td><td>The client is reported to have or has had ear discharge</td></tr><tr><td style="white-space:nowrap">EmCare.B13S1.DE04<a name="emcare-custom-codes-EmCare.46B13S1.46DE04"> </a></td><td>Ear discharge for how long?</td><td>The length of time client has or has had ear discharge</td></tr><tr><td style="white-space:nowrap">EmCare.B14S1.DE03<a name="emcare-custom-codes-EmCare.46B14S1.46DE03"> </a></td><td>Eye Problem</td><td>The client is reported to have an eye problem</td></tr><tr><td style="white-space:nowrap">EmCare.B14S1.DE01<a name="emcare-custom-codes-EmCare.46B14S1.46DE01"> </a></td><td>Skin Problem</td><td>The client is reported to have or has had a skin problem</td></tr><tr><td style="white-space:nowrap">EmCare.B14S1.DE02<a name="emcare-custom-codes-EmCare.46B14S1.46DE02"> </a></td><td>Itchy Skin</td><td>The client is reported to have itchy skin</td></tr><tr><td style="white-space:nowrap">EmCare.B22.RespiratoryRate<a name="emcare-custom-codes-EmCare.46B22.46RespiratoryRate"> </a></td><td/><td>The client's respiratory rate</td></tr><tr><td style="white-space:nowrap">EmCare.B10S2.DE03<a name="emcare-custom-codes-EmCare.46B10S2.46DE03"> </a></td><td>Chest Indrawing</td><td>The client has chest indrawing</td></tr><tr><td style="white-space:nowrap">EmCare.B10S2.DE04<a name="emcare-custom-codes-EmCare.46B10S2.46DE04"> </a></td><td>Stridor in a calm child</td><td>The client has stridor in a calm child while the client is at rest</td></tr><tr><td style="white-space:nowrap">EmCare.B10S2.DE05<a name="emcare-custom-codes-EmCare.46B10S2.46DE05"> </a></td><td>Wheezing</td><td>The client is wheezing</td></tr><tr><td style="white-space:nowrap">EmCare.B10S2.DE06<a name="emcare-custom-codes-EmCare.46B10S2.46DE06"> </a></td><td>Recurrent Wheeze</td><td>The client has experienced recurrent wheeze</td></tr><tr><td style="white-space:nowrap">EmCare.B10S2.DE07<a name="emcare-custom-codes-EmCare.46B10S2.46DE07"> </a></td><td>Oxygen Saturation</td><td>The client's oxygen saturation measurement</td></tr><tr><td style="white-space:nowrap">EmCare.B10S2.DE08<a name="emcare-custom-codes-EmCare.46B10S2.46DE08"> </a></td><td>Oxygen Saturation &lt; 90 %</td><td>The client's oxygen saturation is less than 90 %</td></tr><tr><td style="white-space:nowrap">EmCare.B11S2.DE01<a name="emcare-custom-codes-EmCare.46B11S2.46DE01"> </a></td><td>Sunken eyes</td><td>The client has sunken eyes</td></tr><tr><td style="white-space:nowrap">EmCare.B11S2.DE02<a name="emcare-custom-codes-EmCare.46B11S2.46DE02"> </a></td><td>Skin pinch of Abdomen</td><td>The healthcare worker pinches the skin of the client's abdomen for 1 second and then observes how long the skin takes to return to normal once released</td></tr><tr><td style="white-space:nowrap">EmCare.B11S2.DE06<a name="emcare-custom-codes-EmCare.46B11S2.46DE06"> </a></td><td>Restless and Irritable</td><td>The client is restless and irritable</td></tr><tr><td style="white-space:nowrap">EmCare.B17S1.DE01<a name="emcare-custom-codes-EmCare.46B17S1.46DE01"> </a></td><td>Throat problem</td><td>The client has a throat problem</td></tr><tr><td style="white-space:nowrap">EmCare.B17S1.DE02<a name="emcare-custom-codes-EmCare.46B17S1.46DE02"> </a></td><td>Specify Throat problem</td><td>Specify the throat problem the client has</td></tr><tr><td style="white-space:nowrap">EmCare.B17S1.DE06<a name="emcare-custom-codes-EmCare.46B17S1.46DE06"> </a></td><td>Enlarged lymph nodes on front of neck</td><td>The client has enlarged lymph node(s) on the front of the neck</td></tr><tr><td style="white-space:nowrap">EmCare.B17S1.DE07<a name="emcare-custom-codes-EmCare.46B17S1.46DE07"> </a></td><td>Ability to swallow</td><td>The client's ability to swallow</td></tr><tr><td style="white-space:nowrap">EmCare.B13S2.DE01<a name="emcare-custom-codes-EmCare.46B13S2.46DE01"> </a></td><td>Tender swelling behind the ear</td><td>The client has tender swelling behind the ear</td></tr><tr><td style="white-space:nowrap">EmCare.B13S2.DE02<a name="emcare-custom-codes-EmCare.46B13S2.46DE02"> </a></td><td>Pus Seen Draining from the Ear</td><td>The client has pus draining from the ear which has been seen by the health care worker</td></tr><tr><td style="white-space:nowrap">EmCare.B13S2.DE03<a name="emcare-custom-codes-EmCare.46B13S2.46DE03"> </a></td><td>Pus Seen Draining from the Ear for how long?</td><td>The length of time the client has or has had pus draining from the ear</td></tr><tr><td style="white-space:nowrap">EmCare.B12S2.DE01<a name="emcare-custom-codes-EmCare.46B12S2.46DE01"> </a></td><td>Stiff neck</td><td>The client has a stiff neck</td></tr><tr><td style="white-space:nowrap">EmCare.B12S2.DE05<a name="emcare-custom-codes-EmCare.46B12S2.46DE05"> </a></td><td>Runny nose</td><td>The client has a Runny nose</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE01<a name="emcare-custom-codes-EmCare.46B14S2.46DE01"> </a></td><td>Red eyes</td><td>The client has red eyes</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE02<a name="emcare-custom-codes-EmCare.46B14S2.46DE02"> </a></td><td>Pus Draining from Eye</td><td>The client has pus draining from the eye</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE03<a name="emcare-custom-codes-EmCare.46B14S2.46DE03"> </a></td><td>Clouding of the Cornea</td><td>The client has clouding of the cornea</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE04<a name="emcare-custom-codes-EmCare.46B14S2.46DE04"> </a></td><td>Is Clouding of the Cornea a new problem</td><td>Clouding of the cornea in the client is a new problem</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE05<a name="emcare-custom-codes-EmCare.46B14S2.46DE05"> </a></td><td>Has Clouding of the Cornea previously been treated</td><td>Clouding of the cornea has not been previously treated in the client</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE06<a name="emcare-custom-codes-EmCare.46B14S2.46DE06"> </a></td><td>Generalised or Localised Skin Problem</td><td>The client has a generalised or localised skin problem</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE10<a name="emcare-custom-codes-EmCare.46B14S2.46DE10"> </a></td><td>Measles Rash</td><td>The client has a measles rash</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE11<a name="emcare-custom-codes-EmCare.46B14S2.46DE11"> </a></td><td>Measles within the last 3 months</td><td>The client has had measles in the last 3 months</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE12<a name="emcare-custom-codes-EmCare.46B14S2.46DE12"> </a></td><td>Blisters, Sores or Pustules</td><td>The client has blisters, sores or pustules</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE13<a name="emcare-custom-codes-EmCare.46B14S2.46DE13"> </a></td><td>Type of Skin Problem</td><td>The client has a specific type of skin problem(s)</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE19a<a name="emcare-custom-codes-EmCare.46B14S2.46DE19a"> </a></td><td>Scalp Infection (tinea capitis)</td><td>The client has Scalp Infection (tinea capitis)</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE22A<a name="emcare-custom-codes-EmCare.46B14S2.46DE22A"> </a></td><td>Severe rash</td><td>The client has severe chickenpox rash</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE23a<a name="emcare-custom-codes-EmCare.46B14S2.46DE23a"> </a></td><td>Disseminated Herpes Zoster</td><td>The client has disseminated herpes zoster</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE24<a name="emcare-custom-codes-EmCare.46B14S2.46DE24"> </a></td><td>Eye Involvement</td><td>The client has Herpes Zoster with Eye Involvement</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE30<a name="emcare-custom-codes-EmCare.46B14S2.46DE30"> </a></td><td>Skin Infection extends to Muscle</td><td>The client has skin infection that extends to muscle</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE30b<a name="emcare-custom-codes-EmCare.46B14S2.46DE30b"> </a></td><td>Extensive impetigo lesions</td><td>The client has Extensive impetigo lesions requiring oral antibiotics</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE31a<a name="emcare-custom-codes-EmCare.46B14S2.46DE31a"> </a></td><td>Extensive molluscum lesions</td><td>The client has Extensive molluscum lesions</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE31b<a name="emcare-custom-codes-EmCare.46B14S2.46DE31b"> </a></td><td>Molluscum lesions close to the eye</td><td>The client has molluscum lesions close to the eye</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE32a<a name="emcare-custom-codes-EmCare.46B14S2.46DE32a"> </a></td><td>Extensive warts</td><td>The client has Extensive warts</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE34<a name="emcare-custom-codes-EmCare.46B14S2.46DE34"> </a></td><td>Severe Seborrhoeic Dermatitis</td><td>The client has severe Seborrhoeic Dermatitis</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE36a<a name="emcare-custom-codes-EmCare.46B14S2.46DE36a"> </a></td><td>Secondary bacterial infection of eczema</td><td>The client has secondary bacterial infection of eczema</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE36b<a name="emcare-custom-codes-EmCare.46B14S2.46DE36b"> </a></td><td>Severe acute moist or weeping eczema</td><td>The client has severe acute moist or weeping eczema</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE36c<a name="emcare-custom-codes-EmCare.46B14S2.46DE36c"> </a></td><td>Secondary herpes infection of eczema (eczema herpeticum)</td><td>The client has secondary herpes infection of eczema (eczema herpeticum)</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE38<a name="emcare-custom-codes-EmCare.46B14S2.46DE38"> </a></td><td>Oral sores or Mouth Ulcers</td><td>The client has oral sores or mouth ulcers</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE43<a name="emcare-custom-codes-EmCare.46B14S2.46DE43"> </a></td><td>Add a Skin or Mouth or Eye Problem</td><td>The health care worker would like to add a Skin or Mouth or Eye problem found during the physical exam</td></tr><tr><td style="white-space:nowrap">EmCare.B15S2.DE01<a name="emcare-custom-codes-EmCare.46B15S2.46DE01"> </a></td><td>Palmar Pallor</td><td>The client has palmar pallor</td></tr><tr><td style="white-space:nowrap">EmCare.B15S2.DE09<a name="emcare-custom-codes-EmCare.46B15S2.46DE09"> </a></td><td>Mucous membrane pallor</td><td>The client has Mucous membrane pallor</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE08<a name="emcare-custom-codes-EmCare.46B22.46DE08"> </a></td><td>Oral Fluid Test Results</td><td>Oral Fluid Test Results</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE14<a name="emcare-custom-codes-EmCare.46B22.46DE14"> </a></td><td>Unable to Perform Oral Fluid Test</td><td>The healthcare worker is Unable to Perform Oral Fluid Test</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE14a<a name="emcare-custom-codes-EmCare.46B22.46DE14a"> </a></td><td>Completely Unable to Drink or Vomits Immediately / Everything</td><td>When  are present when the healthcare worker is Unable to Perform Oral Fluid Test it is assumed that the client is completely unable to drink or vomits immediately / everything</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE15<a name="emcare-custom-codes-EmCare.46B22.46DE15"> </a></td><td>Has the Child had anything to drink today?</td><td>The health care worker asks the caregiver if the client has had anything to drink today</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE16<a name="emcare-custom-codes-EmCare.46B22.46DE16"> </a></td><td>How did the child last drink</td><td>The health care worker asks the caregiver how did the client last drink</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE01<a name="emcare-custom-codes-EmCare.46B22.46DE01"> </a></td><td>Respiratory Rate (breaths per minute)</td><td>The client's respiratory rate for client's aged 2 months or more</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE02<a name="emcare-custom-codes-EmCare.46B22.46DE02"> </a></td><td>Unable to perform Respiratory Rate at this time</td><td>The client's respiratory rate could not be measured at this time (all ages)</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE04<a name="emcare-custom-codes-EmCare.46B22.46DE04"> </a></td><td>Respiratory Rate Second Count (breaths per minute)</td><td>The client's respiratory rate for the second Count</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE05<a name="emcare-custom-codes-EmCare.46B22.46DE05"> </a></td><td>Respiratory Rate Second Count Not Possible</td><td>The client's respiratory rate for the second Count was not possible</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE07<a name="emcare-custom-codes-EmCare.46B22.46DE07"> </a></td><td>Fast Breathing</td><td>The client has fast breathing - auto-calculated based on the respiratory rate and the age of the client - 60 breaths per minute or more (&lt;2 months) after 2 respiratory rate measurements</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE17<a name="emcare-custom-codes-EmCare.46B22.46DE17"> </a></td><td>Inhaled Bronchodilator Trial Results</td><td>The Inhaled bronchodilator trial test results</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE22<a name="emcare-custom-codes-EmCare.46B22.46DE22"> </a></td><td>Inhaled Bronchodilator Trial Not Feasible or Available</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B22.DE21<a name="emcare-custom-codes-EmCare.46B22.46DE21"> </a></td><td>No Fast Breathing and No Chest Indrawing (post Inhaled Bronchodilator Trial)</td><td>The client has no fast breathing and no chest indrawing</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE27<a name="emcare-custom-codes-EmCare.46B22.46DE27"> </a></td><td>Breastfeeding Assessment</td><td>Breastfeeding Assessment to ensure the client does not have difficulty breastfeeding</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE41<a name="emcare-custom-codes-EmCare.46B22.46DE41"> </a></td><td>Breastfeeding Assessment Not Possible</td><td>The breastfeeding assessment was not possible</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE28<a name="emcare-custom-codes-EmCare.46B22.46DE28"> </a></td><td>Breastfed in the previous hour</td><td>The client has breastfed in the previous hour</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE29<a name="emcare-custom-codes-EmCare.46B22.46DE29"> </a></td><td>Mother able to wait until young infant is willing to breastfeed again</td><td>The client's mother is able to wait until young infant is willing to breastfeed again</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE30<a name="emcare-custom-codes-EmCare.46B22.46DE30"> </a></td><td>Mother reports difficulty breastfeeding</td><td>The client's mother reports that there is difficulty breastfeeding (not observed)</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE31<a name="emcare-custom-codes-EmCare.46B22.46DE31"> </a></td><td>Chin Touching Breast</td><td>The client's chin is touching the breast</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE32<a name="emcare-custom-codes-EmCare.46B22.46DE32"> </a></td><td>Mouth Wide Open</td><td>The client's mouth is wide open</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE33<a name="emcare-custom-codes-EmCare.46B22.46DE33"> </a></td><td>Lower Lip Turned Outwards</td><td>The client's lower lip is turned outwards</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE34<a name="emcare-custom-codes-EmCare.46B22.46DE34"> </a></td><td>More Areola Visible above than below the Mouth</td><td>The mother has more areola visible above than below the client's mouth</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE35<a name="emcare-custom-codes-EmCare.46B22.46DE35"> </a></td><td>Slow Deep Sucks, Sometimes Pausing</td><td>The client is taking slow deep sucks, sometimes pausing</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE36<a name="emcare-custom-codes-EmCare.46B22.46DE36"> </a></td><td>Breastfeeding Assessment Results</td><td>The client's breastfeeding results</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE42<a name="emcare-custom-codes-EmCare.46B22.46DE42"> </a></td><td>Difficulty Breastfeeding Reported</td><td>The breastfeeding assessment was not observed however the caregiver has reported difficulty breastfeeding</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE44<a name="emcare-custom-codes-EmCare.46B22.46DE44"> </a></td><td>Difficulty Breastfeeding Observed</td><td>The healthcare worker has observed that the client has difficulty breastfeeding</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE47<a name="emcare-custom-codes-EmCare.46B22.46DE47"> </a></td><td>Axillary Temperature (second measurement)</td><td>The client's axillary temperature (second measurement) in degrees Celcius (temperature taken under the armpit)</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE46<a name="emcare-custom-codes-EmCare.46B22.46DE46"> </a></td><td>Second Temperature Measurement Not Feasible</td><td>The client's second temperature measurement is feasible</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE50<a name="emcare-custom-codes-EmCare.46B22.46DE50"> </a></td><td>Measured Temperature (second measurement)</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE83<a name="emcare-custom-codes-EmCare.46B23.46DE83"> </a></td><td>Possible Serious Bacterial Infection OR Very Severe Disease</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE06<a name="emcare-custom-codes-EmCare.46B23.46DE06"> </a></td><td>Pneumonia</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE85<a name="emcare-custom-codes-EmCare.46B23.46DE85"> </a></td><td>Local Infection</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE86<a name="emcare-custom-codes-EmCare.46B23.46DE86"> </a></td><td>Infection Unlikely</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE106<a name="emcare-custom-codes-EmCare.46B23.46DE106"> </a></td><td>Very Low Weight for Age</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE87<a name="emcare-custom-codes-EmCare.46B23.46DE87"> </a></td><td>Severe Jaundice</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE88<a name="emcare-custom-codes-EmCare.46B23.46DE88"> </a></td><td>Jaundice</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE89<a name="emcare-custom-codes-EmCare.46B23.46DE89"> </a></td><td>No Jaundice</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE13<a name="emcare-custom-codes-EmCare.46B23.46DE13"> </a></td><td>Severe Dehydration</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE14<a name="emcare-custom-codes-EmCare.46B23.46DE14"> </a></td><td>Some Dehydration</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE15<a name="emcare-custom-codes-EmCare.46B23.46DE15"> </a></td><td>No Dehydration</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE94<a name="emcare-custom-codes-EmCare.46B23.46DE94"> </a></td><td>Feeding Problem and / or Low Weight for Age</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE98<a name="emcare-custom-codes-EmCare.46B23.46DE98"> </a></td><td>No Feeding Problem</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE01<a name="emcare-custom-codes-EmCare.46B23.46DE01"> </a></td><td>Very Severe Disease</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE03<a name="emcare-custom-codes-EmCare.46B23.46DE03"> </a></td><td>Severe Pneumonia or Very Severe Disease</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE04_l<a name="emcare-custom-codes-EmCare.46B23.46DE04_l"> </a></td><td>with low oxygen saturation (SPO2 &lt; 90%)</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE05_l<a name="emcare-custom-codes-EmCare.46B23.46DE05_l"> </a></td><td>with wheezing</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE06<a name="emcare-custom-codes-EmCare.46B23.46DE06"> </a></td><td>Pneumonia</td><td>The client has Pneumonia</td></tr><tr><td style="white-space:nowrap">EmCare.B23.DE05_l<a name="emcare-custom-codes-EmCare.46B23.46DE05_l"> </a></td><td>with wheezing</td><td>The client has Pneumonia with wheezing</td></tr><tr><td style="white-space:nowrap">EmCare.B23.DE08_l<a name="emcare-custom-codes-EmCare.46B23.46DE08_l"> </a></td><td>with cough or difficulty breathing for 14 days or more or recurrent wheeze</td><td>The client has Pneumonia with cough or difficulty breathing for 14 days or more or recurrent wheeze</td></tr><tr><td style="white-space:nowrap">EmCare.B23.DE10<a name="emcare-custom-codes-EmCare.46B23.46DE10"> </a></td><td>Cough or Cold</td><td>The client has Cough or Cold</td></tr><tr><td style="white-space:nowrap">EmCare.B23.DE05_l<a name="emcare-custom-codes-EmCare.46B23.46DE05_l"> </a></td><td>with wheezing</td><td>The client has Cough or Cold with wheezing</td></tr><tr><td style="white-space:nowrap">EmCare.B23.DE08_l<a name="emcare-custom-codes-EmCare.46B23.46DE08_l"> </a></td><td>with cough or difficulty breathing for 14 days or more or recurrent wheeze</td><td>The client has with cough for more than 14 days or difficulty breathing for more than 14 days or recurrent wheeze</td></tr><tr><td style="white-space:nowrap">EmCare.B23.DE13<a name="emcare-custom-codes-EmCare.46B23.46DE13"> </a></td><td>Severe Dehydration</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE14<a name="emcare-custom-codes-EmCare.46B23.46DE14"> </a></td><td>Some Dehydration</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE15<a name="emcare-custom-codes-EmCare.46B23.46DE15"> </a></td><td>No Dehydration</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE16<a name="emcare-custom-codes-EmCare.46B23.46DE16"> </a></td><td>Severe Persistent Diarrhoea</td><td>The client has Severe Persistent Diarrhoea</td></tr><tr><td style="white-space:nowrap">EmCare.B23.DE17<a name="emcare-custom-codes-EmCare.46B23.46DE17"> </a></td><td>Persistent Diarrhoea</td><td>The client has Persistent Diarrhoea</td></tr><tr><td style="white-space:nowrap">EmCare.B23.DE18<a name="emcare-custom-codes-EmCare.46B23.46DE18"> </a></td><td>Dysentery</td><td>The client has Dysentery</td></tr><tr><td style="white-space:nowrap">EmCare.B23.DE18.a<a name="emcare-custom-codes-EmCare.46B23.46DE18.46a"> </a></td><td>Possible Shigella</td><td>The client has Possible Shigella</td></tr><tr><td style="white-space:nowrap">EmCare.B23.DE100<a name="emcare-custom-codes-EmCare.46B23.46DE100"> </a></td><td>Throat Abscess or Possible Diptheria</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE6101<a name="emcare-custom-codes-EmCare.46B23.46DE6101"> </a></td><td>Streptococcal Sore Throat</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE6102<a name="emcare-custom-codes-EmCare.46B23.46DE6102"> </a></td><td>Non-Streptococcal Sore Throat</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE6103<a name="emcare-custom-codes-EmCare.46B23.46DE6103"> </a></td><td>No Throat Problem</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE30<a name="emcare-custom-codes-EmCare.46B23.46DE30"> </a></td><td>Mastoiditis</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE31<a name="emcare-custom-codes-EmCare.46B23.46DE31"> </a></td><td>Acute Ear Infection</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE32<a name="emcare-custom-codes-EmCare.46B23.46DE32"> </a></td><td>Chronic Ear Infection</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE32a_l<a name="emcare-custom-codes-EmCare.46B23.46DE32a_l"> </a></td><td>with ear pain or fever</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE33<a name="emcare-custom-codes-EmCare.46B23.46DE33"> </a></td><td>No Ear Infection</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE19<a name="emcare-custom-codes-EmCare.46B23.46DE19"> </a></td><td>Very Severe Febrile Disease</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE104<a name="emcare-custom-codes-EmCare.46B23.46DE104"> </a></td><td>Fever: possible bacterial infection</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE26a_l<a name="emcare-custom-codes-EmCare.46B23.46DE26a_l"> </a></td><td>Fever present every day for 7 Days or more</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE105<a name="emcare-custom-codes-EmCare.46B23.46DE105"> </a></td><td>Fever: bacterial infection unlikely</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE27<a name="emcare-custom-codes-EmCare.46B23.46DE27"> </a></td><td>Severe Complicated Measles</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE28<a name="emcare-custom-codes-EmCare.46B23.46DE28"> </a></td><td>Measles with Eye or Mouth Complication</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE29<a name="emcare-custom-codes-EmCare.46B23.46DE29"> </a></td><td>Possible Measles</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE62<a name="emcare-custom-codes-EmCare.46B23.46DE62"> </a></td><td>Severe Anaemia</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE63<a name="emcare-custom-codes-EmCare.46B23.46DE63"> </a></td><td>Anaemia</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE64<a name="emcare-custom-codes-EmCare.46B23.46DE64"> </a></td><td>No Anaemia</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE34<a name="emcare-custom-codes-EmCare.46B23.46DE34"> </a></td><td>Eye Infection</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE35<a name="emcare-custom-codes-EmCare.46B23.46DE35"> </a></td><td>Clouding of the Cornea</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE36_l<a name="emcare-custom-codes-EmCare.46B23.46DE36_l"> </a></td><td>New or not previously treated</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE41<a name="emcare-custom-codes-EmCare.46B23.46DE41"> </a></td><td>Papular Urticaria or Papular Pruritic Eruptions</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE42<a name="emcare-custom-codes-EmCare.46B23.46DE42"> </a></td><td>Ringworm (Tinea)</td><td/></tr><tr><td style="white-space:nowrap">DL-I-CL1-15<a name="emcare-custom-codes-DL-I-CL1-15"> </a></td><td>Scalp Infection (tinea capitis)</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE44<a name="emcare-custom-codes-EmCare.46B23.46DE44"> </a></td><td>Scabies</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE45<a name="emcare-custom-codes-EmCare.46B23.46DE45"> </a></td><td>Chickenpox</td><td/></tr><tr><td style="white-space:nowrap">DL-I-CL1-16<a name="emcare-custom-codes-DL-I-CL1-16"> </a></td><td>with Severe Rash</td><td/></tr><tr><td style="white-space:nowrap">DL-G-CL1-92<a name="emcare-custom-codes-DL-G-CL1-92"> </a></td><td>with Pneumonia</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE47<a name="emcare-custom-codes-EmCare.46B23.46DE47"> </a></td><td>Herpes Zoster</td><td/></tr><tr><td style="white-space:nowrap">DL-G-CL1-94<a name="emcare-custom-codes-DL-G-CL1-94"> </a></td><td>with eye involvement</td><td/></tr><tr><td style="white-space:nowrap">DL-I-CL1-17<a name="emcare-custom-codes-DL-I-CL1-17"> </a></td><td>with Disseminated Herpes Zoste</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE49<a name="emcare-custom-codes-EmCare.46B23.46DE49"> </a></td><td>Impetigo</td><td/></tr><tr><td style="white-space:nowrap">DL-G-CL1-96<a name="emcare-custom-codes-DL-G-CL1-96"> </a></td><td>extends to muscle or with measured fever</td><td/></tr><tr><td style="white-space:nowrap">DL-I-CL1-18<a name="emcare-custom-codes-DL-I-CL1-18"> </a></td><td>with extensive lesions</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE52<a name="emcare-custom-codes-EmCare.46B23.46DE52"> </a></td><td>Molluscum Contagiosum</td><td/></tr><tr><td style="white-space:nowrap">DL-I-CL1-19<a name="emcare-custom-codes-DL-I-CL1-19"> </a></td><td>with extensive lesions or lesions close to the eye</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE53<a name="emcare-custom-codes-EmCare.46B23.46DE53"> </a></td><td>Warts</td><td/></tr><tr><td style="white-space:nowrap">DL-I-CL1-20<a name="emcare-custom-codes-DL-I-CL1-20"> </a></td><td>Extensive warts</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE54<a name="emcare-custom-codes-EmCare.46B23.46DE54"> </a></td><td>Seborrhoeic Dermatitis</td><td/></tr><tr><td style="white-space:nowrap">DL-G-CL1-101<a name="emcare-custom-codes-DL-G-CL1-101"> </a></td><td>Severe Seborrhoeic Dermatitis</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE56<a name="emcare-custom-codes-EmCare.46B23.46DE56"> </a></td><td>Fixed Drug Reaction</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE57<a name="emcare-custom-codes-EmCare.46B23.46DE57"> </a></td><td>Eczema</td><td/></tr><tr><td style="white-space:nowrap">DL-I-CL1-21<a name="emcare-custom-codes-DL-I-CL1-21"> </a></td><td>Severe acute moist or weeping eczema</td><td/></tr><tr><td style="white-space:nowrap">DL-I-CL1-22<a name="emcare-custom-codes-DL-I-CL1-22"> </a></td><td>Secondary bacterial infection of eczema</td><td/></tr><tr><td style="white-space:nowrap">DL-I-CL1-23<a name="emcare-custom-codes-DL-I-CL1-23"> </a></td><td>Secondary herpes infection (eczema herpeticum)</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE58<a name="emcare-custom-codes-EmCare.46B23.46DE58"> </a></td><td>Steven Johnson Syndrome (SJS)</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE59<a name="emcare-custom-codes-EmCare.46B23.46DE59"> </a></td><td>Mouth Sores or Ulcer</td><td/></tr><tr><td style="white-space:nowrap">DL-G-CL1-107<a name="emcare-custom-codes-DL-G-CL1-107"> </a></td><td>Deep or Extensive</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE61<a name="emcare-custom-codes-EmCare.46B23.46DE61"> </a></td><td>Oral Thrush</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE106<a name="emcare-custom-codes-EmCare.46B23.46DE106"> </a></td><td>Very Low Weight for Age</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE107<a name="emcare-custom-codes-EmCare.46B23.46DE107"> </a></td><td>Low Weight for Age</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B23.DE108<a name="emcare-custom-codes-EmCare.46B23.46DE108"> </a></td><td>Low MUAC or visual report of wasting</td><td/></tr><tr><td style="white-space:nowrap">EmCare.A.DE17<a name="emcare-custom-codes-EmCare.46A.46DE17"> </a></td><td>female</td><td>The client is Female</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE18<a name="emcare-custom-codes-EmCare.46A.46DE18"> </a></td><td>male</td><td>The client is Male</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE19<a name="emcare-custom-codes-EmCare.46A.46DE19"> </a></td><td>not specified</td><td>The client's sex is not specified</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE13<a name="emcare-custom-codes-EmCare.46A.46DE13"> </a></td><td>estimated age in years/months for child (2 months or older)</td><td>The age of the client is estimated based on physical evidence</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE14<a name="emcare-custom-codes-EmCare.46A.46DE14"> </a></td><td>estimated age in weeks/days for young infant (under 2 months old)</td><td>The Caregiver provides the age in weeks/days/hours</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE15<a name="emcare-custom-codes-EmCare.46A.46DE15"> </a></td><td>estimated date of birth</td><td>Estimated Date of Birth of the Client</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE25<a name="emcare-custom-codes-EmCare.46A.46DE25"> </a></td><td>mother</td><td>The Caregiver is the client's mother</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE26<a name="emcare-custom-codes-EmCare.46A.46DE26"> </a></td><td>father</td><td>The Caregiver is the client's father</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE27<a name="emcare-custom-codes-EmCare.46A.46DE27"> </a></td><td>sibling</td><td>The Caregiver is the client's sibling</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE28<a name="emcare-custom-codes-EmCare.46A.46DE28"> </a></td><td>extended family</td><td>The Caregiver is the client's extended family</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE29<a name="emcare-custom-codes-EmCare.46A.46DE29"> </a></td><td>legal guardian</td><td>The Caregiver is the client's legal guardian</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE30<a name="emcare-custom-codes-EmCare.46A.46DE30"> </a></td><td>not related</td><td>The Caregiver is not related to the client</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE46<a name="emcare-custom-codes-EmCare.46A.46DE46"> </a></td><td>dead</td><td>Biological Mother or Father dead</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE34<a name="emcare-custom-codes-EmCare.46A.46DE34"> </a></td><td>alive</td><td>Biological Mother or Father Alive</td></tr><tr><td style="white-space:nowrap">EmCare.B2.DE02<a name="emcare-custom-codes-EmCare.46B2.46DE02"> </a></td><td>planned</td><td>The visit is planned</td></tr><tr><td style="white-space:nowrap">EmCare.B2.DE03<a name="emcare-custom-codes-EmCare.46B2.46DE03"> </a></td><td>unplanned</td><td>The visit is unplanned</td></tr><tr><td style="white-space:nowrap">EmCare.B3.DE03<a name="emcare-custom-codes-EmCare.46B3.46DE03"> </a></td><td>sick child</td><td>The client's visit is for a sick child consultation</td></tr><tr><td style="white-space:nowrap">EmCare.B3.DE04<a name="emcare-custom-codes-EmCare.46B3.46DE04"> </a></td><td>routine visit (well child/infant)</td><td>The client's visit is for a well child consultation</td></tr><tr><td style="white-space:nowrap">yes<a name="emcare-custom-codes-yes"> </a></td><td>yes</td><td>Yes</td></tr><tr><td style="white-space:nowrap">no<a name="emcare-custom-codes-no"> </a></td><td>no</td><td>No</td></tr><tr><td style="white-space:nowrap">EmCare.A.DE33<a name="emcare-custom-codes-EmCare.46A.46DE33"> </a></td><td>unknown</td><td>Unknown</td></tr><tr><td style="white-space:nowrap">agree<a name="emcare-custom-codes-agree"> </a></td><td>agree</td><td>Agree</td></tr><tr><td style="white-space:nowrap">disagree<a name="emcare-custom-codes-disagree"> </a></td><td>disagree</td><td>Disagree</td></tr><tr><td style="white-space:nowrap">EmCare.B3.DE07<a name="emcare-custom-codes-EmCare.46B3.46DE07"> </a></td><td>initial visit</td><td>The client's visit is for a new consultation</td></tr><tr><td style="white-space:nowrap">EmCare.B3.DE08<a name="emcare-custom-codes-EmCare.46B3.46DE08"> </a></td><td>follow up</td><td>The client's visit is for a follow up consultation</td></tr><tr><td style="white-space:nowrap">EmCare.B12S1.DE05<a name="emcare-custom-codes-EmCare.46B12S1.46DE05"> </a></td><td>7 days or more</td><td>The client has had fever for 7 days or more</td></tr><tr><td style="white-space:nowrap">EmCare.B12S1.DE04<a name="emcare-custom-codes-EmCare.46B12S1.46DE04"> </a></td><td>less than 7 days</td><td>The client has had fever for less than 7 days</td></tr><tr><td style="white-space:nowrap">EmCare.B10S1.DE08<a name="emcare-custom-codes-EmCare.46B10S1.46DE08"> </a></td><td>14 days or more</td><td>The client has had ear discharge for 14 days or more</td></tr><tr><td style="white-space:nowrap">EmCare.B10S1.DE07<a name="emcare-custom-codes-EmCare.46B10S1.46DE07"> </a></td><td>less than 14 days</td><td>The client has had ear discharge for less than 14 days</td></tr><tr><td style="white-space:nowrap">EmCare.B10S2.DE09<a name="emcare-custom-codes-EmCare.46B10S2.46DE09"> </a></td><td>oxygen saturation not measured</td><td>The clients oxygen saturation was not measured</td></tr><tr><td style="white-space:nowrap">EmCare.B7.DE06<a name="emcare-custom-codes-EmCare.46B7.46DE06"> </a></td><td>two or more convulsions</td><td>The client is reported to have had two or more convulsions in this illness</td></tr><tr><td style="white-space:nowrap">EmCare.B7.DE05<a name="emcare-custom-codes-EmCare.46B7.46DE05"> </a></td><td>one convulsion</td><td>The client is reported to have had one convulsion in this illness</td></tr><tr><td style="white-space:nowrap">Low<a name="emcare-custom-codes-Low"> </a></td><td>low</td><td>The client has a low body temperature based on the second  measurement</td></tr><tr><td style="white-space:nowrap">Normal<a name="emcare-custom-codes-Normal"> </a></td><td>normal</td><td/></tr><tr><td style="white-space:nowrap">High<a name="emcare-custom-codes-High"> </a></td><td>high</td><td/></tr><tr><td style="white-space:nowrap">2<a name="emcare-custom-codes-2"> </a></td><td>very high</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B20S2.DE03<a name="emcare-custom-codes-EmCare.46B20S2.46DE03"> </a></td><td>skin pinch goes back very slowly (more than 2 seconds)</td><td>The client's skin goes back very slowly after Skin pinch of Abdomen (More than 2 seconds)</td></tr><tr><td style="white-space:nowrap">EmCare.B20S2.DE04<a name="emcare-custom-codes-EmCare.46B20S2.46DE04"> </a></td><td>skin pinch goes back slowly (2 seconds or fewer, but not immediately)</td><td>The client's skin goes back slowly after Skin pinch of Abdomen (2 seconds or fewer, but not immediately)</td></tr><tr><td style="white-space:nowrap">EmCare.B20S2.DE05<a name="emcare-custom-codes-EmCare.46B20S2.46DE05"> </a></td><td>skin pinch goes back normally (immediately)</td><td>The client's skin goes back normally after Skin pinch of Abdomen (immediately)</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE41<a name="emcare-custom-codes-EmCare.46B14S2.46DE41"> </a></td><td>mouth sores or mouth ulcers - deep and extensive</td><td>The client has mouth sores or mouth ulcers that are deep and extensive</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE42<a name="emcare-custom-codes-EmCare.46B14S2.46DE42"> </a></td><td>mouth sores or mouth ulcers - not deep and extensive</td><td>The client has mouth sores or mouth ulcers that are not deep and extensive</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE40<a name="emcare-custom-codes-EmCare.46B14S2.46DE40"> </a></td><td>oral thrush</td><td>The client has oral thrush</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE39<a name="emcare-custom-codes-EmCare.46B14S2.46DE39"> </a></td><td>no oral sores or mouth ulcers</td><td>The client is not reported to have oral sores or mouth ulcers</td></tr><tr><td style="white-space:nowrap">EmCare.B15S2.DE02<a name="emcare-custom-codes-EmCare.46B15S2.46DE02"> </a></td><td>severe palmar pallor</td><td>The client has severe palmar pallor</td></tr><tr><td style="white-space:nowrap">EmCare.B15S2.DE03<a name="emcare-custom-codes-EmCare.46B15S2.46DE03"> </a></td><td>some palmar pallor</td><td>The client has some palmar pallor</td></tr><tr><td style="white-space:nowrap">EmCare.B15S2.DE04<a name="emcare-custom-codes-EmCare.46B15S2.46DE04"> </a></td><td>no palmar pallor</td><td>The client has no palmar pallor</td></tr><tr><td style="white-space:nowrap">EmCare.B18S1.DE03<a name="emcare-custom-codes-EmCare.46B18S1.46DE03"> </a></td><td>not able to feed at all</td><td>The client is reported not to be able to feed at all</td></tr><tr><td style="white-space:nowrap">EmCare.B18S1.DE04<a name="emcare-custom-codes-EmCare.46B18S1.46DE04"> </a></td><td>not feeding well</td><td>The client is reported to not be feeding well</td></tr><tr><td style="white-space:nowrap">EmCare.B18S1.DE05<a name="emcare-custom-codes-EmCare.46B18S1.46DE05"> </a></td><td>feeding well</td><td>The client is reported to be feeding well</td></tr><tr><td style="white-space:nowrap">EmCare.B18S2.DE11<a name="emcare-custom-codes-EmCare.46B18S2.46DE11"> </a></td><td>moves on his or her own or moves spontaneously or without stimulation</td><td>The client moves on his or her own or moves spontaneously or without stimulation</td></tr><tr><td style="white-space:nowrap">EmCare.B18S2.DE10<a name="emcare-custom-codes-EmCare.46B18S2.46DE10"> </a></td><td>movement only when stimulated but then stops</td><td>The client has movement but only when stimulated and then movement stops</td></tr><tr><td style="white-space:nowrap">EmCare.B18S2.DE09<a name="emcare-custom-codes-EmCare.46B18S2.46DE09"> </a></td><td>no movement at all</td><td>The client has no movement at all even after stimulation</td></tr><tr><td style="white-space:nowrap">EmCare.B19S2.DE05<a name="emcare-custom-codes-EmCare.46B19S2.46DE05"> </a></td><td>within less than 24 hours of birth</td><td>The client's Jaundice appeared less than 24 hours after birth</td></tr><tr><td style="white-space:nowrap">EmCare.B19S2.DE06<a name="emcare-custom-codes-EmCare.46B19S2.46DE06"> </a></td><td>24 hours or more after birth</td><td>The client's Jaundice appeared 24 hours or more after birth</td></tr><tr><td style="white-space:nowrap">EmCare.B19S2.DE07<a name="emcare-custom-codes-EmCare.46B19S2.46DE07"> </a></td><td>unknown when jaundice first appeared</td><td>The caregiver does not know when the Jaundice first appeared if it is a first visit for jaundice and in the first 3 weeks of life</td></tr><tr><td style="white-space:nowrap">EmCare.B21S2.DE02<a name="emcare-custom-codes-EmCare.46B21S2.46DE02"> </a></td><td>very low weight for age</td><td>The client has a very low weight for age (Weight &lt; 2Kg and &lt;7 Days old)</td></tr><tr><td style="white-space:nowrap">EmCare.B21S2.DE03<a name="emcare-custom-codes-EmCare.46B21S2.46DE03"> </a></td><td>low weight for age</td><td>The client has a low weight for age (derived from a WFA Z Score is &lt; -2)</td></tr><tr><td style="white-space:nowrap">EmCare.B21S2.DE04<a name="emcare-custom-codes-EmCare.46B21S2.46DE04"> </a></td><td>normal weight for age</td><td>The client is a normal weight for age (derived from a normal WFA Z Score is ≥ -2</td></tr><tr><td style="white-space:nowrap">EmCare.B21S2.DE28<a name="emcare-custom-codes-EmCare.46B21S2.46DE28"> </a></td><td>breastmilk also given</td><td>Breastmilk is also given to the client by the care giver</td></tr><tr><td style="white-space:nowrap">EmCare.B7-B8-B9.DE03<a name="emcare-custom-codes-EmCare.46B7-B8-B9.46DE03"> </a></td><td>end consultation</td><td>The client has not been stabilised and the healthcare worker willend the consultation</td></tr><tr><td style="white-space:nowrap">EmCare.B7-B8-B9.DE02<a name="emcare-custom-codes-EmCare.46B7-B8-B9.46DE02"> </a></td><td>stabilised, continue consultation</td><td>The client has been stabilised and the healthcare worker will continue the consultation</td></tr><tr><td style="white-space:nowrap">EmCare.B21S1.DE02<a name="emcare-custom-codes-EmCare.46B21S1.46DE02"> </a></td><td>mother hiv positive</td><td>The client's mother is HIV positive</td></tr><tr><td style="white-space:nowrap">EmCare.B21S1.DE03<a name="emcare-custom-codes-EmCare.46B21S1.46DE03"> </a></td><td>mother hiv negative</td><td>The client's mother is HIV negative</td></tr><tr><td style="white-space:nowrap">EmCare.B21S1.DE04<a name="emcare-custom-codes-EmCare.46B21S1.46DE04"> </a></td><td>mother hiv status - unknown or not tested</td><td>The client's mother's HIV Status is unknown or not tested</td></tr><tr><td style="white-space:nowrap">EmCare.B21S1.DE05<a name="emcare-custom-codes-EmCare.46B21S1.46DE05"> </a></td><td>mother hiv status - decline to answer</td><td>The client's mother has declined to answer regarging HIV Status</td></tr><tr><td style="white-space:nowrap">EmCare.B21S2.DE19<a name="emcare-custom-codes-EmCare.46B21S2.46DE19"> </a></td><td>correct and hygienic feed preparation</td><td>The care giver is preparing the milk correctly and hygenically</td></tr><tr><td style="white-space:nowrap">EmCare.B21S2.DE20<a name="emcare-custom-codes-EmCare.46B21S2.46DE20"> </a></td><td>incorrect or unhygienic feed preparation</td><td>The care giver is not preparing the milk correctly and hygenically</td></tr><tr><td style="white-space:nowrap">EmCare.B21S2.DE22<a name="emcare-custom-codes-EmCare.46B21S2.46DE22"> </a></td><td>cup</td><td>The milk is given to the client using a cup</td></tr><tr><td style="white-space:nowrap">EmCare.B21S2.DE23<a name="emcare-custom-codes-EmCare.46B21S2.46DE23"> </a></td><td>bottle</td><td>The milk is given to the client using a bottle</td></tr><tr><td style="white-space:nowrap">EmCare.B21S2.DE26<a name="emcare-custom-codes-EmCare.46B21S2.46DE26"> </a></td><td>feeding utensils not cleaned hygienically</td><td>The care giver is not cleaning the feeding utensils hygienically</td></tr><tr><td style="white-space:nowrap">EmCare.B21S2.DE25<a name="emcare-custom-codes-EmCare.46B21S2.46DE25"> </a></td><td>feeding utensils cleaned hygienically</td><td>The care giver is cleaning the feeding utensils hygienically</td></tr><tr><td style="white-space:nowrap">EmCare.B17.DE06<a name="emcare-custom-codes-EmCare.46B17.46DE06"> </a></td><td>yes, date documented, but not here</td><td>The caregiver is able to provide the Vitamin A supplement date but not Today</td></tr><tr><td style="white-space:nowrap">EmCare.B17.DE07<a name="emcare-custom-codes-EmCare.46B17.46DE07"> </a></td><td>no, but last dose given less than 1 month ago</td><td>The caregiver is able to tell the healthcare worker that the last dose was given less than 1 month ago</td></tr><tr><td style="white-space:nowrap">EmCare.B17.DE08<a name="emcare-custom-codes-EmCare.46B17.46DE08"> </a></td><td>no, but last dose given between 1 and 6 months ago</td><td>The caregiver is able to tell the healthcare worker that the last dose was given between 1 and 5 months ago</td></tr><tr><td style="white-space:nowrap">EmCare.B17.DE09<a name="emcare-custom-codes-EmCare.46B17.46DE09"> </a></td><td>no, but last dose given more than 6 months ago</td><td>The caregiver is able to tell the healthcare worker that the last dose was given more than 6 months ago</td></tr><tr><td style="white-space:nowrap">EmCare.B17.DE10<a name="emcare-custom-codes-EmCare.46B17.46DE10"> </a></td><td>no, do not know when last dose was given</td><td>The caregiver is not able to tell the healthcare worker when the last dose was given</td></tr><tr><td style="white-space:nowrap">EmCare.B17.DE23<a name="emcare-custom-codes-EmCare.46B17.46DE23"> </a></td><td>high hiv risk</td><td>The client is in an area of HIV prevalence of high HIV risk.</td></tr><tr><td style="white-space:nowrap">EmCare.B17.DE24<a name="emcare-custom-codes-EmCare.46B17.46DE24"> </a></td><td>low hiv risk</td><td>The client is in an area of HIV prevalence of low HIV risk.</td></tr><tr><td style="white-space:nowrap">EmCare.B17.DE31<a name="emcare-custom-codes-EmCare.46B17.46DE31"> </a></td><td>child hiv positive - virological</td><td>The client is HIV Positive (Virological Test)</td></tr><tr><td style="white-space:nowrap">EmCare.B17.DE32<a name="emcare-custom-codes-EmCare.46B17.46DE32"> </a></td><td>child hiv positive - serological</td><td>The client is HIV Positive (Serological Test)</td></tr><tr><td style="white-space:nowrap">EmCare.B17.DE33<a name="emcare-custom-codes-EmCare.46B17.46DE33"> </a></td><td>child hiv positive - unknown type of test</td><td>The client is HIV Positive (Unknown Type of Test)</td></tr><tr><td style="white-space:nowrap">EmCare.B17.DE34<a name="emcare-custom-codes-EmCare.46B17.46DE34"> </a></td><td>child hiv negative</td><td>The client is HIV Negative</td></tr><tr><td style="white-space:nowrap">EmCare.B17.DE35<a name="emcare-custom-codes-EmCare.46B17.46DE35"> </a></td><td>child hiv status - unknown or not tested</td><td>The client's HIV Status is unknown or the client has not been tested</td></tr><tr><td style="white-space:nowrap">EmCare.B17.DE36<a name="emcare-custom-codes-EmCare.46B17.46DE36"> </a></td><td>child hiv status - decline to answer</td><td>The client has delined to answer regarding HIV Status</td></tr><tr><td style="white-space:nowrap">EmCare.B17.DE46<a name="emcare-custom-codes-EmCare.46B17.46DE46"> </a></td><td>yes</td><td>The client has received all vaccinations for age</td></tr><tr><td style="white-space:nowrap">EmCare.B17.DE47<a name="emcare-custom-codes-EmCare.46B17.46DE47"> </a></td><td>no, incomplete vaccination</td><td>The client has not received all vaccinations for age</td></tr><tr><td style="white-space:nowrap">EmCare.B17.DE48<a name="emcare-custom-codes-EmCare.46B17.46DE48"> </a></td><td>no, the child has never received any vaccinations to date</td><td>The client has never received any vaccinations to date</td></tr><tr><td style="white-space:nowrap">EmCare.B17.DE49<a name="emcare-custom-codes-EmCare.46B17.46DE49"> </a></td><td>unknown</td><td>It is not known if the client has received any vaccination</td></tr><tr><td style="white-space:nowrap">EmCare.B17.DE51<a name="emcare-custom-codes-EmCare.46B17.46DE51"> </a></td><td>bcg</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td style="white-space:nowrap">EmCare.B17.DE52<a name="emcare-custom-codes-EmCare.46B17.46DE52"> </a></td><td>opv</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td style="white-space:nowrap">EmCare.B17.DE53<a name="emcare-custom-codes-EmCare.46B17.46DE53"> </a></td><td>hep b</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td style="white-space:nowrap">EmCare.B17.DE54<a name="emcare-custom-codes-EmCare.46B17.46DE54"> </a></td><td>dpt</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td style="white-space:nowrap">EmCare.B17.DE55<a name="emcare-custom-codes-EmCare.46B17.46DE55"> </a></td><td>dpt 18 month booster</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td style="white-space:nowrap">EmCare.B17.DE56<a name="emcare-custom-codes-EmCare.46B17.46DE56"> </a></td><td>hib</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td style="white-space:nowrap">EmCare.B17.DE57<a name="emcare-custom-codes-EmCare.46B17.46DE57"> </a></td><td>rtv</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td style="white-space:nowrap">EmCare.B17.DE58<a name="emcare-custom-codes-EmCare.46B17.46DE58"> </a></td><td>pcv</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td style="white-space:nowrap">EmCare.B17.DE59<a name="emcare-custom-codes-EmCare.46B17.46DE59"> </a></td><td>pcv booster 1 for confirmed hiv infection</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td style="white-space:nowrap">EmCare.B17.DE60<a name="emcare-custom-codes-EmCare.46B17.46DE60"> </a></td><td>pcv booster 2 for confirmed hiv infection</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td style="white-space:nowrap">EmCare.B17.DE61<a name="emcare-custom-codes-EmCare.46B17.46DE61"> </a></td><td>measles</td><td>Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE09<a name="emcare-custom-codes-EmCare.46B22.46DE09"> </a></td><td>completely unable to drink</td><td>The client is completely unable to drink</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE10<a name="emcare-custom-codes-EmCare.46B22.46DE10"> </a></td><td>vomits immediately / everything</td><td>The client vomits immediately / everything</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE11<a name="emcare-custom-codes-EmCare.46B22.46DE11"> </a></td><td>drinks poorly</td><td>The client drinks poorly</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE12<a name="emcare-custom-codes-EmCare.46B22.46DE12"> </a></td><td>drinks eagerly / thirstily</td><td>The client drinks eagerly / thirstily</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE13<a name="emcare-custom-codes-EmCare.46B22.46DE13"> </a></td><td>drinks normally</td><td>The client drinks normally</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE24<a name="emcare-custom-codes-EmCare.46B22.46DE24"> </a></td><td>able to finish rutf</td><td>The client was able to finish the RUTF (the client was able to finish the minimum amount of RTUF (at least one-third of a packet of RUTF portion (92g) or 3 teaspoons from a pot within 30 minutes)</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE25<a name="emcare-custom-codes-EmCare.46B22.46DE25"> </a></td><td>unable to finish rutf</td><td>The client was unable to finish the RUTF (the client was unable to eat one-third of a packet of RUTF portion (92g) or 3 teaspoons from a pot within 30 minutes)</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE26<a name="emcare-custom-codes-EmCare.46B22.46DE26"> </a></td><td>rutf not available</td><td>The healthcare worker did not have any RUTF available to carry out the appetite test</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE37<a name="emcare-custom-codes-EmCare.46B22.46DE37"> </a></td><td>not well attached to breast</td><td>The client is not well attached to breast</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE38<a name="emcare-custom-codes-EmCare.46B22.46DE38"> </a></td><td>good attachment</td><td>The client has a good attachment</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE39<a name="emcare-custom-codes-EmCare.46B22.46DE39"> </a></td><td>not sucking effectively</td><td>The client is not sucking effectively</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE40<a name="emcare-custom-codes-EmCare.46B22.46DE40"> </a></td><td>sucking effectively</td><td>The client is sucking effectively</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE75<a name="emcare-custom-codes-EmCare.46B22.46DE75"> </a></td><td>no species reported</td><td>The client's Microscopy species result is no species reported</td></tr><tr><td style="white-space:nowrap">EmCare.B17S1.DE03<a name="emcare-custom-codes-EmCare.46B17S1.46DE03"> </a></td><td>red (congested) throat</td><td>The client has a Red (congested) throat</td></tr><tr><td style="white-space:nowrap">EmCare.B17S1.DE04<a name="emcare-custom-codes-EmCare.46B17S1.46DE04"> </a></td><td>exudate on throat</td><td>The client has Exudate on Throat</td></tr><tr><td style="white-space:nowrap">EmCare.B17S1.DE05<a name="emcare-custom-codes-EmCare.46B17S1.46DE05"> </a></td><td>membrane on throat</td><td>The client has Membrane on throat</td></tr><tr><td style="white-space:nowrap">none<a name="emcare-custom-codes-none"> </a></td><td>none of the listed throat problems observed</td><td>The client has None of the listed throat problems observed</td></tr><tr><td style="white-space:nowrap">EmCare.B17S1.DE08<a name="emcare-custom-codes-EmCare.46B17S1.46DE08"> </a></td><td>yes, without difficulty</td><td>The client can swallow without difficulty</td></tr><tr><td style="white-space:nowrap">EmCare.B17S1.DE09<a name="emcare-custom-codes-EmCare.46B17S1.46DE09"> </a></td><td>difficulty in swallowing</td><td>The client has Difficulty in swallowing</td></tr><tr><td style="white-space:nowrap">EmCare.B17S1.DE10<a name="emcare-custom-codes-EmCare.46B17S1.46DE10"> </a></td><td>unable to swallow</td><td>The client is Unable to swallow</td></tr><tr><td style="white-space:nowrap">EmCare.B6.DE19<a name="emcare-custom-codes-EmCare.46B6.46DE19"> </a></td><td>does not appear to be underweight</td><td>The client is visually assessed for whether underweight by the health care worker and does not appear to be underweight (estimated weight based on height or age would be equivalent to WHZ= 0 / WAZ= 0)</td></tr><tr><td style="white-space:nowrap">EmCare.B6.DE20<a name="emcare-custom-codes-EmCare.46B6.46DE20"> </a></td><td>appears to be underweight</td><td>The client is visually assessed for whether underweight by the health care worker and appears to be underweight (as an aide for dosing calculations) (estimated weight based on height or age would be equivalent to WHZ= -1 / WAZ= -1)</td></tr><tr><td style="white-space:nowrap">EmCare.B6.DE21<a name="emcare-custom-codes-EmCare.46B6.46DE21"> </a></td><td>appears to be severely underweight</td><td>The client is visually assessed for whether underweight and appears to be severely underweight (as an aide for dosing calculations) (estimated weight based on height or age would be equivalent to WHZ= -2 / WAZ= -2)</td></tr><tr><td style="white-space:nowrap">EmCare.B15S2.DE10<a name="emcare-custom-codes-EmCare.46B15S2.46DE10"> </a></td><td>severe mucous membrane pallor</td><td>The client has severe mucous membrane pallor</td></tr><tr><td style="white-space:nowrap">EmCare.B15S2.DE11<a name="emcare-custom-codes-EmCare.46B15S2.46DE11"> </a></td><td>some mucous membrane pallor</td><td>The client has some mucous membrane pallor</td></tr><tr><td style="white-space:nowrap">EmCare.B15S2.DE12<a name="emcare-custom-codes-EmCare.46B15S2.46DE12"> </a></td><td>no mucous membrane pallor</td><td>The client has no mucous membrane pallor</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE07<a name="emcare-custom-codes-EmCare.46B14S2.46DE07"> </a></td><td>generalised skin problem</td><td>The client has a generalised skin problem</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE08<a name="emcare-custom-codes-EmCare.46B14S2.46DE08"> </a></td><td>localised skin problem</td><td>The client has a localised skin problem</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE09<a name="emcare-custom-codes-EmCare.46B14S2.46DE09"> </a></td><td>no problem</td><td>The client does not have a generalised or localised skin problem</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE18<a name="emcare-custom-codes-EmCare.46B14S2.46DE18"> </a></td><td>papular urticaria or papular pruritic eruptions</td><td>The client has Papular Urticaria or Papular Pruritic Eruptions 
+• Itchy papules at different stages of evolution.
+• Found on the arms and legs.
+• Healed lesions are often dark/ hyperpigmented.
+• The itch is difficult to manage.
+• Essential to exclude scabies.</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE19<a name="emcare-custom-codes-EmCare.46B14S2.46DE19"> </a></td><td>ringworm (tinea)</td><td>The client has Ringworm (Tinea) - 
+• An itchy circular lesion with a raised edge and fine scaly area.
+• Scalp lesions may result in loss of hair</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE21<a name="emcare-custom-codes-EmCare.46B14S2.46DE21"> </a></td><td>scabies</td><td>The client has Scabies -
+• Intense itching, more severe at night.
+• Small burrows between fingers, tows, elbow areas and buttocks.
+• Secondary infection may occur.
+• Small babies may have vesicles and pustules on the palms and soles and face.
+• The infestation spreads easily, usually affecting more than one person in the household</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE22<a name="emcare-custom-codes-EmCare.46B14S2.46DE22"> </a></td><td>chickenpox</td><td>The client has Chickenpox - Mild fever preceding the rash.
+• Rash begins on the trunk and face,
+later spreads to the arms and legs.
+• Vesicles appear progressively over days and forms scabs
+after they rupture.
+• Contagious from the fever starts until all lesions have
+crusted.
+• Usually lasts for about 1 week.</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE23<a name="emcare-custom-codes-EmCare.46B14S2.46DE23"> </a></td><td>herpes zoster</td><td>The client has Herpes Zoster -  Vesicles in one area on one side of body with intense pain or scars plus shooting pain.
+• They are uncommon in children except when they are immune-compromised</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE25<a name="emcare-custom-codes-EmCare.46B14S2.46DE25"> </a></td><td>impetigo</td><td>The client has Impetigo- Pustules and papules with honey -coloured crusts.
+• Commonly starts on the face or buttocks, then spreads to the neck, hands, arms and legs.</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE31<a name="emcare-custom-codes-EmCare.46B14S2.46DE31"> </a></td><td>molluscum contagiosum</td><td>The client has Molluscum Contagiosum -Caused by a poxvirus.
+• Dome-shaped papules with a central depression
+(umblication).
+• Most commonly seen on the face and trunk in children</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE32<a name="emcare-custom-codes-EmCare.46B14S2.46DE32"> </a></td><td>warts</td><td>The client has Warts - Appears as papules or nodules with a rough surface.
+• Seen most often on the hands and fingers, but can be
+found anywhere on
+the body.</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE33<a name="emcare-custom-codes-EmCare.46B14S2.46DE33"> </a></td><td>seborrhoeic dermatitis</td><td>The client has Seborrhoeic Dermatitis - Greasy scales and redness on central face, body folds.
+• The scalp, face, ears and skin folds (e.g. axillae, groins, under the breasts) are commonly affected.</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE35<a name="emcare-custom-codes-EmCare.46B14S2.46DE35"> </a></td><td>fixed drug reaction</td><td>The client has Fixed Drug Reaction - One or more dark round or oval skin lesions with central vesicles .
+• The lesions recur on the same spot, and increase in number with each successive attack</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE36<a name="emcare-custom-codes-EmCare.46B14S2.46DE36"> </a></td><td>eczema</td><td>The client has Eczema - Erythematous (red), sometimes scaly plaques found on the face, flexures, trunk and extensors.
+• Yellow pustules which crust indicate
+secondary bacterial infection.</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE37<a name="emcare-custom-codes-EmCare.46B14S2.46DE37"> </a></td><td>steven johnson syndrome (sjs)</td><td>The client has Steven Johnson Syndrome (SJS) - Severe and acute reaction due to many drugs, the commonest being cotrimoxazole or nevirapine.
+• Lesions involve the skin as well as the mucous membranes (e.g. eyes, mouth and genitalia).
+• May start as widespread red irregular rash with or without blisters. The blisters rupture leaving denuded areas of skin.
+• May cause difficulty in breathing.</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE44<a name="emcare-custom-codes-EmCare.46B14S2.46DE44"> </a></td><td>skin problem</td><td>The health care worker would like to add a skin problem</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE45<a name="emcare-custom-codes-EmCare.46B14S2.46DE45"> </a></td><td>oral sores or mouth ulcers</td><td>The health care worker would like to add an Oral Sores or Mouth Ulcers problem</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE46<a name="emcare-custom-codes-EmCare.46B14S2.46DE46"> </a></td><td>eye problem</td><td>The health care worker would like to add an Eye problem</td></tr><tr><td style="white-space:nowrap">EmCare.B14S2.DE47<a name="emcare-custom-codes-EmCare.46B14S2.46DE47"> </a></td><td>no - do not add a skin or mouth or eye problem</td><td>The healthcare worker would not like to add a Skin or Mouth or Eye Problem</td></tr><tr><td style="white-space:nowrap">EmCare.B21S2.DE29<a name="emcare-custom-codes-EmCare.46B21S2.46DE29"> </a></td><td>no breastmilk at all</td><td>The caregiver does not give the client any breastmilk at all</td></tr><tr><td style="white-space:nowrap">EmCare.B21S2.DE11<a name="emcare-custom-codes-EmCare.46B21S2.46DE11"> </a></td><td>inappropriate replacement milk</td><td>The care giver is giving inappropriate replacement milk</td></tr><tr><td style="white-space:nowrap">EmCare.B21S2.DE10<a name="emcare-custom-codes-EmCare.46B21S2.46DE10"> </a></td><td>appropriate replacement milk</td><td>The care giver is giving appropriate  replacement milk</td></tr><tr><td style="white-space:nowrap">EmCare.B22.DE18<a name="emcare-custom-codes-EmCare.46B22.46DE18"> </a></td><td>chest indrawing (post inhaled bronchodilator trial)</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B22.DE19<a name="emcare-custom-codes-EmCare.46B22.46DE19"> </a></td><td>respiratory rate (post inhaled bronchodilator trial)</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B22.DE20<a name="emcare-custom-codes-EmCare.46B22.46DE20"> </a></td><td>fast breathing (post inhaled bronchodilator trial)</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B22.DE21<a name="emcare-custom-codes-EmCare.46B22.46DE21"> </a></td><td>no fast breathing and no chest indrawing (post inhaled bronchodilator trial)</td><td/></tr><tr><td style="white-space:nowrap">EmCare.B22.DE22<a name="emcare-custom-codes-EmCare.46B22.46DE22"> </a></td><td>inhaled bronchodilator trial not feasible or available</td><td/></tr></table></div>
+  </text>
+  <url value="https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes"/>
+  <version value="0.1.0"/>
+  <name value="emcare"/>
+  <title value="Extended Codes CodeSystem"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2023-04-03T14:56:37+00:00"/>
+  <publisher value="World Health Organization (WHO)"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.who.int"/>
+    </telecom>
+  </contact>
+  <description value="Set of codes identified as being needed but not found in existing Code Systems"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <concept>
+    <code value="EmCare.A.DE01"/>
+    <display value="National Unique identification"/>
+    <definition value="Unique identifier provided or a universal ID, if used in the country"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE03"/>
+    <display value="Child's Identity unknown/prefer to remain anonymous"/>
+    <definition value="The client's identity is unknown or the client's prefers to remain anonymous"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE04"/>
+    <display value="First Name"/>
+    <definition value="Client's first name"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE05"/>
+    <display value="Middle Name"/>
+    <definition value="Client's middle name"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE06"/>
+    <display value="Last Name"/>
+    <definition value="Client's family name or last name"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE11"/>
+    <display value="Date of Birth not known"/>
+    <definition value="The client and/or Caregiver does not know the date of birth of the client"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE12"/>
+    <display value="Provide an estimated age or estimated date of birth"/>
+    <definition value="The client/Caregiver will provide an estimated age or estimated date of birth"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE15.1"/>
+    <display value="Estimated Date of Birth"/>
+    <definition value="Estimated Date of Birth of the Client"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE08"/>
+    <display value="Consolidated Date of Birth"/>
+    <definition value="Estimated Date of Birth of the Client"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE16"/>
+    <display value="Sex"/>
+    <definition value="The Sex of the client"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE48"/>
+    <display value="Caregiver"/>
+    <definition value="the child could have been created from the mother therefore a relatedpersom may already exist&#xA;select_one RelatedPerson&#xA;candidateExpression"/>
+  </concept>
+  <concept>
+    <code value="emcarerelatedpersoncaregiverid"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE21"/>
+    <display value="Caregiver First Name"/>
+    <definition value="The client's Caregiver's first name"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE22"/>
+    <display value="Caregiver Middle Name"/>
+    <definition value="The client's Caregiver's middle name"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE23"/>
+    <display value="Caregiver Last Name"/>
+    <definition value="The client's Caregiver's last name"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE35"/>
+    <display value="Primary Caregiver's Mobile telephone number"/>
+    <definition value="Client's Caregiver's mobile telephone number"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE24"/>
+    <display value="Caregiver's Relationship to Client"/>
+    <definition value="The relationship of the Caregiver to the client"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE31"/>
+    <display value="Biological Mother Vital Status"/>
+    <definition value="The client's mother and father's vital status"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE32"/>
+    <display value="Biological Father Vital Status"/>
+    <definition value="The client's mother and father's vital status"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE38"/>
+    <display value="Caregiver wants to receive SMS or other messages regarding the child's visits and health status"/>
+    <definition value="The Caregiver wants to receive SMS or other messages regarding the client's contacts/visits and health status"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B3.DE01"/>
+    <display value="Reason for Consultation"/>
+    <definition value="The reason for the client's consultation"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B3.DE05"/>
+    <display value="Is the child sick Today?"/>
+    <definition value="The client's visit is for a well child but the child is also presenting as sick"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B3.DE06"/>
+    <display value="Type of Consultation"/>
+    <definition value="The client's visit is for a new consultation"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B7.DE02"/>
+    <display value="Convulsing Now"/>
+    <definition value="The client is convulsing now"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B7-B8-B9.DE01"/>
+    <display value="Continue to Assess Sick Child"/>
+    <definition value="The healthcare worker chooses if they will continue to assess the sick child with a life threatening illness"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B7.DE03"/>
+    <display value="Convulsion(s) in this Illness"/>
+    <definition value="The client is reported to have had one or more convulsions"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B7.DE08b"/>
+    <display value="Unconscious or Lethargic"/>
+    <definition value="The client is unconcious or Lethargic"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B7.DE08"/>
+    <display value="Unconscious"/>
+    <definition value="The client is unconcious"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B7.DE08a"/>
+    <display value="Lethargic"/>
+    <definition value="The client is lethargic"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B7.DE09"/>
+    <display value="Not able to drink or breastfeed"/>
+    <definition value="The client has reported not to have been able to drink or breastfeed or currently is not able to drink or breastfeed."/>
+  </concept>
+  <concept>
+    <code value="EmCare.B7.DE10"/>
+    <display value="Vomiting Everything"/>
+    <definition value="The client is reported to be vomiting everything or vomiting but not everything or no vomiting"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B6.DE01"/>
+    <display value="Axillary Temperature  (degrees Celcius)"/>
+    <definition value="The client's axillary temperature in degrees Celsius (temperature taken under the armpit)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B6.DE04"/>
+    <display value="Thermometer not available"/>
+    <definition value="A thermometer is not available to accurately measure the client's temperature"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B6.DE05"/>
+    <display value="Hot to Touch"/>
+    <definition value="The client is hot to touch"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B6.DE01A"/>
+    <display value="Measured Temperature"/>
+    <definition value="The client's Temperature has been measured"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B6.DE06"/>
+    <display value="Weight (Kg)"/>
+    <definition value="The client's weight in Kilograms"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B6.DE07"/>
+    <display value="Weight cannot be measured"/>
+    <definition value="The client's weight cannot be measured"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B6.DE08"/>
+    <display value="Estimated Weight"/>
+    <definition value="The client's weight has been estimated - to be used for treatment dosing only"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B6.DE10"/>
+    <display value="Prefer to measure length"/>
+    <definition value="The health care worker would prefer to measure the client using length"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B6.DE09"/>
+    <display value="Height"/>
+    <definition value="The client's height in Centimeters"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B6.DE11"/>
+    <display value="Height cannot be measured"/>
+    <definition value="The client's height cannot be measured"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B6.DE12"/>
+    <display value="Length"/>
+    <definition value="The client's length in Centimeters"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B6.DE13"/>
+    <display value="Length cannot be measured"/>
+    <definition value="The client's length cannot be measured"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B6.DE16"/>
+    <display value="Weight for Age (WFA) Z Scores"/>
+    <definition value="The client's weight for age z score"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B6.DE17"/>
+    <display value="MUAC (mm)"/>
+    <definition value="The client's Mid Upper Arm Circumference in Millimeters (child ≥6 months old)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B6.DE17a"/>
+    <display value="MUAC cannot be measured"/>
+    <definition value="The client's Mid Upper Arm Circumference cannot be measured"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B6.DE18"/>
+    <display value="Visually assess for whether underweight (for drug dose calculation)"/>
+    <definition value="The health care worker visually assesses for whether underweight (for drug dosing calculations)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B7.DE03"/>
+    <display value="Convulsion(s) in this Illness"/>
+    <definition value="The client is reported to have had one or more convulsions"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B18S1.DE02"/>
+    <display value="Difficulty with Feeding"/>
+    <definition value="The client is reported to have difficulty with Feeding"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B11S1.DE01"/>
+    <display value="Diarrhoea"/>
+    <definition value="The client is reported to have diarrhoea"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S1.DE06"/>
+    <display value="Breastfed"/>
+    <definition value="The client is breastfed"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B18S2.DE07"/>
+    <display value="Severe Chest Indrawing"/>
+    <definition value="The client has severe chest indrawing"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B18S2.DE08"/>
+    <display value="Movements"/>
+    <definition value="The health care worker's assessments of the client's movements"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B18S2.DE12"/>
+    <display value="Umbilicus Red or Pus Draining"/>
+    <definition value="The client's umbilicus is red or is draining pus"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B18S2.DE13"/>
+    <display value="Skin Pustules"/>
+    <definition value="The client has skin pustules"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B19S2.DE01"/>
+    <display value="Yellow Skin"/>
+    <definition value="The client has yellow skin"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B19S2.DE02"/>
+    <display value="Yellow Palms or Yellow Soles"/>
+    <definition value="The client has yellow palms or yellow soles"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B19S2.DE04"/>
+    <display value="When did the Jaundice first appear?"/>
+    <definition value="The age at which the Jaundice first appeared"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B11S2.DE01"/>
+    <display value="Sunken Eyes"/>
+    <definition value="The client has sunken eyes"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B11S2.DE02"/>
+    <display value="Skin pinch of Abdomen"/>
+    <definition value="The healthcare worker pinches the skin of the client's abdomen for 1 second and then observes how long the skin takes to return to normal once released"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B11S2.DE06"/>
+    <display value="Restless and Irritable"/>
+    <definition value="The client is restless and irritable"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S2.DE01"/>
+    <display value="Weight Status"/>
+    <definition value="The client's weight status"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S2.DE05"/>
+    <display value="Breastfed how many times in 24 hours?"/>
+    <definition value="Number of times the client is breastfed in 24 hours"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S2.DE06"/>
+    <display value="Sufficient feeds"/>
+    <definition value="Based on the number of feeds during a 24 hour period the result is auto-calculated to determine sufficient feeds"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S2.DE08"/>
+    <display value="Young Infant receives food or fluids other than breast milk"/>
+    <definition value="The client is receiving other food or drinks besides breastmilk"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S2.DE09"/>
+    <display value="What milk is being given as a replacement feed?"/>
+    <definition value="The health care worker discusses the milk being given to the client as a replacement feed and determines if it is appropriate replacement milk"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S2.DE12"/>
+    <display value="How many replacement feeds during the day and night (24 hours)?"/>
+    <definition value="How often the client is receiving replacement feeds during the day and night (24 hours)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S2.DE13"/>
+    <display value="Sufficient replacement feeds (in 24 hours)"/>
+    <definition value="Based on the number of feeds during the day and night (24 hours) the result is auto-calculated to determine sufficient replacement feeds"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S2.DE15"/>
+    <display value="How much milk is given at each feed (ml)?"/>
+    <definition value="The amount of milk given to the client at each feed"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S2.DE16"/>
+    <display value="Sufficient replacement feeds"/>
+    <definition value="The care giver is giving sufficient replacement feeds"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S2.DE18"/>
+    <display value="How is the milk prepared?"/>
+    <definition value="Description of how the milk is prepared for the client's feed"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S2.DE21"/>
+    <display value="How is the milk given?"/>
+    <definition value="Description on how the client is given the milk - bottle or cup"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S2.DE24"/>
+    <display value="How are the feeding utensils cleaned?"/>
+    <definition value="Description of how the feeding utensils are cleaned"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S2.DE27"/>
+    <display value="Do you give any breastmilk at all?"/>
+    <definition value="Does the care giver give the client any breastmilk at all?"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S2.DE30"/>
+    <display value="Ulcers or White Patches in Mouth"/>
+    <definition value="The client has ulcers or white patches in the mouth"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S2.DE31"/>
+    <display value="Unable to check if Ulcers or White Patches in Mouth"/>
+    <definition value="The healthcare worker is unable to check if the client has ulcers or white patches in the mouth"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B10S1.DE05"/>
+    <display value="Cough"/>
+    <definition value="The client is reported to have or has had a cough"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B10S1.DE06"/>
+    <display value="Cough for how long?"/>
+    <definition value="Length of time the client is reported to have or has had the cough"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B10S1.DE01"/>
+    <display value="Difficulty Breathing"/>
+    <definition value="The client is reported to have or has had difficulty breathing"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B10S1.DE02"/>
+    <display value="Difficulty breathing for how long?"/>
+    <definition value="The length of time the client has or has had difficulty breathing"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B11S1.DE01"/>
+    <display value="Diarrhoea"/>
+    <definition value="The client is reported to have or has had diarrhoea"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B11S1.DE02"/>
+    <display value="Diarrhoea for how long?"/>
+    <definition value="The length of time the client is reported to have or has had diarrhoea"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B11S1.DE05"/>
+    <display value="Blood in the stool in this Illness"/>
+    <definition value="The client is reported to have or has had blood in the stool in this Illness"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B12S1.DE02"/>
+    <display value="Fever Reported"/>
+    <definition value="The client is reported to have or has had fever"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B12S1.DE03"/>
+    <display value="Fever for how long?"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B.G.DE06"/>
+    <display value="Fever"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B12S1.DE06"/>
+    <display value="Has Fever been present every day since the Fever started?"/>
+    <definition value="The client has had fever present every day since the fever started"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B13S1.DE01"/>
+    <display value="Ear problem"/>
+    <definition value="The client is reported to have had or has an ear problem"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B13S1.DE02"/>
+    <display value="Ear pain"/>
+    <definition value="The client is reported to have had or has ear pain"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B13S1.DE03"/>
+    <display value="Ear discharge"/>
+    <definition value="The client is reported to have or has had ear discharge"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B13S1.DE04"/>
+    <display value="Ear discharge for how long?"/>
+    <definition value="The length of time client has or has had ear discharge"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S1.DE03"/>
+    <display value="Eye Problem"/>
+    <definition value="The client is reported to have an eye problem"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S1.DE01"/>
+    <display value="Skin Problem"/>
+    <definition value="The client is reported to have or has had a skin problem"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S1.DE02"/>
+    <display value="Itchy Skin"/>
+    <definition value="The client is reported to have itchy skin"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.RespiratoryRate"/>
+    <definition value="The client's respiratory rate"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B10S2.DE03"/>
+    <display value="Chest Indrawing"/>
+    <definition value="The client has chest indrawing"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B10S2.DE04"/>
+    <display value="Stridor in a calm child"/>
+    <definition value="The client has stridor in a calm child while the client is at rest"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B10S2.DE05"/>
+    <display value="Wheezing"/>
+    <definition value="The client is wheezing"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B10S2.DE06"/>
+    <display value="Recurrent Wheeze"/>
+    <definition value="The client has experienced recurrent wheeze"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B10S2.DE07"/>
+    <display value="Oxygen Saturation"/>
+    <definition value="The client's oxygen saturation measurement"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B10S2.DE08"/>
+    <display value="Oxygen Saturation &lt; 90 %"/>
+    <definition value="The client's oxygen saturation is less than 90 %"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B11S2.DE01"/>
+    <display value="Sunken eyes"/>
+    <definition value="The client has sunken eyes"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B11S2.DE02"/>
+    <display value="Skin pinch of Abdomen"/>
+    <definition value="The healthcare worker pinches the skin of the client's abdomen for 1 second and then observes how long the skin takes to return to normal once released"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B11S2.DE06"/>
+    <display value="Restless and Irritable"/>
+    <definition value="The client is restless and irritable"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17S1.DE01"/>
+    <display value="Throat problem"/>
+    <definition value="The client has a throat problem"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17S1.DE02"/>
+    <display value="Specify Throat problem"/>
+    <definition value="Specify the throat problem the client has"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17S1.DE06"/>
+    <display value="Enlarged lymph nodes on front of neck"/>
+    <definition value="The client has enlarged lymph node(s) on the front of the neck"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17S1.DE07"/>
+    <display value="Ability to swallow"/>
+    <definition value="The client's ability to swallow"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B13S2.DE01"/>
+    <display value="Tender swelling behind the ear"/>
+    <definition value="The client has tender swelling behind the ear"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B13S2.DE02"/>
+    <display value="Pus Seen Draining from the Ear"/>
+    <definition value="The client has pus draining from the ear which has been seen by the health care worker"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B13S2.DE03"/>
+    <display value="Pus Seen Draining from the Ear for how long?"/>
+    <definition value="The length of time the client has or has had pus draining from the ear"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B12S2.DE01"/>
+    <display value="Stiff neck"/>
+    <definition value="The client has a stiff neck"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B12S2.DE05"/>
+    <display value="Runny nose"/>
+    <definition value="The client has a Runny nose"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE01"/>
+    <display value="Red eyes"/>
+    <definition value="The client has red eyes"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE02"/>
+    <display value="Pus Draining from Eye"/>
+    <definition value="The client has pus draining from the eye"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE03"/>
+    <display value="Clouding of the Cornea"/>
+    <definition value="The client has clouding of the cornea"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE04"/>
+    <display value="Is Clouding of the Cornea a new problem"/>
+    <definition value="Clouding of the cornea in the client is a new problem"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE05"/>
+    <display value="Has Clouding of the Cornea previously been treated"/>
+    <definition value="Clouding of the cornea has not been previously treated in the client"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE06"/>
+    <display value="Generalised or Localised Skin Problem"/>
+    <definition value="The client has a generalised or localised skin problem"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE10"/>
+    <display value="Measles Rash"/>
+    <definition value="The client has a measles rash"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE11"/>
+    <display value="Measles within the last 3 months"/>
+    <definition value="The client has had measles in the last 3 months"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE12"/>
+    <display value="Blisters, Sores or Pustules"/>
+    <definition value="The client has blisters, sores or pustules"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE13"/>
+    <display value="Type of Skin Problem"/>
+    <definition value="The client has a specific type of skin problem(s)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE19a"/>
+    <display value="Scalp Infection (tinea capitis)"/>
+    <definition value="The client has Scalp Infection (tinea capitis)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE22A"/>
+    <display value="Severe rash"/>
+    <definition value="The client has severe chickenpox rash"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE23a"/>
+    <display value="Disseminated Herpes Zoster"/>
+    <definition value="The client has disseminated herpes zoster"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE24"/>
+    <display value="Eye Involvement"/>
+    <definition value="The client has Herpes Zoster with Eye Involvement"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE30"/>
+    <display value="Skin Infection extends to Muscle"/>
+    <definition value="The client has skin infection that extends to muscle"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE30b"/>
+    <display value="Extensive impetigo lesions"/>
+    <definition value="The client has Extensive impetigo lesions requiring oral antibiotics"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE31a"/>
+    <display value="Extensive molluscum lesions"/>
+    <definition value="The client has Extensive molluscum lesions"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE31b"/>
+    <display value="Molluscum lesions close to the eye"/>
+    <definition value="The client has molluscum lesions close to the eye"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE32a"/>
+    <display value="Extensive warts"/>
+    <definition value="The client has Extensive warts"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE34"/>
+    <display value="Severe Seborrhoeic Dermatitis"/>
+    <definition value="The client has severe Seborrhoeic Dermatitis"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE36a"/>
+    <display value="Secondary bacterial infection of eczema"/>
+    <definition value="The client has secondary bacterial infection of eczema"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE36b"/>
+    <display value="Severe acute moist or weeping eczema"/>
+    <definition value="The client has severe acute moist or weeping eczema"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE36c"/>
+    <display value="Secondary herpes infection of eczema (eczema herpeticum)"/>
+    <definition value="The client has secondary herpes infection of eczema (eczema herpeticum)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE38"/>
+    <display value="Oral sores or Mouth Ulcers"/>
+    <definition value="The client has oral sores or mouth ulcers"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE43"/>
+    <display value="Add a Skin or Mouth or Eye Problem"/>
+    <definition value="The health care worker would like to add a Skin or Mouth or Eye problem found during the physical exam"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B15S2.DE01"/>
+    <display value="Palmar Pallor"/>
+    <definition value="The client has palmar pallor"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B15S2.DE09"/>
+    <display value="Mucous membrane pallor"/>
+    <definition value="The client has Mucous membrane pallor"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE08"/>
+    <display value="Oral Fluid Test Results"/>
+    <definition value="Oral Fluid Test Results"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE14"/>
+    <display value="Unable to Perform Oral Fluid Test"/>
+    <definition value="The healthcare worker is Unable to Perform Oral Fluid Test"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE14a"/>
+    <display value="Completely Unable to Drink or Vomits Immediately / Everything"/>
+    <definition value="When  are present when the healthcare worker is Unable to Perform Oral Fluid Test it is assumed that the client is completely unable to drink or vomits immediately / everything"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE15"/>
+    <display value="Has the Child had anything to drink today?"/>
+    <definition value="The health care worker asks the caregiver if the client has had anything to drink today"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE16"/>
+    <display value="How did the child last drink"/>
+    <definition value="The health care worker asks the caregiver how did the client last drink"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE01"/>
+    <display value="Respiratory Rate (breaths per minute)"/>
+    <definition value="The client's respiratory rate for client's aged 2 months or more"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE02"/>
+    <display value="Unable to perform Respiratory Rate at this time"/>
+    <definition value="The client's respiratory rate could not be measured at this time (all ages)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE04"/>
+    <display value="Respiratory Rate Second Count (breaths per minute)"/>
+    <definition value="The client's respiratory rate for the second Count"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE05"/>
+    <display value="Respiratory Rate Second Count Not Possible"/>
+    <definition value="The client's respiratory rate for the second Count was not possible"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE07"/>
+    <display value="Fast Breathing"/>
+    <definition value="The client has fast breathing - auto-calculated based on the respiratory rate and the age of the client - 60 breaths per minute or more (&lt;2 months) after 2 respiratory rate measurements"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE17"/>
+    <display value="Inhaled Bronchodilator Trial Results"/>
+    <definition value="The Inhaled bronchodilator trial test results"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE22"/>
+    <display value="Inhaled Bronchodilator Trial Not Feasible or Available"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE21"/>
+    <display value="No Fast Breathing and No Chest Indrawing (post Inhaled Bronchodilator Trial)"/>
+    <definition value="The client has no fast breathing and no chest indrawing"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE27"/>
+    <display value="Breastfeeding Assessment"/>
+    <definition value="Breastfeeding Assessment to ensure the client does not have difficulty breastfeeding"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE41"/>
+    <display value="Breastfeeding Assessment Not Possible"/>
+    <definition value="The breastfeeding assessment was not possible"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE28"/>
+    <display value="Breastfed in the previous hour"/>
+    <definition value="The client has breastfed in the previous hour"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE29"/>
+    <display value="Mother able to wait until young infant is willing to breastfeed again"/>
+    <definition value="The client's mother is able to wait until young infant is willing to breastfeed again"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE30"/>
+    <display value="Mother reports difficulty breastfeeding"/>
+    <definition value="The client's mother reports that there is difficulty breastfeeding (not observed)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE31"/>
+    <display value="Chin Touching Breast"/>
+    <definition value="The client's chin is touching the breast"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE32"/>
+    <display value="Mouth Wide Open"/>
+    <definition value="The client's mouth is wide open"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE33"/>
+    <display value="Lower Lip Turned Outwards"/>
+    <definition value="The client's lower lip is turned outwards"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE34"/>
+    <display value="More Areola Visible above than below the Mouth"/>
+    <definition value="The mother has more areola visible above than below the client's mouth"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE35"/>
+    <display value="Slow Deep Sucks, Sometimes Pausing"/>
+    <definition value="The client is taking slow deep sucks, sometimes pausing"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE36"/>
+    <display value="Breastfeeding Assessment Results"/>
+    <definition value="The client's breastfeeding results"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE42"/>
+    <display value="Difficulty Breastfeeding Reported"/>
+    <definition value="The breastfeeding assessment was not observed however the caregiver has reported difficulty breastfeeding"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE44"/>
+    <display value="Difficulty Breastfeeding Observed"/>
+    <definition value="The healthcare worker has observed that the client has difficulty breastfeeding"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE47"/>
+    <display value="Axillary Temperature (second measurement)"/>
+    <definition value="The client's axillary temperature (second measurement) in degrees Celcius (temperature taken under the armpit)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE46"/>
+    <display value="Second Temperature Measurement Not Feasible"/>
+    <definition value="The client's second temperature measurement is feasible"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE50"/>
+    <display value="Measured Temperature (second measurement)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE83"/>
+    <display value="Possible Serious Bacterial Infection OR Very Severe Disease"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE06"/>
+    <display value="Pneumonia"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE85"/>
+    <display value="Local Infection"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE86"/>
+    <display value="Infection Unlikely"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE106"/>
+    <display value="Very Low Weight for Age"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE87"/>
+    <display value="Severe Jaundice"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE88"/>
+    <display value="Jaundice"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE89"/>
+    <display value="No Jaundice"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE13"/>
+    <display value="Severe Dehydration"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE14"/>
+    <display value="Some Dehydration"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE15"/>
+    <display value="No Dehydration"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE94"/>
+    <display value="Feeding Problem and / or Low Weight for Age"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE98"/>
+    <display value="No Feeding Problem"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE01"/>
+    <display value="Very Severe Disease"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE03"/>
+    <display value="Severe Pneumonia or Very Severe Disease"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE04_l"/>
+    <display value="with low oxygen saturation (SPO2 &lt; 90%)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE05_l"/>
+    <display value="with wheezing"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE06"/>
+    <display value="Pneumonia"/>
+    <definition value="The client has Pneumonia"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE05_l"/>
+    <display value="with wheezing"/>
+    <definition value="The client has Pneumonia with wheezing"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE08_l"/>
+    <display value="with cough or difficulty breathing for 14 days or more or recurrent wheeze"/>
+    <definition value="The client has Pneumonia with cough or difficulty breathing for 14 days or more or recurrent wheeze"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE10"/>
+    <display value="Cough or Cold"/>
+    <definition value="The client has Cough or Cold"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE05_l"/>
+    <display value="with wheezing"/>
+    <definition value="The client has Cough or Cold with wheezing"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE08_l"/>
+    <display value="with cough or difficulty breathing for 14 days or more or recurrent wheeze"/>
+    <definition value="The client has with cough for more than 14 days or difficulty breathing for more than 14 days or recurrent wheeze"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE13"/>
+    <display value="Severe Dehydration"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE14"/>
+    <display value="Some Dehydration"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE15"/>
+    <display value="No Dehydration"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE16"/>
+    <display value="Severe Persistent Diarrhoea"/>
+    <definition value="The client has Severe Persistent Diarrhoea"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE17"/>
+    <display value="Persistent Diarrhoea"/>
+    <definition value="The client has Persistent Diarrhoea"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE18"/>
+    <display value="Dysentery"/>
+    <definition value="The client has Dysentery"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE18.a"/>
+    <display value="Possible Shigella"/>
+    <definition value="The client has Possible Shigella"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE100"/>
+    <display value="Throat Abscess or Possible Diptheria"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE6101"/>
+    <display value="Streptococcal Sore Throat"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE6102"/>
+    <display value="Non-Streptococcal Sore Throat"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE6103"/>
+    <display value="No Throat Problem"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE30"/>
+    <display value="Mastoiditis"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE31"/>
+    <display value="Acute Ear Infection"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE32"/>
+    <display value="Chronic Ear Infection"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE32a_l"/>
+    <display value="with ear pain or fever"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE33"/>
+    <display value="No Ear Infection"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE19"/>
+    <display value="Very Severe Febrile Disease"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE104"/>
+    <display value="Fever: possible bacterial infection"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE26a_l"/>
+    <display value="Fever present every day for 7 Days or more"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE105"/>
+    <display value="Fever: bacterial infection unlikely"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE27"/>
+    <display value="Severe Complicated Measles"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE28"/>
+    <display value="Measles with Eye or Mouth Complication"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE29"/>
+    <display value="Possible Measles"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE62"/>
+    <display value="Severe Anaemia"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE63"/>
+    <display value="Anaemia"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE64"/>
+    <display value="No Anaemia"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE34"/>
+    <display value="Eye Infection"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE35"/>
+    <display value="Clouding of the Cornea"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE36_l"/>
+    <display value="New or not previously treated"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE41"/>
+    <display value="Papular Urticaria or Papular Pruritic Eruptions"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE42"/>
+    <display value="Ringworm (Tinea)"/>
+  </concept>
+  <concept>
+    <code value="DL-I-CL1-15"/>
+    <display value="Scalp Infection (tinea capitis)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE44"/>
+    <display value="Scabies"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE45"/>
+    <display value="Chickenpox"/>
+  </concept>
+  <concept>
+    <code value="DL-I-CL1-16"/>
+    <display value="with Severe Rash"/>
+  </concept>
+  <concept>
+    <code value="DL-G-CL1-92"/>
+    <display value="with Pneumonia"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE47"/>
+    <display value="Herpes Zoster"/>
+  </concept>
+  <concept>
+    <code value="DL-G-CL1-94"/>
+    <display value="with eye involvement"/>
+  </concept>
+  <concept>
+    <code value="DL-I-CL1-17"/>
+    <display value="with Disseminated Herpes Zoste"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE49"/>
+    <display value="Impetigo"/>
+  </concept>
+  <concept>
+    <code value="DL-G-CL1-96"/>
+    <display value="extends to muscle or with measured fever"/>
+  </concept>
+  <concept>
+    <code value="DL-I-CL1-18"/>
+    <display value="with extensive lesions"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE52"/>
+    <display value="Molluscum Contagiosum"/>
+  </concept>
+  <concept>
+    <code value="DL-I-CL1-19"/>
+    <display value="with extensive lesions or lesions close to the eye"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE53"/>
+    <display value="Warts"/>
+  </concept>
+  <concept>
+    <code value="DL-I-CL1-20"/>
+    <display value="Extensive warts"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE54"/>
+    <display value="Seborrhoeic Dermatitis"/>
+  </concept>
+  <concept>
+    <code value="DL-G-CL1-101"/>
+    <display value="Severe Seborrhoeic Dermatitis"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE56"/>
+    <display value="Fixed Drug Reaction"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE57"/>
+    <display value="Eczema"/>
+  </concept>
+  <concept>
+    <code value="DL-I-CL1-21"/>
+    <display value="Severe acute moist or weeping eczema"/>
+  </concept>
+  <concept>
+    <code value="DL-I-CL1-22"/>
+    <display value="Secondary bacterial infection of eczema"/>
+  </concept>
+  <concept>
+    <code value="DL-I-CL1-23"/>
+    <display value="Secondary herpes infection (eczema herpeticum)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE58"/>
+    <display value="Steven Johnson Syndrome (SJS)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE59"/>
+    <display value="Mouth Sores or Ulcer"/>
+  </concept>
+  <concept>
+    <code value="DL-G-CL1-107"/>
+    <display value="Deep or Extensive"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE61"/>
+    <display value="Oral Thrush"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE106"/>
+    <display value="Very Low Weight for Age"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE107"/>
+    <display value="Low Weight for Age"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B23.DE108"/>
+    <display value="Low MUAC or visual report of wasting"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE17"/>
+    <display value="female"/>
+    <definition value="The client is Female"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE18"/>
+    <display value="male"/>
+    <definition value="The client is Male"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE19"/>
+    <display value="not specified"/>
+    <definition value="The client's sex is not specified"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE13"/>
+    <display value="estimated age in years/months for child (2 months or older)"/>
+    <definition value="The age of the client is estimated based on physical evidence"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE14"/>
+    <display value="estimated age in weeks/days for young infant (under 2 months old)"/>
+    <definition value="The Caregiver provides the age in weeks/days/hours"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE15"/>
+    <display value="estimated date of birth"/>
+    <definition value="Estimated Date of Birth of the Client"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE25"/>
+    <display value="mother"/>
+    <definition value="The Caregiver is the client's mother"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE26"/>
+    <display value="father"/>
+    <definition value="The Caregiver is the client's father"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE27"/>
+    <display value="sibling"/>
+    <definition value="The Caregiver is the client's sibling"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE28"/>
+    <display value="extended family"/>
+    <definition value="The Caregiver is the client's extended family"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE29"/>
+    <display value="legal guardian"/>
+    <definition value="The Caregiver is the client's legal guardian"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE30"/>
+    <display value="not related"/>
+    <definition value="The Caregiver is not related to the client"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE46"/>
+    <display value="dead"/>
+    <definition value="Biological Mother or Father dead"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE34"/>
+    <display value="alive"/>
+    <definition value="Biological Mother or Father Alive"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B2.DE02"/>
+    <display value="planned"/>
+    <definition value="The visit is planned"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B2.DE03"/>
+    <display value="unplanned"/>
+    <definition value="The visit is unplanned"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B3.DE03"/>
+    <display value="sick child"/>
+    <definition value="The client's visit is for a sick child consultation"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B3.DE04"/>
+    <display value="routine visit (well child/infant)"/>
+    <definition value="The client's visit is for a well child consultation"/>
+  </concept>
+  <concept>
+    <code value="yes"/>
+    <display value="yes"/>
+    <definition value="Yes"/>
+  </concept>
+  <concept>
+    <code value="no"/>
+    <display value="no"/>
+    <definition value="No"/>
+  </concept>
+  <concept>
+    <code value="EmCare.A.DE33"/>
+    <display value="unknown"/>
+    <definition value="Unknown"/>
+  </concept>
+  <concept>
+    <code value="agree"/>
+    <display value="agree"/>
+    <definition value="Agree"/>
+  </concept>
+  <concept>
+    <code value="disagree"/>
+    <display value="disagree"/>
+    <definition value="Disagree"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B3.DE07"/>
+    <display value="initial visit"/>
+    <definition value="The client's visit is for a new consultation"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B3.DE08"/>
+    <display value="follow up"/>
+    <definition value="The client's visit is for a follow up consultation"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B12S1.DE05"/>
+    <display value="7 days or more"/>
+    <definition value="The client has had fever for 7 days or more"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B12S1.DE04"/>
+    <display value="less than 7 days"/>
+    <definition value="The client has had fever for less than 7 days"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B10S1.DE08"/>
+    <display value="14 days or more"/>
+    <definition value="The client has had ear discharge for 14 days or more"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B10S1.DE07"/>
+    <display value="less than 14 days"/>
+    <definition value="The client has had ear discharge for less than 14 days"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B10S2.DE09"/>
+    <display value="oxygen saturation not measured"/>
+    <definition value="The clients oxygen saturation was not measured"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B7.DE06"/>
+    <display value="two or more convulsions"/>
+    <definition value="The client is reported to have had two or more convulsions in this illness"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B7.DE05"/>
+    <display value="one convulsion"/>
+    <definition value="The client is reported to have had one convulsion in this illness"/>
+  </concept>
+  <concept>
+    <code value="Low"/>
+    <display value="low"/>
+    <definition value="The client has a low body temperature based on the second  measurement"/>
+  </concept>
+  <concept>
+    <code value="Normal"/>
+    <display value="normal"/>
+  </concept>
+  <concept>
+    <code value="High"/>
+    <display value="high"/>
+  </concept>
+  <concept>
+    <code value="2"/>
+    <display value="very high"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B20S2.DE03"/>
+    <display value="skin pinch goes back very slowly (more than 2 seconds)"/>
+    <definition value="The client's skin goes back very slowly after Skin pinch of Abdomen (More than 2 seconds)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B20S2.DE04"/>
+    <display value="skin pinch goes back slowly (2 seconds or fewer, but not immediately)"/>
+    <definition value="The client's skin goes back slowly after Skin pinch of Abdomen (2 seconds or fewer, but not immediately)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B20S2.DE05"/>
+    <display value="skin pinch goes back normally (immediately)"/>
+    <definition value="The client's skin goes back normally after Skin pinch of Abdomen (immediately)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE41"/>
+    <display value="mouth sores or mouth ulcers - deep and extensive"/>
+    <definition value="The client has mouth sores or mouth ulcers that are deep and extensive"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE42"/>
+    <display value="mouth sores or mouth ulcers - not deep and extensive"/>
+    <definition value="The client has mouth sores or mouth ulcers that are not deep and extensive"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE40"/>
+    <display value="oral thrush"/>
+    <definition value="The client has oral thrush"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE39"/>
+    <display value="no oral sores or mouth ulcers"/>
+    <definition value="The client is not reported to have oral sores or mouth ulcers"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B15S2.DE02"/>
+    <display value="severe palmar pallor"/>
+    <definition value="The client has severe palmar pallor"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B15S2.DE03"/>
+    <display value="some palmar pallor"/>
+    <definition value="The client has some palmar pallor"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B15S2.DE04"/>
+    <display value="no palmar pallor"/>
+    <definition value="The client has no palmar pallor"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B18S1.DE03"/>
+    <display value="not able to feed at all"/>
+    <definition value="The client is reported not to be able to feed at all"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B18S1.DE04"/>
+    <display value="not feeding well"/>
+    <definition value="The client is reported to not be feeding well"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B18S1.DE05"/>
+    <display value="feeding well"/>
+    <definition value="The client is reported to be feeding well"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B18S2.DE11"/>
+    <display value="moves on his or her own or moves spontaneously or without stimulation"/>
+    <definition value="The client moves on his or her own or moves spontaneously or without stimulation"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B18S2.DE10"/>
+    <display value="movement only when stimulated but then stops"/>
+    <definition value="The client has movement but only when stimulated and then movement stops"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B18S2.DE09"/>
+    <display value="no movement at all"/>
+    <definition value="The client has no movement at all even after stimulation"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B19S2.DE05"/>
+    <display value="within less than 24 hours of birth"/>
+    <definition value="The client's Jaundice appeared less than 24 hours after birth"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B19S2.DE06"/>
+    <display value="24 hours or more after birth"/>
+    <definition value="The client's Jaundice appeared 24 hours or more after birth"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B19S2.DE07"/>
+    <display value="unknown when jaundice first appeared"/>
+    <definition value="The caregiver does not know when the Jaundice first appeared if it is a first visit for jaundice and in the first 3 weeks of life"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S2.DE02"/>
+    <display value="very low weight for age"/>
+    <definition value="The client has a very low weight for age (Weight &lt; 2Kg and &lt;7 Days old)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S2.DE03"/>
+    <display value="low weight for age"/>
+    <definition value="The client has a low weight for age (derived from a WFA Z Score is &lt; -2)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S2.DE04"/>
+    <display value="normal weight for age"/>
+    <definition value="The client is a normal weight for age (derived from a normal WFA Z Score is ≥ -2"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S2.DE28"/>
+    <display value="breastmilk also given"/>
+    <definition value="Breastmilk is also given to the client by the care giver"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B7-B8-B9.DE03"/>
+    <display value="end consultation"/>
+    <definition value="The client has not been stabilised and the healthcare worker willend the consultation"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B7-B8-B9.DE02"/>
+    <display value="stabilised, continue consultation"/>
+    <definition value="The client has been stabilised and the healthcare worker will continue the consultation"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S1.DE02"/>
+    <display value="mother hiv positive"/>
+    <definition value="The client's mother is HIV positive"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S1.DE03"/>
+    <display value="mother hiv negative"/>
+    <definition value="The client's mother is HIV negative"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S1.DE04"/>
+    <display value="mother hiv status - unknown or not tested"/>
+    <definition value="The client's mother's HIV Status is unknown or not tested"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S1.DE05"/>
+    <display value="mother hiv status - decline to answer"/>
+    <definition value="The client's mother has declined to answer regarging HIV Status"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S2.DE19"/>
+    <display value="correct and hygienic feed preparation"/>
+    <definition value="The care giver is preparing the milk correctly and hygenically"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S2.DE20"/>
+    <display value="incorrect or unhygienic feed preparation"/>
+    <definition value="The care giver is not preparing the milk correctly and hygenically"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S2.DE22"/>
+    <display value="cup"/>
+    <definition value="The milk is given to the client using a cup"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S2.DE23"/>
+    <display value="bottle"/>
+    <definition value="The milk is given to the client using a bottle"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S2.DE26"/>
+    <display value="feeding utensils not cleaned hygienically"/>
+    <definition value="The care giver is not cleaning the feeding utensils hygienically"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S2.DE25"/>
+    <display value="feeding utensils cleaned hygienically"/>
+    <definition value="The care giver is cleaning the feeding utensils hygienically"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17.DE06"/>
+    <display value="yes, date documented, but not here"/>
+    <definition value="The caregiver is able to provide the Vitamin A supplement date but not Today"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17.DE07"/>
+    <display value="no, but last dose given less than 1 month ago"/>
+    <definition value="The caregiver is able to tell the healthcare worker that the last dose was given less than 1 month ago"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17.DE08"/>
+    <display value="no, but last dose given between 1 and 6 months ago"/>
+    <definition value="The caregiver is able to tell the healthcare worker that the last dose was given between 1 and 5 months ago"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17.DE09"/>
+    <display value="no, but last dose given more than 6 months ago"/>
+    <definition value="The caregiver is able to tell the healthcare worker that the last dose was given more than 6 months ago"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17.DE10"/>
+    <display value="no, do not know when last dose was given"/>
+    <definition value="The caregiver is not able to tell the healthcare worker when the last dose was given"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17.DE23"/>
+    <display value="high hiv risk"/>
+    <definition value="The client is in an area of HIV prevalence of high HIV risk."/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17.DE24"/>
+    <display value="low hiv risk"/>
+    <definition value="The client is in an area of HIV prevalence of low HIV risk."/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17.DE31"/>
+    <display value="child hiv positive - virological"/>
+    <definition value="The client is HIV Positive (Virological Test)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17.DE32"/>
+    <display value="child hiv positive - serological"/>
+    <definition value="The client is HIV Positive (Serological Test)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17.DE33"/>
+    <display value="child hiv positive - unknown type of test"/>
+    <definition value="The client is HIV Positive (Unknown Type of Test)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17.DE34"/>
+    <display value="child hiv negative"/>
+    <definition value="The client is HIV Negative"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17.DE35"/>
+    <display value="child hiv status - unknown or not tested"/>
+    <definition value="The client's HIV Status is unknown or the client has not been tested"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17.DE36"/>
+    <display value="child hiv status - decline to answer"/>
+    <definition value="The client has delined to answer regarding HIV Status"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17.DE46"/>
+    <display value="yes"/>
+    <definition value="The client has received all vaccinations for age"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17.DE47"/>
+    <display value="no, incomplete vaccination"/>
+    <definition value="The client has not received all vaccinations for age"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17.DE48"/>
+    <display value="no, the child has never received any vaccinations to date"/>
+    <definition value="The client has never received any vaccinations to date"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17.DE49"/>
+    <display value="unknown"/>
+    <definition value="It is not known if the client has received any vaccination"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17.DE51"/>
+    <display value="bcg"/>
+    <definition value="Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17.DE52"/>
+    <display value="opv"/>
+    <definition value="Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17.DE53"/>
+    <display value="hep b"/>
+    <definition value="Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17.DE54"/>
+    <display value="dpt"/>
+    <definition value="Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17.DE55"/>
+    <display value="dpt 18 month booster"/>
+    <definition value="Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17.DE56"/>
+    <display value="hib"/>
+    <definition value="Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17.DE57"/>
+    <display value="rtv"/>
+    <definition value="Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17.DE58"/>
+    <display value="pcv"/>
+    <definition value="Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17.DE59"/>
+    <display value="pcv booster 1 for confirmed hiv infection"/>
+    <definition value="Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17.DE60"/>
+    <display value="pcv booster 2 for confirmed hiv infection"/>
+    <definition value="Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17.DE61"/>
+    <display value="measles"/>
+    <definition value="Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE09"/>
+    <display value="completely unable to drink"/>
+    <definition value="The client is completely unable to drink"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE10"/>
+    <display value="vomits immediately / everything"/>
+    <definition value="The client vomits immediately / everything"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE11"/>
+    <display value="drinks poorly"/>
+    <definition value="The client drinks poorly"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE12"/>
+    <display value="drinks eagerly / thirstily"/>
+    <definition value="The client drinks eagerly / thirstily"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE13"/>
+    <display value="drinks normally"/>
+    <definition value="The client drinks normally"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE24"/>
+    <display value="able to finish rutf"/>
+    <definition value="The client was able to finish the RUTF (the client was able to finish the minimum amount of RTUF (at least one-third of a packet of RUTF portion (92g) or 3 teaspoons from a pot within 30 minutes)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE25"/>
+    <display value="unable to finish rutf"/>
+    <definition value="The client was unable to finish the RUTF (the client was unable to eat one-third of a packet of RUTF portion (92g) or 3 teaspoons from a pot within 30 minutes)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE26"/>
+    <display value="rutf not available"/>
+    <definition value="The healthcare worker did not have any RUTF available to carry out the appetite test"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE37"/>
+    <display value="not well attached to breast"/>
+    <definition value="The client is not well attached to breast"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE38"/>
+    <display value="good attachment"/>
+    <definition value="The client has a good attachment"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE39"/>
+    <display value="not sucking effectively"/>
+    <definition value="The client is not sucking effectively"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE40"/>
+    <display value="sucking effectively"/>
+    <definition value="The client is sucking effectively"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE75"/>
+    <display value="no species reported"/>
+    <definition value="The client's Microscopy species result is no species reported"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17S1.DE03"/>
+    <display value="red (congested) throat"/>
+    <definition value="The client has a Red (congested) throat"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17S1.DE04"/>
+    <display value="exudate on throat"/>
+    <definition value="The client has Exudate on Throat"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17S1.DE05"/>
+    <display value="membrane on throat"/>
+    <definition value="The client has Membrane on throat"/>
+  </concept>
+  <concept>
+    <code value="none"/>
+    <display value="none of the listed throat problems observed"/>
+    <definition value="The client has None of the listed throat problems observed"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17S1.DE08"/>
+    <display value="yes, without difficulty"/>
+    <definition value="The client can swallow without difficulty"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17S1.DE09"/>
+    <display value="difficulty in swallowing"/>
+    <definition value="The client has Difficulty in swallowing"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B17S1.DE10"/>
+    <display value="unable to swallow"/>
+    <definition value="The client is Unable to swallow"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B6.DE19"/>
+    <display value="does not appear to be underweight"/>
+    <definition value="The client is visually assessed for whether underweight by the health care worker and does not appear to be underweight (estimated weight based on height or age would be equivalent to WHZ= 0 / WAZ= 0)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B6.DE20"/>
+    <display value="appears to be underweight"/>
+    <definition value="The client is visually assessed for whether underweight by the health care worker and appears to be underweight (as an aide for dosing calculations) (estimated weight based on height or age would be equivalent to WHZ= -1 / WAZ= -1)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B6.DE21"/>
+    <display value="appears to be severely underweight"/>
+    <definition value="The client is visually assessed for whether underweight and appears to be severely underweight (as an aide for dosing calculations) (estimated weight based on height or age would be equivalent to WHZ= -2 / WAZ= -2)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B15S2.DE10"/>
+    <display value="severe mucous membrane pallor"/>
+    <definition value="The client has severe mucous membrane pallor"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B15S2.DE11"/>
+    <display value="some mucous membrane pallor"/>
+    <definition value="The client has some mucous membrane pallor"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B15S2.DE12"/>
+    <display value="no mucous membrane pallor"/>
+    <definition value="The client has no mucous membrane pallor"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE07"/>
+    <display value="generalised skin problem"/>
+    <definition value="The client has a generalised skin problem"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE08"/>
+    <display value="localised skin problem"/>
+    <definition value="The client has a localised skin problem"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE09"/>
+    <display value="no problem"/>
+    <definition value="The client does not have a generalised or localised skin problem"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE18"/>
+    <display value="papular urticaria or papular pruritic eruptions"/>
+    <definition value="The client has Papular Urticaria or Papular Pruritic Eruptions &#xA;• Itchy papules at different stages of evolution.&#xA;• Found on the arms and legs.&#xA;• Healed lesions are often dark/ hyperpigmented.&#xA;• The itch is difficult to manage.&#xA;• Essential to exclude scabies."/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE19"/>
+    <display value="ringworm (tinea)"/>
+    <definition value="The client has Ringworm (Tinea) - &#xA;• An itchy circular lesion with a raised edge and fine scaly area.&#xA;• Scalp lesions may result in loss of hair"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE21"/>
+    <display value="scabies"/>
+    <definition value="The client has Scabies -&#xA;• Intense itching, more severe at night.&#xA;• Small burrows between fingers, tows, elbow areas and buttocks.&#xA;• Secondary infection may occur.&#xA;• Small babies may have vesicles and pustules on the palms and soles and face.&#xA;• The infestation spreads easily, usually affecting more than one person in the household"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE22"/>
+    <display value="chickenpox"/>
+    <definition value="The client has Chickenpox - Mild fever preceding the rash.&#xA;• Rash begins on the trunk and face,&#xA;later spreads to the arms and legs.&#xA;• Vesicles appear progressively over days and forms scabs&#xA;after they rupture.&#xA;• Contagious from the fever starts until all lesions have&#xA;crusted.&#xA;• Usually lasts for about 1 week."/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE23"/>
+    <display value="herpes zoster"/>
+    <definition value="The client has Herpes Zoster -  Vesicles in one area on one side of body with intense pain or scars plus shooting pain.&#xA;• They are uncommon in children except when they are immune-compromised"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE25"/>
+    <display value="impetigo"/>
+    <definition value="The client has Impetigo- Pustules and papules with honey -coloured crusts.&#xA;• Commonly starts on the face or buttocks, then spreads to the neck, hands, arms and legs."/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE31"/>
+    <display value="molluscum contagiosum"/>
+    <definition value="The client has Molluscum Contagiosum -Caused by a poxvirus.&#xA;• Dome-shaped papules with a central depression&#xA;(umblication).&#xA;• Most commonly seen on the face and trunk in children"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE32"/>
+    <display value="warts"/>
+    <definition value="The client has Warts - Appears as papules or nodules with a rough surface.&#xA;• Seen most often on the hands and fingers, but can be&#xA;found anywhere on&#xA;the body."/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE33"/>
+    <display value="seborrhoeic dermatitis"/>
+    <definition value="The client has Seborrhoeic Dermatitis - Greasy scales and redness on central face, body folds.&#xA;• The scalp, face, ears and skin folds (e.g. axillae, groins, under the breasts) are commonly affected."/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE35"/>
+    <display value="fixed drug reaction"/>
+    <definition value="The client has Fixed Drug Reaction - One or more dark round or oval skin lesions with central vesicles .&#xA;• The lesions recur on the same spot, and increase in number with each successive attack"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE36"/>
+    <display value="eczema"/>
+    <definition value="The client has Eczema - Erythematous (red), sometimes scaly plaques found on the face, flexures, trunk and extensors.&#xA;• Yellow pustules which crust indicate&#xA;secondary bacterial infection."/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE37"/>
+    <display value="steven johnson syndrome (sjs)"/>
+    <definition value="The client has Steven Johnson Syndrome (SJS) - Severe and acute reaction due to many drugs, the commonest being cotrimoxazole or nevirapine.&#xA;• Lesions involve the skin as well as the mucous membranes (e.g. eyes, mouth and genitalia).&#xA;• May start as widespread red irregular rash with or without blisters. The blisters rupture leaving denuded areas of skin.&#xA;• May cause difficulty in breathing."/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE44"/>
+    <display value="skin problem"/>
+    <definition value="The health care worker would like to add a skin problem"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE45"/>
+    <display value="oral sores or mouth ulcers"/>
+    <definition value="The health care worker would like to add an Oral Sores or Mouth Ulcers problem"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE46"/>
+    <display value="eye problem"/>
+    <definition value="The health care worker would like to add an Eye problem"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B14S2.DE47"/>
+    <display value="no - do not add a skin or mouth or eye problem"/>
+    <definition value="The healthcare worker would not like to add a Skin or Mouth or Eye Problem"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S2.DE29"/>
+    <display value="no breastmilk at all"/>
+    <definition value="The caregiver does not give the client any breastmilk at all"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S2.DE11"/>
+    <display value="inappropriate replacement milk"/>
+    <definition value="The care giver is giving inappropriate replacement milk"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B21S2.DE10"/>
+    <display value="appropriate replacement milk"/>
+    <definition value="The care giver is giving appropriate  replacement milk"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE18"/>
+    <display value="chest indrawing (post inhaled bronchodilator trial)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE19"/>
+    <display value="respiratory rate (post inhaled bronchodilator trial)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE20"/>
+    <display value="fast breathing (post inhaled bronchodilator trial)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE21"/>
+    <display value="no fast breathing and no chest indrawing (post inhaled bronchodilator trial)"/>
+  </concept>
+  <concept>
+    <code value="EmCare.B22.DE22"/>
+    <display value="inhaled bronchodilator trial not feasible or available"/>
+  </concept>
+</CodeSystem>

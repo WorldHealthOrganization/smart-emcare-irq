@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="oral-fluid-test"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include these codes as defined in <a href="CodeSystem-emcare-custom-codes.html"><code>https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE09">EmCare.B22.DE09</a></td><td>Completely Unable to Drink</td><td>The client is completely unable to drink</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE10">EmCare.B22.DE10</a></td><td>Vomits Immediately / Everything</td><td>The client vomits immediately / everything</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE11">EmCare.B22.DE11</a></td><td>Drinks Poorly</td><td>The client drinks poorly</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE12">EmCare.B22.DE12</a></td><td>Drinks Eagerly / Thirstily</td><td>The client drinks eagerly / thirstily</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE13">EmCare.B22.DE13</a></td><td>Drinks Normally</td><td>The client drinks normally</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/oral-fluid-test"/>
+  <version value="0.1.0"/>
+  <name value="valueset-oral-fluid-test"/>
+  <title value="EmCare.B22.DE08"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2023-04-03T14:56:37+00:00"/>
+  <publisher value="World Health Organization (WHO)"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.who.int"/>
+    </telecom>
+  </contact>
+  <description value="Oral Fluid Test Results"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <immutable value="true"/>
+  <compose>
+    <include>
+      <system value="https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes"/>
+      <concept>
+        <code value="EmCare.B22.DE09"/>
+        <display value="Completely Unable to Drink"/>
+        <designation>
+          <value value="The client is completely unable to drink"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B22.DE10"/>
+        <display value="Vomits Immediately / Everything"/>
+        <designation>
+          <value value="The client vomits immediately / everything"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B22.DE11"/>
+        <display value="Drinks Poorly"/>
+        <designation>
+          <value value="The client drinks poorly"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B22.DE12"/>
+        <display value="Drinks Eagerly / Thirstily"/>
+        <designation>
+          <value value="The client drinks eagerly / thirstily"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B22.DE13"/>
+        <display value="Drinks Normally"/>
+        <designation>
+          <value value="The client drinks normally"/>
+        </designation>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,69 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/who/emcare/ValueSet/child-vaccination-status> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "child-vaccination-status"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"CodeSystem-emcare-custom-codes.html\"><code>https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17.46DE46\">EmCare.B17.DE46</a></td><td>Yes</td><td>The client has received all vaccinations for age</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17.46DE47\">EmCare.B17.DE47</a></td><td>No, incomplete vaccination</td><td>The client has not received all vaccinations for age</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17.46DE48\">EmCare.B17.DE48</a></td><td>No, the child has never received any vaccinations to date</td><td>The client has never received any vaccinations to date</td></tr><tr><td><a href=\"CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B17.46DE49\">EmCare.B17.DE49</a></td><td>Unknown</td><td>It is not known if the client has received any vaccination</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/child-vaccination-status"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "valueset-child-vaccination-status"] ; # 
+  fhir:title [ fhir:v "EmCare.B17.DE45"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-04-03T14:56:37+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "World Health Organization (WHO)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Check the child's vaccination record: has the child received all vaccines they are eligible for"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:immutable [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "EmCare.B17.DE46" ] ;
+         fhir:display [ fhir:v "Yes" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The client has received all vaccinations for age" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B17.DE47" ] ;
+         fhir:display [ fhir:v "No, incomplete vaccination" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The client has not received all vaccinations for age" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B17.DE48" ] ;
+         fhir:display [ fhir:v "No, the child has never received any vaccinations to date" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "The client has never received any vaccinations to date" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "EmCare.B17.DE49" ] ;
+         fhir:display [ fhir:v "Unknown" ] ;
+         fhir:designation ( [
+           fhir:value [ fhir:v "It is not known if the client has received any vaccination" ]
+         ] )
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="emcareobservationvalueset"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include these codes as defined in <a href="CodeSystem-emcare-custom-codes.html"><code>https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE07">EmCare.B14S2.DE07</a></td><td>generalised skin problem</td><td>The client has a generalised skin problem</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE08">EmCare.B14S2.DE08</a></td><td>localised skin problem</td><td>The client has a localised skin problem</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE09">EmCare.B14S2.DE09</a></td><td>no problem</td><td>The client does not have a generalised or localised skin problem</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE18">EmCare.B14S2.DE18</a></td><td>papular urticaria or papular pruritic eruptions</td><td>The client has Papular Urticaria or Papular Pruritic Eruptions 
+• Itchy papules at different stages of evolution.
+• Found on the arms and legs.
+• Healed lesions are often dark/ hyperpigmented.
+• The itch is difficult to manage.
+• Essential to exclude scabies.</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE19">EmCare.B14S2.DE19</a></td><td>ringworm (tinea)</td><td>The client has Ringworm (Tinea) - 
+• An itchy circular lesion with a raised edge and fine scaly area.
+• Scalp lesions may result in loss of hair</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE21">EmCare.B14S2.DE21</a></td><td>scabies</td><td>The client has Scabies -
+• Intense itching, more severe at night.
+• Small burrows between fingers, tows, elbow areas and buttocks.
+• Secondary infection may occur.
+• Small babies may have vesicles and pustules on the palms and soles and face.
+• The infestation spreads easily, usually affecting more than one person in the household</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE22">EmCare.B14S2.DE22</a></td><td>chickenpox</td><td>The client has Chickenpox - Mild fever preceding the rash.
+• Rash begins on the trunk and face,
+later spreads to the arms and legs.
+• Vesicles appear progressively over days and forms scabs
+after they rupture.
+• Contagious from the fever starts until all lesions have
+crusted.
+• Usually lasts for about 1 week.</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE23">EmCare.B14S2.DE23</a></td><td>herpes zoster</td><td>The client has Herpes Zoster -  Vesicles in one area on one side of body with intense pain or scars plus shooting pain.
+• They are uncommon in children except when they are immune-compromised</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE25">EmCare.B14S2.DE25</a></td><td>impetigo</td><td>The client has Impetigo- Pustules and papules with honey -coloured crusts.
+• Commonly starts on the face or buttocks, then spreads to the neck, hands, arms and legs.</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE31">EmCare.B14S2.DE31</a></td><td>molluscum contagiosum</td><td>The client has Molluscum Contagiosum -Caused by a poxvirus.
+• Dome-shaped papules with a central depression
+(umblication).
+• Most commonly seen on the face and trunk in children</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE32">EmCare.B14S2.DE32</a></td><td>warts</td><td>The client has Warts - Appears as papules or nodules with a rough surface.
+• Seen most often on the hands and fingers, but can be
+found anywhere on
+the body.</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE33">EmCare.B14S2.DE33</a></td><td>seborrhoeic dermatitis</td><td>The client has Seborrhoeic Dermatitis - Greasy scales and redness on central face, body folds.
+• The scalp, face, ears and skin folds (e.g. axillae, groins, under the breasts) are commonly affected.</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE35">EmCare.B14S2.DE35</a></td><td>fixed drug reaction</td><td>The client has Fixed Drug Reaction - One or more dark round or oval skin lesions with central vesicles .
+• The lesions recur on the same spot, and increase in number with each successive attack</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE36">EmCare.B14S2.DE36</a></td><td>eczema</td><td>The client has Eczema - Erythematous (red), sometimes scaly plaques found on the face, flexures, trunk and extensors.
+• Yellow pustules which crust indicate
+secondary bacterial infection.</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE37">EmCare.B14S2.DE37</a></td><td>steven johnson syndrome (sjs)</td><td>The client has Steven Johnson Syndrome (SJS) - Severe and acute reaction due to many drugs, the commonest being cotrimoxazole or nevirapine.
+• Lesions involve the skin as well as the mucous membranes (e.g. eyes, mouth and genitalia).
+• May start as widespread red irregular rash with or without blisters. The blisters rupture leaving denuded areas of skin.
+• May cause difficulty in breathing.</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE44">EmCare.B14S2.DE44</a></td><td>skin problem</td><td>The health care worker would like to add a skin problem</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE45">EmCare.B14S2.DE45</a></td><td>oral sores or mouth ulcers</td><td>The health care worker would like to add an Oral Sores or Mouth Ulcers problem</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE46">EmCare.B14S2.DE46</a></td><td>eye problem</td><td>The health care worker would like to add an Eye problem</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B14S2.46DE47">EmCare.B14S2.DE47</a></td><td>no - do not add a skin or mouth or eye problem</td><td>The healthcare worker would not like to add a Skin or Mouth or Eye Problem</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B21S2.46DE29">EmCare.B21S2.DE29</a></td><td>no breastmilk at all</td><td>The caregiver does not give the client any breastmilk at all</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B21S2.46DE11">EmCare.B21S2.DE11</a></td><td>inappropriate replacement milk</td><td>The care giver is giving inappropriate replacement milk</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B21S2.46DE10">EmCare.B21S2.DE10</a></td><td>appropriate replacement milk</td><td>The care giver is giving appropriate  replacement milk</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE18">EmCare.B22.DE18</a></td><td>chest indrawing (post inhaled bronchodilator trial)</td><td/></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE19">EmCare.B22.DE19</a></td><td>respiratory rate (post inhaled bronchodilator trial)</td><td/></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE20">EmCare.B22.DE20</a></td><td>fast breathing (post inhaled bronchodilator trial)</td><td/></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE21">EmCare.B22.DE21</a></td><td>no fast breathing and no chest indrawing (post inhaled bronchodilator trial)</td><td>The client has no fast breathing and no chest indrawing</td></tr><tr><td><a href="CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE22">EmCare.B22.DE22</a></td><td>inhaled bronchodilator trial not feasible or available</td><td/></tr></table></li></ul></div>
+  </text>
+  <url value="https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/emcareobservationvalueset"/>
+  <version value="0.1.0"/>
+  <name value="valueset-emcareobservationvalueset"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2023-04-03T14:56:37+00:00"/>
+  <publisher value="World Health Organization (WHO)"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.who.int"/>
+    </telecom>
+  </contact>
+  <description value="Codes representing possible values for the Provide an estimated age or estimated date of birth element"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <immutable value="true"/>
+  <compose>
+    <include>
+      <system value="https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes"/>
+      <concept>
+        <code value="EmCare.B14S2.DE07"/>
+        <display value="generalised skin problem"/>
+        <designation>
+          <value value="The client has a generalised skin problem"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B14S2.DE08"/>
+        <display value="localised skin problem"/>
+        <designation>
+          <value value="The client has a localised skin problem"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B14S2.DE09"/>
+        <display value="no problem"/>
+        <designation>
+          <value value="The client does not have a generalised or localised skin problem"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B14S2.DE18"/>
+        <display value="papular urticaria or papular pruritic eruptions"/>
+        <designation>
+          <value value="The client has Papular Urticaria or Papular Pruritic Eruptions &#xA;• Itchy papules at different stages of evolution.&#xA;• Found on the arms and legs.&#xA;• Healed lesions are often dark/ hyperpigmented.&#xA;• The itch is difficult to manage.&#xA;• Essential to exclude scabies."/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B14S2.DE19"/>
+        <display value="ringworm (tinea)"/>
+        <designation>
+          <value value="The client has Ringworm (Tinea) - &#xA;• An itchy circular lesion with a raised edge and fine scaly area.&#xA;• Scalp lesions may result in loss of hair"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B14S2.DE21"/>
+        <display value="scabies"/>
+        <designation>
+          <value value="The client has Scabies -&#xA;• Intense itching, more severe at night.&#xA;• Small burrows between fingers, tows, elbow areas and buttocks.&#xA;• Secondary infection may occur.&#xA;• Small babies may have vesicles and pustules on the palms and soles and face.&#xA;• The infestation spreads easily, usually affecting more than one person in the household"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B14S2.DE22"/>
+        <display value="chickenpox"/>
+        <designation>
+          <value value="The client has Chickenpox - Mild fever preceding the rash.&#xA;• Rash begins on the trunk and face,&#xA;later spreads to the arms and legs.&#xA;• Vesicles appear progressively over days and forms scabs&#xA;after they rupture.&#xA;• Contagious from the fever starts until all lesions have&#xA;crusted.&#xA;• Usually lasts for about 1 week."/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B14S2.DE23"/>
+        <display value="herpes zoster"/>
+        <designation>
+          <value value="The client has Herpes Zoster -  Vesicles in one area on one side of body with intense pain or scars plus shooting pain.&#xA;• They are uncommon in children except when they are immune-compromised"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B14S2.DE25"/>
+        <display value="impetigo"/>
+        <designation>
+          <value value="The client has Impetigo- Pustules and papules with honey -coloured crusts.&#xA;• Commonly starts on the face or buttocks, then spreads to the neck, hands, arms and legs."/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B14S2.DE31"/>
+        <display value="molluscum contagiosum"/>
+        <designation>
+          <value value="The client has Molluscum Contagiosum -Caused by a poxvirus.&#xA;• Dome-shaped papules with a central depression&#xA;(umblication).&#xA;• Most commonly seen on the face and trunk in children"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B14S2.DE32"/>
+        <display value="warts"/>
+        <designation>
+          <value value="The client has Warts - Appears as papules or nodules with a rough surface.&#xA;• Seen most often on the hands and fingers, but can be&#xA;found anywhere on&#xA;the body."/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B14S2.DE33"/>
+        <display value="seborrhoeic dermatitis"/>
+        <designation>
+          <value value="The client has Seborrhoeic Dermatitis - Greasy scales and redness on central face, body folds.&#xA;• The scalp, face, ears and skin folds (e.g. axillae, groins, under the breasts) are commonly affected."/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B14S2.DE35"/>
+        <display value="fixed drug reaction"/>
+        <designation>
+          <value value="The client has Fixed Drug Reaction - One or more dark round or oval skin lesions with central vesicles .&#xA;• The lesions recur on the same spot, and increase in number with each successive attack"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B14S2.DE36"/>
+        <display value="eczema"/>
+        <designation>
+          <value value="The client has Eczema - Erythematous (red), sometimes scaly plaques found on the face, flexures, trunk and extensors.&#xA;• Yellow pustules which crust indicate&#xA;secondary bacterial infection."/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B14S2.DE37"/>
+        <display value="steven johnson syndrome (sjs)"/>
+        <designation>
+          <value value="The client has Steven Johnson Syndrome (SJS) - Severe and acute reaction due to many drugs, the commonest being cotrimoxazole or nevirapine.&#xA;• Lesions involve the skin as well as the mucous membranes (e.g. eyes, mouth and genitalia).&#xA;• May start as widespread red irregular rash with or without blisters. The blisters rupture leaving denuded areas of skin.&#xA;• May cause difficulty in breathing."/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B14S2.DE44"/>
+        <display value="skin problem"/>
+        <designation>
+          <value value="The health care worker would like to add a skin problem"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B14S2.DE45"/>
+        <display value="oral sores or mouth ulcers"/>
+        <designation>
+          <value value="The health care worker would like to add an Oral Sores or Mouth Ulcers problem"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B14S2.DE46"/>
+        <display value="eye problem"/>
+        <designation>
+          <value value="The health care worker would like to add an Eye problem"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B14S2.DE47"/>
+        <display value="no - do not add a skin or mouth or eye problem"/>
+        <designation>
+          <value value="The healthcare worker would not like to add a Skin or Mouth or Eye Problem"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B21S2.DE29"/>
+        <display value="no breastmilk at all"/>
+        <designation>
+          <value value="The caregiver does not give the client any breastmilk at all"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B21S2.DE11"/>
+        <display value="inappropriate replacement milk"/>
+        <designation>
+          <value value="The care giver is giving inappropriate replacement milk"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B21S2.DE10"/>
+        <display value="appropriate replacement milk"/>
+        <designation>
+          <value value="The care giver is giving appropriate  replacement milk"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="EmCare.B22.DE18"/>
+        <display value="chest indrawing (post inhaled bronchodilator trial)"/>
+      </concept>
+      <concept>
+        <code value="EmCare.B22.DE19"/>
+        <display value="respiratory rate (post inhaled bronchodilator trial)"/>
+      </concept>
+      <concept>
+        <code value="EmCare.B22.DE20"/>
+        <display value="fast breathing (post inhaled bronchodilator trial)"/>
+      </concept>
+      <concept>
+        <code value="EmCare.B22.DE21"/>
+        <display value="no fast breathing and no chest indrawing (post inhaled bronchodilator trial)"/>
+      </concept>
+      <concept>
+        <code value="EmCare.B22.DE22"/>
+        <display value="inhaled bronchodilator trial not feasible or available"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>
