@@ -2,13 +2,13 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareb7ltidangersigns version '1.0.1.rc12.build.472'
+library emcareb7ltidangersigns version '1.0.1.rc12.build.475'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.1.rc12.build.472' called Base
-include emcareobservation version '1.0.1.rc12.build.472' called obs
-include emcarevalueset version '1.0.1.rc12.build.472' called val
-include emcarecombineddataelements version '1.0.1.rc12.build.472' called c
+include emcarebase version '1.0.1.rc12.build.475' called Base
+include emcareobservation version '1.0.1.rc12.build.475' called obs
+include emcarevalueset version '1.0.1.rc12.build.475' called val
+include emcarecombineddataelements version '1.0.1.rc12.build.475' called c
 
 
 
