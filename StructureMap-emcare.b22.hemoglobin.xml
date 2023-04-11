@@ -74,7 +74,7 @@ group emcareobservationemcareb22de82(source src, target tgt) {
   <version value="0.1.0"/>
   <name value="emcare.b22.hemoglobin"/>
   <status value="active"/>
-  <date value="2023-04-11T17:43:01+00:00"/>
+  <date value="2023-04-11T17:43:16+00:00"/>
   <publisher value="World Health Organization (WHO)"/>
   <contact>
     <telecom>

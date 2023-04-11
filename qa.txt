@@ -3,7 +3,7 @@
 
 err = 10079, warn = 1465, info = 1536
 IG Publisher Version: 1.3.4
-Generated Tue Apr 11 17:52:18 UTC 2023. FHIR version 4.0.1 for who.fhir.emc-cds#0.1.0 (canonical = http://fhir.org/guides/who/emcare)
+Generated Tue Apr 11 17:54:00 UTC 2023. FHIR version 4.0.1 for who.fhir.emc-cds#0.1.0 (canonical = http://fhir.org/guides/who/emcare)
  Build Errors : 98 / 88 / 0
  /github/workspace/input/emc-cds : 0 / 2 / 1
  /github/workspace/input/ext_ig/who/CodeSystem-extended-content-codes : 11 / 1 / 1
