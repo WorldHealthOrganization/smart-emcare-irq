@@ -548,12 +548,12 @@ group emcareobservationemcareb22de08(source src, target tgt) {
     itm1.item first as item where (linkId = 'EmCare.B22.DE08') and answer.exists() then {
       item.answer first as a then {
         a.value as val then {
-          val where val.code = 'none' -&gt; tgt.status = 'cancelled' &quot;8ab1d7a5&quot;;
+          val where val.code = 'none' -&gt; tgt.swrapin_entry_createtatus = 'cancelled' &quot;d0a13fda&quot;;
           val where val.code != 'none' -&gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = val,  tgt.status = 'final' &quot;a1050460&quot;;
-        } &quot;4ca9082e&quot;;
-      } &quot;7c587a4b&quot;;
-    } &quot;37d7a517&quot;;
-  } &quot;46cd7b01&quot;;
+        } &quot;310f4b1f&quot;;
+      } &quot;6af9bfcc&quot;;
+    } &quot;3b9ba04d&quot;;
+  } &quot;6d73c74e&quot;;
 }
 
 group emcareobservationemcareb22de14(source src, target tgt) {
@@ -631,12 +631,12 @@ group emcareobservationemcareb22de16(source src, target tgt) {
     itm1.item first as item where (linkId = 'EmCare.B22.DE16') and answer.exists() then {
       item.answer first as a then {
         a.value as val then {
-          val where val.code = 'none' -&gt; tgt.status = 'cancelled' &quot;8ab1d7a5&quot;;
+          val where val.code = 'none' -&gt; tgt.swrapin_entry_createtatus = 'cancelled' &quot;d0a13fda&quot;;
           val where val.code != 'none' -&gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = val,  tgt.status = 'final' &quot;a1050460&quot;;
-        } &quot;4ca9082e&quot;;
-      } &quot;7c587a4b&quot;;
-    } &quot;3578b28a&quot;;
-  } &quot;fcd80e66&quot;;
+        } &quot;310f4b1f&quot;;
+      } &quot;6af9bfcc&quot;;
+    } &quot;b1dde0d2&quot;;
+  } &quot;b36b8a09&quot;;
 }
 
 group emcareobservationemcareb22de17emcareb22de18t(source src, target tgt) {
@@ -1168,7 +1168,7 @@ group emcareobservationemcareb22de50(source src, target tgt) {
   <version value="0.1.0"/>
   <name value="emcare.b22.assessmentstests"/>
   <status value="active"/>
-  <date value="2023-04-03T14:56:37+00:00"/>
+  <date value="2023-04-11T17:43:01+00:00"/>
   <publisher value="World Health Organization (WHO)"/>
   <contact>
     <telecom>
@@ -7188,7 +7188,7 @@ group emcareobservationemcareb22de50(source src, target tgt) {
       </target>
     </rule>
     <rule>
-      <name value="46cd7b01"/>
+      <name value="6d73c74e"/>
       <source>
         <context value="src"/>
         <element value="item"/>
@@ -7197,7 +7197,7 @@ group emcareobservationemcareb22de50(source src, target tgt) {
         <condition value="linkId = 'EmCare.B22.FluidTest'"/>
       </source>
       <rule>
-        <name value="37d7a517"/>
+        <name value="3b9ba04d"/>
         <source>
           <context value="itm1"/>
           <element value="item"/>
@@ -7206,7 +7206,7 @@ group emcareobservationemcareb22de50(source src, target tgt) {
           <condition value="(linkId = 'EmCare.B22.DE08') and answer.exists()"/>
         </source>
         <rule>
-          <name value="7c587a4b"/>
+          <name value="6af9bfcc"/>
           <source>
             <context value="item"/>
             <element value="answer"/>
@@ -7214,14 +7214,14 @@ group emcareobservationemcareb22de50(source src, target tgt) {
             <variable value="a"/>
           </source>
           <rule>
-            <name value="4ca9082e"/>
+            <name value="310f4b1f"/>
             <source>
               <context value="a"/>
               <element value="value"/>
               <variable value="val"/>
             </source>
             <rule>
-              <name value="8ab1d7a5"/>
+              <name value="d0a13fda"/>
               <source>
                 <context value="val"/>
                 <condition value="val.code = 'none'"/>
@@ -7229,7 +7229,7 @@ group emcareobservationemcareb22de50(source src, target tgt) {
               <target>
                 <context value="tgt"/>
                 <contextType value="variable"/>
-                <element value="status"/>
+                <element value="swrapin_entry_createtatus"/>
                 <transform value="copy"/>
                 <parameter>
                   <valueString value="cancelled"/>
@@ -8312,7 +8312,7 @@ group emcareobservationemcareb22de50(source src, target tgt) {
       </target>
     </rule>
     <rule>
-      <name value="fcd80e66"/>
+      <name value="b36b8a09"/>
       <source>
         <context value="src"/>
         <element value="item"/>
@@ -8321,7 +8321,7 @@ group emcareobservationemcareb22de50(source src, target tgt) {
         <condition value="linkId = 'EmCare.B22.FluidTest'"/>
       </source>
       <rule>
-        <name value="3578b28a"/>
+        <name value="b1dde0d2"/>
         <source>
           <context value="itm1"/>
           <element value="item"/>
@@ -8330,7 +8330,7 @@ group emcareobservationemcareb22de50(source src, target tgt) {
           <condition value="(linkId = 'EmCare.B22.DE16') and answer.exists()"/>
         </source>
         <rule>
-          <name value="7c587a4b"/>
+          <name value="6af9bfcc"/>
           <source>
             <context value="item"/>
             <element value="answer"/>
@@ -8338,14 +8338,14 @@ group emcareobservationemcareb22de50(source src, target tgt) {
             <variable value="a"/>
           </source>
           <rule>
-            <name value="4ca9082e"/>
+            <name value="310f4b1f"/>
             <source>
               <context value="a"/>
               <element value="value"/>
               <variable value="val"/>
             </source>
             <rule>
-              <name value="8ab1d7a5"/>
+              <name value="d0a13fda"/>
               <source>
                 <context value="val"/>
                 <condition value="val.code = 'none'"/>
@@ -8353,7 +8353,7 @@ group emcareobservationemcareb22de50(source src, target tgt) {
               <target>
                 <context value="tgt"/>
                 <contextType value="variable"/>
-                <element value="status"/>
+                <element value="swrapin_entry_createtatus"/>
                 <transform value="copy"/>
                 <parameter>
                   <valueString value="cancelled"/>

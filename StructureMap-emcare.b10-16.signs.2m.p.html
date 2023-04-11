@@ -40,8 +40,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"8.218"}
-    h3,h4,h5,h6{--heading-prefix:"8.218"}</style>
+    <style type="text/css">h2{--heading-prefix:"8.212"}
+    h3,h4,h5,h6{--heading-prefix:"8.212"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -197,7 +197,7 @@
         
           Active
           
-            as of 2023-04-03
+            as of 2023-04-11
           
         
       </td>
@@ -1126,11 +1126,11 @@ group emcareobservationemcareb11s2de02(source src, target tgt) {
   src.item first as item where (linkId = 'EmCare.B11S2.DE02') and answer.exists() then {
     item.answer first as a then {
       a.value as val then {
-        val where val.code = 'none' -&gt; tgt.status = 'cancelled' &quot;8ab1d7a5&quot;;
+        val where val.code = 'none' -&gt; tgt.swrapin_entry_createtatus = 'cancelled' &quot;d0a13fda&quot;;
         val where val.code != 'none' -&gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = val,  tgt.status = 'final' &quot;a1050460&quot;;
-      } &quot;4ca9082e&quot;;
-    } &quot;7c587a4b&quot;;
-  } &quot;ce4473a2&quot;;
+      } &quot;310f4b1f&quot;;
+    } &quot;6af9bfcc&quot;;
+  } &quot;73bc942d&quot;;
 }
 
 group emcareobservationemcareb11s2de06(source src, target tgt) {
@@ -1182,11 +1182,11 @@ group emcareobservationemcareb17s1de02(source src, target tgt) {
   src.item first as item where (linkId = 'EmCare.B17S1.DE02') and answer.exists() then {
     item.answer first as a then {
       a.value as val then {
-        val where val.code = 'none' -&gt; tgt.status = 'cancelled' &quot;8ab1d7a5&quot;;
+        val where val.code = 'none' -&gt; tgt.swrapin_entry_createtatus = 'cancelled' &quot;d0a13fda&quot;;
         val where val.code != 'none' -&gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = val,  tgt.status = 'final' &quot;a1050460&quot;;
-      } &quot;4ca9082e&quot;;
-    } &quot;7c587a4b&quot;;
-  } &quot;aef25d27&quot;;
+      } &quot;310f4b1f&quot;;
+    } &quot;6af9bfcc&quot;;
+  } &quot;239f6c79&quot;;
 }
 
 group emcareobservationemcareb17s1de06(source src, target tgt) {
@@ -1220,11 +1220,11 @@ group emcareobservationemcareb17s1de07(source src, target tgt) {
   src.item first as item where (linkId = 'EmCare.B17S1.DE07') and answer.exists() then {
     item.answer first as a then {
       a.value as val then {
-        val where val.code = 'none' -&gt; tgt.status = 'cancelled' &quot;8ab1d7a5&quot;;
+        val where val.code = 'none' -&gt; tgt.swrapin_entry_createtatus = 'cancelled' &quot;d0a13fda&quot;;
         val where val.code != 'none' -&gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = val,  tgt.status = 'final' &quot;a1050460&quot;;
-      } &quot;4ca9082e&quot;;
-    } &quot;7c587a4b&quot;;
-  } &quot;8e0b317e&quot;;
+      } &quot;310f4b1f&quot;;
+    } &quot;6af9bfcc&quot;;
+  } &quot;21ffdb9d&quot;;
 }
 
 group emcareobservationemcareb13s2de01(source src, target tgt) {
@@ -1276,11 +1276,11 @@ group emcareobservationemcareb13s2de03(source src, target tgt) {
   src.item first as item where (linkId = 'EmCare.B13S2.DE03') and answer.exists() then {
     item.answer first as a then {
       a.value as val then {
-        val where val.code = 'none' -&gt; tgt.status = 'cancelled' &quot;8ab1d7a5&quot;;
+        val where val.code = 'none' -&gt; tgt.swrapin_entry_createtatus = 'cancelled' &quot;d0a13fda&quot;;
         val where val.code != 'none' -&gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = val,  tgt.status = 'final' &quot;a1050460&quot;;
-      } &quot;4ca9082e&quot;;
-    } &quot;7c587a4b&quot;;
-  } &quot;6a5b7300&quot;;
+      } &quot;310f4b1f&quot;;
+    } &quot;6af9bfcc&quot;;
+  } &quot;b937d9f0&quot;;
 }
 
 group emcareobservationemcareb12s2de01(source src, target tgt) {
@@ -2100,11 +2100,11 @@ group emcareobservationemcareb14s2de38(source src, target tgt) {
   src.item first as item where (linkId = 'EmCare.B14S2.DE38') and answer.exists() then {
     item.answer first as a then {
       a.value as val then {
-        val where val.code = 'none' -&gt; tgt.status = 'cancelled' &quot;8ab1d7a5&quot;;
+        val where val.code = 'none' -&gt; tgt.swrapin_entry_createtatus = 'cancelled' &quot;d0a13fda&quot;;
         val where val.code != 'none' -&gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = val,  tgt.status = 'final' &quot;a1050460&quot;;
-      } &quot;4ca9082e&quot;;
-    } &quot;7c587a4b&quot;;
-  } &quot;9778d67e&quot;;
+      } &quot;310f4b1f&quot;;
+    } &quot;6af9bfcc&quot;;
+  } &quot;d40efaa7&quot;;
 }
 
 group emcareobservationemcareb14s2de43emcareb14s2de44t(source src, target tgt) {
@@ -2224,11 +2224,11 @@ group emcareobservationemcareb15s2de01(source src, target tgt) {
   src.item first as item where (linkId = 'EmCare.B15S2.DE01') and answer.exists() then {
     item.answer first as a then {
       a.value as val then {
-        val where val.code = 'none' -&gt; tgt.status = 'cancelled' &quot;8ab1d7a5&quot;;
+        val where val.code = 'none' -&gt; tgt.swrapin_entry_createtatus = 'cancelled' &quot;d0a13fda&quot;;
         val where val.code != 'none' -&gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = val,  tgt.status = 'final' &quot;a1050460&quot;;
-      } &quot;4ca9082e&quot;;
-    } &quot;7c587a4b&quot;;
-  } &quot;a283785f&quot;;
+      } &quot;310f4b1f&quot;;
+    } &quot;6af9bfcc&quot;;
+  } &quot;aa55388e&quot;;
 }
 
 group emcareobservationemcareb15s2de09(source src, target tgt) {
@@ -2244,11 +2244,11 @@ group emcareobservationemcareb15s2de09(source src, target tgt) {
   src.item first as item where (linkId = 'EmCare.B15S2.DE09') and answer.exists() then {
     item.answer first as a then {
       a.value as val then {
-        val where val.code = 'none' -&gt; tgt.status = 'cancelled' &quot;8ab1d7a5&quot;;
+        val where val.code = 'none' -&gt; tgt.swrapin_entry_createtatus = 'cancelled' &quot;d0a13fda&quot;;
         val where val.code != 'none' -&gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = val,  tgt.status = 'final' &quot;a1050460&quot;;
-      } &quot;4ca9082e&quot;;
-    } &quot;7c587a4b&quot;;
-  } &quot;78c7a47e&quot;;
+      } &quot;310f4b1f&quot;;
+    } &quot;6af9bfcc&quot;;
+  } &quot;2a2ced9b&quot;;
 }
 
 group emcareobservationemcareb22de01(source src, target tgt) {
@@ -2386,7 +2386,7 @@ group emcareobservationemcareb22de07(source src, target tgt) {
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.who.int">World Health Organization (WHO)</a>.  Package who.fhir.emc-cds#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 3, 2023 14:56+0000">2023-04-03</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.who.int">World Health Organization (WHO)</a>.  Package who.fhir.emc-cds#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 11, 2023 17:43+0000">2023-04-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

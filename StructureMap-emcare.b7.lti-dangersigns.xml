@@ -183,11 +183,11 @@ group emcareobservationemcareb7b8b9de01(source src, target tgt) {
   src.item first as item where (linkId = 'EmCare.B7-B8-B9.DE01') and answer.exists() then {
     item.answer first as a then {
       a.value as val then {
-        val where val.code = 'none' -&gt; tgt.status = 'cancelled' &quot;8ab1d7a5&quot;;
+        val where val.code = 'none' -&gt; tgt.swrapin_entry_createtatus = 'cancelled' &quot;d0a13fda&quot;;
         val where val.code != 'none' -&gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = val,  tgt.status = 'final' &quot;a1050460&quot;;
-      } &quot;4ca9082e&quot;;
-    } &quot;7c587a4b&quot;;
-  } &quot;a9969eeb&quot;;
+      } &quot;310f4b1f&quot;;
+    } &quot;6af9bfcc&quot;;
+  } &quot;1deb5925&quot;;
 }
 
 group emcareobservationemcareb7de03(source src, target tgt) {
@@ -325,13 +325,13 @@ group emcareobservationemcareb22de08(source src, target tgt) {
       itm2.item first as item where (linkId = 'EmCare.B22.DE08') and answer.exists() then {
         item.answer first as a then {
           a.value as val then {
-            val where val.code = 'none' -&gt; tgt.status = 'cancelled' &quot;8ab1d7a5&quot;;
+            val where val.code = 'none' -&gt; tgt.swrapin_entry_createtatus = 'cancelled' &quot;d0a13fda&quot;;
             val where val.code != 'none' -&gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = val,  tgt.status = 'final' &quot;a1050460&quot;;
-          } &quot;4ca9082e&quot;;
-        } &quot;7c587a4b&quot;;
-      } &quot;5c3aaa19&quot;;
-    } &quot;13ce6ac7&quot;;
-  } &quot;77d0e60e&quot;;
+          } &quot;310f4b1f&quot;;
+        } &quot;6af9bfcc&quot;;
+      } &quot;217a0abc&quot;;
+    } &quot;1ebe5f9b&quot;;
+  } &quot;4113c5c7&quot;;
 }
 
 group emcareobservationemcareb22de14(source src, target tgt) {
@@ -416,13 +416,13 @@ group emcareobservationemcareb22de16(source src, target tgt) {
       itm2.item first as item where (linkId = 'EmCare.B22.DE16') and answer.exists() then {
         item.answer first as a then {
           a.value as val then {
-            val where val.code = 'none' -&gt; tgt.status = 'cancelled' &quot;8ab1d7a5&quot;;
+            val where val.code = 'none' -&gt; tgt.swrapin_entry_createtatus = 'cancelled' &quot;d0a13fda&quot;;
             val where val.code != 'none' -&gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = val,  tgt.status = 'final' &quot;a1050460&quot;;
-          } &quot;4ca9082e&quot;;
-        } &quot;7c587a4b&quot;;
-      } &quot;d9aa1777&quot;;
-    } &quot;33da5fe7&quot;;
-  } &quot;e9e2ff9b&quot;;
+          } &quot;310f4b1f&quot;;
+        } &quot;6af9bfcc&quot;;
+      } &quot;56e7c54b&quot;;
+    } &quot;270c6d04&quot;;
+  } &quot;1b98a048&quot;;
 }
 
 </pre></div>
@@ -431,7 +431,7 @@ group emcareobservationemcareb22de16(source src, target tgt) {
   <version value="0.1.0"/>
   <name value="emcare.b7.lti-dangersigns"/>
   <status value="active"/>
-  <date value="2023-04-03T14:56:37+00:00"/>
+  <date value="2023-04-11T17:43:01+00:00"/>
   <publisher value="World Health Organization (WHO)"/>
   <contact>
     <telecom>
@@ -2469,7 +2469,7 @@ group emcareobservationemcareb22de16(source src, target tgt) {
       </target>
     </rule>
     <rule>
-      <name value="a9969eeb"/>
+      <name value="1deb5925"/>
       <source>
         <context value="src"/>
         <element value="item"/>
@@ -2478,7 +2478,7 @@ group emcareobservationemcareb22de16(source src, target tgt) {
         <condition value="(linkId = 'EmCare.B7-B8-B9.DE01') and answer.exists()"/>
       </source>
       <rule>
-        <name value="7c587a4b"/>
+        <name value="6af9bfcc"/>
         <source>
           <context value="item"/>
           <element value="answer"/>
@@ -2486,14 +2486,14 @@ group emcareobservationemcareb22de16(source src, target tgt) {
           <variable value="a"/>
         </source>
         <rule>
-          <name value="4ca9082e"/>
+          <name value="310f4b1f"/>
           <source>
             <context value="a"/>
             <element value="value"/>
             <variable value="val"/>
           </source>
           <rule>
-            <name value="8ab1d7a5"/>
+            <name value="d0a13fda"/>
             <source>
               <context value="val"/>
               <condition value="val.code = 'none'"/>
@@ -2501,7 +2501,7 @@ group emcareobservationemcareb22de16(source src, target tgt) {
             <target>
               <context value="tgt"/>
               <contextType value="variable"/>
-              <element value="status"/>
+              <element value="swrapin_entry_createtatus"/>
               <transform value="copy"/>
               <parameter>
                 <valueString value="cancelled"/>
@@ -4449,7 +4449,7 @@ group emcareobservationemcareb22de16(source src, target tgt) {
       </target>
     </rule>
     <rule>
-      <name value="77d0e60e"/>
+      <name value="4113c5c7"/>
       <source>
         <context value="src"/>
         <element value="item"/>
@@ -4458,7 +4458,7 @@ group emcareobservationemcareb22de16(source src, target tgt) {
         <condition value="linkId = 'stable-child'"/>
       </source>
       <rule>
-        <name value="13ce6ac7"/>
+        <name value="1ebe5f9b"/>
         <source>
           <context value="itm1"/>
           <element value="item"/>
@@ -4467,7 +4467,7 @@ group emcareobservationemcareb22de16(source src, target tgt) {
           <condition value="linkId = 'EmCare.B22.FluidTest'"/>
         </source>
         <rule>
-          <name value="5c3aaa19"/>
+          <name value="217a0abc"/>
           <source>
             <context value="itm2"/>
             <element value="item"/>
@@ -4476,7 +4476,7 @@ group emcareobservationemcareb22de16(source src, target tgt) {
             <condition value="(linkId = 'EmCare.B22.DE08') and answer.exists()"/>
           </source>
           <rule>
-            <name value="7c587a4b"/>
+            <name value="6af9bfcc"/>
             <source>
               <context value="item"/>
               <element value="answer"/>
@@ -4484,14 +4484,14 @@ group emcareobservationemcareb22de16(source src, target tgt) {
               <variable value="a"/>
             </source>
             <rule>
-              <name value="4ca9082e"/>
+              <name value="310f4b1f"/>
               <source>
                 <context value="a"/>
                 <element value="value"/>
                 <variable value="val"/>
               </source>
               <rule>
-                <name value="8ab1d7a5"/>
+                <name value="d0a13fda"/>
                 <source>
                   <context value="val"/>
                   <condition value="val.code = 'none'"/>
@@ -4499,7 +4499,7 @@ group emcareobservationemcareb22de16(source src, target tgt) {
                 <target>
                   <context value="tgt"/>
                   <contextType value="variable"/>
-                  <element value="status"/>
+                  <element value="swrapin_entry_createtatus"/>
                   <transform value="copy"/>
                   <parameter>
                     <valueString value="cancelled"/>
@@ -5613,7 +5613,7 @@ group emcareobservationemcareb22de16(source src, target tgt) {
       </target>
     </rule>
     <rule>
-      <name value="e9e2ff9b"/>
+      <name value="1b98a048"/>
       <source>
         <context value="src"/>
         <element value="item"/>
@@ -5622,7 +5622,7 @@ group emcareobservationemcareb22de16(source src, target tgt) {
         <condition value="linkId = 'stable-child'"/>
       </source>
       <rule>
-        <name value="33da5fe7"/>
+        <name value="270c6d04"/>
         <source>
           <context value="itm1"/>
           <element value="item"/>
@@ -5631,7 +5631,7 @@ group emcareobservationemcareb22de16(source src, target tgt) {
           <condition value="linkId = 'EmCare.B22.FluidTest'"/>
         </source>
         <rule>
-          <name value="d9aa1777"/>
+          <name value="56e7c54b"/>
           <source>
             <context value="itm2"/>
             <element value="item"/>
@@ -5640,7 +5640,7 @@ group emcareobservationemcareb22de16(source src, target tgt) {
             <condition value="(linkId = 'EmCare.B22.DE16') and answer.exists()"/>
           </source>
           <rule>
-            <name value="7c587a4b"/>
+            <name value="6af9bfcc"/>
             <source>
               <context value="item"/>
               <element value="answer"/>
@@ -5648,14 +5648,14 @@ group emcareobservationemcareb22de16(source src, target tgt) {
               <variable value="a"/>
             </source>
             <rule>
-              <name value="4ca9082e"/>
+              <name value="310f4b1f"/>
               <source>
                 <context value="a"/>
                 <element value="value"/>
                 <variable value="val"/>
               </source>
               <rule>
-                <name value="8ab1d7a5"/>
+                <name value="d0a13fda"/>
                 <source>
                   <context value="val"/>
                   <condition value="val.code = 'none'"/>
@@ -5663,7 +5663,7 @@ group emcareobservationemcareb22de16(source src, target tgt) {
                 <target>
                   <context value="tgt"/>
                   <contextType value="variable"/>
-                  <element value="status"/>
+                  <element value="swrapin_entry_createtatus"/>
                   <transform value="copy"/>
                   <parameter>
                     <valueString value="cancelled"/>

@@ -40,8 +40,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"8.217"}
-    h3,h4,h5,h6{--heading-prefix:"8.217"}</style>
+    <style type="text/css">h2{--heading-prefix:"8.202"}
+    h3,h4,h5,h6{--heading-prefix:"8.202"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -197,7 +197,7 @@
         
           Active
           
-            as of 2023-04-03
+            as of 2023-04-11
           
         
       </td>
@@ -406,11 +406,11 @@ group emcareobservationemcareb7b8b9de01(source src, target tgt) {
   src.item first as item where (linkId = 'EmCare.B7-B8-B9.DE01') and answer.exists() then {
     item.answer first as a then {
       a.value as val then {
-        val where val.code = 'none' -&gt; tgt.status = 'cancelled' &quot;8ab1d7a5&quot;;
+        val where val.code = 'none' -&gt; tgt.swrapin_entry_createtatus = 'cancelled' &quot;d0a13fda&quot;;
         val where val.code != 'none' -&gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = val,  tgt.status = 'final' &quot;a1050460&quot;;
-      } &quot;4ca9082e&quot;;
-    } &quot;7c587a4b&quot;;
-  } &quot;a9969eeb&quot;;
+      } &quot;310f4b1f&quot;;
+    } &quot;6af9bfcc&quot;;
+  } &quot;1deb5925&quot;;
 }
 
 group emcareobservationemcareb7de03(source src, target tgt) {
@@ -548,13 +548,13 @@ group emcareobservationemcareb22de08(source src, target tgt) {
       itm2.item first as item where (linkId = 'EmCare.B22.DE08') and answer.exists() then {
         item.answer first as a then {
           a.value as val then {
-            val where val.code = 'none' -&gt; tgt.status = 'cancelled' &quot;8ab1d7a5&quot;;
+            val where val.code = 'none' -&gt; tgt.swrapin_entry_createtatus = 'cancelled' &quot;d0a13fda&quot;;
             val where val.code != 'none' -&gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = val,  tgt.status = 'final' &quot;a1050460&quot;;
-          } &quot;4ca9082e&quot;;
-        } &quot;7c587a4b&quot;;
-      } &quot;5c3aaa19&quot;;
-    } &quot;13ce6ac7&quot;;
-  } &quot;77d0e60e&quot;;
+          } &quot;310f4b1f&quot;;
+        } &quot;6af9bfcc&quot;;
+      } &quot;217a0abc&quot;;
+    } &quot;1ebe5f9b&quot;;
+  } &quot;4113c5c7&quot;;
 }
 
 group emcareobservationemcareb22de14(source src, target tgt) {
@@ -639,13 +639,13 @@ group emcareobservationemcareb22de16(source src, target tgt) {
       itm2.item first as item where (linkId = 'EmCare.B22.DE16') and answer.exists() then {
         item.answer first as a then {
           a.value as val then {
-            val where val.code = 'none' -&gt; tgt.status = 'cancelled' &quot;8ab1d7a5&quot;;
+            val where val.code = 'none' -&gt; tgt.swrapin_entry_createtatus = 'cancelled' &quot;d0a13fda&quot;;
             val where val.code != 'none' -&gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = val,  tgt.status = 'final' &quot;a1050460&quot;;
-          } &quot;4ca9082e&quot;;
-        } &quot;7c587a4b&quot;;
-      } &quot;d9aa1777&quot;;
-    } &quot;33da5fe7&quot;;
-  } &quot;e9e2ff9b&quot;;
+          } &quot;310f4b1f&quot;;
+        } &quot;6af9bfcc&quot;;
+      } &quot;56e7c54b&quot;;
+    } &quot;270c6d04&quot;;
+  } &quot;1b98a048&quot;;
 }
 
 </pre></div>
@@ -679,7 +679,7 @@ group emcareobservationemcareb22de16(source src, target tgt) {
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.who.int">World Health Organization (WHO)</a>.  Package who.fhir.emc-cds#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 3, 2023 14:56+0000">2023-04-03</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.who.int">World Health Organization (WHO)</a>.  Package who.fhir.emc-cds#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 11, 2023 17:43+0000">2023-04-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

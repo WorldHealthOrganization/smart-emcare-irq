@@ -42,8 +42,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"8.203"}
-    h3,h4,h5,h6{--heading-prefix:"8.203"}</style>
+    <style type="text/css">h2{--heading-prefix:"8.205"}
+    h3,h4,h5,h6{--heading-prefix:"8.205"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -183,7 +183,7 @@
         
           Active
           
-            as of 2023-04-03
+            as of 2023-04-11
           
         
       </td>
@@ -535,11 +535,11 @@ group emcareobservationemcareb18s2de08(source src, target tgt) {
   src.item first as item where (linkId = 'EmCare.B18S2.DE08') and answer.exists() then {
     item.answer first as a then {
       a.value as val then {
-        val where val.code = 'none' -&amp;gt; tgt.status = 'cancelled' &amp;quot;8ab1d7a5&amp;quot;;
+        val where val.code = 'none' -&amp;gt; tgt.swrapin_entry_createtatus = 'cancelled' &amp;quot;d0a13fda&amp;quot;;
         val where val.code != 'none' -&amp;gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = val,  tgt.status = 'final' &amp;quot;a1050460&amp;quot;;
-      } &amp;quot;4ca9082e&amp;quot;;
-    } &amp;quot;7c587a4b&amp;quot;;
-  } &amp;quot;828d8ffb&amp;quot;;
+      } &amp;quot;310f4b1f&amp;quot;;
+    } &amp;quot;6af9bfcc&amp;quot;;
+  } &amp;quot;0b46e243&amp;quot;;
 }
 
 group emcareobservationemcareb18s2de12(source src, target tgt) {
@@ -627,11 +627,11 @@ group emcareobservationemcareb19s2de04(source src, target tgt) {
   src.item first as item where (linkId = 'EmCare.B19S2.DE04') and answer.exists() then {
     item.answer first as a then {
       a.value as val then {
-        val where val.code = 'none' -&amp;gt; tgt.status = 'cancelled' &amp;quot;8ab1d7a5&amp;quot;;
+        val where val.code = 'none' -&amp;gt; tgt.swrapin_entry_createtatus = 'cancelled' &amp;quot;d0a13fda&amp;quot;;
         val where val.code != 'none' -&amp;gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = val,  tgt.status = 'final' &amp;quot;a1050460&amp;quot;;
-      } &amp;quot;4ca9082e&amp;quot;;
-    } &amp;quot;7c587a4b&amp;quot;;
-  } &amp;quot;06fbddd7&amp;quot;;
+      } &amp;quot;310f4b1f&amp;quot;;
+    } &amp;quot;6af9bfcc&amp;quot;;
+  } &amp;quot;42fb84b8&amp;quot;;
 }
 
 group emcareobservationemcareb11s2de01(source src, target tgt) {
@@ -665,11 +665,11 @@ group emcareobservationemcareb11s2de02(source src, target tgt) {
   src.item first as item where (linkId = 'EmCare.B11S2.DE02') and answer.exists() then {
     item.answer first as a then {
       a.value as val then {
-        val where val.code = 'none' -&amp;gt; tgt.status = 'cancelled' &amp;quot;8ab1d7a5&amp;quot;;
+        val where val.code = 'none' -&amp;gt; tgt.swrapin_entry_createtatus = 'cancelled' &amp;quot;d0a13fda&amp;quot;;
         val where val.code != 'none' -&amp;gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = val,  tgt.status = 'final' &amp;quot;a1050460&amp;quot;;
-      } &amp;quot;4ca9082e&amp;quot;;
-    } &amp;quot;7c587a4b&amp;quot;;
-  } &amp;quot;ce4473a2&amp;quot;;
+      } &amp;quot;310f4b1f&amp;quot;;
+    } &amp;quot;6af9bfcc&amp;quot;;
+  } &amp;quot;73bc942d&amp;quot;;
 }
 
 group emcareobservationemcareb11s2de06(source src, target tgt) {
@@ -896,11 +896,11 @@ group emcareobservationemcareb21s2de18(source src, target tgt) {
   src.item first as item where (linkId = 'EmCare.B21S2.DE18') and answer.exists() then {
     item.answer first as a then {
       a.value as val then {
-        val where val.code = 'none' -&amp;gt; tgt.status = 'cancelled' &amp;quot;8ab1d7a5&amp;quot;;
+        val where val.code = 'none' -&amp;gt; tgt.swrapin_entry_createtatus = 'cancelled' &amp;quot;d0a13fda&amp;quot;;
         val where val.code != 'none' -&amp;gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = val,  tgt.status = 'final' &amp;quot;a1050460&amp;quot;;
-      } &amp;quot;4ca9082e&amp;quot;;
-    } &amp;quot;7c587a4b&amp;quot;;
-  } &amp;quot;28975bbd&amp;quot;;
+      } &amp;quot;310f4b1f&amp;quot;;
+    } &amp;quot;6af9bfcc&amp;quot;;
+  } &amp;quot;af7f6c69&amp;quot;;
 }
 
 group emcareobservationemcareb21s2de21(source src, target tgt) {
@@ -916,11 +916,11 @@ group emcareobservationemcareb21s2de21(source src, target tgt) {
   src.item first as item where (linkId = 'EmCare.B21S2.DE21') and answer.exists() then {
     item.answer first as a then {
       a.value as val then {
-        val where val.code = 'none' -&amp;gt; tgt.status = 'cancelled' &amp;quot;8ab1d7a5&amp;quot;;
+        val where val.code = 'none' -&amp;gt; tgt.swrapin_entry_createtatus = 'cancelled' &amp;quot;d0a13fda&amp;quot;;
         val where val.code != 'none' -&amp;gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = val,  tgt.status = 'final' &amp;quot;a1050460&amp;quot;;
-      } &amp;quot;4ca9082e&amp;quot;;
-    } &amp;quot;7c587a4b&amp;quot;;
-  } &amp;quot;b08fdae5&amp;quot;;
+      } &amp;quot;310f4b1f&amp;quot;;
+    } &amp;quot;6af9bfcc&amp;quot;;
+  } &amp;quot;b4ca78b5&amp;quot;;
 }
 
 group emcareobservationemcareb21s2de24(source src, target tgt) {
@@ -936,11 +936,11 @@ group emcareobservationemcareb21s2de24(source src, target tgt) {
   src.item first as item where (linkId = 'EmCare.B21S2.DE24') and answer.exists() then {
     item.answer first as a then {
       a.value as val then {
-        val where val.code = 'none' -&amp;gt; tgt.status = 'cancelled' &amp;quot;8ab1d7a5&amp;quot;;
+        val where val.code = 'none' -&amp;gt; tgt.swrapin_entry_createtatus = 'cancelled' &amp;quot;d0a13fda&amp;quot;;
         val where val.code != 'none' -&amp;gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = val,  tgt.status = 'final' &amp;quot;a1050460&amp;quot;;
-      } &amp;quot;4ca9082e&amp;quot;;
-    } &amp;quot;7c587a4b&amp;quot;;
-  } &amp;quot;4f3931a1&amp;quot;;
+      } &amp;quot;310f4b1f&amp;quot;;
+    } &amp;quot;6af9bfcc&amp;quot;;
+  } &amp;quot;b08f8fe7&amp;quot;;
 }
 
 group emcareobservationemcareb21s2de27(source src, target tgt) {
@@ -956,11 +956,11 @@ group emcareobservationemcareb21s2de27(source src, target tgt) {
   src.item first as item where (linkId = 'EmCare.B21S2.DE27') and answer.exists() then {
     item.answer first as a then {
       a.value as val then {
-        val where val.code = 'none' -&amp;gt; tgt.status = 'cancelled' &amp;quot;8ab1d7a5&amp;quot;;
+        val where val.code = 'none' -&amp;gt; tgt.swrapin_entry_createtatus = 'cancelled' &amp;quot;d0a13fda&amp;quot;;
         val where val.code != 'none' -&amp;gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = val,  tgt.status = 'final' &amp;quot;a1050460&amp;quot;;
-      } &amp;quot;4ca9082e&amp;quot;;
-    } &amp;quot;7c587a4b&amp;quot;;
-  } &amp;quot;75435c67&amp;quot;;
+      } &amp;quot;310f4b1f&amp;quot;;
+    } &amp;quot;6af9bfcc&amp;quot;;
+  } &amp;quot;49d85a6e&amp;quot;;
 }
 
 group emcareobservationemcareb21s2de30(source src, target tgt) {
@@ -1111,7 +1111,7 @@ group emcareobservationemcareb22de07(source src, target tgt) {
   &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;0.1.0&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;emcare.b18-21.signs.2m.m&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2023-04-03T14:56:37+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2023-04-11T17:43:01+00:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;World Health Organization (WHO)&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
@@ -5216,7 +5216,7 @@ group emcareobservationemcareb22de07(source src, target tgt) {
       &lt;/target&gt;
     &lt;/rule&gt;
     &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule">rule</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;828d8ffb&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;0b46e243&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source">source</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;src&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;item&quot;/&gt;
@@ -5226,7 +5226,7 @@ group emcareobservationemcareb22de07(source src, target tgt) {
                    <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;(linkId = 'EmCare.B18S2.DE08') and answer.exists()&quot;/&gt;
       &lt;/source&gt;
       &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.rule">rule</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;7c587a4b&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;6af9bfcc&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source">source</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;item&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;answer&quot;/&gt;
@@ -5234,14 +5234,14 @@ group emcareobservationemcareb22de07(source src, target tgt) {
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.variable">variable</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;a&quot;/&gt;
         &lt;/source&gt;
         &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.rule">rule</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;4ca9082e&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;310f4b1f&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source">source</a>&gt;
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;a&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;value&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.variable">variable</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;val&quot;/&gt;
           &lt;/source&gt;
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.rule">rule</a>&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;8ab1d7a5&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;d0a13fda&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source">source</a>&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;val&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.condition">condition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;val.code = 'none'&quot;/&gt;
@@ -5249,7 +5249,7 @@ group emcareobservationemcareb22de07(source src, target tgt) {
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target">target</a>&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;tgt&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.contextType">contextType</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;variable&quot;/&gt;
-              &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;status&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;swrapin_entry_createtatus&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.transform">transform</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;copy&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.parameter">parameter</a>&gt;
                 &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.parameter.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;cancelled&quot;/&gt;
@@ -6610,7 +6610,7 @@ group emcareobservationemcareb22de07(source src, target tgt) {
       &lt;/target&gt;
     &lt;/rule&gt;
     &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule">rule</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;06fbddd7&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;42fb84b8&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source">source</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;src&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;item&quot;/&gt;
@@ -6620,7 +6620,7 @@ group emcareobservationemcareb22de07(source src, target tgt) {
                    <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;(linkId = 'EmCare.B19S2.DE04') and answer.exists()&quot;/&gt;
       &lt;/source&gt;
       &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.rule">rule</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;7c587a4b&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;6af9bfcc&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source">source</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;item&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;answer&quot;/&gt;
@@ -6628,14 +6628,14 @@ group emcareobservationemcareb22de07(source src, target tgt) {
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.variable">variable</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;a&quot;/&gt;
         &lt;/source&gt;
         &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.rule">rule</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;4ca9082e&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;310f4b1f&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source">source</a>&gt;
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;a&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;value&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.variable">variable</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;val&quot;/&gt;
           &lt;/source&gt;
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.rule">rule</a>&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;8ab1d7a5&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;d0a13fda&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source">source</a>&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;val&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.condition">condition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;val.code = 'none'&quot;/&gt;
@@ -6643,7 +6643,7 @@ group emcareobservationemcareb22de07(source src, target tgt) {
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target">target</a>&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;tgt&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.contextType">contextType</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;variable&quot;/&gt;
-              &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;status&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;swrapin_entry_createtatus&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.transform">transform</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;copy&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.parameter">parameter</a>&gt;
                 &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.parameter.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;cancelled&quot;/&gt;
@@ -7173,7 +7173,7 @@ group emcareobservationemcareb22de07(source src, target tgt) {
       &lt;/target&gt;
     &lt;/rule&gt;
     &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule">rule</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;ce4473a2&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;73bc942d&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source">source</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;src&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;item&quot;/&gt;
@@ -7183,7 +7183,7 @@ group emcareobservationemcareb22de07(source src, target tgt) {
                    <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;(linkId = 'EmCare.B11S2.DE02') and answer.exists()&quot;/&gt;
       &lt;/source&gt;
       &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.rule">rule</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;7c587a4b&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;6af9bfcc&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source">source</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;item&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;answer&quot;/&gt;
@@ -7191,14 +7191,14 @@ group emcareobservationemcareb22de07(source src, target tgt) {
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.variable">variable</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;a&quot;/&gt;
         &lt;/source&gt;
         &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.rule">rule</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;4ca9082e&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;310f4b1f&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source">source</a>&gt;
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;a&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;value&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.variable">variable</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;val&quot;/&gt;
           &lt;/source&gt;
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.rule">rule</a>&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;8ab1d7a5&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;d0a13fda&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source">source</a>&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;val&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.condition">condition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;val.code = 'none'&quot;/&gt;
@@ -7206,7 +7206,7 @@ group emcareobservationemcareb22de07(source src, target tgt) {
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target">target</a>&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;tgt&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.contextType">contextType</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;variable&quot;/&gt;
-              &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;status&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;swrapin_entry_createtatus&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.transform">transform</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;copy&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.parameter">parameter</a>&gt;
                 &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.parameter.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;cancelled&quot;/&gt;
@@ -10792,7 +10792,7 @@ group emcareobservationemcareb22de07(source src, target tgt) {
       &lt;/target&gt;
     &lt;/rule&gt;
     &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule">rule</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;28975bbd&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;af7f6c69&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source">source</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;src&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;item&quot;/&gt;
@@ -10802,7 +10802,7 @@ group emcareobservationemcareb22de07(source src, target tgt) {
                    <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;(linkId = 'EmCare.B21S2.DE18') and answer.exists()&quot;/&gt;
       &lt;/source&gt;
       &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.rule">rule</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;7c587a4b&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;6af9bfcc&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source">source</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;item&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;answer&quot;/&gt;
@@ -10810,14 +10810,14 @@ group emcareobservationemcareb22de07(source src, target tgt) {
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.variable">variable</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;a&quot;/&gt;
         &lt;/source&gt;
         &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.rule">rule</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;4ca9082e&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;310f4b1f&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source">source</a>&gt;
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;a&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;value&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.variable">variable</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;val&quot;/&gt;
           &lt;/source&gt;
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.rule">rule</a>&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;8ab1d7a5&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;d0a13fda&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source">source</a>&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;val&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.condition">condition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;val.code = 'none'&quot;/&gt;
@@ -10825,7 +10825,7 @@ group emcareobservationemcareb22de07(source src, target tgt) {
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target">target</a>&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;tgt&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.contextType">contextType</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;variable&quot;/&gt;
-              &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;status&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;swrapin_entry_createtatus&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.transform">transform</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;copy&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.parameter">parameter</a>&gt;
                 &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.parameter.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;cancelled&quot;/&gt;
@@ -11078,7 +11078,7 @@ group emcareobservationemcareb22de07(source src, target tgt) {
       &lt;/target&gt;
     &lt;/rule&gt;
     &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule">rule</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;b08fdae5&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;b4ca78b5&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source">source</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;src&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;item&quot;/&gt;
@@ -11088,7 +11088,7 @@ group emcareobservationemcareb22de07(source src, target tgt) {
                    <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;(linkId = 'EmCare.B21S2.DE21') and answer.exists()&quot;/&gt;
       &lt;/source&gt;
       &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.rule">rule</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;7c587a4b&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;6af9bfcc&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source">source</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;item&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;answer&quot;/&gt;
@@ -11096,14 +11096,14 @@ group emcareobservationemcareb22de07(source src, target tgt) {
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.variable">variable</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;a&quot;/&gt;
         &lt;/source&gt;
         &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.rule">rule</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;4ca9082e&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;310f4b1f&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source">source</a>&gt;
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;a&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;value&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.variable">variable</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;val&quot;/&gt;
           &lt;/source&gt;
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.rule">rule</a>&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;8ab1d7a5&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;d0a13fda&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source">source</a>&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;val&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.condition">condition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;val.code = 'none'&quot;/&gt;
@@ -11111,7 +11111,7 @@ group emcareobservationemcareb22de07(source src, target tgt) {
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target">target</a>&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;tgt&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.contextType">contextType</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;variable&quot;/&gt;
-              &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;status&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;swrapin_entry_createtatus&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.transform">transform</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;copy&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.parameter">parameter</a>&gt;
                 &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.parameter.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;cancelled&quot;/&gt;
@@ -11364,7 +11364,7 @@ group emcareobservationemcareb22de07(source src, target tgt) {
       &lt;/target&gt;
     &lt;/rule&gt;
     &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule">rule</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;4f3931a1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;b08f8fe7&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source">source</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;src&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;item&quot;/&gt;
@@ -11374,7 +11374,7 @@ group emcareobservationemcareb22de07(source src, target tgt) {
                    <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;(linkId = 'EmCare.B21S2.DE24') and answer.exists()&quot;/&gt;
       &lt;/source&gt;
       &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.rule">rule</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;7c587a4b&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;6af9bfcc&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source">source</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;item&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;answer&quot;/&gt;
@@ -11382,14 +11382,14 @@ group emcareobservationemcareb22de07(source src, target tgt) {
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.variable">variable</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;a&quot;/&gt;
         &lt;/source&gt;
         &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.rule">rule</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;4ca9082e&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;310f4b1f&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source">source</a>&gt;
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;a&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;value&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.variable">variable</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;val&quot;/&gt;
           &lt;/source&gt;
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.rule">rule</a>&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;8ab1d7a5&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;d0a13fda&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source">source</a>&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;val&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.condition">condition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;val.code = 'none'&quot;/&gt;
@@ -11397,7 +11397,7 @@ group emcareobservationemcareb22de07(source src, target tgt) {
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target">target</a>&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;tgt&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.contextType">contextType</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;variable&quot;/&gt;
-              &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;status&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;swrapin_entry_createtatus&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.transform">transform</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;copy&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.parameter">parameter</a>&gt;
                 &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.parameter.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;cancelled&quot;/&gt;
@@ -11650,7 +11650,7 @@ group emcareobservationemcareb22de07(source src, target tgt) {
       &lt;/target&gt;
     &lt;/rule&gt;
     &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule">rule</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;75435c67&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;49d85a6e&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source">source</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;src&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;item&quot;/&gt;
@@ -11660,7 +11660,7 @@ group emcareobservationemcareb22de07(source src, target tgt) {
                    <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;(linkId = 'EmCare.B21S2.DE27') and answer.exists()&quot;/&gt;
       &lt;/source&gt;
       &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.rule">rule</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;7c587a4b&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;6af9bfcc&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source">source</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;item&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;answer&quot;/&gt;
@@ -11668,14 +11668,14 @@ group emcareobservationemcareb22de07(source src, target tgt) {
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.variable">variable</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;a&quot;/&gt;
         &lt;/source&gt;
         &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.rule">rule</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;4ca9082e&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;310f4b1f&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source">source</a>&gt;
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;a&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;value&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.variable">variable</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;val&quot;/&gt;
           &lt;/source&gt;
           &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.rule">rule</a>&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;8ab1d7a5&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;d0a13fda&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source">source</a>&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;val&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.source.condition">condition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;val.code = 'none'&quot;/&gt;
@@ -11683,7 +11683,7 @@ group emcareobservationemcareb22de07(source src, target tgt) {
             &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target">target</a>&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.context">context</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;tgt&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.contextType">contextType</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;variable&quot;/&gt;
-              &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;status&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;swrapin_entry_createtatus&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.transform">transform</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;copy&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.parameter">parameter</a>&gt;
                 &lt;<a href="http://hl7.org/fhir/R4/structuremap.html#StructureMap.group.rule.target.parameter.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;cancelled&quot;/&gt;
@@ -13669,7 +13669,7 @@ group emcareobservationemcareb22de07(source src, target tgt) {
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.who.int">World Health Organization (WHO)</a>.  Package who.fhir.emc-cds#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 3, 2023 14:56+0000">2023-04-03</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.who.int">World Health Organization (WHO)</a>.  Package who.fhir.emc-cds#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 11, 2023 17:43+0000">2023-04-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

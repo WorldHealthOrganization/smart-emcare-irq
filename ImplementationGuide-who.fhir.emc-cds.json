@@ -1287,342 +1287,13 @@
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/hiv-test-result-values"
-      },
-      "name" : "HIV Test Result values",
-      "description" : "Codes representing possible values for the HIV Test Result element"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/who-core-medicationstatement-current-medication"
+        "reference" : "StructureDefinition/who-core-observation-never-used-contraception"
       },
-      "name" : "WHO-Core MedicationStatement (Current Medication)",
-      "description" : "Write in the medication not included in the list."
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/visit-type-values"
-      },
-      "name" : "Visit type values",
-      "description" : "Codes representing possible values for the Visit type element"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/who-core-observation-sexual-history"
-      },
-      "name" : "WHO-Core Observation (Sexual History)",
-      "description" : "If the client has been sexually active"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/who-core-observation-sti-risk-factors"
-      },
-      "name" : "WHO-Core Observation (STI Risk Factors)",
-      "description" : "STI risk factors relevant to the population (e.g., sexually active, new partner in the past three months, partner has an STI, etc.)"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/stage"
-      },
-      "name" : "Miscarriage or abortion stage of pregnancy",
-      "description" : "If the woman recently had a miscarriage or abortion, when in the pregnancy the abortion took place."
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/pregnancystatus-values"
-      },
-      "name" : "Pregnancy status values",
-      "description" : "Codes representing possible values for the Pregnancy status element"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/who-patient"
-      },
-      "name" : "WHO Patient",
-      "description" : "WHO Patient"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/marital-status-values"
-      },
-      "name" : "Marital Status values",
-      "description" : "Codes representing possible values for the Marital Status element"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/highest-level-of-education-achieved-values"
-      },
-      "name" : "Highest level of education achieved values",
-      "description" : "Codes representing possible values for the Highest level of education achieved element"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/payment-method-values"
-      },
-      "name" : "Payment method values",
-      "description" : "Codes representing possible values for the Payment method element"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/educationlevel"
-      },
-      "name" : "Highest level of education achieved",
-      "description" : "The highest level of school the client has reached."
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/who-core-allergyintolerance"
-      },
-      "name" : "WHO-Core AllergyIntolerance",
-      "description" : "Any known medical allergies of the client."
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/who-core-observation-days-since-unprotected-sex"
-      },
-      "name" : "WHO-Core Observation (Days since Unprotected Sex)",
-      "description" : "Days since unprotected sex"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/who-core-deviceusestatement-intake-contraceptive-method"
-      },
-      "name" : "WHO-Core DeviceUseStatement (Intake Contraceptive Method)",
-      "description" : "Date of last implant if currently using the method."
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/devicebirthcontrolmethods-values"
-      },
-      "name" : "Contraceptive history - Device-based values",
-      "description" : "Codes representing possible values for the Contraceptive history - Device-based element"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/miscarriage-or-abortion-values"
-      },
-      "name" : "Miscarriage or Abortion values",
-      "description" : "Codes representing possible values for the Miscarriage or Abortion element"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/referred-by-values"
-      },
-      "name" : "Referred by values",
-      "description" : "Codes representing possible values for the Referred by element"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/who-core-patient"
-      },
-      "name" : "WHO-Core Patient"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/who-core-appointment-return-visit"
-      },
-      "name" : "WHO-Core Appointment (Return Visit)",
-      "description" : "Date and time of return visit appointment"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/medicationbirthcontrolmethods-values"
-      },
-      "name" : "Medication-based Birth control method reported at intake values",
-      "description" : "Codes representing possible values for the Medication-based Birth control method reported at intake element"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/who-core-observation-pregnancy-status"
-      },
-      "name" : "WHO-Core Observation (Pregnancy Status)",
-      "description" : "Pregnancy status at visit"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/who-encounter"
-      },
-      "name" : "WHO Encounter",
-      "description" : "WHO Encounter"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/who-core-observation-time-postpartum"
-      },
-      "name" : "WHO-Core Observation (Time Postpartum)",
-      "description" : "For a postpartum woman, the amount of time since she delivered."
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/who-core-observation-gender-based-violence-risk-factors"
-      },
-      "name" : "WHO-Core Observation (Gender-based Violence Risk Factors)",
-      "description" : "Gender-based violence risk factors relevant to the population."
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/who-core-observation-temperature"
-      },
-      "name" : "WHO-Core Observation (Temperature)",
-      "description" : "Temperature of the client in Celsius"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/who-core-appointment-visit"
-      },
-      "name" : "WHO-Core Appointment (Visit)",
-      "description" : "The date and time of the client's visit"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/who-core-observation-reason-for-no-contraceptive-method-at-intake"
-      },
-      "name" : "WHO-Core Observation (Reason for no contraceptive method at intake)",
-      "description" : "If not currently using a method, the reason why."
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/consenttocontact"
-      },
-      "name" : "Communication consent",
-      "description" : "Indication that client gave consent to be contacted"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/who-core-procedure-intake-contraceptive-method"
-      },
-      "name" : "WHO-Core Procedure (Intake Contraceptive Method)",
-      "description" : "Date of sterilization, if not reversed."
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/who-core-observation-date-of-delivery"
-      },
-      "name" : "WHO-Core Observation (Date of Delivery)",
-      "description" : "For a postpartum woman, the date she recently delivered."
+      "name" : "WHO-Core Observation (Never used contraception)",
+      "description" : "If the client has never previously used any modern method of contraception."
     },
     {
       "extension" : [{
@@ -1641,43 +1312,10 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/who-core-observation-hiv-test"
+        "reference" : "StructureDefinition/who-core-observation-sti-risk-factors"
       },
-      "name" : "WHO-Core Observation (HIV Test)",
-      "description" : "HIV status of client or not known."
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/estimatedage"
-      },
-      "name" : "Estimated age",
-      "description" : "If DOB is unknown, enter the client's age. Note displaying the client's age in years."
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/who-core-observation-last-normal-menses"
-      },
-      "name" : "WHO-Core Observation (Last Normal Menses)",
-      "description" : "First day of last normal menses."
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/who-core-observation-number-of-births"
-      },
-      "name" : "WHO-Core Observation (Number of births)",
-      "description" : "The number of pregnancies reaching parity."
+      "name" : "WHO-Core Observation (STI Risk Factors)",
+      "description" : "STI risk factors relevant to the population (e.g., sexually active, new partner in the past three months, partner has an STI, etc.)"
     },
     {
       "extension" : [{
@@ -1685,32 +1323,10 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/miscarriage-or-abortion-stage-of-pregnancy-values"
+        "reference" : "ValueSet/occupation-values"
       },
-      "name" : "Miscarriage or abortion stage of pregnancy values",
-      "description" : "Codes representing possible values for the Miscarriage or abortion stage of pregnancy element"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/requestertype"
-      },
-      "name" : "Referred by",
-      "description" : "How the client was referred"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/who-core-observation-sexually-active"
-      },
-      "name" : "WHO-Core Observation (Sexually Active)",
-      "description" : "Whether or not the client is sexually active."
+      "name" : "Occupation values",
+      "description" : "Codes representing possible values for the Occupation element"
     },
     {
       "extension" : [{
@@ -1718,32 +1334,21 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/current-medications-values"
+        "reference" : "ValueSet/payment-method-values"
       },
-      "name" : "Current medications values",
-      "description" : "Codes representing possible values for the Current medications element"
+      "name" : "Payment method values",
+      "description" : "Codes representing possible values for the Payment method element"
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
+        "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "CodeSystem/extended-content-codes"
+        "reference" : "ValueSet/visit-type-values"
       },
-      "name" : "WHO Extended Codes CodeSystem codes",
-      "description" : "Set of codes identified as being needed but not found in existing Code Systems"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/who-core-deviceusestatement-prior-contraceptive-methods"
-      },
-      "name" : "WHO-Core DeviceUseStatement (Prior Contraceptive Methods)",
-      "description" : "Reported use of method at intake"
+      "name" : "Visit type values",
+      "description" : "Codes representing possible values for the Visit type element"
     },
     {
       "extension" : [{
@@ -1751,20 +1356,21 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/who-core-medicationstatement-prior-contraceptive-methods"
+        "reference" : "StructureDefinition/who-core-appointment-visit"
       },
-      "name" : "WHO-Core MedicationStatement (Prior Contraceptive Methods)",
-      "description" : "Reported use of method at intake"
+      "name" : "WHO-Core Appointment (Visit)",
+      "description" : "The date and time of the client's visit"
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
+        "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/method"
+        "reference" : "StructureDefinition/who-core-observation-temperature"
       },
-      "name" : "Payment method"
+      "name" : "WHO-Core Observation (Temperature)",
+      "description" : "Temperature of the client in Celsius"
     },
     {
       "extension" : [{
@@ -1780,45 +1386,24 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
+        "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/who-core-observation-never-used-contraception"
+        "reference" : "StructureDefinition/reminder"
       },
-      "name" : "WHO-Core Observation (Never used contraception)",
-      "description" : "If the client has never previously used any modern method of contraception."
+      "name" : "Reminder messages",
+      "description" : "Whether client wants to receive text or other messages as follow-up for family planning"
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
+        "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/who-core-careplan-intake-contraceptive-method"
+        "reference" : "ValueSet/devicebirthcontrolmethods-values"
       },
-      "name" : "WHO-Core CarePlan (Intake Contraceptive Method)",
-      "description" : "Method the client reports currently using at intake."
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/who-core-observation-hiv-status"
-      },
-      "name" : "WHO-Core Observation (HIV Status)",
-      "description" : "Finding of human immunodeficiency virus status"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/who-core-observation-hiv-care-enrollment"
-      },
-      "name" : "WHO-Core Observation (HIV Care Enrollment)"
+      "name" : "Contraceptive history - Device-based values",
+      "description" : "Codes representing possible values for the Contraceptive history - Device-based element"
     },
     {
       "extension" : [{
@@ -1830,105 +1415,6 @@
       },
       "name" : "WHO-Core MedicationStatement (Current Contraceptive Methods)",
       "description" : "Method the client reports currently using at intake."
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/reason-for-referral-values"
-      },
-      "name" : "Reason for referral values",
-      "description" : "Codes representing possible values for the Reason for referral element"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/who-core-observation-body-weight"
-      },
-      "name" : "WHO-Core Observation (Body Weight)",
-      "description" : "The client's current weight in kilograms."
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/who-core-observation-breastfeeding"
-      },
-      "name" : "WHO-Core Observation (Breastfeeding)",
-      "description" : "Select if a woman is currently breastfeeding."
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/gender-values"
-      },
-      "name" : "Gender values",
-      "description" : "Codes representing possible values for the Gender element"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/who-core-observation-clinical-observations"
-      },
-      "name" : "WHO-Core Observation (Clinical Observations)",
-      "description" : "Observations made during an exam or visit."
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/who-core-observation-gender-based-violence-victim"
-      },
-      "name" : "WHO-Core Observation (Gender-based Violence Victim)",
-      "description" : "History of exposure to gender-based violence"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/who-core-observation-postpartum"
-      },
-      "name" : "WHO-Core Observation (Postpartum)",
-      "description" : "Whether client delivered in the past 6 weeks."
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/who-core-observation-recent-sexual-history"
-      },
-      "name" : "WHO-Core Observation (Recent Sexual History)",
-      "description" : "Unprotected sexual intercourse"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/occupation-values"
-      },
-      "name" : "Occupation values",
-      "description" : "Codes representing possible values for the Occupation element"
     },
     {
       "extension" : [{
@@ -1947,21 +1433,84 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/who-core-practitioner"
+        "reference" : "StructureDefinition/who-core-observation-recent-sexual-history"
       },
-      "name" : "WHO-Core Practitioner",
-      "description" : "The provider that served the client."
+      "name" : "WHO-Core Observation (Recent Sexual History)",
+      "description" : "Unprotected sexual intercourse"
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
+        "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "ValueSet/nobirthcontrolmethod-values"
+        "reference" : "StructureDefinition/who-core-observation-body-height"
       },
-      "name" : "Reason for no contraceptive method - Reported at intake values",
-      "description" : "Codes representing possible values for the Reason for no contraceptive method - Reported at intake element"
+      "name" : "WHO-Core Observation (Body Height)",
+      "description" : "The client's height in centimetres."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/who-core-medicationstatement-prior-contraceptive-methods"
+      },
+      "name" : "WHO-Core MedicationStatement (Prior Contraceptive Methods)",
+      "description" : "Reported use of method at intake"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/who-core-coverage-insurance"
+      },
+      "name" : "WHO-Core Coverage (Insurance)"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/who-core-observation-hiv-test"
+      },
+      "name" : "WHO-Core Observation (HIV Test)",
+      "description" : "HIV status of client or not known."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/who-core-observation-sexual-history"
+      },
+      "name" : "WHO-Core Observation (Sexual History)",
+      "description" : "If the client has been sexually active"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/occupation"
+      },
+      "name" : "Occupation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/method"
+      },
+      "name" : "Payment method"
     },
     {
       "extension" : [{
@@ -1973,17 +1522,6 @@
       },
       "name" : "Drug allergies values",
       "description" : "Codes representing possible values for the Drug allergies element"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/procedurebirthcontrolmethods-values"
-      },
-      "name" : "Prior contraceptive methods used - Procedure-based values",
-      "description" : "Codes representing possible values for the Prior contraceptive methods used - Procedure-based element"
     },
     {
       "extension" : [{
@@ -2002,10 +1540,21 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/who-core-allergyintolerance-drug-allergies"
+        "reference" : "StructureDefinition/who-patient"
       },
-      "name" : "WHO-Core AllergyIntolerance (Drug Allergies)",
-      "description" : "Any known medical allergies of the client."
+      "name" : "WHO Patient",
+      "description" : "WHO Patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/who-core-observation-reason-for-no-contraceptive-method-at-intake"
+      },
+      "name" : "WHO-Core Observation (Reason for no contraceptive method at intake)",
+      "description" : "If not currently using a method, the reason why."
     },
     {
       "extension" : [{
@@ -2013,10 +1562,32 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/hiv-stage-values"
+        "reference" : "ValueSet/hiv-test-result-values"
       },
-      "name" : "HIV Stage values",
-      "description" : "Codes representing possible values for the HIV Stage element"
+      "name" : "HIV Test Result values",
+      "description" : "Codes representing possible values for the HIV Test Result element"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/insurance"
+      },
+      "name" : "Insurance coverage",
+      "description" : "Does the client have insurance coverage?"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/pregnancystatus-values"
+      },
+      "name" : "Pregnancy status values",
+      "description" : "Codes representing possible values for the Pregnancy status element"
     },
     {
       "extension" : [{
@@ -2024,10 +1595,43 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/who-core-careplan-prior-contraceptive-methods"
+        "reference" : "StructureDefinition/who-core-medicationstatement-current-medication"
       },
-      "name" : "WHO-Core CarePlan (Prior Contraceptive Methods)",
-      "description" : "Contraceptive methods the client has a history of using"
+      "name" : "WHO-Core MedicationStatement (Current Medication)",
+      "description" : "Write in the medication not included in the list."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/consenttocontact"
+      },
+      "name" : "Communication consent",
+      "description" : "Indication that client gave consent to be contacted"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/extended-content-codes"
+      },
+      "name" : "WHO Extended Codes CodeSystem codes",
+      "description" : "Set of codes identified as being needed but not found in existing Code Systems"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/procedurebirthcontrolmethods-values"
+      },
+      "name" : "Prior contraceptive methods used - Procedure-based values",
+      "description" : "Codes representing possible values for the Prior contraceptive methods used - Procedure-based element"
     },
     {
       "extension" : [{
@@ -2035,10 +1639,10 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/who-core-observation-number-of-pregnancies"
+        "reference" : "StructureDefinition/who-core-deviceusestatement-prior-contraceptive-methods"
       },
-      "name" : "WHO-Core Observation (Number of Pregnancies)",
-      "description" : "The number of pregnancies (gravidity), current and past, regardless of pregnancy outcome."
+      "name" : "WHO-Core DeviceUseStatement (Prior Contraceptive Methods)",
+      "description" : "Reported use of method at intake"
     },
     {
       "extension" : [{
@@ -2046,10 +1650,21 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/who-core-observation-body-height"
+        "reference" : "StructureDefinition/who-core-observation-body-weight"
       },
-      "name" : "WHO-Core Observation (Body Height)",
-      "description" : "The client's height in centimetres."
+      "name" : "WHO-Core Observation (Body Weight)",
+      "description" : "The client's current weight in kilograms."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/requestertype"
+      },
+      "name" : "Referred by",
+      "description" : "How the client was referred"
     },
     {
       "extension" : [{
@@ -2079,9 +1694,9 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/who-core-observation-miscarriage-or-abortion"
+        "reference" : "StructureDefinition/who-core-observation-hiv-care-enrollment"
       },
-      "name" : "WHO-Core Observation (Miscarriage or Abortion)"
+      "name" : "WHO-Core Observation (HIV Care Enrollment)"
     },
     {
       "extension" : [{
@@ -2089,20 +1704,10 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/who-core-coverage-insurance"
+        "reference" : "StructureDefinition/who-core-allergyintolerance-drug-allergies"
       },
-      "name" : "WHO-Core Coverage (Insurance)"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/insurance"
-      },
-      "name" : "Insurance coverage",
-      "description" : "Does the client have insurance coverage?"
+      "name" : "WHO-Core AllergyIntolerance (Drug Allergies)",
+      "description" : "Any known medical allergies of the client."
     },
     {
       "extension" : [{
@@ -2110,9 +1715,87 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/who-core-observation-prep-status"
+        "reference" : "StructureDefinition/who-core-observation-number-of-pregnancies"
       },
-      "name" : "WHO-Core Observation (PrEP Status)"
+      "name" : "WHO-Core Observation (Number of Pregnancies)",
+      "description" : "The number of pregnancies (gravidity), current and past, regardless of pregnancy outcome."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/medicationbirthcontrolmethods-values"
+      },
+      "name" : "Medication-based Birth control method reported at intake values",
+      "description" : "Codes representing possible values for the Medication-based Birth control method reported at intake element"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/who-core-observation-sexually-active"
+      },
+      "name" : "WHO-Core Observation (Sexually Active)",
+      "description" : "Whether or not the client is sexually active."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/who-core-observation-last-normal-menses"
+      },
+      "name" : "WHO-Core Observation (Last Normal Menses)",
+      "description" : "First day of last normal menses."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/who-core-observation-postpartum"
+      },
+      "name" : "WHO-Core Observation (Postpartum)",
+      "description" : "Whether client delivered in the past 6 weeks."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/who-core-appointment-return-visit"
+      },
+      "name" : "WHO-Core Appointment (Return Visit)",
+      "description" : "Date and time of return visit appointment"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/who-core-observation-clinical-observations"
+      },
+      "name" : "WHO-Core Observation (Clinical Observations)",
+      "description" : "Observations made during an exam or visit."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/who-core-practitioner"
+      },
+      "name" : "WHO-Core Practitioner",
+      "description" : "The provider that served the client."
     },
     {
       "extension" : [{
@@ -2131,10 +1814,142 @@
         "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/reminder"
+        "reference" : "StructureDefinition/educationlevel"
       },
-      "name" : "Reminder messages",
-      "description" : "Whether client wants to receive text or other messages as follow-up for family planning"
+      "name" : "Highest level of education achieved",
+      "description" : "The highest level of school the client has reached."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/hiv-stage-values"
+      },
+      "name" : "HIV Stage values",
+      "description" : "Codes representing possible values for the HIV Stage element"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/who-core-careplan-prior-contraceptive-methods"
+      },
+      "name" : "WHO-Core CarePlan (Prior Contraceptive Methods)",
+      "description" : "Contraceptive methods the client has a history of using"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/miscarriage-or-abortion-stage-of-pregnancy-values"
+      },
+      "name" : "Miscarriage or abortion stage of pregnancy values",
+      "description" : "Codes representing possible values for the Miscarriage or abortion stage of pregnancy element"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/highest-level-of-education-achieved-values"
+      },
+      "name" : "Highest level of education achieved values",
+      "description" : "Codes representing possible values for the Highest level of education achieved element"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/who-core-observation-gender-based-violence-victim"
+      },
+      "name" : "WHO-Core Observation (Gender-based Violence Victim)",
+      "description" : "History of exposure to gender-based violence"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/who-core-observation-date-of-delivery"
+      },
+      "name" : "WHO-Core Observation (Date of Delivery)",
+      "description" : "For a postpartum woman, the date she recently delivered."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/who-core-observation-gender-based-violence-risk-factors"
+      },
+      "name" : "WHO-Core Observation (Gender-based Violence Risk Factors)",
+      "description" : "Gender-based violence risk factors relevant to the population."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/who-core-deviceusestatement-intake-contraceptive-method"
+      },
+      "name" : "WHO-Core DeviceUseStatement (Intake Contraceptive Method)",
+      "description" : "Date of last implant if currently using the method."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/who-core-observation-pregnancy-status"
+      },
+      "name" : "WHO-Core Observation (Pregnancy Status)",
+      "description" : "Pregnancy status at visit"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/who-core-procedure-intake-contraceptive-method"
+      },
+      "name" : "WHO-Core Procedure (Intake Contraceptive Method)",
+      "description" : "Date of sterilization, if not reversed."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/who-core-allergyintolerance"
+      },
+      "name" : "WHO-Core AllergyIntolerance",
+      "description" : "Any known medical allergies of the client."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/nobirthcontrolmethod-values"
+      },
+      "name" : "Reason for no contraceptive method - Reported at intake values",
+      "description" : "Codes representing possible values for the Reason for no contraceptive method - Reported at intake element"
     },
     {
       "extension" : [{
@@ -2142,36 +1957,194 @@
         "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/occupation"
+        "reference" : "StructureDefinition/estimatedage"
       },
-      "name" : "Occupation"
+      "name" : "Estimated age",
+      "description" : "If DOB is unknown, enter the client's age. Note displaying the client's age in years."
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ActivityDefinition"
+        "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "ActivityDefinition/emcare.b23.classification"
-      }
+        "reference" : "StructureDefinition/who-core-observation-breastfeeding"
+      },
+      "name" : "WHO-Core Observation (Breastfeeding)",
+      "description" : "Select if a woman is currently breastfeeding."
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ActivityDefinition"
+        "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "ActivityDefinition/emcarea.registration.p"
-      }
+        "reference" : "StructureDefinition/who-core-observation-time-postpartum"
+      },
+      "name" : "WHO-Core Observation (Time Postpartum)",
+      "description" : "For a postpartum woman, the amount of time since she delivered."
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ActivityDefinition"
+        "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ActivityDefinition/emcare.b10-16.signs.2m.p"
-      }
+        "reference" : "ValueSet/gender-values"
+      },
+      "name" : "Gender values",
+      "description" : "Codes representing possible values for the Gender element"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/who-core-patient"
+      },
+      "name" : "WHO-Core Patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/who-core-observation-miscarriage-or-abortion"
+      },
+      "name" : "WHO-Core Observation (Miscarriage or Abortion)"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/marital-status-values"
+      },
+      "name" : "Marital Status values",
+      "description" : "Codes representing possible values for the Marital Status element"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/stage"
+      },
+      "name" : "Miscarriage or abortion stage of pregnancy",
+      "description" : "If the woman recently had a miscarriage or abortion, when in the pregnancy the abortion took place."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/who-core-observation-number-of-births"
+      },
+      "name" : "WHO-Core Observation (Number of births)",
+      "description" : "The number of pregnancies reaching parity."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/who-core-observation-days-since-unprotected-sex"
+      },
+      "name" : "WHO-Core Observation (Days since Unprotected Sex)",
+      "description" : "Days since unprotected sex"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/who-core-observation-prep-status"
+      },
+      "name" : "WHO-Core Observation (PrEP Status)"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/who-encounter"
+      },
+      "name" : "WHO Encounter",
+      "description" : "WHO Encounter"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/who-core-observation-hiv-status"
+      },
+      "name" : "WHO-Core Observation (HIV Status)",
+      "description" : "Finding of human immunodeficiency virus status"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/current-medications-values"
+      },
+      "name" : "Current medications values",
+      "description" : "Codes representing possible values for the Current medications element"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/miscarriage-or-abortion-values"
+      },
+      "name" : "Miscarriage or Abortion values",
+      "description" : "Codes representing possible values for the Miscarriage or Abortion element"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/reason-for-referral-values"
+      },
+      "name" : "Reason for referral values",
+      "description" : "Codes representing possible values for the Reason for referral element"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/referred-by-values"
+      },
+      "name" : "Referred by values",
+      "description" : "Codes representing possible values for the Referred by element"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/who-core-careplan-intake-contraceptive-method"
+      },
+      "name" : "WHO-Core CarePlan (Intake Contraceptive Method)",
+      "description" : "Method the client reports currently using at intake."
     },
     {
       "extension" : [{
@@ -2180,15 +2153,6 @@
       }],
       "reference" : {
         "reference" : "ActivityDefinition/emcare.b23.classification.m"
-      }
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ActivityDefinition"
-      }],
-      "reference" : {
-        "reference" : "ActivityDefinition/emcare.b10-14.symptoms.2m.p"
       }
     },
     {
@@ -2206,7 +2170,7 @@
         "valueString" : "ActivityDefinition"
       }],
       "reference" : {
-        "reference" : "ActivityDefinition/emcare.b18-21.symptoms.2m.m"
+        "reference" : "ActivityDefinition/emcare.b22.respiratoryrate"
       }
     },
     {
@@ -2215,7 +2179,7 @@
         "valueString" : "ActivityDefinition"
       }],
       "reference" : {
-        "reference" : "ActivityDefinition/emcare.b22.secondtemperature"
+        "reference" : "ActivityDefinition/emcare.b22.hemoglobin"
       }
     },
     {
@@ -2224,25 +2188,7 @@
         "valueString" : "ActivityDefinition"
       }],
       "reference" : {
-        "reference" : "ActivityDefinition/emcare.b22.assessmentstests"
-      }
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ActivityDefinition"
-      }],
-      "reference" : {
-        "reference" : "ActivityDefinition/emcare.b18-21.signs.2m.m"
-      }
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ActivityDefinition"
-      }],
-      "reference" : {
-        "reference" : "ActivityDefinition/emcare.b22.bronchodilatortest"
+        "reference" : "ActivityDefinition/emcare.b10-16.signs.2m.p"
       }
     },
     {
@@ -2269,7 +2215,7 @@
         "valueString" : "ActivityDefinition"
       }],
       "reference" : {
-        "reference" : "ActivityDefinition/emcare.treatment"
+        "reference" : "ActivityDefinition/emcare.b22.bronchodilatortest"
       }
     },
     {
@@ -2278,7 +2224,61 @@
         "valueString" : "ActivityDefinition"
       }],
       "reference" : {
-        "reference" : "ActivityDefinition/emcare.b6.measurements"
+        "reference" : "ActivityDefinition/emcare.b22.secondtemperature"
+      }
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/emcare.b23.classification"
+      }
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/emcare.b22.assessmentstests"
+      }
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/emcare.b18-21.signs.2m.m"
+      }
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/emcare.b18-21.symptoms.2m.m"
+      }
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/emcare.b10-14.symptoms.2m.p"
+      }
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/emcare.treatment"
       }
     },
     {
@@ -2296,7 +2296,7 @@
         "valueString" : "ActivityDefinition"
       }],
       "reference" : {
-        "reference" : "ActivityDefinition/emcare.b22.hemoglobin"
+        "reference" : "ActivityDefinition/emcare.b6.measurements"
       }
     },
     {
@@ -2305,88 +2305,8 @@
         "valueString" : "ActivityDefinition"
       }],
       "reference" : {
-        "reference" : "ActivityDefinition/emcare.b22.respiratoryrate"
+        "reference" : "ActivityDefinition/emcarea.registration.p"
       }
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Library"
-      }],
-      "reference" : {
-        "reference" : "Library/emcareb6measurements"
-      },
-      "name" : "EmCare.B6.Measurements"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Library"
-      }],
-      "reference" : {
-        "reference" : "Library/emcareb23classificationm"
-      },
-      "name" : "EmCare.B23.Classification.m"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Library"
-      }],
-      "reference" : {
-        "reference" : "Library/emcareb22respiratoryrate"
-      },
-      "name" : "EmCare.B22.RespiratoryRate"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Library"
-      }],
-      "reference" : {
-        "reference" : "Library/emcareb22breastfeeding"
-      },
-      "name" : "EmCare.B22.BreastFeeding"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Library"
-      }],
-      "reference" : {
-        "reference" : "Library/emcarebase"
-      },
-      "name" : "EmCareBase"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Library"
-      }],
-      "reference" : {
-        "reference" : "Library/emcaredt01"
-      },
-      "name" : "emcaredt01"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Library"
-      }],
-      "reference" : {
-        "reference" : "Library/emcareb1821symptoms2mm"
-      },
-      "name" : "EmCare.B18-21.Symptoms.2m.m"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Library"
-      }],
-      "reference" : {
-        "reference" : "Library/emcarecombineddataelements"
-      },
-      "name" : "EmCare.CombinedDataElements"
     },
     {
       "extension" : [{
@@ -2404,9 +2324,9 @@
         "valueString" : "Library"
       }],
       "reference" : {
-        "reference" : "Library/emcareb22secondtemperature"
+        "reference" : "Library/emcareb1821signs2mm"
       },
-      "name" : "EmCare.B22.SecondTemperature"
+      "name" : "EmCare.B18-21.Signs.2m.m"
     },
     {
       "extension" : [{
@@ -2414,9 +2334,9 @@
         "valueString" : "Library"
       }],
       "reference" : {
-        "reference" : "Library/emcareb22fluidtest"
+        "reference" : "Library/emcaredt01"
       },
-      "name" : "EmCare.B22.FluidTest"
+      "name" : "emcaredt01"
     },
     {
       "extension" : [{
@@ -2434,38 +2354,8 @@
         "valueString" : "Library"
       }],
       "reference" : {
-        "reference" : "Library/emcareobservation"
+        "reference" : "Library/emcarevalueset"
       }
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Library"
-      }],
-      "reference" : {
-        "reference" : "Library/emcareb22assessmentstests"
-      },
-      "name" : "EmCare.B22.AssessmentsTests"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Library"
-      }],
-      "reference" : {
-        "reference" : "Library/emcareb1014symptoms2mp"
-      },
-      "name" : "EmCare.B10-14.Symptoms.2m.p"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Library"
-      }],
-      "reference" : {
-        "reference" : "Library/emcareb1821signs2mm"
-      },
-      "name" : "EmCare.B18-21.Signs.2m.m"
     },
     {
       "extension" : [{
@@ -2474,15 +2364,6 @@
       }],
       "reference" : {
         "reference" : "Library/emcareobservationvalueset"
-      }
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Library"
-      }],
-      "reference" : {
-        "reference" : "Library/emcarevalueset"
       }
     },
     {
@@ -2501,7 +2382,136 @@
         "valueString" : "Library"
       }],
       "reference" : {
+        "reference" : "Library/emcarecombineddataelements"
+      },
+      "name" : "EmCare.CombinedDataElements"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/emcareb22breastfeeding"
+      },
+      "name" : "EmCare.B22.BreastFeeding"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/emcareb22secondtemperature"
+      },
+      "name" : "EmCare.B22.SecondTemperature"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/emcareb1821symptoms2mm"
+      },
+      "name" : "EmCare.B18-21.Symptoms.2m.m"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/emcareb1014symptoms2mp"
+      },
+      "name" : "EmCare.B10-14.Symptoms.2m.p"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
         "reference" : "Library/emcarecondition"
+      }
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/emcareb22fluidtest"
+      },
+      "name" : "EmCare.B22.FluidTest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/emcaretreatment"
+      },
+      "name" : "EmCare.Treatment"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/emcarebase"
+      },
+      "name" : "EmCareBase"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/emcareb6measurements"
+      },
+      "name" : "EmCare.B6.Measurements"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/emcareb22respiratoryrate"
+      },
+      "name" : "EmCare.B22.RespiratoryRate"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/emcareb23classificationm"
+      },
+      "name" : "EmCare.B23.Classification.m"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/emcareb22assessmentstests"
+      },
+      "name" : "EmCare.B22.AssessmentsTests"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/emcareobservation"
       }
     },
     {
@@ -2517,88 +2527,12 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Library"
-      }],
-      "reference" : {
-        "reference" : "Library/emcaretreatment"
-      },
-      "name" : "EmCare.Treatment"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "PlanDefinition"
       }],
       "reference" : {
         "reference" : "PlanDefinition/emcaredt01"
       },
       "name" : "emcaredt01"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/birthtime"
-      },
-      "name" : "Time Extension",
-      "description" : "Extend Patient with time"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/mothervitalstatus"
-      },
-      "name" : "Mother Vital Status",
-      "description" : "Vital Status of the Mother"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/birthdatetime"
-      },
-      "name" : "DOB time Extension",
-      "description" : "Save date and time of birth"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/anonymous"
-      },
-      "name" : "Anonymous",
-      "description" : "The client's identity is unknown or the client's prefers to remain anonymous"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/emcare-condition"
-      },
-      "name" : "EmCare Condition",
-      "description" : "EmCare Condition"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/fathervitalstatus"
-      },
-      "name" : "Father Vital Status",
-      "description" : "Vital Status of the Father"
     },
     {
       "extension" : [{
@@ -2625,13 +2559,24 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
+        "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/emcare-patient"
+        "reference" : "StructureDefinition/birthtime"
       },
-      "name" : "EmCare Patient",
-      "description" : "EmCare Patient"
+      "name" : "Time Extension",
+      "description" : "Extend Patient with time"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fathervitalstatus"
+      },
+      "name" : "Father Vital Status",
+      "description" : "Vital Status of the Father"
     },
     {
       "extension" : [{
@@ -2647,13 +2592,35 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/emcare-condition"
+      },
+      "name" : "EmCare Condition",
+      "description" : "EmCare Condition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/emcare-patient"
+      },
+      "name" : "EmCare Patient",
+      "description" : "EmCare Patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/birthdateestimator"
+        "reference" : "StructureDefinition/birthdatetime"
       },
-      "name" : "Birthday Estimator",
-      "description" : "Type of Birth Date Estimator"
+      "name" : "DOB time Extension",
+      "description" : "Save date and time of birth"
     },
     {
       "extension" : [{
@@ -2669,12 +2636,45 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/birthdateestimator"
+      },
+      "name" : "Birthday Estimator",
+      "description" : "Type of Birth Date Estimator"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/anonymous"
+      },
+      "name" : "Anonymous",
+      "description" : "The client's identity is unknown or the client's prefers to remain anonymous"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/mothervitalstatus"
+      },
+      "name" : "Mother Vital Status",
+      "description" : "Vital Status of the Mother"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Questionnaire"
       }],
       "reference" : {
-        "reference" : "Questionnaire/emcare.b22.hemoglobin"
+        "reference" : "Questionnaire/emcare.b23.classification.m"
       },
-      "name" : "EmCare.B22.Hemoglobin"
+      "name" : "EmCare.B23.Classification.m"
     },
     {
       "extension" : [{
@@ -2685,6 +2685,76 @@
         "reference" : "Questionnaire/emcareb.registration.e"
       },
       "name" : "EmCareB.Registration.E"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Questionnaire"
+      }],
+      "reference" : {
+        "reference" : "Questionnaire/emcare.b22.fluidtest"
+      },
+      "name" : "EmCare.B22.FluidTest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Questionnaire"
+      }],
+      "reference" : {
+        "reference" : "Questionnaire/emcare.b22.respiratoryrate"
+      },
+      "name" : "EmCare.B22.RespiratoryRate"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Questionnaire"
+      }],
+      "reference" : {
+        "reference" : "Questionnaire/emcare.b6.measurements"
+      },
+      "name" : "EmCare.B6.Measurements"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Questionnaire"
+      }],
+      "reference" : {
+        "reference" : "Questionnaire/emcare.b18-21.signs.2m.m"
+      },
+      "name" : "EmCare.B18-21.Signs.2m.m"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Questionnaire"
+      }],
+      "reference" : {
+        "reference" : "Questionnaire/emcare.b23.classification"
+      },
+      "name" : "EmCare.B23.Classification"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Questionnaire"
+      }],
+      "reference" : {
+        "reference" : "Questionnaire/emcarea.registration.p"
+      },
+      "name" : "EmCareA.Registration.P"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Questionnaire"
+      }],
+      "reference" : {
+        "reference" : "Questionnaire/emcare.b10-14.symptoms.2m.p"
+      },
+      "name" : "EmCare.B10-14.Symptoms.2m.p"
     },
     {
       "extension" : [{
@@ -2712,99 +2782,9 @@
         "valueString" : "Questionnaire"
       }],
       "reference" : {
-        "reference" : "Questionnaire/emcare.b23.classification.m"
-      },
-      "name" : "EmCare.B23.Classification.m"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Questionnaire"
-      }],
-      "reference" : {
-        "reference" : "Questionnaire/emcare.b22.fluidtest"
-      },
-      "name" : "EmCare.B22.FluidTest"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Questionnaire"
-      }],
-      "reference" : {
         "reference" : "Questionnaire/emcare.b7.lti-dangersigns"
       },
       "name" : "EmCare.B7.LTI-DangerSigns"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Questionnaire"
-      }],
-      "reference" : {
-        "reference" : "Questionnaire/emcare.b22.bronchodilatortest"
-      },
-      "name" : "EmCare.B22.BronchodilatorTest"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Questionnaire"
-      }],
-      "reference" : {
-        "reference" : "Questionnaire/emcare.b23.classification"
-      },
-      "name" : "EmCare.B23.Classification"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Questionnaire"
-      }],
-      "reference" : {
-        "reference" : "Questionnaire/emcare.b10-16.signs.2m.p"
-      },
-      "name" : "EmCare.B10-16.Signs.2m.p"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Questionnaire"
-      }],
-      "reference" : {
-        "reference" : "Questionnaire/emcare.b22.respiratoryrate"
-      },
-      "name" : "EmCare.B22.RespiratoryRate"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Questionnaire"
-      }],
-      "reference" : {
-        "reference" : "Questionnaire/emcare.b10-14.symptoms.2m.p"
-      },
-      "name" : "EmCare.B10-14.Symptoms.2m.p"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Questionnaire"
-      }],
-      "reference" : {
-        "reference" : "Questionnaire/emcare.b18-21.signs.2m.m"
-      },
-      "name" : "EmCare.B18-21.Signs.2m.m"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Questionnaire"
-      }],
-      "reference" : {
-        "reference" : "Questionnaire/emcare.b18-21.symptoms.2m.m"
-      },
-      "name" : "EmCare.B18-21.Symptoms.2m.m"
     },
     {
       "extension" : [{
@@ -2822,19 +2802,9 @@
         "valueString" : "Questionnaire"
       }],
       "reference" : {
-        "reference" : "Questionnaire/emcare.b6.measurements"
+        "reference" : "Questionnaire/emcare.b22.hemoglobin"
       },
-      "name" : "EmCare.B6.Measurements"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Questionnaire"
-      }],
-      "reference" : {
-        "reference" : "Questionnaire/emcarea.registration.p"
-      },
-      "name" : "EmCareA.Registration.P"
+      "name" : "EmCare.B22.Hemoglobin"
     },
     {
       "extension" : [{
@@ -2849,10 +2819,40 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Questionnaire"
+      }],
+      "reference" : {
+        "reference" : "Questionnaire/emcare.b22.bronchodilatortest"
+      },
+      "name" : "EmCare.B22.BronchodilatorTest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Questionnaire"
+      }],
+      "reference" : {
+        "reference" : "Questionnaire/emcare.b10-16.signs.2m.p"
+      },
+      "name" : "EmCare.B10-16.Signs.2m.p"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Questionnaire"
+      }],
+      "reference" : {
+        "reference" : "Questionnaire/emcare.b18-21.symptoms.2m.m"
+      },
+      "name" : "EmCare.B18-21.Symptoms.2m.m"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureMap"
       }],
       "reference" : {
-        "reference" : "StructureMap/emcare.b22.assessmentstests"
+        "reference" : "StructureMap/emcare.b22.hemoglobin"
       }
     },
     {
@@ -2861,7 +2861,25 @@
         "valueString" : "StructureMap"
       }],
       "reference" : {
-        "reference" : "StructureMap/emcare.b10-14.symptoms.2m.p"
+        "reference" : "StructureMap/emcare.b7.lti-dangersigns"
+      }
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureMap"
+      }],
+      "reference" : {
+        "reference" : "StructureMap/emcare.treatment"
+      }
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureMap"
+      }],
+      "reference" : {
+        "reference" : "StructureMap/emcarea.registration.p"
       }
     },
     {
@@ -2888,25 +2906,7 @@
         "valueString" : "StructureMap"
       }],
       "reference" : {
-        "reference" : "StructureMap/emcarea.registration.p"
-      }
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureMap"
-      }],
-      "reference" : {
-        "reference" : "StructureMap/emcare.b22.respiratoryrate"
-      }
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureMap"
-      }],
-      "reference" : {
-        "reference" : "StructureMap/emcare.b23.classification.m"
+        "reference" : "StructureMap/emcare.b18-21.symptoms.2m.m"
       }
     },
     {
@@ -2924,25 +2924,43 @@
         "valueString" : "StructureMap"
       }],
       "reference" : {
+        "reference" : "StructureMap/emcare.b22.secondtemperature"
+      }
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureMap"
+      }],
+      "reference" : {
+        "reference" : "StructureMap/emcare.b22.assessmentstests"
+      }
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureMap"
+      }],
+      "reference" : {
+        "reference" : "StructureMap/emcare.b22.respiratoryrate"
+      }
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureMap"
+      }],
+      "reference" : {
+        "reference" : "StructureMap/emcare.b10-16.signs.2m.p"
+      }
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureMap"
+      }],
+      "reference" : {
         "reference" : "StructureMap/emcare.b23.classification"
-      }
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureMap"
-      }],
-      "reference" : {
-        "reference" : "StructureMap/emcare.b18-21.symptoms.2m.m"
-      }
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureMap"
-      }],
-      "reference" : {
-        "reference" : "StructureMap/emcareb.registration.e"
       }
     },
     {
@@ -2960,7 +2978,25 @@
         "valueString" : "StructureMap"
       }],
       "reference" : {
-        "reference" : "StructureMap/emcare.treatment"
+        "reference" : "StructureMap/emcareb.registration.e"
+      }
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureMap"
+      }],
+      "reference" : {
+        "reference" : "StructureMap/emcare.b10-14.symptoms.2m.p"
+      }
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureMap"
+      }],
+      "reference" : {
+        "reference" : "StructureMap/emcare.b23.classification.m"
       }
     },
     {
@@ -2970,42 +3006,6 @@
       }],
       "reference" : {
         "reference" : "StructureMap/emcare.b22.fluidtest"
-      }
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureMap"
-      }],
-      "reference" : {
-        "reference" : "StructureMap/emcare.b22.secondtemperature"
-      }
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureMap"
-      }],
-      "reference" : {
-        "reference" : "StructureMap/emcare.b22.hemoglobin"
-      }
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureMap"
-      }],
-      "reference" : {
-        "reference" : "StructureMap/emcare.b7.lti-dangersigns"
-      }
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureMap"
-      }],
-      "reference" : {
-        "reference" : "StructureMap/emcare.b10-16.signs.2m.p"
       }
     },
     {
@@ -3025,10 +3025,9 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/oral-fluid-test"
+        "reference" : "ValueSet/relatedperson"
       },
-      "name" : "EmCare.B22.DE08",
-      "description" : "Oral Fluid Test Results"
+      "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
     },
     {
       "extension" : [{
@@ -3046,40 +3045,7 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/add-pb"
-      },
-      "name" : "EmCare.B14S2.DE43",
-      "description" : "Add a Skin or Mouth or Eye Problem"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/weight-status"
-      },
-      "name" : "EmCare.B21S2.DE01",
-      "description" : "Weight Status"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/hiv-status"
-      },
-      "name" : "EmCare.B21S1.DE01",
-      "description" : "The client's mother's HIV Status"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/emcarecondition"
+        "reference" : "ValueSet/abilitytoswallow"
       },
       "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
     },
@@ -3089,7 +3055,7 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/malaria-microscopy-species"
+        "reference" : "ValueSet/more-than-7d"
       },
       "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
     },
@@ -3099,32 +3065,9 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/temperature-measurement"
+        "reference" : "ValueSet/more-than-14d"
       },
-      "name" : "Temperature Measurement",
       "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/milk-preparation"
-      },
-      "name" : "EmCare.B21S2.DE18",
-      "description" : "How much milk is given at each feed?"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/difficulty-feeding"
-      },
-      "name" : "EmCare.B18S1.DE02",
-      "description" : "Difficulty with Feeding"
     },
     {
       "extension" : [{
@@ -3143,282 +3086,6 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/visit-type"
-      },
-      "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/appetite-test"
-      },
-      "name" : "EmCare.B22.DE23",
-      "description" : "Appetite Test (using RUTF) Results"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/relationship-to-client"
-      },
-      "name" : "Caregiver's Relationship to Client",
-      "description" : "The relationship of the Caregiver to the client"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/relatedperson"
-      },
-      "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/hiv-prevalence"
-      },
-      "name" : "EmCare.B17.DE22",
-      "description" : "HIV Prevalence"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/agreedisagree"
-      },
-      "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/consultation-status"
-      },
-      "name" : "Continue to Assess Sick Child",
-      "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/sex-of-the-client"
-      },
-      "name" : "Sex",
-      "description" : "The Sex of the client"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/number-of-convulsions"
-      },
-      "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/child-last-hiv-status"
-      },
-      "name" : "EmCare.B17.DE30",
-      "description" : "Child's Last HIV Test Results"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/skin-pinch-abdomen"
-      },
-      "name" : "EmCare.B20S2.DE02",
-      "description" : "Skin pinch of Abdomen"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/vital-status"
-      },
-      "name" : "Related Person vital status",
-      "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/oral-sores"
-      },
-      "name" : "EmCare.B14S2.DE38",
-      "description" : "Oral sores or Mouth Ulcers"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/yesnox"
-      },
-      "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/utensils-cleaned"
-      },
-      "name" : "EmCare.B21S2.DE24",
-      "description" : "How are the feeding utensils cleaned?"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/more-than-7d"
-      },
-      "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/breastfeed-assessment"
-      },
-      "name" : "EmCare.B22.DE36",
-      "description" : "Breastfeeding Assessment Results"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/reason-consultation"
-      },
-      "name" : "Reason for Consultation",
-      "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/is-recorded"
-      },
-      "name" : "EmCare.B17.DE05",
-      "description" : "Can record of Vitamin A Supplementation be obtained at a future visit?"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/abilitytoswallow"
-      },
-      "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/emcareobservation"
-      },
-      "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/child-vaccines"
-      },
-      "name" : "EmCare.B17.DE50",
-      "description" : "Immunizations for Age"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/child-vaccination-status"
-      },
-      "name" : "EmCare.B17.DE45",
-      "description" : "Check the child's vaccination record: has the child received all vaccines they are eligible for"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/movements"
-      },
-      "name" : "EmCare.B18S2.DE08",
-      "description" : "Movements"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/more-than-14d"
-      },
-      "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/inhaled-bronchodilator-trial"
-      },
-      "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
         "reference" : "ValueSet/skin-pb"
       },
       "name" : "EmCare.B14S2.DE13",
@@ -3430,18 +3097,7 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/oxygen-saturation"
-      },
-      "name" : "EmCare.B10S2.DE08",
-      "description" : "The client's oxygen saturation is more than or equal to 90 %"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/emcareobservationvalueset"
+        "reference" : "ValueSet/underweight"
       },
       "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
     },
@@ -3462,10 +3118,10 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/skin-pb-location"
+        "reference" : "ValueSet/weight-status"
       },
-      "name" : "EmCare.B14S2.DE06",
-      "description" : "Generalised or Localised Skin Problem"
+      "name" : "EmCare.B21S2.DE01",
+      "description" : "Weight Status"
     },
     {
       "extension" : [{
@@ -3473,10 +3129,10 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/mucus-membrane-pallor"
+        "reference" : "ValueSet/child-vaccination-status"
       },
-      "name" : "EmCare.B15S2.DE09",
-      "description" : "Mucous membrane pallor"
+      "name" : "EmCare.B17.DE45",
+      "description" : "Check the child's vaccination record: has the child received all vaccines they are eligible for"
     },
     {
       "extension" : [{
@@ -3484,10 +3140,10 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/milk-given"
+        "reference" : "ValueSet/appetite-test"
       },
-      "name" : "EmCare.B21S2.DE21",
-      "description" : "How is the milk given?"
+      "name" : "EmCare.B22.DE23",
+      "description" : "Appetite Test (using RUTF) Results"
     },
     {
       "extension" : [{
@@ -3495,9 +3151,31 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/underweight"
+        "reference" : "ValueSet/utensils-cleaned"
+      },
+      "name" : "EmCare.B21S2.DE24",
+      "description" : "How are the feeding utensils cleaned?"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/throatproblem"
       },
       "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/oral-sores"
+      },
+      "name" : "EmCare.B14S2.DE38",
+      "description" : "Oral sores or Mouth Ulcers"
     },
     {
       "extension" : [{
@@ -3516,7 +3194,40 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/yesno"
+        "reference" : "ValueSet/hiv-status"
+      },
+      "name" : "EmCare.B21S1.DE01",
+      "description" : "The client's mother's HIV Status"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/milk-given"
+      },
+      "name" : "EmCare.B21S2.DE21",
+      "description" : "How is the milk given?"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/skin-pb-location"
+      },
+      "name" : "EmCare.B14S2.DE06",
+      "description" : "Generalised or Localised Skin Problem"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/emcareobservation"
       },
       "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
     },
@@ -3526,7 +3237,50 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/throatproblem"
+        "reference" : "ValueSet/skin-pinch-abdomen"
+      },
+      "name" : "EmCare.B20S2.DE02",
+      "description" : "Skin pinch of Abdomen"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/add-pb"
+      },
+      "name" : "EmCare.B14S2.DE43",
+      "description" : "Add a Skin or Mouth or Eye Problem"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/relationship-to-client"
+      },
+      "name" : "Caregiver's Relationship to Client",
+      "description" : "The relationship of the Caregiver to the client"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/yesnox"
+      },
+      "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/visit-type"
       },
       "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
     },
@@ -3540,6 +3294,252 @@
       },
       "name" : "EmCare.B21S2.DE27",
       "description" : "Do you give any breastmilk at all?"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/temperature-measurement"
+      },
+      "name" : "Temperature Measurement",
+      "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/movements"
+      },
+      "name" : "EmCare.B18S2.DE08",
+      "description" : "Movements"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/is-recorded"
+      },
+      "name" : "EmCare.B17.DE05",
+      "description" : "Can record of Vitamin A Supplementation be obtained at a future visit?"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/inhaled-bronchodilator-trial"
+      },
+      "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/milk-preparation"
+      },
+      "name" : "EmCare.B21S2.DE18",
+      "description" : "How much milk is given at each feed?"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/sex-of-the-client"
+      },
+      "name" : "Sex",
+      "description" : "The Sex of the client"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/agreedisagree"
+      },
+      "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/hiv-prevalence"
+      },
+      "name" : "EmCare.B17.DE22",
+      "description" : "HIV Prevalence"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/breastfeed-assessment"
+      },
+      "name" : "EmCare.B22.DE36",
+      "description" : "Breastfeeding Assessment Results"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/yesno"
+      },
+      "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/emcareobservationvalueset"
+      },
+      "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/child-vaccines"
+      },
+      "name" : "EmCare.B17.DE50",
+      "description" : "Immunizations for Age"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/difficulty-feeding"
+      },
+      "name" : "EmCare.B18S1.DE02",
+      "description" : "Difficulty with Feeding"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/oxygen-saturation"
+      },
+      "name" : "EmCare.B10S2.DE08",
+      "description" : "The client's oxygen saturation is more than or equal to 90 %"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/consultation-status"
+      },
+      "name" : "Continue to Assess Sick Child",
+      "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/mucus-membrane-pallor"
+      },
+      "name" : "EmCare.B15S2.DE09",
+      "description" : "Mucous membrane pallor"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/emcarecondition"
+      },
+      "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/number-of-convulsions"
+      },
+      "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/reason-consultation"
+      },
+      "name" : "Reason for Consultation",
+      "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/malaria-microscopy-species"
+      },
+      "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vital-status"
+      },
+      "name" : "Related Person vital status",
+      "description" : "Codes representing possible values for the Provide an estimated age or estimated date of birth element"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/oral-fluid-test"
+      },
+      "name" : "EmCare.B22.DE08",
+      "description" : "Oral Fluid Test Results"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/child-last-hiv-status"
+      },
+      "name" : "EmCare.B17.DE30",
+      "description" : "Child's Last HIV Test Results"
     }],
     "page" : {
       "extension" : [{
