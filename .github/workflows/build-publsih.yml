@@ -60,7 +60,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
-          path: './output'
+          path: '/github/workspace/output'
 
   deploy:
     environment:
