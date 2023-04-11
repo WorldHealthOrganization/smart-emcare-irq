@@ -2,13 +2,13 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareb22assessmentstests version '1.0.1.rc12.build.357'
+library emcareb22assessmentstests version '1.0.1.rc12.build.472'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.1.rc12.build.357' called Base
-include emcareobservation version '1.0.1.rc12.build.357' called obs
-include emcarevalueset version '1.0.1.rc12.build.357' called val
-include emcarecombineddataelements version '1.0.1.rc12.build.357' called c
+include emcarebase version '1.0.1.rc12.build.472' called Base
+include emcareobservation version '1.0.1.rc12.build.472' called obs
+include emcarevalueset version '1.0.1.rc12.build.472' called val
+include emcarecombineddataelements version '1.0.1.rc12.build.472' called c
 
 
 
@@ -17,41 +17,32 @@ context Patient
 
 
 /* 
-force-collection : nan
+force-collection : 
     true
 */
 define "force-collection":
     true
 
 /* 
-ageinmonths : nan
+ageinmonths : 
     AgeInMonths()
 */
 define "ageinmonths":
     AgeInMonths()
 
 /* 
-ageindays : nan
+ageindays : 
     AgeInDays()
 */
 define "ageindays":
     AgeInDays()
-
-/* 
-a-breastfeedingtest : applicability-BreastFeedingTest
-    (    AgeInMonths()>=2 and AgeInMonths()<6 and  c."severe classification up to assessments and tests excluding severe dehydration" !=true)
-     or (    AgeInMonths()<2 and   "Breastfed" = true and c."yi severe classification other than severe dehydration" !=true)
-*/
-define "a-breastfeedingtest":
-    (    AgeInMonths()>=2 and AgeInMonths()<6 and  Coalesce(c."severe classification up to assessments and tests excluding severe dehydration",false)!=true)
-     or (    AgeInMonths()<2 and   Base.GetObsValue('EmCare.B21S1.DE06') = true and Coalesce(c."yi severe classification other than severe dehydration",false)!=true)
 
 /* alias applicability-breastfeedingtest : a-breastfeedingtest*/
 define "applicability-breastfeedingtest":
     "a-breastfeedingtest"
 
 /* 
-a-respiratoryrate : applicability-RespiratoryRate
+a-respiratoryrate : 
     ("Cough" = true or "Difficulty Breathing" = true or "AgeInMonths"<2) and o"Fast Breathing" is null
 */
 define "a-respiratoryrate":
@@ -62,7 +53,7 @@ define "applicability-respiratoryrate":
     "a-respiratoryrate"
 
 /* 
-a-bronchodilatortest : applicability-BronchodilatorTest
+a-bronchodilatortest : 
     ("Cough" = true or "Difficulty Breathing" = true) and "Wheezing" = true and (o"Fast Breathing" = true or "Chest Indrawing" = true) and  c."danger signs" != true and "Stridor in a calm child"= false and "Oxygen Saturation" >= 90 '%'
 */
 define "a-bronchodilatortest":
@@ -73,7 +64,7 @@ define "applicability-bronchodilatortest":
     "a-bronchodilatortest"
 
 /* 
-a-hemoglobin : applicability-Hemoglobin
+a-hemoglobin : 
     "Palmar pallor" = "Some palmar pallor" or "Palmar Pallor" = "Severe Palmar Pallor" or "Mucous membrane pallor" = "Some mucous membrane pallor" or "Mucous membrane pallor" = "Severe mucous membrane pallor"
 */
 define "a-hemoglobin":
@@ -84,7 +75,7 @@ define "applicability-hemoglobin":
     "a-hemoglobin"
 
 /* 
-a-secondtemperature : applicability-SecondTemperature
+a-secondtemperature : 
     c."psbi other than temperature" != true and AgeInMonths()<2 and "Axillary Temperature  (degrees Celcius)" > 38.5 'Cel'
 */
 define "a-secondtemperature":
@@ -95,7 +86,7 @@ define "applicability-secondtemperature":
     "a-secondtemperature"
 
 /* 
-a-fluidtest : applicability-FluidTest
+a-fluidtest : 
     ("Not able to drink or breastfeed" = true or "Vomiting Everything" = true or "Diarrhoea" = true) and o"Oral Fluid Test Results" is null
 */
 define "a-fluidtest":
@@ -106,28 +97,28 @@ define "applicability-fluidtest":
     "a-fluidtest"
 
 /* 
-respiratory rate profile : nan
+respiratory rate profile : 
     o"Respiratory Rate (breaths per minute)"
 */
 define "respiratory rate profile":
     Base.GetObsValue('EmCare.B22.DE01')
 
 /* 
-respiratory rate second count profile : nan
+respiratory rate second count profile : 
     o"Respiratory Rate Second Count (breaths per minute)"
 */
 define "respiratory rate second count profile":
     Base.GetObsValue('EmCare.B22.DE04')
 
 /* 
-fast breathing profile : nan
+fast breathing profile : 
     o"Fast Breathing"
 */
 define "fast breathing profile":
     Base.GetObsValue('EmCare.B22.DE07')
 
 /* 
-oftrp : Unable to Perform Oral Fluid Test Profile
+oftrp : 
     o"Unable to Perform Oral Fluid Test"
 */
 define "oftrp":
@@ -138,7 +129,7 @@ define "unable to perform oral fluid test profile":
     "oftrp"
 
 /* 
-ds : Danger Signs
+ds : 
     Coalesce(c."danger signs",false)
 */
 define "ds":
@@ -149,7 +140,7 @@ define "danger signs":
     "ds"
 
 /* 
-emcare.b7.de09 : Not able to drink or breastfeed
+emcare.b7.de09 : 
     Coalesce(o"Not able to drink or breastfeed",false)
 */
 define "emcare.b7.de09":
@@ -160,7 +151,7 @@ define "not able to drink or breastfeed":
     "emcare.b7.de09"
 
 /* 
-emcare.b7.de10 : Vomiting Everything
+emcare.b7.de10 : 
     Coalesce(o"Vomiting Everything",false)
 */
 define "emcare.b7.de10":

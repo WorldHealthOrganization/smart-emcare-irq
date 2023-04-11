@@ -2,12 +2,12 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareb22secondtemperature version '1.0.1.rc12.build.357'
+library emcareb22secondtemperature version '1.0.1.rc12.build.472'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.1.rc12.build.357' called Base
-include emcareobservation version '1.0.1.rc12.build.357' called obs
-include emcarevalueset version '1.0.1.rc12.build.357' called val
+include emcarebase version '1.0.1.rc12.build.472' called Base
+include emcareobservation version '1.0.1.rc12.build.472' called obs
+include emcarevalueset version '1.0.1.rc12.build.472' called val
 
 
 
@@ -16,7 +16,7 @@ context Patient
 
 
 /* 
-ageinmonths : Age
+ageinmonths : 
     AgeInMonths()
 */
 define "ageinmonths":

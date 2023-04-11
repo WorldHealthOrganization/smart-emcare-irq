@@ -2,14 +2,14 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareb1821signs2mm version '1.0.1.rc12.build.357'
+library emcareb1821signs2mm version '1.0.1.rc12.build.472'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.1.rc12.build.357' called Base
-include emcareobservation version '1.0.1.rc12.build.357' called obs
-include emcarevalueset version '1.0.1.rc12.build.357' called val
-include emcarezscore version '1.0.1.rc12.build.357' called Z
-include emcarecombineddataelements version '1.0.1.rc12.build.357' called c
+include emcarebase version '1.0.1.rc12.build.472' called Base
+include emcareobservation version '1.0.1.rc12.build.472' called obs
+include emcarevalueset version '1.0.1.rc12.build.472' called val
+include emcarezscore version '1.0.1.rc12.build.472' called Z
+include emcarecombineddataelements version '1.0.1.rc12.build.472' called c
 
 
 
@@ -18,21 +18,21 @@ context Patient
 
 
 /* 
-fever : nan
+fever : 
     c."fever"
 */
 define "fever":
     c."fever"
 
 /* 
-zscore : nan
+zscore : 
     Z."WAZ"
 */
 define "zscore":
     Z."WAZ"
 
 /* 
-ageinmonths : Age in Month
+ageinmonths : 
     AgeInMonths()
 */
 define "ageinmonths":
@@ -43,14 +43,14 @@ define "age in month":
     "ageinmonths"
 
 /* 
-ageindays : nan
+ageindays : 
     AgeInDays()
 */
 define "ageindays":
     AgeInDays()
 
 /* 
-emcare.b20s1.de01 : Diarrhoea
+emcare.b20s1.de01 : 
     o"Diarrhoea"
 */
 define "emcare.b20s1.de01":
@@ -61,7 +61,7 @@ define "diarrhoea":
     "emcare.b20s1.de01"
 
 /* 
-emcare.a.de31 : Biological Mother Vital Status
+emcare.a.de31 : 
     Base."Biological Mother Vital Status"
 */
 define "emcare.a.de31":
@@ -72,7 +72,7 @@ define "biological mother vital status":
     "emcare.a.de31"
 
 /* 
-emcare.b21s1.de01 : Breastfed
+emcare.b21s1.de01 : 
     o"Breastfed"
 */
 define "emcare.b21s1.de01":
@@ -83,7 +83,7 @@ define "breastfed":
     "emcare.b21s1.de01"
 
 /* 
-emcare.b18s1.de02 : Difficulty with Feeding
+emcare.b18s1.de02 : 
     o"Difficulty with Feeding"
 */
 define "emcare.b18s1.de02":
@@ -94,7 +94,7 @@ define "difficulty with feeding":
     "emcare.b18s1.de02"
 
 /* 
-yi_sever_but_dhey : YI severe classification other than severe dehydration
+yi_sever_but_dhey : 
     c."yi severe classification other than severe dehydration"
 */
 define "yi_sever_but_dhey":
@@ -105,7 +105,7 @@ define "yi severe classification other than severe dehydration":
     "yi_sever_but_dhey"
 
 /* 
-yi_sever : YI severe classification
+yi_sever : 
     c."yi severe classification"
 */
 define "yi_sever":
@@ -116,7 +116,7 @@ define "yi severe classification":
     "yi_sever"
 
 /* 
-emcare.b7.de03 : Convulsion(s) in this Illness
+emcare.b7.de03 : 
     o"Convulsion(s) in this Illness"
 */
 define "emcare.b7.de03":
@@ -127,28 +127,28 @@ define "convulsion(s) in this illness":
     "emcare.b7.de03"
 
 /* 
-respiratory rate profile : nan
+respiratory rate profile : 
     o"Respiratory Rate (breaths per minute)"
 */
 define "respiratory rate profile":
     Base.GetObsValue('EmCare.B22.DE01')
 
 /* 
-force-collection : nan
+force-collection : 
     false
 */
 define "force-collection":
     false
 
 /* 
-respiratory rate second count profile : nan
+respiratory rate second count profile : 
     o"Respiratory Rate Second Count (breaths per minute)"
 */
 define "respiratory rate second count profile":
     Base.GetObsValue('EmCare.B22.DE04')
 
 /* 
-fast breathing profile : nan
+fast breathing profile : 
     o"Fast Breathing"
 */
 define "fast breathing profile":

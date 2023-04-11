@@ -195,11 +195,11 @@ group emcareobservationemcareb7b8b9de01(source src,target tgt){
     src.item first as item  where linkId = 'EmCare.B7-B8-B9.DE01' and answer.exists() then {
         item.answer first as a then {
             a.value as val then {
-                val where val.code = 'none' -> tgt.status = 'cancelled' '8ab1d7a5';
+                val where val.code = 'none' -> tgt.swrapin_entry_createtatus = 'cancelled' 'd0a13fda';
                 val where val.code != 'none' -> tgt.value = create('CodeableConcept') as cc, cc.coding = val, tgt.status = 'final' 'a1050460';
-            } '4ca9082e';
-        } '7c587a4b';
-    } 'a9969eeb';
+            } '310f4b1f';
+        } '6af9bfcc';
+    } '1deb5925';
 }
 
 group emcareobservationemcareb7de03(source src,target tgt){
@@ -407,13 +407,13 @@ group emcareobservationemcareb22de08(source src,target tgt){
             itm2.item first as item  where linkId =  'EmCare.B22.DE08' and answer.exists() then {
                 item.answer first as a then {
                     a.value as val then {
-                        val where val.code = 'none' -> tgt.status = 'cancelled' '8ab1d7a5';
+                        val where val.code = 'none' -> tgt.swrapin_entry_createtatus = 'cancelled' 'd0a13fda';
                         val where val.code != 'none' -> tgt.value = create('CodeableConcept') as cc, cc.coding = val, tgt.status = 'final' 'a1050460';
-                    } '4ca9082e';
-                } '7c587a4b';
-            } '5c3aaa19';
-        } '13ce6ac7';
-    } '77d0e60e';
+                    } '310f4b1f';
+                } '6af9bfcc';
+            } '217a0abc';
+        } '1ebe5f9b';
+    } '4113c5c7';
 }
 
 group emcareobservationemcareb22de14(source src,target tgt){
@@ -538,12 +538,12 @@ group emcareobservationemcareb22de16(source src,target tgt){
             itm2.item first as item  where linkId =  'EmCare.B22.DE16' and answer.exists() then {
                 item.answer first as a then {
                     a.value as val then {
-                        val where val.code = 'none' -> tgt.status = 'cancelled' '8ab1d7a5';
+                        val where val.code = 'none' -> tgt.swrapin_entry_createtatus = 'cancelled' 'd0a13fda';
                         val where val.code != 'none' -> tgt.value = create('CodeableConcept') as cc, cc.coding = val, tgt.status = 'final' 'a1050460';
-                    } '4ca9082e';
-                } '7c587a4b';
-            } 'd9aa1777';
-        } '33da5fe7';
-    } 'e9e2ff9b';
+                    } '310f4b1f';
+                } '6af9bfcc';
+            } '56e7c54b';
+        } '270c6d04';
+    } '1b98a048';
 }
 

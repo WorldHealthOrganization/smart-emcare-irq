@@ -2,13 +2,13 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareb22fluidtest version '1.0.1.rc12.build.357'
+library emcareb22fluidtest version '1.0.1.rc12.build.472'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.1.rc12.build.357' called Base
-include emcareobservation version '1.0.1.rc12.build.357' called obs
-include emcarevalueset version '1.0.1.rc12.build.357' called val
-include emcarecombineddataelements version '1.0.1.rc12.build.357' called c
+include emcarebase version '1.0.1.rc12.build.472' called Base
+include emcareobservation version '1.0.1.rc12.build.472' called obs
+include emcarevalueset version '1.0.1.rc12.build.472' called val
+include emcarecombineddataelements version '1.0.1.rc12.build.472' called c
 
 
 
@@ -17,7 +17,7 @@ context Patient
 
 
 /* 
-oftrp : Unable to Perform Oral Fluid Test Profile
+oftrp : 
     o"Unable to Perform Oral Fluid Test"
 */
 define "oftrp":
@@ -28,7 +28,7 @@ define "unable to perform oral fluid test profile":
     "oftrp"
 
 /* 
-ds : Danger Signs
+ds : 
     Coalesce(c."danger signs",false)
 */
 define "ds":
@@ -39,7 +39,7 @@ define "danger signs":
     "ds"
 
 /* 
-emcare.b7.de09 : Not able to drink or breastfeed
+emcare.b7.de09 : 
     Coalesce(o"Not able to drink or breastfeed",false)
 */
 define "emcare.b7.de09":
@@ -50,7 +50,7 @@ define "not able to drink or breastfeed":
     "emcare.b7.de09"
 
 /* 
-emcare.b7.de10 : Vomiting Everything
+emcare.b7.de10 : 
     Coalesce(o"Vomiting Everything",false)
 */
 define "emcare.b7.de10":
