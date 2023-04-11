@@ -2,12 +2,12 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareb22respiratoryrate version '1.0.1.rc12.build.357'
+library emcareb22respiratoryrate version '1.0.1.rc12.build.480'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.1.rc12.build.357' called Base
-include emcareobservation version '1.0.1.rc12.build.357' called obs
-include emcarevalueset version '1.0.1.rc12.build.357' called val
+include emcarebase version '1.0.1.rc12.build.480' called Base
+include emcareobservation version '1.0.1.rc12.build.480' called obs
+include emcarevalueset version '1.0.1.rc12.build.480' called val
 
 
 
@@ -16,7 +16,7 @@ context Patient
 
 
 /* 
-ageinmonths : Age
+ageinmonths : 
     AgeInMonths()
 */
 define "ageinmonths":
@@ -27,28 +27,28 @@ define "age":
     "ageinmonths"
 
 /* 
-respiratory rate profile : nan
+respiratory rate profile : 
     o"Respiratory Rate (breaths per minute)"
 */
 define "respiratory rate profile":
     Base.GetObsValue('EmCare.B22.DE01')
 
 /* 
-force-collection : nan
+force-collection : 
     false
 */
 define "force-collection":
     false
 
 /* 
-respiratory rate second count profile : nan
+respiratory rate second count profile : 
     o"Respiratory Rate Second Count (breaths per minute)"
 */
 define "respiratory rate second count profile":
     Base.GetObsValue('EmCare.B22.DE04')
 
 /* 
-fast breathing profile : nan
+fast breathing profile : 
     o"Fast Breathing"
 */
 define "fast breathing profile":

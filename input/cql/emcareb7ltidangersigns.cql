@@ -2,13 +2,13 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareb7ltidangersigns version '1.0.1.rc12.build.357'
+library emcareb7ltidangersigns version '1.0.1.rc12.build.480'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.1.rc12.build.357' called Base
-include emcareobservation version '1.0.1.rc12.build.357' called obs
-include emcarevalueset version '1.0.1.rc12.build.357' called val
-include emcarecombineddataelements version '1.0.1.rc12.build.357' called c
+include emcarebase version '1.0.1.rc12.build.480' called Base
+include emcareobservation version '1.0.1.rc12.build.480' called obs
+include emcarevalueset version '1.0.1.rc12.build.480' called val
+include emcarecombineddataelements version '1.0.1.rc12.build.480' called c
 
 
 
@@ -17,14 +17,14 @@ context Patient
 
 
 /* 
-ageinmonth.cql : nan
+ageinmonth.cql : 
     AgeInMonths()
 */
 define "ageinmonth.cql":
     AgeInMonths()
 
 /* 
-oftrp : Unable to Perform Oral Fluid Test Profile
+oftrp : 
     o"Unable to Perform Oral Fluid Test"
 */
 define "oftrp":
@@ -35,7 +35,7 @@ define "unable to perform oral fluid test profile":
     "oftrp"
 
 /* 
-ds : Danger Signs
+ds : 
     Coalesce(c."danger signs",false)
 */
 define "ds":

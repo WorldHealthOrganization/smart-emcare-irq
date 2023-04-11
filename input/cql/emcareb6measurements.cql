@@ -2,13 +2,13 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareb6measurements version '1.0.1.rc12.build.357'
+library emcareb6measurements version '1.0.1.rc12.build.480'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.1.rc12.build.357' called Base
-include emcareobservation version '1.0.1.rc12.build.357' called obs
-include emcarevalueset version '1.0.1.rc12.build.357' called val
-include emcarezscore version '1.0.1.rc12.build.357' called Z
+include emcarebase version '1.0.1.rc12.build.480' called Base
+include emcareobservation version '1.0.1.rc12.build.480' called obs
+include emcarevalueset version '1.0.1.rc12.build.480' called val
+include emcarezscore version '1.0.1.rc12.build.480' called Z
 
 
 
@@ -17,7 +17,7 @@ context Patient
 
 
 /* 
-ageindays : Age in Days
+ageindays : 
     AgeInDays()
 */
 define "ageindays":
@@ -28,7 +28,7 @@ define "age in days":
     "ageindays"
 
 /* 
-pastweightactualised : Weight based on the previous mesurements
+pastweightactualised : 
     Z."pastweightactualised"
 */
 define "pastweightactualised":
@@ -39,7 +39,7 @@ define "weight based on the previous mesurements":
     "pastweightactualised"
 
 /* 
-ageinmonths : Age in months
+ageinmonths : 
     AgeInMonths()
 */
 define "ageinmonths":
@@ -50,7 +50,7 @@ define "age in months":
     "ageinmonths"
 
 /* 
-ageinyears : Age in years
+ageinyears : 
     AgeInYears()
 */
 define "ageinyears":

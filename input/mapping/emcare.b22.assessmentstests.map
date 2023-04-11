@@ -600,12 +600,12 @@ group emcareobservationemcareb22de08(source src,target tgt){
         itm1.item first as item  where linkId =  'EmCare.B22.DE08' and answer.exists() then {
             item.answer first as a then {
                 a.value as val then {
-                    val where val.code = 'none' -> tgt.status = 'cancelled' '8ab1d7a5';
+                    val where val.code = 'none' -> tgt.swrapin_entry_createtatus = 'cancelled' 'd0a13fda';
                     val where val.code != 'none' -> tgt.value = create('CodeableConcept') as cc, cc.coding = val, tgt.status = 'final' 'a1050460';
-                } '4ca9082e';
-            } '7c587a4b';
-        } '37d7a517';
-    } '46cd7b01';
+                } '310f4b1f';
+            } '6af9bfcc';
+        } '3b9ba04d';
+    } '6d73c74e';
 }
 
 group emcareobservationemcareb22de14(source src,target tgt){
@@ -723,12 +723,12 @@ group emcareobservationemcareb22de16(source src,target tgt){
         itm1.item first as item  where linkId =  'EmCare.B22.DE16' and answer.exists() then {
             item.answer first as a then {
                 a.value as val then {
-                    val where val.code = 'none' -> tgt.status = 'cancelled' '8ab1d7a5';
+                    val where val.code = 'none' -> tgt.swrapin_entry_createtatus = 'cancelled' 'd0a13fda';
                     val where val.code != 'none' -> tgt.value = create('CodeableConcept') as cc, cc.coding = val, tgt.status = 'final' 'a1050460';
-                } '4ca9082e';
-            } '7c587a4b';
-        } '3578b28a';
-    } 'fcd80e66';
+                } '310f4b1f';
+            } '6af9bfcc';
+        } 'b1dde0d2';
+    } 'b36b8a09';
 }
 
 group emcareobservationemcareb22de17emcareb22de18t(source src,target tgt){
