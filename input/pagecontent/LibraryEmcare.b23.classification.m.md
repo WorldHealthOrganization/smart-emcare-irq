@@ -1,6 +1,7 @@
 #### Inputs
 
 required for the execution
+
 | type | code / path | valueType | Description |
 |---|---|---|---|
 | Observation | EmCare.B22.DE50 | boolean/quantity | Measured Temperature (second measurement) |
@@ -12,3 +13,4 @@ required for the execution
 | Observation | EmCare.B19S2.DE02 | boolean/quantity | Yellow Palms or Yellow Soles |
 | Observation | EmCare.B11S1.DE01 | boolean/quantity | Diarrhoea |
 | Observation | EmCare.B21S2.DE30 | boolean/quantity | Ulcers or White Patches in Mouth |
+
