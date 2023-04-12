@@ -58,7 +58,7 @@
   		<tr><th>Resource</th><th>Type</th><th>Description</th></tr>
   	</thead>
   	<tbody>
-  		<tr><td><a href="https://raw.githubusercontent.com/WorldHealthOrganization/smart-anc/master/bundles/plandefinition/ANCDT01/ANCDT01-bundle.json">ANCDT-01-bundle</a></td><td>Bundle</td><td>The PlanDefinition and associated dependencies for Decision Table 01 - Danger Signs</td></tr>
+  		<tr><td><a href="https://raw.githubusercontent.com/WorldHealthOrganization/smart-emcare-irq/main/bundles/bundle.json">EmCare-bundle</a></td><td>Bundle</td><td>All EmCare resources</td></tr>
   	</tbody>
   </table>
 
@@ -67,12 +67,14 @@
   <ul>
     <li>PlanDefinition DT01 - The Event-Condition-Action rule that associates the decision logic for Danger Signs to the Quick Check activity</li>
     <li>Library DT01 - The logic for evaluating the criteria of the decision</li>
-    <li>Library ANCCommon - ANC common functions</li>
-    <li>Library ANCConcepts - Concept dictionary for the ANC content</li>
-    <li>Library ANCDataElements - Expressions for referencing data elements throughout ANC content</li>
-    <li>Library ANCContactDataElements - Expressions for referencing data elements from the perspective of an encounter</li>
+    <li>Library EmCareBase - EmCare common functions</li>
+    <li>Library AnthroBase - Z-Score related common function</li>
+    <li>Library Anthro X (WeightForAge ...) - Specific libraries that are hosting the z-score tables and function</li>
+    <li>Library EmCare X - Expressions required in the PlanDefinition and other questionnaire</li>
+    <li>CodeSystem EmCare custom -  host all EmCare codes </li>
     <li>ValueSets - Vocabulary resources used by the decision logic</li>
-    <li>Test Data - Test resources for the "charity-with-danger-signs" test patient, which should evaluate to Referral for Central Cyanosis</li>
+    <li>StructureMaps - transformation of collected data via questionnaire to FHIR ressource</li>
+    <li>StructureDefinion - Profiles and require extensions </li>
   </ul>
 
   <div class="example">
