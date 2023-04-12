@@ -1,7 +1,5 @@
 This implementation guide provides computable content based on the Digital Adaptation Kit (DAK) to facilitate the implementation of the Clinical Care in Crises guidelines. The following diagram illustrates the components of a Digital Adaptation Kit and how those components are represented in FHIR:
 
-<img style="width:100%" src="assets/images/dak-to-cpg.jpg"/>
-
 
 * [**General Approach**](#general-approach) General Approach describe how the differentes activities are articulated in the DAK
 
@@ -59,14 +57,14 @@ The key activities for Clinical Care in Crises (EmCare) are the following
 
 ##### Assessement and test sub-activities
 
-|Code|Description|Applicability |
+|Code|Description|Applicability|
 |---|---|---|
 |[Breastfeeding](ActivityDefinition-emcare.b22.breastfeeding.json)|[NEED_INPUT]|AgeInMonths >=2 and AgeInMonths  <6 and "severe classification up to assessments and tests excluding severe dehydration" !=true OR AgeInMonths <2 and  "Breastfed" = true and "yi severe classification other than severe dehydration" !=true |
 |[Respiratory Rate](ActivityDefinition-emcare.b22.respiratoryrate.json)|[NEED_INPUT]|("Cough" = true or "Difficulty Breathing" = true or "AgeInMonths"<2) and "Fast Breathing" is null |
 |[Bronchodilator](ActivityDefinition-emcare.b22.bronchodilatortest.json)|[NEED_INPUT]|("Cough" = true or "Difficulty Breathing" = true) and "Wheezing" = true and ("Fast Breathing" = true or "Chest Indrawing" = true) and  "danger signs" != true and "Stridor in a calm child"= false and "Oxygen Saturation" >= 90 '%'|
 |[Hemoglobin](ActivityDefinition-emcare.b22.hemoglobin.json)|[NEED_INPUT]|"Palmar pallor" = "Some palmar pallor" or "Palmar Pallor" = "Severe Palmar Pallor" or "Mucous membrane pallor" = "Some mucous membrane pallor" or "Mucous membrane pallor" = "Severe mucous membrane pallor"|
 |[Second Temperature](ActivityDefinition-emcare.b22.secondtemperature.json)|[NEED_INPUT]|"psbi other than temperature" != true and AgeInMonths()<2 and "Axillary Temperature  (degrees Celcius)" > 38.5 'Cel'| 
-|[FluidTest](ActivityDefinition-emcare.b22.fluidtest.json)|[NEED_INPUT]|("Not able to drink or breastfeed" = true or "Vomiting Everything" = true or "Diarrhoea" = true) and o"Oral Fluid Test Results" is null|
+|[FluidTest](ActivityDefinition-emcare.b22.fluidtest.json)|[NEED_INPUT]|("Not able to drink or breastfeed" = true or "Vomiting Everything" = true or "Diarrhoea" = true) and "Oral Fluid Test Results" is null|
 
 #### Sequence Diagrams
 
