@@ -2,13 +2,13 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareb22fluidtest version '1.0.1.rc12.build.480'
+library emcareb22fluidtest version '1.0.1.rc12.build.483'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.1.rc12.build.480' called Base
-include emcareobservation version '1.0.1.rc12.build.480' called obs
-include emcarevalueset version '1.0.1.rc12.build.480' called val
-include emcarecombineddataelements version '1.0.1.rc12.build.480' called c
+include emcarebase version '1.0.1.rc12.build.483' called Base
+include emcareobservation version '1.0.1.rc12.build.483' called obs
+include emcarevalueset version '1.0.1.rc12.build.483' called val
+include emcarecombineddataelements version '1.0.1.rc12.build.483' called c
 
 
 

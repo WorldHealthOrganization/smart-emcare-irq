@@ -1,6 +1,8 @@
 This implementation guide provides computable content based on the Digital Adaptation Kit (DAK) to facilitate the implementation of the Clinical Care in Crises guidelines. The following diagram illustrates the components of a Digital Adaptation Kit and how those components are represented in FHIR:
 
 <img style="width:100%" src="assets/images/dak-to-cpg.jpg"/>
+
+
 * [**General Approach**](#general-approach) General Approach describe how the differentes activities are articulated in the DAK
 
 
@@ -55,7 +57,8 @@ The key activities for Clinical Care in Crises (EmCare) are the following
 |[EmCare.B23.Classification.2m.p](ActivityDefinition-emcare.b23.classification.json)|[NEED_INPUT]|>= 2 months|>= 2 months|
 |[EmCare.Treatment](ActivityDefinition-emcare.treatment.json)|[NEED_INPUT]|Any|Any|
 
-Assessement and test sub-activities
+##### Assessement and test sub-activities
+
 |Code|Description|Applicability |
 |---|---|---|
 |[Breastfeeding](ActivityDefinition-emcare.b22.breastfeeding.json)|[NEED_INPUT]|AgeInMonths >=2 and AgeInMonths  <6 and "severe classification up to assessments and tests excluding severe dehydration" !=true OR AgeInMonths <2 and  "Breastfed" = true and "yi severe classification other than severe dehydration" !=true |

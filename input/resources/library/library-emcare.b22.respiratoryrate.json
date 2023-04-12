@@ -8,7 +8,7 @@
             "value": "emcare.b22.respiratoryrate"
         }
     ],
-    "version": "1.0.1.rc12.build.480",
+    "version": "1.0.1.rc12.build.483",
     "name": "emcareb22respiratoryrate",
     "title": "EmCare.B22.RespiratoryRate",
     "status": "active",
