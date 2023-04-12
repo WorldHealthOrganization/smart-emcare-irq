@@ -35,8 +35,13 @@ Each activity may require those artefacts:
 - StructureMap
 - *task
 
-### Business Processes
+#### Sequence Diagrams
 
+Diagram picturing the relation between activities
+
+<img style="width:100%" src="assets/images/activities-sequence.png"/>
+
+### Activities
 
 The key activities for Clinical Care in Crises (EmCare) are the following
 
@@ -66,10 +71,6 @@ The key activities for Clinical Care in Crises (EmCare) are the following
 |[Second Temperature](ActivityDefinition-emcare.b22.secondtemperature.json)|[NEED_INPUT]|"psbi other than temperature" != true and AgeInMonths()<2 and "Axillary Temperature  (degrees Celcius)" > 38.5 'Cel'| 
 |[FluidTest](ActivityDefinition-emcare.b22.fluidtest.json)|[NEED_INPUT]|("Not able to drink or breastfeed" = true or "Vomiting Everything" = true or "Diarrhoea" = true) and "Oral Fluid Test Results" is null|
 
-#### Sequence Diagrams
-
-<img style="width:100%" src="assets/images/activities-sequence.png"/>
-
 ### Data Elements
 
 Data elements are represented within this implementation guide using a codessystem  of the appropriate resource as well as libraries of associated calculation logic for calculated, or inferred, data elements.
@@ -80,7 +81,7 @@ Note that some "Data elements" from the perspective of the Data Dictionary prese
 
 The following diagram illustrates the processing used to derive FHIR terminology and profile resources from the data dictionary:
 
-<img style="width:100%" src="assets/images/data-element-processing.jpg"/>
+<img style="width:100%" src="assets/images/dak-processing.png"/>
 
 The inputs on the left consist of:
 
