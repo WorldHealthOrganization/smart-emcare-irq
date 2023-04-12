@@ -162,24 +162,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#encounter-activities" id="markdown-toc-encounter-activities">Encounter Activities</a></li>
   <li><a href="#business-processes" id="markdown-toc-business-processes">Business Processes</a></li>
   <li><a href="#data-elements" id="markdown-toc-data-elements">Data Elements</a></li>
-  <li><a href="#activityemcarearegistrationp" id="markdown-toc-activityemcarearegistrationp">ActivityEmcarea.registration.p</a></li>
-  <li><a href="#activityemcarebregistratione" id="markdown-toc-activityemcarebregistratione">ActivityEmcareb.registration.e</a></li>
-  <li><a href="#activityemcareb7lti-dangersigns" id="markdown-toc-activityemcareb7lti-dangersigns">ActivityEmcare.b7.lti-dangersigns</a></li>
-  <li><a href="#activityemcareb6measurements" id="markdown-toc-activityemcareb6measurements">ActivityEmcare.b6.measurements</a></li>
-  <li><a href="#activityemcareb18-21symptoms2mm" id="markdown-toc-activityemcareb18-21symptoms2mm">ActivityEmcare.b18-21.symptoms.2m.m</a></li>
-  <li><a href="#activityemcareb18-21signs2mm" id="markdown-toc-activityemcareb18-21signs2mm">ActivityEmcare.b18-21.signs.2m.m</a></li>
-  <li><a href="#activityemcareb10-14symptoms2mp" id="markdown-toc-activityemcareb10-14symptoms2mp">ActivityEmcare.b10-14.symptoms.2m.p</a></li>
-  <li><a href="#activityemcareb10-16signs2mp" id="markdown-toc-activityemcareb10-16signs2mp">ActivityEmcare.b10-16.signs.2m.p</a></li>
-  <li><a href="#activityemcareb22assessmentstests" id="markdown-toc-activityemcareb22assessmentstests">ActivityEmcare.b22.assessmentstests</a></li>
-  <li><a href="#activityemcareb22fluidtest" id="markdown-toc-activityemcareb22fluidtest">ActivityEmcare.b22.fluidtest</a></li>
-  <li><a href="#activityemcareb22respiratoryrate" id="markdown-toc-activityemcareb22respiratoryrate">ActivityEmcare.b22.respiratoryrate</a></li>
-  <li><a href="#activityemcareb22bronchodilatortest" id="markdown-toc-activityemcareb22bronchodilatortest">ActivityEmcare.b22.bronchodilatortest</a></li>
-  <li><a href="#activityemcareb22breastfeeding" id="markdown-toc-activityemcareb22breastfeeding">ActivityEmcare.b22.breastfeeding</a></li>
-  <li><a href="#activityemcareb22hemoglobin" id="markdown-toc-activityemcareb22hemoglobin">ActivityEmcare.b22.hemoglobin</a></li>
-  <li><a href="#activityemcareb22secondtemperature" id="markdown-toc-activityemcareb22secondtemperature">ActivityEmcare.b22.secondtemperature</a></li>
-  <li><a href="#activityemcareb23classificationm" id="markdown-toc-activityemcareb23classificationm">ActivityEmcare.b23.classification.m</a></li>
-  <li><a href="#activityemcareb23classification" id="markdown-toc-activityemcareb23classification">ActivityEmcare.b23.classification</a></li>
-  <li><a href="#activityemcaretreatment" id="markdown-toc-activityemcaretreatment">ActivityEmcare.treatment</a></li>
   <li><a href="#decision-support-logic" id="markdown-toc-decision-support-logic">Decision-support Logic</a></li>
   <li><a href="#plan-definitions-by-decision-id" id="markdown-toc-plan-definitions-by-decision-id">Plan Definitions by Decision ID</a></li>
   <li><a href="#functional-requirements" id="markdown-toc-functional-requirements">Functional requirements</a></li>
@@ -189,6 +171,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>This implementation guide provides computable content based on the Digital Adaptation Kit (DAK) to facilitate the implementation of the Clinical Care in Crises guidelines. The following diagram illustrates the components of a Digital Adaptation Kit and how those components are represented in FHIR:</p>
 
 <p><img src="assets/images/dak-to-cpg.jpg" style="width:100%"/></p>
+
 <ul>
   <li><a href="#general-approach"><strong>General Approach</strong></a> General Approach describe how the differentes activities are articulated in the DAK</li>
 </ul>
@@ -247,13 +230,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>New Patient</td>
     </tr>
     <tr>
-      <td><a name="l507">​</a><a href="ActivityDefinition-emcarea.registration.e.json">EmCareA.Registration.E </a></td>
+      <td><a name="l435">​</a><a href="ActivityDefinition-emcarea.registration.e.json">EmCareA.Registration.E </a></td>
       <td>New Encounter registration  [NEED_INPUT]</td>
       <td>Any</td>
       <td>New Encounter</td>
     </tr>
     <tr>
-      <td><a name="l523">​</a><a href="ActivityDefinition-emcare.b7.lti.dangersigns.json">EmCare.B7.LTI-DangerSigns </a></td>
+      <td><a name="l451">​</a><a href="ActivityDefinition-emcare.b7.lti.dangersigns.json">EmCare.B7.LTI-DangerSigns </a></td>
       <td>Danger signs [NEED_INPUT]</td>
       <td>&gt;= 2 months</td>
       <td>Registration</td>
@@ -315,15 +298,49 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<p>Assessement and test sub-activities
-|Code|Description|Applicability |
-|—|—|—|
-|<a href="ActivityDefinition-emcare.b22.breastfeeding.json">Breastfeeding</a>|[NEED_INPUT]|AgeInMonths &gt;=2 and AgeInMonths  &lt;6 and “severe classification up to assessments and tests excluding severe dehydration” !=true OR AgeInMonths &lt;2 and  “Breastfed” = true and “yi severe classification other than severe dehydration” !=true |
-|<a href="ActivityDefinition-emcare.b22.respiratoryrate.json">Respiratory Rate</a>|[NEED_INPUT]|(“Cough” = true or “Difficulty Breathing” = true or “AgeInMonths”&lt;2) and “Fast Breathing” is null |
-|<a href="ActivityDefinition-emcare.b22.bronchodilatortest.json">Bronchodilator</a>|[NEED_INPUT]|(“Cough” = true or “Difficulty Breathing” = true) and “Wheezing” = true and (“Fast Breathing” = true or “Chest Indrawing” = true) and  “danger signs” != true and “Stridor in a calm child”= false and “Oxygen Saturation” &gt;= 90 ‘%’|
-|<a href="ActivityDefinition-emcare.b22.hemoglobin.json">Hemoglobin</a>|[NEED_INPUT]|”Palmar pallor” = “Some palmar pallor” or “Palmar Pallor” = “Severe Palmar Pallor” or “Mucous membrane pallor” = “Some mucous membrane pallor” or “Mucous membrane pallor” = “Severe mucous membrane pallor”|
-|<a href="ActivityDefinition-emcare.b22.secondtemperature.json">Second Temperature</a>|[NEED_INPUT]|”psbi other than temperature” != true and AgeInMonths()&lt;2 and “Axillary Temperature  (degrees Celcius)” &gt; 38.5 ‘Cel’| 
-|<a href="ActivityDefinition-emcare.b22.fluidtest.json">FluidTest</a>|[NEED_INPUT]|(“Not able to drink or breastfeed” = true or “Vomiting Everything” = true or “Diarrhoea” = true) and o”Oral Fluid Test Results” is null|</p>
+<h5 id="assessement-and-test-sub-activities">Assessement and test sub-activities</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+      <th>Applicability</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="ActivityDefinition-emcare.b22.breastfeeding.json">Breastfeeding</a></td>
+      <td>[NEED_INPUT]</td>
+      <td>AgeInMonths &gt;=2 and AgeInMonths  &lt;6 and “severe classification up to assessments and tests excluding severe dehydration” !=true OR AgeInMonths &lt;2 and  “Breastfed” = true and “yi severe classification other than severe dehydration” !=true</td>
+    </tr>
+    <tr>
+      <td><a href="ActivityDefinition-emcare.b22.respiratoryrate.json">Respiratory Rate</a></td>
+      <td>[NEED_INPUT]</td>
+      <td>(“Cough” = true or “Difficulty Breathing” = true or “AgeInMonths”&lt;2) and “Fast Breathing” is null</td>
+    </tr>
+    <tr>
+      <td><a href="ActivityDefinition-emcare.b22.bronchodilatortest.json">Bronchodilator</a></td>
+      <td>[NEED_INPUT]</td>
+      <td>(“Cough” = true or “Difficulty Breathing” = true) and “Wheezing” = true and (“Fast Breathing” = true or “Chest Indrawing” = true) and  “danger signs” != true and “Stridor in a calm child”= false and “Oxygen Saturation” &gt;= 90 ‘%’</td>
+    </tr>
+    <tr>
+      <td><a href="ActivityDefinition-emcare.b22.hemoglobin.json">Hemoglobin</a></td>
+      <td>[NEED_INPUT]</td>
+      <td>“Palmar pallor” = “Some palmar pallor” or “Palmar Pallor” = “Severe Palmar Pallor” or “Mucous membrane pallor” = “Some mucous membrane pallor” or “Mucous membrane pallor” = “Severe mucous membrane pallor”</td>
+    </tr>
+    <tr>
+      <td><a href="ActivityDefinition-emcare.b22.secondtemperature.json">Second Temperature</a></td>
+      <td>[NEED_INPUT]</td>
+      <td>“psbi other than temperature” != true and AgeInMonths()&lt;2 and “Axillary Temperature  (degrees Celcius)” &gt; 38.5 ‘Cel’</td>
+    </tr>
+    <tr>
+      <td><a href="ActivityDefinition-emcare.b22.fluidtest.json">FluidTest</a></td>
+      <td>[NEED_INPUT]</td>
+      <td>(“Not able to drink or breastfeed” = true or “Vomiting Everything” = true or “Diarrhoea” = true) and o”Oral Fluid Test Results” is null</td>
+    </tr>
+  </tbody>
+</table>
 
 <h4 id="sequence-diagrams">Sequence Diagrams</h4>
 
@@ -333,7 +350,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Data elements are represented within this implementation guide using a codessystem  of the appropriate resource as well as libraries of associated calculation logic for calculated, or inferred, data elements.</p>
 
-<p>Note that some “Data elements” from the perspective of the Data Dictionary presented in the DAK are actually rollups. For example, Patient last name is a specific data element within the DAK, but is represented as one of many elements in the ANCPatient profile.</p>
+<p>Note that some “Data elements” from the perspective of the Data Dictionary presented in the DAK are actually rollups. For example, Patient last name is a specific data element within the DAK, but is represented as one of many elements in the EmCare Patient profile.</p>
 
 <h4 id="data-element-processing">Data Element Processing</h4>
 
@@ -349,13 +366,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>FHIR mappings for each element, establishing a path to a FHIR resource type and element, as well as a base profile and establishing contexts for the element</li>
 </ol>
 
-<p>NOTE: The FHIR mappings are not part of the Digital Adaptation Kit, but are introduced as part of this implementation guide. The xls_form_iraq_v1.xlsx spreadsheet in the <code class="language-plaintext highlighter-rouge">input/l2</code> folder is the source for these mappings, and was created by copying the WHO_ANC spreadsheet from the Digital Adaptation Kit following the pyfhirsdc format, and then adding the FHIR mapping columns and providing the individual data element mappings.</p>
+<p>NOTE: The FHIR mappings are not part of the Digital Adaptation Kit, but are introduced as part of this implementation guide. The xls_form_iraq_v1.xlsx spreadsheet in the <code class="language-plaintext highlighter-rouge">input/l2</code> folder is the source for these mappings, and was created by copying the WHO L2 spreadsheet from the Digital Adaptation Kit following the pyfhirsdc format, and then adding the FHIR mapping columns and providing the individual data element mappings.</p>
 
 <p>The outputs on the right consist of:</p>
 
 <ol>
-  <li><strong>CodeSystem:</strong> An ANC-specific code system that contains concepts for each element and input option in the data dictionary</li>
-  <li><strong>ConceptMap:</strong> Mappings from each code in the ANC-specific code system to the various standard terminologies</li>
+  <li><strong>CodeSystem:</strong> An EmCare-specific code system that contains concepts for each element and input option in the data dictionary</li>
+  <li><strong>ConceptMap:</strong> Mappings from each code in the EmCare-specific code system to the various standard terminologies (still to be developped)</li>
   <li><strong>ValueSet:</strong> Valuesets for each data element concept and the possible values for that concept</li>
   <li><strong>Profile:</strong> StructureDefinition resources for the profiles (and any necessary extensions) to represent the data elements as FHIR resources</li>
   <li><strong>Questionnaire:</strong> Questionnaire resources, one for each activity, with questions for each data element used by the activity</li>
@@ -379,13 +396,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </thead>
   <tbody>
     <tr>
-      <td><a name="l824">​</a><a href="structuredefinition-emcare-condition.html">EmCare Condition</a></td>
+      <td><a name="l833">​</a><a href="structuredefinition-emcare-condition.html">EmCare Condition</a></td>
     </tr>
     <tr>
-      <td><a name="l831">​</a><a href="structuredefinition-emcare-observation.html">EmCare Observation</a></td>
+      <td><a name="l840">​</a><a href="structuredefinition-emcare-observation.html">EmCare Observation</a></td>
     </tr>
     <tr>
-      <td><a name="l838">​</a><a href="structuredefinition-emcare-patient.html">EmCare Patient</a></td>
+      <td><a name="l847">​</a><a href="structuredefinition-emcare-patient.html">EmCare Patient</a></td>
     </tr>
   </tbody>
 </table>
@@ -394,637 +411,2954 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>The following index lists all data elements, grouped by their activity:</p>
 
-<h3 id="activityemcarearegistrationp">ActivityEmcarea.registration.p</h3>
+<h4 id="activityemcarearegistrationp">ActivityEmcarea.registration.p</h4>
 
 <h4 id="ouputs">Ouputs</h4>
 
-<p>ouputs generated by the structureMaps
-| type | code / path | valueType | Description |
-|—|—|—|—|
-| Patient | name | HumanName | set a ressource value |
-| RelatedPerson | name | HumanName | set a ressource value |
-| CommunicationRequest | EmCare.A.DE38 | N/A | set a communication request to the care giver |</p>
+<p>ouputs generated by the structureMaps</p>
 
-<h3 id="activityemcarebregistratione">ActivityEmcareb.registration.e</h3>
+<table>
+  <thead>
+    <tr>
+      <th>type</th>
+      <th>code / path</th>
+      <th>valueType</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Patient</td>
+      <td>name</td>
+      <td>HumanName</td>
+      <td>set a ressource value</td>
+    </tr>
+    <tr>
+      <td>RelatedPerson</td>
+      <td>name</td>
+      <td>HumanName</td>
+      <td>set a ressource value</td>
+    </tr>
+    <tr>
+      <td>CommunicationRequest</td>
+      <td>EmCare.A.DE38</td>
+      <td>N/A</td>
+      <td>set a communication request to the care giver</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="activityemcarebregistratione">ActivityEmcareb.registration.e</h4>
 
 <h4 id="ouputs-1">Ouputs</h4>
 
-<p>ouputs generated by the structureMaps
-| type | code / path | valueType | Description |
-|—|—|—|—|
-| Observation | EmCare.B3.DE05 | boolean | Is the child sick Today? |</p>
+<p>ouputs generated by the structureMaps</p>
 
-<h3 id="activityemcareb7lti-dangersigns">ActivityEmcare.b7.lti-dangersigns</h3>
+<table>
+  <thead>
+    <tr>
+      <th>type</th>
+      <th>code / path</th>
+      <th>valueType</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B3.DE05</td>
+      <td>boolean</td>
+      <td>Is the child sick Today?</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="activityemcareb7lti-dangersigns">ActivityEmcare.b7.lti-dangersigns</h4>
 
 <h4 id="inputs">Inputs</h4>
 
-<p>required for the execution
-| type | code / path | valueType | Description |
-|—|—|—|—|
-| Observation | EmCare.B22.DE14 | boolean/quantity | Unable to Perform Oral Fluid Test |</p>
+<p>required for the execution</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>type</th>
+      <th>code / path</th>
+      <th>valueType</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE14</td>
+      <td>boolean/quantity</td>
+      <td>Unable to Perform Oral Fluid Test</td>
+    </tr>
+  </tbody>
+</table>
 
 <h4 id="ouputs-2">Ouputs</h4>
 
-<p>ouputs generated by the structureMaps
-| type | code / path | valueType | Description |
-|—|—|—|—|
-| Observation | EmCare.B7.DE02 | boolean | Convulsing Now |
-| Observation | EmCare.B7-B8-B9.DE01 | CodeableConcept | Continue to Assess Sick Child |
-| Observation | EmCare.B7.DE03 | boolean | Convulsion(s) in this Illness |
-| Observation | EmCare.B7.DE08b | boolean | Unconscious or Lethargic |
-| Observation | EmCare.B7.DE08 | boolean | Unconscious |
-| Observation | EmCare.B7.DE08a | boolean | Lethargic |
-| Observation | EmCare.B7.DE09 | boolean | Not able to drink or breastfeed |
-| Observation | EmCare.B7.DE10 | boolean | Vomiting Everything |
-| Observation | EmCare.B22.DE08 | CodeableConcept | Oral Fluid Test Results |
-| Observation | EmCare.B22.DE14 | boolean | Unable to Perform Oral Fluid Test |
-| Observation | EmCare.B22.DE14a | boolean | Completely Unable to Drink or Vomits Immediately / Everything |
-| Observation | EmCare.B22.DE15 | boolean | Has the Child had anything to drink today? |
-| Observation | EmCare.B22.DE16 | CodeableConcept | How did the child last drink |</p>
+<p>ouputs generated by the structureMaps</p>
 
-<h3 id="activityemcareb6measurements">ActivityEmcare.b6.measurements</h3>
+<table>
+  <thead>
+    <tr>
+      <th>type</th>
+      <th>code / path</th>
+      <th>valueType</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B7.DE02</td>
+      <td>boolean</td>
+      <td>Convulsing Now</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B7-B8-B9.DE01</td>
+      <td>CodeableConcept</td>
+      <td>Continue to Assess Sick Child</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B7.DE03</td>
+      <td>boolean</td>
+      <td>Convulsion(s) in this Illness</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B7.DE08b</td>
+      <td>boolean</td>
+      <td>Unconscious or Lethargic</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B7.DE08</td>
+      <td>boolean</td>
+      <td>Unconscious</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B7.DE08a</td>
+      <td>boolean</td>
+      <td>Lethargic</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B7.DE09</td>
+      <td>boolean</td>
+      <td>Not able to drink or breastfeed</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B7.DE10</td>
+      <td>boolean</td>
+      <td>Vomiting Everything</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE08</td>
+      <td>CodeableConcept</td>
+      <td>Oral Fluid Test Results</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE14</td>
+      <td>boolean</td>
+      <td>Unable to Perform Oral Fluid Test</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE14a</td>
+      <td>boolean</td>
+      <td>Completely Unable to Drink or Vomits Immediately / Everything</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE15</td>
+      <td>boolean</td>
+      <td>Has the Child had anything to drink today?</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE16</td>
+      <td>CodeableConcept</td>
+      <td>How did the child last drink</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="activityemcareb6measurements">ActivityEmcare.b6.measurements</h4>
 
 <h4 id="inputs-1">Inputs</h4>
 
-<p>required for the execution
-| type | code / path | valueType | Description |
+<p>required for the execution</p>
+
+<p>| type | code / path | valueType | Description |
 |—|—|—|—|</p>
 
 <h4 id="ouputs-3">Ouputs</h4>
 
-<p>ouputs generated by the structureMaps
-| type | code / path | valueType | Description |
-|—|—|—|—|
-| Observation | EmCare.B6.DE01 | Quantity | Axillary Temperature  (degrees Celcius) |
-| Observation | EmCare.B6.DE04 | boolean | Thermometer not available |
-| Observation | EmCare.B6.DE05 | boolean | Hot to Touch |
-| Observation | EmCare.B6.DE01A | CodeableConcept | Measured Temperature |
-| Observation | EmCare.B6.DE06 | Quantity | Weight (Kg) |
-| Observation | EmCare.B6.DE08 | Quantity | Estimated Weight |
-| Observation | EmCare.B6.DE09 | Quantity | Height |
-| Observation | EmCare.B6.DE11 | boolean | Height cannot be measured |
-| Observation | EmCare.B6.DE12 | Quantity | Length |
-| Observation | EmCare.B6.DE16 | boolean | Weight for Age (WFA) Z Scores |
-| Observation | EmCare.B6.DE17 | Quantity | MUAC (mm) |
-| Observation | EmCare.B6.DE17a | boolean | MUAC cannot be measured |
-| Observation | EmCare.B6.DE18 | CodeableConcept | Visually assess for whether underweight (for drug dose calculation) |</p>
+<p>ouputs generated by the structureMaps</p>
 
-<h3 id="activityemcareb18-21symptoms2mm">ActivityEmcare.b18-21.symptoms.2m.m</h3>
+<table>
+  <thead>
+    <tr>
+      <th>type</th>
+      <th>code / path</th>
+      <th>valueType</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B6.DE01</td>
+      <td>Quantity</td>
+      <td>Axillary Temperature  (degrees Celcius)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B6.DE04</td>
+      <td>boolean</td>
+      <td>Thermometer not available</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B6.DE05</td>
+      <td>boolean</td>
+      <td>Hot to Touch</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B6.DE01A</td>
+      <td>CodeableConcept</td>
+      <td>Measured Temperature</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B6.DE06</td>
+      <td>Quantity</td>
+      <td>Weight (Kg)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B6.DE08</td>
+      <td>Quantity</td>
+      <td>Estimated Weight</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B6.DE09</td>
+      <td>Quantity</td>
+      <td>Height</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B6.DE11</td>
+      <td>boolean</td>
+      <td>Height cannot be measured</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B6.DE12</td>
+      <td>Quantity</td>
+      <td>Length</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B6.DE16</td>
+      <td>boolean</td>
+      <td>Weight for Age (WFA) Z Scores</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B6.DE17</td>
+      <td>Quantity</td>
+      <td>MUAC (mm)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B6.DE17a</td>
+      <td>boolean</td>
+      <td>MUAC cannot be measured</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B6.DE18</td>
+      <td>CodeableConcept</td>
+      <td>Visually assess for whether underweight (for drug dose calculation)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="activityemcareb18-21symptoms2mm">ActivityEmcare.b18-21.symptoms.2m.m</h4>
 
 <h4 id="inputs-2">Inputs</h4>
 
-<p>required for the execution
-| type | code / path | valueType | Description |
-|—|—|—|—|
-| Observation | EmCare.B7.DE02 | boolean/quantity | Convulsing Now |</p>
+<p>required for the execution</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>type</th>
+      <th>code / path</th>
+      <th>valueType</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B7.DE02</td>
+      <td>boolean/quantity</td>
+      <td>Convulsing Now</td>
+    </tr>
+  </tbody>
+</table>
 
 <h4 id="ouputs-4">Ouputs</h4>
 
-<p>ouputs generated by the structureMaps
-| type | code / path | valueType | Description |
-|—|—|—|—|
-| Observation | EmCare.B7.DE03 | boolean | Convulsion(s) in this Illness |
-| Observation | EmCare.B18S1.DE02 | CodeableConcept | Difficulty with Feeding |
-| Observation | EmCare.B11S1.DE01 | boolean | Diarrhoea |
-| Observation | EmCare.B21S1.DE06 | boolean | Breastfed |</p>
+<p>ouputs generated by the structureMaps</p>
 
-<h3 id="activityemcareb18-21signs2mm">ActivityEmcare.b18-21.signs.2m.m</h3>
+<table>
+  <thead>
+    <tr>
+      <th>type</th>
+      <th>code / path</th>
+      <th>valueType</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B7.DE03</td>
+      <td>boolean</td>
+      <td>Convulsion(s) in this Illness</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B18S1.DE02</td>
+      <td>CodeableConcept</td>
+      <td>Difficulty with Feeding</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B11S1.DE01</td>
+      <td>boolean</td>
+      <td>Diarrhoea</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B21S1.DE06</td>
+      <td>boolean</td>
+      <td>Breastfed</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="activityemcareb18-21signs2mm">ActivityEmcare.b18-21.signs.2m.m</h4>
 
 <h4 id="inputs-3">Inputs</h4>
 
-<p>required for the execution
-| type | code / path | valueType | Description |
-|—|—|—|—|
-| Observation | EmCare.B11S1.DE01 | boolean/quantity | Diarrhoea |
-| Observation | EmCare.B21S1.DE06 | boolean/quantity | Breastfed |
-| Observation | EmCare.B18S1.DE02 | boolean/quantity | Difficulty with Feeding |
-| Observation | EmCare.B7.DE03 | boolean/quantity | Convulsion(s) in this Illness |
-| Observation | EmCare.B22.DE01 | boolean/quantity | Respiratory Rate (breaths per minute) |
-| Observation | EmCare.B22.DE04 | boolean/quantity | Respiratory Rate Second Count (breaths per minute) |
-| Observation | EmCare.B22.DE07 | boolean/quantity | Fast Breathing |</p>
+<p>required for the execution</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>type</th>
+      <th>code / path</th>
+      <th>valueType</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B11S1.DE01</td>
+      <td>boolean/quantity</td>
+      <td>Diarrhoea</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B21S1.DE06</td>
+      <td>boolean/quantity</td>
+      <td>Breastfed</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B18S1.DE02</td>
+      <td>boolean/quantity</td>
+      <td>Difficulty with Feeding</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B7.DE03</td>
+      <td>boolean/quantity</td>
+      <td>Convulsion(s) in this Illness</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE01</td>
+      <td>boolean/quantity</td>
+      <td>Respiratory Rate (breaths per minute)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE04</td>
+      <td>boolean/quantity</td>
+      <td>Respiratory Rate Second Count (breaths per minute)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE07</td>
+      <td>boolean/quantity</td>
+      <td>Fast Breathing</td>
+    </tr>
+  </tbody>
+</table>
 
 <h4 id="ouputs-5">Ouputs</h4>
 
-<p>ouputs generated by the structureMaps
-| type | code / path | valueType | Description |
-|—|—|—|—|
-| Observation | EmCare.B18S2.DE07 | boolean | Severe Chest Indrawing |
-| Observation | EmCare.B18S2.DE08 | CodeableConcept | Movements |
-| Observation | EmCare.B18S2.DE12 | boolean | Umbilicus Red or Pus Draining |
-| Observation | EmCare.B18S2.DE13 | boolean | Skin Pustules |
-| Observation | EmCare.B19S2.DE01 | boolean | Yellow Skin |
-| Observation | EmCare.B19S2.DE02 | boolean | Yellow Palms or Yellow Soles |
-| Observation | EmCare.B19S2.DE04 | CodeableConcept | When did the Jaundice first appear? |
-| Observation | EmCare.B11S2.DE01 | boolean | Sunken Eyes |
-| Observation | EmCare.B11S2.DE02 | CodeableConcept | Skin pinch of Abdomen |
-| Observation | EmCare.B11S2.DE06 | boolean | Restless and Irritable |
-| Observation | EmCare.B21S2.DE01 | CodeableConcept | Weight Status |
-| Observation | EmCare.B21S2.DE05 | Quantity | Breastfed how many times in 24 hours? |
-| Observation | EmCare.B21S2.DE06 | Quantity | Sufficient feeds |
-| Observation | EmCare.B21S2.DE08 | boolean | Young Infant receives food or fluids other than breast milk |
-| Observation | EmCare.B21S2.DE09&amp;EmCare.B21S2.DE11 | boolean | What milk is being given as a replacement feed?:Inappropriate replacement milk |
-| Observation | EmCare.B21S2.DE09&amp;EmCare.B21S2.DE10 | boolean | What milk is being given as a replacement feed?:Appropriate replacement milk |
-| Observation | EmCare.B21S2.DE12 | Quantity | How many replacement feeds during the day and night (24 hours)? |
-| Observation | EmCare.B21S2.DE13 | boolean | Sufficient replacement feeds (in 24 hours) |
-| Observation | EmCare.B21S2.DE15 | Quantity | How much milk is given at each feed (ml)? |
-| Observation | EmCare.B21S2.DE16 | boolean | Sufficient replacement feeds |
-| Observation | EmCare.B21S2.DE18 | CodeableConcept | How is the milk prepared? |
-| Observation | EmCare.B21S2.DE21 | CodeableConcept | How is the milk given? |
-| Observation | EmCare.B21S2.DE24 | CodeableConcept | How are the feeding utensils cleaned? |
-| Observation | EmCare.B21S2.DE27 | CodeableConcept | Do you give any breastmilk at all? |
-| Observation | EmCare.B21S2.DE30 | boolean | Ulcers or White Patches in Mouth |
-| Observation | EmCare.B21S2.DE31 | boolean | Unable to check if Ulcers or White Patches in Mouth |
-| Observation | EmCare.B22.DE01 | Quantity | Respiratory Rate (breaths per minute) |
-| Observation | EmCare.B22.DE02 | boolean | Unable to perform Respiratory Rate at this time |
-| Observation | EmCare.B22.DE04 | Quantity | Respiratory Rate Second Count (breaths per minute) |
-| Observation | EmCare.B22.DE05 | boolean | Respiratory Rate Second Count Not Possible |
-| Observation | EmCare.B22.DE07 | boolean | Fast Breathing |</p>
+<p>ouputs generated by the structureMaps</p>
 
-<h3 id="activityemcareb10-14symptoms2mp">ActivityEmcare.b10-14.symptoms.2m.p</h3>
+<table>
+  <thead>
+    <tr>
+      <th>type</th>
+      <th>code / path</th>
+      <th>valueType</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B18S2.DE07</td>
+      <td>boolean</td>
+      <td>Severe Chest Indrawing</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B18S2.DE08</td>
+      <td>CodeableConcept</td>
+      <td>Movements</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B18S2.DE12</td>
+      <td>boolean</td>
+      <td>Umbilicus Red or Pus Draining</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B18S2.DE13</td>
+      <td>boolean</td>
+      <td>Skin Pustules</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B19S2.DE01</td>
+      <td>boolean</td>
+      <td>Yellow Skin</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B19S2.DE02</td>
+      <td>boolean</td>
+      <td>Yellow Palms or Yellow Soles</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B19S2.DE04</td>
+      <td>CodeableConcept</td>
+      <td>When did the Jaundice first appear?</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B11S2.DE01</td>
+      <td>boolean</td>
+      <td>Sunken Eyes</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B11S2.DE02</td>
+      <td>CodeableConcept</td>
+      <td>Skin pinch of Abdomen</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B11S2.DE06</td>
+      <td>boolean</td>
+      <td>Restless and Irritable</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B21S2.DE01</td>
+      <td>CodeableConcept</td>
+      <td>Weight Status</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B21S2.DE05</td>
+      <td>Quantity</td>
+      <td>Breastfed how many times in 24 hours?</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B21S2.DE06</td>
+      <td>Quantity</td>
+      <td>Sufficient feeds</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B21S2.DE08</td>
+      <td>boolean</td>
+      <td>Young Infant receives food or fluids other than breast milk</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B21S2.DE09&amp;EmCare.B21S2.DE11</td>
+      <td>boolean</td>
+      <td>What milk is being given as a replacement feed?:Inappropriate replacement milk</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B21S2.DE09&amp;EmCare.B21S2.DE10</td>
+      <td>boolean</td>
+      <td>What milk is being given as a replacement feed?:Appropriate replacement milk</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B21S2.DE12</td>
+      <td>Quantity</td>
+      <td>How many replacement feeds during the day and night (24 hours)?</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B21S2.DE13</td>
+      <td>boolean</td>
+      <td>Sufficient replacement feeds (in 24 hours)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B21S2.DE15</td>
+      <td>Quantity</td>
+      <td>How much milk is given at each feed (ml)?</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B21S2.DE16</td>
+      <td>boolean</td>
+      <td>Sufficient replacement feeds</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B21S2.DE18</td>
+      <td>CodeableConcept</td>
+      <td>How is the milk prepared?</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B21S2.DE21</td>
+      <td>CodeableConcept</td>
+      <td>How is the milk given?</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B21S2.DE24</td>
+      <td>CodeableConcept</td>
+      <td>How are the feeding utensils cleaned?</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B21S2.DE27</td>
+      <td>CodeableConcept</td>
+      <td>Do you give any breastmilk at all?</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B21S2.DE30</td>
+      <td>boolean</td>
+      <td>Ulcers or White Patches in Mouth</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B21S2.DE31</td>
+      <td>boolean</td>
+      <td>Unable to check if Ulcers or White Patches in Mouth</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE01</td>
+      <td>Quantity</td>
+      <td>Respiratory Rate (breaths per minute)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE02</td>
+      <td>boolean</td>
+      <td>Unable to perform Respiratory Rate at this time</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE04</td>
+      <td>Quantity</td>
+      <td>Respiratory Rate Second Count (breaths per minute)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE05</td>
+      <td>boolean</td>
+      <td>Respiratory Rate Second Count Not Possible</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE07</td>
+      <td>boolean</td>
+      <td>Fast Breathing</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="activityemcareb10-14symptoms2mp">ActivityEmcare.b10-14.symptoms.2m.p</h4>
 
 <h4 id="inputs-4">Inputs</h4>
 
-<p>required for the execution
-| type | code / path | valueType | Description |
+<p>required for the execution</p>
+
+<p>| type | code / path | valueType | Description |
 |—|—|—|—|</p>
 
 <h4 id="ouputs-6">Ouputs</h4>
 
-<p>ouputs generated by the structureMaps
-| type | code / path | valueType | Description |
-|—|—|—|—|
-| Observation | EmCare.B10S1.DE05 | boolean | Cough |
-| Observation | EmCare.B10S1.DE06 | CodeableConcept | Cough for how long? |
-| Observation | EmCare.B10S1.DE01 | boolean | Difficulty Breathing |
-| Observation | EmCare.B10S1.DE02 | CodeableConcept | Difficulty breathing for how long? |
-| Observation | EmCare.B11S1.DE01 | boolean | Diarrhoea |
-| Observation | EmCare.B11S1.DE02 | CodeableConcept | Diarrhoea for how long? |
-| Observation | EmCare.B11S1.DE05 | boolean | Blood in the stool in this Illness |
-| Observation | EmCare.B12S1.DE02 | boolean | Fever Reported |
-| Observation | EmCare.B12S1.DE03 | CodeableConcept | Fever for how long? |
-| Observation | EmCare.B.G.DE06 | boolean | Fever |
-| Observation | EmCare.B12S1.DE06 | boolean | Has Fever been present every day since the Fever started? |
-| Observation | EmCare.B13S1.DE01 | boolean | Ear problem |
-| Observation | EmCare.B13S1.DE02 | boolean | Ear pain |
-| Observation | EmCare.B13S1.DE03 | boolean | Ear discharge |
-| Observation | EmCare.B13S1.DE04 | CodeableConcept | Ear discharge for how long? |
-| Observation | EmCare.B14S1.DE03 | boolean | Eye Problem |
-| Observation | EmCare.B14S1.DE01 | boolean | Skin Problem |
-| Observation | EmCare.B14S1.DE02 | boolean | Itchy Skin |</p>
+<p>ouputs generated by the structureMaps</p>
 
-<h3 id="activityemcareb10-16signs2mp">ActivityEmcare.b10-16.signs.2m.p</h3>
+<table>
+  <thead>
+    <tr>
+      <th>type</th>
+      <th>code / path</th>
+      <th>valueType</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B10S1.DE05</td>
+      <td>boolean</td>
+      <td>Cough</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B10S1.DE06</td>
+      <td>CodeableConcept</td>
+      <td>Cough for how long?</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B10S1.DE01</td>
+      <td>boolean</td>
+      <td>Difficulty Breathing</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B10S1.DE02</td>
+      <td>CodeableConcept</td>
+      <td>Difficulty breathing for how long?</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B11S1.DE01</td>
+      <td>boolean</td>
+      <td>Diarrhoea</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B11S1.DE02</td>
+      <td>CodeableConcept</td>
+      <td>Diarrhoea for how long?</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B11S1.DE05</td>
+      <td>boolean</td>
+      <td>Blood in the stool in this Illness</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B12S1.DE02</td>
+      <td>boolean</td>
+      <td>Fever Reported</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B12S1.DE03</td>
+      <td>CodeableConcept</td>
+      <td>Fever for how long?</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B.G.DE06</td>
+      <td>boolean</td>
+      <td>Fever</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B12S1.DE06</td>
+      <td>boolean</td>
+      <td>Has Fever been present every day since the Fever started?</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B13S1.DE01</td>
+      <td>boolean</td>
+      <td>Ear problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B13S1.DE02</td>
+      <td>boolean</td>
+      <td>Ear pain</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B13S1.DE03</td>
+      <td>boolean</td>
+      <td>Ear discharge</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B13S1.DE04</td>
+      <td>CodeableConcept</td>
+      <td>Ear discharge for how long?</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S1.DE03</td>
+      <td>boolean</td>
+      <td>Eye Problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S1.DE01</td>
+      <td>boolean</td>
+      <td>Skin Problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S1.DE02</td>
+      <td>boolean</td>
+      <td>Itchy Skin</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="activityemcareb10-16signs2mp">ActivityEmcare.b10-16.signs.2m.p</h4>
 
 <h4 id="inputs-5">Inputs</h4>
 
-<p>required for the execution
-| type | code / path | valueType | Description |
-|—|—|—|—|
-| Observation | EmCare.B10S1.DE05 | boolean/quantity | Cough |
-| Observation | EmCare.B10S1.DE01 | boolean/quantity | Difficulty Breathing |
-| Observation | EmCare.B22.DE14 | boolean/quantity | Unable to Perform Oral Fluid Test |
-| Observation | EmCare.B22.DE08&amp;EmCare.B22.DE14a | boolean/quantity | Oral Fluid Test Results:Completely Unable to Drink or Vomits Immediately / Everything |
-| Observation | EmCare.B11S1.DE01 | boolean/quantity | Diarrhoea |
-| Observation | EmCare.B7.DE09 | boolean/quantity | Not able to drink or breastfeed |
-| Observation | EmCare.B13S1.DE01 | boolean/quantity | Ear Problem |
-| Observation | EmCare.B14S1.DE03 | boolean/quantity | Eye Problem |
-| Observation | EmCare.B14S1.DE01 | boolean/quantity | Skin Problem |
-| Observation | EmCare.B13S1.DE03 | boolean/quantity | Ear discharge |
-| Observation | EmCare.B13S1.DE04 | boolean/quantity | Ear discharge for how long? |
-| Observation | EmCare.B14S1.DE02 | boolean/quantity | Itchy Skin |
-| Observation | EmCare.B22.DE01 | boolean/quantity | Respiratory Rate (breaths per minute) |
-| Observation | EmCare.B22.DE04 | boolean/quantity | Respiratory Rate Second Count (breaths per minute) |
-| Observation | EmCare.B22.DE07 | boolean/quantity | Fast Breathing |</p>
+<p>required for the execution</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>type</th>
+      <th>code / path</th>
+      <th>valueType</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B10S1.DE05</td>
+      <td>boolean/quantity</td>
+      <td>Cough</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B10S1.DE01</td>
+      <td>boolean/quantity</td>
+      <td>Difficulty Breathing</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE14</td>
+      <td>boolean/quantity</td>
+      <td>Unable to Perform Oral Fluid Test</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE08&amp;EmCare.B22.DE14a</td>
+      <td>boolean/quantity</td>
+      <td>Oral Fluid Test Results:Completely Unable to Drink or Vomits Immediately / Everything</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B11S1.DE01</td>
+      <td>boolean/quantity</td>
+      <td>Diarrhoea</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B7.DE09</td>
+      <td>boolean/quantity</td>
+      <td>Not able to drink or breastfeed</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B13S1.DE01</td>
+      <td>boolean/quantity</td>
+      <td>Ear Problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S1.DE03</td>
+      <td>boolean/quantity</td>
+      <td>Eye Problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S1.DE01</td>
+      <td>boolean/quantity</td>
+      <td>Skin Problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B13S1.DE03</td>
+      <td>boolean/quantity</td>
+      <td>Ear discharge</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B13S1.DE04</td>
+      <td>boolean/quantity</td>
+      <td>Ear discharge for how long?</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S1.DE02</td>
+      <td>boolean/quantity</td>
+      <td>Itchy Skin</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE01</td>
+      <td>boolean/quantity</td>
+      <td>Respiratory Rate (breaths per minute)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE04</td>
+      <td>boolean/quantity</td>
+      <td>Respiratory Rate Second Count (breaths per minute)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE07</td>
+      <td>boolean/quantity</td>
+      <td>Fast Breathing</td>
+    </tr>
+  </tbody>
+</table>
 
 <h4 id="ouputs-7">Ouputs</h4>
 
-<p>ouputs generated by the structureMaps
-| type | code / path | valueType | Description |
-|—|—|—|—|
-| Observation | EmCare.B10S2.DE03 | boolean | Chest Indrawing |
-| Observation | EmCare.B10S2.DE04 | boolean | Stridor in a calm child |
-| Observation | EmCare.B10S2.DE05 | boolean | Wheezing |
-| Observation | EmCare.B10S2.DE06 | boolean | Recurrent Wheeze |
-| Observation | EmCare.B10S2.DE07 | Quantity | Oxygen Saturation |
-| Observation | EmCare.B11S2.DE01 | boolean | Sunken eyes |
-| Observation | EmCare.B11S2.DE02 | CodeableConcept | Skin pinch of Abdomen |
-| Observation | EmCare.B11S2.DE06 | boolean | Restless and Irritable |
-| Observation | EmCare.B17S1.DE01 | boolean | Throat problem |
-| Observation | EmCare.B17S1.DE02 | CodeableConcept | Specify Throat problem |
-| Observation | EmCare.B17S1.DE06 | boolean | Enlarged lymph nodes on front of neck |
-| Observation | EmCare.B17S1.DE07 | CodeableConcept | Ability to swallow |
-| Observation | EmCare.B13S2.DE01 | boolean | Tender swelling behind the ear |
-| Observation | EmCare.B13S2.DE02 | boolean | Pus Seen Draining from the Ear |
-| Observation | EmCare.B13S2.DE03 | CodeableConcept | Pus Seen Draining from the Ear for how long? |
-| Observation | EmCare.B12S2.DE01 | boolean | Stiff neck |
-| Observation | EmCare.B12S2.DE05 | boolean | Runny nose |
-| Observation | EmCare.B14S2.DE01 | boolean | Red eyes |
-| Observation | EmCare.B14S2.DE02 | boolean | Pus Draining from Eye |
-| Observation | EmCare.B14S2.DE03 | boolean | Clouding of the Cornea |
-| Observation | EmCare.B14S2.DE04 | boolean | Is Clouding of the Cornea a new problem |
-| Observation | EmCare.B14S2.DE05 | boolean | Has Clouding of the Cornea previously been treated |
-| Observation | EmCare.B14S2.DE06&amp;EmCare.B14S2.DE07 | boolean | Generalised or Localised Skin Problem:Generalised Skin Problem |
-| Observation | EmCare.B14S2.DE06&amp;EmCare.B14S2.DE08 | boolean | Generalised or Localised Skin Problem:Localised Skin Problem |
-| Observation | EmCare.B14S2.DE06&amp;EmCare.B14S2.DE09 | boolean | Generalised or Localised Skin Problem:No Problem |
-| Observation | EmCare.B14S2.DE10 | boolean | Measles Rash |
-| Observation | EmCare.B14S2.DE11 | boolean | Measles within the last 3 months |
-| Observation | EmCare.B14S2.DE12 | boolean | Blisters, Sores or Pustules |
-| Observation | EmCare.B14S2.DE13&amp;EmCare.B14S2.DE18 | boolean | Type of Skin Problem:Papular Urticaria or Papular Pruritic Eruptions |
-| Observation | EmCare.B14S2.DE13&amp;EmCare.B14S2.DE19 | boolean | Type of Skin Problem:Ringworm (Tinea) |
-| Observation | EmCare.B14S2.DE13&amp;EmCare.B14S2.DE21 | boolean | Type of Skin Problem:Scabies |
-| Observation | EmCare.B14S2.DE13&amp;EmCare.B14S2.DE22 | boolean | Type of Skin Problem:Chickenpox |
-| Observation | EmCare.B14S2.DE13&amp;EmCare.B14S2.DE23 | boolean | Type of Skin Problem:Herpes Zoster |
-| Observation | EmCare.B14S2.DE13&amp;EmCare.B14S2.DE25 | boolean | Type of Skin Problem:Impetigo |
-| Observation | EmCare.B14S2.DE13&amp;EmCare.B14S2.DE31 | boolean | Type of Skin Problem:Molluscum Contagiosum |
-| Observation | EmCare.B14S2.DE13&amp;EmCare.B14S2.DE32 | boolean | Type of Skin Problem:Warts |
-| Observation | EmCare.B14S2.DE13&amp;EmCare.B14S2.DE33 | boolean | Type of Skin Problem:Seborrhoeic Dermatitis |
-| Observation | EmCare.B14S2.DE13&amp;EmCare.B14S2.DE35 | boolean | Type of Skin Problem:Fixed Drug Reaction |
-| Observation | EmCare.B14S2.DE13&amp;EmCare.B14S2.DE36 | boolean | Type of Skin Problem:Eczema |
-| Observation | EmCare.B14S2.DE13&amp;EmCare.B14S2.DE37 | boolean | Type of Skin Problem:Steven Johnson Syndrome (SJS) |
-| Observation | EmCare.B14S2.DE19a | boolean | Scalp Infection (tinea capitis) |
-| Observation | EmCare.B14S2.DE22A | boolean | Severe rash |
-| Observation | EmCare.B14S2.DE23a | boolean | Disseminated Herpes Zoster |
-| Observation | EmCare.B14S2.DE24 | boolean | Eye Involvement |
-| Observation | EmCare.B14S2.DE30 | boolean | Skin Infection extends to Muscle |
-| Observation | EmCare.B14S2.DE30b | boolean | Extensive impetigo lesions |
-| Observation | EmCare.B14S2.DE31a | boolean | Extensive molluscum lesions |
-| Observation | EmCare.B14S2.DE31b | boolean | Molluscum lesions close to the eye |
-| Observation | EmCare.B14S2.DE32a | boolean | Extensive warts |
-| Observation | EmCare.B14S2.DE34 | boolean | Severe Seborrhoeic Dermatitis |
-| Observation | EmCare.B14S2.DE36a | boolean | Secondary bacterial infection of eczema |
-| Observation | EmCare.B14S2.DE36b | boolean | Severe acute moist or weeping eczema |
-| Observation | EmCare.B14S2.DE36c | boolean | Secondary herpes infection of eczema (eczema herpeticum) |
-| Observation | EmCare.B14S2.DE38 | CodeableConcept | Oral sores or Mouth Ulcers |
-| Observation | EmCare.B14S2.DE43&amp;EmCare.B14S2.DE44 | boolean | Add a Skin or Mouth or Eye Problem:Skin Problem |
-| Observation | EmCare.B14S2.DE43&amp;EmCare.B14S2.DE45 | boolean | Add a Skin or Mouth or Eye Problem:Oral Sores or Mouth Ulcers |
-| Observation | EmCare.B14S2.DE43&amp;EmCare.B14S2.DE46 | boolean | Add a Skin or Mouth or Eye Problem:Eye Problem |
-| Observation | EmCare.B14S2.DE43&amp;EmCare.B14S2.DE47 | boolean | Add a Skin or Mouth or Eye Problem:No - Do not add a Skin or Mouth or Eye Problem |
-| Observation | EmCare.B15S2.DE01 | CodeableConcept | Palmar Pallor |
-| Observation | EmCare.B15S2.DE09 | CodeableConcept | Mucous membrane pallor |
-| Observation | EmCare.B22.DE01 | Quantity | Respiratory Rate (breaths per minute) |
-| Observation | EmCare.B22.DE02 | boolean | Unable to perform Respiratory Rate at this time |
-| Observation | EmCare.B22.DE04 | Quantity | Respiratory Rate Second Count (breaths per minute) |
-| Observation | EmCare.B22.DE05 | boolean | Respiratory Rate Second Count Not Possible |
-| Observation | EmCare.B22.DE07 | boolean | Fast Breathing |</p>
+<p>ouputs generated by the structureMaps</p>
 
-<h3 id="activityemcareb22assessmentstests">ActivityEmcare.b22.assessmentstests</h3>
+<table>
+  <thead>
+    <tr>
+      <th>type</th>
+      <th>code / path</th>
+      <th>valueType</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B10S2.DE03</td>
+      <td>boolean</td>
+      <td>Chest Indrawing</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B10S2.DE04</td>
+      <td>boolean</td>
+      <td>Stridor in a calm child</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B10S2.DE05</td>
+      <td>boolean</td>
+      <td>Wheezing</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B10S2.DE06</td>
+      <td>boolean</td>
+      <td>Recurrent Wheeze</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B10S2.DE07</td>
+      <td>Quantity</td>
+      <td>Oxygen Saturation</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B11S2.DE01</td>
+      <td>boolean</td>
+      <td>Sunken eyes</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B11S2.DE02</td>
+      <td>CodeableConcept</td>
+      <td>Skin pinch of Abdomen</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B11S2.DE06</td>
+      <td>boolean</td>
+      <td>Restless and Irritable</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B17S1.DE01</td>
+      <td>boolean</td>
+      <td>Throat problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B17S1.DE02</td>
+      <td>CodeableConcept</td>
+      <td>Specify Throat problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B17S1.DE06</td>
+      <td>boolean</td>
+      <td>Enlarged lymph nodes on front of neck</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B17S1.DE07</td>
+      <td>CodeableConcept</td>
+      <td>Ability to swallow</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B13S2.DE01</td>
+      <td>boolean</td>
+      <td>Tender swelling behind the ear</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B13S2.DE02</td>
+      <td>boolean</td>
+      <td>Pus Seen Draining from the Ear</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B13S2.DE03</td>
+      <td>CodeableConcept</td>
+      <td>Pus Seen Draining from the Ear for how long?</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B12S2.DE01</td>
+      <td>boolean</td>
+      <td>Stiff neck</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B12S2.DE05</td>
+      <td>boolean</td>
+      <td>Runny nose</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE01</td>
+      <td>boolean</td>
+      <td>Red eyes</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE02</td>
+      <td>boolean</td>
+      <td>Pus Draining from Eye</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE03</td>
+      <td>boolean</td>
+      <td>Clouding of the Cornea</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE04</td>
+      <td>boolean</td>
+      <td>Is Clouding of the Cornea a new problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE05</td>
+      <td>boolean</td>
+      <td>Has Clouding of the Cornea previously been treated</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE06&amp;EmCare.B14S2.DE07</td>
+      <td>boolean</td>
+      <td>Generalised or Localised Skin Problem:Generalised Skin Problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE06&amp;EmCare.B14S2.DE08</td>
+      <td>boolean</td>
+      <td>Generalised or Localised Skin Problem:Localised Skin Problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE06&amp;EmCare.B14S2.DE09</td>
+      <td>boolean</td>
+      <td>Generalised or Localised Skin Problem:No Problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE10</td>
+      <td>boolean</td>
+      <td>Measles Rash</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE11</td>
+      <td>boolean</td>
+      <td>Measles within the last 3 months</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE12</td>
+      <td>boolean</td>
+      <td>Blisters, Sores or Pustules</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE13&amp;EmCare.B14S2.DE18</td>
+      <td>boolean</td>
+      <td>Type of Skin Problem:Papular Urticaria or Papular Pruritic Eruptions</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE13&amp;EmCare.B14S2.DE19</td>
+      <td>boolean</td>
+      <td>Type of Skin Problem:Ringworm (Tinea)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE13&amp;EmCare.B14S2.DE21</td>
+      <td>boolean</td>
+      <td>Type of Skin Problem:Scabies</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE13&amp;EmCare.B14S2.DE22</td>
+      <td>boolean</td>
+      <td>Type of Skin Problem:Chickenpox</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE13&amp;EmCare.B14S2.DE23</td>
+      <td>boolean</td>
+      <td>Type of Skin Problem:Herpes Zoster</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE13&amp;EmCare.B14S2.DE25</td>
+      <td>boolean</td>
+      <td>Type of Skin Problem:Impetigo</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE13&amp;EmCare.B14S2.DE31</td>
+      <td>boolean</td>
+      <td>Type of Skin Problem:Molluscum Contagiosum</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE13&amp;EmCare.B14S2.DE32</td>
+      <td>boolean</td>
+      <td>Type of Skin Problem:Warts</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE13&amp;EmCare.B14S2.DE33</td>
+      <td>boolean</td>
+      <td>Type of Skin Problem:Seborrhoeic Dermatitis</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE13&amp;EmCare.B14S2.DE35</td>
+      <td>boolean</td>
+      <td>Type of Skin Problem:Fixed Drug Reaction</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE13&amp;EmCare.B14S2.DE36</td>
+      <td>boolean</td>
+      <td>Type of Skin Problem:Eczema</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE13&amp;EmCare.B14S2.DE37</td>
+      <td>boolean</td>
+      <td>Type of Skin Problem:Steven Johnson Syndrome (SJS)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE19a</td>
+      <td>boolean</td>
+      <td>Scalp Infection (tinea capitis)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE22A</td>
+      <td>boolean</td>
+      <td>Severe rash</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE23a</td>
+      <td>boolean</td>
+      <td>Disseminated Herpes Zoster</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE24</td>
+      <td>boolean</td>
+      <td>Eye Involvement</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE30</td>
+      <td>boolean</td>
+      <td>Skin Infection extends to Muscle</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE30b</td>
+      <td>boolean</td>
+      <td>Extensive impetigo lesions</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE31a</td>
+      <td>boolean</td>
+      <td>Extensive molluscum lesions</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE31b</td>
+      <td>boolean</td>
+      <td>Molluscum lesions close to the eye</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE32a</td>
+      <td>boolean</td>
+      <td>Extensive warts</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE34</td>
+      <td>boolean</td>
+      <td>Severe Seborrhoeic Dermatitis</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE36a</td>
+      <td>boolean</td>
+      <td>Secondary bacterial infection of eczema</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE36b</td>
+      <td>boolean</td>
+      <td>Severe acute moist or weeping eczema</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE36c</td>
+      <td>boolean</td>
+      <td>Secondary herpes infection of eczema (eczema herpeticum)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE38</td>
+      <td>CodeableConcept</td>
+      <td>Oral sores or Mouth Ulcers</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE43&amp;EmCare.B14S2.DE44</td>
+      <td>boolean</td>
+      <td>Add a Skin or Mouth or Eye Problem:Skin Problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE43&amp;EmCare.B14S2.DE45</td>
+      <td>boolean</td>
+      <td>Add a Skin or Mouth or Eye Problem:Oral Sores or Mouth Ulcers</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE43&amp;EmCare.B14S2.DE46</td>
+      <td>boolean</td>
+      <td>Add a Skin or Mouth or Eye Problem:Eye Problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE43&amp;EmCare.B14S2.DE47</td>
+      <td>boolean</td>
+      <td>Add a Skin or Mouth or Eye Problem:No - Do not add a Skin or Mouth or Eye Problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B15S2.DE01</td>
+      <td>CodeableConcept</td>
+      <td>Palmar Pallor</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B15S2.DE09</td>
+      <td>CodeableConcept</td>
+      <td>Mucous membrane pallor</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE01</td>
+      <td>Quantity</td>
+      <td>Respiratory Rate (breaths per minute)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE02</td>
+      <td>boolean</td>
+      <td>Unable to perform Respiratory Rate at this time</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE04</td>
+      <td>Quantity</td>
+      <td>Respiratory Rate Second Count (breaths per minute)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE05</td>
+      <td>boolean</td>
+      <td>Respiratory Rate Second Count Not Possible</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE07</td>
+      <td>boolean</td>
+      <td>Fast Breathing</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="activityemcareb22assessmentstests">ActivityEmcare.b22.assessmentstests</h4>
 
 <h4 id="inputs-6">Inputs</h4>
 
-<p>required for the execution
-| type | code / path | valueType | Description |
-|—|—|—|—|
-| Observation | EmCare.B10S1.DE05 | boolean/quantity | Cough |
-| Observation | EmCare.B10S1.DE01 | boolean/quantity | Difficulty Breathing |
-| Observation | EmCare.B22.DE07 | boolean/quantity | Fast Breathing |
-| Observation | EmCare.B10S2.DE05 | boolean/quantity | Wheezing |
-| Observation | EmCare.B10S2.DE03 | boolean/quantity | Chest Indrawing |
-| Observation | EmCare.B10S2.DE04 | boolean/quantity | Stridor in a calm child |
-| Observation | EmCare.B10S2.DE07 | boolean/quantity | Oxygen Saturation |
-| Observation | EmCare.B15S2.DE01 | CodeableConcept | Palmar Pallor |
-| Observation | EmCare.B15S2.DE09 | CodeableConcept | Mucous membrane pallor |
-| Observation | EmCare.B6.DE01 | boolean/quantity | Axillary Temperature  (degrees Celcius) |
-| Observation | EmCare.B11S1.DE01 | boolean/quantity | Diarrhoea |
-| Observation | EmCare.B22.DE08 | boolean/quantity | Oral Fluid Test Results |
-| Observation | EmCare.B22.DE01 | boolean/quantity | Respiratory Rate (breaths per minute) |
-| Observation | EmCare.B22.DE04 | boolean/quantity | Respiratory Rate Second Count (breaths per minute) |
-| Observation | EmCare.B22.DE14 | boolean/quantity | Unable to Perform Oral Fluid Test |
-| Observation | EmCare.B7.DE09 | boolean/quantity | Not able to drink or breastfeed |
-| Observation | EmCare.B7.DE10 | boolean/quantity | Vomiting Everything |</p>
+<p>required for the execution</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>type</th>
+      <th>code / path</th>
+      <th>valueType</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B10S1.DE05</td>
+      <td>boolean/quantity</td>
+      <td>Cough</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B10S1.DE01</td>
+      <td>boolean/quantity</td>
+      <td>Difficulty Breathing</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE07</td>
+      <td>boolean/quantity</td>
+      <td>Fast Breathing</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B10S2.DE05</td>
+      <td>boolean/quantity</td>
+      <td>Wheezing</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B10S2.DE03</td>
+      <td>boolean/quantity</td>
+      <td>Chest Indrawing</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B10S2.DE04</td>
+      <td>boolean/quantity</td>
+      <td>Stridor in a calm child</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B10S2.DE07</td>
+      <td>boolean/quantity</td>
+      <td>Oxygen Saturation</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B15S2.DE01</td>
+      <td>CodeableConcept</td>
+      <td>Palmar Pallor</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B15S2.DE09</td>
+      <td>CodeableConcept</td>
+      <td>Mucous membrane pallor</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B6.DE01</td>
+      <td>boolean/quantity</td>
+      <td>Axillary Temperature  (degrees Celcius)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B11S1.DE01</td>
+      <td>boolean/quantity</td>
+      <td>Diarrhoea</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE08</td>
+      <td>boolean/quantity</td>
+      <td>Oral Fluid Test Results</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE01</td>
+      <td>boolean/quantity</td>
+      <td>Respiratory Rate (breaths per minute)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE04</td>
+      <td>boolean/quantity</td>
+      <td>Respiratory Rate Second Count (breaths per minute)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE14</td>
+      <td>boolean/quantity</td>
+      <td>Unable to Perform Oral Fluid Test</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B7.DE09</td>
+      <td>boolean/quantity</td>
+      <td>Not able to drink or breastfeed</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B7.DE10</td>
+      <td>boolean/quantity</td>
+      <td>Vomiting Everything</td>
+    </tr>
+  </tbody>
+</table>
 
 <h4 id="ouputs-8">Ouputs</h4>
 
-<p>ouputs generated by the structureMaps
-| type | code / path | valueType | Description |
-|—|—|—|—|
-| Observation | EmCare.B22.DE01 | Quantity | Respiratory Rate (breaths per minute) |
-| Observation | EmCare.B22.DE02 | boolean | Unable to perform Respiratory Rate at this time |
-| Observation | EmCare.B22.DE04 | Quantity | Respiratory Rate Second Count (breaths per minute) |
-| Observation | EmCare.B22.DE05 | boolean | Respiratory Rate Second Count Not Possible |
-| Observation | EmCare.B22.DE07 | boolean | Fast Breathing |
-| Observation | EmCare.B22.DE08 | CodeableConcept | Oral Fluid Test Results |
-| Observation | EmCare.B22.DE14 | boolean | Unable to Perform Oral Fluid Test |
-| Observation | EmCare.B22.DE14a | boolean | Completely Unable to Drink or Vomits Immediately / Everything |
-| Observation | EmCare.B22.DE15 | boolean | Has the Child had anything to drink today? |
-| Observation | EmCare.B22.DE16 | CodeableConcept | How did the child last drink |
-| Observation | EmCare.B22.DE17&amp;EmCare.B22.DE18 | boolean | Inhaled Bronchodilator Trial Results:Chest Indrawing (post inhaled bronchodilator trial) |
-| Observation | EmCare.B22.DE17&amp;EmCare.B22.DE19 | boolean | Inhaled Bronchodilator Trial Results:Respiratory Rate (post inhaled bronchodilator trial) |
-| Observation | EmCare.B22.DE17&amp;EmCare.B22.DE20 | boolean | Inhaled Bronchodilator Trial Results:Fast Breathing (post inhaled bronchodilator trial) |
-| Observation | EmCare.B22.DE17&amp;EmCare.B22.DE21 | boolean | Inhaled Bronchodilator Trial Results:No Fast Breathing and No Chest Indrawing (post Inhaled Bronchodilator Trial) |
-| Observation | EmCare.B22.DE17&amp;EmCare.B22.DE22 | boolean | Inhaled Bronchodilator Trial Results:Inhaled Bronchodilator Trial Not Feasible or Available |
-| Observation | EmCare.B22.DE22 | boolean | Inhaled Bronchodilator Trial Not Feasible or Available |
-| Observation | EmCare.B22.DE21 | boolean | No Fast Breathing and No Chest Indrawing (post Inhaled Bronchodilator Trial) |
-| Observation | EmCare.B22.DE41 | boolean | Breastfeeding Assessment Not Possible |
-| Observation | EmCare.B22.DE28 | boolean | Breastfed in the previous hour |
-| Observation | EmCare.B22.DE29 | boolean | Mother able to wait until young infant is willing to breastfeed again |
-| Observation | EmCare.B22.DE30 | boolean | Mother reports difficulty breastfeeding |
-| Observation | EmCare.B22.DE31 | boolean | Chin Touching Breast |
-| Observation | EmCare.B22.DE32 | boolean | Mouth Wide Open |
-| Observation | EmCare.B22.DE33 | boolean | Lower Lip Turned Outwards |
-| Observation | EmCare.B22.DE34 | boolean | More Areola Visible above than below the Mouth |
-| Observation | EmCare.B22.DE35 | boolean | Slow Deep Sucks, Sometimes Pausing |
-| Observation | EmCare.B22.DE36 | CodeableConcept | Breastfeeding Assessment Results |
-| Observation | EmCare.B22.DE42 | boolean | Difficulty Breastfeeding Reported |
-| Observation | EmCare.B22.DE44 | boolean | Difficulty Breastfeeding Observed |
-| Observation | EmCare.B22.DE81 | Quantity | Hemoglobin (Hb) g/dL |
-| Observation | EmCare.B22.DE82 | boolean | Hemoglobin Test Not Available |
-| Observation | EmCare.B22.DE47 | Quantity | Axillary Temperature (second measurement) |
-| Observation | EmCare.B22.DE46 | boolean | Second Temperature Measurement Not Feasible |
-| Observation | EmCare.B22.DE50 | CodeableConcept | Measured Temperature (second measurement) |</p>
+<p>ouputs generated by the structureMaps</p>
 
-<h3 id="activityemcareb22fluidtest">ActivityEmcare.b22.fluidtest</h3>
+<table>
+  <thead>
+    <tr>
+      <th>type</th>
+      <th>code / path</th>
+      <th>valueType</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE01</td>
+      <td>Quantity</td>
+      <td>Respiratory Rate (breaths per minute)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE02</td>
+      <td>boolean</td>
+      <td>Unable to perform Respiratory Rate at this time</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE04</td>
+      <td>Quantity</td>
+      <td>Respiratory Rate Second Count (breaths per minute)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE05</td>
+      <td>boolean</td>
+      <td>Respiratory Rate Second Count Not Possible</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE07</td>
+      <td>boolean</td>
+      <td>Fast Breathing</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE08</td>
+      <td>CodeableConcept</td>
+      <td>Oral Fluid Test Results</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE14</td>
+      <td>boolean</td>
+      <td>Unable to Perform Oral Fluid Test</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE14a</td>
+      <td>boolean</td>
+      <td>Completely Unable to Drink or Vomits Immediately / Everything</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE15</td>
+      <td>boolean</td>
+      <td>Has the Child had anything to drink today?</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE16</td>
+      <td>CodeableConcept</td>
+      <td>How did the child last drink</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE17&amp;EmCare.B22.DE18</td>
+      <td>boolean</td>
+      <td>Inhaled Bronchodilator Trial Results:Chest Indrawing (post inhaled bronchodilator trial)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE17&amp;EmCare.B22.DE19</td>
+      <td>boolean</td>
+      <td>Inhaled Bronchodilator Trial Results:Respiratory Rate (post inhaled bronchodilator trial)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE17&amp;EmCare.B22.DE20</td>
+      <td>boolean</td>
+      <td>Inhaled Bronchodilator Trial Results:Fast Breathing (post inhaled bronchodilator trial)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE17&amp;EmCare.B22.DE21</td>
+      <td>boolean</td>
+      <td>Inhaled Bronchodilator Trial Results:No Fast Breathing and No Chest Indrawing (post Inhaled Bronchodilator Trial)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE17&amp;EmCare.B22.DE22</td>
+      <td>boolean</td>
+      <td>Inhaled Bronchodilator Trial Results:Inhaled Bronchodilator Trial Not Feasible or Available</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE22</td>
+      <td>boolean</td>
+      <td>Inhaled Bronchodilator Trial Not Feasible or Available</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE21</td>
+      <td>boolean</td>
+      <td>No Fast Breathing and No Chest Indrawing (post Inhaled Bronchodilator Trial)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE41</td>
+      <td>boolean</td>
+      <td>Breastfeeding Assessment Not Possible</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE28</td>
+      <td>boolean</td>
+      <td>Breastfed in the previous hour</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE29</td>
+      <td>boolean</td>
+      <td>Mother able to wait until young infant is willing to breastfeed again</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE30</td>
+      <td>boolean</td>
+      <td>Mother reports difficulty breastfeeding</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE31</td>
+      <td>boolean</td>
+      <td>Chin Touching Breast</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE32</td>
+      <td>boolean</td>
+      <td>Mouth Wide Open</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE33</td>
+      <td>boolean</td>
+      <td>Lower Lip Turned Outwards</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE34</td>
+      <td>boolean</td>
+      <td>More Areola Visible above than below the Mouth</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE35</td>
+      <td>boolean</td>
+      <td>Slow Deep Sucks, Sometimes Pausing</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE36</td>
+      <td>CodeableConcept</td>
+      <td>Breastfeeding Assessment Results</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE42</td>
+      <td>boolean</td>
+      <td>Difficulty Breastfeeding Reported</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE44</td>
+      <td>boolean</td>
+      <td>Difficulty Breastfeeding Observed</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE81</td>
+      <td>Quantity</td>
+      <td>Hemoglobin (Hb) g/dL</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE82</td>
+      <td>boolean</td>
+      <td>Hemoglobin Test Not Available</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE47</td>
+      <td>Quantity</td>
+      <td>Axillary Temperature (second measurement)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE46</td>
+      <td>boolean</td>
+      <td>Second Temperature Measurement Not Feasible</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE50</td>
+      <td>CodeableConcept</td>
+      <td>Measured Temperature (second measurement)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="activityemcareb22fluidtest">ActivityEmcare.b22.fluidtest</h4>
 
 <h4 id="inputs-7">Inputs</h4>
 
-<p>required for the execution
-| type | code / path | valueType | Description |
-|—|—|—|—|
-| Observation | EmCare.B22.DE14 | boolean/quantity | Unable to Perform Oral Fluid Test |
-| Observation | EmCare.B7.DE09 | boolean/quantity | Not able to drink or breastfeed |
-| Observation | EmCare.B7.DE10 | boolean/quantity | Vomiting Everything |</p>
+<p>required for the execution</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>type</th>
+      <th>code / path</th>
+      <th>valueType</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE14</td>
+      <td>boolean/quantity</td>
+      <td>Unable to Perform Oral Fluid Test</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B7.DE09</td>
+      <td>boolean/quantity</td>
+      <td>Not able to drink or breastfeed</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B7.DE10</td>
+      <td>boolean/quantity</td>
+      <td>Vomiting Everything</td>
+    </tr>
+  </tbody>
+</table>
 
 <h4 id="ouputs-9">Ouputs</h4>
 
-<p>ouputs generated by the structureMaps
-| type | code / path | valueType | Description |
-|—|—|—|—|
-| Observation | EmCare.B22.DE08 | CodeableConcept | Oral Fluid Test Results |
-| Observation | EmCare.B22.DE14 | boolean | Unable to Perform Oral Fluid Test |
-| Observation | EmCare.B22.DE14a | boolean | Completely Unable to Drink or Vomits Immediately / Everything |
-| Observation | EmCare.B22.DE15 | boolean | Has the Child had anything to drink today? |
-| Observation | EmCare.B22.DE16 | CodeableConcept | How did the child last drink |</p>
+<p>ouputs generated by the structureMaps</p>
 
-<h3 id="activityemcareb22respiratoryrate">ActivityEmcare.b22.respiratoryrate</h3>
+<table>
+  <thead>
+    <tr>
+      <th>type</th>
+      <th>code / path</th>
+      <th>valueType</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE08</td>
+      <td>CodeableConcept</td>
+      <td>Oral Fluid Test Results</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE14</td>
+      <td>boolean</td>
+      <td>Unable to Perform Oral Fluid Test</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE14a</td>
+      <td>boolean</td>
+      <td>Completely Unable to Drink or Vomits Immediately / Everything</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE15</td>
+      <td>boolean</td>
+      <td>Has the Child had anything to drink today?</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE16</td>
+      <td>CodeableConcept</td>
+      <td>How did the child last drink</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="activityemcareb22respiratoryrate">ActivityEmcare.b22.respiratoryrate</h4>
 
 <h4 id="inputs-8">Inputs</h4>
 
-<p>required for the execution
-| type | code / path | valueType | Description |
-|—|—|—|—|
-| Observation | EmCare.B22.DE01 | boolean/quantity | Respiratory Rate (breaths per minute) |
-| Observation | EmCare.B22.DE04 | boolean/quantity | Respiratory Rate Second Count (breaths per minute) |
-| Observation | EmCare.B22.DE07 | boolean/quantity | Fast Breathing |</p>
+<p>required for the execution</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>type</th>
+      <th>code / path</th>
+      <th>valueType</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE01</td>
+      <td>boolean/quantity</td>
+      <td>Respiratory Rate (breaths per minute)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE04</td>
+      <td>boolean/quantity</td>
+      <td>Respiratory Rate Second Count (breaths per minute)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE07</td>
+      <td>boolean/quantity</td>
+      <td>Fast Breathing</td>
+    </tr>
+  </tbody>
+</table>
 
 <h4 id="ouputs-10">Ouputs</h4>
 
-<p>ouputs generated by the structureMaps
-| type | code / path | valueType | Description |
-|—|—|—|—|
-| Observation | EmCare.B22.DE01 | Quantity | Respiratory Rate (breaths per minute) |
-| Observation | EmCare.B22.DE02 | boolean | Unable to perform Respiratory Rate at this time |
-| Observation | EmCare.B22.DE04 | Quantity | Respiratory Rate Second Count (breaths per minute) |
-| Observation | EmCare.B22.DE05 | boolean | Respiratory Rate Second Count Not Possible |
-| Observation | EmCare.B22.DE07 | boolean | Fast Breathing |</p>
+<p>ouputs generated by the structureMaps</p>
 
-<h3 id="activityemcareb22bronchodilatortest">ActivityEmcare.b22.bronchodilatortest</h3>
+<table>
+  <thead>
+    <tr>
+      <th>type</th>
+      <th>code / path</th>
+      <th>valueType</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE01</td>
+      <td>Quantity</td>
+      <td>Respiratory Rate (breaths per minute)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE02</td>
+      <td>boolean</td>
+      <td>Unable to perform Respiratory Rate at this time</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE04</td>
+      <td>Quantity</td>
+      <td>Respiratory Rate Second Count (breaths per minute)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE05</td>
+      <td>boolean</td>
+      <td>Respiratory Rate Second Count Not Possible</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE07</td>
+      <td>boolean</td>
+      <td>Fast Breathing</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="activityemcareb22bronchodilatortest">ActivityEmcare.b22.bronchodilatortest</h4>
 
 <h4 id="ouputs-11">Ouputs</h4>
 
-<p>ouputs generated by the structureMaps
-| type | code / path | valueType | Description |
-|—|—|—|—|
-| Observation | EmCare.B22.DE17&amp;EmCare.B22.DE18 | boolean | Inhaled Bronchodilator Trial Results:Chest Indrawing (post inhaled bronchodilator trial) |
-| Observation | EmCare.B22.DE17&amp;EmCare.B22.DE19 | boolean | Inhaled Bronchodilator Trial Results:Respiratory Rate (post inhaled bronchodilator trial) |
-| Observation | EmCare.B22.DE17&amp;EmCare.B22.DE20 | boolean | Inhaled Bronchodilator Trial Results:Fast Breathing (post inhaled bronchodilator trial) |
-| Observation | EmCare.B22.DE17&amp;EmCare.B22.DE21 | boolean | Inhaled Bronchodilator Trial Results:No Fast Breathing and No Chest Indrawing (post Inhaled Bronchodilator Trial) |
-| Observation | EmCare.B22.DE17&amp;EmCare.B22.DE22 | boolean | Inhaled Bronchodilator Trial Results:Inhaled Bronchodilator Trial Not Feasible or Available |
-| Observation | EmCare.B22.DE22 | boolean | Inhaled Bronchodilator Trial Not Feasible or Available |
-| Observation | EmCare.B22.DE21 | boolean | No Fast Breathing and No Chest Indrawing (post Inhaled Bronchodilator Trial) |</p>
+<p>ouputs generated by the structureMaps</p>
 
-<h3 id="activityemcareb22breastfeeding">ActivityEmcare.b22.breastfeeding</h3>
+<table>
+  <thead>
+    <tr>
+      <th>type</th>
+      <th>code / path</th>
+      <th>valueType</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE17&amp;EmCare.B22.DE18</td>
+      <td>boolean</td>
+      <td>Inhaled Bronchodilator Trial Results:Chest Indrawing (post inhaled bronchodilator trial)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE17&amp;EmCare.B22.DE19</td>
+      <td>boolean</td>
+      <td>Inhaled Bronchodilator Trial Results:Respiratory Rate (post inhaled bronchodilator trial)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE17&amp;EmCare.B22.DE20</td>
+      <td>boolean</td>
+      <td>Inhaled Bronchodilator Trial Results:Fast Breathing (post inhaled bronchodilator trial)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE17&amp;EmCare.B22.DE21</td>
+      <td>boolean</td>
+      <td>Inhaled Bronchodilator Trial Results:No Fast Breathing and No Chest Indrawing (post Inhaled Bronchodilator Trial)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE17&amp;EmCare.B22.DE22</td>
+      <td>boolean</td>
+      <td>Inhaled Bronchodilator Trial Results:Inhaled Bronchodilator Trial Not Feasible or Available</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE22</td>
+      <td>boolean</td>
+      <td>Inhaled Bronchodilator Trial Not Feasible or Available</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE21</td>
+      <td>boolean</td>
+      <td>No Fast Breathing and No Chest Indrawing (post Inhaled Bronchodilator Trial)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="activityemcareb22breastfeeding">ActivityEmcare.b22.breastfeeding</h4>
 
 <h4 id="inputs-9">Inputs</h4>
 
-<p>required for the execution
-| type | code / path | valueType | Description |
+<p>required for the execution</p>
+
+<p>| type | code / path | valueType | Description |
 |—|—|—|—|</p>
 
 <h4 id="ouputs-12">Ouputs</h4>
 
-<p>ouputs generated by the structureMaps
-| type | code / path | valueType | Description |
-|—|—|—|—|
-| Observation | EmCare.B22.DE41 | boolean | Breastfeeding Assessment Not Possible |
-| Observation | EmCare.B22.DE28 | boolean | Breastfed in the previous hour |
-| Observation | EmCare.B22.DE29 | boolean | Mother able to wait until young infant is willing to breastfeed again |
-| Observation | EmCare.B22.DE30 | boolean | Mother reports difficulty breastfeeding |
-| Observation | EmCare.B22.DE31 | boolean | Chin Touching Breast |
-| Observation | EmCare.B22.DE32 | boolean | Mouth Wide Open |
-| Observation | EmCare.B22.DE33 | boolean | Lower Lip Turned Outwards |
-| Observation | EmCare.B22.DE34 | boolean | More Areola Visible above than below the Mouth |
-| Observation | EmCare.B22.DE35 | boolean | Slow Deep Sucks, Sometimes Pausing |
-| Observation | EmCare.B22.DE36 | CodeableConcept | Breastfeeding Assessment Results |
-| Observation | EmCare.B22.DE42 | boolean | Difficulty Breastfeeding Reported |
-| Observation | EmCare.B22.DE44 | boolean | Difficulty Breastfeeding Observed |</p>
+<p>ouputs generated by the structureMaps</p>
 
-<h3 id="activityemcareb22hemoglobin">ActivityEmcare.b22.hemoglobin</h3>
+<table>
+  <thead>
+    <tr>
+      <th>type</th>
+      <th>code / path</th>
+      <th>valueType</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE41</td>
+      <td>boolean</td>
+      <td>Breastfeeding Assessment Not Possible</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE28</td>
+      <td>boolean</td>
+      <td>Breastfed in the previous hour</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE29</td>
+      <td>boolean</td>
+      <td>Mother able to wait until young infant is willing to breastfeed again</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE30</td>
+      <td>boolean</td>
+      <td>Mother reports difficulty breastfeeding</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE31</td>
+      <td>boolean</td>
+      <td>Chin Touching Breast</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE32</td>
+      <td>boolean</td>
+      <td>Mouth Wide Open</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE33</td>
+      <td>boolean</td>
+      <td>Lower Lip Turned Outwards</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE34</td>
+      <td>boolean</td>
+      <td>More Areola Visible above than below the Mouth</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE35</td>
+      <td>boolean</td>
+      <td>Slow Deep Sucks, Sometimes Pausing</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE36</td>
+      <td>CodeableConcept</td>
+      <td>Breastfeeding Assessment Results</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE42</td>
+      <td>boolean</td>
+      <td>Difficulty Breastfeeding Reported</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE44</td>
+      <td>boolean</td>
+      <td>Difficulty Breastfeeding Observed</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="activityemcareb22hemoglobin">ActivityEmcare.b22.hemoglobin</h4>
 
 <h4 id="ouputs-13">Ouputs</h4>
 
-<p>ouputs generated by the structureMaps
-| type | code / path | valueType | Description |
-|—|—|—|—|
-| Observation | EmCare.B22.DE81 | Quantity | Hemoglobin (Hb) g/dL |
-| Observation | EmCare.B22.DE82 | boolean | Hemoglobin Test Not Available |</p>
+<p>ouputs generated by the structureMaps</p>
 
-<h3 id="activityemcareb22secondtemperature">ActivityEmcare.b22.secondtemperature</h3>
+<table>
+  <thead>
+    <tr>
+      <th>type</th>
+      <th>code / path</th>
+      <th>valueType</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE81</td>
+      <td>Quantity</td>
+      <td>Hemoglobin (Hb) g/dL</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE82</td>
+      <td>boolean</td>
+      <td>Hemoglobin Test Not Available</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="activityemcareb22secondtemperature">ActivityEmcare.b22.secondtemperature</h4>
 
 <h4 id="inputs-10">Inputs</h4>
 
-<p>required for the execution
-| type | code / path | valueType | Description |
+<p>required for the execution</p>
+
+<p>| type | code / path | valueType | Description |
 |—|—|—|—|</p>
 
 <h4 id="ouputs-14">Ouputs</h4>
 
-<p>ouputs generated by the structureMaps
-| type | code / path | valueType | Description |
-|—|—|—|—|
-| Observation | EmCare.B22.DE47 | Quantity | Axillary Temperature (second measurement) |
-| Observation | EmCare.B22.DE46 | boolean | Second Temperature Measurement Not Feasible |
-| Observation | EmCare.B22.DE50 | CodeableConcept | Measured Temperature (second measurement) |</p>
+<p>ouputs generated by the structureMaps</p>
 
-<h3 id="activityemcareb23classificationm">ActivityEmcare.b23.classification.m</h3>
+<table>
+  <thead>
+    <tr>
+      <th>type</th>
+      <th>code / path</th>
+      <th>valueType</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE47</td>
+      <td>Quantity</td>
+      <td>Axillary Temperature (second measurement)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE46</td>
+      <td>boolean</td>
+      <td>Second Temperature Measurement Not Feasible</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE50</td>
+      <td>CodeableConcept</td>
+      <td>Measured Temperature (second measurement)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="activityemcareb23classificationm">ActivityEmcare.b23.classification.m</h4>
 
 <h4 id="inputs-11">Inputs</h4>
 
-<p>required for the execution
-| type | code / path | valueType | Description |
-|—|—|—|—|
-| Observation | EmCare.B22.DE50 | boolean/quantity | Measured Temperature (second measurement) |
-| Observation | EmCare.B22.DE07 | boolean/quantity | Fast Breathing |
-| Observation | EmCare.B18S2.DE12 | boolean/quantity | Umbilicus Red or Pus Draining |
-| Observation | EmCare.B18S2.DE13 | boolean/quantity | Skin Pustules |
-| Observation | EmCare.B21S2.DE01 | CodeableConcept | Weight Status |
-| Observation | EmCare.B19S2.DE01 | boolean/quantity | Yellow Skin |
-| Observation | EmCare.B19S2.DE02 | boolean/quantity | Yellow Palms or Yellow Soles |
-| Observation | EmCare.B11S1.DE01 | boolean/quantity | Diarrhoea |
-| Observation | EmCare.B21S2.DE30 | boolean/quantity | Ulcers or White Patches in Mouth |</p>
+<p>required for the execution</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>type</th>
+      <th>code / path</th>
+      <th>valueType</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE50</td>
+      <td>boolean/quantity</td>
+      <td>Measured Temperature (second measurement)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE07</td>
+      <td>boolean/quantity</td>
+      <td>Fast Breathing</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B18S2.DE12</td>
+      <td>boolean/quantity</td>
+      <td>Umbilicus Red or Pus Draining</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B18S2.DE13</td>
+      <td>boolean/quantity</td>
+      <td>Skin Pustules</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B21S2.DE01</td>
+      <td>CodeableConcept</td>
+      <td>Weight Status</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B19S2.DE01</td>
+      <td>boolean/quantity</td>
+      <td>Yellow Skin</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B19S2.DE02</td>
+      <td>boolean/quantity</td>
+      <td>Yellow Palms or Yellow Soles</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B11S1.DE01</td>
+      <td>boolean/quantity</td>
+      <td>Diarrhoea</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B21S2.DE30</td>
+      <td>boolean/quantity</td>
+      <td>Ulcers or White Patches in Mouth</td>
+    </tr>
+  </tbody>
+</table>
 
 <h4 id="ouputs-15">Ouputs</h4>
 
-<p>ouputs generated by the structureMaps
-| type | code / path | valueType | Description |
-|—|—|—|—|
-| Condition | EmCare.B23.DE83 | boolean | generate a condition |
-| Condition | EmCare.B23.DE06 | boolean | generate a condition |
-| Condition | EmCare.B23.DE85 | boolean | generate a condition |
-| Condition | EmCare.B23.DE86 | boolean | generate a condition |
-| Condition | EmCare.B23.DE106 | boolean | generate a condition |
-| Condition | EmCare.B23.DE87 | boolean | generate a condition |
-| Condition | EmCare.B23.DE88 | boolean | generate a condition |
-| Condition | EmCare.B23.DE89 | boolean | generate a condition |
-| Condition | EmCare.B23.DE13 | boolean | generate a condition |
-| Condition | EmCare.B23.DE14 | boolean | generate a condition |
-| Condition | EmCare.B23.DE15 | boolean | generate a condition |
-| Condition | EmCare.B23.DE94 | boolean | generate a condition |
-| Condition | EmCare.B23.DE98 | boolean | generate a condition |</p>
+<p>ouputs generated by the structureMaps</p>
 
-<h3 id="activityemcareb23classification">ActivityEmcare.b23.classification</h3>
+<table>
+  <thead>
+    <tr>
+      <th>type</th>
+      <th>code / path</th>
+      <th>valueType</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE83</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE06</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE85</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE86</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE106</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE87</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE88</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE89</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE13</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE14</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE15</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE94</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE98</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="activityemcareb23classification">ActivityEmcare.b23.classification</h4>
 
 <h4 id="inputs-12">Inputs</h4>
 
-<p>required for the execution
-| type | code / path | valueType | Description |
-|—|—|—|—|
-| Observation | EmCare.B6.DE06 | boolean/quantity | Weight (Kg) |
-| Observation | EmCare.B10S1.DE05 | boolean/quantity | Cough |
-| Observation | EmCare.B10S1.DE01 | boolean/quantity | Difficulty Breathing |
-| Observation | EmCare.B10S2.DE04 | boolean/quantity | Stridor in a calm child |
-| Observation | EmCare.B10S2.DE07 | boolean/quantity | Oxygen Saturation |
-| Observation | EmCare.B10S2.DE05 | boolean/quantity | Wheezing |
-| Observation | EmCare.B10S1.DE06 | CodeableConcept | Cough for how long? |
-| Observation | EmCare.B10S1.DE02 | CodeableConcept | Difficulty breathing for how long? |
-| Observation | EmCare.B10S2.DE06 | boolean/quantity | Recurrent Wheeze |
-| Observation | EmCare.B14S2.DE11 | boolean/quantity | Measles within the last 3 months |
-| Observation | EmCare.B22.DE07 | boolean/quantity | Fast breathing |
-| Observation | EmCare.B10S2.DE03 | boolean/quantity | Chest indrawing |
-| Observation | EmCare.B11S1.DE01 | boolean/quantity | Diarrhoea |
-| Observation | EmCare.B11S1.DE02 | CodeableConcept | Diarrhoea for how long? |
-| Observation | EmCare.B11S1.DE05 | boolean/quantity | Blood in the stool in this Illness |
-| Observation | EmCare.B6.DE01 | boolean/quantity | Axillary Temperature  (degrees Celcius) |
-| Observation | EmCare.B17S1.DE01 | boolean/quantity | Throat problem |
-| Observation | EmCare.B7.DE09 | boolean/quantity | Not able to drink or breastfeed |
-| Observation | EmCare.B17S1.DE07 | CodeableConcept | Ability to swallow |
-| Observation | EmCare.B17S1.DE02 | CodeableConcept | Specify Throat problem |
-| Observation | EmCare.B17S1.DE06 | boolean/quantity | Enlarged lymph nodes on front of neck |
-| Observation | EmCare.B13S1.DE01 | boolean/quantity | Ear Problem |
-| Observation | EmCare.B13S2.DE01 | boolean/quantity | Tender swelling behind the ear |
-| Observation | EmCare.B13S2.DE02 | boolean/quantity | Pus Seen Draining from the Ear |
-| Observation | EmCare.B13S1.DE02 | boolean/quantity | Ear Pain |
-| Observation | EmCare.B12S2.DE01 | boolean/quantity | Stiff Neck |
-| Observation | EmCare.B12S1.DE03 | CodeableConcept | Fever for how long? |
-| Observation | EmCare.B12S1.DE06 | boolean/quantity | Has Fever been present every day since the Fever started? |
-| Observation | EmCare.B14S2.DE02 | boolean/quantity | Pus Draining from Eye |
-| Observation | EmCare.B14S2.DE38 | CodeableConcept | Oral Sores or Mouth Ulcers |
-| Observation | EmCare.B12S2.DE05 | boolean/quantity | Runny nose |
-| Observation | EmCare.B14S2.DE01 | boolean/quantity | Red eyes |
-| Observation | EmCare.B14S2.DE10 | boolean/quantity | Measles Rash |
-| Observation | EmCare.B14S2.DE06&amp;EmCare.B14S2.DE07 | boolean/quantity | Generalised or Localised Skin Problem |
-| Observation | EmCare.B15S2.DE01 | CodeableConcept | Palmar Pallor |
-| Observation | EmCare.B15S2.DE09 | CodeableConcept | Mucous membrane pallor |
-| Observation | EmCare.B22.DE81 | boolean/quantity | Hemoglobin (Hb) g/dL |
-| Observation | EmCare.B22.DE82 | boolean/quantity | Hemoglobin Test Not Available |
-| Observation | EmCare.B14S1.DE03 | boolean/quantity | Eye Problem |
-| Observation | EmCare.B14S2.DE03 | boolean/quantity | Clouding of the Cornea |
-| Observation | EmCare.B14S1.DE01 | boolean/quantity | Skin Problem |
-| Observation | EmCare.B14S1.DE02 | boolean/quantity | Itchy Skin |
-| Observation | EmCare.B14S2.DE13&amp;EmCare.B14S2.DE18 | boolean/quantity | Type of Skin Problem |
-| Observation | EmCare.B14S2.DE13&amp;EmCare.B14S2.DE19 | boolean/quantity | Type of Skin Problem |
-| Observation | EmCare.B14S2.DE19a | boolean/quantity | Scalp Infection (tinea capitis) |
-| Observation | EmCare.B14S2.DE13&amp;EmCare.B14S2.DE21 | boolean/quantity | Type of Skin Problem |
-| Observation | EmCare.B14S2.DE12 | boolean/quantity | Blisters, Sores or Pustules |
-| Observation | EmCare.B14S2.DE13&amp;EmCare.B14S2.DE22 | boolean/quantity | Type of Skin Problem |
-| Observation | EmCare.B14S2.DE22A | boolean/quantity | Severe rash |
-| Observation | EmCare.B14S2.DE06&amp;EmCare.B14S2.DE08 | boolean/quantity | Generalised or Localised Skin Problem |
-| Observation | EmCare.B14S2.DE13&amp;EmCare.B14S2.DE23 | boolean/quantity | Type of Skin Problem |
-| Observation | EmCare.B14S2.DE24 | boolean/quantity | Eye Involvement |
-| Observation | EmCare.B14S2.DE23a | boolean/quantity | Disseminated Herpes Zoster |
-| Observation | EmCare.B14S2.DE13&amp;EmCare.B14S2.DE25 | boolean/quantity | Type of Skin Problem |
-| Observation | EmCare.B14S2.DE30 | boolean/quantity | Skin infection extends to muscle |
-| Observation | EmCare.B6.DE01A | boolean/quantity | Measured Temperature |
-| Observation | EmCare.B14S2.DE30b | boolean/quantity | Extensive impetigo lesions |
-| Observation | EmCare.B14S2.DE13&amp;EmCare.B14S2.DE31 | boolean/quantity | Type of Skin Problem |
-| Observation | EmCare.B14S2.DE31a | boolean/quantity | Extensive molluscum lesions |
-| Observation | EmCare.B14S2.DE31b | boolean/quantity | Molluscum lesions close to the eye |
-| Observation | EmCare.B14S2.DE13&amp;EmCare.B14S2.DE32 | boolean/quantity | Type of Skin Problem |
-| Observation | EmCare.B14S2.DE32a | boolean/quantity | Extensive Warts |
-| Observation | EmCare.B14S2.DE13&amp;EmCare.B14S2.DE33 | boolean/quantity | Type of Skin Problem |
-| Observation | EmCare.B14S2.DE34 | boolean/quantity | Severe Seborrhoeic Dermatitis |
-| Observation | EmCare.B14S2.DE13&amp;EmCare.B14S2.DE35 | boolean/quantity | Type of Skin Problem |
-| Observation | EmCare.B14S2.DE13&amp;EmCare.B14S2.DE36 | boolean/quantity | Type of Skin Problem |
-| Observation | EmCare.B14S2.DE36b | boolean/quantity | Severe acute moist or weeping eczema |
-| Observation | EmCare.B14S2.DE36a | boolean/quantity | Secondary bacterial infection of eczema |
-| Observation | EmCare.B14S2.DE36c | boolean/quantity | Secondary herpes infection of eczema (eczema herpeticum) |
-| Observation | EmCare.B14S2.DE13&amp;EmCare.B14S2.DE37 | boolean/quantity | Type of Skin Problem |
-| Observation | EmCare.B6.DE17 | boolean/quantity | MUAC (mm) |
-| Observation | EmCare.B6.DE17a | boolean/quantity | MUAC cannot be measured |</p>
+<p>required for the execution</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>type</th>
+      <th>code / path</th>
+      <th>valueType</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B6.DE06</td>
+      <td>boolean/quantity</td>
+      <td>Weight (Kg)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B10S1.DE05</td>
+      <td>boolean/quantity</td>
+      <td>Cough</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B10S1.DE01</td>
+      <td>boolean/quantity</td>
+      <td>Difficulty Breathing</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B10S2.DE04</td>
+      <td>boolean/quantity</td>
+      <td>Stridor in a calm child</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B10S2.DE07</td>
+      <td>boolean/quantity</td>
+      <td>Oxygen Saturation</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B10S2.DE05</td>
+      <td>boolean/quantity</td>
+      <td>Wheezing</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B10S1.DE06</td>
+      <td>CodeableConcept</td>
+      <td>Cough for how long?</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B10S1.DE02</td>
+      <td>CodeableConcept</td>
+      <td>Difficulty breathing for how long?</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B10S2.DE06</td>
+      <td>boolean/quantity</td>
+      <td>Recurrent Wheeze</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE11</td>
+      <td>boolean/quantity</td>
+      <td>Measles within the last 3 months</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE07</td>
+      <td>boolean/quantity</td>
+      <td>Fast breathing</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B10S2.DE03</td>
+      <td>boolean/quantity</td>
+      <td>Chest indrawing</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B11S1.DE01</td>
+      <td>boolean/quantity</td>
+      <td>Diarrhoea</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B11S1.DE02</td>
+      <td>CodeableConcept</td>
+      <td>Diarrhoea for how long?</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B11S1.DE05</td>
+      <td>boolean/quantity</td>
+      <td>Blood in the stool in this Illness</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B6.DE01</td>
+      <td>boolean/quantity</td>
+      <td>Axillary Temperature  (degrees Celcius)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B17S1.DE01</td>
+      <td>boolean/quantity</td>
+      <td>Throat problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B7.DE09</td>
+      <td>boolean/quantity</td>
+      <td>Not able to drink or breastfeed</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B17S1.DE07</td>
+      <td>CodeableConcept</td>
+      <td>Ability to swallow</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B17S1.DE02</td>
+      <td>CodeableConcept</td>
+      <td>Specify Throat problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B17S1.DE06</td>
+      <td>boolean/quantity</td>
+      <td>Enlarged lymph nodes on front of neck</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B13S1.DE01</td>
+      <td>boolean/quantity</td>
+      <td>Ear Problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B13S2.DE01</td>
+      <td>boolean/quantity</td>
+      <td>Tender swelling behind the ear</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B13S2.DE02</td>
+      <td>boolean/quantity</td>
+      <td>Pus Seen Draining from the Ear</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B13S1.DE02</td>
+      <td>boolean/quantity</td>
+      <td>Ear Pain</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B12S2.DE01</td>
+      <td>boolean/quantity</td>
+      <td>Stiff Neck</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B12S1.DE03</td>
+      <td>CodeableConcept</td>
+      <td>Fever for how long?</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B12S1.DE06</td>
+      <td>boolean/quantity</td>
+      <td>Has Fever been present every day since the Fever started?</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE02</td>
+      <td>boolean/quantity</td>
+      <td>Pus Draining from Eye</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE38</td>
+      <td>CodeableConcept</td>
+      <td>Oral Sores or Mouth Ulcers</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B12S2.DE05</td>
+      <td>boolean/quantity</td>
+      <td>Runny nose</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE01</td>
+      <td>boolean/quantity</td>
+      <td>Red eyes</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE10</td>
+      <td>boolean/quantity</td>
+      <td>Measles Rash</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE06&amp;EmCare.B14S2.DE07</td>
+      <td>boolean/quantity</td>
+      <td>Generalised or Localised Skin Problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B15S2.DE01</td>
+      <td>CodeableConcept</td>
+      <td>Palmar Pallor</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B15S2.DE09</td>
+      <td>CodeableConcept</td>
+      <td>Mucous membrane pallor</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE81</td>
+      <td>boolean/quantity</td>
+      <td>Hemoglobin (Hb) g/dL</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B22.DE82</td>
+      <td>boolean/quantity</td>
+      <td>Hemoglobin Test Not Available</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S1.DE03</td>
+      <td>boolean/quantity</td>
+      <td>Eye Problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE03</td>
+      <td>boolean/quantity</td>
+      <td>Clouding of the Cornea</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S1.DE01</td>
+      <td>boolean/quantity</td>
+      <td>Skin Problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S1.DE02</td>
+      <td>boolean/quantity</td>
+      <td>Itchy Skin</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE13&amp;EmCare.B14S2.DE18</td>
+      <td>boolean/quantity</td>
+      <td>Type of Skin Problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE13&amp;EmCare.B14S2.DE19</td>
+      <td>boolean/quantity</td>
+      <td>Type of Skin Problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE19a</td>
+      <td>boolean/quantity</td>
+      <td>Scalp Infection (tinea capitis)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE13&amp;EmCare.B14S2.DE21</td>
+      <td>boolean/quantity</td>
+      <td>Type of Skin Problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE12</td>
+      <td>boolean/quantity</td>
+      <td>Blisters, Sores or Pustules</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE13&amp;EmCare.B14S2.DE22</td>
+      <td>boolean/quantity</td>
+      <td>Type of Skin Problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE22A</td>
+      <td>boolean/quantity</td>
+      <td>Severe rash</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE06&amp;EmCare.B14S2.DE08</td>
+      <td>boolean/quantity</td>
+      <td>Generalised or Localised Skin Problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE13&amp;EmCare.B14S2.DE23</td>
+      <td>boolean/quantity</td>
+      <td>Type of Skin Problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE24</td>
+      <td>boolean/quantity</td>
+      <td>Eye Involvement</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE23a</td>
+      <td>boolean/quantity</td>
+      <td>Disseminated Herpes Zoster</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE13&amp;EmCare.B14S2.DE25</td>
+      <td>boolean/quantity</td>
+      <td>Type of Skin Problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE30</td>
+      <td>boolean/quantity</td>
+      <td>Skin infection extends to muscle</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B6.DE01A</td>
+      <td>boolean/quantity</td>
+      <td>Measured Temperature</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE30b</td>
+      <td>boolean/quantity</td>
+      <td>Extensive impetigo lesions</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE13&amp;EmCare.B14S2.DE31</td>
+      <td>boolean/quantity</td>
+      <td>Type of Skin Problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE31a</td>
+      <td>boolean/quantity</td>
+      <td>Extensive molluscum lesions</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE31b</td>
+      <td>boolean/quantity</td>
+      <td>Molluscum lesions close to the eye</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE13&amp;EmCare.B14S2.DE32</td>
+      <td>boolean/quantity</td>
+      <td>Type of Skin Problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE32a</td>
+      <td>boolean/quantity</td>
+      <td>Extensive Warts</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE13&amp;EmCare.B14S2.DE33</td>
+      <td>boolean/quantity</td>
+      <td>Type of Skin Problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE34</td>
+      <td>boolean/quantity</td>
+      <td>Severe Seborrhoeic Dermatitis</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE13&amp;EmCare.B14S2.DE35</td>
+      <td>boolean/quantity</td>
+      <td>Type of Skin Problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE13&amp;EmCare.B14S2.DE36</td>
+      <td>boolean/quantity</td>
+      <td>Type of Skin Problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE36b</td>
+      <td>boolean/quantity</td>
+      <td>Severe acute moist or weeping eczema</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE36a</td>
+      <td>boolean/quantity</td>
+      <td>Secondary bacterial infection of eczema</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE36c</td>
+      <td>boolean/quantity</td>
+      <td>Secondary herpes infection of eczema (eczema herpeticum)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B14S2.DE13&amp;EmCare.B14S2.DE37</td>
+      <td>boolean/quantity</td>
+      <td>Type of Skin Problem</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B6.DE17</td>
+      <td>boolean/quantity</td>
+      <td>MUAC (mm)</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B6.DE17a</td>
+      <td>boolean/quantity</td>
+      <td>MUAC cannot be measured</td>
+    </tr>
+  </tbody>
+</table>
 
 <h4 id="ouputs-16">Ouputs</h4>
 
-<p>ouputs generated by the structureMaps
-| type | code / path | valueType | Description |
-|—|—|—|—|
-| Observation | EmCare.B6.DE08 | Quantity | Estimated Weight |
-| Condition | EmCare.B23.DE01 | boolean | generate a condition |
-| Condition | EmCare.B23.DE03 | boolean | generate a condition with possible postcoordition |
-| Condition | EmCare.B23.DE06 | boolean | generate a condition with possible postcoordition |
-| Condition | EmCare.B23.DE10 | boolean | generate a condition with possible postcoordition |
-| Condition | EmCare.B23.DE13 | boolean | generate a condition |
-| Condition | EmCare.B23.DE14 | boolean | generate a condition |
-| Condition | EmCare.B23.DE15 | boolean | generate a condition |
-| Condition | EmCare.B23.DE16 | boolean | generate a condition |
-| Condition | EmCare.B23.DE17 | boolean | generate a condition |
-| Condition | EmCare.B23.DE18 | boolean | generate a condition |
-| Condition | EmCare.B23.DE18.a | boolean | generate a condition |
-| Condition | EmCare.B23.DE100 | boolean | generate a condition |
-| Condition | EmCare.B23.DE6101 | boolean | generate a condition |
-| Condition | EmCare.B23.DE6102 | boolean | generate a condition |
-| Condition | EmCare.B23.DE6103 | boolean | generate a condition |
-| Condition | EmCare.B23.DE30 | boolean | generate a condition |
-| Condition | EmCare.B23.DE31 | boolean | generate a condition |
-| Condition | EmCare.B23.DE32 | boolean | generate a condition with possible postcoordition |
-| Condition | EmCare.B23.DE33 | boolean | generate a condition |
-| Condition | EmCare.B23.DE19 | boolean | generate a condition |
-| Condition | EmCare.B23.DE104 | boolean | generate a condition with possible postcoordition |
-| Condition | EmCare.B23.DE105 | boolean | generate a condition |
-| Condition | EmCare.B23.DE27 | boolean | generate a condition |
-| Condition | EmCare.B23.DE28 | boolean | generate a condition |
-| Condition | EmCare.B23.DE29 | boolean | generate a condition |
-| Condition | EmCare.B23.DE62 | boolean | generate a condition |
-| Condition | EmCare.B23.DE63 | boolean | generate a condition |
-| Condition | EmCare.B23.DE64 | boolean | generate a condition |
-| Condition | EmCare.B23.DE34 | boolean | generate a condition |
-| Condition | EmCare.B23.DE35 | boolean | generate a condition with possible postcoordition |
-| Condition | EmCare.B23.DE41 | boolean | generate a condition |
-| Condition | EmCare.B23.DE42 | boolean | generate a condition with possible postcoordition |
-| Condition | EmCare.B23.DE44 | boolean | generate a condition |
-| Condition | EmCare.B23.DE45 | boolean | generate a condition with possible postcoordition |
-| Condition | EmCare.B23.DE47 | boolean | generate a condition with possible postcoordition |
-| Condition | EmCare.B23.DE49 | boolean | generate a condition with possible postcoordition |
-| Condition | EmCare.B23.DE52 | boolean | generate a condition with possible postcoordition |
-| Condition | EmCare.B23.DE53 | boolean | generate a condition with possible postcoordition |
-| Condition | EmCare.B23.DE54 | boolean | generate a condition with possible postcoordition |
-| Condition | EmCare.B23.DE56 | boolean | generate a condition |
-| Condition | EmCare.B23.DE57 | boolean | generate a condition with possible postcoordition |
-| Condition | EmCare.B23.DE58 | boolean | generate a condition |
-| Condition | EmCare.B23.DE59 | boolean | generate a condition with possible postcoordition |
-| Condition | EmCare.B23.DE61 | boolean | generate a condition |
-| Condition | EmCare.B23.DE106 | boolean | generate a condition |
-| Condition | EmCare.B23.DE107 | boolean | generate a condition |
-| Condition | EmCare.B23.DE108 | boolean | generate a condition |</p>
+<p>ouputs generated by the structureMaps</p>
 
-<h3 id="activityemcaretreatment">ActivityEmcare.treatment</h3>
+<table>
+  <thead>
+    <tr>
+      <th>type</th>
+      <th>code / path</th>
+      <th>valueType</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Observation</td>
+      <td>EmCare.B6.DE08</td>
+      <td>Quantity</td>
+      <td>Estimated Weight</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE01</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE03</td>
+      <td>boolean</td>
+      <td>generate a condition with possible postcoordition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE06</td>
+      <td>boolean</td>
+      <td>generate a condition with possible postcoordition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE10</td>
+      <td>boolean</td>
+      <td>generate a condition with possible postcoordition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE13</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE14</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE15</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE16</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE17</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE18</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE18.a</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE100</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE6101</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE6102</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE6103</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE30</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE31</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE32</td>
+      <td>boolean</td>
+      <td>generate a condition with possible postcoordition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE33</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE19</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE104</td>
+      <td>boolean</td>
+      <td>generate a condition with possible postcoordition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE105</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE27</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE28</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE29</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE62</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE63</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE64</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE34</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE35</td>
+      <td>boolean</td>
+      <td>generate a condition with possible postcoordition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE41</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE42</td>
+      <td>boolean</td>
+      <td>generate a condition with possible postcoordition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE44</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE45</td>
+      <td>boolean</td>
+      <td>generate a condition with possible postcoordition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE47</td>
+      <td>boolean</td>
+      <td>generate a condition with possible postcoordition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE49</td>
+      <td>boolean</td>
+      <td>generate a condition with possible postcoordition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE52</td>
+      <td>boolean</td>
+      <td>generate a condition with possible postcoordition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE53</td>
+      <td>boolean</td>
+      <td>generate a condition with possible postcoordition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE54</td>
+      <td>boolean</td>
+      <td>generate a condition with possible postcoordition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE56</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE57</td>
+      <td>boolean</td>
+      <td>generate a condition with possible postcoordition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE58</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE59</td>
+      <td>boolean</td>
+      <td>generate a condition with possible postcoordition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE61</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE106</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE107</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>EmCare.B23.DE108</td>
+      <td>boolean</td>
+      <td>generate a condition</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="activityemcaretreatment">ActivityEmcare.treatment</h4>
 
 <h4 id="inputs-13">Inputs</h4>
 
-<p>required for the execution
-| type | code / path | valueType | Description |
+<p>required for the execution</p>
+
+<p>| type | code / path | valueType | Description |
 |—|—|—|—|</p>
 
 <h4 id="ouputs-17">Ouputs</h4>
 
-<p>ouputs generated by the structureMaps
-| type | code / path | valueType | Description |
+<p>ouputs generated by the structureMaps</p>
+
+<p>| type | code / path | valueType | Description |
 |—|—|—|—|</p>
 
   <!-- #### Data elements by profile
@@ -1070,7 +3404,7 @@ TODO -->
   </thead>
   <tbody>
     <tr>
-      <td><a name="l1165">​</a><a href="PlanDefinition-EmCareDT01.html">EmCareDT01</a></td>
+      <td><a name="l7891">​</a><a href="PlanDefinition-EmCareDT01.html">EmCareDT01</a></td>
       <td>None</td>
     </tr>
   </tbody>
@@ -1105,7 +3439,7 @@ TODO -->
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.who.int">World Health Organization (WHO)</a>.  Package who.fhir.emc-cds#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 11, 2023 18:06+0000">2023-04-11</span>
+          IG &copy; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.who.int">World Health Organization (WHO)</a>.  Package who.fhir.emc-cds#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Apr 12, 2023 04:59+0000">2023-04-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -1,6 +1,8 @@
 This implementation guide provides computable content based on the Digital Adaptation Kit (DAK) to facilitate the implementation of the Clinical Care in Crises guidelines. The following diagram illustrates the components of a Digital Adaptation Kit and how those components are represented in FHIR:
 
 <img style="width:100%" src="assets/images/dak-to-cpg.jpg"/>
+
+
 * [**General Approach**](#general-approach) General Approach describe how the differentes activities are articulated in the DAK
 
 
@@ -55,7 +57,8 @@ The key activities for Clinical Care in Crises (EmCare) are the following
 |[EmCare.B23.Classification.2m.p](ActivityDefinition-emcare.b23.classification.json)|[NEED_INPUT]|>= 2 months|>= 2 months|
 |[EmCare.Treatment](ActivityDefinition-emcare.treatment.json)|[NEED_INPUT]|Any|Any|
 
-Assessement and test sub-activities
+##### Assessement and test sub-activities
+
 |Code|Description|Applicability |
 |---|---|---|
 |[Breastfeeding](ActivityDefinition-emcare.b22.breastfeeding.json)|[NEED_INPUT]|AgeInMonths >=2 and AgeInMonths  <6 and "severe classification up to assessments and tests excluding severe dehydration" !=true OR AgeInMonths <2 and  "Breastfed" = true and "yi severe classification other than severe dehydration" !=true |
@@ -73,7 +76,7 @@ Assessement and test sub-activities
 
 Data elements are represented within this implementation guide using a codessystem  of the appropriate resource as well as libraries of associated calculation logic for calculated, or inferred, data elements.
 
-Note that some "Data elements" from the perspective of the Data Dictionary presented in the DAK are actually rollups. For example, Patient last name is a specific data element within the DAK, but is represented as one of many elements in the ANCPatient profile.
+Note that some "Data elements" from the perspective of the Data Dictionary presented in the DAK are actually rollups. For example, Patient last name is a specific data element within the DAK, but is represented as one of many elements in the EmCare Patient profile.
 
 #### Data Element Processing
 
@@ -87,12 +90,12 @@ The inputs on the left consist of:
 2. Terminology mappings for each element to several standard terminologies, including SNOMED, LOINC, and ICD-10 and -11.
 3. FHIR mappings for each element, establishing a path to a FHIR resource type and element, as well as a base profile and establishing contexts for the element
 
-NOTE: The FHIR mappings are not part of the Digital Adaptation Kit, but are introduced as part of this implementation guide. The xls_form_iraq_v1.xlsx spreadsheet in the `input/l2` folder is the source for these mappings, and was created by copying the WHO_ANC spreadsheet from the Digital Adaptation Kit following the pyfhirsdc format, and then adding the FHIR mapping columns and providing the individual data element mappings.
+NOTE: The FHIR mappings are not part of the Digital Adaptation Kit, but are introduced as part of this implementation guide. The xls_form_iraq_v1.xlsx spreadsheet in the `input/l2` folder is the source for these mappings, and was created by copying the WHO L2 spreadsheet from the Digital Adaptation Kit following the pyfhirsdc format, and then adding the FHIR mapping columns and providing the individual data element mappings.
 
 The outputs on the right consist of:
 
-1. **CodeSystem:** An ANC-specific code system that contains concepts for each element and input option in the data dictionary
-2. **ConceptMap:** Mappings from each code in the ANC-specific code system to the various standard terminologies
+1. **CodeSystem:** An EmCare-specific code system that contains concepts for each element and input option in the data dictionary
+2. **ConceptMap:** Mappings from each code in the EmCare-specific code system to the various standard terminologies (still to be developped)
 3. **ValueSet:** Valuesets for each data element concept and the possible values for that concept
 4. **Profile:** StructureDefinition resources for the profiles (and any necessary extensions) to represent the data elements as FHIR resources
 5. **Questionnaire:** Questionnaire resources, one for each activity, with questions for each data element used by the activity

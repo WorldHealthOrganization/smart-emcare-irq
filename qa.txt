@@ -3,7 +3,7 @@
 
 err = 10079, warn = 1465, info = 1536
 IG Publisher Version: 1.3.4
-Generated Tue Apr 11 18:14:41 UTC 2023. FHIR version 4.0.1 for who.fhir.emc-cds#0.1.0 (canonical = http://fhir.org/guides/who/emcare)
+Generated Wed Apr 12 05:08:48 UTC 2023. FHIR version 4.0.1 for who.fhir.emc-cds#0.1.0 (canonical = http://fhir.org/guides/who/emcare)
  Build Errors : 98 / 88 / 0
  /github/workspace/input/emc-cds : 0 / 2 / 1
  /github/workspace/input/ext_ig/who/CodeSystem-extended-content-codes : 11 / 1 / 1
@@ -401,12 +401,12 @@ ERROR: /github/workspace/output/ValueSet-emcareobservation.html#/html/body/div/d
 ERROR: /github/workspace/output/ValueSet-emcareobservation.html#/html/body/div/div/div/div/div/div/ul/li/table/tr/td/a at Line 235, column 30612: The link 'CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE82' for "EmCare.B22.DE82" cannot be resolved (valid targets: 402 targets)
 ERROR: /github/workspace/output/ValueSet-emcareobservation.html#/html/body/div/div/div/div/div/div/table/tr/td/a at Line 371, column 163: The link 'CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE81' for "EmCare.B22.DE81" cannot be resolved (valid targets: 402 targets)
 ERROR: /github/workspace/output/ValueSet-emcareobservation.html#/html/body/div/div/div/div/div/div/table/tr/td/a at Line 371, column 557: The link 'CodeSystem-emcare-custom-codes.html#emcare-custom-codes-EmCare.46B22.46DE82' for "EmCare.B22.DE82" cannot be resolved (valid targets: 402 targets)
-ERROR: /github/workspace/output/documentation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 250, column 12: The link 'ActivityDefinition-emcarea.registration.e.json' for "EmCareA.Registration.E" cannot be resolved
-ERROR: /github/workspace/output/documentation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 256, column 12: The link 'ActivityDefinition-emcare.b7.lti.dangersigns.json' for "EmCare.B7.LTI-DangerSigns" cannot be resolved
-ERROR: /github/workspace/output/documentation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 382, column 12: The link 'structuredefinition-emcare-condition.html' for "EmCare Condition" cannot be resolved
-ERROR: /github/workspace/output/documentation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 385, column 12: The link 'structuredefinition-emcare-observation.html' for "EmCare Observation" cannot be resolved
-ERROR: /github/workspace/output/documentation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 388, column 12: The link 'structuredefinition-emcare-patient.html' for "EmCare Patient" cannot be resolved
-ERROR: /github/workspace/output/documentation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 1075, column 12: The link 'PlanDefinition-EmCareDT01.html' for "EmCareDT01" cannot be resolved
+ERROR: /github/workspace/output/documentation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 233, column 12: The link 'ActivityDefinition-emcarea.registration.e.json' for "EmCareA.Registration.E" cannot be resolved
+ERROR: /github/workspace/output/documentation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 239, column 12: The link 'ActivityDefinition-emcare.b7.lti.dangersigns.json' for "EmCare.B7.LTI-DangerSigns" cannot be resolved
+ERROR: /github/workspace/output/documentation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 399, column 12: The link 'structuredefinition-emcare-condition.html' for "EmCare Condition" cannot be resolved
+ERROR: /github/workspace/output/documentation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 402, column 12: The link 'structuredefinition-emcare-observation.html' for "EmCare Observation" cannot be resolved
+ERROR: /github/workspace/output/documentation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 405, column 12: The link 'structuredefinition-emcare-patient.html' for "EmCare Patient" cannot be resolved
+ERROR: /github/workspace/output/documentation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 3409, column 12: The link 'PlanDefinition-EmCareDT01.html' for "EmCareDT01" cannot be resolved
 ERROR: /github/workspace/output/guidance.html#/html/body/div/div/div/div/div/p/a at Line 182, column 248: The link 'CodeSystem-who-identifier-types.html' for "WHO Identifier Types" cannot be resolved
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide

@@ -1,6 +1,7 @@
 #### Inputs
 
 required for the execution
+
 | type | code / path | valueType | Description |
 |---|---|---|---|
 | Observation | EmCare.B6.DE06 | boolean/quantity | Weight (Kg) |
@@ -75,3 +76,4 @@ required for the execution
 | Observation | EmCare.B14S2.DE13&EmCare.B14S2.DE37 | boolean/quantity | Type of Skin Problem |
 | Observation | EmCare.B6.DE17 | boolean/quantity | MUAC (mm) |
 | Observation | EmCare.B6.DE17a | boolean/quantity | MUAC cannot be measured |
+
