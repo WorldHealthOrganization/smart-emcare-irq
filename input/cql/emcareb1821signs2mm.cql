@@ -2,14 +2,14 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareb1821signs2mm version '1.0.1.rc12.build.483'
+library emcareb1821signs2mm version '1.0.1.rc12.build.610'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.1.rc12.build.483' called Base
-include emcareobservation version '1.0.1.rc12.build.483' called obs
-include emcarevalueset version '1.0.1.rc12.build.483' called val
-include emcarezscore version '1.0.1.rc12.build.483' called Z
-include emcarecombineddataelements version '1.0.1.rc12.build.483' called c
+include emcarebase version '1.0.1.rc12.build.610' called Base
+include emcareobservation version '1.0.1.rc12.build.610' called obs
+include emcarevalueset version '1.0.1.rc12.build.610' called val
+include emcarezscore version '1.0.1.rc12.build.610' called Z
+include emcarecombineddataelements version '1.0.1.rc12.build.610' called c
 
 
 
@@ -18,138 +18,218 @@ context Patient
 
 
 /* 
-fever : 
-    c."fever"
+OBSdefine.EmCare.B11S1.DE01 : Diarrhoea
+
 */
-define "fever":
-    c."fever"
+define "OBSdefine.EmCare.B11S1.DE01":
+    Base.GetObsValue('EmCare.B11S1.DE01')
+
+/* 
+OBSdefine.EmCare.B21S1.DE06 : Breastfed
+
+*/
+define "OBSdefine.EmCare.B21S1.DE06":
+    Base.GetObsValue('EmCare.B21S1.DE06')
+
+/* 
+OBSdefine.EmCare.B18S1.DE02 : Difficulty with Feeding
+
+*/
+define "OBSdefine.EmCare.B18S1.DE02":
+    Base.GetObsValue('EmCare.B18S1.DE02')
+
+/* 
+OBSdefine.EmCare.B7.DE03 : Convulsion(s) in this Illness
+
+*/
+define "OBSdefine.EmCare.B7.DE03":
+    Base.GetObsValue('EmCare.B7.DE03')
+
+/* 
+OBSdefine.EmCare.B22.DE01 : Respiratory Rate (breaths per minute)
+
+*/
+define "OBSdefine.EmCare.B22.DE01":
+    Base.GetObsValue('EmCare.B22.DE01')
+
+/* 
+OBSdefine.EmCare.B22.DE04 : Respiratory Rate Second Count (breaths per minute)
+
+*/
+define "OBSdefine.EmCare.B22.DE04":
+    Base.GetObsValue('EmCare.B22.DE04')
+
+/* 
+OBSdefine.EmCare.B22.DE07 : Fast Breathing
+
+*/
+define "OBSdefine.EmCare.B22.DE07":
+    Base.GetObsValue('EmCare.B22.DE07')
+
+/* 
+Fever : 
+c."Fever"
+*/
+define "Fever":
+    c."Fever"
 
 /* 
 zscore : 
-    Z."WAZ"
+Z."WAZ"
 */
 define "zscore":
     Z."WAZ"
 
 /* 
-ageinmonths : 
+AgeInMonths : 
+AgeInMonths()
+*/
+define "AgeInMonths":
     AgeInMonths()
-*/
-define "ageinmonths":
-    AgeInMonths()
-
-/* alias age in month : ageinmonths*/
-define "age in month":
-    "ageinmonths"
 
 /* 
-ageindays : 
+Age in Month : AgeInMonths
+Alias
+*/
+define "Age in Month":
+    "AgeInMonths"
+
+/* 
+AgeInDays : 
+AgeInDays()
+*/
+define "AgeInDays":
     AgeInDays()
-*/
-define "ageindays":
-    AgeInDays()
 
 /* 
-emcare.b20s1.de01 : 
-    o"Diarrhoea"
+EmCare.B20S1.DE01 : 
+o"Diarrhoea"
 */
-define "emcare.b20s1.de01":
-    Base.GetObsValue('EmCare.B11S1.DE01')
-
-/* alias diarrhoea : emcare.b20s1.de01*/
-define "diarrhoea":
-    "emcare.b20s1.de01"
+define "EmCare.B20S1.DE01":
+    "OBSdefine.EmCare.B11S1.DE01"
 
 /* 
-emcare.a.de31 : 
+Diarrhoea : EmCare.B20S1.DE01
+Alias
+*/
+define "Diarrhoea":
+    "EmCare.B20S1.DE01"
+
+/* 
+EmCare.A.DE31 : 
+Base."Biological Mother Vital Status"
+*/
+define "EmCare.A.DE31":
     Base."Biological Mother Vital Status"
-*/
-define "emcare.a.de31":
-    Base."Biological Mother Vital Status"
-
-/* alias biological mother vital status : emcare.a.de31*/
-define "biological mother vital status":
-    "emcare.a.de31"
 
 /* 
-emcare.b21s1.de01 : 
-    o"Breastfed"
+Biological Mother Vital Status : EmCare.A.DE31
+Alias
 */
-define "emcare.b21s1.de01":
-    Base.GetObsValue('EmCare.B21S1.DE06')
-
-/* alias breastfed : emcare.b21s1.de01*/
-define "breastfed":
-    "emcare.b21s1.de01"
+define "Biological Mother Vital Status":
+    "EmCare.A.DE31"
 
 /* 
-emcare.b18s1.de02 : 
-    o"Difficulty with Feeding"
+EmCare.B21S1.DE01 : 
+o"Breastfed"
 */
-define "emcare.b18s1.de02":
-    Base.GetObsValue('EmCare.B18S1.DE02')
-
-/* alias difficulty with feeding : emcare.b18s1.de02*/
-define "difficulty with feeding":
-    "emcare.b18s1.de02"
+define "EmCare.B21S1.DE01":
+    "OBSdefine.EmCare.B21S1.DE06"
 
 /* 
-yi_sever_but_dhey : 
-    c."yi severe classification other than severe dehydration"
+Breastfed : EmCare.B21S1.DE01
+Alias
 */
-define "yi_sever_but_dhey":
-    c."yi severe classification other than severe dehydration"
-
-/* alias yi severe classification other than severe dehydration : yi_sever_but_dhey*/
-define "yi severe classification other than severe dehydration":
-    "yi_sever_but_dhey"
+define "Breastfed":
+    "EmCare.B21S1.DE01"
 
 /* 
-yi_sever : 
-    c."yi severe classification"
+EmCare.B18S1.DE02 : 
+o"Difficulty with Feeding"
 */
-define "yi_sever":
-    c."yi severe classification"
-
-/* alias yi severe classification : yi_sever*/
-define "yi severe classification":
-    "yi_sever"
+define "EmCare.B18S1.DE02":
+    "OBSdefine.EmCare.B18S1.DE02"
 
 /* 
-emcare.b7.de03 : 
-    o"Convulsion(s) in this Illness"
+Difficulty with Feeding : EmCare.B18S1.DE02
+Alias
 */
-define "emcare.b7.de03":
-    Base.GetObsValue('EmCare.B7.DE03')
-
-/* alias convulsion(s) in this illness : emcare.b7.de03*/
-define "convulsion(s) in this illness":
-    "emcare.b7.de03"
+define "Difficulty with Feeding":
+    "EmCare.B18S1.DE02"
 
 /* 
-respiratory rate profile : 
-    o"Respiratory Rate (breaths per minute)"
+YI_sever_but_dhey : 
+c."YI severe classification other than Severe Dehydration"
 */
-define "respiratory rate profile":
-    Base.GetObsValue('EmCare.B22.DE01')
+define "YI_sever_but_dhey":
+    c."YI severe classification other than Severe Dehydration"
+
+/* 
+YI severe classification other than Severe Dehydration : YI_sever_but_dhey
+Alias
+*/
+define "YI severe classification other than Severe Dehydration":
+    "YI_sever_but_dhey"
+
+/* 
+YI_sever : 
+c."YI severe classification"
+*/
+define "YI_sever":
+    c."YI severe classification"
+
+/* 
+YI severe classification : YI_sever
+Alias
+*/
+define "YI severe classification":
+    "YI_sever"
+
+/* 
+EmCare.B7.DE03 : 
+o"Convulsion(s) in this Illness"
+*/
+define "EmCare.B7.DE03":
+    "OBSdefine.EmCare.B7.DE03"
+
+/* 
+Convulsion(s) in this Illness : EmCare.B7.DE03
+Alias
+*/
+define "Convulsion(s) in this Illness":
+    "EmCare.B7.DE03"
+
+/* 
+Respiratory Rate profile : 
+o"Respiratory Rate (breaths per minute)"
+*/
+define "Respiratory Rate profile":
+    "OBSdefine.EmCare.B22.DE01"
 
 /* 
 force-collection : 
-    false
+false
 */
 define "force-collection":
     false
 
 /* 
-respiratory rate second count profile : 
-    o"Respiratory Rate Second Count (breaths per minute)"
+Respiratory Rate Second Count Profile : 
+o"Respiratory Rate Second Count (breaths per minute)"
 */
-define "respiratory rate second count profile":
-    Base.GetObsValue('EmCare.B22.DE04')
+define "Respiratory Rate Second Count Profile":
+    "OBSdefine.EmCare.B22.DE04"
 
 /* 
-fast breathing profile : 
-    o"Fast Breathing"
+Fast Breathing profile : 
+o"Fast Breathing"
 */
-define "fast breathing profile":
-    Base.GetObsValue('EmCare.B22.DE07')
+define "Fast Breathing profile":
+    "OBSdefine.EmCare.B22.DE07"
+
+/* 
+BackReference : 
+back reference to resource
+*/
+define "BackReference":
+    Reference {reference: string { value: 'Questionnaire/EmCare.B18-21.Signs.2m.m'}}

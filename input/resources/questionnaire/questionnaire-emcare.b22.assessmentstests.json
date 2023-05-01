@@ -74,7 +74,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "ageinmonths"
+                        "expression": "AgeInMonths"
                     }
                 }
             ],
@@ -93,7 +93,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "ageindays"
+                        "expression": "AgeInDays"
                     }
                 }
             ],
@@ -116,7 +116,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "a-breastfeedingtest"
+                        "expression": "a-BreastFeedingTest"
                     }
                 }
             ],
@@ -140,7 +140,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "a-respiratoryrate"
+                        "expression": "a-RespiratoryRate"
                     }
                 }
             ],
@@ -164,7 +164,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "a-bronchodilatortest"
+                        "expression": "a-BronchodilatorTest"
                     }
                 }
             ],
@@ -188,7 +188,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "a-hemoglobin"
+                        "expression": "a-Hemoglobin"
                     }
                 }
             ],
@@ -212,7 +212,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "a-secondtemperature"
+                        "expression": "a-SecondTemperature"
                     }
                 }
             ],
@@ -236,7 +236,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "a-fluidtest"
+                        "expression": "a-FluidTest"
                     }
                 }
             ],
@@ -454,6 +454,10 @@
                             "valueCode": "horizontal"
                         },
                         {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                            "valueBoolean": true
+                        },
+                        {
                             "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                             "valueExpression": {
                                 "language": "text/fhirpath",
@@ -464,7 +468,7 @@
                             "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
                             "valueExpression": {
                                 "language": "text/fhirpath",
-                                "expression": "iif(%resource.repeat(item).where(linkId='Fast Breathing profile').answer.first().empty() and (%resource.repeat(item).where(linkId='AgeInMonths').answer.first().value >= 2 or %resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='second').repeat(item).where(linkId='EmCare.B22.DE04').answer.first().exists() or  %resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='second').repeat(item).where(linkId='EmCare.B22.DE05').answer.first().exists() or  %resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='EmCare.B22.DE01').answer.first().value < 60 '{Breaths}/min'),iif(%resource.repeat(item).where(linkId='AgeInMonths').answer.first().value<2 and (%resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='second').repeat(item).where(linkId='EmCare.B22.DE04').answer.first().value >= 60 '{Breaths}/min' or (%resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='second').repeat(item).where(linkId='EmCare.B22.DE05').answer.first().exists()  and ( %resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='EmCare.B22.DE01').answer.first().value  >= 60 '{Breaths}/min'  or %resource.repeat(item).where(linkId='Respiratory Rate profile').answer.first().value  >= 60 '{Breaths}/min' ) ) ) or %resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='EmCare.B22.DE01').answer.first().value >= 50 '{Breaths}/min' and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value < 12 and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value >= 2or %resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='EmCare.B22.DE01').answer.first().value >= 40 '{Breaths}/min' and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value>=12 and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value < 60, true, false),{})"
+                                "expression": "iif(%resource.repeat(item).where(linkId='Fast Breathing profile').answer.first().empty() and (%resource.repeat(item).where(linkId='AgeInMonths').answer.first().value >= 2 or %resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='second').repeat(item).where(linkId='EmCare.B22.DE04').answer.first().exists() or  %resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='second').repeat(item).where(linkId='EmCare.B22.DE05').answer.first().exists() or  %resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='EmCare.B22.DE01').answer.first().value < 60 '{Breaths}/min'),iif((%resource.repeat(item).where(linkId='AgeInMonths').answer.first().value<2 and (%resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='second').repeat(item).where(linkId='EmCare.B22.DE04').answer.first().value >= 60 '{Breaths}/min' or (%resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='second').repeat(item).where(linkId='EmCare.B22.DE05').answer.first().exists()  and ( %resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='EmCare.B22.DE01').answer.first().value  >= 60 '{Breaths}/min'  or %resource.repeat(item).where(linkId='Respiratory Rate profile').answer.first().value  >= 60 '{Breaths}/min' ) ) ) )or (%resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='EmCare.B22.DE01').answer.first().value >= 50 '{Breaths}/min' and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value < 12 and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value >= 2)or (%resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='EmCare.B22.DE01').answer.first().value >= 40 '{Breaths}/min' and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value>=12 and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value < 60), true, false),{})"
                             }
                         }
                     ],
@@ -472,8 +476,23 @@
                     "text": "Fast Breathing",
                     "type": "boolean",
                     "required": false,
+                    "repeats": false
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                            "valueExpression": {
+                                "language": "text/fhirpath",
+                                "expression": "%resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='EmCare.B22.DE07').answer.first().value=true"
+                            }
+                        }
+                    ],
+                    "linkId": "fastbreathing-True",
+                    "text": "Fast Breathing",
+                    "type": "display",
+                    "required": false,
                     "repeats": false,
-                    "readOnly": true,
                     "item": [
                         {
                             "extension": [
@@ -489,8 +508,44 @@
                                     }
                                 }
                             ],
-                            "linkId": "EmCare.B22.DE07-help",
-                            "text": "The number of breaths for <b>\u2018fast breathing\u2019 depends on the child\u2019s age.</b>   * Under 2 months: More than 60 breaths per minute* * 2 to 11 months: More than 50 breaths per minute * 12 to 59 months: More than 40 breaths per minute  *In young infants, a second measurement should be taken to confirm, unless there is already another sign of possible serious bacterial infection",
+                            "linkId": "fastbreathing-True-help",
+                            "text": "The number of breaths for <b>\u2018fast breathing\u2019 depends on the child\u2019s age.</b>   </p>\n\n\t<ul>\n\t\t<li>Under 2 months: More than 60 breaths per minute(*)</li>\n\t\t<li>2 to 11 months: More than 50 breaths per minute</li>\n\t\t<li>12 to 59 months: More than 40 breaths per minute</li>\n\t</ul>\n\n\t<p>*In young infants, a second measurement should be taken to confirm, unless there is already another sign of possible serious bacterial infection",
+                            "type": "display"
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                            "valueExpression": {
+                                "language": "text/fhirpath",
+                                "expression": "%resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='EmCare.B22.DE07').answer.first().value=false"
+                            }
+                        }
+                    ],
+                    "linkId": "fastbreathing-False",
+                    "text": "No Fast Breathing",
+                    "type": "display",
+                    "required": false,
+                    "repeats": false,
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "fastbreathing-False-help",
+                            "text": "The number of breaths for <b>\u2018fast breathing\u2019 depends on the child\u2019s age.</b>   </p>\n\n\t<ul>\n\t\t<li>Under 2 months: More than 60 breaths per minute(*)</li>\n\t\t<li>2 to 11 months: More than 50 breaths per minute</li>\n\t\t<li>12 to 59 months: More than 40 breaths per minute</li>\n\t</ul>\n\n\t<p>*In young infants, a second measurement should be taken to confirm, unless there is already another sign of possible serious bacterial infection",
                             "type": "display"
                         }
                     ]
@@ -753,79 +808,6 @@
                 {
                     "extension": [
                         {
-                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
-                            "valueExpression": {
-                                "language": "text/fhirpath",
-                                "expression": "%resource.repeat(item).where(linkId='EmCare.B22.BronchodilatorTest').repeat(item).where(linkId='EmCare.B22.DE22').answer.first().empty()"
-                            }
-                        }
-                    ],
-                    "linkId": "EmCare.B22.DE17",
-                    "text": "Inhaled Bronchodilator Trial Results",
-                    "type": "choice",
-                    "required": false,
-                    "repeats": true,
-                    "answerOption": [
-                        {
-                            "valueCoding": {
-                                "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
-                                "code": "EmCare.B22.DE18",
-                                "display": "Chest Indrawing (post inhaled bronchodilator trial)"
-                            }
-                        },
-                        {
-                            "valueCoding": {
-                                "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
-                                "code": "EmCare.B22.DE19",
-                                "display": "Respiratory Rate (post inhaled bronchodilator trial)"
-                            }
-                        },
-                        {
-                            "valueCoding": {
-                                "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
-                                "code": "EmCare.B22.DE20",
-                                "display": "Fast Breathing (post inhaled bronchodilator trial)"
-                            }
-                        },
-                        {
-                            "valueCoding": {
-                                "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
-                                "code": "EmCare.B22.DE21",
-                                "display": "No Fast Breathing and No Chest Indrawing (post Inhaled Bronchodilator Trial)"
-                            }
-                        },
-                        {
-                            "valueCoding": {
-                                "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
-                                "code": "EmCare.B22.DE22",
-                                "display": "Inhaled Bronchodilator Trial Not Feasible or Available"
-                            }
-                        }
-                    ],
-                    "item": [
-                        {
-                            "extension": [
-                                {
-                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                                    "valueCodeableConcept": {
-                                        "coding": [
-                                            {
-                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                                "code": "help"
-                                            }
-                                        ]
-                                    }
-                                }
-                            ],
-                            "linkId": "EmCare.B22.DE17-help",
-                            "text": "Provide information on how to conduct an Inhaled Bronchodilator Trial as per <span class=\"caps\">IMCI</span> training &#8211; <span class=\"caps\">TBC</span>",
-                            "type": "display"
-                        }
-                    ]
-                },
-                {
-                    "extension": [
-                        {
                             "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
                             "valueCodeableConcept": {
                                 "coding": [
@@ -842,7 +824,7 @@
                             "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                             "valueExpression": {
                                 "language": "text/fhirpath",
-                                "expression": "%resource.repeat(item).where(linkId='EmCare.B22.BronchodilatorTest').repeat(item).where(linkId='EmCare.B22.DE17').answer.first().empty()"
+                                "expression": "%resource.repeat(item).where(linkId='EmCare.B22.BronchodilatorTest').repeat(item).where(linkId='EmCare.B22.DE19').answer.first().empty() and %resource.repeat(item).where(linkId='EmCare.B22.BronchodilatorTest').repeat(item).where(linkId='EmCare.B22.DE18').answer.first().empty()"
                             }
                         }
                     ],
@@ -864,13 +846,99 @@
                         {
                             "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
                             "valueCode": "horizontal"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                            "valueExpression": {
+                                "language": "text/fhirpath",
+                                "expression": "%resource.repeat(item).where(linkId='EmCare.B22.BronchodilatorTest').repeat(item).where(linkId='EmCare.B22.DE22').answer.first().empty()"
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B22.DE18",
+                    "text": "Chest Indrawing (post inhaled bronchodilator trial)",
+                    "type": "boolean",
+                    "required": false,
+                    "repeats": false
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                            "valueCoding": {
+                                "system": "http://unitsofmeasure.org",
+                                "code": "{Breaths}/min"
+                            }
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                            "valueExpression": {
+                                "language": "text/fhirpath",
+                                "expression": "%resource.repeat(item).where(linkId='EmCare.B22.BronchodilatorTest').repeat(item).where(linkId='EmCare.B22.DE22').answer.first().empty()"
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B22.DE19",
+                    "text": "Respiratory Rate (post inhaled bronchodilator trial)",
+                    "type": "quantity",
+                    "required": false,
+                    "repeats": false
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+                            "valueCode": "horizontal"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                            "valueExpression": {
+                                "language": "text/fhirpath",
+                                "expression": "%resource.repeat(item).where(linkId='EmCare.B22.BronchodilatorTest').repeat(item).where(linkId='EmCare.B22.DE22').answer.first().empty()"
+                            }
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+                            "valueExpression": {
+                                "language": "text/fhirpath",
+                                "expression": "iif(%resource.repeat(item).where(linkId='EmCare.B22.BronchodilatorTest').repeat(item).where(linkId='EmCare.B22.DE19').answer.first().exists(),iif( ( %resource.repeat(item).where(linkId='EmCare.B22.BronchodilatorTest').repeat(item).where(linkId='EmCare.B22.DE19').answer.first().value >= 50 '{Breaths}/min' and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value < 12 and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value >= 2 ) or( %resource.repeat(item).where(linkId='EmCare.B22.BronchodilatorTest').repeat(item).where(linkId='EmCare.B22.DE19').answer.first().value >= 40 '{Breaths}/min' and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value>=12 and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value < 60), true, false), {})"
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B22.DE20",
+                    "text": "Fast Breathing (post inhaled bronchodilator trial)",
+                    "type": "boolean",
+                    "required": false,
+                    "repeats": false,
+                    "readOnly": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+                            "valueCode": "horizontal"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                            "valueExpression": {
+                                "language": "text/fhirpath",
+                                "expression": "%resource.repeat(item).where(linkId='EmCare.B22.BronchodilatorTest').repeat(item).where(linkId='EmCare.B22.DE22').answer.first().empty()"
+                            }
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+                            "valueExpression": {
+                                "language": "text/fhirpath",
+                                "expression": "%resource.repeat(item).where(linkId='EmCare.B22.BronchodilatorTest').repeat(item).where(linkId='EmCare.B22.DE18').answer.first().value = false and %resource.repeat(item).where(linkId='EmCare.B22.BronchodilatorTest').repeat(item).where(linkId='EmCare.B22.DE20').answer.first().value = false"
+                            }
                         }
                     ],
                     "linkId": "EmCare.B22.DE21",
                     "text": "No Fast Breathing and No Chest Indrawing (post Inhaled Bronchodilator Trial)",
                     "type": "boolean",
                     "required": false,
-                    "repeats": false
+                    "repeats": false,
+                    "readOnly": true
                 }
             ]
         },
@@ -956,71 +1024,11 @@
                             "valueCode": "horizontal"
                         }
                     ],
-                    "linkId": "EmCare.B22.DE28",
-                    "text": "Breastfed in the previous hour",
-                    "type": "boolean",
-                    "required": true,
-                    "repeats": false
-                },
-                {
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
-                            "valueCode": "horizontal"
-                        },
-                        {
-                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
-                            "valueExpression": {
-                                "language": "text/fhirpath",
-                                "expression": "%resource.repeat(item).where(linkId='EmCare.B22.BreastFeeding').repeat(item).where(linkId='EmCare.B22.DE28').answer.first().value=true"
-                            }
-                        }
-                    ],
-                    "linkId": "EmCare.B22.DE29",
-                    "text": "Mother able to wait until young infant is willing to breastfeed again",
+                    "linkId": "EmCare.B22.DE30",
+                    "text": "Caregiver reports difficulty breastfeeding",
                     "type": "boolean",
                     "required": false,
                     "repeats": false
-                },
-                {
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
-                            "valueCode": "horizontal"
-                        },
-                        {
-                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
-                            "valueExpression": {
-                                "language": "text/fhirpath",
-                                "expression": "%resource.repeat(item).where(linkId='EmCare.B22.BreastFeeding').repeat(item).where(linkId='EmCare.B22.DE41').answer.first().empty()"
-                            }
-                        }
-                    ],
-                    "linkId": "EmCare.B22.DE30",
-                    "text": "Mother reports difficulty breastfeeding",
-                    "type": "boolean",
-                    "required": true,
-                    "repeats": false,
-                    "item": [
-                        {
-                            "extension": [
-                                {
-                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                                    "valueCodeableConcept": {
-                                        "coding": [
-                                            {
-                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                                "code": "help"
-                                            }
-                                        ]
-                                    }
-                                }
-                            ],
-                            "linkId": "EmCare.B22.DE30-help",
-                            "text": "Provide information on what difficulty breastfeeding may include, such as: the infant feeds too often, doesn&#8217;t feed often enough, she does not have enough milk, her nipples are sore, or she has flat or inverted nipples. After feeds, the infant may be restless, cry or try to suckle again, or continue to breastfeed for a long time.",
-                            "type": "display"
-                        }
-                    ]
                 },
                 {
                     "extension": [
@@ -1249,7 +1257,11 @@
                             "valueCode": "horizontal"
                         },
                         {
-                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                            "valueBoolean": true
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
                             "valueExpression": {
                                 "language": "text/fhirpath",
                                 "expression": "%resource.repeat(item).where(linkId='EmCare.B22.BreastFeeding').repeat(item).where(linkId='EmCare.B22.DE30').answer.first().value = true"
@@ -1260,8 +1272,39 @@
                     "text": "Difficulty Breastfeeding Reported",
                     "type": "boolean",
                     "required": false,
-                    "repeats": false,
-                    "readOnly": true
+                    "repeats": false
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                            "valueExpression": {
+                                "language": "text/fhirpath",
+                                "expression": "%resource.repeat(item).where(linkId='EmCare.B22.BreastFeeding').repeat(item).where(linkId='EmCare.B22.DE42').answer.first().value =true"
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B22.DE42a",
+                    "text": "Difficulty Breastfeeding Reported",
+                    "type": "display",
+                    "required": false,
+                    "repeats": false
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                            "valueExpression": {
+                                "language": "text/fhirpath",
+                                "expression": "%resource.repeat(item).where(linkId='EmCare.B22.BreastFeeding').repeat(item).where(linkId='EmCare.B22.DE42').answer.first().value =false"
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B22.DE42b",
+                    "text": "No Difficulty Breastfeeding Reported",
+                    "type": "display",
+                    "required": false,
+                    "repeats": false
                 },
                 {
                     "extension": [
@@ -1270,7 +1313,11 @@
                             "valueCode": "horizontal"
                         },
                         {
-                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                            "valueBoolean": true
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
                             "valueExpression": {
                                 "language": "text/fhirpath",
                                 "expression": "%resource.repeat(item).where(linkId='EmCare.B22.BreastFeeding').repeat(item).where(linkId='EmCare.B22.DE39').answer.first().value = true or %resource.repeat(item).where(linkId='EmCare.B22.BreastFeeding').repeat(item).where(linkId='EmCare.B22.DE37').answer.first().value =true"
@@ -1281,8 +1328,39 @@
                     "text": "Difficulty Breastfeeding Observed",
                     "type": "boolean",
                     "required": false,
-                    "repeats": false,
-                    "readOnly": true
+                    "repeats": false
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                            "valueExpression": {
+                                "language": "text/fhirpath",
+                                "expression": "%resource.repeat(item).where(linkId='EmCare.B22.BreastFeeding').repeat(item).where(linkId='EmCare.B22.DE44').answer.first().value =true"
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B22.DE44a",
+                    "text": "Difficulty Breastfeeding Observed",
+                    "type": "display",
+                    "required": false,
+                    "repeats": false
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                            "valueExpression": {
+                                "language": "text/fhirpath",
+                                "expression": "%resource.repeat(item).where(linkId='EmCare.B22.BreastFeeding').repeat(item).where(linkId='EmCare.B22.DE44').answer.first().value =false"
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B22.DE44b",
+                    "text": "No Difficulty Breastfeeding Observed",
+                    "type": "display",
+                    "required": false,
+                    "repeats": false
                 }
             ]
         },
@@ -1396,7 +1474,7 @@
                         }
                     ],
                     "linkId": "EmCare.B22.DE47",
-                    "text": "Axillary Temperature (second measurement)",
+                    "text": "Axillary Temperature (second measurement, degrees Celcius)",
                     "type": "quantity",
                     "required": false,
                     "repeats": false,
@@ -1470,7 +1548,7 @@
                             "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
                             "valueExpression": {
                                 "language": "text/fhirpath",
-                                "expression": "iif(%resource.repeat(item).where(linkId='EmCare.B22.SecondTemperature').repeat(item).where(linkId='EmCare.B22.DE47').answer.first().value >= 38.5 'Cel' and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value >= 2, '2',iif(%resource.repeat(item).where(linkId='EmCare.B22.SecondTemperature').repeat(item).where(linkId='EmCare.B22.DE47').answer.first().value >= 38 'Cel' and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value< 2 or %resource.repeat(item).where(linkId='EmCare.B22.SecondTemperature').repeat(item).where(linkId='EmCare.B22.DE47').answer.first().value >= 37.5 'Cel' and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value >= 2, 'High',iif(%resource.repeat(item).where(linkId='EmCare.B22.SecondTemperature').repeat(item).where(linkId='EmCare.B22.DE47').answer.first().value < 35.5 'Cel' , 'Low',iif(%resource.repeat(item).where(linkId='EmCare.B22.SecondTemperature').repeat(item).where(linkId='EmCare.B22.DE47').answer.first().value.exists(), 'Normal',{}))))"
+                                "expression": "iif(%resource.repeat(item).where(linkId='EmCare.B22.SecondTemperature').repeat(item).where(linkId='EmCare.B22.DE47').answer.first().value >= 38.5 'Cel' and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value >= 2, 'Very High',iif(%resource.repeat(item).where(linkId='EmCare.B22.SecondTemperature').repeat(item).where(linkId='EmCare.B22.DE47').answer.first().value >= 38 'Cel' and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value< 2 or %resource.repeat(item).where(linkId='EmCare.B22.SecondTemperature').repeat(item).where(linkId='EmCare.B22.DE47').answer.first().value >= 37.5 'Cel' and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value >= 2, 'High',iif(%resource.repeat(item).where(linkId='EmCare.B22.SecondTemperature').repeat(item).where(linkId='EmCare.B22.DE47').answer.first().value < 35.5 'Cel' , 'Low',iif(%resource.repeat(item).where(linkId='EmCare.B22.SecondTemperature').repeat(item).where(linkId='EmCare.B22.DE47').answer.first().value.exists(), 'Normal',{}))))"
                             }
                         }
                     ],
@@ -1509,7 +1587,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "respiratory rate profile"
+                        "expression": "Respiratory Rate profile"
                     }
                 }
             ],
@@ -1528,7 +1606,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "respiratory rate second count profile"
+                        "expression": "Respiratory Rate Second Count Profile"
                     }
                 }
             ],
@@ -1551,7 +1629,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "fast breathing profile"
+                        "expression": "Fast Breathing profile"
                     }
                 }
             ],
@@ -1574,7 +1652,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "ds"
+                        "expression": "DS"
                     }
                 }
             ],
@@ -1598,7 +1676,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "emcare.b7.de09"
+                        "expression": "EmCare.B7.DE09"
                     }
                 }
             ],
@@ -1622,7 +1700,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "emcare.b7.de10"
+                        "expression": "EmCare.B7.DE10"
                     }
                 }
             ],

@@ -8,7 +8,7 @@
             "value": "emcare.b22.respiratoryrate"
         }
     ],
-    "version": "1.0.1.rc12.build.483",
+    "version": "1.0.1.rc12.build.610",
     "name": "emcareb22respiratoryrate",
     "title": "EmCare.B22.RespiratoryRate",
     "status": "active",
@@ -20,19 +20,37 @@
             }
         ]
     },
+    "relatedArtifact": [
+        {
+            "type": "depends-on",
+            "resource": "http://fhir.org/guides/who/anc-cds/Library/FHIRHelpers"
+        },
+        {
+            "type": "depends-on",
+            "resource": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcarebase"
+        },
+        {
+            "type": "depends-on",
+            "resource": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareobservation"
+        },
+        {
+            "type": "depends-on",
+            "resource": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcarevalueset"
+        }
+    ],
     "parameter": [
         {
-            "name": "ageinmonths",
+            "name": "AgeInMonths",
             "use": "out",
             "type": "integer"
         },
         {
-            "name": "age",
+            "name": "Age",
             "use": "out",
             "type": "integer"
         },
         {
-            "name": "respiratory rate profile",
+            "name": "Respiratory Rate profile",
             "use": "out",
             "type": "Quantity"
         },
@@ -42,19 +60,21 @@
             "type": "boolean"
         },
         {
-            "name": "respiratory rate second count profile",
+            "name": "Respiratory Rate Second Count Profile",
             "use": "out",
             "type": "Quantity"
         },
         {
-            "name": "fast breathing profile",
+            "name": "Fast Breathing profile",
             "use": "out",
             "type": "boolean"
         }
     ],
     "content": [
         {
-            "id": "ig-loader-emcareb22respiratoryrate.cql"
+            "id": "ig-loader-emcareb22respiratoryrate.cql",
+            "contentType": "text/cql",
+            "data": "LyoKQGF1dGhvcjogUGF0cmljayBEZWxjcm9peApAZGVzY3JpcHRpb246IFRoaXMgbGlicmFyeSBpcyBwYXJ0IG9mIHRoZSBwcm9qZWN0IEVtQ2FyZQoqLwpsaWJyYXJ5IGVtY2FyZWIyMnJlc3BpcmF0b3J5cmF0ZSB2ZXJzaW9uICcxLjAuMS5yYzEyLmJ1aWxkLjYxMCcKdXNpbmcgRkhJUiB2ZXJzaW9uICc0LjAuMScKaW5jbHVkZSBGSElSSGVscGVycyB2ZXJzaW9uICc0LjAuMScgY2FsbGVkIEZISVJIZWxwZXJzIAppbmNsdWRlIGVtY2FyZWJhc2UgdmVyc2lvbiAnMS4wLjEucmMxMi5idWlsZC42MTAnIGNhbGxlZCBCYXNlCmluY2x1ZGUgZW1jYXJlb2JzZXJ2YXRpb24gdmVyc2lvbiAnMS4wLjEucmMxMi5idWlsZC42MTAnIGNhbGxlZCBvYnMKaW5jbHVkZSBlbWNhcmV2YWx1ZXNldCB2ZXJzaW9uICcxLjAuMS5yYzEyLmJ1aWxkLjYxMCcgY2FsbGVkIHZhbAoKCgoKY29udGV4dCBQYXRpZW50CgoKLyogCk9CU2RlZmluZS5FbUNhcmUuQjIyLkRFMDEgOiBSZXNwaXJhdG9yeSBSYXRlIChicmVhdGhzIHBlciBtaW51dGUpCgoqLwpkZWZpbmUgIk9CU2RlZmluZS5FbUNhcmUuQjIyLkRFMDEiOgogICAgQmFzZS5HZXRPYnNWYWx1ZSgnRW1DYXJlLkIyMi5ERTAxJykKCi8qIApPQlNkZWZpbmUuRW1DYXJlLkIyMi5ERTA0IDogUmVzcGlyYXRvcnkgUmF0ZSBTZWNvbmQgQ291bnQgKGJyZWF0aHMgcGVyIG1pbnV0ZSkKCiovCmRlZmluZSAiT0JTZGVmaW5lLkVtQ2FyZS5CMjIuREUwNCI6CiAgICBCYXNlLkdldE9ic1ZhbHVlKCdFbUNhcmUuQjIyLkRFMDQnKQoKLyogCk9CU2RlZmluZS5FbUNhcmUuQjIyLkRFMDcgOiBGYXN0IEJyZWF0aGluZwoKKi8KZGVmaW5lICJPQlNkZWZpbmUuRW1DYXJlLkIyMi5ERTA3IjoKICAgIEJhc2UuR2V0T2JzVmFsdWUoJ0VtQ2FyZS5CMjIuREUwNycpCgovKiAKQWdlSW5Nb250aHMgOiAKQWdlSW5Nb250aHMoKQoqLwpkZWZpbmUgIkFnZUluTW9udGhzIjoKICAgIEFnZUluTW9udGhzKCkKCi8qIApBZ2UgOiBBZ2VJbk1vbnRocwpBbGlhcwoqLwpkZWZpbmUgIkFnZSI6CiAgICAiQWdlSW5Nb250aHMiCgovKiAKUmVzcGlyYXRvcnkgUmF0ZSBwcm9maWxlIDogCm8iUmVzcGlyYXRvcnkgUmF0ZSAoYnJlYXRocyBwZXIgbWludXRlKSIKKi8KZGVmaW5lICJSZXNwaXJhdG9yeSBSYXRlIHByb2ZpbGUiOgogICAgIk9CU2RlZmluZS5FbUNhcmUuQjIyLkRFMDEiCgovKiAKZm9yY2UtY29sbGVjdGlvbiA6IApmYWxzZQoqLwpkZWZpbmUgImZvcmNlLWNvbGxlY3Rpb24iOgogICAgZmFsc2UKCi8qIApSZXNwaXJhdG9yeSBSYXRlIFNlY29uZCBDb3VudCBQcm9maWxlIDogCm8iUmVzcGlyYXRvcnkgUmF0ZSBTZWNvbmQgQ291bnQgKGJyZWF0aHMgcGVyIG1pbnV0ZSkiCiovCmRlZmluZSAiUmVzcGlyYXRvcnkgUmF0ZSBTZWNvbmQgQ291bnQgUHJvZmlsZSI6CiAgICAiT0JTZGVmaW5lLkVtQ2FyZS5CMjIuREUwNCIKCi8qIApGYXN0IEJyZWF0aGluZyBwcm9maWxlIDogCm8iRmFzdCBCcmVhdGhpbmciCiovCmRlZmluZSAiRmFzdCBCcmVhdGhpbmcgcHJvZmlsZSI6CiAgICAiT0JTZGVmaW5lLkVtQ2FyZS5CMjIuREUwNyIKCi8qIApCYWNrUmVmZXJlbmNlIDogCmJhY2sgcmVmZXJlbmNlIHRvIHJlc291cmNlCiovCmRlZmluZSAiQmFja1JlZmVyZW5jZSI6CiAgICBSZWZlcmVuY2Uge3JlZmVyZW5jZTogc3RyaW5nIHsgdmFsdWU6ICdRdWVzdGlvbm5haXJlL0VtQ2FyZS5CMjIuUmVzcGlyYXRvcnlSYXRlJ319Cg=="
         }
     ]
 }

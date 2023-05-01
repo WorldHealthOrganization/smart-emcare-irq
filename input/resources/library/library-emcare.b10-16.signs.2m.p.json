@@ -8,7 +8,7 @@
             "value": "emcare.b10-16.signs.2m.p"
         }
     ],
-    "version": "1.0.1.rc12.build.483",
+    "version": "1.0.1.rc12.build.610",
     "name": "emcareb1016signs2mp",
     "title": "EmCare.B10-16.Signs.2m.p",
     "status": "active",
@@ -20,159 +20,181 @@
             }
         ]
     },
+    "relatedArtifact": [
+        {
+            "type": "depends-on",
+            "resource": "http://fhir.org/guides/who/anc-cds/Library/FHIRHelpers"
+        },
+        {
+            "type": "depends-on",
+            "resource": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcarebase"
+        },
+        {
+            "type": "depends-on",
+            "resource": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareobservation"
+        },
+        {
+            "type": "depends-on",
+            "resource": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcarevalueset"
+        },
+        {
+            "type": "depends-on",
+            "resource": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcarecombineddataelements"
+        }
+    ],
     "parameter": [
         {
-            "name": "danger signs",
+            "name": "Danger Signs",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "variable to check whether patient has been assessed with or not",
+            "name": "Variable to check whether patient has been assessed with or not",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "ageinmonths",
+            "name": "AgeInMonths",
             "use": "out",
             "type": "integer"
         },
         {
-            "name": "age",
+            "name": "Age",
             "use": "out",
             "type": "integer"
         },
         {
-            "name": "cough",
+            "name": "Cough",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "the client is reported to have or has had a cough",
+            "name": "The client is reported to have or has had a cough",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "difficulty breathing",
+            "name": "Difficulty Breathing",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "the client is reported to have or has had difficulty breathing",
+            "name": "The client is reported to have or has had difficulty breathing",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "oral fluid test failed",
+            "name": "Oral Fluid Test failed",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "oral fluid test results",
+            "name": "Oral Fluid Test Results",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "diarrhoea",
+            "name": "Diarrhoea",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "the client is reported to have or has had diarrhoea",
+            "name": "The client is reported to have or has had diarrhoea",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "not able to drink or breastfeed",
+            "name": "Not able to drink or breastfeed",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "the client has reported not to have been able to drink or breastfeed or currently is not able to drink or breastfeed.",
+            "name": "The client has reported not to have been able to drink or breastfeed or currently is not able to drink or breastfeed.",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "unconscious or lethargic",
+            "name": "Unconscious or Lethargic",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "the client is unconscious or lethargic",
+            "name": "The client is unconscious or lethargic",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "fever",
+            "name": "Fever",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "the client is reported to have or has had fever",
+            "name": "The client is reported to have or has had fever",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "ear problem",
+            "name": "Ear problem",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "the client is reported to have had or has an ear problem",
+            "name": "The client is reported to have had or has an ear problem",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "eye problem",
+            "name": "Eye Problem",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "the client is reported to have an eye problem",
+            "name": "The client is reported to have an eye problem",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "skin problem",
+            "name": "Skin Problem",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "the client is reported to have or has had a skin problem",
+            "name": "The client is reported to have or has had a skin problem",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "ear discharge",
+            "name": "Ear discharge",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "the client is reported to have or has had ear discharge",
+            "name": "The client is reported to have or has had Ear discharge",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "ear discharge for how long?",
+            "name": "Ear discharge for how long?",
             "use": "out",
             "type": "code"
         },
         {
-            "name": "the length of time client has or has had ear discharge",
+            "name": "The length of time client has or has had Ear discharge",
             "use": "out",
             "type": "code"
         },
         {
-            "name": "itchy skin",
+            "name": "Itchy Skin",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "the client is reported to have itchy skin",
+            "name": "The client is reported to have itchy skin",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "respiratory rate profile",
+            "name": "Respiratory Rate profile",
             "use": "out",
             "type": "Quantity"
         },
@@ -182,19 +204,21 @@
             "type": "boolean"
         },
         {
-            "name": "respiratory rate second count profile",
+            "name": "Respiratory Rate Second Count Profile",
             "use": "out",
             "type": "Quantity"
         },
         {
-            "name": "fast breathing profile",
+            "name": "Fast Breathing profile",
             "use": "out",
             "type": "boolean"
         }
     ],
     "content": [
         {
-            "id": "ig-loader-emcareb1016signs2mp.cql"
+            "id": "ig-loader-emcareb1016signs2mp.cql",
+            "contentType": "text/cql",
+            "data": "LyoKQGF1dGhvcjogUGF0cmljayBEZWxjcm9peApAZGVzY3JpcHRpb246IFRoaXMgbGlicmFyeSBpcyBwYXJ0IG9mIHRoZSBwcm9qZWN0IEVtQ2FyZQoqLwpsaWJyYXJ5IGVtY2FyZWIxMDE2c2lnbnMybXAgdmVyc2lvbiAnMS4wLjEucmMxMi5idWlsZC42MTAnCnVzaW5nIEZISVIgdmVyc2lvbiAnNC4wLjEnCmluY2x1ZGUgRkhJUkhlbHBlcnMgdmVyc2lvbiAnNC4wLjEnIGNhbGxlZCBGSElSSGVscGVycyAKaW5jbHVkZSBlbWNhcmViYXNlIHZlcnNpb24gJzEuMC4xLnJjMTIuYnVpbGQuNjEwJyBjYWxsZWQgQmFzZQppbmNsdWRlIGVtY2FyZW9ic2VydmF0aW9uIHZlcnNpb24gJzEuMC4xLnJjMTIuYnVpbGQuNjEwJyBjYWxsZWQgb2JzCmluY2x1ZGUgZW1jYXJldmFsdWVzZXQgdmVyc2lvbiAnMS4wLjEucmMxMi5idWlsZC42MTAnIGNhbGxlZCB2YWwKaW5jbHVkZSBlbWNhcmVjb21iaW5lZGRhdGFlbGVtZW50cyB2ZXJzaW9uICcxLjAuMS5yYzEyLmJ1aWxkLjYxMCcgY2FsbGVkIGNsYXMKCgoKCmNvbnRleHQgUGF0aWVudAoKCi8qIApPQlNkZWZpbmUuRW1DYXJlLkIxMFMxLkRFMDUgOiBDb3VnaAoKKi8KZGVmaW5lICJPQlNkZWZpbmUuRW1DYXJlLkIxMFMxLkRFMDUiOgogICAgQmFzZS5HZXRPYnNWYWx1ZSgnRW1DYXJlLkIxMFMxLkRFMDUnKQoKLyogCk9CU2RlZmluZS5FbUNhcmUuQjEwUzEuREUwMSA6IERpZmZpY3VsdHkgQnJlYXRoaW5nCgoqLwpkZWZpbmUgIk9CU2RlZmluZS5FbUNhcmUuQjEwUzEuREUwMSI6CiAgICBCYXNlLkdldE9ic1ZhbHVlKCdFbUNhcmUuQjEwUzEuREUwMScpCgovKiAKT0JTZGVmaW5lLkVtQ2FyZS5CMjIuREUxNCA6IFVuYWJsZSB0byBQZXJmb3JtIE9yYWwgRmx1aWQgVGVzdAoKKi8KZGVmaW5lICJPQlNkZWZpbmUuRW1DYXJlLkIyMi5ERTE0IjoKICAgIEJhc2UuR2V0T2JzVmFsdWUoJ0VtQ2FyZS5CMjIuREUxNCcpCgovKiAKT0JTZGVmaW5lLkVtQ2FyZS5CMjIuREUwOCZFbUNhcmUuQjIyLkRFMTRhIDogT3JhbCBGbHVpZCBUZXN0IFJlc3VsdHM6Q29tcGxldGVseSBVbmFibGUgdG8gRHJpbmsgb3IgVm9taXRzIEltbWVkaWF0ZWx5IC8gRXZlcnl0aGluZwoKKi8KZGVmaW5lICJPQlNkZWZpbmUuRW1DYXJlLkIyMi5ERTA4JkVtQ2FyZS5CMjIuREUxNGEiOgogICAgQmFzZS5HZXRPYnNWYWx1ZSgnRW1DYXJlLkIyMi5ERTA4JkVtQ2FyZS5CMjIuREUxNGEnKQoKLyogCk9CU2RlZmluZS5FbUNhcmUuQjExUzEuREUwMSA6IERpYXJyaG9lYQoKKi8KZGVmaW5lICJPQlNkZWZpbmUuRW1DYXJlLkIxMVMxLkRFMDEiOgogICAgQmFzZS5HZXRPYnNWYWx1ZSgnRW1DYXJlLkIxMVMxLkRFMDEnKQoKLyogCk9CU2RlZmluZS5FbUNhcmUuQjcuREUwOSA6IE5vdCBhYmxlIHRvIGRyaW5rIG9yIGJyZWFzdGZlZWQKCiovCmRlZmluZSAiT0JTZGVmaW5lLkVtQ2FyZS5CNy5ERTA5IjoKICAgIEJhc2UuR2V0T2JzVmFsdWUoJ0VtQ2FyZS5CNy5ERTA5JykKCi8qIApPQlNkZWZpbmUuRW1DYXJlLkI3LkRFMDggOiBVbmNvbnNjaW91cwoKKi8KZGVmaW5lICJPQlNkZWZpbmUuRW1DYXJlLkI3LkRFMDgiOgogICAgQmFzZS5HZXRPYnNWYWx1ZSgnRW1DYXJlLkI3LkRFMDgnKQoKLyogCk9CU2RlZmluZS5FbUNhcmUuQjcuREUwOGEgOiBMZXRoYXJnaWMKCiovCmRlZmluZSAiT0JTZGVmaW5lLkVtQ2FyZS5CNy5ERTA4YSI6CiAgICBCYXNlLkdldE9ic1ZhbHVlKCdFbUNhcmUuQjcuREUwOGEnKQoKLyogCk9CU2RlZmluZS5FbUNhcmUuQjEzUzEuREUwMSA6IEVhciBwcm9ibGVtCgoqLwpkZWZpbmUgIk9CU2RlZmluZS5FbUNhcmUuQjEzUzEuREUwMSI6CiAgICBCYXNlLkdldE9ic1ZhbHVlKCdFbUNhcmUuQjEzUzEuREUwMScpCgovKiAKT0JTZGVmaW5lLkVtQ2FyZS5CMTRTMS5ERTAzIDogRXllIFByb2JsZW0KCiovCmRlZmluZSAiT0JTZGVmaW5lLkVtQ2FyZS5CMTRTMS5ERTAzIjoKICAgIEJhc2UuR2V0T2JzVmFsdWUoJ0VtQ2FyZS5CMTRTMS5ERTAzJykKCi8qIApPQlNkZWZpbmUuRW1DYXJlLkIxNFMxLkRFMDEgOiBTa2luIFByb2JsZW0KCiovCmRlZmluZSAiT0JTZGVmaW5lLkVtQ2FyZS5CMTRTMS5ERTAxIjoKICAgIEJhc2UuR2V0T2JzVmFsdWUoJ0VtQ2FyZS5CMTRTMS5ERTAxJykKCi8qIApPQlNkZWZpbmUuRW1DYXJlLkIxM1MxLkRFMDMgOiBFYXIgZGlzY2hhcmdlCgoqLwpkZWZpbmUgIk9CU2RlZmluZS5FbUNhcmUuQjEzUzEuREUwMyI6CiAgICBCYXNlLkdldE9ic1ZhbHVlKCdFbUNhcmUuQjEzUzEuREUwMycpCgovKiAKT0JTZGVmaW5lLkVtQ2FyZS5CMTNTMS5ERTA0IDogRWFyIGRpc2NoYXJnZSBmb3IgaG93IGxvbmc/CgoqLwpkZWZpbmUgIk9CU2RlZmluZS5FbUNhcmUuQjEzUzEuREUwNCI6CiAgICBCYXNlLkdldE9ic1ZhbHVlKCdFbUNhcmUuQjEzUzEuREUwNCcpCgovKiAKT0JTZGVmaW5lLkVtQ2FyZS5CMTRTMS5ERTAyIDogSXRjaHkgU2tpbgoKKi8KZGVmaW5lICJPQlNkZWZpbmUuRW1DYXJlLkIxNFMxLkRFMDIiOgogICAgQmFzZS5HZXRPYnNWYWx1ZSgnRW1DYXJlLkIxNFMxLkRFMDInKQoKLyogCk9CU2RlZmluZS5FbUNhcmUuQjIyLkRFMDEgOiBSZXNwaXJhdG9yeSBSYXRlIChicmVhdGhzIHBlciBtaW51dGUpCgoqLwpkZWZpbmUgIk9CU2RlZmluZS5FbUNhcmUuQjIyLkRFMDEiOgogICAgQmFzZS5HZXRPYnNWYWx1ZSgnRW1DYXJlLkIyMi5ERTAxJykKCi8qIApPQlNkZWZpbmUuRW1DYXJlLkIyMi5ERTA0IDogUmVzcGlyYXRvcnkgUmF0ZSBTZWNvbmQgQ291bnQgKGJyZWF0aHMgcGVyIG1pbnV0ZSkKCiovCmRlZmluZSAiT0JTZGVmaW5lLkVtQ2FyZS5CMjIuREUwNCI6CiAgICBCYXNlLkdldE9ic1ZhbHVlKCdFbUNhcmUuQjIyLkRFMDQnKQoKLyogCk9CU2RlZmluZS5FbUNhcmUuQjIyLkRFMDcgOiBGYXN0IEJyZWF0aGluZwoKKi8KZGVmaW5lICJPQlNkZWZpbmUuRW1DYXJlLkIyMi5ERTA3IjoKICAgIEJhc2UuR2V0T2JzVmFsdWUoJ0VtQ2FyZS5CMjIuREUwNycpCgovKiAKRGFuZ2VyIFNpZ25zIDogCkNvYWxlc2NlKGNsYXMuIkRhbmdlciBTaWducyIsIGZhbHNlKQoqLwpkZWZpbmUgIkRhbmdlciBTaWducyI6CiAgICBDb2FsZXNjZShjbGFzLiJEYW5nZXIgU2lnbnMiLCBmYWxzZSkKCi8qIApBZ2VJbk1vbnRocyA6IApBZ2VJbk1vbnRocygpCiovCmRlZmluZSAiQWdlSW5Nb250aHMiOgogICAgQWdlSW5Nb250aHMoKQoKLyogCkFnZSA6IEFnZUluTW9udGhzCkFsaWFzCiovCmRlZmluZSAiQWdlIjoKICAgICJBZ2VJbk1vbnRocyIKCi8qIApDb3VnaCA6IApvIkNvdWdoIgoqLwpkZWZpbmUgIkNvdWdoIjoKICAgICJPQlNkZWZpbmUuRW1DYXJlLkIxMFMxLkRFMDUiCgovKiAKRGlmZmljdWx0eSBCcmVhdGhpbmcgOiAKbyJEaWZmaWN1bHR5IEJyZWF0aGluZyIKKi8KZGVmaW5lICJEaWZmaWN1bHR5IEJyZWF0aGluZyI6CiAgICAiT0JTZGVmaW5lLkVtQ2FyZS5CMTBTMS5ERTAxIgoKLyogCk9yYWwgRmx1aWQgVGVzdCBmYWlsZWQgOiAKIk9yYWwgRmx1aWQgVGVzdCBSZXN1bHRzIiA9ICJDb21wbGV0ZWx5IFVuYWJsZSB0byBEcmluayBvciBWb21pdHMgSW1tZWRpYXRlbHkgLyBFdmVyeXRoaW5nIiBvciAgIlVuYWJsZSB0byBQZXJmb3JtIE9yYWwgRmx1aWQgVGVzdCI9dHJ1ZQoqLwpkZWZpbmUgIk9yYWwgRmx1aWQgVGVzdCBmYWlsZWQiOgogICAgIk9CU2RlZmluZS5FbUNhcmUuQjIyLkRFMDgmRW1DYXJlLkIyMi5ERTE0YSIgPSB0cnVlIG9yICAiT0JTZGVmaW5lLkVtQ2FyZS5CMjIuREUxNCI9dHJ1ZQoKLyogCkRpYXJyaG9lYSA6IApvIkRpYXJyaG9lYSIKKi8KZGVmaW5lICJEaWFycmhvZWEiOgogICAgIk9CU2RlZmluZS5FbUNhcmUuQjExUzEuREUwMSIKCi8qIApOb3QgYWJsZSB0byBkcmluayBvciBicmVhc3RmZWVkIDogCm8iTm90IGFibGUgdG8gZHJpbmsgb3IgYnJlYXN0ZmVlZCIKKi8KZGVmaW5lICJOb3QgYWJsZSB0byBkcmluayBvciBicmVhc3RmZWVkIjoKICAgICJPQlNkZWZpbmUuRW1DYXJlLkI3LkRFMDkiCgovKiAKVW5jb25zY2lvdXMgb3IgTGV0aGFyZ2ljIDogCm8iVW5jb25zY2lvdXMiIG9yIG8iTGV0aGFyZ2ljIgoqLwpkZWZpbmUgIlVuY29uc2Npb3VzIG9yIExldGhhcmdpYyI6CiAgICAiT0JTZGVmaW5lLkVtQ2FyZS5CNy5ERTA4IiBvciAiT0JTZGVmaW5lLkVtQ2FyZS5CNy5ERTA4YSIKCi8qIApGZXZlciA6IApjbGFzLiJGZXZlciIKKi8KZGVmaW5lICJGZXZlciI6CiAgICBjbGFzLiJGZXZlciIKCi8qIApFYXIgcHJvYmxlbSA6IApvIkVhciBwcm9ibGVtIgoqLwpkZWZpbmUgIkVhciBwcm9ibGVtIjoKICAgICJPQlNkZWZpbmUuRW1DYXJlLkIxM1MxLkRFMDEiCgovKiAKRXllIFByb2JsZW0gOiAKbyJFeWUgUHJvYmxlbSIKKi8KZGVmaW5lICJFeWUgUHJvYmxlbSI6CiAgICAiT0JTZGVmaW5lLkVtQ2FyZS5CMTRTMS5ERTAzIgoKLyogClNraW4gUHJvYmxlbSA6IApvIlNraW4gUHJvYmxlbSIKKi8KZGVmaW5lICJTa2luIFByb2JsZW0iOgogICAgIk9CU2RlZmluZS5FbUNhcmUuQjE0UzEuREUwMSIKCi8qIApFYXIgZGlzY2hhcmdlIDogCm8iRWFyIGRpc2NoYXJnZSIKKi8KZGVmaW5lICJFYXIgZGlzY2hhcmdlIjoKICAgICJPQlNkZWZpbmUuRW1DYXJlLkIxM1MxLkRFMDMiCgovKiAKRWFyIGRpc2NoYXJnZSBmb3IgaG93IGxvbmc/IDogCm8iRWFyIGRpc2NoYXJnZSBmb3IgaG93IGxvbmc/IgoqLwpkZWZpbmUgIkVhciBkaXNjaGFyZ2UgZm9yIGhvdyBsb25nPyI6CiAgICAiT0JTZGVmaW5lLkVtQ2FyZS5CMTNTMS5ERTA0IgoKLyogCkl0Y2h5IFNraW4gOiAKbyJJdGNoeSBTa2luIgoqLwpkZWZpbmUgIkl0Y2h5IFNraW4iOgogICAgIk9CU2RlZmluZS5FbUNhcmUuQjE0UzEuREUwMiIKCi8qIApSZXNwaXJhdG9yeSBSYXRlIHByb2ZpbGUgOiAKbyJSZXNwaXJhdG9yeSBSYXRlIChicmVhdGhzIHBlciBtaW51dGUpIgoqLwpkZWZpbmUgIlJlc3BpcmF0b3J5IFJhdGUgcHJvZmlsZSI6CiAgICAiT0JTZGVmaW5lLkVtQ2FyZS5CMjIuREUwMSIKCi8qIApmb3JjZS1jb2xsZWN0aW9uIDogCmZhbHNlCiovCmRlZmluZSAiZm9yY2UtY29sbGVjdGlvbiI6CiAgICBmYWxzZQoKLyogClJlc3BpcmF0b3J5IFJhdGUgU2Vjb25kIENvdW50IFByb2ZpbGUgOiAKbyJSZXNwaXJhdG9yeSBSYXRlIFNlY29uZCBDb3VudCAoYnJlYXRocyBwZXIgbWludXRlKSIKKi8KZGVmaW5lICJSZXNwaXJhdG9yeSBSYXRlIFNlY29uZCBDb3VudCBQcm9maWxlIjoKICAgICJPQlNkZWZpbmUuRW1DYXJlLkIyMi5ERTA0IgoKLyogCkZhc3QgQnJlYXRoaW5nIHByb2ZpbGUgOiAKbyJGYXN0IEJyZWF0aGluZyIKKi8KZGVmaW5lICJGYXN0IEJyZWF0aGluZyBwcm9maWxlIjoKICAgICJPQlNkZWZpbmUuRW1DYXJlLkIyMi5ERTA3IgoKLyogCkJhY2tSZWZlcmVuY2UgOiAKYmFjayByZWZlcmVuY2UgdG8gcmVzb3VyY2UKKi8KZGVmaW5lICJCYWNrUmVmZXJlbmNlIjoKICAgIFJlZmVyZW5jZSB7cmVmZXJlbmNlOiBzdHJpbmcgeyB2YWx1ZTogJ1F1ZXN0aW9ubmFpcmUvRW1DYXJlLkIxMC0xNi5TaWducy4ybS5wJ319Cg=="
         }
     ]
 }

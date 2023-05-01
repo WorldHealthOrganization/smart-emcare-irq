@@ -2,13 +2,13 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcaredt01 version '1.0.1.rc12.build.483'
+library emcaredt01 version '1.0.1.rc12.build.610'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.1.rc12.build.483' called Base
-include emcareobservation version '1.0.1.rc12.build.483' called obs
-include emcarevalueset version '1.0.1.rc12.build.483' called val
-include emcarecombineddataelements version '1.0.1.rc12.build.483' called clas
+include emcarebase version '1.0.1.rc12.build.610' called Base
+include emcareobservation version '1.0.1.rc12.build.610' called obs
+include emcarevalueset version '1.0.1.rc12.build.610' called val
+include emcarecombineddataelements version '1.0.1.rc12.build.610' called clas
 
 
 
@@ -17,122 +17,155 @@ context Patient
 
 
 /* 
-emcaredt02 : 
-    AgeInYears() < 5
+EmCareDT02 : 
+AgeInYears() < 5
 */
-define "emcaredt02":
+define "EmCareDT02":
     AgeInYears() < 5
-
-/* alias register the child in the encounter : emcaredt02*/
-define "register the child in the encounter":
-    "emcaredt02"
 
 /* 
-emcaredt04 : 
-    AgeInYears() < 5
+Register the child in the encounter : EmCareDT02
+Alias
 */
-define "emcaredt04":
-    AgeInYears() < 5
-
-/* alias evaluate dangersigns : emcaredt04*/
-define "evaluate dangersigns":
-    "emcaredt04"
+define "Register the child in the encounter":
+    "EmCareDT02"
 
 /* 
-emcaredt03 : 
+EmCareDT04 : 
+AgeInYears() < 5
+*/
+define "EmCareDT04":
     AgeInYears() < 5
+
+/* 
+Evaluate DangerSigns : EmCareDT04
+Alias
 */
-define "emcaredt03":
+define "Evaluate DangerSigns":
+    "EmCareDT04"
+
+/* 
+EmCareDT03 : 
+AgeInYears() < 5
+*/
+define "EmCareDT03":
     AgeInYears() < 5
 
-/* alias determine basic anthropometric and others measurement : emcaredt03*/
-define "determine basic anthropometric and others measurement":
-    "emcaredt03"
+/* 
+Determine Basic Anthropometric and others measurement : EmCareDT03
+Alias
+*/
+define "Determine Basic Anthropometric and others measurement":
+    "EmCareDT03"
 
 /* 
-emcaredt05 : 
-    AgeInMonths() < 2
+EmCareDT05 : 
+AgeInMonths() < 2
 */
-define "emcaredt05":
-    AgeInMonths() < 2
-
-/* alias assess sick child for symptoms 2 m : emcaredt05*/
-define "assess sick child for symptoms 2 m":
-    "emcaredt05"
-
-/* 
-emcaredt06 : 
-    clas."age >= 2 months to <60 months"
-*/
-define "emcaredt06":
-    clas."age >= 2 months to <60 months"
-
-/* alias assess sick child for symptoms 2p : emcaredt06*/
-define "assess sick child for symptoms 2p":
-    "emcaredt06"
-
-/* 
-emcaredt07 : 
-    AgeInMonths() < 2
-*/
-define "emcaredt07":
+define "EmCareDT05":
     AgeInMonths() < 2
 
-/* alias assess sick child for signs 2 m : emcaredt07*/
-define "assess sick child for signs 2 m":
-    "emcaredt07"
+/* 
+Assess sick child for Symptoms 2 m : EmCareDT05
+Alias
+*/
+define "Assess sick child for Symptoms 2 m":
+    "EmCareDT05"
 
 /* 
-emcaredt08 : 
-    clas."age >= 2 months to <60 months"
+EmCareDT06 : 
+clas."Age >= 2 months to <60 months"
 */
-define "emcaredt08":
-    clas."age >= 2 months to <60 months"
-
-/* alias assess sick child for signs 2p : emcaredt08*/
-define "assess sick child for signs 2p":
-    "emcaredt08"
+define "EmCareDT06":
+    clas."Age >= 2 months to <60 months"
 
 /* 
-emcaredt09 : 
-    clas."age >= 2 months to <60 months"
+Assess sick child for Symptoms 2p : EmCareDT06
+Alias
 */
-define "emcaredt09":
-    clas."age >= 2 months to <60 months"
-
-/* alias propose classification : emcaredt09*/
-define "propose classification":
-    "emcaredt09"
+define "Assess sick child for Symptoms 2p":
+    "EmCareDT06"
 
 /* 
-emcaredt10 : 
-    AgeInYears() < 5
+EmCareDT07 : 
+AgeInMonths() < 2
 */
-define "emcaredt10":
-    AgeInYears() < 5
-
-/* alias do test : emcaredt10*/
-define "do test":
-    "emcaredt10"
-
-/* 
-emcaredt11 : 
-    AgeInYears() < 5
-*/
-define "emcaredt11":
-    AgeInYears() < 5
-
-/* alias provide treatment : emcaredt11*/
-define "provide treatment":
-    "emcaredt11"
-
-/* 
-emcaredt12 : 
-    AgeInMonths() < 2
-*/
-define "emcaredt12":
+define "EmCareDT07":
     AgeInMonths() < 2
 
-/* alias propose classification 2m : emcaredt12*/
-define "propose classification 2m":
-    "emcaredt12"
+/* 
+Assess sick child for Signs 2 m : EmCareDT07
+Alias
+*/
+define "Assess sick child for Signs 2 m":
+    "EmCareDT07"
+
+/* 
+EmCareDT08 : 
+clas."Age >= 2 months to <60 months"
+*/
+define "EmCareDT08":
+    clas."Age >= 2 months to <60 months"
+
+/* 
+Assess sick child for Signs 2p : EmCareDT08
+Alias
+*/
+define "Assess sick child for Signs 2p":
+    "EmCareDT08"
+
+/* 
+EmCareDT09 : 
+clas."Age >= 2 months to <60 months"
+*/
+define "EmCareDT09":
+    clas."Age >= 2 months to <60 months"
+
+/* 
+Propose classification : EmCareDT09
+Alias
+*/
+define "Propose classification":
+    "EmCareDT09"
+
+/* 
+EmCareDT10 : 
+AgeInYears() < 5
+*/
+define "EmCareDT10":
+    AgeInYears() < 5
+
+/* 
+Do Test : EmCareDT10
+Alias
+*/
+define "Do Test":
+    "EmCareDT10"
+
+/* 
+EmCareDT11 : 
+AgeInYears() < 5
+*/
+define "EmCareDT11":
+    AgeInYears() < 5
+
+/* 
+Provide treatment : EmCareDT11
+Alias
+*/
+define "Provide treatment":
+    "EmCareDT11"
+
+/* 
+EmCareDT12 : 
+AgeInMonths() < 2
+*/
+define "EmCareDT12":
+    AgeInMonths() < 2
+
+/* 
+Propose classification 2m : EmCareDT12
+Alias
+*/
+define "Propose classification 2m":
+    "EmCareDT12"

@@ -55,7 +55,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-xxxx"
+                        "expression": "DL-XXXX"
                     }
                 }
             ],
@@ -84,7 +84,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "emcare.b6.de06"
+                        "expression": "EmCare.B6.DE06"
                     }
                 }
             ],
@@ -115,7 +115,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "emcare.b6.de08-old"
+                        "expression": "EmCare.B6.DE08-old"
                     }
                 }
             ],
@@ -146,7 +146,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "emcare.b6.de08"
+                        "expression": "EmCare.B6.DE08"
                     }
                 }
             ],
@@ -170,7 +170,7 @@
             "linkId": "EmCare.B23.DE01",
             "text": "Very Severe Disease",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -203,7 +203,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-07"
+                        "expression": "DL-G-CL1-07"
                     }
                 }
             ],
@@ -227,7 +227,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "emcare.b23.de04"
+                        "expression": "EmCare.B23.DE04"
                     }
                 }
             ],
@@ -250,7 +250,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "emcare.b23.de05"
+                        "expression": "EmCare.B23.DE05"
                     }
                 }
             ],
@@ -273,7 +273,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "emcare.b23.de08"
+                        "expression": "EmCare.B23.DE08"
                     }
                 }
             ],
@@ -296,7 +296,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "measles in last 3 months"
+                        "expression": "Measles in last 3 months"
                     }
                 }
             ],
@@ -322,7 +322,7 @@
             "linkId": "EmCare.B23.DE03",
             "text": "Severe Pneumonia or Very Severe Disease",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -411,7 +411,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-14"
+                        "expression": "DL-G-CL1-14"
                     }
                 }
             ],
@@ -434,7 +434,7 @@
             "linkId": "EmCare.B23.DE06",
             "text": "Pneumonia",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -474,7 +474,7 @@
                             }
                         }
                     ],
-                    "linkId": "EmCare.B23.DE05_l",
+                    "linkId": "EmCare.B23.DE05_l0",
                     "text": "with wheezing",
                     "type": "display",
                     "required": false,
@@ -523,7 +523,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-19"
+                        "expression": "DL-G-CL1-19"
                     }
                 }
             ],
@@ -546,7 +546,7 @@
             "linkId": "EmCare.B23.DE10",
             "text": "Cough or Cold",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -586,7 +586,7 @@
                             }
                         }
                     ],
-                    "linkId": "EmCare.B23.DE05_l",
+                    "linkId": "EmCare.B23.DE05_l1",
                     "text": "with wheezing",
                     "type": "display",
                     "required": false,
@@ -613,7 +613,7 @@
                             }
                         }
                     ],
-                    "linkId": "EmCare.B23.DE08_l",
+                    "linkId": "EmCare.B23.DE08_l1",
                     "text": "with cough or difficulty breathing for 14 days or more or recurrent wheeze",
                     "type": "display",
                     "required": false,
@@ -635,7 +635,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-23-30"
+                        "expression": "DL-G-CL1-23-30"
                     }
                 }
             ],
@@ -658,7 +658,7 @@
             "linkId": "EmCare.B23.DE13",
             "text": "Severe Dehydration",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -691,7 +691,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-24-32"
+                        "expression": "DL-G-CL1-24-32"
                     }
                 }
             ],
@@ -714,7 +714,7 @@
             "linkId": "EmCare.B23.DE14",
             "text": "Some Dehydration",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -747,7 +747,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-30"
+                        "expression": "DL-G-CL1-30"
                     }
                 }
             ],
@@ -770,7 +770,7 @@
             "linkId": "EmCare.B23.DE15",
             "text": "No Dehydration",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -803,7 +803,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-31"
+                        "expression": "DL-G-CL1-31"
                     }
                 }
             ],
@@ -826,7 +826,7 @@
             "linkId": "EmCare.B23.DE16",
             "text": "Severe Persistent Diarrhoea",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -859,7 +859,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-32"
+                        "expression": "DL-G-CL1-32"
                     }
                 }
             ],
@@ -882,7 +882,7 @@
             "linkId": "EmCare.B23.DE17",
             "text": "Persistent Diarrhoea",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -915,7 +915,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-33"
+                        "expression": "DL-G-CL1-33"
                     }
                 }
             ],
@@ -938,7 +938,7 @@
             "linkId": "EmCare.B23.DE18",
             "text": "Dysentery",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -971,7 +971,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-i-cl1-01"
+                        "expression": "DL-I-CL1-01"
                     }
                 }
             ],
@@ -994,7 +994,7 @@
             "linkId": "EmCare.B23.DE18.a",
             "text": "Possible Shigella",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -1027,7 +1027,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-i-cl1-05"
+                        "expression": "DL-I-CL1-05"
                     }
                 }
             ],
@@ -1050,7 +1050,7 @@
             "linkId": "EmCare.B23.DE100",
             "text": "Throat Abscess or Possible Diptheria",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -1083,7 +1083,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-i-cl1-06"
+                        "expression": "DL-I-CL1-06"
                     }
                 }
             ],
@@ -1106,7 +1106,7 @@
             "linkId": "EmCare.B23.DE6101",
             "text": "Streptococcal Sore Throat",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -1139,7 +1139,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-i-cl1-07"
+                        "expression": "DL-I-CL1-07"
                     }
                 }
             ],
@@ -1162,7 +1162,7 @@
             "linkId": "EmCare.B23.DE6102",
             "text": "Non-Streptococcal Sore Throat",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -1195,7 +1195,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-i-cl1-09"
+                        "expression": "DL-I-CL1-09"
                     }
                 }
             ],
@@ -1218,7 +1218,7 @@
             "linkId": "EmCare.B23.DE6103",
             "text": "No Throat Problem",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -1251,7 +1251,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-73"
+                        "expression": "DL-G-CL1-73"
                     }
                 }
             ],
@@ -1274,7 +1274,7 @@
             "linkId": "EmCare.B23.DE30",
             "text": "Mastoiditis",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -1307,7 +1307,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-74-76"
+                        "expression": "DL-G-CL1-74-76"
                     }
                 }
             ],
@@ -1330,7 +1330,7 @@
             "linkId": "EmCare.B23.DE31",
             "text": "Acute Ear Infection",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -1363,7 +1363,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-i-cl1-11-12"
+                        "expression": "DL-I-CL1-11-12"
                     }
                 }
             ],
@@ -1387,7 +1387,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "emcare.b23.de32a"
+                        "expression": "EmCare.B23.DE32a"
                     }
                 }
             ],
@@ -1409,7 +1409,7 @@
             "linkId": "EmCare.B23.DE32",
             "text": "Chronic Ear Infection",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -1450,7 +1450,7 @@
                         }
                     ],
                     "linkId": "EmCare.B23.DE32a_l",
-                    "text": "with ear pain or fever",
+                    "text": "with Ear pain or fever",
                     "type": "display",
                     "required": false,
                     "repeats": false
@@ -1471,7 +1471,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-79"
+                        "expression": "DL-G-CL1-79"
                     }
                 }
             ],
@@ -1494,7 +1494,7 @@
             "linkId": "EmCare.B23.DE33",
             "text": "No Ear Infection",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -1527,7 +1527,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-34"
+                        "expression": "DL-G-CL1-34"
                     }
                 }
             ],
@@ -1550,7 +1550,7 @@
             "linkId": "EmCare.B23.DE19",
             "text": "Very Severe Febrile Disease",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -1583,7 +1583,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-i-cl1-03"
+                        "expression": "DL-I-CL1-03"
                     }
                 }
             ],
@@ -1607,7 +1607,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "emcare.b23.de26a"
+                        "expression": "EmCare.B23.DE26a"
                     }
                 }
             ],
@@ -1630,7 +1630,7 @@
             "linkId": "EmCare.B23.DE104",
             "text": "Fever: possible bacterial infection",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -1692,7 +1692,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-i-cl1-26"
+                        "expression": "DL-I-CL1-26"
                     }
                 }
             ],
@@ -1715,7 +1715,7 @@
             "linkId": "EmCare.B23.DE105",
             "text": "Fever: bacterial infection unlikely",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -1748,7 +1748,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-i-cl1-16-66"
+                        "expression": "DL-I-CL1-16-66"
                     }
                 }
             ],
@@ -1771,7 +1771,7 @@
             "linkId": "EmCare.B23.DE27",
             "text": "Severe Complicated Measles",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -1804,7 +1804,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-69-70"
+                        "expression": "DL-G-CL1-69-70"
                     }
                 }
             ],
@@ -1827,7 +1827,7 @@
             "linkId": "EmCare.B23.DE28",
             "text": "Measles with Eye or Mouth Complication",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -1860,7 +1860,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-71"
+                        "expression": "DL-G-CL1-71"
                     }
                 }
             ],
@@ -1883,7 +1883,7 @@
             "linkId": "EmCare.B23.DE29",
             "text": "Possible Measles",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -1916,7 +1916,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-109"
+                        "expression": "DL-G-CL1-109"
                     }
                 }
             ],
@@ -1939,7 +1939,7 @@
             "linkId": "EmCare.B23.DE62",
             "text": "Severe Anaemia",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -1972,7 +1972,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-110"
+                        "expression": "DL-G-CL1-110"
                     }
                 }
             ],
@@ -1995,7 +1995,7 @@
             "linkId": "EmCare.B23.DE63",
             "text": "Anaemia",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -2028,7 +2028,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-111"
+                        "expression": "DL-G-CL1-111"
                     }
                 }
             ],
@@ -2051,7 +2051,7 @@
             "linkId": "EmCare.B23.DE64",
             "text": "No Anaemia",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -2084,7 +2084,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-80"
+                        "expression": "DL-G-CL1-80"
                     }
                 }
             ],
@@ -2107,7 +2107,7 @@
             "linkId": "EmCare.B23.DE34",
             "text": "Eye Infection",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -2140,7 +2140,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-83"
+                        "expression": "DL-G-CL1-83"
                     }
                 }
             ],
@@ -2163,7 +2163,7 @@
             "linkId": "EmCare.B23.DE35",
             "text": "Clouding of the Cornea",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -2225,7 +2225,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "emcare.b23.de36"
+                        "expression": "EmCare.B23.DE36"
                     }
                 }
             ],
@@ -2249,7 +2249,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-88"
+                        "expression": "DL-G-CL1-88"
                     }
                 }
             ],
@@ -2272,7 +2272,7 @@
             "linkId": "EmCare.B23.DE41",
             "text": "Papular Urticaria or Papular Pruritic Eruptions",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -2305,7 +2305,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-90"
+                        "expression": "DL-G-CL1-90"
                     }
                 }
             ],
@@ -2328,7 +2328,7 @@
             "linkId": "EmCare.B23.DE42",
             "text": "Ringworm (Tinea)",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -2390,7 +2390,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "emcare.b23.de43a"
+                        "expression": "EmCare.B23.DE43a"
                     }
                 }
             ],
@@ -2414,7 +2414,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-91"
+                        "expression": "DL-G-CL1-91"
                     }
                 }
             ],
@@ -2437,7 +2437,7 @@
             "linkId": "EmCare.B23.DE44",
             "text": "Scabies",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -2470,7 +2470,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-93"
+                        "expression": "DL-G-CL1-93"
                     }
                 }
             ],
@@ -2493,7 +2493,7 @@
             "linkId": "EmCare.B23.DE45",
             "text": "Chickenpox",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -2582,7 +2582,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "emcare.b23.de46a"
+                        "expression": "EmCare.B23.DE46A"
                     }
                 }
             ],
@@ -2605,7 +2605,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "emcare.b23.de46"
+                        "expression": "EmCare.B23.DE46"
                     }
                 }
             ],
@@ -2628,7 +2628,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-95"
+                        "expression": "DL-G-CL1-95"
                     }
                 }
             ],
@@ -2651,7 +2651,7 @@
             "linkId": "EmCare.B23.DE47",
             "text": "Herpes Zoster",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -2684,7 +2684,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "emcare.b23.de48"
+                        "expression": "EmCare.B23.DE48"
                     }
                 }
             ],
@@ -2734,7 +2734,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "emcare.b23.de48a"
+                        "expression": "EmCare.B23.DE48a"
                     }
                 }
             ],
@@ -2764,7 +2764,7 @@
                     }
                 }
             ],
-            "linkId": "DL-I-CL1-17",
+            "linkId": "DL-I-CL1-17XX",
             "text": "with Disseminated Herpes Zoste",
             "type": "display",
             "required": false,
@@ -2784,7 +2784,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-98"
+                        "expression": "DL-G-CL1-98"
                     }
                 }
             ],
@@ -2807,7 +2807,7 @@
             "linkId": "EmCare.B23.DE49",
             "text": "Impetigo",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -2896,7 +2896,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "emcare.b23.de50"
+                        "expression": "EmCare.B23.DE50"
                     }
                 }
             ],
@@ -2919,7 +2919,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "emcare.b23.de50a"
+                        "expression": "EmCare.B23.DE50a"
                     }
                 }
             ],
@@ -2942,7 +2942,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-99"
+                        "expression": "DL-G-CL1-99"
                     }
                 }
             ],
@@ -2965,7 +2965,7 @@
             "linkId": "EmCare.B23.DE52",
             "text": "Molluscum Contagiosum",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -3027,7 +3027,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "emcare.b23.de52a"
+                        "expression": "EmCare.B23.DE52a"
                     }
                 }
             ],
@@ -3050,7 +3050,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-100"
+                        "expression": "DL-G-CL1-100"
                     }
                 }
             ],
@@ -3073,7 +3073,7 @@
             "linkId": "EmCare.B23.DE53",
             "text": "Warts",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -3135,7 +3135,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "emcare.b23.de53a"
+                        "expression": "EmCare.B23.DE53a"
                     }
                 }
             ],
@@ -3158,7 +3158,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-102"
+                        "expression": "DL-G-CL1-102"
                     }
                 }
             ],
@@ -3181,7 +3181,7 @@
             "linkId": "EmCare.B23.DE54",
             "text": "Seborrhoeic Dermatitis",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -3243,7 +3243,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "emcare.b23.de55"
+                        "expression": "EmCare.B23.DE55"
                     }
                 }
             ],
@@ -3266,7 +3266,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-103"
+                        "expression": "DL-G-CL1-103"
                     }
                 }
             ],
@@ -3288,7 +3288,7 @@
             "linkId": "EmCare.B23.DE56",
             "text": "Fixed Drug Reaction",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -3321,7 +3321,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-104"
+                        "expression": "DL-G-CL1-104"
                     }
                 }
             ],
@@ -3343,7 +3343,7 @@
             "linkId": "EmCare.B23.DE57",
             "text": "Eczema",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -3459,7 +3459,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "emcare.b23.de57a"
+                        "expression": "EmCare.B23.DE57a"
                     }
                 }
             ],
@@ -3482,7 +3482,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "emcare.b23.de57b"
+                        "expression": "EmCare.B23.DE57b"
                     }
                 }
             ],
@@ -3505,7 +3505,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "emcare.b23.de57c"
+                        "expression": "EmCare.B23.DE57c"
                     }
                 }
             ],
@@ -3528,7 +3528,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-105"
+                        "expression": "DL-G-CL1-105"
                     }
                 }
             ],
@@ -3551,7 +3551,7 @@
             "linkId": "EmCare.B23.DE58",
             "text": "Steven Johnson Syndrome (<span class=\"caps\">SJS</span>)",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -3584,7 +3584,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-106"
+                        "expression": "DL-G-CL1-106"
                     }
                 }
             ],
@@ -3607,7 +3607,7 @@
             "linkId": "EmCare.B23.DE59",
             "text": "Mouth Sores or Ulcer",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -3669,7 +3669,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "emcare.b23.de60"
+                        "expression": "EmCare.B23.DE60"
                     }
                 }
             ],
@@ -3692,7 +3692,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl1-108"
+                        "expression": "DL-G-CL1-108"
                     }
                 }
             ],
@@ -3715,7 +3715,7 @@
             "linkId": "EmCare.B23.DE61",
             "text": "Oral Thrush",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -3748,7 +3748,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-i-cl1-28"
+                        "expression": "DL-I-CL1-28"
                     }
                 }
             ],
@@ -3771,7 +3771,7 @@
             "linkId": "EmCare.B23.DE106",
             "text": "Very Low Weight for Age",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -3804,7 +3804,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-i-cl1-33"
+                        "expression": "DL-I-CL1-33"
                     }
                 }
             ],
@@ -3827,7 +3827,7 @@
             "linkId": "EmCare.B23.DE107",
             "text": "Low Weight for Age",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -3860,7 +3860,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-i-cl1-34"
+                        "expression": "DL-I-CL1-34"
                     }
                 }
             ],
@@ -3883,7 +3883,7 @@
             "linkId": "EmCare.B23.DE108",
             "text": "Low <span class=\"caps\">MUAC</span> or visual report of wasting",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {

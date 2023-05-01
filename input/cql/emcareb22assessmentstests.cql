@@ -2,13 +2,13 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareb22assessmentstests version '1.0.1.rc12.build.483'
+library emcareb22assessmentstests version '1.0.1.rc12.build.610'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.1.rc12.build.483' called Base
-include emcareobservation version '1.0.1.rc12.build.483' called obs
-include emcarevalueset version '1.0.1.rc12.build.483' called val
-include emcarecombineddataelements version '1.0.1.rc12.build.483' called c
+include emcarebase version '1.0.1.rc12.build.610' called Base
+include emcareobservation version '1.0.1.rc12.build.610' called obs
+include emcarevalueset version '1.0.1.rc12.build.610' called val
+include emcarecombineddataelements version '1.0.1.rc12.build.610' called c
 
 
 
@@ -17,146 +17,318 @@ context Patient
 
 
 /* 
+OBSdefine.EmCare.B21S1.DE06 : Breastfed
+
+*/
+define "OBSdefine.EmCare.B21S1.DE06":
+    Base.GetObsValue('EmCare.B21S1.DE06')
+
+/* 
+OBSdefine.EmCare.B10S1.DE05 : Cough
+
+*/
+define "OBSdefine.EmCare.B10S1.DE05":
+    Base.GetObsValue('EmCare.B10S1.DE05')
+
+/* 
+OBSdefine.EmCare.B10S1.DE01 : Difficulty Breathing
+
+*/
+define "OBSdefine.EmCare.B10S1.DE01":
+    Base.GetObsValue('EmCare.B10S1.DE01')
+
+/* 
+OBSdefine.EmCare.B22.DE07 : Fast Breathing
+
+*/
+define "OBSdefine.EmCare.B22.DE07":
+    Base.GetObsValue('EmCare.B22.DE07')
+
+/* 
+OBSdefine.EmCare.B10S2.DE05 : Wheezing
+
+*/
+define "OBSdefine.EmCare.B10S2.DE05":
+    Base.GetObsValue('EmCare.B10S2.DE05')
+
+/* 
+OBSdefine.EmCare.B10S2.DE03 : Chest Indrawing
+
+*/
+define "OBSdefine.EmCare.B10S2.DE03":
+    Base.GetObsValue('EmCare.B10S2.DE03')
+
+/* 
+OBSdefine.EmCare.B10S2.DE04 : Stridor in a calm child
+
+*/
+define "OBSdefine.EmCare.B10S2.DE04":
+    Base.GetObsValue('EmCare.B10S2.DE04')
+
+/* 
+OBSdefine.EmCare.B10S2.DE07 : Oxygen Saturation
+
+*/
+define "OBSdefine.EmCare.B10S2.DE07":
+    Base.GetObsValue('EmCare.B10S2.DE07')
+
+/* 
+OBSdefine.EmCare.B15S2.DE01 : Palmar Pallor
+
+*/
+define "OBSdefine.EmCare.B15S2.DE01":
+    Base.GetObsValue('EmCare.B15S2.DE01')
+
+/* 
+OBSdefine.EmCare.B15S2.DE09 : Mucous membrane pallor
+
+*/
+define "OBSdefine.EmCare.B15S2.DE09":
+    Base.GetObsValue('EmCare.B15S2.DE09')
+
+/* 
+OBSdefine.EmCare.B6.DE01A : Measured Temperature
+
+*/
+define "OBSdefine.EmCare.B6.DE01A":
+    Base.GetObsValue('EmCare.B6.DE01A')
+
+/* 
+OBSdefine.EmCare.B11S1.DE01 : Diarrhoea
+
+*/
+define "OBSdefine.EmCare.B11S1.DE01":
+    Base.GetObsValue('EmCare.B11S1.DE01')
+
+/* 
+OBSdefine.EmCare.B22.DE08 : Oral Fluid Test Results
+
+*/
+define "OBSdefine.EmCare.B22.DE08":
+    Base.GetObsValue('EmCare.B22.DE08')
+
+/* 
+OBSdefine.EmCare.B22.DE01 : Respiratory Rate (breaths per minute)
+
+*/
+define "OBSdefine.EmCare.B22.DE01":
+    Base.GetObsValue('EmCare.B22.DE01')
+
+/* 
+OBSdefine.EmCare.B22.DE04 : Respiratory Rate Second Count (breaths per minute)
+
+*/
+define "OBSdefine.EmCare.B22.DE04":
+    Base.GetObsValue('EmCare.B22.DE04')
+
+/* 
+OBSdefine.EmCare.B22.DE14 : Unable to Perform Oral Fluid Test
+
+*/
+define "OBSdefine.EmCare.B22.DE14":
+    Base.GetObsValue('EmCare.B22.DE14')
+
+/* 
+OBSdefine.EmCare.B7.DE09 : Not able to drink or breastfeed
+
+*/
+define "OBSdefine.EmCare.B7.DE09":
+    Base.GetObsValue('EmCare.B7.DE09')
+
+/* 
+OBSdefine.EmCare.B7.DE10 : Vomiting Everything
+
+*/
+define "OBSdefine.EmCare.B7.DE10":
+    Base.GetObsValue('EmCare.B7.DE10')
+
+/* 
 force-collection : 
-    true
+true
 */
 define "force-collection":
     true
 
 /* 
-ageinmonths : 
+AgeInMonths : 
+AgeInMonths()
+*/
+define "AgeInMonths":
     AgeInMonths()
-*/
-define "ageinmonths":
-    AgeInMonths()
 
 /* 
-ageindays : 
-    AgeInDays()
+AgeInDays : 
+AgeInDays()
 */
-define "ageindays":
+define "AgeInDays":
     AgeInDays()
 
-/* alias applicability-breastfeedingtest : a-breastfeedingtest*/
-define "applicability-breastfeedingtest":
-    "a-breastfeedingtest"
+/* 
+a-BreastFeedingTest : 
+    (    AgeInMonths()>=2 and AgeInMonths()<6 and  c."Severe Classification up to assessments and tests excluding Severe Dehydration" !=true)
+     or (    AgeInMonths()<2 and   "Breastfed" = true and c."YI severe classification other than Severe Dehydration" !=true)
+*/
+define "a-BreastFeedingTest":
+        (    AgeInMonths()>=2 and AgeInMonths()<6 and  Coalesce(c."Severe Classification up to assessments and tests excluding Severe Dehydration",false)!=true)
+         or (    AgeInMonths()<2 and   "OBSdefine.EmCare.B21S1.DE06" = true and Coalesce(c."YI severe classification other than Severe Dehydration",false)!=true)
 
 /* 
-a-respiratoryrate : 
-    ("Cough" = true or "Difficulty Breathing" = true or "AgeInMonths"<2) and o"Fast Breathing" is null
+applicability-BreastFeedingTest : a-BreastFeedingTest
+Alias
 */
-define "a-respiratoryrate":
-    (Base.GetObsValue('EmCare.B10S1.DE05') = true or Base.GetObsValue('EmCare.B10S1.DE01') = true or "ageinmonths"<2) and Base.GetObsValue('EmCare.B22.DE07') is null
-
-/* alias applicability-respiratoryrate : a-respiratoryrate*/
-define "applicability-respiratoryrate":
-    "a-respiratoryrate"
+define "applicability-BreastFeedingTest":
+    "a-BreastFeedingTest"
 
 /* 
-a-bronchodilatortest : 
-    ("Cough" = true or "Difficulty Breathing" = true) and "Wheezing" = true and (o"Fast Breathing" = true or "Chest Indrawing" = true) and  c."danger signs" != true and "Stridor in a calm child"= false and "Oxygen Saturation" >= 90 '%'
+a-RespiratoryRate : 
+("Cough" = true or "Difficulty Breathing" = true or "AgeInMonths"<2) and o"Fast Breathing" is null
 */
-define "a-bronchodilatortest":
-    (Base.GetObsValue('EmCare.B10S1.DE05') = true or Base.GetObsValue('EmCare.B10S1.DE01') = true) and Base.GetObsValue('EmCare.B10S2.DE05') = true and (Base.GetObsValue('EmCare.B22.DE07') = true or Base.GetObsValue('EmCare.B10S2.DE03') = true) and  Coalesce(c."danger signs",false)!=true and Base.GetObsValue('EmCare.B10S2.DE04')= false and Base.GetObsValue('EmCare.B10S2.DE07') >= 90 '%'
-
-/* alias applicability-bronchodilatortest : a-bronchodilatortest*/
-define "applicability-bronchodilatortest":
-    "a-bronchodilatortest"
+define "a-RespiratoryRate":
+    ("OBSdefine.EmCare.B10S1.DE05" = true or "OBSdefine.EmCare.B10S1.DE01" = true or "AgeInMonths"<2) and "OBSdefine.EmCare.B22.DE07" is null
 
 /* 
-a-hemoglobin : 
-    "Palmar pallor" = "Some palmar pallor" or "Palmar Pallor" = "Severe Palmar Pallor" or "Mucous membrane pallor" = "Some mucous membrane pallor" or "Mucous membrane pallor" = "Severe mucous membrane pallor"
+applicability-RespiratoryRate : a-RespiratoryRate
+Alias
 */
-define "a-hemoglobin":
-    Base.HasObsValueCode('EmCare.B15S2.DE01', 'EmCare.B15S2.DE03') or Base.HasObsValueCode('EmCare.B15S2.DE01', 'EmCare.B15S2.DE02') or Base.HasObsValueCode('EmCare.B15S2.DE09', 'EmCare.B15S2.DE11') or Base.HasObsValueCode('EmCare.B15S2.DE09', 'EmCare.B15S2.DE10')
-
-/* alias applicability-hemoglobin : a-hemoglobin*/
-define "applicability-hemoglobin":
-    "a-hemoglobin"
+define "applicability-RespiratoryRate":
+    "a-RespiratoryRate"
 
 /* 
-a-secondtemperature : 
-    c."psbi other than temperature" != true and AgeInMonths()<2 and "Axillary Temperature  (degrees Celcius)" > 38.5 'Cel'
+a-BronchodilatorTest : 
+("Cough" = true or "Difficulty Breathing" = true) and "Wheezing" = true and (o"Fast Breathing" = true or "Chest Indrawing" = true) and  c."Danger Signs" != true and "Stridor in a calm child"= false and "Oxygen Saturation" >= 90 '%'
 */
-define "a-secondtemperature":
-    Coalesce(c."psbi other than temperature",false)!=true and AgeInMonths()<2 and Base.GetObsValue('EmCare.B6.DE01') > 38.5 'Cel'
-
-/* alias applicability-secondtemperature : a-secondtemperature*/
-define "applicability-secondtemperature":
-    "a-secondtemperature"
+define "a-BronchodilatorTest":
+    ("OBSdefine.EmCare.B10S1.DE05" = true or "OBSdefine.EmCare.B10S1.DE01" = true) and "OBSdefine.EmCare.B10S2.DE05" = true and ("OBSdefine.EmCare.B22.DE07" = true or "OBSdefine.EmCare.B10S2.DE03" = true) and  Coalesce(c."Danger Signs",false)!=true and "OBSdefine.EmCare.B10S2.DE04"= false and "OBSdefine.EmCare.B10S2.DE07" >= 90 '%'
 
 /* 
-a-fluidtest : 
-    ("Not able to drink or breastfeed" = true or "Vomiting Everything" = true or "Diarrhoea" = true) and o"Oral Fluid Test Results" is null
+applicability-BronchodilatorTest : a-BronchodilatorTest
+Alias
 */
-define "a-fluidtest":
-    ("not able to drink or breastfeed" = true or "vomiting everything" = true or Base.GetObsValue('EmCare.B11S1.DE01') = true) and Base.GetObsValue('EmCare.B22.DE08') is null
-
-/* alias applicability-fluidtest : a-fluidtest*/
-define "applicability-fluidtest":
-    "a-fluidtest"
+define "applicability-BronchodilatorTest":
+    "a-BronchodilatorTest"
 
 /* 
-respiratory rate profile : 
-    o"Respiratory Rate (breaths per minute)"
+a-Hemoglobin : 
+"Palmar Pallor" = "Some Palmar Pallor" or "Palmar Pallor" = "Severe Palmar Pallor" or "Mucous membrane pallor" = "Some mucous membrane pallor" or "Mucous membrane pallor" = "Severe mucous membrane pallor"
 */
-define "respiratory rate profile":
-    Base.GetObsValue('EmCare.B22.DE01')
+define "a-Hemoglobin":
+    "OBSdefine.EmCare.B15S2.DE01" = val."Some Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE01" = val."Severe Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE09" = val."Some mucous membrane pallor" or "OBSdefine.EmCare.B15S2.DE09" = val."Severe mucous membrane pallor"
 
 /* 
-respiratory rate second count profile : 
-    o"Respiratory Rate Second Count (breaths per minute)"
+applicability-Hemoglobin : a-Hemoglobin
+Alias
 */
-define "respiratory rate second count profile":
-    Base.GetObsValue('EmCare.B22.DE04')
+define "applicability-Hemoglobin":
+    "a-Hemoglobin"
 
 /* 
-fast breathing profile : 
-    o"Fast Breathing"
+a-SecondTemperature : 
+c."PSBI other than temperature" != true and AgeInMonths()<2 and "Measured Temperature" in {v"Low",v"High", v"Very High"}
 */
-define "fast breathing profile":
-    Base.GetObsValue('EmCare.B22.DE07')
+define "a-SecondTemperature":
+    Coalesce(c."PSBI other than temperature",false)!=true and AgeInMonths()<2 and "OBSdefine.EmCare.B6.DE01A" in {val."Low",val."High", val."Very High"}
+
+/* 
+applicability-SecondTemperature : a-SecondTemperature
+Alias
+*/
+define "applicability-SecondTemperature":
+    "a-SecondTemperature"
+
+/* 
+a-FluidTest : 
+("Not able to drink or breastfeed" = true or "Vomiting Everything" = true or "Diarrhoea" = true) and o"Oral Fluid Test Results" is null
+*/
+define "a-FluidTest":
+    ("Not able to drink or breastfeed" = true or "Vomiting Everything" = true or "OBSdefine.EmCare.B11S1.DE01" = true) and "OBSdefine.EmCare.B22.DE08" is null
+
+/* 
+applicability-FluidTest : a-FluidTest
+Alias
+*/
+define "applicability-FluidTest":
+    "a-FluidTest"
+
+/* 
+Respiratory Rate profile : 
+o"Respiratory Rate (breaths per minute)"
+*/
+define "Respiratory Rate profile":
+    "OBSdefine.EmCare.B22.DE01"
+
+/* 
+Respiratory Rate Second Count Profile : 
+o"Respiratory Rate Second Count (breaths per minute)"
+*/
+define "Respiratory Rate Second Count Profile":
+    "OBSdefine.EmCare.B22.DE04"
+
+/* 
+Fast Breathing profile : 
+o"Fast Breathing"
+*/
+define "Fast Breathing profile":
+    "OBSdefine.EmCare.B22.DE07"
 
 /* 
 oftrp : 
-    o"Unable to Perform Oral Fluid Test"
+o"Unable to Perform Oral Fluid Test"
 */
 define "oftrp":
-    Base.GetObsValue('EmCare.B22.DE14')
+    "OBSdefine.EmCare.B22.DE14"
 
-/* alias unable to perform oral fluid test profile : oftrp*/
-define "unable to perform oral fluid test profile":
+/* 
+Unable to Perform Oral Fluid Test Profile : oftrp
+Alias
+*/
+define "Unable to Perform Oral Fluid Test Profile":
     "oftrp"
 
 /* 
-ds : 
-    Coalesce(c."danger signs",false)
+DS : 
+Coalesce(c."Danger Signs",false)
 */
-define "ds":
-    Coalesce(c."danger signs",false)
-
-/* alias danger signs : ds*/
-define "danger signs":
-    "ds"
+define "DS":
+    Coalesce(c."Danger Signs",false)
 
 /* 
-emcare.b7.de09 : 
-    Coalesce(o"Not able to drink or breastfeed",false)
+Danger Signs : DS
+Alias
 */
-define "emcare.b7.de09":
-    Coalesce(Base.GetObsValue('EmCare.B7.DE09'),false)
-
-/* alias not able to drink or breastfeed : emcare.b7.de09*/
-define "not able to drink or breastfeed":
-    "emcare.b7.de09"
+define "Danger Signs":
+    "DS"
 
 /* 
-emcare.b7.de10 : 
-    Coalesce(o"Vomiting Everything",false)
+EmCare.B7.DE09 : 
+Coalesce(o"Not able to drink or breastfeed",false)
 */
-define "emcare.b7.de10":
-    Coalesce(Base.GetObsValue('EmCare.B7.DE10'),false)
+define "EmCare.B7.DE09":
+    Coalesce("OBSdefine.EmCare.B7.DE09",false)
 
-/* alias vomiting everything : emcare.b7.de10*/
-define "vomiting everything":
-    "emcare.b7.de10"
+/* 
+Not able to drink or breastfeed : EmCare.B7.DE09
+Alias
+*/
+define "Not able to drink or breastfeed":
+    "EmCare.B7.DE09"
+
+/* 
+EmCare.B7.DE10 : 
+Coalesce(o"Vomiting Everything",false)
+*/
+define "EmCare.B7.DE10":
+    Coalesce("OBSdefine.EmCare.B7.DE10",false)
+
+/* 
+Vomiting Everything : EmCare.B7.DE10
+Alias
+*/
+define "Vomiting Everything":
+    "EmCare.B7.DE10"
+
+/* 
+BackReference : 
+back reference to resource
+*/
+define "BackReference":
+    Reference {reference: string { value: 'Questionnaire/EmCare.B22.AssessmentsTests'}}

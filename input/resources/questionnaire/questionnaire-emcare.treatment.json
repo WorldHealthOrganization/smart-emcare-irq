@@ -51,7 +51,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "ageinmonths"
+                        "expression": "AgeInMonths"
                     }
                 }
             ],
@@ -66,7 +66,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
-                        "expression": "%resource.repeat(item).where(linkId='AgeInMonths').answer.first().value>=2"
+                        "expression": "%resource.repeat(item).where(linkId='AgeInMonths').answer.first().value >= 2"
                     }
                 }
             ],
@@ -150,7 +150,7 @@
                         }
                     ],
                     "linkId": "EmCare.C10.IT.DE05",
-                    "text": "<h1>Severe Dehydration</h1>\n\n\t<p>\u27a2 If child has no other severe classification:* Give fluid for severe dehydration (plan C) OR</p>\n\n\t<p>\u27a2 <b>If child also has another severe classification:</b></p>\n\n    * <b>Refer <span class=\"caps\">URGENTLY</span> to hospital with mother giving frequent sips of <span class=\"caps\">ORS</span> on the way.</b>\n    * <b>Advise the mother to continue breastfeeding.</b>\n\n\t<p>\u27a2If child is 2 years or older and there is cholera in your area, give oral co-trimoxazole twice daily for 3 days or oral erythromycin 4 times a day for 3 days for cholera.</p>",
+                    "text": "<h1>Severe Dehydration</h1>\n\n\t<p>\u27a2 If child has no other severe classification:* Give fluid for Severe Dehydration (plan C) OR</p>\n\n\t<p>\u27a2 <b>If child also has another severe classification:</b></p>\n\n    * <b>Refer <span class=\"caps\">URGENTLY</span> to hospital with mother giving frequent sips of <span class=\"caps\">ORS</span> on the way.</b>\n    * <b>Advise the mother to continue breastfeeding.</b>\n\n\t<p>\u27a2If child is 2 years or older and there is cholera in your area, give oral co-trimoxazole twice daily for 3 days or oral erythromycin 4 times a day for 3 days for cholera.</p>",
                     "type": "display",
                     "required": false,
                     "repeats": false
@@ -294,7 +294,7 @@
                         }
                     ],
                     "linkId": "EmCare.C10.IT.DE14",
-                    "text": "h1.Non-Streptococcal Sore Throat</p>\n\n\t<p>\u27a2 <b>Give oral paracetamol for pain or high fever (38.5\u00b0C or above), continue to give every 6 hours (4 times / day) until pain/high fever gone.</b></p>\n\n\t<p>\u27a2 Soothe the throat with a safe remedy.</p>\n\n\t<p>\u27a2 Follow-up in 5 days if not improving.</p>\n\n\t<p>\u27a2 Advise the mother when to return immediately",
+                    "text": "<h1>Non-Streptococcal Sore Throat</h1>\n\n\t<p>\u27a2 <b>Give oral paracetamol for pain or high fever (38.5\u00b0C or above), continue to give every 6 hours (4 times / day) until pain/high fever gone.</b></p>\n\n\t<p>\u27a2 Soothe the throat with a safe remedy.</p>\n\n\t<p>\u27a2 Follow-up in 5 days if not improving.</p>\n\n\t<p>\u27a2 Advise the mother when to return immediately</p>",
                     "type": "display",
                     "required": false,
                     "repeats": false
@@ -342,7 +342,7 @@
                         }
                     ],
                     "linkId": "EmCare.C10.IT.DE17",
-                    "text": "<h1>Acute Ear Infection</h1>\n\n\t<p>\u27a2 <b>Give an appropriate oral antibiotic:</b></p>\n\n\t<p>\u00a0\u00a0\u00a0\u00a0 * <b>First-line: Oral Amoxicillin twice daily for 10 days</b>\n\u00a0\u00a0\u00a0\u00a0 * <b>Second-line: Oral Co-trimoxazole twice daily for 10 days</b>\n\u00a0\u00a0\u00a0\u00a0 * <b>If allergic to amoxicillin and co-trimoxazole, give Oral Erythromycin 4 times daily for 10 days</b></p>\n\n\t<p>\u27a2 <b>Give oral paracetamol for pain or high fever (38.5\u00b0C or above), continue to give every 6 hours (4 times / day) until pain/high fever gone.</b></p>\n\n\t<p>\u27a2 If ear discharge: Dry the ear by wicking at least 3 times daily</p>\n\n\t<p>\u27a2 Advise the mother when to return immediately.</p>\n\n\t<p>\u27a2 Follow-up in 5 days</p>",
+                    "text": "<h1>Acute Ear Infection</h1>\n\n\t<p>\u27a2 <b>Give an appropriate oral antibiotic:</b></p>\n\n\t<p>\u00a0\u00a0\u00a0\u00a0 * <b>First-line: Oral Amoxicillin twice daily for 10 days</b>\n\u00a0\u00a0\u00a0\u00a0 * <b>Second-line: Oral Co-trimoxazole twice daily for 10 days</b>\n\u00a0\u00a0\u00a0\u00a0 * <b>If allergic to amoxicillin and co-trimoxazole, give Oral Erythromycin 4 times daily for 10 days</b></p>\n\n\t<p>\u27a2 <b>Give oral paracetamol for pain or high fever (38.5\u00b0C or above), continue to give every 6 hours (4 times / day) until pain/high fever gone.</b></p>\n\n\t<p>\u27a2 If Ear discharge: Dry the ear by wicking at least 3 times daily</p>\n\n\t<p>\u27a2 Advise the mother when to return immediately.</p>\n\n\t<p>\u27a2 Follow-up in 5 days</p>",
                     "type": "display",
                     "required": false,
                     "repeats": false
@@ -358,7 +358,7 @@
                         }
                     ],
                     "linkId": "EmCare.C10.IT.DE18",
-                    "text": "<h1>Chronic Ear Infection</h1>\n\n\t<p>\u27a2 Dry the ear by wicking</p>\n\n\t<p>\u27a2 Refer to <span class=\"caps\">ENT</span> specialist.</p>\n\n\t<p>\u27a2 <b>If ear pain or fever, give an appropriate oral antibiotic:</b></p>\n\n\t<ul>\n\t\t<li><b>First-line: Oral Amoxicillin twice daily for 10 days</b></li>\n\t\t<li><b>Second-line: Oral Co-trimoxazole twice daily for 10 days</b></li>\n\t\t<li><b>If allergic to amoxicillin and co-trimoxazole, give Oral Erythromycin 4 times daily for 10 days</b></li>\n\t</ul>\n\n\t<p>\u27a2**Give one dose of oral Paracetamol in clinic for pain or high fever (38.5\u00b0C or above),** continue to give every 6 hours (4 times / day) until pain/high fever gone.</p>",
+                    "text": "<h1>Chronic Ear Infection</h1>\n\n\t<p>\u27a2 Dry the ear by wicking</p>\n\n\t<p>\u27a2 Refer to <span class=\"caps\">ENT</span> specialist.</p>\n\n\t<p>\u27a2 <b>If Ear pain or fever, give an appropriate oral antibiotic:</b></p>\n\n\t<ul>\n\t\t<li><b>First-line: Oral Amoxicillin twice daily for 10 days</b></li>\n\t\t<li><b>Second-line: Oral Co-trimoxazole twice daily for 10 days</b></li>\n\t\t<li><b>If allergic to amoxicillin and co-trimoxazole, give Oral Erythromycin 4 times daily for 10 days</b></li>\n\t</ul>\n\n\t<p>\u27a2**Give one dose of oral Paracetamol in clinic for pain or high fever (38.5\u00b0C or above),** continue to give every 6 hours (4 times / day) until pain/high fever gone.</p>",
                     "type": "display",
                     "required": false,
                     "repeats": false
@@ -758,7 +758,7 @@
                         }
                     ],
                     "linkId": "EmCare.C10.IT.DE40",
-                    "text": "h1.Mouth Sores or Ulcer</p>\n\n\t<p>\u27a2 Treat mouth ulcers twice daily with gentian violet until 48 hrs after the ulcers have been cured</p>\n\n\t<p>\u27a2 Give oral Paracetamol every 6 hours (4 times / day) for pain until pain is gone</p>\n\n\t<p>\u27a2 Refer if mouth ulcers deep or extensive",
+                    "text": "<h1>Mouth Sores or Ulcer</h1>\n\n\t<p>\u27a2 Treat mouth ulcers twice daily with gentian violet until 48 hrs after the ulcers have been cured</p>\n\n\t<p>\u27a2 Give oral Paracetamol every 6 hours (4 times / day) for pain until pain is gone</p>\n\n\t<p>\u27a2 Refer if mouth ulcers deep or extensive</p>",
                     "type": "display",
                     "required": false,
                     "repeats": false
@@ -835,7 +835,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
-                        "expression": "%resource.repeat(item).where(linkId='AgeInMonths').answer.first().value<2"
+                        "expression": "%resource.repeat(item).where(linkId='AgeInMonths').answer.first().value < 2"
                     }
                 }
             ],
@@ -866,7 +866,7 @@
                             "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                             "valueExpression": {
                                 "language": "text/fhirpath",
-                                "expression": "%resource.repeat(item).where(linkId='load-EmCare.C10.IT.DE49').answer.first().value=true"
+                                "expression": "%resource.repeat(item).where(linkId='load-EmCare.C10.IT.DE03').answer.first().value=true"
                             }
                         }
                     ],
@@ -962,7 +962,7 @@
                             "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                             "valueExpression": {
                                 "language": "text/fhirpath",
-                                "expression": "%resource.repeat(item).where(linkId='load-EmCare.C10.IT.DE55').answer.first().value=true"
+                                "expression": "%resource.repeat(item).where(linkId='load-EmCare.C10.IT.DE05').answer.first().value=true"
                             }
                         }
                     ],
@@ -978,7 +978,7 @@
                             "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                             "valueExpression": {
                                 "language": "text/fhirpath",
-                                "expression": "%resource.repeat(item).where(linkId='load-EmCare.C10.IT.DE56').answer.first().value=true"
+                                "expression": "%resource.repeat(item).where(linkId='load-EmCare.C10.IT.DE06').answer.first().value=true"
                             }
                         }
                     ],
@@ -994,7 +994,7 @@
                             "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                             "valueExpression": {
                                 "language": "text/fhirpath",
-                                "expression": "%resource.repeat(item).where(linkId='load-EmCare.C10.IT.DE57').answer.first().value=true"
+                                "expression": "%resource.repeat(item).where(linkId='load-EmCare.C10.IT.DE07').answer.first().value=true"
                             }
                         }
                     ],
@@ -1010,7 +1010,7 @@
                             "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                             "valueExpression": {
                                 "language": "text/fhirpath",
-                                "expression": "%resource.repeat(item).where(linkId='load-EmCare.C10.IT.DE58').answer.first().value=true"
+                                "expression": "%resource.repeat(item).where(linkId='load-EmCare.C10.IT.DE45').answer.first().value=true"
                             }
                         }
                     ],
@@ -1068,7 +1068,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de01"
+                        "expression": "load-EmCare.C10.IT.DE01"
                     }
                 }
             ],
@@ -1091,7 +1091,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de02"
+                        "expression": "load-EmCare.C10.IT.DE02"
                     }
                 }
             ],
@@ -1114,7 +1114,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de03"
+                        "expression": "load-EmCare.C10.IT.DE03"
                     }
                 }
             ],
@@ -1137,7 +1137,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de04"
+                        "expression": "load-EmCare.C10.IT.DE04"
                     }
                 }
             ],
@@ -1160,7 +1160,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de05"
+                        "expression": "load-EmCare.C10.IT.DE05"
                     }
                 }
             ],
@@ -1183,7 +1183,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de06"
+                        "expression": "load-EmCare.C10.IT.DE06"
                     }
                 }
             ],
@@ -1206,7 +1206,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de07"
+                        "expression": "load-EmCare.C10.IT.DE07"
                     }
                 }
             ],
@@ -1229,7 +1229,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de08"
+                        "expression": "load-EmCare.C10.IT.DE08"
                     }
                 }
             ],
@@ -1252,7 +1252,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de09"
+                        "expression": "load-EmCare.C10.IT.DE09"
                     }
                 }
             ],
@@ -1275,7 +1275,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de10"
+                        "expression": "load-EmCare.C10.IT.DE10"
                     }
                 }
             ],
@@ -1298,7 +1298,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de11"
+                        "expression": "load-EmCare.C10.IT.DE11"
                     }
                 }
             ],
@@ -1321,7 +1321,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de12"
+                        "expression": "load-EmCare.C10.IT.DE12"
                     }
                 }
             ],
@@ -1344,7 +1344,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de13"
+                        "expression": "load-EmCare.C10.IT.DE13"
                     }
                 }
             ],
@@ -1367,7 +1367,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de14"
+                        "expression": "load-EmCare.C10.IT.DE14"
                     }
                 }
             ],
@@ -1390,7 +1390,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de15"
+                        "expression": "load-EmCare.C10.IT.DE15"
                     }
                 }
             ],
@@ -1413,7 +1413,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de16"
+                        "expression": "load-EmCare.C10.IT.DE16"
                     }
                 }
             ],
@@ -1436,7 +1436,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de17"
+                        "expression": "load-EmCare.C10.IT.DE17"
                     }
                 }
             ],
@@ -1459,7 +1459,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de18"
+                        "expression": "load-EmCare.C10.IT.DE18"
                     }
                 }
             ],
@@ -1482,7 +1482,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de19"
+                        "expression": "load-EmCare.C10.IT.DE19"
                     }
                 }
             ],
@@ -1505,7 +1505,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de20"
+                        "expression": "load-EmCare.C10.IT.DE20"
                     }
                 }
             ],
@@ -1528,7 +1528,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de21"
+                        "expression": "load-EmCare.C10.IT.DE21"
                     }
                 }
             ],
@@ -1551,7 +1551,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de22"
+                        "expression": "load-EmCare.C10.IT.DE22"
                     }
                 }
             ],
@@ -1574,7 +1574,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de23"
+                        "expression": "load-EmCare.C10.IT.DE23"
                     }
                 }
             ],
@@ -1597,7 +1597,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de24"
+                        "expression": "load-EmCare.C10.IT.DE24"
                     }
                 }
             ],
@@ -1620,7 +1620,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de25"
+                        "expression": "load-EmCare.C10.IT.DE25"
                     }
                 }
             ],
@@ -1643,7 +1643,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de42"
+                        "expression": "load-EmCare.C10.IT.DE42"
                     }
                 }
             ],
@@ -1666,7 +1666,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de43"
+                        "expression": "load-EmCare.C10.IT.DE43"
                     }
                 }
             ],
@@ -1689,7 +1689,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de44"
+                        "expression": "load-EmCare.C10.IT.DE44"
                     }
                 }
             ],
@@ -1712,7 +1712,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de26"
+                        "expression": "load-EmCare.C10.IT.DE26"
                     }
                 }
             ],
@@ -1735,7 +1735,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de27"
+                        "expression": "load-EmCare.C10.IT.DE27"
                     }
                 }
             ],
@@ -1758,7 +1758,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de28"
+                        "expression": "load-EmCare.C10.IT.DE28"
                     }
                 }
             ],
@@ -1781,7 +1781,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de29"
+                        "expression": "load-EmCare.C10.IT.DE29"
                     }
                 }
             ],
@@ -1804,7 +1804,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de30"
+                        "expression": "load-EmCare.C10.IT.DE30"
                     }
                 }
             ],
@@ -1827,7 +1827,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de31"
+                        "expression": "load-EmCare.C10.IT.DE31"
                     }
                 }
             ],
@@ -1850,7 +1850,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de32"
+                        "expression": "load-EmCare.C10.IT.DE32"
                     }
                 }
             ],
@@ -1873,7 +1873,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de33"
+                        "expression": "load-EmCare.C10.IT.DE33"
                     }
                 }
             ],
@@ -1896,7 +1896,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de34"
+                        "expression": "load-EmCare.C10.IT.DE34"
                     }
                 }
             ],
@@ -1919,7 +1919,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de35"
+                        "expression": "load-EmCare.C10.IT.DE35"
                     }
                 }
             ],
@@ -1942,7 +1942,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de36"
+                        "expression": "load-EmCare.C10.IT.DE36"
                     }
                 }
             ],
@@ -1965,7 +1965,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de37"
+                        "expression": "load-EmCare.C10.IT.DE37"
                     }
                 }
             ],
@@ -1988,7 +1988,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de38"
+                        "expression": "load-EmCare.C10.IT.DE38"
                     }
                 }
             ],
@@ -2011,7 +2011,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de39"
+                        "expression": "load-EmCare.C10.IT.DE39"
                     }
                 }
             ],
@@ -2034,7 +2034,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de40"
+                        "expression": "load-EmCare.C10.IT.DE40"
                     }
                 }
             ],
@@ -2057,7 +2057,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de41"
+                        "expression": "load-EmCare.C10.IT.DE41"
                     }
                 }
             ],
@@ -2080,7 +2080,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de45"
+                        "expression": "load-EmCare.C10.IT.DE45"
                     }
                 }
             ],
@@ -2103,7 +2103,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de46"
+                        "expression": "load-EmCare.C10.IT.DE46"
                     }
                 }
             ],
@@ -2126,7 +2126,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de47"
+                        "expression": "load-EmCare.C10.IT.DE47"
                     }
                 }
             ],
@@ -2149,7 +2149,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de48"
+                        "expression": "load-EmCare.C10.IT.DE48"
                     }
                 }
             ],
@@ -2172,30 +2172,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de49"
-                    }
-                }
-            ],
-            "linkId": "load-EmCare.C10.IT.DE49",
-            "type": "boolean",
-            "required": false,
-            "repeats": false
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
-                    "valueCode": "horizontal"
-                },
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
-                    "valueBoolean": true
-                },
-                {
-                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
-                    "valueExpression": {
-                        "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de50"
+                        "expression": "load-EmCare.C10.IT.DE50"
                     }
                 }
             ],
@@ -2218,7 +2195,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de51"
+                        "expression": "load-EmCare.C10.IT.DE51"
                     }
                 }
             ],
@@ -2241,7 +2218,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de52"
+                        "expression": "load-EmCare.C10.IT.DE52"
                     }
                 }
             ],
@@ -2264,7 +2241,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de53"
+                        "expression": "load-EmCare.C10.IT.DE53"
                     }
                 }
             ],
@@ -2287,7 +2264,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de54"
+                        "expression": "load-EmCare.C10.IT.DE54"
                     }
                 }
             ],
@@ -2310,99 +2287,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de55"
-                    }
-                }
-            ],
-            "linkId": "load-EmCare.C10.IT.DE55",
-            "type": "boolean",
-            "required": false,
-            "repeats": false
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
-                    "valueCode": "horizontal"
-                },
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
-                    "valueBoolean": true
-                },
-                {
-                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
-                    "valueExpression": {
-                        "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de56"
-                    }
-                }
-            ],
-            "linkId": "load-EmCare.C10.IT.DE56",
-            "type": "boolean",
-            "required": false,
-            "repeats": false
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
-                    "valueCode": "horizontal"
-                },
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
-                    "valueBoolean": true
-                },
-                {
-                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
-                    "valueExpression": {
-                        "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de57"
-                    }
-                }
-            ],
-            "linkId": "load-EmCare.C10.IT.DE57",
-            "type": "boolean",
-            "required": false,
-            "repeats": false
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
-                    "valueCode": "horizontal"
-                },
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
-                    "valueBoolean": true
-                },
-                {
-                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
-                    "valueExpression": {
-                        "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de58"
-                    }
-                }
-            ],
-            "linkId": "load-EmCare.C10.IT.DE58",
-            "type": "boolean",
-            "required": false,
-            "repeats": false
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
-                    "valueCode": "horizontal"
-                },
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
-                    "valueBoolean": true
-                },
-                {
-                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
-                    "valueExpression": {
-                        "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de59"
+                        "expression": "load-EmCare.C10.IT.DE59"
                     }
                 }
             ],
@@ -2425,7 +2310,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "load-emcare.c10.it.de60"
+                        "expression": "load-EmCare.C10.IT.DE60"
                     }
                 }
             ],

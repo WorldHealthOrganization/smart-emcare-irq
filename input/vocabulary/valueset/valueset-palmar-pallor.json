@@ -6,7 +6,7 @@
     "title": "EmCare.B15S2.DE01",
     "status": "draft",
     "experimental": false,
-    "description": "The client has palmar pallor",
+    "description": "The client has Palmar Pallor",
     "immutable": true,
     "compose": {
         "include": [
@@ -18,7 +18,7 @@
                         "display": "Severe Palmar Pallor",
                         "designation": [
                             {
-                                "value": "The client has severe palmar pallor"
+                                "value": "The client has severe Palmar Pallor"
                             }
                         ]
                     },
@@ -27,7 +27,7 @@
                         "display": "Some Palmar Pallor",
                         "designation": [
                             {
-                                "value": "The client has some palmar pallor"
+                                "value": "The client has some Palmar Pallor"
                             }
                         ]
                     },
@@ -36,7 +36,7 @@
                         "display": "No Palmar Pallor",
                         "designation": [
                             {
-                                "value": "The client has no palmar pallor"
+                                "value": "The client has no Palmar Pallor"
                             }
                         ]
                     }

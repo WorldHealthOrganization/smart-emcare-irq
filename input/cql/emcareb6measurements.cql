@@ -2,13 +2,13 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareb6measurements version '1.0.1.rc12.build.483'
+library emcareb6measurements version '1.0.1.rc12.build.610'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.1.rc12.build.483' called Base
-include emcareobservation version '1.0.1.rc12.build.483' called obs
-include emcarevalueset version '1.0.1.rc12.build.483' called val
-include emcarezscore version '1.0.1.rc12.build.483' called Z
+include emcarebase version '1.0.1.rc12.build.610' called Base
+include emcareobservation version '1.0.1.rc12.build.610' called obs
+include emcarevalueset version '1.0.1.rc12.build.610' called val
+include emcarezscore version '1.0.1.rc12.build.610' called Z
 
 
 
@@ -17,45 +17,64 @@ context Patient
 
 
 /* 
-ageindays : 
+AgeInDays : 
+AgeInDays()
+*/
+define "AgeInDays":
     AgeInDays()
-*/
-define "ageindays":
-    AgeInDays()
-
-/* alias age in days : ageindays*/
-define "age in days":
-    "ageindays"
 
 /* 
-pastweightactualised : 
+Age in Days : AgeInDays
+Alias
+*/
+define "Age in Days":
+    "AgeInDays"
+
+/* 
+pastWeightActualised : 
+Z."pastweightactualised"
+*/
+define "pastWeightActualised":
     Z."pastweightactualised"
-*/
-define "pastweightactualised":
-    Z."pastweightactualised"
-
-/* alias weight based on the previous mesurements : pastweightactualised*/
-define "weight based on the previous mesurements":
-    "pastweightactualised"
 
 /* 
-ageinmonths : 
-    AgeInMonths()
+Weight based on the previous mesurements : pastWeightActualised
+Alias
 */
-define "ageinmonths":
-    AgeInMonths()
-
-/* alias age in months : ageinmonths*/
-define "age in months":
-    "ageinmonths"
+define "Weight based on the previous mesurements":
+    "pastWeightActualised"
 
 /* 
-ageinyears : 
-    AgeInYears()
+AgeInMonths : 
+AgeInMonths()
 */
-define "ageinyears":
+define "AgeInMonths":
+    AgeInMonths()
+
+/* 
+Age in months : AgeInMonths
+Alias
+*/
+define "Age in months":
+    "AgeInMonths"
+
+/* 
+AgeInYears : 
+AgeInYears()
+*/
+define "AgeInYears":
     AgeInYears()
 
-/* alias age in years : ageinyears*/
-define "age in years":
-    "ageinyears"
+/* 
+Age in years : AgeInYears
+Alias
+*/
+define "Age in years":
+    "AgeInYears"
+
+/* 
+BackReference : 
+back reference to resource
+*/
+define "BackReference":
+    Reference {reference: string { value: 'Questionnaire/EmCare.B6.Measurements'}}

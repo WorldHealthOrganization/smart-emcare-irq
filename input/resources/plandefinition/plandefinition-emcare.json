@@ -8,7 +8,7 @@
             "value": "emcaredt01"
         }
     ],
-    "version": "1.0.1.rc12.build.483",
+    "version": "1.0.1.rc12.build.610",
     "name": "emcaredt01",
     "title": "emcaredt01",
     "type": {
@@ -21,9 +21,9 @@
     },
     "status": "active",
     "experimental": false,
-    "date": "2023-04-12T04:33:32+00:00",
+    "date": "2023-05-01T15:06:13+00:00",
     "library": [
-        "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcaredt01"
+        "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcaredt01|1.0.1.rc12.build.610"
     ],
     "action": [
         {
@@ -48,7 +48,7 @@
                     "expression": {
                         "description": "AgeInYears() < 5",
                         "language": "text/cql-identifier",
-                        "expression": "emcaredt02"
+                        "expression": "EmCareDT02"
                     }
                 }
             ],
@@ -71,7 +71,7 @@
                     "expression": {
                         "description": "AgeInYears() < 5",
                         "language": "text/cql-identifier",
-                        "expression": "emcaredt04"
+                        "expression": "EmCareDT04"
                     }
                 }
             ],
@@ -100,7 +100,7 @@
                     "expression": {
                         "description": "AgeInYears() < 5",
                         "language": "text/cql-identifier",
-                        "expression": "emcaredt03"
+                        "expression": "EmCareDT03"
                     }
                 }
             ],
@@ -129,7 +129,7 @@
                     "expression": {
                         "description": "AgeInMonths() < 2",
                         "language": "text/cql-identifier",
-                        "expression": "emcaredt05"
+                        "expression": "EmCareDT05"
                     }
                 }
             ],
@@ -156,9 +156,9 @@
                 {
                     "kind": "applicability",
                     "expression": {
-                        "description": "clas.\"age >= 2 months to <60 months\"",
+                        "description": "clas.\"Age >= 2 months to <60 months\"",
                         "language": "text/cql-identifier",
-                        "expression": "emcaredt06"
+                        "expression": "EmCareDT06"
                     }
                 }
             ],
@@ -187,7 +187,7 @@
                     "expression": {
                         "description": "AgeInMonths() < 2",
                         "language": "text/cql-identifier",
-                        "expression": "emcaredt07"
+                        "expression": "EmCareDT07"
                     }
                 }
             ],
@@ -214,9 +214,9 @@
                 {
                     "kind": "applicability",
                     "expression": {
-                        "description": "clas.\"age >= 2 months to <60 months\"",
+                        "description": "clas.\"Age >= 2 months to <60 months\"",
                         "language": "text/cql-identifier",
-                        "expression": "emcaredt08"
+                        "expression": "EmCareDT08"
                     }
                 }
             ],
@@ -243,9 +243,9 @@
                 {
                     "kind": "applicability",
                     "expression": {
-                        "description": "clas.\"age >= 2 months to <60 months\"",
+                        "description": "clas.\"Age >= 2 months to <60 months\"",
                         "language": "text/cql-identifier",
-                        "expression": "emcaredt09"
+                        "expression": "EmCareDT09"
                     }
                 }
             ],
@@ -274,7 +274,7 @@
                     "expression": {
                         "description": "AgeInYears() < 5",
                         "language": "text/cql-identifier",
-                        "expression": "emcaredt10"
+                        "expression": "EmCareDT10"
                     }
                 }
             ],
@@ -299,7 +299,7 @@
                     "expression": {
                         "description": "AgeInYears() < 5",
                         "language": "text/cql-identifier",
-                        "expression": "emcaredt11"
+                        "expression": "EmCareDT11"
                     }
                 }
             ],
@@ -332,7 +332,7 @@
                     "expression": {
                         "description": "AgeInMonths() < 2",
                         "language": "text/cql-identifier",
-                        "expression": "emcaredt12"
+                        "expression": "EmCareDT12"
                     }
                 }
             ],

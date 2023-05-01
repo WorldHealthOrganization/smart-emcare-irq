@@ -91,11 +91,11 @@ group emcareobservationemcareb18s1de02(source src,target tgt){
     src.item first as item  where linkId = 'EmCare.B18S1.DE02' and answer.exists() then {
         item.answer first as a then {
             a.value as val then {
-                val where val.code = 'none' -> tgt.swrapin_entry_createtatus = 'cancelled' 'd0a13fda';
+                val where val.code = 'none' -> tgt.status = 'cancelled' '8ab1d7a5';
                 val where val.code != 'none' -> tgt.value = create('CodeableConcept') as cc, cc.coding = val, tgt.status = 'final' 'a1050460';
-            } '310f4b1f';
-        } '6af9bfcc';
-    } 'da9e8c81';
+            } '4ca9082e';
+        } '7c587a4b';
+    } '2ece047f';
 }
 
 group emcareobservationemcareb11s1de01(source src,target tgt){

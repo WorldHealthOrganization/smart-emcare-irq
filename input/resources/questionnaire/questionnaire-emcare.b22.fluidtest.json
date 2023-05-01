@@ -55,7 +55,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "ds"
+                        "expression": "DS"
                     }
                 }
             ],
@@ -79,7 +79,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "emcare.b7.de09"
+                        "expression": "EmCare.B7.DE09"
                     }
                 }
             ],
@@ -103,7 +103,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "emcare.b7.de10"
+                        "expression": "EmCare.B7.DE10"
                     }
                 }
             ],

@@ -8,7 +8,7 @@
             "value": "emcare.b18-21.signs.2m.m"
         }
     ],
-    "version": "1.0.1.rc12.build.483",
+    "version": "1.0.1.rc12.build.610",
     "name": "emcareb1821signs2mm",
     "title": "EmCare.B18-21.Signs.2m.m",
     "status": "active",
@@ -20,9 +20,51 @@
             }
         ]
     },
+    "relatedArtifact": [
+        {
+            "type": "depends-on",
+            "resource": "http://fhir.org/guides/who/anc-cds/Library/FHIRHelpers"
+        },
+        {
+            "type": "depends-on",
+            "resource": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcarebase"
+        },
+        {
+            "type": "depends-on",
+            "resource": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareobservation"
+        },
+        {
+            "type": "depends-on",
+            "resource": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcarevalueset"
+        },
+        {
+            "type": "depends-on",
+            "resource": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcarezscore"
+        },
+        {
+            "type": "depends-on",
+            "resource": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/weightforage"
+        },
+        {
+            "type": "depends-on",
+            "resource": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/anthrobase"
+        },
+        {
+            "type": "depends-on",
+            "resource": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/weightforlength"
+        },
+        {
+            "type": "depends-on",
+            "resource": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/weightforheight"
+        },
+        {
+            "type": "depends-on",
+            "resource": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcarecombineddataelements"
+        }
+    ],
     "parameter": [
         {
-            "name": "fever",
+            "name": "Fever",
             "use": "out",
             "type": "boolean"
         },
@@ -32,72 +74,72 @@
             "type": "decimal"
         },
         {
-            "name": "ageinmonths",
+            "name": "AgeInMonths",
             "use": "out",
             "type": "integer"
         },
         {
-            "name": "ageindays",
+            "name": "AgeInDays",
             "use": "out",
             "type": "integer"
         },
         {
-            "name": "emcare.b20s1.de01",
+            "name": "EmCare.B20S1.DE01",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "diarrhoea",
+            "name": "Diarrhoea",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "emcare.a.de31",
+            "name": "EmCare.A.DE31",
             "use": "out",
             "type": "code"
         },
         {
-            "name": "biological mother vital status",
+            "name": "Biological Mother Vital Status",
             "use": "out",
             "type": "code"
         },
         {
-            "name": "emcare.b21s1.de01",
+            "name": "EmCare.B21S1.DE01",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "breastfed",
+            "name": "Breastfed",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "emcare.b18s1.de02",
+            "name": "EmCare.B18S1.DE02",
             "use": "out",
             "type": "code"
         },
         {
-            "name": "difficulty with feeding",
+            "name": "Difficulty with Feeding",
             "use": "out",
             "type": "code"
         },
         {
-            "name": "yi_sever_but_dhey",
+            "name": "YI_sever_but_dhey",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "yi_sever",
+            "name": "YI_sever",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "emcare.b7.de03",
+            "name": "EmCare.B7.DE03",
             "use": "out",
             "type": "boolean"
         },
         {
-            "name": "respiratory rate profile",
+            "name": "Respiratory Rate profile",
             "use": "out",
             "type": "Quantity"
         },
@@ -107,19 +149,21 @@
             "type": "boolean"
         },
         {
-            "name": "respiratory rate second count profile",
+            "name": "Respiratory Rate Second Count Profile",
             "use": "out",
             "type": "Quantity"
         },
         {
-            "name": "fast breathing profile",
+            "name": "Fast Breathing profile",
             "use": "out",
             "type": "boolean"
         }
     ],
     "content": [
         {
-            "id": "ig-loader-emcareb1821signs2mm.cql"
+            "id": "ig-loader-emcareb1821signs2mm.cql",
+            "contentType": "text/cql",
+            "data": "LyoKQGF1dGhvcjogUGF0cmljayBEZWxjcm9peApAZGVzY3JpcHRpb246IFRoaXMgbGlicmFyeSBpcyBwYXJ0IG9mIHRoZSBwcm9qZWN0IEVtQ2FyZQoqLwpsaWJyYXJ5IGVtY2FyZWIxODIxc2lnbnMybW0gdmVyc2lvbiAnMS4wLjEucmMxMi5idWlsZC42MTAnCnVzaW5nIEZISVIgdmVyc2lvbiAnNC4wLjEnCmluY2x1ZGUgRkhJUkhlbHBlcnMgdmVyc2lvbiAnNC4wLjEnIGNhbGxlZCBGSElSSGVscGVycyAKaW5jbHVkZSBlbWNhcmViYXNlIHZlcnNpb24gJzEuMC4xLnJjMTIuYnVpbGQuNjEwJyBjYWxsZWQgQmFzZQppbmNsdWRlIGVtY2FyZW9ic2VydmF0aW9uIHZlcnNpb24gJzEuMC4xLnJjMTIuYnVpbGQuNjEwJyBjYWxsZWQgb2JzCmluY2x1ZGUgZW1jYXJldmFsdWVzZXQgdmVyc2lvbiAnMS4wLjEucmMxMi5idWlsZC42MTAnIGNhbGxlZCB2YWwKaW5jbHVkZSBlbWNhcmV6c2NvcmUgdmVyc2lvbiAnMS4wLjEucmMxMi5idWlsZC42MTAnIGNhbGxlZCBaCmluY2x1ZGUgZW1jYXJlY29tYmluZWRkYXRhZWxlbWVudHMgdmVyc2lvbiAnMS4wLjEucmMxMi5idWlsZC42MTAnIGNhbGxlZCBjCgoKCgpjb250ZXh0IFBhdGllbnQKCgovKiAKT0JTZGVmaW5lLkVtQ2FyZS5CMTFTMS5ERTAxIDogRGlhcnJob2VhCgoqLwpkZWZpbmUgIk9CU2RlZmluZS5FbUNhcmUuQjExUzEuREUwMSI6CiAgICBCYXNlLkdldE9ic1ZhbHVlKCdFbUNhcmUuQjExUzEuREUwMScpCgovKiAKT0JTZGVmaW5lLkVtQ2FyZS5CMjFTMS5ERTA2IDogQnJlYXN0ZmVkCgoqLwpkZWZpbmUgIk9CU2RlZmluZS5FbUNhcmUuQjIxUzEuREUwNiI6CiAgICBCYXNlLkdldE9ic1ZhbHVlKCdFbUNhcmUuQjIxUzEuREUwNicpCgovKiAKT0JTZGVmaW5lLkVtQ2FyZS5CMThTMS5ERTAyIDogRGlmZmljdWx0eSB3aXRoIEZlZWRpbmcKCiovCmRlZmluZSAiT0JTZGVmaW5lLkVtQ2FyZS5CMThTMS5ERTAyIjoKICAgIEJhc2UuR2V0T2JzVmFsdWUoJ0VtQ2FyZS5CMThTMS5ERTAyJykKCi8qIApPQlNkZWZpbmUuRW1DYXJlLkI3LkRFMDMgOiBDb252dWxzaW9uKHMpIGluIHRoaXMgSWxsbmVzcwoKKi8KZGVmaW5lICJPQlNkZWZpbmUuRW1DYXJlLkI3LkRFMDMiOgogICAgQmFzZS5HZXRPYnNWYWx1ZSgnRW1DYXJlLkI3LkRFMDMnKQoKLyogCk9CU2RlZmluZS5FbUNhcmUuQjIyLkRFMDEgOiBSZXNwaXJhdG9yeSBSYXRlIChicmVhdGhzIHBlciBtaW51dGUpCgoqLwpkZWZpbmUgIk9CU2RlZmluZS5FbUNhcmUuQjIyLkRFMDEiOgogICAgQmFzZS5HZXRPYnNWYWx1ZSgnRW1DYXJlLkIyMi5ERTAxJykKCi8qIApPQlNkZWZpbmUuRW1DYXJlLkIyMi5ERTA0IDogUmVzcGlyYXRvcnkgUmF0ZSBTZWNvbmQgQ291bnQgKGJyZWF0aHMgcGVyIG1pbnV0ZSkKCiovCmRlZmluZSAiT0JTZGVmaW5lLkVtQ2FyZS5CMjIuREUwNCI6CiAgICBCYXNlLkdldE9ic1ZhbHVlKCdFbUNhcmUuQjIyLkRFMDQnKQoKLyogCk9CU2RlZmluZS5FbUNhcmUuQjIyLkRFMDcgOiBGYXN0IEJyZWF0aGluZwoKKi8KZGVmaW5lICJPQlNkZWZpbmUuRW1DYXJlLkIyMi5ERTA3IjoKICAgIEJhc2UuR2V0T2JzVmFsdWUoJ0VtQ2FyZS5CMjIuREUwNycpCgovKiAKRmV2ZXIgOiAKYy4iRmV2ZXIiCiovCmRlZmluZSAiRmV2ZXIiOgogICAgYy4iRmV2ZXIiCgovKiAKenNjb3JlIDogClouIldBWiIKKi8KZGVmaW5lICJ6c2NvcmUiOgogICAgWi4iV0FaIgoKLyogCkFnZUluTW9udGhzIDogCkFnZUluTW9udGhzKCkKKi8KZGVmaW5lICJBZ2VJbk1vbnRocyI6CiAgICBBZ2VJbk1vbnRocygpCgovKiAKQWdlIGluIE1vbnRoIDogQWdlSW5Nb250aHMKQWxpYXMKKi8KZGVmaW5lICJBZ2UgaW4gTW9udGgiOgogICAgIkFnZUluTW9udGhzIgoKLyogCkFnZUluRGF5cyA6IApBZ2VJbkRheXMoKQoqLwpkZWZpbmUgIkFnZUluRGF5cyI6CiAgICBBZ2VJbkRheXMoKQoKLyogCkVtQ2FyZS5CMjBTMS5ERTAxIDogCm8iRGlhcnJob2VhIgoqLwpkZWZpbmUgIkVtQ2FyZS5CMjBTMS5ERTAxIjoKICAgICJPQlNkZWZpbmUuRW1DYXJlLkIxMVMxLkRFMDEiCgovKiAKRGlhcnJob2VhIDogRW1DYXJlLkIyMFMxLkRFMDEKQWxpYXMKKi8KZGVmaW5lICJEaWFycmhvZWEiOgogICAgIkVtQ2FyZS5CMjBTMS5ERTAxIgoKLyogCkVtQ2FyZS5BLkRFMzEgOiAKQmFzZS4iQmlvbG9naWNhbCBNb3RoZXIgVml0YWwgU3RhdHVzIgoqLwpkZWZpbmUgIkVtQ2FyZS5BLkRFMzEiOgogICAgQmFzZS4iQmlvbG9naWNhbCBNb3RoZXIgVml0YWwgU3RhdHVzIgoKLyogCkJpb2xvZ2ljYWwgTW90aGVyIFZpdGFsIFN0YXR1cyA6IEVtQ2FyZS5BLkRFMzEKQWxpYXMKKi8KZGVmaW5lICJCaW9sb2dpY2FsIE1vdGhlciBWaXRhbCBTdGF0dXMiOgogICAgIkVtQ2FyZS5BLkRFMzEiCgovKiAKRW1DYXJlLkIyMVMxLkRFMDEgOiAKbyJCcmVhc3RmZWQiCiovCmRlZmluZSAiRW1DYXJlLkIyMVMxLkRFMDEiOgogICAgIk9CU2RlZmluZS5FbUNhcmUuQjIxUzEuREUwNiIKCi8qIApCcmVhc3RmZWQgOiBFbUNhcmUuQjIxUzEuREUwMQpBbGlhcwoqLwpkZWZpbmUgIkJyZWFzdGZlZCI6CiAgICAiRW1DYXJlLkIyMVMxLkRFMDEiCgovKiAKRW1DYXJlLkIxOFMxLkRFMDIgOiAKbyJEaWZmaWN1bHR5IHdpdGggRmVlZGluZyIKKi8KZGVmaW5lICJFbUNhcmUuQjE4UzEuREUwMiI6CiAgICAiT0JTZGVmaW5lLkVtQ2FyZS5CMThTMS5ERTAyIgoKLyogCkRpZmZpY3VsdHkgd2l0aCBGZWVkaW5nIDogRW1DYXJlLkIxOFMxLkRFMDIKQWxpYXMKKi8KZGVmaW5lICJEaWZmaWN1bHR5IHdpdGggRmVlZGluZyI6CiAgICAiRW1DYXJlLkIxOFMxLkRFMDIiCgovKiAKWUlfc2V2ZXJfYnV0X2RoZXkgOiAKYy4iWUkgc2V2ZXJlIGNsYXNzaWZpY2F0aW9uIG90aGVyIHRoYW4gU2V2ZXJlIERlaHlkcmF0aW9uIgoqLwpkZWZpbmUgIllJX3NldmVyX2J1dF9kaGV5IjoKICAgIGMuIllJIHNldmVyZSBjbGFzc2lmaWNhdGlvbiBvdGhlciB0aGFuIFNldmVyZSBEZWh5ZHJhdGlvbiIKCi8qIApZSSBzZXZlcmUgY2xhc3NpZmljYXRpb24gb3RoZXIgdGhhbiBTZXZlcmUgRGVoeWRyYXRpb24gOiBZSV9zZXZlcl9idXRfZGhleQpBbGlhcwoqLwpkZWZpbmUgIllJIHNldmVyZSBjbGFzc2lmaWNhdGlvbiBvdGhlciB0aGFuIFNldmVyZSBEZWh5ZHJhdGlvbiI6CiAgICAiWUlfc2V2ZXJfYnV0X2RoZXkiCgovKiAKWUlfc2V2ZXIgOiAKYy4iWUkgc2V2ZXJlIGNsYXNzaWZpY2F0aW9uIgoqLwpkZWZpbmUgIllJX3NldmVyIjoKICAgIGMuIllJIHNldmVyZSBjbGFzc2lmaWNhdGlvbiIKCi8qIApZSSBzZXZlcmUgY2xhc3NpZmljYXRpb24gOiBZSV9zZXZlcgpBbGlhcwoqLwpkZWZpbmUgIllJIHNldmVyZSBjbGFzc2lmaWNhdGlvbiI6CiAgICAiWUlfc2V2ZXIiCgovKiAKRW1DYXJlLkI3LkRFMDMgOiAKbyJDb252dWxzaW9uKHMpIGluIHRoaXMgSWxsbmVzcyIKKi8KZGVmaW5lICJFbUNhcmUuQjcuREUwMyI6CiAgICAiT0JTZGVmaW5lLkVtQ2FyZS5CNy5ERTAzIgoKLyogCkNvbnZ1bHNpb24ocykgaW4gdGhpcyBJbGxuZXNzIDogRW1DYXJlLkI3LkRFMDMKQWxpYXMKKi8KZGVmaW5lICJDb252dWxzaW9uKHMpIGluIHRoaXMgSWxsbmVzcyI6CiAgICAiRW1DYXJlLkI3LkRFMDMiCgovKiAKUmVzcGlyYXRvcnkgUmF0ZSBwcm9maWxlIDogCm8iUmVzcGlyYXRvcnkgUmF0ZSAoYnJlYXRocyBwZXIgbWludXRlKSIKKi8KZGVmaW5lICJSZXNwaXJhdG9yeSBSYXRlIHByb2ZpbGUiOgogICAgIk9CU2RlZmluZS5FbUNhcmUuQjIyLkRFMDEiCgovKiAKZm9yY2UtY29sbGVjdGlvbiA6IApmYWxzZQoqLwpkZWZpbmUgImZvcmNlLWNvbGxlY3Rpb24iOgogICAgZmFsc2UKCi8qIApSZXNwaXJhdG9yeSBSYXRlIFNlY29uZCBDb3VudCBQcm9maWxlIDogCm8iUmVzcGlyYXRvcnkgUmF0ZSBTZWNvbmQgQ291bnQgKGJyZWF0aHMgcGVyIG1pbnV0ZSkiCiovCmRlZmluZSAiUmVzcGlyYXRvcnkgUmF0ZSBTZWNvbmQgQ291bnQgUHJvZmlsZSI6CiAgICAiT0JTZGVmaW5lLkVtQ2FyZS5CMjIuREUwNCIKCi8qIApGYXN0IEJyZWF0aGluZyBwcm9maWxlIDogCm8iRmFzdCBCcmVhdGhpbmciCiovCmRlZmluZSAiRmFzdCBCcmVhdGhpbmcgcHJvZmlsZSI6CiAgICAiT0JTZGVmaW5lLkVtQ2FyZS5CMjIuREUwNyIKCi8qIApCYWNrUmVmZXJlbmNlIDogCmJhY2sgcmVmZXJlbmNlIHRvIHJlc291cmNlCiovCmRlZmluZSAiQmFja1JlZmVyZW5jZSI6CiAgICBSZWZlcmVuY2Uge3JlZmVyZW5jZTogc3RyaW5nIHsgdmFsdWU6ICdRdWVzdGlvbm5haXJlL0VtQ2FyZS5CMTgtMjEuU2lnbnMuMm0ubSd9fQo="
         }
     ]
 }

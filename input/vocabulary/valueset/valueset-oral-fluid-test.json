@@ -18,7 +18,7 @@
                         "display": "Completely Unable to Drink",
                         "designation": [
                             {
-                                "value": "The client is completely unable to drink"
+                                "value": "The client is Completely Unable to Drink"
                             }
                         ]
                     },
@@ -27,7 +27,7 @@
                         "display": "Vomits Immediately / Everything",
                         "designation": [
                             {
-                                "value": "The client vomits immediately / everything"
+                                "value": "The client Vomits Immediately / Everything"
                             }
                         ]
                     },
@@ -36,7 +36,7 @@
                         "display": "Drinks Poorly",
                         "designation": [
                             {
-                                "value": "The client drinks poorly"
+                                "value": "The client Drinks Poorly"
                             }
                         ]
                     },
@@ -45,7 +45,7 @@
                         "display": "Drinks Eagerly / Thirstily",
                         "designation": [
                             {
-                                "value": "The client drinks eagerly / thirstily"
+                                "value": "The client Drinks Eagerly / Thirstily"
                             }
                         ]
                     },
@@ -54,7 +54,7 @@
                         "display": "Drinks Normally",
                         "designation": [
                             {
-                                "value": "The client drinks normally"
+                                "value": "The client Drinks Normally"
                             }
                         ]
                     }

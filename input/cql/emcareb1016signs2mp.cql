@@ -2,13 +2,13 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareb1016signs2mp version '1.0.1.rc12.build.483'
+library emcareb1016signs2mp version '1.0.1.rc12.build.610'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.1.rc12.build.483' called Base
-include emcareobservation version '1.0.1.rc12.build.483' called obs
-include emcarevalueset version '1.0.1.rc12.build.483' called val
-include emcarecombineddataelements version '1.0.1.rc12.build.483' called clas
+include emcarebase version '1.0.1.rc12.build.610' called Base
+include emcareobservation version '1.0.1.rc12.build.610' called obs
+include emcarevalueset version '1.0.1.rc12.build.610' called val
+include emcarecombineddataelements version '1.0.1.rc12.build.610' called clas
 
 
 
@@ -17,138 +17,267 @@ context Patient
 
 
 /* 
-danger signs : 
-    Coalesce(clas."emcare.b.g.de01", false)
-*/
-define "danger signs":
-    Coalesce(clas."emcare.b.g.de01", false)
+OBSdefine.EmCare.B10S1.DE05 : Cough
 
-/* 
-ageinmonths : 
-    AgeInMonths()
 */
-define "ageinmonths":
-    AgeInMonths()
-
-/* alias age : ageinmonths*/
-define "age":
-    "ageinmonths"
-
-/* 
-cough : 
-    o"Cough"
-*/
-define "cough":
+define "OBSdefine.EmCare.B10S1.DE05":
     Base.GetObsValue('EmCare.B10S1.DE05')
 
 /* 
-difficulty breathing : 
-    o"Difficulty Breathing"
+OBSdefine.EmCare.B10S1.DE01 : Difficulty Breathing
+
 */
-define "difficulty breathing":
+define "OBSdefine.EmCare.B10S1.DE01":
     Base.GetObsValue('EmCare.B10S1.DE01')
 
 /* 
-oral fluid test failed : 
-    "Oral Fluid Test Results" = "Completely Unable to Drink or Vomits Immediately / Everything" or  "Unable to Perform Oral Fluid Test"=true
+OBSdefine.EmCare.B22.DE14 : Unable to Perform Oral Fluid Test
+
 */
-define "oral fluid test failed":
-    Base.GetObsValue('EmCare.B22.DE08&EmCare.B22.DE14a') = true or  Base.GetObsValue('EmCare.B22.DE14')=true
+define "OBSdefine.EmCare.B22.DE14":
+    Base.GetObsValue('EmCare.B22.DE14')
 
 /* 
-diarrhoea : 
-    o"Diarrhoea"
+OBSdefine.EmCare.B22.DE08&EmCare.B22.DE14a : Oral Fluid Test Results:Completely Unable to Drink or Vomits Immediately / Everything
+
 */
-define "diarrhoea":
+define "OBSdefine.EmCare.B22.DE08&EmCare.B22.DE14a":
+    Base.GetObsValue('EmCare.B22.DE08&EmCare.B22.DE14a')
+
+/* 
+OBSdefine.EmCare.B11S1.DE01 : Diarrhoea
+
+*/
+define "OBSdefine.EmCare.B11S1.DE01":
     Base.GetObsValue('EmCare.B11S1.DE01')
 
 /* 
-not able to drink or breastfeed : 
-    o"Not able to drink or breastfeed"
+OBSdefine.EmCare.B7.DE09 : Not able to drink or breastfeed
+
 */
-define "not able to drink or breastfeed":
+define "OBSdefine.EmCare.B7.DE09":
     Base.GetObsValue('EmCare.B7.DE09')
 
 /* 
-unconscious or lethargic : 
-    HasObs('EmCare.B7.DE08') = true or  HasObs('EmCare.B7.DE08a') = true
+OBSdefine.EmCare.B7.DE08 : Unconscious
+
 */
-define "unconscious or lethargic":
-    Base.HasObs('EmCare.B7.DE08') = true or  Base.HasObs('EmCare.B7.DE08a') = true
+define "OBSdefine.EmCare.B7.DE08":
+    Base.GetObsValue('EmCare.B7.DE08')
 
 /* 
-fever : 
-    clas."fever"
+OBSdefine.EmCare.B7.DE08a : Lethargic
+
 */
-define "fever":
-    clas."fever"
+define "OBSdefine.EmCare.B7.DE08a":
+    Base.GetObsValue('EmCare.B7.DE08a')
 
 /* 
-ear problem : 
-    o"Ear Problem"
+OBSdefine.EmCare.B13S1.DE01 : Ear problem
+
 */
-define "ear problem":
+define "OBSdefine.EmCare.B13S1.DE01":
     Base.GetObsValue('EmCare.B13S1.DE01')
 
 /* 
-eye problem : 
-    o"Eye Problem"
+OBSdefine.EmCare.B14S1.DE03 : Eye Problem
+
 */
-define "eye problem":
+define "OBSdefine.EmCare.B14S1.DE03":
     Base.GetObsValue('EmCare.B14S1.DE03')
 
 /* 
-skin problem : 
-    o"Skin Problem"
+OBSdefine.EmCare.B14S1.DE01 : Skin Problem
+
 */
-define "skin problem":
+define "OBSdefine.EmCare.B14S1.DE01":
     Base.GetObsValue('EmCare.B14S1.DE01')
 
 /* 
-ear discharge : 
-    o"Ear discharge"
+OBSdefine.EmCare.B13S1.DE03 : Ear discharge
+
 */
-define "ear discharge":
+define "OBSdefine.EmCare.B13S1.DE03":
     Base.GetObsValue('EmCare.B13S1.DE03')
 
 /* 
-ear discharge for how long? : 
-    o"Ear discharge for how long?"
+OBSdefine.EmCare.B13S1.DE04 : Ear discharge for how long?
+
 */
-define "ear discharge for how long?":
+define "OBSdefine.EmCare.B13S1.DE04":
     Base.GetObsValue('EmCare.B13S1.DE04')
 
 /* 
-itchy skin : 
-    o"Itchy Skin"
+OBSdefine.EmCare.B14S1.DE02 : Itchy Skin
+
 */
-define "itchy skin":
+define "OBSdefine.EmCare.B14S1.DE02":
     Base.GetObsValue('EmCare.B14S1.DE02')
 
 /* 
-respiratory rate profile : 
-    o"Respiratory Rate (breaths per minute)"
+OBSdefine.EmCare.B22.DE01 : Respiratory Rate (breaths per minute)
+
 */
-define "respiratory rate profile":
+define "OBSdefine.EmCare.B22.DE01":
     Base.GetObsValue('EmCare.B22.DE01')
 
 /* 
+OBSdefine.EmCare.B22.DE04 : Respiratory Rate Second Count (breaths per minute)
+
+*/
+define "OBSdefine.EmCare.B22.DE04":
+    Base.GetObsValue('EmCare.B22.DE04')
+
+/* 
+OBSdefine.EmCare.B22.DE07 : Fast Breathing
+
+*/
+define "OBSdefine.EmCare.B22.DE07":
+    Base.GetObsValue('EmCare.B22.DE07')
+
+/* 
+Danger Signs : 
+Coalesce(clas."Danger Signs", false)
+*/
+define "Danger Signs":
+    Coalesce(clas."Danger Signs", false)
+
+/* 
+AgeInMonths : 
+AgeInMonths()
+*/
+define "AgeInMonths":
+    AgeInMonths()
+
+/* 
+Age : AgeInMonths
+Alias
+*/
+define "Age":
+    "AgeInMonths"
+
+/* 
+Cough : 
+o"Cough"
+*/
+define "Cough":
+    "OBSdefine.EmCare.B10S1.DE05"
+
+/* 
+Difficulty Breathing : 
+o"Difficulty Breathing"
+*/
+define "Difficulty Breathing":
+    "OBSdefine.EmCare.B10S1.DE01"
+
+/* 
+Oral Fluid Test failed : 
+"Oral Fluid Test Results" = "Completely Unable to Drink or Vomits Immediately / Everything" or  "Unable to Perform Oral Fluid Test"=true
+*/
+define "Oral Fluid Test failed":
+    "OBSdefine.EmCare.B22.DE08&EmCare.B22.DE14a" = true or  "OBSdefine.EmCare.B22.DE14"=true
+
+/* 
+Diarrhoea : 
+o"Diarrhoea"
+*/
+define "Diarrhoea":
+    "OBSdefine.EmCare.B11S1.DE01"
+
+/* 
+Not able to drink or breastfeed : 
+o"Not able to drink or breastfeed"
+*/
+define "Not able to drink or breastfeed":
+    "OBSdefine.EmCare.B7.DE09"
+
+/* 
+Unconscious or Lethargic : 
+o"Unconscious" or o"Lethargic"
+*/
+define "Unconscious or Lethargic":
+    "OBSdefine.EmCare.B7.DE08" or "OBSdefine.EmCare.B7.DE08a"
+
+/* 
+Fever : 
+clas."Fever"
+*/
+define "Fever":
+    clas."Fever"
+
+/* 
+Ear problem : 
+o"Ear problem"
+*/
+define "Ear problem":
+    "OBSdefine.EmCare.B13S1.DE01"
+
+/* 
+Eye Problem : 
+o"Eye Problem"
+*/
+define "Eye Problem":
+    "OBSdefine.EmCare.B14S1.DE03"
+
+/* 
+Skin Problem : 
+o"Skin Problem"
+*/
+define "Skin Problem":
+    "OBSdefine.EmCare.B14S1.DE01"
+
+/* 
+Ear discharge : 
+o"Ear discharge"
+*/
+define "Ear discharge":
+    "OBSdefine.EmCare.B13S1.DE03"
+
+/* 
+Ear discharge for how long? : 
+o"Ear discharge for how long?"
+*/
+define "Ear discharge for how long?":
+    "OBSdefine.EmCare.B13S1.DE04"
+
+/* 
+Itchy Skin : 
+o"Itchy Skin"
+*/
+define "Itchy Skin":
+    "OBSdefine.EmCare.B14S1.DE02"
+
+/* 
+Respiratory Rate profile : 
+o"Respiratory Rate (breaths per minute)"
+*/
+define "Respiratory Rate profile":
+    "OBSdefine.EmCare.B22.DE01"
+
+/* 
 force-collection : 
-    false
+false
 */
 define "force-collection":
     false
 
 /* 
-respiratory rate second count profile : 
-    o"Respiratory Rate Second Count (breaths per minute)"
+Respiratory Rate Second Count Profile : 
+o"Respiratory Rate Second Count (breaths per minute)"
 */
-define "respiratory rate second count profile":
-    Base.GetObsValue('EmCare.B22.DE04')
+define "Respiratory Rate Second Count Profile":
+    "OBSdefine.EmCare.B22.DE04"
 
 /* 
-fast breathing profile : 
-    o"Fast Breathing"
+Fast Breathing profile : 
+o"Fast Breathing"
 */
-define "fast breathing profile":
-    Base.GetObsValue('EmCare.B22.DE07')
+define "Fast Breathing profile":
+    "OBSdefine.EmCare.B22.DE07"
+
+/* 
+BackReference : 
+back reference to resource
+*/
+define "BackReference":
+    Reference {reference: string { value: 'Questionnaire/EmCare.B10-16.Signs.2m.p'}}

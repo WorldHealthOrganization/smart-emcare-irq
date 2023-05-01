@@ -51,7 +51,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "ageinmonth.cql"
+                        "expression": "AgeInMonth.cql"
                     }
                 }
             ],
@@ -201,7 +201,7 @@
                         }
                     ],
                     "linkId": "EmCare.B7.DE08b",
-                    "text": "Unconscious or Lethargic",
+                    "text": "Specify whether unconscious or lethargic",
                     "type": "boolean",
                     "required": true,
                     "repeats": false,
@@ -622,7 +622,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "ds"
+                        "expression": "DS"
                     }
                 }
             ],

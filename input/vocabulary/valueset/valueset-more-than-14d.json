@@ -17,7 +17,7 @@
                         "display": "14 days or more",
                         "designation": [
                             {
-                                "value": "The client has had ear discharge for 14 days or more"
+                                "value": "The client has had Ear discharge for 14 days or more"
                             }
                         ]
                     },
@@ -26,7 +26,7 @@
                         "display": "Less than 14 days",
                         "designation": [
                             {
-                                "value": "The client has had ear discharge for less than 14 days"
+                                "value": "The client has had Ear discharge for less than 14 days"
                             }
                         ]
                     }

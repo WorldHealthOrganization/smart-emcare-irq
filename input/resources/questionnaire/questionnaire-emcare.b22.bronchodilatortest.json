@@ -26,6 +26,10 @@
         {
             "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap",
             "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcare.b22.bronchodilatortest"
+        },
+        {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
+            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb22bronchodilatortest"
         }
     ],
     "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b22.bronchodilatortest",
@@ -40,75 +44,22 @@
         {
             "extension": [
                 {
-                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                    "valueBoolean": true
+                },
+                {
+                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
-                        "language": "text/fhirpath",
-                        "expression": "%resource.repeat(item).where(linkId='EmCare.B22.DE22').answer.first().empty()"
+                        "language": "text/cql-identifier",
+                        "expression": "AgeInMonths"
                     }
                 }
             ],
-            "linkId": "EmCare.B22.DE17",
-            "text": "Inhaled Bronchodilator Trial Results",
-            "type": "choice",
+            "linkId": "AgeInMonths",
+            "text": "Age",
+            "type": "integer",
             "required": false,
-            "repeats": true,
-            "answerOption": [
-                {
-                    "valueCoding": {
-                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
-                        "code": "EmCare.B22.DE18",
-                        "display": "Chest Indrawing (post inhaled bronchodilator trial)"
-                    }
-                },
-                {
-                    "valueCoding": {
-                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
-                        "code": "EmCare.B22.DE19",
-                        "display": "Respiratory Rate (post inhaled bronchodilator trial)"
-                    }
-                },
-                {
-                    "valueCoding": {
-                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
-                        "code": "EmCare.B22.DE20",
-                        "display": "Fast Breathing (post inhaled bronchodilator trial)"
-                    }
-                },
-                {
-                    "valueCoding": {
-                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
-                        "code": "EmCare.B22.DE21",
-                        "display": "No Fast Breathing and No Chest Indrawing (post Inhaled Bronchodilator Trial)"
-                    }
-                },
-                {
-                    "valueCoding": {
-                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
-                        "code": "EmCare.B22.DE22",
-                        "display": "Inhaled Bronchodilator Trial Not Feasible or Available"
-                    }
-                }
-            ],
-            "item": [
-                {
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                            "valueCodeableConcept": {
-                                "coding": [
-                                    {
-                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                        "code": "help"
-                                    }
-                                ]
-                            }
-                        }
-                    ],
-                    "linkId": "EmCare.B22.DE17-help",
-                    "text": "Provide information on how to conduct an Inhaled Bronchodilator Trial as per <span class=\"caps\">IMCI</span> training &#8211; <span class=\"caps\">TBC</span>",
-                    "type": "display"
-                }
-            ]
+            "repeats": false
         },
         {
             "extension": [
@@ -129,7 +80,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
-                        "expression": "%resource.repeat(item).where(linkId='EmCare.B22.DE17').answer.first().empty()"
+                        "expression": "%resource.repeat(item).where(linkId='EmCare.B22.DE19').answer.first().empty() and %resource.repeat(item).where(linkId='EmCare.B22.DE18').answer.first().empty()"
                     }
                 }
             ],
@@ -151,13 +102,99 @@
                 {
                     "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
                     "valueCode": "horizontal"
+                },
+                {
+                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                    "valueExpression": {
+                        "language": "text/fhirpath",
+                        "expression": "%resource.repeat(item).where(linkId='EmCare.B22.DE22').answer.first().empty()"
+                    }
+                }
+            ],
+            "linkId": "EmCare.B22.DE18",
+            "text": "Chest Indrawing (post inhaled bronchodilator trial)",
+            "type": "boolean",
+            "required": false,
+            "repeats": false
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                    "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "{Breaths}/min"
+                    }
+                },
+                {
+                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                    "valueExpression": {
+                        "language": "text/fhirpath",
+                        "expression": "%resource.repeat(item).where(linkId='EmCare.B22.DE22').answer.first().empty()"
+                    }
+                }
+            ],
+            "linkId": "EmCare.B22.DE19",
+            "text": "Respiratory Rate (post inhaled bronchodilator trial)",
+            "type": "quantity",
+            "required": false,
+            "repeats": false
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+                    "valueCode": "horizontal"
+                },
+                {
+                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                    "valueExpression": {
+                        "language": "text/fhirpath",
+                        "expression": "%resource.repeat(item).where(linkId='EmCare.B22.DE22').answer.first().empty()"
+                    }
+                },
+                {
+                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+                    "valueExpression": {
+                        "language": "text/fhirpath",
+                        "expression": "iif(%resource.repeat(item).where(linkId='EmCare.B22.DE19').answer.first().exists(),iif( ( %resource.repeat(item).where(linkId='EmCare.B22.DE19').answer.first().value >= 50 '{Breaths}/min' and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value < 12 and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value >= 2 ) or( %resource.repeat(item).where(linkId='EmCare.B22.DE19').answer.first().value >= 40 '{Breaths}/min' and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value>=12 and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value < 60), true, false), {})"
+                    }
+                }
+            ],
+            "linkId": "EmCare.B22.DE20",
+            "text": "Fast Breathing (post inhaled bronchodilator trial)",
+            "type": "boolean",
+            "required": false,
+            "repeats": false,
+            "readOnly": true
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+                    "valueCode": "horizontal"
+                },
+                {
+                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                    "valueExpression": {
+                        "language": "text/fhirpath",
+                        "expression": "%resource.repeat(item).where(linkId='EmCare.B22.DE22').answer.first().empty()"
+                    }
+                },
+                {
+                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+                    "valueExpression": {
+                        "language": "text/fhirpath",
+                        "expression": "%resource.repeat(item).where(linkId='EmCare.B22.DE18').answer.first().value = false and %resource.repeat(item).where(linkId='EmCare.B22.DE20').answer.first().value = false"
+                    }
                 }
             ],
             "linkId": "EmCare.B22.DE21",
             "text": "No Fast Breathing and No Chest Indrawing (post Inhaled Bronchodilator Trial)",
             "type": "boolean",
             "required": false,
-            "repeats": false
+            "repeats": false,
+            "readOnly": true
         },
         {
             "extension": [

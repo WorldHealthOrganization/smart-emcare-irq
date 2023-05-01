@@ -153,7 +153,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
-                        "expression": "iif(%resource.repeat(item).where(linkId='EmCare.B6.DE01').answer.first().value >= 38.5 'Cel' and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value >= 2, '2',iif(%resource.repeat(item).where(linkId='EmCare.B6.DE01').answer.first().value >= 38 'Cel' and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value< 2 or %resource.repeat(item).where(linkId='EmCare.B6.DE01').answer.first().value >= 37.5 'Cel' and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value >= 2,'High',iif(%resource.repeat(item).where(linkId='EmCare.B6.DE01').answer.first().value < 35.5 'Cel', 'Low',iif(%resource.repeat(item).where(linkId='EmCare.B6.DE01').answer.first().value.exists(), 'Normal',{}))))"
+                        "expression": "iif(%resource.repeat(item).where(linkId='EmCare.B6.DE01').answer.first().value >= 38.5 'Cel' and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value >= 2, 'Very High',iif(%resource.repeat(item).where(linkId='EmCare.B6.DE01').answer.first().value >= 38 'Cel' and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value< 2 or %resource.repeat(item).where(linkId='EmCare.B6.DE01').answer.first().value >= 37.5 'Cel' and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value >= 2,'High',iif(%resource.repeat(item).where(linkId='EmCare.B6.DE01').answer.first().value < 35.5 'Cel', 'Low',iif(%resource.repeat(item).where(linkId='EmCare.B6.DE01').answer.first().value.exists(), 'Normal',{}))))"
                     }
                 }
             ],
@@ -273,7 +273,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "ageindays"
+                        "expression": "AgeInDays"
                     }
                 }
             ],
@@ -296,7 +296,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "pastweightactualised"
+                        "expression": "pastWeightActualised"
                     }
                 }
             ],
@@ -317,7 +317,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "ageinmonths"
+                        "expression": "AgeInMonths"
                     }
                 }
             ],
@@ -337,7 +337,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "ageinyears"
+                        "expression": "AgeInYears"
                     }
                 }
             ],
@@ -369,7 +369,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
-                        "expression": "%resource.repeat(item).where(linkId='pastWeightActualised').answer.first().empty() and %resource.repeat(item).where(linkId='EmCare.B6.DE07').answer.first().exists()"
+                        "expression": "%resource.repeat(item).where(linkId='pastWeightActualised').answer.first().empty() and %resource.repeat(item).where(linkId='EmCare.B6.DE07').answer.first().exists() and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value>=2"
                     }
                 }
             ],

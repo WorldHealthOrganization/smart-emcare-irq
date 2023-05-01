@@ -2,13 +2,13 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareb1014symptoms2mp version '1.0.1.rc12.build.483'
+library emcareb1014symptoms2mp version '1.0.1.rc12.build.610'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.1.rc12.build.483' called Base
-include emcareobservation version '1.0.1.rc12.build.483' called obs
-include emcarevalueset version '1.0.1.rc12.build.483' called val
-include emcarecombineddataelements version '1.0.1.rc12.build.483' called c
+include emcarebase version '1.0.1.rc12.build.610' called Base
+include emcareobservation version '1.0.1.rc12.build.610' called obs
+include emcarevalueset version '1.0.1.rc12.build.610' called val
+include emcarecombineddataelements version '1.0.1.rc12.build.610' called c
 
 
 
@@ -17,26 +17,36 @@ context Patient
 
 
 /* 
-danger signs : 
-    c."emcare.b.g.de01"
+Danger Signs : 
+c."Danger Signs"
 */
-define "danger signs":
-    c."emcare.b.g.de01"
+define "Danger Signs":
+    c."Danger Signs"
 
 /* 
-emcare.b12s1.de01 : 
-    c."fever"
+EmCare.B12S1.DE01 : 
+c."Fever"
 */
-define "emcare.b12s1.de01":
-    c."fever"
+define "EmCare.B12S1.DE01":
+    c."Fever"
 
 /* 
-ageinmonths : 
-    AgeInMonths()
+AgeInMonths : 
+AgeInMonths()
 */
-define "ageinmonths":
+define "AgeInMonths":
     AgeInMonths()
 
-/* alias age : ageinmonths*/
-define "age":
-    "ageinmonths"
+/* 
+Age : AgeInMonths
+Alias
+*/
+define "Age":
+    "AgeInMonths"
+
+/* 
+BackReference : 
+back reference to resource
+*/
+define "BackReference":
+    Reference {reference: string { value: 'Questionnaire/EmCare.B10-14.Symptoms.2m.p'}}

@@ -89,7 +89,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "measured temperature (second measurement)"
+                        "expression": "Measured Temperature (second measurement)"
                     }
                 }
             ],
@@ -112,7 +112,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl2-04-08"
+                        "expression": "DL-G-CL2-04-08"
                     }
                 }
             ],
@@ -135,7 +135,7 @@
             "linkId": "EmCare.B23.DE83",
             "text": "Possible Serious Bacterial Infection OR Very Severe Disease",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -168,7 +168,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl2-10"
+                        "expression": "DL-G-CL2-10"
                     }
                 }
             ],
@@ -191,7 +191,7 @@
             "linkId": "EmCare.B23.DE06",
             "text": "Pneumonia",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -224,7 +224,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl2-11"
+                        "expression": "DL-G-CL2-11"
                     }
                 }
             ],
@@ -247,7 +247,7 @@
             "linkId": "EmCare.B23.DE85",
             "text": "Local Infection",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -280,7 +280,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl2-12"
+                        "expression": "DL-G-CL2-12"
                     }
                 }
             ],
@@ -302,7 +302,7 @@
             "linkId": "EmCare.B23.DE86",
             "text": "Infection Unlikely",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -335,7 +335,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl2-26"
+                        "expression": "DL-G-CL2-26"
                     }
                 }
             ],
@@ -357,7 +357,7 @@
             "linkId": "EmCare.B23.DE106",
             "text": "Very Low Weight for Age",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -390,7 +390,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl2-13-14"
+                        "expression": "DL-G-CL2-13-14"
                     }
                 }
             ],
@@ -413,7 +413,7 @@
             "linkId": "EmCare.B23.DE87",
             "text": "Severe Jaundice",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -446,7 +446,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl2-15-43"
+                        "expression": "DL-G-CL2-15-43"
                     }
                 }
             ],
@@ -468,7 +468,7 @@
             "linkId": "EmCare.B23.DE88",
             "text": "Jaundice",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -501,7 +501,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl2-17"
+                        "expression": "DL-G-CL2-17"
                     }
                 }
             ],
@@ -523,7 +523,7 @@
             "linkId": "EmCare.B23.DE89",
             "text": "No Jaundice",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -556,7 +556,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl2-18"
+                        "expression": "DL-G-CL2-18"
                     }
                 }
             ],
@@ -579,7 +579,7 @@
             "linkId": "EmCare.B23.DE13",
             "text": "Severe Dehydration",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -612,7 +612,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl2-19"
+                        "expression": "DL-G-CL2-19"
                     }
                 }
             ],
@@ -635,7 +635,7 @@
             "linkId": "EmCare.B23.DE14",
             "text": "Some Dehydration",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -668,7 +668,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl2-25"
+                        "expression": "DL-G-CL2-25"
                     }
                 }
             ],
@@ -691,7 +691,7 @@
             "linkId": "EmCare.B23.DE15",
             "text": "No Dehydration",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -724,7 +724,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-i-cl2-04-30"
+                        "expression": "DL-I-CL2-04-30"
                     }
                 }
             ],
@@ -747,7 +747,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl2-32"
+                        "expression": "DL-G-CL2-32"
                     }
                 }
             ],
@@ -770,7 +770,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl2-42"
+                        "expression": "DL-G-CL2-42"
                     }
                 }
             ],
@@ -793,7 +793,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-i-cl2-04-42"
+                        "expression": "DL-I-CL2-04-42"
                     }
                 }
             ],
@@ -816,7 +816,7 @@
             "linkId": "EmCare.B23.DE94",
             "text": "Feeding Problem and / or Low Weight for Age",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {
@@ -930,7 +930,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "dl-g-cl2-50"
+                        "expression": "DL-G-CL2-50"
                     }
                 }
             ],
@@ -952,7 +952,7 @@
             "linkId": "EmCare.B23.DE98",
             "text": "No Feeding Problem",
             "type": "choice",
-            "required": false,
+            "required": true,
             "repeats": false,
             "answerOption": [
                 {

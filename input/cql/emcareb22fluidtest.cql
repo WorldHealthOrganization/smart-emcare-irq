@@ -2,13 +2,13 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareb22fluidtest version '1.0.1.rc12.build.483'
+library emcareb22fluidtest version '1.0.1.rc12.build.610'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.1.rc12.build.483' called Base
-include emcareobservation version '1.0.1.rc12.build.483' called obs
-include emcarevalueset version '1.0.1.rc12.build.483' called val
-include emcarecombineddataelements version '1.0.1.rc12.build.483' called c
+include emcarebase version '1.0.1.rc12.build.610' called Base
+include emcareobservation version '1.0.1.rc12.build.610' called obs
+include emcarevalueset version '1.0.1.rc12.build.610' called val
+include emcarecombineddataelements version '1.0.1.rc12.build.610' called c
 
 
 
@@ -17,45 +17,85 @@ context Patient
 
 
 /* 
-oftrp : 
-    o"Unable to Perform Oral Fluid Test"
+OBSdefine.EmCare.B22.DE14 : Unable to Perform Oral Fluid Test
+
 */
-define "oftrp":
+define "OBSdefine.EmCare.B22.DE14":
     Base.GetObsValue('EmCare.B22.DE14')
 
-/* alias unable to perform oral fluid test profile : oftrp*/
-define "unable to perform oral fluid test profile":
+/* 
+OBSdefine.EmCare.B7.DE09 : Not able to drink or breastfeed
+
+*/
+define "OBSdefine.EmCare.B7.DE09":
+    Base.GetObsValue('EmCare.B7.DE09')
+
+/* 
+OBSdefine.EmCare.B7.DE10 : Vomiting Everything
+
+*/
+define "OBSdefine.EmCare.B7.DE10":
+    Base.GetObsValue('EmCare.B7.DE10')
+
+/* 
+oftrp : 
+o"Unable to Perform Oral Fluid Test"
+*/
+define "oftrp":
+    "OBSdefine.EmCare.B22.DE14"
+
+/* 
+Unable to Perform Oral Fluid Test Profile : oftrp
+Alias
+*/
+define "Unable to Perform Oral Fluid Test Profile":
     "oftrp"
 
 /* 
-ds : 
-    Coalesce(c."danger signs",false)
+DS : 
+Coalesce(c."Danger Signs",false)
 */
-define "ds":
-    Coalesce(c."danger signs",false)
-
-/* alias danger signs : ds*/
-define "danger signs":
-    "ds"
+define "DS":
+    Coalesce(c."Danger Signs",false)
 
 /* 
-emcare.b7.de09 : 
-    Coalesce(o"Not able to drink or breastfeed",false)
+Danger Signs : DS
+Alias
 */
-define "emcare.b7.de09":
-    Coalesce(Base.GetObsValue('EmCare.B7.DE09'),false)
-
-/* alias not able to drink or breastfeed : emcare.b7.de09*/
-define "not able to drink or breastfeed":
-    "emcare.b7.de09"
+define "Danger Signs":
+    "DS"
 
 /* 
-emcare.b7.de10 : 
-    Coalesce(o"Vomiting Everything",false)
+EmCare.B7.DE09 : 
+Coalesce(o"Not able to drink or breastfeed",false)
 */
-define "emcare.b7.de10":
-    Coalesce(Base.GetObsValue('EmCare.B7.DE10'),false)
+define "EmCare.B7.DE09":
+    Coalesce("OBSdefine.EmCare.B7.DE09",false)
 
-/* alias vomiting everything : emcare.b7.de10*/
-define "vomiting everything":
-    "emcare.b7.de10"
+/* 
+Not able to drink or breastfeed : EmCare.B7.DE09
+Alias
+*/
+define "Not able to drink or breastfeed":
+    "EmCare.B7.DE09"
+
+/* 
+EmCare.B7.DE10 : 
+Coalesce(o"Vomiting Everything",false)
+*/
+define "EmCare.B7.DE10":
+    Coalesce("OBSdefine.EmCare.B7.DE10",false)
+
+/* 
+Vomiting Everything : EmCare.B7.DE10
+Alias
+*/
+define "Vomiting Everything":
+    "EmCare.B7.DE10"
+
+/* 
+BackReference : 
+back reference to resource
+*/
+define "BackReference":
+    Reference {reference: string { value: 'Questionnaire/EmCare.B22.FluidTest'}}

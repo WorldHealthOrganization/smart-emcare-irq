@@ -2,13 +2,13 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareb7ltidangersigns version '1.0.1.rc12.build.483'
+library emcareb7ltidangersigns version '1.0.1.rc12.build.610'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.1.rc12.build.483' called Base
-include emcareobservation version '1.0.1.rc12.build.483' called obs
-include emcarevalueset version '1.0.1.rc12.build.483' called val
-include emcarecombineddataelements version '1.0.1.rc12.build.483' called c
+include emcarebase version '1.0.1.rc12.build.610' called Base
+include emcareobservation version '1.0.1.rc12.build.610' called obs
+include emcarevalueset version '1.0.1.rc12.build.610' called val
+include emcarecombineddataelements version '1.0.1.rc12.build.610' called c
 
 
 
@@ -17,30 +17,50 @@ context Patient
 
 
 /* 
-ageinmonth.cql : 
-    AgeInMonths()
+OBSdefine.EmCare.B22.DE14 : Unable to Perform Oral Fluid Test
+
 */
-define "ageinmonth.cql":
+define "OBSdefine.EmCare.B22.DE14":
+    Base.GetObsValue('EmCare.B22.DE14')
+
+/* 
+AgeInMonth.cql : 
+AgeInMonths()
+*/
+define "AgeInMonth.cql":
     AgeInMonths()
 
 /* 
 oftrp : 
-    o"Unable to Perform Oral Fluid Test"
+o"Unable to Perform Oral Fluid Test"
 */
 define "oftrp":
-    Base.GetObsValue('EmCare.B22.DE14')
+    "OBSdefine.EmCare.B22.DE14"
 
-/* alias unable to perform oral fluid test profile : oftrp*/
-define "unable to perform oral fluid test profile":
+/* 
+Unable to Perform Oral Fluid Test Profile : oftrp
+Alias
+*/
+define "Unable to Perform Oral Fluid Test Profile":
     "oftrp"
 
 /* 
-ds : 
-    Coalesce(c."danger signs",false)
+DS : 
+Coalesce(c."Danger Signs",false)
 */
-define "ds":
-    Coalesce(c."danger signs",false)
+define "DS":
+    Coalesce(c."Danger Signs",false)
 
-/* alias danger signs : ds*/
-define "danger signs":
-    "ds"
+/* 
+Danger Signs : DS
+Alias
+*/
+define "Danger Signs":
+    "DS"
+
+/* 
+BackReference : 
+back reference to resource
+*/
+define "BackReference":
+    Reference {reference: string { value: 'Questionnaire/EmCare.B7.LTI-DangerSigns'}}

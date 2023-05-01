@@ -2,12 +2,12 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareb22respiratoryrate version '1.0.1.rc12.build.483'
+library emcareb22respiratoryrate version '1.0.1.rc12.build.610'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.1.rc12.build.483' called Base
-include emcareobservation version '1.0.1.rc12.build.483' called obs
-include emcarevalueset version '1.0.1.rc12.build.483' called val
+include emcarebase version '1.0.1.rc12.build.610' called Base
+include emcareobservation version '1.0.1.rc12.build.610' called obs
+include emcarevalueset version '1.0.1.rc12.build.610' called val
 
 
 
@@ -16,40 +16,71 @@ context Patient
 
 
 /* 
-ageinmonths : 
-    AgeInMonths()
-*/
-define "ageinmonths":
-    AgeInMonths()
+OBSdefine.EmCare.B22.DE01 : Respiratory Rate (breaths per minute)
 
-/* alias age : ageinmonths*/
-define "age":
-    "ageinmonths"
-
-/* 
-respiratory rate profile : 
-    o"Respiratory Rate (breaths per minute)"
 */
-define "respiratory rate profile":
+define "OBSdefine.EmCare.B22.DE01":
     Base.GetObsValue('EmCare.B22.DE01')
 
 /* 
+OBSdefine.EmCare.B22.DE04 : Respiratory Rate Second Count (breaths per minute)
+
+*/
+define "OBSdefine.EmCare.B22.DE04":
+    Base.GetObsValue('EmCare.B22.DE04')
+
+/* 
+OBSdefine.EmCare.B22.DE07 : Fast Breathing
+
+*/
+define "OBSdefine.EmCare.B22.DE07":
+    Base.GetObsValue('EmCare.B22.DE07')
+
+/* 
+AgeInMonths : 
+AgeInMonths()
+*/
+define "AgeInMonths":
+    AgeInMonths()
+
+/* 
+Age : AgeInMonths
+Alias
+*/
+define "Age":
+    "AgeInMonths"
+
+/* 
+Respiratory Rate profile : 
+o"Respiratory Rate (breaths per minute)"
+*/
+define "Respiratory Rate profile":
+    "OBSdefine.EmCare.B22.DE01"
+
+/* 
 force-collection : 
-    false
+false
 */
 define "force-collection":
     false
 
 /* 
-respiratory rate second count profile : 
-    o"Respiratory Rate Second Count (breaths per minute)"
+Respiratory Rate Second Count Profile : 
+o"Respiratory Rate Second Count (breaths per minute)"
 */
-define "respiratory rate second count profile":
-    Base.GetObsValue('EmCare.B22.DE04')
+define "Respiratory Rate Second Count Profile":
+    "OBSdefine.EmCare.B22.DE04"
 
 /* 
-fast breathing profile : 
-    o"Fast Breathing"
+Fast Breathing profile : 
+o"Fast Breathing"
 */
-define "fast breathing profile":
-    Base.GetObsValue('EmCare.B22.DE07')
+define "Fast Breathing profile":
+    "OBSdefine.EmCare.B22.DE07"
+
+/* 
+BackReference : 
+back reference to resource
+*/
+define "BackReference":
+    Reference {reference: string { value: 'Questionnaire/EmCare.B22.RespiratoryRate'}}

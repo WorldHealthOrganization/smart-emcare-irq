@@ -55,7 +55,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "danger signs"
+                        "expression": "Danger Signs"
                     }
                 }
             ],
@@ -74,7 +74,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "ageinmonths"
+                        "expression": "AgeInMonths"
                     }
                 }
             ],
@@ -98,7 +98,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "cough"
+                        "expression": "Cough"
                     }
                 }
             ],
@@ -121,7 +121,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "difficulty breathing"
+                        "expression": "Difficulty Breathing"
                     }
                 }
             ],
@@ -144,7 +144,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "oral fluid test failed"
+                        "expression": "Oral Fluid Test failed"
                     }
                 }
             ],
@@ -167,7 +167,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "diarrhoea"
+                        "expression": "Diarrhoea"
                     }
                 }
             ],
@@ -190,7 +190,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "not able to drink or breastfeed"
+                        "expression": "Not able to drink or breastfeed"
                     }
                 }
             ],
@@ -213,7 +213,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "unconscious or lethargic"
+                        "expression": "Unconscious or Lethargic"
                     }
                 }
             ],
@@ -236,7 +236,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "fever"
+                        "expression": "Fever"
                     }
                 }
             ],
@@ -259,11 +259,11 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "ear problem"
+                        "expression": "Ear problem"
                     }
                 }
             ],
-            "linkId": "Ear Problem",
+            "linkId": "Ear problem",
             "type": "boolean",
             "required": false,
             "repeats": false
@@ -282,7 +282,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "eye problem"
+                        "expression": "Eye Problem"
                     }
                 }
             ],
@@ -305,7 +305,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "skin problem"
+                        "expression": "Skin Problem"
                     }
                 }
             ],
@@ -328,7 +328,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "ear discharge"
+                        "expression": "Ear discharge"
                     }
                 }
             ],
@@ -347,7 +347,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "ear discharge for how long?"
+                        "expression": "Ear discharge for how long?"
                     }
                 }
             ],
@@ -370,7 +370,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "itchy skin"
+                        "expression": "Itchy Skin"
                     }
                 }
             ],
@@ -587,6 +587,10 @@
                             "valueCode": "horizontal"
                         },
                         {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                            "valueBoolean": true
+                        },
+                        {
                             "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                             "valueExpression": {
                                 "language": "text/fhirpath",
@@ -597,7 +601,7 @@
                             "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
                             "valueExpression": {
                                 "language": "text/fhirpath",
-                                "expression": "iif(%resource.repeat(item).where(linkId='Fast Breathing profile').answer.first().empty() and (%resource.repeat(item).where(linkId='AgeInMonths').answer.first().value >= 2 or %resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='second').repeat(item).where(linkId='EmCare.B22.DE04').answer.first().exists() or  %resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='second').repeat(item).where(linkId='EmCare.B22.DE05').answer.first().exists() or  %resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='EmCare.B22.DE01').answer.first().value < 60 '{Breaths}/min'),iif(%resource.repeat(item).where(linkId='AgeInMonths').answer.first().value<2 and (%resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='second').repeat(item).where(linkId='EmCare.B22.DE04').answer.first().value >= 60 '{Breaths}/min' or (%resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='second').repeat(item).where(linkId='EmCare.B22.DE05').answer.first().exists()  and ( %resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='EmCare.B22.DE01').answer.first().value  >= 60 '{Breaths}/min'  or %resource.repeat(item).where(linkId='Respiratory Rate profile').answer.first().value  >= 60 '{Breaths}/min' ) ) ) or %resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='EmCare.B22.DE01').answer.first().value >= 50 '{Breaths}/min' and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value < 12 and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value >= 2or %resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='EmCare.B22.DE01').answer.first().value >= 40 '{Breaths}/min' and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value>=12 and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value < 60, true, false),{})"
+                                "expression": "iif(%resource.repeat(item).where(linkId='Fast Breathing profile').answer.first().empty() and (%resource.repeat(item).where(linkId='AgeInMonths').answer.first().value >= 2 or %resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='second').repeat(item).where(linkId='EmCare.B22.DE04').answer.first().exists() or  %resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='second').repeat(item).where(linkId='EmCare.B22.DE05').answer.first().exists() or  %resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='EmCare.B22.DE01').answer.first().value < 60 '{Breaths}/min'),iif((%resource.repeat(item).where(linkId='AgeInMonths').answer.first().value<2 and (%resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='second').repeat(item).where(linkId='EmCare.B22.DE04').answer.first().value >= 60 '{Breaths}/min' or (%resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='second').repeat(item).where(linkId='EmCare.B22.DE05').answer.first().exists()  and ( %resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='EmCare.B22.DE01').answer.first().value  >= 60 '{Breaths}/min'  or %resource.repeat(item).where(linkId='Respiratory Rate profile').answer.first().value  >= 60 '{Breaths}/min' ) ) ) )or (%resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='EmCare.B22.DE01').answer.first().value >= 50 '{Breaths}/min' and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value < 12 and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value >= 2)or (%resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='EmCare.B22.DE01').answer.first().value >= 40 '{Breaths}/min' and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value>=12 and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value < 60), true, false),{})"
                             }
                         }
                     ],
@@ -605,8 +609,23 @@
                     "text": "Fast Breathing",
                     "type": "boolean",
                     "required": false,
+                    "repeats": false
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                            "valueExpression": {
+                                "language": "text/fhirpath",
+                                "expression": "%resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='EmCare.B22.DE07').answer.first().value=true"
+                            }
+                        }
+                    ],
+                    "linkId": "fastbreathing-True",
+                    "text": "Fast Breathing",
+                    "type": "display",
+                    "required": false,
                     "repeats": false,
-                    "readOnly": true,
                     "item": [
                         {
                             "extension": [
@@ -622,8 +641,44 @@
                                     }
                                 }
                             ],
-                            "linkId": "EmCare.B22.DE07-help",
-                            "text": "The number of breaths for <b>\u2018fast breathing\u2019 depends on the child\u2019s age.</b>   * Under 2 months: More than 60 breaths per minute* * 2 to 11 months: More than 50 breaths per minute * 12 to 59 months: More than 40 breaths per minute  *In young infants, a second measurement should be taken to confirm, unless there is already another sign of possible serious bacterial infection",
+                            "linkId": "fastbreathing-True-help",
+                            "text": "The number of breaths for <b>\u2018fast breathing\u2019 depends on the child\u2019s age.</b>   </p>\n\n\t<ul>\n\t\t<li>Under 2 months: More than 60 breaths per minute(*)</li>\n\t\t<li>2 to 11 months: More than 50 breaths per minute</li>\n\t\t<li>12 to 59 months: More than 40 breaths per minute</li>\n\t</ul>\n\n\t<p>*In young infants, a second measurement should be taken to confirm, unless there is already another sign of possible serious bacterial infection",
+                            "type": "display"
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                            "valueExpression": {
+                                "language": "text/fhirpath",
+                                "expression": "%resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='EmCare.B22.DE07').answer.first().value=false"
+                            }
+                        }
+                    ],
+                    "linkId": "fastbreathing-False",
+                    "text": "No Fast Breathing",
+                    "type": "display",
+                    "required": false,
+                    "repeats": false,
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "fastbreathing-False-help",
+                            "text": "The number of breaths for <b>\u2018fast breathing\u2019 depends on the child\u2019s age.</b>   </p>\n\n\t<ul>\n\t\t<li>Under 2 months: More than 60 breaths per minute(*)</li>\n\t\t<li>2 to 11 months: More than 50 breaths per minute</li>\n\t\t<li>12 to 59 months: More than 40 breaths per minute</li>\n\t</ul>\n\n\t<p>*In young infants, a second measurement should be taken to confirm, unless there is already another sign of possible serious bacterial infection",
                             "type": "display"
                         }
                     ]
@@ -665,7 +720,7 @@
                         }
                     ],
                     "linkId": "EmCare.B10S2.DE03-help",
-                    "text": "<b><span class=\"caps\">NORMAL</span>:</b> When child breaths <b>IN,</b> chest wall moves <b><span class=\"caps\">OUT</span></b><br />\n<b><span class=\"caps\">CHEST</span> <span class=\"caps\">INDRAWING</span>:</b> When child breaths <b>IN,</b> chest wall moves <b>IN</b></p>\n\n\t<p>Chest indrawing occurs when the child needs to make a greater effort than normal to breathe in. <b>You will look for chest indrawing when the child breathes IN.</b></p>\n\n\t<p>In normal breathing, the whole chest wall (upper and lower) and the abdomen move <span class=\"caps\">OUT</span> when the child breathes IN. <b>The child has chest indrawing if the lower chest wall (lower ribs) goes IN when the child breathes IN.</b>",
+                    "text": "<b><span class=\"caps\">NORMAL</span>:</b> When child breaths <b>IN,</b> chest wall moves <b><span class=\"caps\">OUT</span></b><br />\n<b>Chest Indrawing:</b> When child breaths <b>IN,</b> chest wall moves <b>IN</b></p>\n\n\t<p>Chest Indrawing occurs when the child needs to make a greater effort than normal to breathe in. <b>You will look for Chest Indrawing when the child breathes IN.</b></p>\n\n\t<p>In normal breathing, the whole chest wall (upper and lower) and the abdomen move <span class=\"caps\">OUT</span> when the child breathes IN. <b>The child has Chest Indrawing if the lower chest wall (lower ribs) goes IN when the child breathes IN.</b>",
                     "type": "display"
                 }
             ]
@@ -1057,7 +1112,7 @@
                         }
                     ],
                     "linkId": "EmCare.B11S2.DE06-help",
-                    "text": "A child is classified as restless and irritable if s/he is restless and irritable all the time or every time s/he is touched and handled. If an infant or child is calm when breastfeeding but again restless and irritable when he stops breastfeeding, s/he has the sign restless and irritable. Many children are upset just because they are in the clinic. Usually these children can be consoled and calmed, and do not have this sign.",
+                    "text": "A child is classified as Restless and Irritable if s/he is Restless and Irritable all the time or every time s/he is touched and handled. If an infant or child is calm when breastfeeding but again Restless and Irritable when he stops breastfeeding, s/he has the sign Restless and Irritable. Many children are upset just because they are in the clinic. Usually these children can be consoled and calmed, and do not have this sign.",
                     "type": "display"
                 }
             ]
@@ -1250,7 +1305,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
-                        "expression": "%resource.repeat(item).where(linkId='Ear Problem').answer.first().value = true"
+                        "expression": "%resource.repeat(item).where(linkId='Ear problem').answer.first().value = true"
                     }
                 }
             ],
@@ -1290,7 +1345,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
-                        "expression": "%resource.repeat(item).where(linkId='Ear Problem').answer.first().value = true"
+                        "expression": "%resource.repeat(item).where(linkId='Ear problem').answer.first().value = true"
                     }
                 }
             ],
@@ -1298,27 +1353,7 @@
             "text": "Pus Seen Draining from the Ear",
             "type": "boolean",
             "required": true,
-            "repeats": false,
-            "item": [
-                {
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                            "valueCodeableConcept": {
-                                "coding": [
-                                    {
-                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                        "code": "help"
-                                    }
-                                ]
-                            }
-                        }
-                    ],
-                    "linkId": "EmCare.B13S2.DE02-help",
-                    "text": "Look inside the child\u2019s ear to see if pus is draining. That is a sign of infection, even if the child is not feeling any pain. Draining pus is a sign of infection",
-                    "type": "display"
-                }
-            ]
+            "repeats": false
         },
         {
             "extension": [
@@ -1387,7 +1422,7 @@
                         }
                     ],
                     "linkId": "EmCare.B12S2.DE01-help",
-                    "text": "<b>A stiff neck may be a sign of meningitis, cerebral malaria or another very severe febrile disease. It requires urgent treatment with injectable antibiotics and referral to a hospital.</b><br />\n<b><span class=\"caps\">WATCH</span> <span class=\"caps\">THE</span> <span class=\"caps\">CHILD</span>:</b> While you talk with the caregiver during the assessment, look to see if the child moves and bends his or her neck easily when looking around. If the child is moving and bending his or her neck, the child does not have a stiff neck.<br />\n<b><span class=\"caps\">TEST</span> <span class=\"caps\">THE</span> <span class=\"caps\">CHILD</span>:</b> If you did not see any movement, or if you are not sure, draw the child\u2019s attention to his or her umbilicus or toes. For example, you can shine a flashlight on the toes or umbilicus or tickle the toes to encourage the child to look down. Look to see if the child can bend his or her neck when looking down at his or her umbilicus or toe<br />\n<b><span class=\"caps\">FEEL</span> <span class=\"caps\">FOR</span> <span class=\"caps\">STIFF</span> <span class=\"caps\">NECK</span>:</b> If you still have not seen the child bend his or her neck himself, ask the caregiver to help you lay the child on his or her back. Lean over the child, gently support the child\u2019s back and shoulders with one hand. With the other hand, hold the child\u2019s head. Then carefully bend the head forward towards the child\u2019s chest. If the neck bends easily, the child does not have stiff neck. If the neck feels stiff and there is resistance to bending, the child has a stiff neck. Often a child with a stiff neck will cry when you try to bend the neck.",
+                    "text": "<b>A Stiff neck may be a sign of meningitis, cerebral malaria or another very severe febrile disease. It requires urgent treatment with injectable antibiotics and referral to a hospital.</b><br />\n<b><span class=\"caps\">WATCH</span> <span class=\"caps\">THE</span> <span class=\"caps\">CHILD</span>:</b> While you talk with the caregiver during the assessment, look to see if the child moves and bends his or her neck easily when looking around. If the child is moving and bending his or her neck, the child does not have a Stiff neck.<br />\n<b><span class=\"caps\">TEST</span> <span class=\"caps\">THE</span> <span class=\"caps\">CHILD</span>:</b> If you did not see any movement, or if you are not sure, draw the child\u2019s attention to his or her umbilicus or toes. For example, you can shine a flashlight on the toes or umbilicus or tickle the toes to encourage the child to look down. Look to see if the child can bend his or her neck when looking down at his or her umbilicus or toe<br />\n<b><span class=\"caps\">FEEL</span> <span class=\"caps\">FOR</span> Stiff neck:</b> If you still have not seen the child bend his or her neck himself, ask the caregiver to help you lay the child on his or her back. Lean over the child, gently support the child\u2019s back and shoulders with one hand. With the other hand, hold the child\u2019s head. Then carefully bend the head forward towards the child\u2019s chest. If the neck bends easily, the child does not have Stiff neck. If the neck feels stiff and there is resistance to bending, the child has a Stiff neck. Often a child with a Stiff neck will cry when you try to bend the neck.",
                     "type": "display"
                 }
             ]
@@ -2364,7 +2399,7 @@
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
-                        "code": "EmCare.B14S2.DE47",
+                        "code": "row",
                         "display": "No - Do not add a Skin or Mouth or Eye Problem"
                     }
                 }
@@ -2415,7 +2450,7 @@
                         }
                     ],
                     "linkId": "EmCare.B15S2.DE01-help",
-                    "text": "<span class=\"caps\">LOOK</span> at the skin of the child\u2019s palm. Hold the child\u2019s palm open by grasping it gently from the side. Do not stretch the fingers backwards. This may cause pallor by blocking the blood supply. Compare the colour of the child\u2019s palm with your own palm and with the palms of other children. The child has some palmar pallor if the skin of the child\u2019s palm is pale. The child has severe palmar pallor if the skin of the palm is very pale or so pale that it looks white.",
+                    "text": "<span class=\"caps\">LOOK</span> at the skin of the child\u2019s palm. Hold the child\u2019s palm open by grasping it gently from the side. Do not stretch the fingers backwards. This may cause pallor by blocking the blood supply. Compare the colour of the child\u2019s palm with your own palm and with the palms of other children. The child has some Palmar Pallor if the skin of the child\u2019s palm is pale. The child has severe Palmar Pallor if the skin of the palm is very pale or so pale that it looks white.",
                     "type": "display"
                 }
             ]
@@ -2460,7 +2495,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "respiratory rate profile"
+                        "expression": "Respiratory Rate profile"
                     }
                 }
             ],
@@ -2502,7 +2537,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "respiratory rate second count profile"
+                        "expression": "Respiratory Rate Second Count Profile"
                     }
                 }
             ],
@@ -2525,7 +2560,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "fast breathing profile"
+                        "expression": "Fast Breathing profile"
                     }
                 }
             ],

@@ -1,0 +1,1129 @@
+{
+    "resourceType": "ValueSet",
+    "id": "emcarevalueset",
+    "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/emcarevalueset",
+    "name": "valueset-emcarevalueset",
+    "status": "draft",
+    "experimental": false,
+    "description": "Codes representing possible values for the Provide an estimated age or estimated date of birth element",
+    "immutable": true,
+    "compose": {
+        "include": [
+            {
+                "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+                "concept": [
+                    {
+                        "code": "EmCare.A.DE17",
+                        "display": "Female",
+                        "designation": [
+                            {
+                                "value": "The client is Female"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.A.DE18",
+                        "display": "Male",
+                        "designation": [
+                            {
+                                "value": "The client is Male"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.A.DE19",
+                        "display": "Not Specified",
+                        "designation": [
+                            {
+                                "value": "The client's sex is not specified"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.A.DE13",
+                        "display": "Estimated age in years/months for child (2 months or older)",
+                        "designation": [
+                            {
+                                "value": "The age of the client is estimated based on physical evidence"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.A.DE14",
+                        "display": "Estimated age in weeks/days for young infant (under 2 months old)",
+                        "designation": [
+                            {
+                                "value": "The Caregiver provides the age in weeks/days/hours"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.A.DE15",
+                        "display": "Estimated Date of Birth",
+                        "designation": [
+                            {
+                                "value": "Estimated Date of Birth of the Client"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.A.DE25",
+                        "display": "Mother",
+                        "designation": [
+                            {
+                                "value": "The Caregiver is the client's mother"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.A.DE26",
+                        "display": "Father",
+                        "designation": [
+                            {
+                                "value": "The Caregiver is the client's father"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.A.DE27",
+                        "display": "Sibling",
+                        "designation": [
+                            {
+                                "value": "The Caregiver is the client's sibling"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.A.DE28",
+                        "display": "Extended family",
+                        "designation": [
+                            {
+                                "value": "The Caregiver is the client's extended family"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.A.DE29",
+                        "display": "Legal Guardian",
+                        "designation": [
+                            {
+                                "value": "The Caregiver is the client's legal guardian"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.A.DE30",
+                        "display": "Not Related",
+                        "designation": [
+                            {
+                                "value": "The Caregiver is not related to the client"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.A.DE46",
+                        "display": "Dead",
+                        "designation": [
+                            {
+                                "value": "Biological Mother or Father dead"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.A.DE34",
+                        "display": "Alive",
+                        "designation": [
+                            {
+                                "value": "Biological Mother or Father Alive"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B2.DE02",
+                        "display": "Planned",
+                        "designation": [
+                            {
+                                "value": "The visit is planned"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B2.DE03",
+                        "display": "Unplanned",
+                        "designation": [
+                            {
+                                "value": "The visit is unplanned"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B3.DE03",
+                        "display": "Sick Child",
+                        "designation": [
+                            {
+                                "value": "The client's visit is for a sick child consultation"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B3.DE04",
+                        "display": "Routine visit (Well child/infant)",
+                        "designation": [
+                            {
+                                "value": "The client's visit is for a well child consultation"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "yes",
+                        "display": "Yes",
+                        "designation": [
+                            {
+                                "value": "Yes"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "no",
+                        "display": "No",
+                        "designation": [
+                            {
+                                "value": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.A.DE33",
+                        "display": "Unknown",
+                        "designation": [
+                            {
+                                "value": "Unknown"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "agree",
+                        "display": "Agree",
+                        "designation": [
+                            {
+                                "value": "Agree"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "disagree",
+                        "display": "Disagree",
+                        "designation": [
+                            {
+                                "value": "Disagree"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B3.DE07",
+                        "display": "Initial visit",
+                        "designation": [
+                            {
+                                "value": "The client's visit is for a new consultation"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B3.DE08",
+                        "display": "Follow Up",
+                        "designation": [
+                            {
+                                "value": "The client's visit is for a follow up consultation"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B12S1.DE05",
+                        "display": "7 Days or more",
+                        "designation": [
+                            {
+                                "value": "The client has had fever for 7 days or more"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B12S1.DE04",
+                        "display": "Less than 7 days",
+                        "designation": [
+                            {
+                                "value": "The client has had fever for less than 7 days"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B10S1.DE08",
+                        "display": "14 days or more",
+                        "designation": [
+                            {
+                                "value": "The client has had Ear discharge for 14 days or more"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B10S1.DE07",
+                        "display": "Less than 14 days",
+                        "designation": [
+                            {
+                                "value": "The client has had Ear discharge for less than 14 days"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B10S2.DE09",
+                        "display": "Oxygen saturation not measured",
+                        "designation": [
+                            {
+                                "value": "The clients oxygen saturation was not measured"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B7.DE06",
+                        "display": "Two or more convulsions",
+                        "designation": [
+                            {
+                                "value": "The client is reported to have had two or more convulsions in this illness"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B7.DE05",
+                        "display": "One Convulsion",
+                        "designation": [
+                            {
+                                "value": "The client is reported to have had one convulsion in this illness"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "Low",
+                        "display": "Low",
+                        "designation": [
+                            {
+                                "value": "The client has a low body temperature based on the second  measurement"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "Normal",
+                        "display": "Normal"
+                    },
+                    {
+                        "code": "High",
+                        "display": "High"
+                    },
+                    {
+                        "code": "Very High",
+                        "display": "Very High"
+                    },
+                    {
+                        "code": "EmCare.B20S2.DE03",
+                        "display": "Skin Pinch goes back very slowly (More than 2 seconds)",
+                        "designation": [
+                            {
+                                "value": "The client's skin goes back very slowly after Skin pinch of Abdomen (More than 2 seconds)"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B20S2.DE04",
+                        "display": "Skin Pinch goes back slowly (2 seconds or fewer, but not immediately)",
+                        "designation": [
+                            {
+                                "value": "The client's skin goes back slowly after Skin pinch of Abdomen (2 seconds or fewer, but not immediately)"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B20S2.DE05",
+                        "display": "Skin Pinch goes back Normally (immediately)",
+                        "designation": [
+                            {
+                                "value": "The client's skin goes back normally after Skin pinch of Abdomen (immediately)"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B14S2.DE41",
+                        "display": "Mouth Sores or Mouth Ulcers - Deep and Extensive",
+                        "designation": [
+                            {
+                                "value": "The client has mouth sores or mouth ulcers that are deep and extensive"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B14S2.DE42",
+                        "display": "Mouth Sores or Mouth Ulcers - Not Deep and Extensive",
+                        "designation": [
+                            {
+                                "value": "The client has mouth sores or mouth ulcers that are not deep and extensive"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B14S2.DE40",
+                        "display": "Oral Thrush",
+                        "designation": [
+                            {
+                                "value": "The client has oral thrush"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B14S2.DE39",
+                        "display": "No Oral Sores or Mouth Ulcers",
+                        "designation": [
+                            {
+                                "value": "The client is not reported to have oral sores or mouth ulcers"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B15S2.DE02",
+                        "display": "Severe Palmar Pallor",
+                        "designation": [
+                            {
+                                "value": "The client has severe Palmar Pallor"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B15S2.DE03",
+                        "display": "Some Palmar Pallor",
+                        "designation": [
+                            {
+                                "value": "The client has some Palmar Pallor"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B15S2.DE04",
+                        "display": "No Palmar Pallor",
+                        "designation": [
+                            {
+                                "value": "The client has no Palmar Pallor"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B18S1.DE03",
+                        "display": "Not Able to Feed At All",
+                        "designation": [
+                            {
+                                "value": "The client is reported not to be able to feed at all"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B18S1.DE04",
+                        "display": "Not Feeding Well",
+                        "designation": [
+                            {
+                                "value": "The client is reported to not be Feeding Well"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B18S1.DE05",
+                        "display": "Feeding Well",
+                        "designation": [
+                            {
+                                "value": "The client is reported to be Feeding Well"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B18S2.DE11",
+                        "display": "Moves on his or her own or moves spontaneously or without stimulation",
+                        "designation": [
+                            {
+                                "value": "The client Moves on his or her own or moves spontaneously or without stimulation"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B18S2.DE10",
+                        "display": "Movement only when stimulated but then stops",
+                        "designation": [
+                            {
+                                "value": "The client has movement but only when stimulated and then movement stops"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B18S2.DE09",
+                        "display": "No movement at all",
+                        "designation": [
+                            {
+                                "value": "The client has No movement at all even after stimulation"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B19S2.DE05",
+                        "display": "Within less than 24 hours of birth",
+                        "designation": [
+                            {
+                                "value": "The client's Jaundice appeared less than 24 hours after birth"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B19S2.DE06",
+                        "display": "24 hours or more after birth",
+                        "designation": [
+                            {
+                                "value": "The client's Jaundice appeared 24 hours or more after birth"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B19S2.DE07",
+                        "display": "Unknown when Jaundice first appeared",
+                        "designation": [
+                            {
+                                "value": "The caregiver does not know when the Jaundice first appeared if it is a first visit for jaundice and in the first 3 weeks of life"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B21S2.DE02",
+                        "display": "Very Low Weight for Age",
+                        "designation": [
+                            {
+                                "value": "The client has a very low weight for age (Weight < 2Kg and <7 Days old)"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B21S2.DE03",
+                        "display": "Low Weight for Age",
+                        "designation": [
+                            {
+                                "value": "The client has a low weight for age (derived from a WFA Z Score is < -2)"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B21S2.DE04",
+                        "display": "Normal Weight for Age",
+                        "designation": [
+                            {
+                                "value": "The client is a normal weight for age (derived from a normal WFA Z Score is \u2265 -2"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B21S2.DE28",
+                        "display": "Breastmilk also given",
+                        "designation": [
+                            {
+                                "value": "Breastmilk is also given to the client by the care giver"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B7-B8-B9.DE03",
+                        "display": "End consultation",
+                        "designation": [
+                            {
+                                "value": "The client has not been stabilised and the healthcare worker willend the consultation"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B7-B8-B9.DE02",
+                        "display": "Stabilised, continue consultation",
+                        "designation": [
+                            {
+                                "value": "The client has been stabilised and the healthcare worker will continue the consultation"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B21S1.DE02",
+                        "display": "Mother HIV Positive",
+                        "designation": [
+                            {
+                                "value": "The client's mother is HIV positive"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B21S1.DE03",
+                        "display": "Mother HIV Negative",
+                        "designation": [
+                            {
+                                "value": "The client's mother is HIV negative"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B21S1.DE04",
+                        "display": "Mother HIV Status - Unknown or Not Tested",
+                        "designation": [
+                            {
+                                "value": "The client's mother's HIV Status is unknown or not tested"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B21S1.DE05",
+                        "display": "Mother HIV Status - Decline to answer",
+                        "designation": [
+                            {
+                                "value": "The client's mother has declined to answer regarging HIV Status"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B21S2.DE19",
+                        "display": "Correct and hygienic feed preparation",
+                        "designation": [
+                            {
+                                "value": "The care giver is preparing the milk correctly and hygenically"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B21S2.DE20",
+                        "display": "Incorrect or unhygienic feed preparation",
+                        "designation": [
+                            {
+                                "value": "The care giver is not preparing the milk correctly and hygenically"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B21S2.DE22",
+                        "display": "Cup",
+                        "designation": [
+                            {
+                                "value": "The milk is given to the client using a cup"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B21S2.DE23",
+                        "display": "Bottle",
+                        "designation": [
+                            {
+                                "value": "The milk is given to the client using a bottle"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B21S2.DE26",
+                        "display": "Feeding utensils not cleaned hygienically",
+                        "designation": [
+                            {
+                                "value": "The care giver is not cleaning the feeding utensils hygienically"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B21S2.DE25",
+                        "display": "Feeding utensils cleaned hygienically",
+                        "designation": [
+                            {
+                                "value": "The care giver is cleaning the feeding utensils hygienically"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17.DE06",
+                        "display": "Yes, Date documented, but not here",
+                        "designation": [
+                            {
+                                "value": "The caregiver is able to provide the Vitamin A supplement date but not Today"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17.DE07",
+                        "display": "No, but last dose given less than 1 month ago",
+                        "designation": [
+                            {
+                                "value": "The caregiver is able to tell the healthcare worker that the last dose was given less than 1 month ago"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17.DE08",
+                        "display": "No, but last dose given between 1 and 6 months ago",
+                        "designation": [
+                            {
+                                "value": "The caregiver is able to tell the healthcare worker that the last dose was given between 1 and 5 months ago"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17.DE09",
+                        "display": "No, but last dose given more than 6 months ago",
+                        "designation": [
+                            {
+                                "value": "The caregiver is able to tell the healthcare worker that the last dose was given more than 6 months ago"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17.DE10",
+                        "display": "No, Do not know when last dose was given",
+                        "designation": [
+                            {
+                                "value": "The caregiver is not able to tell the healthcare worker when the last dose was given"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17.DE23",
+                        "display": "High HIV Risk",
+                        "designation": [
+                            {
+                                "value": "The client is in an area of HIV prevalence of high HIV risk."
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17.DE24",
+                        "display": "Low HIV Risk",
+                        "designation": [
+                            {
+                                "value": "The client is in an area of HIV prevalence of low HIV risk."
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17.DE31",
+                        "display": "Child HIV Positive - Virological",
+                        "designation": [
+                            {
+                                "value": "The client is HIV Positive (Virological Test)"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17.DE32",
+                        "display": "Child HIV Positive - Serological",
+                        "designation": [
+                            {
+                                "value": "The client is HIV Positive (Serological Test)"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17.DE33",
+                        "display": "Child HIV Positive - Unknown Type of Test",
+                        "designation": [
+                            {
+                                "value": "The client is HIV Positive (Unknown Type of Test)"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17.DE34",
+                        "display": "Child HIV Negative",
+                        "designation": [
+                            {
+                                "value": "The client is HIV Negative"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17.DE35",
+                        "display": "Child HIV Status - Unknown or Not Tested",
+                        "designation": [
+                            {
+                                "value": "The client's HIV Status is unknown or the client has not been tested"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17.DE36",
+                        "display": "Child HIV Status - Decline to answer",
+                        "designation": [
+                            {
+                                "value": "The client has delined to answer regarding HIV Status"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17.DE46",
+                        "display": "Yes",
+                        "designation": [
+                            {
+                                "value": "The client has received all vaccinations for age"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17.DE47",
+                        "display": "No, incomplete vaccination",
+                        "designation": [
+                            {
+                                "value": "The client has not received all vaccinations for age"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17.DE48",
+                        "display": "No, the child has never received any vaccinations to date",
+                        "designation": [
+                            {
+                                "value": "The client has never received any vaccinations to date"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17.DE49",
+                        "display": "Unknown",
+                        "designation": [
+                            {
+                                "value": "It is not known if the client has received any vaccination"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17.DE51",
+                        "display": "BCG",
+                        "designation": [
+                            {
+                                "value": "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17.DE52",
+                        "display": "OPV",
+                        "designation": [
+                            {
+                                "value": "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17.DE53",
+                        "display": "Hep B",
+                        "designation": [
+                            {
+                                "value": "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17.DE54",
+                        "display": "DPT",
+                        "designation": [
+                            {
+                                "value": "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17.DE55",
+                        "display": "DPT 18 month booster",
+                        "designation": [
+                            {
+                                "value": "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17.DE56",
+                        "display": "HIB",
+                        "designation": [
+                            {
+                                "value": "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17.DE57",
+                        "display": "RTV",
+                        "designation": [
+                            {
+                                "value": "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17.DE58",
+                        "display": "PCV",
+                        "designation": [
+                            {
+                                "value": "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17.DE59",
+                        "display": "PCV Booster 1 for Confirmed HIV Infection",
+                        "designation": [
+                            {
+                                "value": "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17.DE60",
+                        "display": "PCV Booster 2 for Confirmed HIV Infection",
+                        "designation": [
+                            {
+                                "value": "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17.DE61",
+                        "display": "Measles",
+                        "designation": [
+                            {
+                                "value": "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B22.DE09",
+                        "display": "Completely Unable to Drink",
+                        "designation": [
+                            {
+                                "value": "The client is Completely Unable to Drink"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B22.DE10",
+                        "display": "Vomits Immediately / Everything",
+                        "designation": [
+                            {
+                                "value": "The client Vomits Immediately / Everything"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B22.DE11",
+                        "display": "Drinks Poorly",
+                        "designation": [
+                            {
+                                "value": "The client Drinks Poorly"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B22.DE12",
+                        "display": "Drinks Eagerly / Thirstily",
+                        "designation": [
+                            {
+                                "value": "The client Drinks Eagerly / Thirstily"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B22.DE13",
+                        "display": "Drinks Normally",
+                        "designation": [
+                            {
+                                "value": "The client Drinks Normally"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B22.DE24",
+                        "display": "Able to finish RUTF",
+                        "designation": [
+                            {
+                                "value": "The client was able to finish the RUTF (the client was able to finish the minimum amount of RTUF (at least one-third of a packet of RUTF portion (92g) or 3 teaspoons from a pot within 30 minutes)"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B22.DE25",
+                        "display": "Unable to finish RUTF",
+                        "designation": [
+                            {
+                                "value": "The client was unable to finish the RUTF (the client was unable to eat one-third of a packet of RUTF portion (92g) or 3 teaspoons from a pot within 30 minutes)"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B22.DE26",
+                        "display": "RUTF Not Available",
+                        "designation": [
+                            {
+                                "value": "The healthcare worker did not have any RUTF available to carry out the appetite test"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B22.DE37",
+                        "display": "Not well Attached to Breast",
+                        "designation": [
+                            {
+                                "value": "The client is not well attached to breast"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B22.DE38",
+                        "display": "Good Attachment",
+                        "designation": [
+                            {
+                                "value": "The client has a good attachment"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B22.DE39",
+                        "display": "Not Sucking Effectively",
+                        "designation": [
+                            {
+                                "value": "The client is not sucking effectively"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B22.DE40",
+                        "display": "Sucking Effectively",
+                        "designation": [
+                            {
+                                "value": "The client is sucking effectively"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B22.DE75",
+                        "display": "No Species Reported",
+                        "designation": [
+                            {
+                                "value": "The client's Microscopy species result is no species reported"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17S1.DE03",
+                        "display": "Red (congested) throat",
+                        "designation": [
+                            {
+                                "value": "The client has a Red (congested) throat"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17S1.DE04",
+                        "display": "Exudate on Throat",
+                        "designation": [
+                            {
+                                "value": "The client has Exudate on Throat"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17S1.DE05",
+                        "display": "Membrane on throat",
+                        "designation": [
+                            {
+                                "value": "The client has Membrane on throat"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "none",
+                        "display": "None of the listed throat problems observed",
+                        "designation": [
+                            {
+                                "value": "The client has None of the listed throat problems observed"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17S1.DE08",
+                        "display": "Yes, without difficulty",
+                        "designation": [
+                            {
+                                "value": "The client can swallow without difficulty"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17S1.DE09",
+                        "display": "Difficulty in swallowing",
+                        "designation": [
+                            {
+                                "value": "The client has Difficulty in swallowing"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B17S1.DE10",
+                        "display": "Unable to swallow",
+                        "designation": [
+                            {
+                                "value": "The client is Unable to swallow"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B6.DE19",
+                        "display": "Does not appear to be Underweight",
+                        "designation": [
+                            {
+                                "value": "The client is visually assessed for whether underweight by the health care worker and does not appear to be underweight (estimated weight based on height or age would be equivalent to WHZ= 0 / WAZ= 0)"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B6.DE20",
+                        "display": "Appears to be Underweight",
+                        "designation": [
+                            {
+                                "value": "The client is visually assessed for whether underweight by the health care worker and appears to be underweight (as an aide for dosing calculations) (estimated weight based on height or age would be equivalent to WHZ= -1 / WAZ= -1)"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B6.DE21",
+                        "display": "Appears to be Severely Underweight",
+                        "designation": [
+                            {
+                                "value": "The client is visually assessed for whether underweight and appears to be severely underweight (as an aide for dosing calculations) (estimated weight based on height or age would be equivalent to WHZ= -2 / WAZ= -2)"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B15S2.DE10",
+                        "display": "Severe mucous membrane pallor",
+                        "designation": [
+                            {
+                                "value": "The client has severe mucous membrane pallor"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B15S2.DE11",
+                        "display": "Some mucous membrane pallor",
+                        "designation": [
+                            {
+                                "value": "The client has some mucous membrane pallor"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B15S2.DE12",
+                        "display": "No mucous membrane pallor",
+                        "designation": [
+                            {
+                                "value": "The client has no mucous membrane pallor"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

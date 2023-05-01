@@ -55,7 +55,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "danger signs"
+                        "expression": "Danger Signs"
                     }
                 }
             ],
@@ -78,7 +78,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "emcare.b12s1.de01"
+                        "expression": "EmCare.B12S1.DE01"
                     }
                 }
             ],
@@ -97,7 +97,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "ageinmonths"
+                        "expression": "AgeInMonths"
                     }
                 }
             ],
@@ -515,7 +515,7 @@
                         }
                     ],
                     "linkId": "EmCare.B13S1.DE02-help",
-                    "text": "If the carIf the caregiver is not sure that the child has ear pain, ask if the child has been irritable and rubbing his ear. egiver is not sure that the child has ear pain, ask if the child has been irritable and rubbing his ear.",
+                    "text": "If the carIf the caregiver is not sure that the child has Ear pain, ask if the child has been irritable and rubbing his ear. egiver is not sure that the child has Ear pain, ask if the child has been irritable and rubbing his ear.",
                     "type": "display"
                 }
             ]

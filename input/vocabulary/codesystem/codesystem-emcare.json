@@ -140,7 +140,7 @@
         },
         {
             "code": "EmCare.B7.DE08b",
-            "display": "Unconscious or Lethargic",
+            "display": "Specify whether unconscious or lethargic",
             "definition": "The client is unconcious or Lethargic"
         },
         {
@@ -231,7 +231,7 @@
         {
             "code": "EmCare.B6.DE17",
             "display": "MUAC (mm)",
-            "definition": "The client's Mid Upper Arm Circumference in Millimeters (child \u22656 months old)"
+            "definition": "The client's Mid Upper Arm Circumference in Millimeters (child >=6 months old)"
         },
         {
             "code": "EmCare.B6.DE17a",
@@ -251,7 +251,7 @@
         {
             "code": "EmCare.B18S1.DE02",
             "display": "Difficulty with Feeding",
-            "definition": "The client is reported to have difficulty with Feeding"
+            "definition": "The client is reported to have Difficulty with Feeding"
         },
         {
             "code": "EmCare.B11S1.DE01",
@@ -266,12 +266,12 @@
         {
             "code": "EmCare.B18S2.DE07",
             "display": "Severe Chest Indrawing",
-            "definition": "The client has severe chest indrawing"
+            "definition": "The client has Severe Chest Indrawing"
         },
         {
             "code": "EmCare.B18S2.DE08",
             "display": "Movements",
-            "definition": "The health care worker's assessments of the client's movements"
+            "definition": "The health care worker's assessments of the client's Movements"
         },
         {
             "code": "EmCare.B18S2.DE12",
@@ -311,7 +311,7 @@
         {
             "code": "EmCare.B11S2.DE06",
             "display": "Restless and Irritable",
-            "definition": "The client is restless and irritable"
+            "definition": "The client is Restless and Irritable"
         },
         {
             "code": "EmCare.B21S2.DE01",
@@ -449,17 +449,17 @@
         {
             "code": "EmCare.B13S1.DE02",
             "display": "Ear pain",
-            "definition": "The client is reported to have had or has ear pain"
+            "definition": "The client is reported to have had or has Ear pain"
         },
         {
             "code": "EmCare.B13S1.DE03",
             "display": "Ear discharge",
-            "definition": "The client is reported to have or has had ear discharge"
+            "definition": "The client is reported to have or has had Ear discharge"
         },
         {
             "code": "EmCare.B13S1.DE04",
             "display": "Ear discharge for how long?",
-            "definition": "The length of time client has or has had ear discharge"
+            "definition": "The length of time client has or has had Ear discharge"
         },
         {
             "code": "EmCare.B14S1.DE03",
@@ -483,7 +483,7 @@
         {
             "code": "EmCare.B10S2.DE03",
             "display": "Chest Indrawing",
-            "definition": "The client has chest indrawing"
+            "definition": "The client has Chest Indrawing"
         },
         {
             "code": "EmCare.B10S2.DE04",
@@ -523,7 +523,7 @@
         {
             "code": "EmCare.B11S2.DE06",
             "display": "Restless and Irritable",
-            "definition": "The client is restless and irritable"
+            "definition": "The client is Restless and Irritable"
         },
         {
             "code": "EmCare.B17S1.DE01",
@@ -563,7 +563,7 @@
         {
             "code": "EmCare.B12S2.DE01",
             "display": "Stiff neck",
-            "definition": "The client has a stiff neck"
+            "definition": "The client has a Stiff neck"
         },
         {
             "code": "EmCare.B12S2.DE05",
@@ -698,7 +698,7 @@
         {
             "code": "EmCare.B15S2.DE01",
             "display": "Palmar Pallor",
-            "definition": "The client has palmar pallor"
+            "definition": "The client has Palmar Pallor"
         },
         {
             "code": "EmCare.B15S2.DE09",
@@ -718,7 +718,7 @@
         {
             "code": "EmCare.B22.DE14a",
             "display": "Completely Unable to Drink or Vomits Immediately / Everything",
-            "definition": "When  are present when the healthcare worker is Unable to Perform Oral Fluid Test it is assumed that the client is completely unable to drink or vomits immediately / everything"
+            "definition": "When  are present when the healthcare worker is Unable to Perform Oral Fluid Test it is assumed that the client is Completely Unable to Drink or Vomits Immediately / Everything"
         },
         {
             "code": "EmCare.B22.DE15",
@@ -756,18 +756,24 @@
             "definition": "The client has fast breathing - auto-calculated based on the respiratory rate and the age of the client - 60 breaths per minute or more (<2 months) after 2 respiratory rate measurements"
         },
         {
-            "code": "EmCare.B22.DE17",
-            "display": "Inhaled Bronchodilator Trial Results",
-            "definition": "The Inhaled bronchodilator trial test results"
-        },
-        {
             "code": "EmCare.B22.DE22",
             "display": "Inhaled Bronchodilator Trial Not Feasible or Available"
         },
         {
+            "code": "EmCare.B22.DE18",
+            "display": "Chest Indrawing (post inhaled bronchodilator trial)"
+        },
+        {
+            "code": "EmCare.B22.DE19",
+            "display": "Respiratory Rate (post inhaled bronchodilator trial)"
+        },
+        {
+            "code": "EmCare.B22.DE20",
+            "display": "Fast Breathing (post inhaled bronchodilator trial)"
+        },
+        {
             "code": "EmCare.B22.DE21",
-            "display": "No Fast Breathing and No Chest Indrawing (post Inhaled Bronchodilator Trial)",
-            "definition": "The client has no fast breathing and no chest indrawing"
+            "display": "No Fast Breathing and No Chest Indrawing (post Inhaled Bronchodilator Trial)"
         },
         {
             "code": "EmCare.B22.DE27",
@@ -778,21 +784,6 @@
             "code": "EmCare.B22.DE41",
             "display": "Breastfeeding Assessment Not Possible",
             "definition": "The breastfeeding assessment was not possible"
-        },
-        {
-            "code": "EmCare.B22.DE28",
-            "display": "Breastfed in the previous hour",
-            "definition": "The client has breastfed in the previous hour"
-        },
-        {
-            "code": "EmCare.B22.DE29",
-            "display": "Mother able to wait until young infant is willing to breastfeed again",
-            "definition": "The client's mother is able to wait until young infant is willing to breastfeed again"
-        },
-        {
-            "code": "EmCare.B22.DE30",
-            "display": "Mother reports difficulty breastfeeding",
-            "definition": "The client's mother reports that there is difficulty breastfeeding (not observed)"
         },
         {
             "code": "EmCare.B22.DE31",
@@ -836,8 +827,8 @@
         },
         {
             "code": "EmCare.B22.DE47",
-            "display": "Axillary Temperature (second measurement)",
-            "definition": "The client's axillary temperature (second measurement) in degrees Celcius (temperature taken under the armpit)"
+            "display": "Axillary Temperature (second measurement, degrees Celcius)",
+            "definition": "The client's Axillary Temperature (second measurement, degrees Celcius) in degrees Celcius (temperature taken under the armpit)"
         },
         {
             "code": "EmCare.B22.DE46",
@@ -922,7 +913,7 @@
             "definition": "The client has Pneumonia"
         },
         {
-            "code": "EmCare.B23.DE05_l",
+            "code": "EmCare.B23.DE05_l0",
             "display": "with wheezing",
             "definition": "The client has Pneumonia with wheezing"
         },
@@ -937,12 +928,12 @@
             "definition": "The client has Cough or Cold"
         },
         {
-            "code": "EmCare.B23.DE05_l",
+            "code": "EmCare.B23.DE05_l1",
             "display": "with wheezing",
             "definition": "The client has Cough or Cold with wheezing"
         },
         {
-            "code": "EmCare.B23.DE08_l",
+            "code": "EmCare.B23.DE08_l1",
             "display": "with cough or difficulty breathing for 14 days or more or recurrent wheeze",
             "definition": "The client has with cough for more than 14 days or difficulty breathing for more than 14 days or recurrent wheeze"
         },
@@ -1008,7 +999,7 @@
         },
         {
             "code": "EmCare.B23.DE32a_l",
-            "display": "with ear pain or fever"
+            "display": "with Ear pain or fever"
         },
         {
             "code": "EmCare.B23.DE33",
@@ -1103,7 +1094,7 @@
             "display": "with eye involvement"
         },
         {
-            "code": "DL-I-CL1-17",
+            "code": "DL-I-CL1-17XX",
             "display": "with Disseminated Herpes Zoste"
         },
         {
@@ -1192,264 +1183,264 @@
         },
         {
             "code": "EmCare.A.DE17",
-            "display": "female",
+            "display": "Female",
             "definition": "The client is Female"
         },
         {
             "code": "EmCare.A.DE18",
-            "display": "male",
+            "display": "Male",
             "definition": "The client is Male"
         },
         {
             "code": "EmCare.A.DE19",
-            "display": "not specified",
+            "display": "Not Specified",
             "definition": "The client's sex is not specified"
         },
         {
             "code": "EmCare.A.DE13",
-            "display": "estimated age in years/months for child (2 months or older)",
+            "display": "Estimated age in years/months for child (2 months or older)",
             "definition": "The age of the client is estimated based on physical evidence"
         },
         {
             "code": "EmCare.A.DE14",
-            "display": "estimated age in weeks/days for young infant (under 2 months old)",
+            "display": "Estimated age in weeks/days for young infant (under 2 months old)",
             "definition": "The Caregiver provides the age in weeks/days/hours"
         },
         {
             "code": "EmCare.A.DE15",
-            "display": "estimated date of birth",
+            "display": "Estimated Date of Birth",
             "definition": "Estimated Date of Birth of the Client"
         },
         {
             "code": "EmCare.A.DE25",
-            "display": "mother",
+            "display": "Mother",
             "definition": "The Caregiver is the client's mother"
         },
         {
             "code": "EmCare.A.DE26",
-            "display": "father",
+            "display": "Father",
             "definition": "The Caregiver is the client's father"
         },
         {
             "code": "EmCare.A.DE27",
-            "display": "sibling",
+            "display": "Sibling",
             "definition": "The Caregiver is the client's sibling"
         },
         {
             "code": "EmCare.A.DE28",
-            "display": "extended family",
+            "display": "Extended family",
             "definition": "The Caregiver is the client's extended family"
         },
         {
             "code": "EmCare.A.DE29",
-            "display": "legal guardian",
+            "display": "Legal Guardian",
             "definition": "The Caregiver is the client's legal guardian"
         },
         {
             "code": "EmCare.A.DE30",
-            "display": "not related",
+            "display": "Not Related",
             "definition": "The Caregiver is not related to the client"
         },
         {
             "code": "EmCare.A.DE46",
-            "display": "dead",
+            "display": "Dead",
             "definition": "Biological Mother or Father dead"
         },
         {
             "code": "EmCare.A.DE34",
-            "display": "alive",
+            "display": "Alive",
             "definition": "Biological Mother or Father Alive"
         },
         {
             "code": "EmCare.B2.DE02",
-            "display": "planned",
+            "display": "Planned",
             "definition": "The visit is planned"
         },
         {
             "code": "EmCare.B2.DE03",
-            "display": "unplanned",
+            "display": "Unplanned",
             "definition": "The visit is unplanned"
         },
         {
             "code": "EmCare.B3.DE03",
-            "display": "sick child",
+            "display": "Sick Child",
             "definition": "The client's visit is for a sick child consultation"
         },
         {
             "code": "EmCare.B3.DE04",
-            "display": "routine visit (well child/infant)",
+            "display": "Routine visit (Well child/infant)",
             "definition": "The client's visit is for a well child consultation"
         },
         {
             "code": "yes",
-            "display": "yes",
+            "display": "Yes",
             "definition": "Yes"
         },
         {
             "code": "no",
-            "display": "no",
+            "display": "No",
             "definition": "No"
         },
         {
             "code": "EmCare.A.DE33",
-            "display": "unknown",
+            "display": "Unknown",
             "definition": "Unknown"
         },
         {
             "code": "agree",
-            "display": "agree",
+            "display": "Agree",
             "definition": "Agree"
         },
         {
             "code": "disagree",
-            "display": "disagree",
+            "display": "Disagree",
             "definition": "Disagree"
         },
         {
             "code": "EmCare.B3.DE07",
-            "display": "initial visit",
+            "display": "Initial visit",
             "definition": "The client's visit is for a new consultation"
         },
         {
             "code": "EmCare.B3.DE08",
-            "display": "follow up",
+            "display": "Follow Up",
             "definition": "The client's visit is for a follow up consultation"
         },
         {
             "code": "EmCare.B12S1.DE05",
-            "display": "7 days or more",
+            "display": "7 Days or more",
             "definition": "The client has had fever for 7 days or more"
         },
         {
             "code": "EmCare.B12S1.DE04",
-            "display": "less than 7 days",
+            "display": "Less than 7 days",
             "definition": "The client has had fever for less than 7 days"
         },
         {
             "code": "EmCare.B10S1.DE08",
             "display": "14 days or more",
-            "definition": "The client has had ear discharge for 14 days or more"
+            "definition": "The client has had Ear discharge for 14 days or more"
         },
         {
             "code": "EmCare.B10S1.DE07",
-            "display": "less than 14 days",
-            "definition": "The client has had ear discharge for less than 14 days"
+            "display": "Less than 14 days",
+            "definition": "The client has had Ear discharge for less than 14 days"
         },
         {
             "code": "EmCare.B10S2.DE09",
-            "display": "oxygen saturation not measured",
+            "display": "Oxygen saturation not measured",
             "definition": "The clients oxygen saturation was not measured"
         },
         {
             "code": "EmCare.B7.DE06",
-            "display": "two or more convulsions",
+            "display": "Two or more convulsions",
             "definition": "The client is reported to have had two or more convulsions in this illness"
         },
         {
             "code": "EmCare.B7.DE05",
-            "display": "one convulsion",
+            "display": "One Convulsion",
             "definition": "The client is reported to have had one convulsion in this illness"
         },
         {
             "code": "Low",
-            "display": "low",
+            "display": "Low",
             "definition": "The client has a low body temperature based on the second  measurement"
         },
         {
             "code": "Normal",
-            "display": "normal"
+            "display": "Normal"
         },
         {
             "code": "High",
-            "display": "high"
+            "display": "High"
         },
         {
-            "code": "2",
-            "display": "very high"
+            "code": "Very High",
+            "display": "Very High"
         },
         {
             "code": "EmCare.B20S2.DE03",
-            "display": "skin pinch goes back very slowly (more than 2 seconds)",
+            "display": "Skin Pinch goes back very slowly (More than 2 seconds)",
             "definition": "The client's skin goes back very slowly after Skin pinch of Abdomen (More than 2 seconds)"
         },
         {
             "code": "EmCare.B20S2.DE04",
-            "display": "skin pinch goes back slowly (2 seconds or fewer, but not immediately)",
+            "display": "Skin Pinch goes back slowly (2 seconds or fewer, but not immediately)",
             "definition": "The client's skin goes back slowly after Skin pinch of Abdomen (2 seconds or fewer, but not immediately)"
         },
         {
             "code": "EmCare.B20S2.DE05",
-            "display": "skin pinch goes back normally (immediately)",
+            "display": "Skin Pinch goes back Normally (immediately)",
             "definition": "The client's skin goes back normally after Skin pinch of Abdomen (immediately)"
         },
         {
             "code": "EmCare.B14S2.DE41",
-            "display": "mouth sores or mouth ulcers - deep and extensive",
+            "display": "Mouth Sores or Mouth Ulcers - Deep and Extensive",
             "definition": "The client has mouth sores or mouth ulcers that are deep and extensive"
         },
         {
             "code": "EmCare.B14S2.DE42",
-            "display": "mouth sores or mouth ulcers - not deep and extensive",
+            "display": "Mouth Sores or Mouth Ulcers - Not Deep and Extensive",
             "definition": "The client has mouth sores or mouth ulcers that are not deep and extensive"
         },
         {
             "code": "EmCare.B14S2.DE40",
-            "display": "oral thrush",
+            "display": "Oral Thrush",
             "definition": "The client has oral thrush"
         },
         {
             "code": "EmCare.B14S2.DE39",
-            "display": "no oral sores or mouth ulcers",
+            "display": "No Oral Sores or Mouth Ulcers",
             "definition": "The client is not reported to have oral sores or mouth ulcers"
         },
         {
             "code": "EmCare.B15S2.DE02",
-            "display": "severe palmar pallor",
-            "definition": "The client has severe palmar pallor"
+            "display": "Severe Palmar Pallor",
+            "definition": "The client has severe Palmar Pallor"
         },
         {
             "code": "EmCare.B15S2.DE03",
-            "display": "some palmar pallor",
-            "definition": "The client has some palmar pallor"
+            "display": "Some Palmar Pallor",
+            "definition": "The client has some Palmar Pallor"
         },
         {
             "code": "EmCare.B15S2.DE04",
-            "display": "no palmar pallor",
-            "definition": "The client has no palmar pallor"
+            "display": "No Palmar Pallor",
+            "definition": "The client has no Palmar Pallor"
         },
         {
             "code": "EmCare.B18S1.DE03",
-            "display": "not able to feed at all",
+            "display": "Not Able to Feed At All",
             "definition": "The client is reported not to be able to feed at all"
         },
         {
             "code": "EmCare.B18S1.DE04",
-            "display": "not feeding well",
-            "definition": "The client is reported to not be feeding well"
+            "display": "Not Feeding Well",
+            "definition": "The client is reported to not be Feeding Well"
         },
         {
             "code": "EmCare.B18S1.DE05",
-            "display": "feeding well",
-            "definition": "The client is reported to be feeding well"
+            "display": "Feeding Well",
+            "definition": "The client is reported to be Feeding Well"
         },
         {
             "code": "EmCare.B18S2.DE11",
-            "display": "moves on his or her own or moves spontaneously or without stimulation",
-            "definition": "The client moves on his or her own or moves spontaneously or without stimulation"
+            "display": "Moves on his or her own or moves spontaneously or without stimulation",
+            "definition": "The client Moves on his or her own or moves spontaneously or without stimulation"
         },
         {
             "code": "EmCare.B18S2.DE10",
-            "display": "movement only when stimulated but then stops",
+            "display": "Movement only when stimulated but then stops",
             "definition": "The client has movement but only when stimulated and then movement stops"
         },
         {
             "code": "EmCare.B18S2.DE09",
-            "display": "no movement at all",
-            "definition": "The client has no movement at all even after stimulation"
+            "display": "No movement at all",
+            "definition": "The client has No movement at all even after stimulation"
         },
         {
             "code": "EmCare.B19S2.DE05",
-            "display": "within less than 24 hours of birth",
+            "display": "Within less than 24 hours of birth",
             "definition": "The client's Jaundice appeared less than 24 hours after birth"
         },
         {
@@ -1459,488 +1450,488 @@
         },
         {
             "code": "EmCare.B19S2.DE07",
-            "display": "unknown when jaundice first appeared",
+            "display": "Unknown when Jaundice first appeared",
             "definition": "The caregiver does not know when the Jaundice first appeared if it is a first visit for jaundice and in the first 3 weeks of life"
         },
         {
             "code": "EmCare.B21S2.DE02",
-            "display": "very low weight for age",
+            "display": "Very Low Weight for Age",
             "definition": "The client has a very low weight for age (Weight < 2Kg and <7 Days old)"
         },
         {
             "code": "EmCare.B21S2.DE03",
-            "display": "low weight for age",
+            "display": "Low Weight for Age",
             "definition": "The client has a low weight for age (derived from a WFA Z Score is < -2)"
         },
         {
             "code": "EmCare.B21S2.DE04",
-            "display": "normal weight for age",
+            "display": "Normal Weight for Age",
             "definition": "The client is a normal weight for age (derived from a normal WFA Z Score is \u2265 -2"
         },
         {
             "code": "EmCare.B21S2.DE28",
-            "display": "breastmilk also given",
+            "display": "Breastmilk also given",
             "definition": "Breastmilk is also given to the client by the care giver"
         },
         {
             "code": "EmCare.B7-B8-B9.DE03",
-            "display": "end consultation",
+            "display": "End consultation",
             "definition": "The client has not been stabilised and the healthcare worker willend the consultation"
         },
         {
             "code": "EmCare.B7-B8-B9.DE02",
-            "display": "stabilised, continue consultation",
+            "display": "Stabilised, continue consultation",
             "definition": "The client has been stabilised and the healthcare worker will continue the consultation"
         },
         {
             "code": "EmCare.B21S1.DE02",
-            "display": "mother hiv positive",
+            "display": "Mother HIV Positive",
             "definition": "The client's mother is HIV positive"
         },
         {
             "code": "EmCare.B21S1.DE03",
-            "display": "mother hiv negative",
+            "display": "Mother HIV Negative",
             "definition": "The client's mother is HIV negative"
         },
         {
             "code": "EmCare.B21S1.DE04",
-            "display": "mother hiv status - unknown or not tested",
+            "display": "Mother HIV Status - Unknown or Not Tested",
             "definition": "The client's mother's HIV Status is unknown or not tested"
         },
         {
             "code": "EmCare.B21S1.DE05",
-            "display": "mother hiv status - decline to answer",
+            "display": "Mother HIV Status - Decline to answer",
             "definition": "The client's mother has declined to answer regarging HIV Status"
         },
         {
             "code": "EmCare.B21S2.DE19",
-            "display": "correct and hygienic feed preparation",
+            "display": "Correct and hygienic feed preparation",
             "definition": "The care giver is preparing the milk correctly and hygenically"
         },
         {
             "code": "EmCare.B21S2.DE20",
-            "display": "incorrect or unhygienic feed preparation",
+            "display": "Incorrect or unhygienic feed preparation",
             "definition": "The care giver is not preparing the milk correctly and hygenically"
         },
         {
             "code": "EmCare.B21S2.DE22",
-            "display": "cup",
+            "display": "Cup",
             "definition": "The milk is given to the client using a cup"
         },
         {
             "code": "EmCare.B21S2.DE23",
-            "display": "bottle",
+            "display": "Bottle",
             "definition": "The milk is given to the client using a bottle"
         },
         {
             "code": "EmCare.B21S2.DE26",
-            "display": "feeding utensils not cleaned hygienically",
+            "display": "Feeding utensils not cleaned hygienically",
             "definition": "The care giver is not cleaning the feeding utensils hygienically"
         },
         {
             "code": "EmCare.B21S2.DE25",
-            "display": "feeding utensils cleaned hygienically",
+            "display": "Feeding utensils cleaned hygienically",
             "definition": "The care giver is cleaning the feeding utensils hygienically"
         },
         {
             "code": "EmCare.B17.DE06",
-            "display": "yes, date documented, but not here",
+            "display": "Yes, Date documented, but not here",
             "definition": "The caregiver is able to provide the Vitamin A supplement date but not Today"
         },
         {
             "code": "EmCare.B17.DE07",
-            "display": "no, but last dose given less than 1 month ago",
+            "display": "No, but last dose given less than 1 month ago",
             "definition": "The caregiver is able to tell the healthcare worker that the last dose was given less than 1 month ago"
         },
         {
             "code": "EmCare.B17.DE08",
-            "display": "no, but last dose given between 1 and 6 months ago",
+            "display": "No, but last dose given between 1 and 6 months ago",
             "definition": "The caregiver is able to tell the healthcare worker that the last dose was given between 1 and 5 months ago"
         },
         {
             "code": "EmCare.B17.DE09",
-            "display": "no, but last dose given more than 6 months ago",
+            "display": "No, but last dose given more than 6 months ago",
             "definition": "The caregiver is able to tell the healthcare worker that the last dose was given more than 6 months ago"
         },
         {
             "code": "EmCare.B17.DE10",
-            "display": "no, do not know when last dose was given",
+            "display": "No, Do not know when last dose was given",
             "definition": "The caregiver is not able to tell the healthcare worker when the last dose was given"
         },
         {
             "code": "EmCare.B17.DE23",
-            "display": "high hiv risk",
+            "display": "High HIV Risk",
             "definition": "The client is in an area of HIV prevalence of high HIV risk."
         },
         {
             "code": "EmCare.B17.DE24",
-            "display": "low hiv risk",
+            "display": "Low HIV Risk",
             "definition": "The client is in an area of HIV prevalence of low HIV risk."
         },
         {
             "code": "EmCare.B17.DE31",
-            "display": "child hiv positive - virological",
+            "display": "Child HIV Positive - Virological",
             "definition": "The client is HIV Positive (Virological Test)"
         },
         {
             "code": "EmCare.B17.DE32",
-            "display": "child hiv positive - serological",
+            "display": "Child HIV Positive - Serological",
             "definition": "The client is HIV Positive (Serological Test)"
         },
         {
             "code": "EmCare.B17.DE33",
-            "display": "child hiv positive - unknown type of test",
+            "display": "Child HIV Positive - Unknown Type of Test",
             "definition": "The client is HIV Positive (Unknown Type of Test)"
         },
         {
             "code": "EmCare.B17.DE34",
-            "display": "child hiv negative",
+            "display": "Child HIV Negative",
             "definition": "The client is HIV Negative"
         },
         {
             "code": "EmCare.B17.DE35",
-            "display": "child hiv status - unknown or not tested",
+            "display": "Child HIV Status - Unknown or Not Tested",
             "definition": "The client's HIV Status is unknown or the client has not been tested"
         },
         {
             "code": "EmCare.B17.DE36",
-            "display": "child hiv status - decline to answer",
+            "display": "Child HIV Status - Decline to answer",
             "definition": "The client has delined to answer regarding HIV Status"
         },
         {
             "code": "EmCare.B17.DE46",
-            "display": "yes",
+            "display": "Yes",
             "definition": "The client has received all vaccinations for age"
         },
         {
             "code": "EmCare.B17.DE47",
-            "display": "no, incomplete vaccination",
+            "display": "No, incomplete vaccination",
             "definition": "The client has not received all vaccinations for age"
         },
         {
             "code": "EmCare.B17.DE48",
-            "display": "no, the child has never received any vaccinations to date",
+            "display": "No, the child has never received any vaccinations to date",
             "definition": "The client has never received any vaccinations to date"
         },
         {
             "code": "EmCare.B17.DE49",
-            "display": "unknown",
+            "display": "Unknown",
             "definition": "It is not known if the client has received any vaccination"
         },
         {
             "code": "EmCare.B17.DE51",
-            "display": "bcg",
+            "display": "BCG",
             "definition": "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"
         },
         {
             "code": "EmCare.B17.DE52",
-            "display": "opv",
+            "display": "OPV",
             "definition": "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"
         },
         {
             "code": "EmCare.B17.DE53",
-            "display": "hep b",
+            "display": "Hep B",
             "definition": "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"
         },
         {
             "code": "EmCare.B17.DE54",
-            "display": "dpt",
+            "display": "DPT",
             "definition": "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"
         },
         {
             "code": "EmCare.B17.DE55",
-            "display": "dpt 18 month booster",
+            "display": "DPT 18 month booster",
             "definition": "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"
         },
         {
             "code": "EmCare.B17.DE56",
-            "display": "hib",
+            "display": "HIB",
             "definition": "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"
         },
         {
             "code": "EmCare.B17.DE57",
-            "display": "rtv",
+            "display": "RTV",
             "definition": "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"
         },
         {
             "code": "EmCare.B17.DE58",
-            "display": "pcv",
+            "display": "PCV",
             "definition": "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"
         },
         {
             "code": "EmCare.B17.DE59",
-            "display": "pcv booster 1 for confirmed hiv infection",
+            "display": "PCV Booster 1 for Confirmed HIV Infection",
             "definition": "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"
         },
         {
             "code": "EmCare.B17.DE60",
-            "display": "pcv booster 2 for confirmed hiv infection",
+            "display": "PCV Booster 2 for Confirmed HIV Infection",
             "definition": "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"
         },
         {
             "code": "EmCare.B17.DE61",
-            "display": "measles",
+            "display": "Measles",
             "definition": "Data Element to appear so that the healthcare worker can see which vaccines the client should have received for their age"
         },
         {
             "code": "EmCare.B22.DE09",
-            "display": "completely unable to drink",
-            "definition": "The client is completely unable to drink"
+            "display": "Completely Unable to Drink",
+            "definition": "The client is Completely Unable to Drink"
         },
         {
             "code": "EmCare.B22.DE10",
-            "display": "vomits immediately / everything",
-            "definition": "The client vomits immediately / everything"
+            "display": "Vomits Immediately / Everything",
+            "definition": "The client Vomits Immediately / Everything"
         },
         {
             "code": "EmCare.B22.DE11",
-            "display": "drinks poorly",
-            "definition": "The client drinks poorly"
+            "display": "Drinks Poorly",
+            "definition": "The client Drinks Poorly"
         },
         {
             "code": "EmCare.B22.DE12",
-            "display": "drinks eagerly / thirstily",
-            "definition": "The client drinks eagerly / thirstily"
+            "display": "Drinks Eagerly / Thirstily",
+            "definition": "The client Drinks Eagerly / Thirstily"
         },
         {
             "code": "EmCare.B22.DE13",
-            "display": "drinks normally",
-            "definition": "The client drinks normally"
+            "display": "Drinks Normally",
+            "definition": "The client Drinks Normally"
         },
         {
             "code": "EmCare.B22.DE24",
-            "display": "able to finish rutf",
+            "display": "Able to finish RUTF",
             "definition": "The client was able to finish the RUTF (the client was able to finish the minimum amount of RTUF (at least one-third of a packet of RUTF portion (92g) or 3 teaspoons from a pot within 30 minutes)"
         },
         {
             "code": "EmCare.B22.DE25",
-            "display": "unable to finish rutf",
+            "display": "Unable to finish RUTF",
             "definition": "The client was unable to finish the RUTF (the client was unable to eat one-third of a packet of RUTF portion (92g) or 3 teaspoons from a pot within 30 minutes)"
         },
         {
             "code": "EmCare.B22.DE26",
-            "display": "rutf not available",
+            "display": "RUTF Not Available",
             "definition": "The healthcare worker did not have any RUTF available to carry out the appetite test"
         },
         {
             "code": "EmCare.B22.DE37",
-            "display": "not well attached to breast",
+            "display": "Not well Attached to Breast",
             "definition": "The client is not well attached to breast"
         },
         {
             "code": "EmCare.B22.DE38",
-            "display": "good attachment",
+            "display": "Good Attachment",
             "definition": "The client has a good attachment"
         },
         {
             "code": "EmCare.B22.DE39",
-            "display": "not sucking effectively",
+            "display": "Not Sucking Effectively",
             "definition": "The client is not sucking effectively"
         },
         {
             "code": "EmCare.B22.DE40",
-            "display": "sucking effectively",
+            "display": "Sucking Effectively",
             "definition": "The client is sucking effectively"
         },
         {
             "code": "EmCare.B22.DE75",
-            "display": "no species reported",
+            "display": "No Species Reported",
             "definition": "The client's Microscopy species result is no species reported"
         },
         {
             "code": "EmCare.B17S1.DE03",
-            "display": "red (congested) throat",
+            "display": "Red (congested) throat",
             "definition": "The client has a Red (congested) throat"
         },
         {
             "code": "EmCare.B17S1.DE04",
-            "display": "exudate on throat",
+            "display": "Exudate on Throat",
             "definition": "The client has Exudate on Throat"
         },
         {
             "code": "EmCare.B17S1.DE05",
-            "display": "membrane on throat",
+            "display": "Membrane on throat",
             "definition": "The client has Membrane on throat"
         },
         {
             "code": "none",
-            "display": "none of the listed throat problems observed",
+            "display": "None of the listed throat problems observed",
             "definition": "The client has None of the listed throat problems observed"
         },
         {
             "code": "EmCare.B17S1.DE08",
-            "display": "yes, without difficulty",
+            "display": "Yes, without difficulty",
             "definition": "The client can swallow without difficulty"
         },
         {
             "code": "EmCare.B17S1.DE09",
-            "display": "difficulty in swallowing",
+            "display": "Difficulty in swallowing",
             "definition": "The client has Difficulty in swallowing"
         },
         {
             "code": "EmCare.B17S1.DE10",
-            "display": "unable to swallow",
+            "display": "Unable to swallow",
             "definition": "The client is Unable to swallow"
         },
         {
             "code": "EmCare.B6.DE19",
-            "display": "does not appear to be underweight",
+            "display": "Does not appear to be Underweight",
             "definition": "The client is visually assessed for whether underweight by the health care worker and does not appear to be underweight (estimated weight based on height or age would be equivalent to WHZ= 0 / WAZ= 0)"
         },
         {
             "code": "EmCare.B6.DE20",
-            "display": "appears to be underweight",
+            "display": "Appears to be Underweight",
             "definition": "The client is visually assessed for whether underweight by the health care worker and appears to be underweight (as an aide for dosing calculations) (estimated weight based on height or age would be equivalent to WHZ= -1 / WAZ= -1)"
         },
         {
             "code": "EmCare.B6.DE21",
-            "display": "appears to be severely underweight",
+            "display": "Appears to be Severely Underweight",
             "definition": "The client is visually assessed for whether underweight and appears to be severely underweight (as an aide for dosing calculations) (estimated weight based on height or age would be equivalent to WHZ= -2 / WAZ= -2)"
         },
         {
             "code": "EmCare.B15S2.DE10",
-            "display": "severe mucous membrane pallor",
+            "display": "Severe mucous membrane pallor",
             "definition": "The client has severe mucous membrane pallor"
         },
         {
             "code": "EmCare.B15S2.DE11",
-            "display": "some mucous membrane pallor",
+            "display": "Some mucous membrane pallor",
             "definition": "The client has some mucous membrane pallor"
         },
         {
             "code": "EmCare.B15S2.DE12",
-            "display": "no mucous membrane pallor",
+            "display": "No mucous membrane pallor",
             "definition": "The client has no mucous membrane pallor"
         },
         {
             "code": "EmCare.B14S2.DE07",
-            "display": "generalised skin problem",
+            "display": "Generalised Skin Problem",
             "definition": "The client has a generalised skin problem"
         },
         {
             "code": "EmCare.B14S2.DE08",
-            "display": "localised skin problem",
+            "display": "Localised Skin Problem",
             "definition": "The client has a localised skin problem"
         },
         {
             "code": "EmCare.B14S2.DE09",
-            "display": "no problem",
+            "display": "No Problem",
             "definition": "The client does not have a generalised or localised skin problem"
         },
         {
             "code": "EmCare.B14S2.DE18",
-            "display": "papular urticaria or papular pruritic eruptions",
+            "display": "Papular Urticaria or Papular Pruritic Eruptions",
             "definition": "The client has Papular Urticaria or Papular Pruritic Eruptions \n\u2022 Itchy papules at different stages of evolution.\n\u2022 Found on the arms and legs.\n\u2022 Healed lesions are often dark/ hyperpigmented.\n\u2022 The itch is difficult to manage.\n\u2022 Essential to exclude scabies."
         },
         {
             "code": "EmCare.B14S2.DE19",
-            "display": "ringworm (tinea)",
+            "display": "Ringworm (Tinea)",
             "definition": "The client has Ringworm (Tinea) - \n\u2022 An itchy circular lesion with a raised edge and fine scaly area.\n\u2022 Scalp lesions may result in loss of hair"
         },
         {
             "code": "EmCare.B14S2.DE21",
-            "display": "scabies",
+            "display": "Scabies",
             "definition": "The client has Scabies -\n\u2022 Intense itching, more severe at night.\n\u2022 Small burrows between fingers, tows, elbow areas and buttocks.\n\u2022 Secondary infection may occur.\n\u2022 Small babies may have vesicles and pustules on the palms and soles and face.\n\u2022 The infestation spreads easily, usually affecting more than one person in the household"
         },
         {
             "code": "EmCare.B14S2.DE22",
-            "display": "chickenpox",
+            "display": "Chickenpox",
             "definition": "The client has Chickenpox - Mild fever preceding the rash.\n\u2022 Rash begins on the trunk and face,\nlater spreads to the arms and legs.\n\u2022 Vesicles appear progressively over days and forms scabs\nafter they rupture.\n\u2022 Contagious from the fever starts until all lesions have\ncrusted.\n\u2022 Usually lasts for about 1 week."
         },
         {
             "code": "EmCare.B14S2.DE23",
-            "display": "herpes zoster",
+            "display": "Herpes Zoster",
             "definition": "The client has Herpes Zoster -  Vesicles in one area on one side of body with intense pain or scars plus shooting pain.\n\u2022 They are uncommon in children except when they are immune-compromised"
         },
         {
             "code": "EmCare.B14S2.DE25",
-            "display": "impetigo",
+            "display": "Impetigo",
             "definition": "The client has Impetigo- Pustules and papules with honey -coloured crusts.\n\u2022 Commonly starts on the face or buttocks, then spreads to the neck, hands, arms and legs."
         },
         {
             "code": "EmCare.B14S2.DE31",
-            "display": "molluscum contagiosum",
+            "display": "Molluscum Contagiosum",
             "definition": "The client has Molluscum Contagiosum -Caused by a poxvirus.\n\u2022 Dome-shaped papules with a central depression\n(umblication).\n\u2022 Most commonly seen on the face and trunk in children"
         },
         {
             "code": "EmCare.B14S2.DE32",
-            "display": "warts",
+            "display": "Warts",
             "definition": "The client has Warts - Appears as papules or nodules with a rough surface.\n\u2022 Seen most often on the hands and fingers, but can be\nfound anywhere on\nthe body."
         },
         {
             "code": "EmCare.B14S2.DE33",
-            "display": "seborrhoeic dermatitis",
+            "display": "Seborrhoeic Dermatitis",
             "definition": "The client has Seborrhoeic Dermatitis - Greasy scales and redness on central face, body folds.\n\u2022 The scalp, face, ears and skin folds (e.g. axillae, groins, under the breasts) are commonly affected."
         },
         {
             "code": "EmCare.B14S2.DE35",
-            "display": "fixed drug reaction",
+            "display": "Fixed Drug Reaction",
             "definition": "The client has Fixed Drug Reaction - One or more dark round or oval skin lesions with central vesicles .\n\u2022 The lesions recur on the same spot, and increase in number with each successive attack"
         },
         {
             "code": "EmCare.B14S2.DE36",
-            "display": "eczema",
+            "display": "Eczema",
             "definition": "The client has Eczema - Erythematous (red), sometimes scaly plaques found on the face, flexures, trunk and extensors.\n\u2022 Yellow pustules which crust indicate\nsecondary bacterial infection."
         },
         {
             "code": "EmCare.B14S2.DE37",
-            "display": "steven johnson syndrome (sjs)",
+            "display": "Steven Johnson Syndrome (SJS)",
             "definition": "The client has Steven Johnson Syndrome (SJS) - Severe and acute reaction due to many drugs, the commonest being cotrimoxazole or nevirapine.\n\u2022 Lesions involve the skin as well as the mucous membranes (e.g. eyes, mouth and genitalia).\n\u2022 May start as widespread red irregular rash with or without blisters. The blisters rupture leaving denuded areas of skin.\n\u2022 May cause difficulty in breathing."
         },
         {
             "code": "EmCare.B14S2.DE44",
-            "display": "skin problem",
+            "display": "Skin Problem",
             "definition": "The health care worker would like to add a skin problem"
         },
         {
             "code": "EmCare.B14S2.DE45",
-            "display": "oral sores or mouth ulcers",
+            "display": "Oral Sores or Mouth Ulcers",
             "definition": "The health care worker would like to add an Oral Sores or Mouth Ulcers problem"
         },
         {
             "code": "EmCare.B14S2.DE46",
-            "display": "eye problem",
+            "display": "Eye Problem",
             "definition": "The health care worker would like to add an Eye problem"
         },
         {
-            "code": "EmCare.B14S2.DE47",
-            "display": "no - do not add a skin or mouth or eye problem",
+            "code": "row",
+            "display": "No - Do not add a Skin or Mouth or Eye Problem",
             "definition": "The healthcare worker would not like to add a Skin or Mouth or Eye Problem"
         },
         {
             "code": "EmCare.B21S2.DE29",
-            "display": "no breastmilk at all",
+            "display": "No Breastmilk at all",
             "definition": "The caregiver does not give the client any breastmilk at all"
         },
         {
             "code": "EmCare.B21S2.DE11",
-            "display": "inappropriate replacement milk",
+            "display": "Inappropriate replacement milk",
             "definition": "The care giver is giving inappropriate replacement milk"
         },
         {
             "code": "EmCare.B21S2.DE10",
-            "display": "appropriate replacement milk",
+            "display": "Appropriate replacement milk",
             "definition": "The care giver is giving appropriate  replacement milk"
         },
         {
             "code": "EmCare.B22.DE18",
-            "display": "chest indrawing (post inhaled bronchodilator trial)"
+            "display": "Chest Indrawing (post inhaled bronchodilator trial)"
         },
         {
             "code": "EmCare.B22.DE19",
-            "display": "respiratory rate (post inhaled bronchodilator trial)"
+            "display": "Respiratory Rate (post inhaled bronchodilator trial)"
         },
         {
             "code": "EmCare.B22.DE20",
-            "display": "fast breathing (post inhaled bronchodilator trial)"
+            "display": "Fast Breathing (post inhaled bronchodilator trial)"
         },
         {
             "code": "EmCare.B22.DE21",
-            "display": "no fast breathing and no chest indrawing (post inhaled bronchodilator trial)"
+            "display": "No Fast Breathing and No Chest Indrawing (post Inhaled Bronchodilator Trial)"
         },
         {
             "code": "EmCare.B22.DE22",
-            "display": "inhaled bronchodilator trial not feasible or available"
+            "display": "Inhaled Bronchodilator Trial Not Feasible or Available"
         }
     ]
 }

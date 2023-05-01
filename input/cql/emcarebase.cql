@@ -3,7 +3,7 @@
 @description: This library is part of the project EmCare Project, its allows standardisation for the observation processing
 */
 
-library emcarebase version '1.0.1.rc12.build.329'
+library emcarebase version '1.0.1.rc12.build.610'
 
 using FHIR version '4.0.1'
 
@@ -32,8 +32,8 @@ define "No":
 define function IsInEncounter(ref FHIR.Reference):
     case
     when encounterid = ref.id then true
-    when ref.identifier is not null and encounterid = ref.identifier.value then true
     when encounterid = Last(Split(ref.reference, '/')) then true
+   // when ref.identifier is not null and id = ref.identifier.id then true
     else false
 end
 
@@ -111,7 +111,15 @@ define function GetObservationDuringEncounter(idlist List<System.Code>):
 */
 
 define function GetObservationDuringEncounter(id System.Code):
+      First([Observation: id ] O
+        where   IsInEncounter(O.encounter) 
+        and O.status in { 'final', 'amended', 'corrected','cancelled'} 
+        sort by issued.value desc) 
+
+  /*
+  this is commented for performance improvement, even if it hides a valid observation if there is an more recent unvalid one
   Coalesce(GetObservationDuringEncounterDone(id ), GetObservationDuringEncounterNotFound(id ))
+  */
 /*
 define function GetObservationDuringEncounterDone(idlist List<System.Code>):
       Last([Observation: idlist ] O
@@ -225,7 +233,7 @@ define function GetHistoricObservationDone(idlist List<System.Code>, nbdays Inte
 define function GetHistoricObservationDone(id System.Code, nbdays Integer):
       First([Observation: id ] O
         where  O.status in { 'final', 'amended', 'corrected'}
-        and (difference in days between O.issued and Today()) < nbdays 
+        and (difference in days between O.issued.value and Today()) < nbdays 
         sort by issued.value desc )
 
 /*
@@ -236,7 +244,7 @@ define function GetHistoricObservationNotfound(idlist List<System.Code>, nbdays 
 define function GetHistoricObservationNotfound(id System.Code, nbdays Integer):
       First([Observation: id] O
         where  O.status in {'cancelled'}
-          and (difference in days between O.issued and Today()) < nbdays 
+          and (difference in days between O.issued.value and Today()) < nbdays 
         sort by issued.value desc)
 // ************************   HasObsHistory ************************/
 
