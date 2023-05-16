@@ -2,14 +2,14 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareb23classificationm version '1.0.1.rc12.build.610'
+library emcareb23classificationm version '1.0.1.rc12.build.681'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.1.rc12.build.610' called Base
-include emcareobservation version '1.0.1.rc12.build.610' called obs
-include emcarevalueset version '1.0.1.rc12.build.610' called val
-include emcarezscore version '1.0.1.rc12.build.610' called Z
-include emcarecombineddataelements version '1.0.1.rc12.build.610' called C
+include emcarebase version '1.0.1.rc12.build.681' called Base
+include emcareobservation version '1.0.1.rc12.build.681' called obs
+include emcarevalueset version '1.0.1.rc12.build.681' called val
+include emcarezscore version '1.0.1.rc12.build.681' called Z
+include emcarecombineddataelements version '1.0.1.rc12.build.681' called C
 
 
 
@@ -39,7 +39,7 @@ define "OBSdefine.EmCare.B18S2.DE07":
     Base.GetObsValue('EmCare.B18S2.DE07')
 
 /* 
-OBSdefine.EmCare.B18S2.DE08 : Movements
+OBSdefine.EmCare.B18S2.DE08 : Infant's Movements
 
 */
 define "OBSdefine.EmCare.B18S2.DE08":
@@ -123,13 +123,6 @@ define "OBSdefine.EmCare.B11S1.DE01":
     Base.GetObsValue('EmCare.B11S1.DE01')
 
 /* 
-OBSdefine.EmCare.B21S1.DE06 : Breastfed
-
-*/
-define "OBSdefine.EmCare.B21S1.DE06":
-    Base.GetObsValue('EmCare.B21S1.DE06')
-
-/* 
 OBSdefine.EmCare.B21S2.DE13 : Sufficient replacement feeds (in 24 hours)
 
 */
@@ -165,6 +158,13 @@ define "OBSdefine.EmCare.B21S2.DE24":
     Base.GetObsValue('EmCare.B21S2.DE24')
 
 /* 
+OBSdefine.EmCare.B21S2.DE09&EmCare.B21S2.DE11 : What milk is being given as a replacement feed?
+
+*/
+define "OBSdefine.EmCare.B21S2.DE09&EmCare.B21S2.DE11":
+    Base.GetObsValue('EmCare.B21S2.DE09&EmCare.B21S2.DE11')
+
+/* 
 OBSdefine.EmCare.B22.DE44 : Difficulty Breastfeeding Observed
 
 */
@@ -193,18 +193,18 @@ define "OBSdefine.EmCare.B21S2.DE08":
     Base.GetObsValue('EmCare.B21S2.DE08')
 
 /* 
-OBSdefine.EmCare.B21S2.DE09&EmCare.B21S2.DE11 : What milk is being given as a replacement feed?
-
-*/
-define "OBSdefine.EmCare.B21S2.DE09&EmCare.B21S2.DE11":
-    Base.GetObsValue('EmCare.B21S2.DE09&EmCare.B21S2.DE11')
-
-/* 
 OBSdefine.EmCare.B21S2.DE30 : Ulcers or White Patches in Mouth
 
 */
 define "OBSdefine.EmCare.B21S2.DE30":
     Base.GetObsValue('EmCare.B21S2.DE30')
+
+/* 
+OBSdefine.EmCare.B21S1.DE06 : Breastfed
+
+*/
+define "OBSdefine.EmCare.B21S1.DE06":
+    Base.GetObsValue('EmCare.B21S1.DE06')
 
 /* 
 ageindays : 
@@ -230,16 +230,16 @@ define "Measured Temperature (second measurement)":
 /* 
 DL-G-CL2-04-08 : 
     (    ("ageinmonths"<2)
-         and ((    "Convulsion(s) in this Illness"  or "Severe Chest Indrawing"  or "Movements" = "Movement only when stimulated but then stops" or "Movements" = "No movement at all"  or "Difficulty with Feeding" = "Not Able to Feed At All" or "Difficulty with Feeding" = "Not Feeding Well")
+         and ((    "Convulsion(s) in this Illness"  or "Severe Chest Indrawing"  or "Infant's Movements" = "Movement only when stimulated but then stops" or "Infant's Movements" = "No movement at all"  or "Difficulty with Feeding" = "Not Able to Feed At All" or "Difficulty with Feeding" = "Not Feeding Well")
          or (    ("Measured Temperature" = "High" or  "Measured Temperature" ="Very High" or "Measured Temperature" = "Low") and  ( "Second Temperature Measurement Not Feasible" = true or "Measured Temperature (second measurement)" != "Normal" ))
          or (    "Measured Temperature" = "Low" and( "Second Temperature Measurement Not Feasible" = true or "Measured Temperature (second measurement)" != "Normal" ))))
      or (    "ageindays"<7 and "Fast Breathing")
 */
 define "DL-G-CL2-04-08":
         (    ("ageinmonths"<2)
-             and ((    "OBSdefine.EmCare.B7.DE03"  or "OBSdefine.EmCare.B18S2.DE07"  or "OBSdefine.EmCare.B18S2.DE08" = val."Movement only when stimulated but then stops" or "OBSdefine.EmCare.B18S2.DE08" = val."No movement at all"  or "OBSdefine.EmCare.B18S1.DE02" = val."Not Able to Feed At All" or "OBSdefine.EmCare.B18S1.DE02" = val."Not Feeding Well")
-             or (    ("OBSdefine.EmCare.B6.DE01A" = val."High" or  "OBSdefine.EmCare.B6.DE01A" =val."Very High" or "OBSdefine.EmCare.B6.DE01A" = val."Low") and  ( "OBSdefine.EmCare.B22.DE46" = true or "Measured Temperature (second measurement)" != val."Normal" ))
-             or (    "OBSdefine.EmCare.B6.DE01A" = val."Low" and( "OBSdefine.EmCare.B22.DE46" = true or "Measured Temperature (second measurement)" != val."Normal" ))))
+             and ((    "OBSdefine.EmCare.B7.DE03"  or "OBSdefine.EmCare.B18S2.DE07"  or "OBSdefine.EmCare.B18S2.DE08" ~ val."Movement only when stimulated but then stops" or "OBSdefine.EmCare.B18S2.DE08" ~ val."No movement at all"  or "OBSdefine.EmCare.B18S1.DE02" ~ val."Not Able to Feed At All" or "OBSdefine.EmCare.B18S1.DE02" ~ val."Not Feeding Well")
+             or (    ("OBSdefine.EmCare.B6.DE01A" ~ val."High" or  "OBSdefine.EmCare.B6.DE01A" =val."Very High" or "OBSdefine.EmCare.B6.DE01A" ~ val."Low") and  ( "OBSdefine.EmCare.B22.DE46" = true or "Measured Temperature (second measurement)" !~ val."Normal" ))
+             or (    "OBSdefine.EmCare.B6.DE01A" ~ val."Low" and( "OBSdefine.EmCare.B22.DE46" = true or "Measured Temperature (second measurement)" !~ val."Normal" ))))
          or (    "ageindays"<7 and "OBSdefine.EmCare.B22.DE07")
 
 /* 
@@ -251,10 +251,10 @@ define "Possible Serious Bacterial Infection OR Very Severe Disease":
 
 /* 
 DL-G-CL2-10 : 
-"Fast Breathing" = "Yes" and "ageinmonths"<2 and "ageindays">=7
+"Fast Breathing" = "Yes" and "ageinmonths"<2 and "ageindays">=7 and "DL-G-CL2-04-08" = false
 */
 define "DL-G-CL2-10":
-    "OBSdefine.EmCare.B22.DE07" = true and "ageinmonths"<2 and "ageindays">=7
+    "OBSdefine.EmCare.B22.DE07" = true and "ageinmonths"<2 and "ageindays">=7 and "DL-G-CL2-04-08" = false
 
 /* 
 Pneumonia : DL-G-CL2-10
@@ -289,7 +289,7 @@ DL-G-CL2-26 :
 "ageindays"<7  and "Weight Status" = v"Very Low Weight for Age"
 */
 define "DL-G-CL2-26":
-    "ageindays"<7  and "OBSdefine.EmCare.B21S2.DE01" = val."Very Low Weight for Age"
+    "ageindays"<7  and "OBSdefine.EmCare.B21S2.DE01" ~ val."Very Low Weight for Age"
 
 /* 
 DL-G-CL2-13-14 : 
@@ -300,7 +300,7 @@ DL-G-CL2-13-14 :
 */
 define "DL-G-CL2-13-14":
         ("OBSdefine.EmCare.B19S2.DE01" = true)
-         and ((    "ageindays" < 21  and  "OBSdefine.EmCare.B19S2.DE04" = val."Within less than 24 hours of birth")
+         and ((    "ageindays" < 21  and  "OBSdefine.EmCare.B19S2.DE04" ~ val."Within less than 24 hours of birth")
          or (    "ageindays" < 1)
          or (    "ageinmonths"<2 and  "OBSdefine.EmCare.B19S2.DE02" = true))
 
@@ -319,7 +319,7 @@ DL-G-CL2-15-43 :
 */
 define "DL-G-CL2-15-43":
         ("OBSdefine.EmCare.B19S2.DE02" = false)
-         and ((    "ageindays" > 1 and "ageindays" < 21 and "OBSdefine.EmCare.B19S2.DE01" = true and ("OBSdefine.EmCare.B19S2.DE04" = val."24 hours or more after birth"  or "OBSdefine.EmCare.B19S2.DE04" = val."Unknown when Jaundice first appeared"))
+         and ((    "ageindays" > 1 and "ageindays" < 21 and "OBSdefine.EmCare.B19S2.DE01" = true and ("OBSdefine.EmCare.B19S2.DE04" ~ val."24 hours or more after birth"  or "OBSdefine.EmCare.B19S2.DE04" ~ val."Unknown when Jaundice first appeared"))
          or (    "ageindays" < 21  and "OBSdefine.EmCare.B19S2.DE01" = true))
 
 /* 
@@ -372,44 +372,59 @@ define "No Dehydration":
     "DL-G-CL2-25"
 
 /* 
-DL-I-CL2-04-30 : 
-    (    ("Breastfed" = false)
-         and ((    "What milk is being given as a replacement feed?" = "Inappropriate replacement milk"
-            or
-            "Sufficient replacement feeds (in 24 hours)"=false
-            or
-            "Sufficient replacement feeds"=false
-            or
-            "How is the milk prepared?" = "Incorrect or unhygienic feed preparation"
-            or
-            "How is the milk given?" = "Bottle"
-            or
-            "How are the feeding utensils cleaned?" = "Feeding utensils not cleaned hygienically")
-         or (    Base."Biological Mother Vital Status" = "Alive")))
-     or (    "Breastfed" = true and  "Difficulty Breastfeeding Observed" = true  or "Difficulty Breastfeeding Reported" or "Sufficient feeds"=false or "Young Infant receives food or fluids other than breast milk" = false)
+DL-I-CL2-04 : 
+"What milk is being given as a replacement feed?" = "Inappropriate replacement milk"
+or
+"Sufficient replacement feeds (in 24 hours)"=false
+or
+"Sufficient replacement feeds"=false
+or
+"How is the milk prepared?" = "Incorrect or unhygienic feed preparation"
+or
+"How is the milk given?" = "Bottle"
+or
+"How are the feeding utensils cleaned?" = "Feeding utensils not cleaned hygienically"
 */
-define "DL-I-CL2-04-30":
-        (    ("OBSdefine.EmCare.B21S1.DE06" = false)
-             and ((    "OBSdefine.EmCare.B21S2.DE09&EmCare.B21S2.DE11" = true
-                or
-                "OBSdefine.EmCare.B21S2.DE13"=false
-                or
-                "OBSdefine.EmCare.B21S2.DE16"=false
-                or
-                "OBSdefine.EmCare.B21S2.DE18" = val."Incorrect or unhygienic feed preparation"
-                or
-                "OBSdefine.EmCare.B21S2.DE21" = val."Bottle"
-                or
-                "OBSdefine.EmCare.B21S2.DE24" = val."Feeding utensils not cleaned hygienically")
-             or (    Base."Biological Mother Vital Status" = val."Alive")))
-         or (    "OBSdefine.EmCare.B21S1.DE06" = true and  "OBSdefine.EmCare.B22.DE44" = true  or "OBSdefine.EmCare.B22.DE42" or "OBSdefine.EmCare.B21S2.DE06"=false or "OBSdefine.EmCare.B21S2.DE08" = false)
+define "DL-I-CL2-04":
+    "OBSdefine.EmCare.B21S2.DE09&EmCare.B21S2.DE11" = true
+    or
+    "OBSdefine.EmCare.B21S2.DE13"=false
+    or
+    "OBSdefine.EmCare.B21S2.DE16"=false
+    or
+    "OBSdefine.EmCare.B21S2.DE18" ~ val."Incorrect or unhygienic feed preparation"
+    or
+    "OBSdefine.EmCare.B21S2.DE21" ~ val."Bottle"
+    or
+    "OBSdefine.EmCare.B21S2.DE24" ~ val."Feeding utensils not cleaned hygienically"
+
+/* 
+DL-G-CL2-29 : 
+Base."isMotherPrimaryCareGiver"=true
+*/
+define "DL-G-CL2-29":
+    Base."isMotherPrimaryCareGiver"=true
+
+/* 
+DL-G-CL2-30 : 
+"Difficulty Breastfeeding Observed" = true  or "Difficulty Breastfeeding Reported" = true or "Sufficient feeds"=false or "Young Infant receives food or fluids other than breast milk" = false
+*/
+define "DL-G-CL2-30":
+    "OBSdefine.EmCare.B22.DE44" = true  or "OBSdefine.EmCare.B22.DE42" = true or "OBSdefine.EmCare.B21S2.DE06"=false or "OBSdefine.EmCare.B21S2.DE08" = false
+
+/* 
+DL-G-CL2-49 : 
+"Ulcers or White Patches in Mouth" = true
+*/
+define "DL-G-CL2-49":
+    "OBSdefine.EmCare.B21S2.DE30" = true
 
 /* 
 DL-G-CL2-32 : 
 "Weight Status" = "Low Weight for Age"
 */
 define "DL-G-CL2-32":
-    "OBSdefine.EmCare.B21S2.DE01" = val."Low Weight for Age"
+    "OBSdefine.EmCare.B21S2.DE01" ~ val."Low Weight for Age"
 
 /* 
 DL-G-CL2-42 : 
@@ -420,10 +435,16 @@ define "DL-G-CL2-42":
 
 /* 
 DL-I-CL2-04-42 : 
-"DL-G-CL2-32" = true or "DL-G-CL2-42" = true or "DL-I-CL2-04-30" = true
+    (    "Breastfed" = true and "DL-G-CL2-30" = true)
+     or (    "DL-G-CL2-32" = true)
+     or (    "Breastfed" = false and "DL-I-CL2-04" = true)
+     or (    "DL-G-CL2-42" = true)
 */
 define "DL-I-CL2-04-42":
-    "DL-G-CL2-32" = true or "DL-G-CL2-42" = true or "DL-I-CL2-04-30" = true
+        (    "OBSdefine.EmCare.B21S1.DE06" = true and "DL-G-CL2-30" = true)
+         or (    "DL-G-CL2-32" = true)
+         or (    "OBSdefine.EmCare.B21S1.DE06" = false and "DL-I-CL2-04" = true)
+         or (    "DL-G-CL2-42" = true)
 
 /* 
 Feeding Problem and / or Low Weight for Age : DL-I-CL2-04-42
@@ -437,7 +458,7 @@ DL-G-CL2-50 :
 "Weight Status" = v"Normal Weight for Age"  and  "Feeding Problem and / or Low Weight for Age"!= true
 */
 define "DL-G-CL2-50":
-    "OBSdefine.EmCare.B21S2.DE01" = val."Normal Weight for Age"  and  Coalesce("Feeding Problem and / or Low Weight for Age",false)!=true
+    "OBSdefine.EmCare.B21S2.DE01" ~ val."Normal Weight for Age"  and  Coalesce("Feeding Problem and / or Low Weight for Age",false)!=true
 
 /* 
 BackReference : 

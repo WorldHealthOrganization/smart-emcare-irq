@@ -124,7 +124,7 @@
                 }
             ],
             "linkId": "EmCare.A.DE39",
-            "text": "Person/People accompanying child today?",
+            "text": "Is the mother accompanying the child today?",
             "type": "boolean",
             "required": false,
             "repeats": false

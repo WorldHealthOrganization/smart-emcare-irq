@@ -3,7 +3,7 @@
     "id": "emcare.b7.lti-dangersigns",
     "text": {
         "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><pre>map &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcare.b7.lti-dangersigns&quot; = &quot;emcare.b7.lti-dangersigns&quot;\r\n\r\n\r\nuses &quot;http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse&quot; alias 'questionnaireResponse' as source\r\nuses &quot;http://hl7.org/fhir/StructureDefinition/Bundle&quot; alias 'Bundle' as target\r\nuses &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/observation&quot; alias 'Observation' as target\r\nuses &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation&quot; alias 'EmCare Observation' as produced\r\n\r\ngroup bundletrans(source src : questionnaireResponse, target bundle : Bundle) {\r\n  src -&gt; bundle.id = uuid() &quot;id&quot;;\r\n  src -&gt; bundle.type = 'batch' &quot;type&quot;;\r\n  src.item first as item where (linkId = 'EmCare.B7.DE02') and answer.exists() then {\r\n    src -&gt; bundle.entry as entry then {\r\n      src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n      src -&gt; entry.resource = create('Observation') as tgt then {\r\n        src -&gt; tgt then emcareobservationemcareb7de02(src, tgt) &quot;004b4d1e&quot;;\r\n      } &quot;92e7f5f9&quot;;\r\n    } &quot;402826af&quot;;\r\n  } &quot;8c26175a&quot;;\r\n  src.item first as item where (linkId = 'EmCare.B7-B8-B9.DE01') and answer.exists() then {\r\n    src -&gt; bundle.entry as entry then {\r\n      src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n      src -&gt; entry.resource = create('Observation') as tgt then {\r\n        src -&gt; tgt then emcareobservationemcareb7b8b9de01(src, tgt) &quot;ff2fa2ef&quot;;\r\n      } &quot;a8c4cecd&quot;;\r\n    } &quot;cab32791&quot;;\r\n  } &quot;8f0ade51&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as item where (linkId = 'EmCare.B7.DE03') and answer.exists() then {\r\n      src -&gt; bundle.entry as entry then {\r\n        src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n        src -&gt; entry.resource = create('Observation') as tgt then {\r\n          src -&gt; tgt then emcareobservationemcareb7de03(src, tgt) &quot;f2e89805&quot;;\r\n        } &quot;8dded58a&quot;;\r\n      } &quot;6d815194&quot;;\r\n    } &quot;b1580360&quot;;\r\n  } &quot;f9ff931c&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as item where (linkId = 'EmCare.B7.DE08b') and answer.exists() then {\r\n      src -&gt; bundle.entry as entry then {\r\n        src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n        src -&gt; entry.resource = create('Observation') as tgt then {\r\n          src -&gt; tgt then emcareobservationemcareb7de08b(src, tgt) &quot;7c424dce&quot;;\r\n        } &quot;090c71e8&quot;;\r\n      } &quot;366ba7ba&quot;;\r\n    } &quot;65aaf8e5&quot;;\r\n  } &quot;340cad6a&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as item where (linkId = 'EmCare.B7.DE08') and answer.exists() then {\r\n      src -&gt; bundle.entry as entry then {\r\n        src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n        src -&gt; entry.resource = create('Observation') as tgt then {\r\n          src -&gt; tgt then emcareobservationemcareb7de08(src, tgt) &quot;279d6969&quot;;\r\n        } &quot;20cc88b6&quot;;\r\n      } &quot;3f40ba3d&quot;;\r\n    } &quot;350d6fc4&quot;;\r\n  } &quot;eaa550b2&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as item where (linkId = 'EmCare.B7.DE08a') and answer.exists() then {\r\n      src -&gt; bundle.entry as entry then {\r\n        src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n        src -&gt; entry.resource = create('Observation') as tgt then {\r\n          src -&gt; tgt then emcareobservationemcareb7de08a(src, tgt) &quot;d2861aff&quot;;\r\n        } &quot;7be6660a&quot;;\r\n      } &quot;bd06a10d&quot;;\r\n    } &quot;1343a39a&quot;;\r\n  } &quot;d8ac86b0&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as item where (linkId = 'EmCare.B7.DE09') and answer.exists() then {\r\n      src -&gt; bundle.entry as entry then {\r\n        src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n        src -&gt; entry.resource = create('Observation') as tgt then {\r\n          src -&gt; tgt then emcareobservationemcareb7de09(src, tgt) &quot;3f6a9726&quot;;\r\n        } &quot;2c4ac41f&quot;;\r\n      } &quot;98869034&quot;;\r\n    } &quot;0ea146b2&quot;;\r\n  } &quot;dd9b5c52&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as item where (linkId = 'EmCare.B7.DE10') and answer.exists() then {\r\n      src -&gt; bundle.entry as entry then {\r\n        src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n        src -&gt; entry.resource = create('Observation') as tgt then {\r\n          src -&gt; tgt then emcareobservationemcareb7de10(src, tgt) &quot;1fe53b0d&quot;;\r\n        } &quot;0fb952bc&quot;;\r\n      } &quot;980ae740&quot;;\r\n    } &quot;5b813bca&quot;;\r\n  } &quot;492052bb&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as itm2 where linkId = 'EmCare.B22.FluidTest' then {\r\n      itm2.item first as item where (linkId = 'EmCare.B22.DE08') and answer.exists() then {\r\n        src -&gt; bundle.entry as entry then {\r\n          src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n          src -&gt; entry.resource = create('Observation') as tgt then {\r\n            src -&gt; tgt then emcareobservationemcareb22de08(src, tgt) &quot;d34db40c&quot;;\r\n          } &quot;bd8403a6&quot;;\r\n        } &quot;09eb3e1a&quot;;\r\n      } &quot;5b2cdf2b&quot;;\r\n    } &quot;147ec831&quot;;\r\n  } &quot;e1f072a2&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as itm2 where linkId = 'EmCare.B22.FluidTest' then {\r\n      itm2.item first as item where (linkId = 'EmCare.B22.DE14') and answer.exists() then {\r\n        src -&gt; bundle.entry as entry then {\r\n          src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n          src -&gt; entry.resource = create('Observation') as tgt then {\r\n            src -&gt; tgt then emcareobservationemcareb22de14(src, tgt) &quot;128f555c&quot;;\r\n          } &quot;2cba61ee&quot;;\r\n        } &quot;1eb502ac&quot;;\r\n      } &quot;9758fd8e&quot;;\r\n    } &quot;680dcb34&quot;;\r\n  } &quot;8bc21454&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as itm2 where linkId = 'EmCare.B22.FluidTest' then {\r\n      itm2.item first as item where (linkId = 'EmCare.B22.DE14a') and answer.exists() then {\r\n        src -&gt; bundle.entry as entry then {\r\n          src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n          src -&gt; entry.resource = create('Observation') as tgt then {\r\n            src -&gt; tgt then emcareobservationemcareb22de14a(src, tgt) &quot;7b46291c&quot;;\r\n          } &quot;17f1508c&quot;;\r\n        } &quot;64f82f5e&quot;;\r\n      } &quot;d955cd1e&quot;;\r\n    } &quot;29fc59e7&quot;;\r\n  } &quot;5a220c96&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as itm2 where linkId = 'EmCare.B22.FluidTest' then {\r\n      itm2.item first as item where (linkId = 'EmCare.B22.DE15') and answer.exists() then {\r\n        src -&gt; bundle.entry as entry then {\r\n          src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n          src -&gt; entry.resource = create('Observation') as tgt then {\r\n            src -&gt; tgt then emcareobservationemcareb22de15(src, tgt) &quot;0d25d61c&quot;;\r\n          } &quot;49095bbf&quot;;\r\n        } &quot;7ffa5829&quot;;\r\n      } &quot;408d099b&quot;;\r\n    } &quot;f64298f5&quot;;\r\n  } &quot;28f93c51&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as itm2 where linkId = 'EmCare.B22.FluidTest' then {\r\n      itm2.item first as item where (linkId = 'EmCare.B22.DE16') and answer.exists() then {\r\n        src -&gt; bundle.entry as entry then {\r\n          src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n          src -&gt; entry.resource = create('Observation') as tgt then {\r\n            src -&gt; tgt then emcareobservationemcareb22de16(src, tgt) &quot;2bef72fa&quot;;\r\n          } &quot;f426fdde&quot;;\r\n        } &quot;f53bf22c&quot;;\r\n      } &quot;756331ed&quot;;\r\n    } &quot;bc80f5f5&quot;;\r\n  } &quot;0636116b&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb7de02(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareb7de02&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B7.DE02' &quot;code-emcareb7de02&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src.item first as item where (linkId = 'EmCare.B7.DE02') and answer.exists() then {\r\n    item.answer first as a then {\r\n      a where a.value = true -&gt;  tgt.status = 'final',  tgt.value = true &quot;final-emcareb7de02&quot;;\r\n      a where a.value = false -&gt;  tgt.status = 'cancelled',  tgt.value = false &quot;notfound-emcareb7de02&quot;;\r\n    } &quot;bdab9370&quot;;\r\n  } &quot;25c89b41&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb7b8b9de01(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareb7b8b9de01&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B7-B8-B9.DE01' &quot;code-emcareb7b8b9de01&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src.item first as item where (linkId = 'EmCare.B7-B8-B9.DE01') and answer.exists() then {\r\n    item.answer first as a then {\r\n      a.value as val then {\r\n        val where val.code = 'none' -&gt; tgt.status = 'cancelled' &quot;8ab1d7a5&quot;;\r\n        val where val.code != 'none' -&gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = val,  tgt.status = 'final' &quot;a1050460&quot;;\r\n      } &quot;4ca9082e&quot;;\r\n    } &quot;7c587a4b&quot;;\r\n  } &quot;a9969eeb&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb7de03(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareb7de03&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B7.DE03' &quot;code-emcareb7de03&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as item where (linkId = 'EmCare.B7.DE03') and answer.exists() then {\r\n      item.answer first as a then {\r\n        a where a.value = true -&gt;  tgt.status = 'final',  tgt.value = true &quot;final-emcareb7de03&quot;;\r\n        a where a.value = false -&gt;  tgt.status = 'cancelled',  tgt.value = false &quot;notfound-emcareb7de03&quot;;\r\n      } &quot;bdab9370&quot;;\r\n    } &quot;a2c65533&quot;;\r\n  } &quot;06440f2e&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb7de08b(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareb7de08b&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B7.DE08b' &quot;code-emcareb7de08b&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as item where (linkId = 'EmCare.B7.DE08b') and answer.exists() then {\r\n      item.answer first as a then {\r\n        a where a.value = true -&gt;  tgt.status = 'final',  tgt.value = true &quot;final-emcareb7de08b&quot;;\r\n        a where a.value = false -&gt;  tgt.status = 'cancelled',  tgt.value = false &quot;notfound-emcareb7de08b&quot;;\r\n      } &quot;bdab9370&quot;;\r\n    } &quot;9b1cc305&quot;;\r\n  } &quot;5c09828f&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb7de08(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareb7de08&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B7.DE08' &quot;code-emcareb7de08&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as item where (linkId = 'EmCare.B7.DE08') and answer.exists() then {\r\n      item.answer first as a then {\r\n        a where a.value = true -&gt;  tgt.status = 'final',  tgt.value = true &quot;final-emcareb7de08&quot;;\r\n        a where a.value = false -&gt;  tgt.status = 'cancelled',  tgt.value = false &quot;notfound-emcareb7de08&quot;;\r\n      } &quot;bdab9370&quot;;\r\n    } &quot;2bfe418a&quot;;\r\n  } &quot;899ae4be&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb7de08a(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareb7de08a&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B7.DE08a' &quot;code-emcareb7de08a&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as item where (linkId = 'EmCare.B7.DE08a') and answer.exists() then {\r\n      item.answer first as a then {\r\n        a where a.value = true -&gt;  tgt.status = 'final',  tgt.value = true &quot;final-emcareb7de08a&quot;;\r\n        a where a.value = false -&gt;  tgt.status = 'cancelled',  tgt.value = false &quot;notfound-emcareb7de08a&quot;;\r\n      } &quot;bdab9370&quot;;\r\n    } &quot;f01cf4cb&quot;;\r\n  } &quot;dffa204b&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb7de09(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareb7de09&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B7.DE09' &quot;code-emcareb7de09&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as item where (linkId = 'EmCare.B7.DE09') and answer.exists() then {\r\n      item.answer first as a then {\r\n        a where a.value = true -&gt;  tgt.status = 'final',  tgt.value = true &quot;final-emcareb7de09&quot;;\r\n        a where a.value = false -&gt;  tgt.status = 'cancelled',  tgt.value = false &quot;notfound-emcareb7de09&quot;;\r\n      } &quot;bdab9370&quot;;\r\n    } &quot;d2857a7f&quot;;\r\n  } &quot;9311a6c3&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb7de10(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareb7de10&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B7.DE10' &quot;code-emcareb7de10&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as item where (linkId = 'EmCare.B7.DE10') and answer.exists() then {\r\n      item.answer first as a then {\r\n        a where a.value = true -&gt;  tgt.status = 'final',  tgt.value = true &quot;final-emcareb7de10&quot;;\r\n        a where a.value = false -&gt;  tgt.status = 'cancelled',  tgt.value = false &quot;notfound-emcareb7de10&quot;;\r\n      } &quot;bdab9370&quot;;\r\n    } &quot;86a60301&quot;;\r\n  } &quot;d7b8fbb0&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb22de08(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareb22de08&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B22.DE08' &quot;code-emcareb22de08&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as itm2 where linkId = 'EmCare.B22.FluidTest' then {\r\n      itm2.item first as item where (linkId = 'EmCare.B22.DE08') and answer.exists() then {\r\n        item.answer first as a then {\r\n          a.value as val then {\r\n            val where val.code = 'none' -&gt; tgt.status = 'cancelled' &quot;8ab1d7a5&quot;;\r\n            val where val.code != 'none' -&gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = val,  tgt.status = 'final' &quot;a1050460&quot;;\r\n          } &quot;4ca9082e&quot;;\r\n        } &quot;7c587a4b&quot;;\r\n      } &quot;5c3aaa19&quot;;\r\n    } &quot;13ce6ac7&quot;;\r\n  } &quot;77d0e60e&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb22de14(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareb22de14&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B22.DE14' &quot;code-emcareb22de14&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as itm2 where linkId = 'EmCare.B22.FluidTest' then {\r\n      itm2.item first as item where (linkId = 'EmCare.B22.DE14') and answer.exists() then {\r\n        item.answer first as a then {\r\n          a.value as val then {\r\n            val where val.code = 'true' -&gt;  tgt.status = 'final',  tgt.value = true &quot;8a65aaa5&quot;;\r\n          } &quot;26c2c8c7&quot;;\r\n        } &quot;721205d5&quot;;\r\n      } &quot;b72aac92&quot;;\r\n    } &quot;e7d47de7&quot;;\r\n  } &quot;0204726e&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb22de14a(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareb22de14a&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B22.DE14a' &quot;code-emcareb22de14a&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as itm2 where linkId = 'EmCare.B22.FluidTest' then {\r\n      itm2.item first as item where (linkId = 'EmCare.B22.DE14a') and answer.exists() then {\r\n        item.answer first as a then {\r\n          a where a.value = true -&gt;  tgt.status = 'final',  tgt.value = true &quot;final-emcareb22de14a&quot;;\r\n          a where a.value = false -&gt;  tgt.status = 'cancelled',  tgt.value = false &quot;notfound-emcareb22de14a&quot;;\r\n        } &quot;bdab9370&quot;;\r\n      } &quot;120b0bc5&quot;;\r\n    } &quot;ffa20ee2&quot;;\r\n  } &quot;e1505882&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb22de15(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareb22de15&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B22.DE15' &quot;code-emcareb22de15&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as itm2 where linkId = 'EmCare.B22.FluidTest' then {\r\n      itm2.item first as item where (linkId = 'EmCare.B22.DE15') and answer.exists() then {\r\n        item.answer first as a then {\r\n          a where a.value = true -&gt;  tgt.status = 'final',  tgt.value = true &quot;final-emcareb22de15&quot;;\r\n          a where a.value = false -&gt;  tgt.status = 'cancelled',  tgt.value = false &quot;notfound-emcareb22de15&quot;;\r\n        } &quot;bdab9370&quot;;\r\n      } &quot;f886f65c&quot;;\r\n    } &quot;0ff7ff35&quot;;\r\n  } &quot;455546fc&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb22de16(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareb22de16&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B22.DE16' &quot;code-emcareb22de16&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as itm2 where linkId = 'EmCare.B22.FluidTest' then {\r\n      itm2.item first as item where (linkId = 'EmCare.B22.DE16') and answer.exists() then {\r\n        item.answer first as a then {\r\n          a.value as val then {\r\n            val where val.code = 'none' -&gt; tgt.status = 'cancelled' &quot;8ab1d7a5&quot;;\r\n            val where val.code != 'none' -&gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = val,  tgt.status = 'final' &quot;a1050460&quot;;\r\n          } &quot;4ca9082e&quot;;\r\n        } &quot;7c587a4b&quot;;\r\n      } &quot;d9aa1777&quot;;\r\n    } &quot;33da5fe7&quot;;\r\n  } &quot;e9e2ff9b&quot;;\r\n}\r\n\r\n</pre></div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><pre>map &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcare.b7.lti-dangersigns&quot; = &quot;emcare.b7.lti-dangersigns&quot;\r\n\r\n\r\nuses &quot;http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse&quot; alias 'questionnaireResponse' as source\r\nuses &quot;http://hl7.org/fhir/StructureDefinition/Bundle&quot; alias 'Bundle' as target\r\nuses &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/observation&quot; alias 'Observation' as target\r\nuses &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation&quot; alias 'EmCare Observation' as produced\r\n\r\ngroup bundletrans(source src : questionnaireResponse, target bundle : Bundle) {\r\n  src -&gt; bundle.id = uuid() &quot;id&quot;;\r\n  src -&gt; bundle.type = 'batch' &quot;type&quot;;\r\n  src.item first as item where (linkId = 'EmCare.B7.DE02') and answer.exists() then {\r\n    src -&gt; bundle.entry as entry then {\r\n      src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n      src -&gt; entry.resource = create('Observation') as tgt then {\r\n        src -&gt; tgt then emcareobservationemcareb7de02(src, tgt) &quot;004b4d1e&quot;;\r\n      } &quot;92e7f5f9&quot;;\r\n    } &quot;402826af&quot;;\r\n  } &quot;8c26175a&quot;;\r\n  src.item first as item where (linkId = 'EmCare.B7-B8-B9.DE01') and answer.exists() then {\r\n    src -&gt; bundle.entry as entry then {\r\n      src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n      src -&gt; entry.resource = create('Observation') as tgt then {\r\n        src -&gt; tgt then emcareobservationemcareb7b8b9de01(src, tgt) &quot;ff2fa2ef&quot;;\r\n      } &quot;a8c4cecd&quot;;\r\n    } &quot;cab32791&quot;;\r\n  } &quot;8f0ade51&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as item where (linkId = 'EmCare.B7.DE03') and answer.exists() then {\r\n      src -&gt; bundle.entry as entry then {\r\n        src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n        src -&gt; entry.resource = create('Observation') as tgt then {\r\n          src -&gt; tgt then emcareobservationemcareb7de03(src, tgt) &quot;f2e89805&quot;;\r\n        } &quot;8dded58a&quot;;\r\n      } &quot;6d815194&quot;;\r\n    } &quot;b1580360&quot;;\r\n  } &quot;f9ff931c&quot;;\r\n  src where src.item.where(linkId = 'EmCare.B7.DE08b').answer.where(value.code = 'EmCare.B7.DE08') then {\r\n    src.item first as itm1 where linkId = 'stable-child' then {\r\n      itm1.item first as item where (linkId = 'EmCare.B7.DE08b') and answer.exists() then {\r\n        src -&gt; bundle.entry as entry then {\r\n          src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n          src -&gt; entry.resource = create('Observation') as tgt then {\r\n            src then emcareobservationemcareb7de08t(src, tgt) &quot;11bfc58e&quot;;\r\n          } &quot;ab6edbb2&quot;;\r\n        } &quot;6c3673ee&quot;;\r\n      } &quot;0c3d1e74&quot;;\r\n    } &quot;b3dde83d&quot;;\r\n  } &quot;0c4a7645&quot;;\r\n  src where src.item.where(linkId = 'EmCare.B7.DE08b').exists() and src.item.where(linkId = 'EmCare.B7.DE08b').answer.where(value.code = 'EmCare.B7.DE08').empty() then {\r\n    src.item first as itm1 where linkId = 'stable-child' then {\r\n      itm1.item first as item where (linkId = 'EmCare.B7.DE08b') and answer.exists() then {\r\n        src -&gt; bundle.entry as entry then {\r\n          src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n          src -&gt; entry.resource = create('Observation') as tgt then {\r\n            src then emcareobservationemcareb7de08f(src, tgt) &quot;6361e2d2&quot;;\r\n          } &quot;9339d43a&quot;;\r\n        } &quot;92335d88&quot;;\r\n      } &quot;5cb9b39c&quot;;\r\n    } &quot;f2c17891&quot;;\r\n  } &quot;4f74c04f&quot;;\r\n  src where src.item.where(linkId = 'EmCare.B7.DE08b').answer.where(value.code = 'EmCare.B7.DE08a') then {\r\n    src.item first as itm1 where linkId = 'stable-child' then {\r\n      itm1.item first as item where (linkId = 'EmCare.B7.DE08b') and answer.exists() then {\r\n        src -&gt; bundle.entry as entry then {\r\n          src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n          src -&gt; entry.resource = create('Observation') as tgt then {\r\n            src then emcareobservationemcareb7de08at(src, tgt) &quot;6b11f2ee&quot;;\r\n          } &quot;2a3a3cae&quot;;\r\n        } &quot;63bdb8f1&quot;;\r\n      } &quot;a562d801&quot;;\r\n    } &quot;1f8428b3&quot;;\r\n  } &quot;113f4c7c&quot;;\r\n  src where src.item.where(linkId = 'EmCare.B7.DE08b').exists() and src.item.where(linkId = 'EmCare.B7.DE08b').answer.where(value.code = 'EmCare.B7.DE08a').empty() then {\r\n    src.item first as itm1 where linkId = 'stable-child' then {\r\n      itm1.item first as item where (linkId = 'EmCare.B7.DE08b') and answer.exists() then {\r\n        src -&gt; bundle.entry as entry then {\r\n          src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n          src -&gt; entry.resource = create('Observation') as tgt then {\r\n            src then emcareobservationemcareb7de08af(src, tgt) &quot;75f21b88&quot;;\r\n          } &quot;694c7331&quot;;\r\n        } &quot;5bc82000&quot;;\r\n      } &quot;a60cc504&quot;;\r\n    } &quot;77723a8b&quot;;\r\n  } &quot;6b144b3d&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as item where (linkId = 'EmCare.B7.DE09') and answer.exists() then {\r\n      src -&gt; bundle.entry as entry then {\r\n        src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n        src -&gt; entry.resource = create('Observation') as tgt then {\r\n          src -&gt; tgt then emcareobservationemcareb7de09(src, tgt) &quot;3f6a9726&quot;;\r\n        } &quot;2c4ac41f&quot;;\r\n      } &quot;98869034&quot;;\r\n    } &quot;0ea146b2&quot;;\r\n  } &quot;dd9b5c52&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as item where (linkId = 'EmCare.B7.DE10') and answer.exists() then {\r\n      src -&gt; bundle.entry as entry then {\r\n        src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n        src -&gt; entry.resource = create('Observation') as tgt then {\r\n          src -&gt; tgt then emcareobservationemcareb7de10(src, tgt) &quot;1fe53b0d&quot;;\r\n        } &quot;0fb952bc&quot;;\r\n      } &quot;980ae740&quot;;\r\n    } &quot;5b813bca&quot;;\r\n  } &quot;492052bb&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as itm2 where linkId = 'EmCare.B22.FluidTest' then {\r\n      itm2.item first as item where (linkId = 'EmCare.B22.DE08') and answer.exists() then {\r\n        src -&gt; bundle.entry as entry then {\r\n          src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n          src -&gt; entry.resource = create('Observation') as tgt then {\r\n            src -&gt; tgt then emcareobservationemcareb22de08(src, tgt) &quot;d34db40c&quot;;\r\n          } &quot;bd8403a6&quot;;\r\n        } &quot;09eb3e1a&quot;;\r\n      } &quot;5b2cdf2b&quot;;\r\n    } &quot;147ec831&quot;;\r\n  } &quot;e1f072a2&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as itm2 where linkId = 'EmCare.B22.FluidTest' then {\r\n      itm2.item first as item where (linkId = 'EmCare.B22.DE14') and answer.exists() then {\r\n        src -&gt; bundle.entry as entry then {\r\n          src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n          src -&gt; entry.resource = create('Observation') as tgt then {\r\n            src -&gt; tgt then emcareobservationemcareb22de14(src, tgt) &quot;128f555c&quot;;\r\n          } &quot;2cba61ee&quot;;\r\n        } &quot;1eb502ac&quot;;\r\n      } &quot;9758fd8e&quot;;\r\n    } &quot;680dcb34&quot;;\r\n  } &quot;8bc21454&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as itm2 where linkId = 'EmCare.B22.FluidTest' then {\r\n      itm2.item first as item where (linkId = 'EmCare.B22.DE14a') and answer.exists() then {\r\n        src -&gt; bundle.entry as entry then {\r\n          src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n          src -&gt; entry.resource = create('Observation') as tgt then {\r\n            src -&gt; tgt then emcareobservationemcareb22de14a(src, tgt) &quot;7b46291c&quot;;\r\n          } &quot;17f1508c&quot;;\r\n        } &quot;64f82f5e&quot;;\r\n      } &quot;d955cd1e&quot;;\r\n    } &quot;29fc59e7&quot;;\r\n  } &quot;5a220c96&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as itm2 where linkId = 'EmCare.B22.FluidTest' then {\r\n      itm2.item first as item where (linkId = 'EmCare.B22.DE15') and answer.exists() then {\r\n        src -&gt; bundle.entry as entry then {\r\n          src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n          src -&gt; entry.resource = create('Observation') as tgt then {\r\n            src -&gt; tgt then emcareobservationemcareb22de15(src, tgt) &quot;0d25d61c&quot;;\r\n          } &quot;49095bbf&quot;;\r\n        } &quot;7ffa5829&quot;;\r\n      } &quot;408d099b&quot;;\r\n    } &quot;f64298f5&quot;;\r\n  } &quot;28f93c51&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as itm2 where linkId = 'EmCare.B22.FluidTest' then {\r\n      itm2.item first as item where (linkId = 'EmCare.B22.DE16') and answer.exists() then {\r\n        src -&gt; bundle.entry as entry then {\r\n          src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n          src -&gt; entry.resource = create('Observation') as tgt then {\r\n            src -&gt; tgt then emcareobservationemcareb22de16(src, tgt) &quot;2bef72fa&quot;;\r\n          } &quot;f426fdde&quot;;\r\n        } &quot;f53bf22c&quot;;\r\n      } &quot;756331ed&quot;;\r\n    } &quot;bc80f5f5&quot;;\r\n  } &quot;0636116b&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb7de02(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareb7de02&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B7.DE02' &quot;code-emcareb7de02&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src.item first as item where (linkId = 'EmCare.B7.DE02') and answer.exists() then {\r\n    item.answer first as a then {\r\n      a where a.value = true -&gt;  tgt.status = 'final',  tgt.value = true &quot;final-emcareb7de02&quot;;\r\n      a where a.value = false -&gt;  tgt.status = 'cancelled',  tgt.value = false &quot;notfound-emcareb7de02&quot;;\r\n    } &quot;bdab9370&quot;;\r\n  } &quot;25c89b41&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb7b8b9de01(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareb7b8b9de01&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B7-B8-B9.DE01' &quot;code-emcareb7b8b9de01&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src.item first as item where (linkId = 'EmCare.B7-B8-B9.DE01') and answer.exists() then {\r\n    item.answer first as a then {\r\n      a.value as val then {\r\n        val where val.code = 'none' -&gt; tgt.status = 'cancelled' &quot;8ab1d7a5&quot;;\r\n        val where val.code != 'none' -&gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = val,  tgt.status = 'final' &quot;a1050460&quot;;\r\n      } &quot;4ca9082e&quot;;\r\n    } &quot;7c587a4b&quot;;\r\n  } &quot;a9969eeb&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb7de03(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareb7de03&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B7.DE03' &quot;code-emcareb7de03&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as item where (linkId = 'EmCare.B7.DE03') and answer.exists() then {\r\n      item.answer first as a then {\r\n        a where a.value = true -&gt;  tgt.status = 'final',  tgt.value = true &quot;final-emcareb7de03&quot;;\r\n        a where a.value = false -&gt;  tgt.status = 'cancelled',  tgt.value = false &quot;notfound-emcareb7de03&quot;;\r\n      } &quot;bdab9370&quot;;\r\n    } &quot;a2c65533&quot;;\r\n  } &quot;06440f2e&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb7de08t(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareobservationemcareb7de08t&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B7.DE08' &quot;code-emcareobservationemcareb7de08t&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src -&gt;  tgt.status = 'final',  tgt.value = true &quot;e9d639e1&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb7de08f(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareobservationemcareb7de08f&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B7.DE08' &quot;code-emcareobservationemcareb7de08f&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src -&gt;  tgt.status = 'cancelled',  tgt.value = false &quot;f21d6e36&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb7de08at(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareobservationemcareb7de08at&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B7.DE08a' &quot;code-emcareobservationemcareb7de08at&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src -&gt;  tgt.status = 'final',  tgt.value = true &quot;e9d639e1&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb7de08af(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareobservationemcareb7de08af&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B7.DE08a' &quot;code-emcareobservationemcareb7de08af&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src -&gt;  tgt.status = 'cancelled',  tgt.value = false &quot;f21d6e36&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb7de09(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareb7de09&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B7.DE09' &quot;code-emcareb7de09&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as item where (linkId = 'EmCare.B7.DE09') and answer.exists() then {\r\n      item.answer first as a then {\r\n        a where a.value = true -&gt;  tgt.status = 'final',  tgt.value = true &quot;final-emcareb7de09&quot;;\r\n        a where a.value = false -&gt;  tgt.status = 'cancelled',  tgt.value = false &quot;notfound-emcareb7de09&quot;;\r\n      } &quot;bdab9370&quot;;\r\n    } &quot;d2857a7f&quot;;\r\n  } &quot;9311a6c3&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb7de10(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareb7de10&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B7.DE10' &quot;code-emcareb7de10&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as item where (linkId = 'EmCare.B7.DE10') and answer.exists() then {\r\n      item.answer first as a then {\r\n        a where a.value = true -&gt;  tgt.status = 'final',  tgt.value = true &quot;final-emcareb7de10&quot;;\r\n        a where a.value = false -&gt;  tgt.status = 'cancelled',  tgt.value = false &quot;notfound-emcareb7de10&quot;;\r\n      } &quot;bdab9370&quot;;\r\n    } &quot;86a60301&quot;;\r\n  } &quot;d7b8fbb0&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb22de08(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareb22de08&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B22.DE08' &quot;code-emcareb22de08&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as itm2 where linkId = 'EmCare.B22.FluidTest' then {\r\n      itm2.item first as item where (linkId = 'EmCare.B22.DE08') and answer.exists() then {\r\n        item.answer first as a then {\r\n          a.value as val then {\r\n            val where val.code = 'none' -&gt; tgt.status = 'cancelled' &quot;8ab1d7a5&quot;;\r\n            val where val.code != 'none' -&gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = val,  tgt.status = 'final' &quot;a1050460&quot;;\r\n          } &quot;4ca9082e&quot;;\r\n        } &quot;7c587a4b&quot;;\r\n      } &quot;5c3aaa19&quot;;\r\n    } &quot;13ce6ac7&quot;;\r\n  } &quot;77d0e60e&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb22de14(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareb22de14&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B22.DE14' &quot;code-emcareb22de14&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as itm2 where linkId = 'EmCare.B22.FluidTest' then {\r\n      itm2.item first as item where (linkId = 'EmCare.B22.DE14') and answer.exists() then {\r\n        item.answer first as a then {\r\n          a.value as val then {\r\n            val where val.code = 'true' -&gt;  tgt.status = 'final',  tgt.value = true &quot;8a65aaa5&quot;;\r\n          } &quot;26c2c8c7&quot;;\r\n        } &quot;721205d5&quot;;\r\n      } &quot;b72aac92&quot;;\r\n    } &quot;e7d47de7&quot;;\r\n  } &quot;0204726e&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb22de14a(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareb22de14a&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B22.DE14a' &quot;code-emcareb22de14a&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as itm2 where linkId = 'EmCare.B22.FluidTest' then {\r\n      itm2.item first as item where (linkId = 'EmCare.B22.DE14a') and answer.exists() then {\r\n        item.answer first as a then {\r\n          a where a.value = true -&gt;  tgt.status = 'final',  tgt.value = true &quot;final-emcareb22de14a&quot;;\r\n          a where a.value = false -&gt;  tgt.status = 'cancelled',  tgt.value = false &quot;notfound-emcareb22de14a&quot;;\r\n        } &quot;bdab9370&quot;;\r\n      } &quot;120b0bc5&quot;;\r\n    } &quot;ffa20ee2&quot;;\r\n  } &quot;e1505882&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb22de15(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareb22de15&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B22.DE15' &quot;code-emcareb22de15&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as itm2 where linkId = 'EmCare.B22.FluidTest' then {\r\n      itm2.item first as item where (linkId = 'EmCare.B22.DE15') and answer.exists() then {\r\n        item.answer first as a then {\r\n          a where a.value = true -&gt;  tgt.status = 'final',  tgt.value = true &quot;final-emcareb22de15&quot;;\r\n          a where a.value = false -&gt;  tgt.status = 'cancelled',  tgt.value = false &quot;notfound-emcareb22de15&quot;;\r\n        } &quot;bdab9370&quot;;\r\n      } &quot;f886f65c&quot;;\r\n    } &quot;0ff7ff35&quot;;\r\n  } &quot;455546fc&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb22de16(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareb22de16&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B22.DE16' &quot;code-emcareb22de16&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src.item first as itm1 where linkId = 'stable-child' then {\r\n    itm1.item first as itm2 where linkId = 'EmCare.B22.FluidTest' then {\r\n      itm2.item first as item where (linkId = 'EmCare.B22.DE16') and answer.exists() then {\r\n        item.answer first as a then {\r\n          a.value as val then {\r\n            val where val.code = 'none' -&gt; tgt.status = 'cancelled' &quot;8ab1d7a5&quot;;\r\n            val where val.code != 'none' -&gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = val,  tgt.status = 'final' &quot;a1050460&quot;;\r\n          } &quot;4ca9082e&quot;;\r\n        } &quot;7c587a4b&quot;;\r\n      } &quot;d9aa1777&quot;;\r\n    } &quot;33da5fe7&quot;;\r\n  } &quot;e9e2ff9b&quot;;\r\n}\r\n\r\n</pre></div>"
     },
     "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcare.b7.lti-dangersigns",
     "name": "emcare.b7.lti-dangersigns",
@@ -489,47 +489,40 @@
                     ]
                 },
                 {
-                    "name": "340cad6a",
+                    "name": "0c4a7645",
                     "source": [
                         {
                             "context": "src",
-                            "element": "item",
-                            "listMode": "first",
-                            "variable": "itm1",
-                            "condition": "linkId = 'stable-child'"
+                            "condition": "src.item.where(linkId = 'EmCare.B7.DE08b').answer.where(value.code = 'EmCare.B7.DE08')"
                         }
                     ],
                     "rule": [
                         {
-                            "name": "65aaf8e5",
+                            "name": "b3dde83d",
                             "source": [
                                 {
-                                    "context": "itm1",
+                                    "context": "src",
                                     "element": "item",
                                     "listMode": "first",
-                                    "variable": "item",
-                                    "condition": "(linkId = 'EmCare.B7.DE08b') and answer.exists()"
+                                    "variable": "itm1",
+                                    "condition": "linkId = 'stable-child'"
                                 }
                             ],
                             "rule": [
                                 {
-                                    "name": "366ba7ba",
+                                    "name": "0c3d1e74",
                                     "source": [
                                         {
-                                            "context": "src"
-                                        }
-                                    ],
-                                    "target": [
-                                        {
-                                            "context": "bundle",
-                                            "contextType": "variable",
-                                            "element": "entry",
-                                            "variable": "entry"
+                                            "context": "itm1",
+                                            "element": "item",
+                                            "listMode": "first",
+                                            "variable": "item",
+                                            "condition": "(linkId = 'EmCare.B7.DE08b') and answer.exists()"
                                         }
                                     ],
                                     "rule": [
                                         {
-                                            "name": "b50ac4c5",
+                                            "name": "6c3673ee",
                                             "source": [
                                                 {
                                                     "context": "src"
@@ -537,67 +530,15 @@
                                             ],
                                             "target": [
                                                 {
-                                                    "context": "entry",
+                                                    "context": "bundle",
                                                     "contextType": "variable",
-                                                    "element": "request",
-                                                    "variable": "request"
-                                                },
-                                                {
-                                                    "context": "request",
-                                                    "contextType": "variable",
-                                                    "element": "method",
-                                                    "transform": "copy",
-                                                    "parameter": [
-                                                        {
-                                                            "valueString": "POST"
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "contextType": "variable",
-                                                    "variable": "uuid",
-                                                    "transform": "uuid"
-                                                },
-                                                {
-                                                    "context": "request",
-                                                    "contextType": "variable",
-                                                    "element": "url",
-                                                    "transform": "append",
-                                                    "parameter": [
-                                                        {
-                                                            "valueString": "/Observation/"
-                                                        },
-                                                        {
-                                                            "valueId": "uuid"
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "090c71e8",
-                                            "source": [
-                                                {
-                                                    "context": "src"
-                                                }
-                                            ],
-                                            "target": [
-                                                {
-                                                    "context": "entry",
-                                                    "contextType": "variable",
-                                                    "element": "resource",
-                                                    "variable": "tgt",
-                                                    "transform": "create",
-                                                    "parameter": [
-                                                        {
-                                                            "valueString": "Observation"
-                                                        }
-                                                    ]
+                                                    "element": "entry",
+                                                    "variable": "entry"
                                                 }
                                             ],
                                             "rule": [
                                                 {
-                                                    "name": "7c424dce",
+                                                    "name": "b50ac4c5",
                                                     "source": [
                                                         {
                                                             "context": "src"
@@ -605,21 +546,80 @@
                                                     ],
                                                     "target": [
                                                         {
+                                                            "context": "entry",
                                                             "contextType": "variable",
+                                                            "element": "request",
+                                                            "variable": "request"
+                                                        },
+                                                        {
+                                                            "context": "request",
+                                                            "contextType": "variable",
+                                                            "element": "method",
                                                             "transform": "copy",
                                                             "parameter": [
                                                                 {
-                                                                    "valueId": "tgt"
+                                                                    "valueString": "POST"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "contextType": "variable",
+                                                            "variable": "uuid",
+                                                            "transform": "uuid"
+                                                        },
+                                                        {
+                                                            "context": "request",
+                                                            "contextType": "variable",
+                                                            "element": "url",
+                                                            "transform": "append",
+                                                            "parameter": [
+                                                                {
+                                                                    "valueString": "/Observation/"
+                                                                },
+                                                                {
+                                                                    "valueId": "uuid"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "ab6edbb2",
+                                                    "source": [
+                                                        {
+                                                            "context": "src"
+                                                        }
+                                                    ],
+                                                    "target": [
+                                                        {
+                                                            "context": "entry",
+                                                            "contextType": "variable",
+                                                            "element": "resource",
+                                                            "variable": "tgt",
+                                                            "transform": "create",
+                                                            "parameter": [
+                                                                {
+                                                                    "valueString": "Observation"
                                                                 }
                                                             ]
                                                         }
                                                     ],
-                                                    "dependent": [
+                                                    "rule": [
                                                         {
-                                                            "name": "emcareobservationemcareb7de08b",
-                                                            "variable": [
-                                                                "src",
-                                                                "tgt"
+                                                            "name": "11bfc58e",
+                                                            "source": [
+                                                                {
+                                                                    "context": "src"
+                                                                }
+                                                            ],
+                                                            "dependent": [
+                                                                {
+                                                                    "name": "emcareobservationemcareb7de08t",
+                                                                    "variable": [
+                                                                        "src",
+                                                                        "tgt"
+                                                                    ]
+                                                                }
                                                             ]
                                                         }
                                                     ]
@@ -633,47 +633,40 @@
                     ]
                 },
                 {
-                    "name": "eaa550b2",
+                    "name": "4f74c04f",
                     "source": [
                         {
                             "context": "src",
-                            "element": "item",
-                            "listMode": "first",
-                            "variable": "itm1",
-                            "condition": "linkId = 'stable-child'"
+                            "condition": "src.item.where(linkId = 'EmCare.B7.DE08b').exists() and src.item.where(linkId = 'EmCare.B7.DE08b').answer.where(value.code = 'EmCare.B7.DE08').empty()"
                         }
                     ],
                     "rule": [
                         {
-                            "name": "350d6fc4",
+                            "name": "f2c17891",
                             "source": [
                                 {
-                                    "context": "itm1",
+                                    "context": "src",
                                     "element": "item",
                                     "listMode": "first",
-                                    "variable": "item",
-                                    "condition": "(linkId = 'EmCare.B7.DE08') and answer.exists()"
+                                    "variable": "itm1",
+                                    "condition": "linkId = 'stable-child'"
                                 }
                             ],
                             "rule": [
                                 {
-                                    "name": "3f40ba3d",
+                                    "name": "5cb9b39c",
                                     "source": [
                                         {
-                                            "context": "src"
-                                        }
-                                    ],
-                                    "target": [
-                                        {
-                                            "context": "bundle",
-                                            "contextType": "variable",
-                                            "element": "entry",
-                                            "variable": "entry"
+                                            "context": "itm1",
+                                            "element": "item",
+                                            "listMode": "first",
+                                            "variable": "item",
+                                            "condition": "(linkId = 'EmCare.B7.DE08b') and answer.exists()"
                                         }
                                     ],
                                     "rule": [
                                         {
-                                            "name": "b50ac4c5",
+                                            "name": "92335d88",
                                             "source": [
                                                 {
                                                     "context": "src"
@@ -681,67 +674,15 @@
                                             ],
                                             "target": [
                                                 {
-                                                    "context": "entry",
+                                                    "context": "bundle",
                                                     "contextType": "variable",
-                                                    "element": "request",
-                                                    "variable": "request"
-                                                },
-                                                {
-                                                    "context": "request",
-                                                    "contextType": "variable",
-                                                    "element": "method",
-                                                    "transform": "copy",
-                                                    "parameter": [
-                                                        {
-                                                            "valueString": "POST"
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "contextType": "variable",
-                                                    "variable": "uuid",
-                                                    "transform": "uuid"
-                                                },
-                                                {
-                                                    "context": "request",
-                                                    "contextType": "variable",
-                                                    "element": "url",
-                                                    "transform": "append",
-                                                    "parameter": [
-                                                        {
-                                                            "valueString": "/Observation/"
-                                                        },
-                                                        {
-                                                            "valueId": "uuid"
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "20cc88b6",
-                                            "source": [
-                                                {
-                                                    "context": "src"
-                                                }
-                                            ],
-                                            "target": [
-                                                {
-                                                    "context": "entry",
-                                                    "contextType": "variable",
-                                                    "element": "resource",
-                                                    "variable": "tgt",
-                                                    "transform": "create",
-                                                    "parameter": [
-                                                        {
-                                                            "valueString": "Observation"
-                                                        }
-                                                    ]
+                                                    "element": "entry",
+                                                    "variable": "entry"
                                                 }
                                             ],
                                             "rule": [
                                                 {
-                                                    "name": "279d6969",
+                                                    "name": "b50ac4c5",
                                                     "source": [
                                                         {
                                                             "context": "src"
@@ -749,21 +690,80 @@
                                                     ],
                                                     "target": [
                                                         {
+                                                            "context": "entry",
                                                             "contextType": "variable",
+                                                            "element": "request",
+                                                            "variable": "request"
+                                                        },
+                                                        {
+                                                            "context": "request",
+                                                            "contextType": "variable",
+                                                            "element": "method",
                                                             "transform": "copy",
                                                             "parameter": [
                                                                 {
-                                                                    "valueId": "tgt"
+                                                                    "valueString": "POST"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "contextType": "variable",
+                                                            "variable": "uuid",
+                                                            "transform": "uuid"
+                                                        },
+                                                        {
+                                                            "context": "request",
+                                                            "contextType": "variable",
+                                                            "element": "url",
+                                                            "transform": "append",
+                                                            "parameter": [
+                                                                {
+                                                                    "valueString": "/Observation/"
+                                                                },
+                                                                {
+                                                                    "valueId": "uuid"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "9339d43a",
+                                                    "source": [
+                                                        {
+                                                            "context": "src"
+                                                        }
+                                                    ],
+                                                    "target": [
+                                                        {
+                                                            "context": "entry",
+                                                            "contextType": "variable",
+                                                            "element": "resource",
+                                                            "variable": "tgt",
+                                                            "transform": "create",
+                                                            "parameter": [
+                                                                {
+                                                                    "valueString": "Observation"
                                                                 }
                                                             ]
                                                         }
                                                     ],
-                                                    "dependent": [
+                                                    "rule": [
                                                         {
-                                                            "name": "emcareobservationemcareb7de08",
-                                                            "variable": [
-                                                                "src",
-                                                                "tgt"
+                                                            "name": "6361e2d2",
+                                                            "source": [
+                                                                {
+                                                                    "context": "src"
+                                                                }
+                                                            ],
+                                                            "dependent": [
+                                                                {
+                                                                    "name": "emcareobservationemcareb7de08f",
+                                                                    "variable": [
+                                                                        "src",
+                                                                        "tgt"
+                                                                    ]
+                                                                }
                                                             ]
                                                         }
                                                     ]
@@ -777,47 +777,40 @@
                     ]
                 },
                 {
-                    "name": "d8ac86b0",
+                    "name": "113f4c7c",
                     "source": [
                         {
                             "context": "src",
-                            "element": "item",
-                            "listMode": "first",
-                            "variable": "itm1",
-                            "condition": "linkId = 'stable-child'"
+                            "condition": "src.item.where(linkId = 'EmCare.B7.DE08b').answer.where(value.code = 'EmCare.B7.DE08a')"
                         }
                     ],
                     "rule": [
                         {
-                            "name": "1343a39a",
+                            "name": "1f8428b3",
                             "source": [
                                 {
-                                    "context": "itm1",
+                                    "context": "src",
                                     "element": "item",
                                     "listMode": "first",
-                                    "variable": "item",
-                                    "condition": "(linkId = 'EmCare.B7.DE08a') and answer.exists()"
+                                    "variable": "itm1",
+                                    "condition": "linkId = 'stable-child'"
                                 }
                             ],
                             "rule": [
                                 {
-                                    "name": "bd06a10d",
+                                    "name": "a562d801",
                                     "source": [
                                         {
-                                            "context": "src"
-                                        }
-                                    ],
-                                    "target": [
-                                        {
-                                            "context": "bundle",
-                                            "contextType": "variable",
-                                            "element": "entry",
-                                            "variable": "entry"
+                                            "context": "itm1",
+                                            "element": "item",
+                                            "listMode": "first",
+                                            "variable": "item",
+                                            "condition": "(linkId = 'EmCare.B7.DE08b') and answer.exists()"
                                         }
                                     ],
                                     "rule": [
                                         {
-                                            "name": "b50ac4c5",
+                                            "name": "63bdb8f1",
                                             "source": [
                                                 {
                                                     "context": "src"
@@ -825,67 +818,15 @@
                                             ],
                                             "target": [
                                                 {
-                                                    "context": "entry",
+                                                    "context": "bundle",
                                                     "contextType": "variable",
-                                                    "element": "request",
-                                                    "variable": "request"
-                                                },
-                                                {
-                                                    "context": "request",
-                                                    "contextType": "variable",
-                                                    "element": "method",
-                                                    "transform": "copy",
-                                                    "parameter": [
-                                                        {
-                                                            "valueString": "POST"
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "contextType": "variable",
-                                                    "variable": "uuid",
-                                                    "transform": "uuid"
-                                                },
-                                                {
-                                                    "context": "request",
-                                                    "contextType": "variable",
-                                                    "element": "url",
-                                                    "transform": "append",
-                                                    "parameter": [
-                                                        {
-                                                            "valueString": "/Observation/"
-                                                        },
-                                                        {
-                                                            "valueId": "uuid"
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "7be6660a",
-                                            "source": [
-                                                {
-                                                    "context": "src"
-                                                }
-                                            ],
-                                            "target": [
-                                                {
-                                                    "context": "entry",
-                                                    "contextType": "variable",
-                                                    "element": "resource",
-                                                    "variable": "tgt",
-                                                    "transform": "create",
-                                                    "parameter": [
-                                                        {
-                                                            "valueString": "Observation"
-                                                        }
-                                                    ]
+                                                    "element": "entry",
+                                                    "variable": "entry"
                                                 }
                                             ],
                                             "rule": [
                                                 {
-                                                    "name": "d2861aff",
+                                                    "name": "b50ac4c5",
                                                     "source": [
                                                         {
                                                             "context": "src"
@@ -893,21 +834,224 @@
                                                     ],
                                                     "target": [
                                                         {
+                                                            "context": "entry",
                                                             "contextType": "variable",
+                                                            "element": "request",
+                                                            "variable": "request"
+                                                        },
+                                                        {
+                                                            "context": "request",
+                                                            "contextType": "variable",
+                                                            "element": "method",
                                                             "transform": "copy",
                                                             "parameter": [
                                                                 {
-                                                                    "valueId": "tgt"
+                                                                    "valueString": "POST"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "contextType": "variable",
+                                                            "variable": "uuid",
+                                                            "transform": "uuid"
+                                                        },
+                                                        {
+                                                            "context": "request",
+                                                            "contextType": "variable",
+                                                            "element": "url",
+                                                            "transform": "append",
+                                                            "parameter": [
+                                                                {
+                                                                    "valueString": "/Observation/"
+                                                                },
+                                                                {
+                                                                    "valueId": "uuid"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "2a3a3cae",
+                                                    "source": [
+                                                        {
+                                                            "context": "src"
+                                                        }
+                                                    ],
+                                                    "target": [
+                                                        {
+                                                            "context": "entry",
+                                                            "contextType": "variable",
+                                                            "element": "resource",
+                                                            "variable": "tgt",
+                                                            "transform": "create",
+                                                            "parameter": [
+                                                                {
+                                                                    "valueString": "Observation"
                                                                 }
                                                             ]
                                                         }
                                                     ],
-                                                    "dependent": [
+                                                    "rule": [
                                                         {
-                                                            "name": "emcareobservationemcareb7de08a",
-                                                            "variable": [
-                                                                "src",
-                                                                "tgt"
+                                                            "name": "6b11f2ee",
+                                                            "source": [
+                                                                {
+                                                                    "context": "src"
+                                                                }
+                                                            ],
+                                                            "dependent": [
+                                                                {
+                                                                    "name": "emcareobservationemcareb7de08at",
+                                                                    "variable": [
+                                                                        "src",
+                                                                        "tgt"
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "6b144b3d",
+                    "source": [
+                        {
+                            "context": "src",
+                            "condition": "src.item.where(linkId = 'EmCare.B7.DE08b').exists() and src.item.where(linkId = 'EmCare.B7.DE08b').answer.where(value.code = 'EmCare.B7.DE08a').empty()"
+                        }
+                    ],
+                    "rule": [
+                        {
+                            "name": "77723a8b",
+                            "source": [
+                                {
+                                    "context": "src",
+                                    "element": "item",
+                                    "listMode": "first",
+                                    "variable": "itm1",
+                                    "condition": "linkId = 'stable-child'"
+                                }
+                            ],
+                            "rule": [
+                                {
+                                    "name": "a60cc504",
+                                    "source": [
+                                        {
+                                            "context": "itm1",
+                                            "element": "item",
+                                            "listMode": "first",
+                                            "variable": "item",
+                                            "condition": "(linkId = 'EmCare.B7.DE08b') and answer.exists()"
+                                        }
+                                    ],
+                                    "rule": [
+                                        {
+                                            "name": "5bc82000",
+                                            "source": [
+                                                {
+                                                    "context": "src"
+                                                }
+                                            ],
+                                            "target": [
+                                                {
+                                                    "context": "bundle",
+                                                    "contextType": "variable",
+                                                    "element": "entry",
+                                                    "variable": "entry"
+                                                }
+                                            ],
+                                            "rule": [
+                                                {
+                                                    "name": "b50ac4c5",
+                                                    "source": [
+                                                        {
+                                                            "context": "src"
+                                                        }
+                                                    ],
+                                                    "target": [
+                                                        {
+                                                            "context": "entry",
+                                                            "contextType": "variable",
+                                                            "element": "request",
+                                                            "variable": "request"
+                                                        },
+                                                        {
+                                                            "context": "request",
+                                                            "contextType": "variable",
+                                                            "element": "method",
+                                                            "transform": "copy",
+                                                            "parameter": [
+                                                                {
+                                                                    "valueString": "POST"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "contextType": "variable",
+                                                            "variable": "uuid",
+                                                            "transform": "uuid"
+                                                        },
+                                                        {
+                                                            "context": "request",
+                                                            "contextType": "variable",
+                                                            "element": "url",
+                                                            "transform": "append",
+                                                            "parameter": [
+                                                                {
+                                                                    "valueString": "/Observation/"
+                                                                },
+                                                                {
+                                                                    "valueId": "uuid"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "694c7331",
+                                                    "source": [
+                                                        {
+                                                            "context": "src"
+                                                        }
+                                                    ],
+                                                    "target": [
+                                                        {
+                                                            "context": "entry",
+                                                            "contextType": "variable",
+                                                            "element": "resource",
+                                                            "variable": "tgt",
+                                                            "transform": "create",
+                                                            "parameter": [
+                                                                {
+                                                                    "valueString": "Observation"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "rule": [
+                                                        {
+                                                            "name": "75f21b88",
+                                                            "source": [
+                                                                {
+                                                                    "context": "src"
+                                                                }
+                                                            ],
+                                                            "dependent": [
+                                                                {
+                                                                    "name": "emcareobservationemcareb7de08af",
+                                                                    "variable": [
+                                                                        "src",
+                                                                        "tgt"
+                                                                    ]
+                                                                }
                                                             ]
                                                         }
                                                     ]
@@ -3099,7 +3243,7 @@
             ]
         },
         {
-            "name": "emcareobservationemcareb7de08b",
+            "name": "emcareobservationemcareb7de08t",
             "typeMode": "none",
             "input": [
                 {
@@ -3113,7 +3257,7 @@
             ],
             "rule": [
                 {
-                    "name": "id-emcareb7de08b",
+                    "name": "id-emcareobservationemcareb7de08t",
                     "source": [
                         {
                             "context": "src"
@@ -3197,378 +3341,7 @@
                     ]
                 },
                 {
-                    "name": "code-emcareb7de08b",
-                    "source": [
-                        {
-                            "context": "src",
-                            "element": "subject",
-                            "variable": "subject"
-                        }
-                    ],
-                    "target": [
-                        {
-                            "context": "tgt",
-                            "contextType": "variable",
-                            "element": "subject",
-                            "transform": "copy",
-                            "parameter": [
-                                {
-                                    "valueId": "subject"
-                                }
-                            ]
-                        },
-                        {
-                            "context": "tgt",
-                            "contextType": "variable",
-                            "element": "meta",
-                            "variable": "newMeta",
-                            "transform": "create",
-                            "parameter": [
-                                {
-                                    "valueString": "Meta"
-                                }
-                            ]
-                        },
-                        {
-                            "context": "newMeta",
-                            "contextType": "variable",
-                            "element": "profile",
-                            "transform": "copy",
-                            "parameter": [
-                                {
-                                    "valueString": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation"
-                                }
-                            ]
-                        },
-                        {
-                            "context": "tgt",
-                            "contextType": "variable",
-                            "element": "code",
-                            "variable": "concept",
-                            "transform": "create",
-                            "parameter": [
-                                {
-                                    "valueString": "CodeableConcept"
-                                }
-                            ]
-                        },
-                        {
-                            "context": "concept",
-                            "contextType": "variable",
-                            "element": "coding",
-                            "variable": "coding",
-                            "transform": "create",
-                            "parameter": [
-                                {
-                                    "valueString": "Coding"
-                                }
-                            ]
-                        },
-                        {
-                            "context": "coding",
-                            "contextType": "variable",
-                            "element": "system",
-                            "transform": "copy",
-                            "parameter": [
-                                {
-                                    "valueString": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes"
-                                }
-                            ]
-                        },
-                        {
-                            "context": "coding",
-                            "contextType": "variable",
-                            "element": "code",
-                            "transform": "copy",
-                            "parameter": [
-                                {
-                                    "valueString": "EmCare.B7.DE08b"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "aae7a11d",
-                    "source": [
-                        {
-                            "context": "src",
-                            "element": "item",
-                            "variable": "itemtimestamp",
-                            "condition": "linkId = 'timestamp'"
-                        }
-                    ],
-                    "rule": [
-                        {
-                            "name": "7f22f29f",
-                            "source": [
-                                {
-                                    "context": "itemtimestamp",
-                                    "element": "answer",
-                                    "listMode": "first",
-                                    "variable": "atimestamp"
-                                }
-                            ],
-                            "rule": [
-                                {
-                                    "name": "5af77f2c",
-                                    "source": [
-                                        {
-                                            "context": "atimestamp",
-                                            "element": "value",
-                                            "variable": "val"
-                                        }
-                                    ],
-                                    "target": [
-                                        {
-                                            "context": "tgt",
-                                            "contextType": "variable",
-                                            "element": "issued",
-                                            "transform": "copy",
-                                            "parameter": [
-                                                {
-                                                    "valueId": "val"
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "patient",
-                    "source": [
-                        {
-                            "context": "src",
-                            "element": "subject",
-                            "variable": "subject"
-                        }
-                    ],
-                    "target": [
-                        {
-                            "context": "tgt",
-                            "contextType": "variable",
-                            "element": "subject",
-                            "transform": "copy",
-                            "parameter": [
-                                {
-                                    "valueId": "subject"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "5c09828f",
-                    "source": [
-                        {
-                            "context": "src",
-                            "element": "item",
-                            "listMode": "first",
-                            "variable": "itm1",
-                            "condition": "linkId = 'stable-child'"
-                        }
-                    ],
-                    "rule": [
-                        {
-                            "name": "9b1cc305",
-                            "source": [
-                                {
-                                    "context": "itm1",
-                                    "element": "item",
-                                    "listMode": "first",
-                                    "variable": "item",
-                                    "condition": "(linkId = 'EmCare.B7.DE08b') and answer.exists()"
-                                }
-                            ],
-                            "rule": [
-                                {
-                                    "name": "bdab9370",
-                                    "source": [
-                                        {
-                                            "context": "item",
-                                            "element": "answer",
-                                            "listMode": "first",
-                                            "variable": "a"
-                                        }
-                                    ],
-                                    "rule": [
-                                        {
-                                            "name": "final-emcareb7de08b",
-                                            "source": [
-                                                {
-                                                    "context": "a",
-                                                    "condition": "a.value = true"
-                                                }
-                                            ],
-                                            "target": [
-                                                {
-                                                    "context": "tgt",
-                                                    "contextType": "variable",
-                                                    "element": "status",
-                                                    "transform": "copy",
-                                                    "parameter": [
-                                                        {
-                                                            "valueString": "final"
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "context": "tgt",
-                                                    "contextType": "variable",
-                                                    "element": "value",
-                                                    "transform": "copy",
-                                                    "parameter": [
-                                                        {
-                                                            "valueBoolean": true
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "notfound-emcareb7de08b",
-                                            "source": [
-                                                {
-                                                    "context": "a",
-                                                    "condition": "a.value = false"
-                                                }
-                                            ],
-                                            "target": [
-                                                {
-                                                    "context": "tgt",
-                                                    "contextType": "variable",
-                                                    "element": "status",
-                                                    "transform": "copy",
-                                                    "parameter": [
-                                                        {
-                                                            "valueString": "cancelled"
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "context": "tgt",
-                                                    "contextType": "variable",
-                                                    "element": "value",
-                                                    "transform": "copy",
-                                                    "parameter": [
-                                                        {
-                                                            "valueBoolean": false
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "emcareobservationemcareb7de08",
-            "typeMode": "none",
-            "input": [
-                {
-                    "name": "src",
-                    "mode": "source"
-                },
-                {
-                    "name": "tgt",
-                    "mode": "target"
-                }
-            ],
-            "rule": [
-                {
-                    "name": "id-emcareb7de08",
-                    "source": [
-                        {
-                            "context": "src"
-                        }
-                    ],
-                    "target": [
-                        {
-                            "context": "tgt",
-                            "contextType": "variable",
-                            "element": "identifier",
-                            "variable": "CodeID",
-                            "transform": "create",
-                            "parameter": [
-                                {
-                                    "valueString": "Identifier"
-                                }
-                            ]
-                        },
-                        {
-                            "context": "CodeID",
-                            "contextType": "variable",
-                            "element": "system",
-                            "transform": "copy",
-                            "parameter": [
-                                {
-                                    "valueString": "http://hl7.org/fhir/namingsystem-identifier-type"
-                                }
-                            ]
-                        },
-                        {
-                            "context": "CodeID",
-                            "contextType": "variable",
-                            "element": "use",
-                            "transform": "copy",
-                            "parameter": [
-                                {
-                                    "valueString": "official"
-                                }
-                            ]
-                        },
-                        {
-                            "context": "CodeID",
-                            "contextType": "variable",
-                            "element": "value",
-                            "transform": "copy",
-                            "parameter": [
-                                {
-                                    "valueString": "uuid"
-                                }
-                            ]
-                        },
-                        {
-                            "context": "CodeID",
-                            "contextType": "variable",
-                            "element": "id",
-                            "transform": "uuid"
-                        }
-                    ]
-                },
-                {
-                    "name": "35bc6b82",
-                    "source": [
-                        {
-                            "context": "src",
-                            "element": "encounter",
-                            "variable": "encounter"
-                        }
-                    ],
-                    "target": [
-                        {
-                            "context": "tgt",
-                            "contextType": "variable",
-                            "element": "encounter",
-                            "transform": "copy",
-                            "parameter": [
-                                {
-                                    "valueId": "encounter"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "code-emcareb7de08",
+                    "name": "code-emcareobservationemcareb7de08t",
                     "source": [
                         {
                             "context": "src",
@@ -3732,107 +3505,32 @@
                     ]
                 },
                 {
-                    "name": "899ae4be",
+                    "name": "e9d639e1",
                     "source": [
                         {
-                            "context": "src",
-                            "element": "item",
-                            "listMode": "first",
-                            "variable": "itm1",
-                            "condition": "linkId = 'stable-child'"
+                            "context": "src"
                         }
                     ],
-                    "rule": [
+                    "target": [
                         {
-                            "name": "2bfe418a",
-                            "source": [
+                            "context": "tgt",
+                            "contextType": "variable",
+                            "element": "status",
+                            "transform": "copy",
+                            "parameter": [
                                 {
-                                    "context": "itm1",
-                                    "element": "item",
-                                    "listMode": "first",
-                                    "variable": "item",
-                                    "condition": "(linkId = 'EmCare.B7.DE08') and answer.exists()"
+                                    "valueString": "final"
                                 }
-                            ],
-                            "rule": [
+                            ]
+                        },
+                        {
+                            "context": "tgt",
+                            "contextType": "variable",
+                            "element": "value",
+                            "transform": "copy",
+                            "parameter": [
                                 {
-                                    "name": "bdab9370",
-                                    "source": [
-                                        {
-                                            "context": "item",
-                                            "element": "answer",
-                                            "listMode": "first",
-                                            "variable": "a"
-                                        }
-                                    ],
-                                    "rule": [
-                                        {
-                                            "name": "final-emcareb7de08",
-                                            "source": [
-                                                {
-                                                    "context": "a",
-                                                    "condition": "a.value = true"
-                                                }
-                                            ],
-                                            "target": [
-                                                {
-                                                    "context": "tgt",
-                                                    "contextType": "variable",
-                                                    "element": "status",
-                                                    "transform": "copy",
-                                                    "parameter": [
-                                                        {
-                                                            "valueString": "final"
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "context": "tgt",
-                                                    "contextType": "variable",
-                                                    "element": "value",
-                                                    "transform": "copy",
-                                                    "parameter": [
-                                                        {
-                                                            "valueBoolean": true
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "notfound-emcareb7de08",
-                                            "source": [
-                                                {
-                                                    "context": "a",
-                                                    "condition": "a.value = false"
-                                                }
-                                            ],
-                                            "target": [
-                                                {
-                                                    "context": "tgt",
-                                                    "contextType": "variable",
-                                                    "element": "status",
-                                                    "transform": "copy",
-                                                    "parameter": [
-                                                        {
-                                                            "valueString": "cancelled"
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "context": "tgt",
-                                                    "contextType": "variable",
-                                                    "element": "value",
-                                                    "transform": "copy",
-                                                    "parameter": [
-                                                        {
-                                                            "valueBoolean": false
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    ]
+                                    "valueBoolean": true
                                 }
                             ]
                         }
@@ -3841,7 +3539,7 @@
             ]
         },
         {
-            "name": "emcareobservationemcareb7de08a",
+            "name": "emcareobservationemcareb7de08f",
             "typeMode": "none",
             "input": [
                 {
@@ -3855,7 +3553,7 @@
             ],
             "rule": [
                 {
-                    "name": "id-emcareb7de08a",
+                    "name": "id-emcareobservationemcareb7de08f",
                     "source": [
                         {
                             "context": "src"
@@ -3939,7 +3637,303 @@
                     ]
                 },
                 {
-                    "name": "code-emcareb7de08a",
+                    "name": "code-emcareobservationemcareb7de08f",
+                    "source": [
+                        {
+                            "context": "src",
+                            "element": "subject",
+                            "variable": "subject"
+                        }
+                    ],
+                    "target": [
+                        {
+                            "context": "tgt",
+                            "contextType": "variable",
+                            "element": "subject",
+                            "transform": "copy",
+                            "parameter": [
+                                {
+                                    "valueId": "subject"
+                                }
+                            ]
+                        },
+                        {
+                            "context": "tgt",
+                            "contextType": "variable",
+                            "element": "meta",
+                            "variable": "newMeta",
+                            "transform": "create",
+                            "parameter": [
+                                {
+                                    "valueString": "Meta"
+                                }
+                            ]
+                        },
+                        {
+                            "context": "newMeta",
+                            "contextType": "variable",
+                            "element": "profile",
+                            "transform": "copy",
+                            "parameter": [
+                                {
+                                    "valueString": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation"
+                                }
+                            ]
+                        },
+                        {
+                            "context": "tgt",
+                            "contextType": "variable",
+                            "element": "code",
+                            "variable": "concept",
+                            "transform": "create",
+                            "parameter": [
+                                {
+                                    "valueString": "CodeableConcept"
+                                }
+                            ]
+                        },
+                        {
+                            "context": "concept",
+                            "contextType": "variable",
+                            "element": "coding",
+                            "variable": "coding",
+                            "transform": "create",
+                            "parameter": [
+                                {
+                                    "valueString": "Coding"
+                                }
+                            ]
+                        },
+                        {
+                            "context": "coding",
+                            "contextType": "variable",
+                            "element": "system",
+                            "transform": "copy",
+                            "parameter": [
+                                {
+                                    "valueString": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes"
+                                }
+                            ]
+                        },
+                        {
+                            "context": "coding",
+                            "contextType": "variable",
+                            "element": "code",
+                            "transform": "copy",
+                            "parameter": [
+                                {
+                                    "valueString": "EmCare.B7.DE08"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "aae7a11d",
+                    "source": [
+                        {
+                            "context": "src",
+                            "element": "item",
+                            "variable": "itemtimestamp",
+                            "condition": "linkId = 'timestamp'"
+                        }
+                    ],
+                    "rule": [
+                        {
+                            "name": "7f22f29f",
+                            "source": [
+                                {
+                                    "context": "itemtimestamp",
+                                    "element": "answer",
+                                    "listMode": "first",
+                                    "variable": "atimestamp"
+                                }
+                            ],
+                            "rule": [
+                                {
+                                    "name": "5af77f2c",
+                                    "source": [
+                                        {
+                                            "context": "atimestamp",
+                                            "element": "value",
+                                            "variable": "val"
+                                        }
+                                    ],
+                                    "target": [
+                                        {
+                                            "context": "tgt",
+                                            "contextType": "variable",
+                                            "element": "issued",
+                                            "transform": "copy",
+                                            "parameter": [
+                                                {
+                                                    "valueId": "val"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "patient",
+                    "source": [
+                        {
+                            "context": "src",
+                            "element": "subject",
+                            "variable": "subject"
+                        }
+                    ],
+                    "target": [
+                        {
+                            "context": "tgt",
+                            "contextType": "variable",
+                            "element": "subject",
+                            "transform": "copy",
+                            "parameter": [
+                                {
+                                    "valueId": "subject"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "f21d6e36",
+                    "source": [
+                        {
+                            "context": "src"
+                        }
+                    ],
+                    "target": [
+                        {
+                            "context": "tgt",
+                            "contextType": "variable",
+                            "element": "status",
+                            "transform": "copy",
+                            "parameter": [
+                                {
+                                    "valueString": "cancelled"
+                                }
+                            ]
+                        },
+                        {
+                            "context": "tgt",
+                            "contextType": "variable",
+                            "element": "value",
+                            "transform": "copy",
+                            "parameter": [
+                                {
+                                    "valueBoolean": false
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "emcareobservationemcareb7de08at",
+            "typeMode": "none",
+            "input": [
+                {
+                    "name": "src",
+                    "mode": "source"
+                },
+                {
+                    "name": "tgt",
+                    "mode": "target"
+                }
+            ],
+            "rule": [
+                {
+                    "name": "id-emcareobservationemcareb7de08at",
+                    "source": [
+                        {
+                            "context": "src"
+                        }
+                    ],
+                    "target": [
+                        {
+                            "context": "tgt",
+                            "contextType": "variable",
+                            "element": "identifier",
+                            "variable": "CodeID",
+                            "transform": "create",
+                            "parameter": [
+                                {
+                                    "valueString": "Identifier"
+                                }
+                            ]
+                        },
+                        {
+                            "context": "CodeID",
+                            "contextType": "variable",
+                            "element": "system",
+                            "transform": "copy",
+                            "parameter": [
+                                {
+                                    "valueString": "http://hl7.org/fhir/namingsystem-identifier-type"
+                                }
+                            ]
+                        },
+                        {
+                            "context": "CodeID",
+                            "contextType": "variable",
+                            "element": "use",
+                            "transform": "copy",
+                            "parameter": [
+                                {
+                                    "valueString": "official"
+                                }
+                            ]
+                        },
+                        {
+                            "context": "CodeID",
+                            "contextType": "variable",
+                            "element": "value",
+                            "transform": "copy",
+                            "parameter": [
+                                {
+                                    "valueString": "uuid"
+                                }
+                            ]
+                        },
+                        {
+                            "context": "CodeID",
+                            "contextType": "variable",
+                            "element": "id",
+                            "transform": "uuid"
+                        }
+                    ]
+                },
+                {
+                    "name": "35bc6b82",
+                    "source": [
+                        {
+                            "context": "src",
+                            "element": "encounter",
+                            "variable": "encounter"
+                        }
+                    ],
+                    "target": [
+                        {
+                            "context": "tgt",
+                            "contextType": "variable",
+                            "element": "encounter",
+                            "transform": "copy",
+                            "parameter": [
+                                {
+                                    "valueId": "encounter"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "code-emcareobservationemcareb7de08at",
                     "source": [
                         {
                             "context": "src",
@@ -4103,107 +4097,328 @@
                     ]
                 },
                 {
-                    "name": "dffa204b",
+                    "name": "e9d639e1",
+                    "source": [
+                        {
+                            "context": "src"
+                        }
+                    ],
+                    "target": [
+                        {
+                            "context": "tgt",
+                            "contextType": "variable",
+                            "element": "status",
+                            "transform": "copy",
+                            "parameter": [
+                                {
+                                    "valueString": "final"
+                                }
+                            ]
+                        },
+                        {
+                            "context": "tgt",
+                            "contextType": "variable",
+                            "element": "value",
+                            "transform": "copy",
+                            "parameter": [
+                                {
+                                    "valueBoolean": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "emcareobservationemcareb7de08af",
+            "typeMode": "none",
+            "input": [
+                {
+                    "name": "src",
+                    "mode": "source"
+                },
+                {
+                    "name": "tgt",
+                    "mode": "target"
+                }
+            ],
+            "rule": [
+                {
+                    "name": "id-emcareobservationemcareb7de08af",
+                    "source": [
+                        {
+                            "context": "src"
+                        }
+                    ],
+                    "target": [
+                        {
+                            "context": "tgt",
+                            "contextType": "variable",
+                            "element": "identifier",
+                            "variable": "CodeID",
+                            "transform": "create",
+                            "parameter": [
+                                {
+                                    "valueString": "Identifier"
+                                }
+                            ]
+                        },
+                        {
+                            "context": "CodeID",
+                            "contextType": "variable",
+                            "element": "system",
+                            "transform": "copy",
+                            "parameter": [
+                                {
+                                    "valueString": "http://hl7.org/fhir/namingsystem-identifier-type"
+                                }
+                            ]
+                        },
+                        {
+                            "context": "CodeID",
+                            "contextType": "variable",
+                            "element": "use",
+                            "transform": "copy",
+                            "parameter": [
+                                {
+                                    "valueString": "official"
+                                }
+                            ]
+                        },
+                        {
+                            "context": "CodeID",
+                            "contextType": "variable",
+                            "element": "value",
+                            "transform": "copy",
+                            "parameter": [
+                                {
+                                    "valueString": "uuid"
+                                }
+                            ]
+                        },
+                        {
+                            "context": "CodeID",
+                            "contextType": "variable",
+                            "element": "id",
+                            "transform": "uuid"
+                        }
+                    ]
+                },
+                {
+                    "name": "35bc6b82",
+                    "source": [
+                        {
+                            "context": "src",
+                            "element": "encounter",
+                            "variable": "encounter"
+                        }
+                    ],
+                    "target": [
+                        {
+                            "context": "tgt",
+                            "contextType": "variable",
+                            "element": "encounter",
+                            "transform": "copy",
+                            "parameter": [
+                                {
+                                    "valueId": "encounter"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "code-emcareobservationemcareb7de08af",
+                    "source": [
+                        {
+                            "context": "src",
+                            "element": "subject",
+                            "variable": "subject"
+                        }
+                    ],
+                    "target": [
+                        {
+                            "context": "tgt",
+                            "contextType": "variable",
+                            "element": "subject",
+                            "transform": "copy",
+                            "parameter": [
+                                {
+                                    "valueId": "subject"
+                                }
+                            ]
+                        },
+                        {
+                            "context": "tgt",
+                            "contextType": "variable",
+                            "element": "meta",
+                            "variable": "newMeta",
+                            "transform": "create",
+                            "parameter": [
+                                {
+                                    "valueString": "Meta"
+                                }
+                            ]
+                        },
+                        {
+                            "context": "newMeta",
+                            "contextType": "variable",
+                            "element": "profile",
+                            "transform": "copy",
+                            "parameter": [
+                                {
+                                    "valueString": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation"
+                                }
+                            ]
+                        },
+                        {
+                            "context": "tgt",
+                            "contextType": "variable",
+                            "element": "code",
+                            "variable": "concept",
+                            "transform": "create",
+                            "parameter": [
+                                {
+                                    "valueString": "CodeableConcept"
+                                }
+                            ]
+                        },
+                        {
+                            "context": "concept",
+                            "contextType": "variable",
+                            "element": "coding",
+                            "variable": "coding",
+                            "transform": "create",
+                            "parameter": [
+                                {
+                                    "valueString": "Coding"
+                                }
+                            ]
+                        },
+                        {
+                            "context": "coding",
+                            "contextType": "variable",
+                            "element": "system",
+                            "transform": "copy",
+                            "parameter": [
+                                {
+                                    "valueString": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes"
+                                }
+                            ]
+                        },
+                        {
+                            "context": "coding",
+                            "contextType": "variable",
+                            "element": "code",
+                            "transform": "copy",
+                            "parameter": [
+                                {
+                                    "valueString": "EmCare.B7.DE08a"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "aae7a11d",
                     "source": [
                         {
                             "context": "src",
                             "element": "item",
-                            "listMode": "first",
-                            "variable": "itm1",
-                            "condition": "linkId = 'stable-child'"
+                            "variable": "itemtimestamp",
+                            "condition": "linkId = 'timestamp'"
                         }
                     ],
                     "rule": [
                         {
-                            "name": "f01cf4cb",
+                            "name": "7f22f29f",
                             "source": [
                                 {
-                                    "context": "itm1",
-                                    "element": "item",
+                                    "context": "itemtimestamp",
+                                    "element": "answer",
                                     "listMode": "first",
-                                    "variable": "item",
-                                    "condition": "(linkId = 'EmCare.B7.DE08a') and answer.exists()"
+                                    "variable": "atimestamp"
                                 }
                             ],
                             "rule": [
                                 {
-                                    "name": "bdab9370",
+                                    "name": "5af77f2c",
                                     "source": [
                                         {
-                                            "context": "item",
-                                            "element": "answer",
-                                            "listMode": "first",
-                                            "variable": "a"
+                                            "context": "atimestamp",
+                                            "element": "value",
+                                            "variable": "val"
                                         }
                                     ],
-                                    "rule": [
+                                    "target": [
                                         {
-                                            "name": "final-emcareb7de08a",
-                                            "source": [
+                                            "context": "tgt",
+                                            "contextType": "variable",
+                                            "element": "issued",
+                                            "transform": "copy",
+                                            "parameter": [
                                                 {
-                                                    "context": "a",
-                                                    "condition": "a.value = true"
-                                                }
-                                            ],
-                                            "target": [
-                                                {
-                                                    "context": "tgt",
-                                                    "contextType": "variable",
-                                                    "element": "status",
-                                                    "transform": "copy",
-                                                    "parameter": [
-                                                        {
-                                                            "valueString": "final"
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "context": "tgt",
-                                                    "contextType": "variable",
-                                                    "element": "value",
-                                                    "transform": "copy",
-                                                    "parameter": [
-                                                        {
-                                                            "valueBoolean": true
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "notfound-emcareb7de08a",
-                                            "source": [
-                                                {
-                                                    "context": "a",
-                                                    "condition": "a.value = false"
-                                                }
-                                            ],
-                                            "target": [
-                                                {
-                                                    "context": "tgt",
-                                                    "contextType": "variable",
-                                                    "element": "status",
-                                                    "transform": "copy",
-                                                    "parameter": [
-                                                        {
-                                                            "valueString": "cancelled"
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "context": "tgt",
-                                                    "contextType": "variable",
-                                                    "element": "value",
-                                                    "transform": "copy",
-                                                    "parameter": [
-                                                        {
-                                                            "valueBoolean": false
-                                                        }
-                                                    ]
+                                                    "valueId": "val"
                                                 }
                                             ]
                                         }
                                     ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "patient",
+                    "source": [
+                        {
+                            "context": "src",
+                            "element": "subject",
+                            "variable": "subject"
+                        }
+                    ],
+                    "target": [
+                        {
+                            "context": "tgt",
+                            "contextType": "variable",
+                            "element": "subject",
+                            "transform": "copy",
+                            "parameter": [
+                                {
+                                    "valueId": "subject"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "f21d6e36",
+                    "source": [
+                        {
+                            "context": "src"
+                        }
+                    ],
+                    "target": [
+                        {
+                            "context": "tgt",
+                            "contextType": "variable",
+                            "element": "status",
+                            "transform": "copy",
+                            "parameter": [
+                                {
+                                    "valueString": "cancelled"
+                                }
+                            ]
+                        },
+                        {
+                            "context": "tgt",
+                            "contextType": "variable",
+                            "element": "value",
+                            "transform": "copy",
+                            "parameter": [
+                                {
+                                    "valueBoolean": false
                                 }
                             ]
                         }

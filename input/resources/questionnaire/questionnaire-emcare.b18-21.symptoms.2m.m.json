@@ -44,6 +44,26 @@
         {
             "extension": [
                 {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                    "valueBoolean": true
+                },
+                {
+                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                    "valueExpression": {
+                        "language": "text/cql-identifier",
+                        "expression": "AgeInMonths"
+                    }
+                }
+            ],
+            "linkId": "AgeInMonths",
+            "text": "Age in Month",
+            "type": "integer",
+            "required": false,
+            "repeats": false
+        },
+        {
+            "extension": [
+                {
                     "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
                     "valueCode": "horizontal"
                 },
@@ -74,14 +94,14 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
-                        "expression": "%resource.repeat(item).where(linkId='Convulsing Now').answer.first().value = false"
+                        "expression": "%resource.repeat(item).where(linkId='Convulsing Now').answer.first().value = false or %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value < 2"
                     }
                 }
             ],
             "linkId": "EmCare.B7.DE03",
             "text": "Convulsion(s) in this Illness",
             "type": "boolean",
-            "required": false,
+            "required": true,
             "repeats": false,
             "item": [
                 {
@@ -99,7 +119,7 @@
                         }
                     ],
                     "linkId": "EmCare.B7.DE03-help",
-                    "text": "Use words the caregiver understands. For example, the caregiver may know<br />\nconvulsions as \u201cfits\u201d or \u201cspasms\u201d.<br />\nDuring a convulsion, the young infant\u2019s arms and legs may become stiff. The infant<br />\nmay stop breathing and become blue. Many times there may only be rhythmic<br />\nMovements of a part of the body, such as rhythmic twitching of the mouth or<br />\nblinking of eyes. The young infant may lose consciousness",
+                    "text": "Use words the caregiver understands. For example, the caregiver may know<br />\nconvulsions as \u201cfits\u201d or \u201cspasms\u201d.<br />\nDuring a convulsion, the young infant\u2019s arms and legs may become stiff. The infant<br />\nmay stop breathing and become blue. Many times there may only be rhythmic<br />\nInfant&#8217;s Movements of a part of the body, such as rhythmic twitching of the mouth or<br />\nblinking of eyes. The young infant may lose consciousness",
                     "type": "display"
                 }
             ]

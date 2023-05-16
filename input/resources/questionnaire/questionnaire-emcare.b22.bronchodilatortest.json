@@ -147,11 +147,8 @@
                     "valueCode": "horizontal"
                 },
                 {
-                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
-                    "valueExpression": {
-                        "language": "text/fhirpath",
-                        "expression": "%resource.repeat(item).where(linkId='EmCare.B22.DE22').answer.first().empty()"
-                    }
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                    "valueBoolean": true
                 },
                 {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
@@ -165,24 +162,29 @@
             "text": "Fast Breathing (post inhaled bronchodilator trial)",
             "type": "boolean",
             "required": false,
+            "repeats": false
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                    "valueExpression": {
+                        "language": "text/fhirpath",
+                        "expression": "%resource.repeat(item).where(linkId='EmCare.B22.DE20').answer.first().value = true"
+                    }
+                }
+            ],
+            "linkId": "EmCare.B22.DE20-l",
+            "text": "Fast Breathing (post inhaled bronchodilator trial)",
+            "type": "display",
+            "required": false,
             "repeats": false,
             "readOnly": true
         },
         {
             "extension": [
                 {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
-                    "valueCode": "horizontal"
-                },
-                {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
-                    "valueExpression": {
-                        "language": "text/fhirpath",
-                        "expression": "%resource.repeat(item).where(linkId='EmCare.B22.DE22').answer.first().empty()"
-                    }
-                },
-                {
-                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
                         "expression": "%resource.repeat(item).where(linkId='EmCare.B22.DE18').answer.first().value = false and %resource.repeat(item).where(linkId='EmCare.B22.DE20').answer.first().value = false"
@@ -191,7 +193,7 @@
             ],
             "linkId": "EmCare.B22.DE21",
             "text": "No Fast Breathing and No Chest Indrawing (post Inhaled Bronchodilator Trial)",
-            "type": "boolean",
+            "type": "display",
             "required": false,
             "repeats": false,
             "readOnly": true

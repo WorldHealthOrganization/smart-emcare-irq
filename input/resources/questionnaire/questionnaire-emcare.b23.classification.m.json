@@ -94,9 +94,39 @@
                 }
             ],
             "linkId": "Measured Temperature (second measurement)",
-            "type": "quantity",
+            "type": "choice",
             "required": false,
-            "repeats": false
+            "repeats": false,
+            "answerOption": [
+                {
+                    "valueCoding": {
+                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+                        "code": "Low",
+                        "display": "Low"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+                        "code": "Normal",
+                        "display": "Normal"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+                        "code": "High",
+                        "display": "High"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+                        "code": "Very High",
+                        "display": "Very High"
+                    }
+                }
+            ]
         },
         {
             "extension": [
@@ -724,11 +754,80 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "DL-I-CL2-04-30"
+                        "expression": "DL-I-CL2-04"
                     }
                 }
             ],
-            "linkId": "DL-I-CL2-04-30",
+            "linkId": "DL-I-CL2-04",
+            "type": "boolean",
+            "required": false,
+            "repeats": false
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+                    "valueCode": "horizontal"
+                },
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                    "valueBoolean": true
+                },
+                {
+                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                    "valueExpression": {
+                        "language": "text/cql-identifier",
+                        "expression": "DL-G-CL2-29"
+                    }
+                }
+            ],
+            "linkId": "DL-G-CL2-29",
+            "type": "boolean",
+            "required": false,
+            "repeats": false
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+                    "valueCode": "horizontal"
+                },
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                    "valueBoolean": true
+                },
+                {
+                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                    "valueExpression": {
+                        "language": "text/cql-identifier",
+                        "expression": "DL-G-CL2-30"
+                    }
+                }
+            ],
+            "linkId": "DL-G-CL2-30",
+            "type": "boolean",
+            "required": false,
+            "repeats": false
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+                    "valueCode": "horizontal"
+                },
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                    "valueBoolean": true
+                },
+                {
+                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                    "valueExpression": {
+                        "language": "text/cql-identifier",
+                        "expression": "DL-G-CL2-49"
+                    }
+                }
+            ],
+            "linkId": "DL-G-CL2-49",
             "type": "boolean",
             "required": false,
             "repeats": false
@@ -833,88 +932,90 @@
                         "display": "Disagree"
                     }
                 }
+            ],
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-display-category",
+                                        "code": "instructions"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                            "valueExpression": {
+                                "language": "text/fhirpath",
+                                "expression": "%resource.repeat(item).where(linkId='DL-G-CL2-32').answer.first().value = true"
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B23.DE96",
+                    "text": "Low weight for age",
+                    "type": "display",
+                    "required": false,
+                    "repeats": false
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-display-category",
+                                        "code": "instructions"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                            "valueExpression": {
+                                "language": "text/fhirpath",
+                                "expression": "%resource.repeat(item).where(linkId='DL-G-CL2-42').answer.first().value  = true"
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B23.DE97",
+                    "text": "Oral thrush",
+                    "type": "display",
+                    "required": false,
+                    "repeats": false
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-display-category",
+                                        "code": "instructions"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                            "valueExpression": {
+                                "language": "text/fhirpath",
+                                "expression": "%resource.repeat(item).where(linkId='DL-G-CL2-30').answer.first().value = true or %resource.repeat(item).where(linkId='DL-I-CL2-04').answer.first().value = true"
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B23.DE95",
+                    "text": "Feeding problem",
+                    "type": "display",
+                    "required": false,
+                    "repeats": false
+                }
             ]
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory",
-                    "valueCodeableConcept": {
-                        "coding": [
-                            {
-                                "system": "http://hl7.org/fhir/questionnaire-display-category",
-                                "code": "instructions"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
-                    "valueExpression": {
-                        "language": "text/fhirpath",
-                        "expression": "%resource.repeat(item).where(linkId='DL-G-CL2-32').answer.first().value = true"
-                    }
-                }
-            ],
-            "linkId": "EmCare.B23.DE96",
-            "text": "Low weight for age",
-            "type": "display",
-            "required": false,
-            "repeats": false
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory",
-                    "valueCodeableConcept": {
-                        "coding": [
-                            {
-                                "system": "http://hl7.org/fhir/questionnaire-display-category",
-                                "code": "instructions"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
-                    "valueExpression": {
-                        "language": "text/fhirpath",
-                        "expression": "%resource.repeat(item).where(linkId='DL-G-CL2-42').answer.first().value  = true"
-                    }
-                }
-            ],
-            "linkId": "EmCare.B23.DE97",
-            "text": "Oral thrush",
-            "type": "display",
-            "required": false,
-            "repeats": false
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory",
-                    "valueCodeableConcept": {
-                        "coding": [
-                            {
-                                "system": "http://hl7.org/fhir/questionnaire-display-category",
-                                "code": "instructions"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
-                    "valueExpression": {
-                        "language": "text/fhirpath",
-                        "expression": "%resource.repeat(item).where(linkId='DL-I-CL2-04-30').answer.first().value = true"
-                    }
-                }
-            ],
-            "linkId": "EmCare.B23.DE95",
-            "text": "Feeding problem",
-            "type": "display",
-            "required": false,
-            "repeats": false
         },
         {
             "extension": [

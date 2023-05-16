@@ -6,7 +6,6 @@ required for the execution
 |---|---|---|---|
 | Observation | EmCare.B7.DE02 | boolean/quantity | Convulsing Now |
 | Observation | EmCare.B7.DE03 | boolean/quantity | Convulsion(s) in this Illness |
-| Observation | EmCare.B7.DE08 | boolean/quantity | Unconscious |
 | Observation | EmCare.B7.DE08a | boolean/quantity | Lethargic |
 | Observation | EmCare.B11S1.DE01 | boolean/quantity | Diarrhoea |
 | Observation | EmCare.B10S1.DE05 | boolean/quantity | Cough |
@@ -25,10 +24,11 @@ required for the execution
 | Observation | EmCare.B17S1.DE01 | boolean/quantity | Throat problem |
 | Observation | EmCare.B17S1.DE07 | boolean/quantity | Ability to swallow |
 | Observation | EmCare.B17S1.DE02 | boolean/quantity | Specify Throat problem |
+| Observation | EmCare.B7.DE08 | boolean/quantity | Unconscious |
 | Observation | EmCare.B11S2.DE02 | boolean/quantity | Skin pinch of Abdomen |
 | Observation | EmCare.B11S2.DE06 | boolean/quantity | Restless and Irritable |
 | Observation | EmCare.B11S2.DE01 | boolean/quantity | Sunken Eyes |
-| Observation | EmCare.B18S2.DE08 | boolean/quantity | Movements |
+| Observation | EmCare.B18S2.DE08 | boolean/quantity | Infant's Movements |
 | Observation | EmCare.B18S1.DE02 | boolean/quantity | Difficulty with Feeding |
 | Observation | EmCare.B18S2.DE07 | boolean/quantity | Severe Chest Indrawing |
 | Observation | EmCare.B22.DE07 | boolean/quantity | Fast Breathing |

@@ -38,14 +38,6 @@ group bundletrans(source src : questionnaireResponse,target bundle : Bundle){
             } '1e5e1f5f';
         } '510a702c';
     } 'e8a0fbe3';
-    src.item first as item  where linkId = 'EmCare.B22.DE21' and answer.exists() then {
-        src -> bundle.entry as entry  then {
-            src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Observation/', uuid) 'b50ac4c5';
-            src -> entry.resource = create('Observation') as tgt then {
-                src -> tgt then emcareobservationemcareb22de21(src, tgt) '7c45409d';
-            } 'ec6cbc70';
-        } '2bc763d0';
-    } '86c6f66b';
 }
 
 group emcareobservationemcareb22de22(source src,target tgt){
@@ -158,33 +150,5 @@ group emcareobservationemcareb22de20(source src,target tgt){
             a  where a.value = false -> tgt.status = 'cancelled', tgt.value = false 'notfound-emcareb22de20';
         } 'bdab9370';
     } 'ea4744f9';
-}
-
-group emcareobservationemcareb22de21(source src,target tgt){
-        src -> tgt.identifier = create('Identifier') as CodeID,
-            CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',
-            CodeID.use =  'official',
-            CodeID.value = 'uuid',
-            CodeID.id = uuid()
-         'id-emcareb22de21';
-    src.encounter as encounter -> tgt.encounter = encounter '35bc6b82';
-        src.subject as subject -> tgt.subject = subject,
-            tgt.meta = create('Meta') as newMeta, newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',
-            tgt.code = create('CodeableConcept') as concept, concept.coding = create('Coding') as coding,
-                coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',
-                coding.code = 'EmCare.B22.DE21'
-         'code-emcareb22de21';
-    src.item as itemtimestamp where linkId  =  'timestamp' then {
-        itemtimestamp.answer first as atimestamp then {
-            atimestamp.value as val -> tgt.issued = val  '5af77f2c';
-        } '7f22f29f';
-    } 'aae7a11d';
-    src.subject as subject -> tgt.subject = subject  'patient';
-    src.item first as item  where linkId = 'EmCare.B22.DE21' and answer.exists() then {
-        item.answer first as a then {
-            a  where a.value = true -> tgt.status = 'final', tgt.value = true 'final-emcareb22de21';
-            a  where a.value = false -> tgt.status = 'cancelled', tgt.value = false 'notfound-emcareb22de21';
-        } 'bdab9370';
-    } 'be0b9dbe';
 }
 

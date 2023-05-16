@@ -2,14 +2,14 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareb23classification version '1.0.1.rc12.build.610'
+library emcareb23classification version '1.0.1.rc12.build.681'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.1.rc12.build.610' called Base
-include emcareobservation version '1.0.1.rc12.build.610' called obs
-include emcarevalueset version '1.0.1.rc12.build.610' called val
-include emcarezscore version '1.0.1.rc12.build.610' called Z
-include emcarecombineddataelements version '1.0.1.rc12.build.610' called C
+include emcarebase version '1.0.1.rc12.build.681' called Base
+include emcareobservation version '1.0.1.rc12.build.681' called obs
+include emcarevalueset version '1.0.1.rc12.build.681' called val
+include emcarezscore version '1.0.1.rc12.build.681' called Z
+include emcarecombineddataelements version '1.0.1.rc12.build.681' called C
 
 
 
@@ -186,7 +186,7 @@ define "OBSdefine.EmCare.B11S1.DE05":
     Base.GetObsValue('EmCare.B11S1.DE05')
 
 /* 
-OBSdefine.EmCare.B6.DE01 : Axillary Temperature  (degrees Celcius)
+OBSdefine.EmCare.B6.DE01 : Axillary Temperature  (degrees Celsius)
 
 */
 define "OBSdefine.EmCare.B6.DE01":
@@ -631,12 +631,12 @@ DL-XXXX :
 */
 define "DL-XXXX":
         (C."child")
-         and ((    "OBSdefine.EmCare.B7.DE02" = true and  "OBSdefine.EmCare.B7-B8-B9.DE01" = val."Stabilised, continue consultation")
+         and ((    "OBSdefine.EmCare.B7.DE02" = true and  "OBSdefine.EmCare.B7-B8-B9.DE01" ~ val."Stabilised, continue consultation")
          or (    "OBSdefine.EmCare.B7.DE03" = true)
          or (    "OBSdefine.EmCare.B7.DE08" = true)
          or (    "OBSdefine.EmCare.B7.DE08a" = true)
-         or (    "OBSdefine.EmCare.B22.DE08" = val."Completely Unable to Drink")
-         or (    "OBSdefine.EmCare.B22.DE08" = val."Vomits Immediately / Everything"))
+         or (    "OBSdefine.EmCare.B22.DE08" ~ val."Completely Unable to Drink")
+         or (    "OBSdefine.EmCare.B22.DE08" ~ val."Vomits Immediately / Everything"))
 
 /* 
 EmCare.B6.DE06 : 
@@ -713,7 +713,7 @@ EmCare.B23.DE08 :
 "Cough for how long?" = "14 days or more" or "Difficulty breathing for how long?" = "14 days or more" or  "Recurrent Wheeze" = true
 */
 define "EmCare.B23.DE08":
-    "OBSdefine.EmCare.B10S1.DE06" = val."14 days or more" or "OBSdefine.EmCare.B10S1.DE02" = val."14 days or more" or  "OBSdefine.EmCare.B10S2.DE06" = true
+    "OBSdefine.EmCare.B10S1.DE06" ~ val."14 days or more" or "OBSdefine.EmCare.B10S1.DE02" ~ val."14 days or more" or  "OBSdefine.EmCare.B10S2.DE06" = true
 
 /* 
 Measles in last 3 months : 
@@ -801,7 +801,7 @@ DL-G-CL1-31 :
 C."Age >= 2 months to <60 months"  and "Diarrhoea" = true and  ("Severe Dehydration"=true  or  "Some Dehydration"=true) and "Diarrhoea for how long?" = "14 days or more"
 */
 define "DL-G-CL1-31":
-    C."Age >= 2 months to <60 months"  and "OBSdefine.EmCare.B11S1.DE01" = true and  ("Severe Dehydration"=true  or  "Some Dehydration"=true) and "OBSdefine.EmCare.B11S1.DE02" = val."14 days or more"
+    C."Age >= 2 months to <60 months"  and "OBSdefine.EmCare.B11S1.DE01" = true and  ("Severe Dehydration"=true  or  "Some Dehydration"=true) and "OBSdefine.EmCare.B11S1.DE02" ~ val."14 days or more"
 
 /* 
 Severe Persistent Diarrhoea : DL-G-CL1-31
@@ -815,7 +815,7 @@ DL-G-CL1-32 :
 C."Age >= 2 months to <60 months"  and "Diarrhoea" = true and  "No Dehydration"=true   and "Diarrhoea for how long?" = "14 days or more"
 */
 define "DL-G-CL1-32":
-    C."Age >= 2 months to <60 months"  and "OBSdefine.EmCare.B11S1.DE01" = true and  "No Dehydration"=true   and "OBSdefine.EmCare.B11S1.DE02" = val."14 days or more"
+    C."Age >= 2 months to <60 months"  and "OBSdefine.EmCare.B11S1.DE01" = true and  "No Dehydration"=true   and "OBSdefine.EmCare.B11S1.DE02" ~ val."14 days or more"
 
 /* 
 Persistent Diarrhoea : DL-G-CL1-32
@@ -826,7 +826,7 @@ define "Persistent Diarrhoea":
 
 /* 
 DL-G-CL1-33 : 
-C."Age >= 2 months to <60 months"  and "Diarrhoea" = true and "Blood in the stool in this Illness" = true and "Axillary Temperature  (degrees Celcius)" < 38.5 'Cel'
+C."Age >= 2 months to <60 months"  and "Diarrhoea" = true and "Blood in the stool in this Illness" = true and "Axillary Temperature  (degrees Celsius)" < 38.5 'Cel'
 */
 define "DL-G-CL1-33":
     C."Age >= 2 months to <60 months"  and "OBSdefine.EmCare.B11S1.DE01" = true and "OBSdefine.EmCare.B11S1.DE05" = true and "OBSdefine.EmCare.B6.DE01" < 38.5 'Cel'
@@ -840,7 +840,7 @@ define "Dysentery":
 
 /* 
 DL-I-CL1-01 : 
-C."Age >= 2 months to <60 months"  and "Diarrhoea" = true and "Blood in the stool in this Illness" = true and "Axillary Temperature  (degrees Celcius)" >= 38.5 'Cel'
+C."Age >= 2 months to <60 months"  and "Diarrhoea" = true and "Blood in the stool in this Illness" = true and "Axillary Temperature  (degrees Celsius)" >= 38.5 'Cel'
 */
 define "DL-I-CL1-01":
     C."Age >= 2 months to <60 months"  and "OBSdefine.EmCare.B11S1.DE01" = true and "OBSdefine.EmCare.B11S1.DE05" = true and "OBSdefine.EmCare.B6.DE01" >= 38.5 'Cel'
@@ -857,7 +857,7 @@ DL-I-CL1-05 :
 C."Age >= 2 months to <60 months"  and C."Fever" = true and o"Throat problem" = true and ("Not able to drink or breastfeed" = true or "Ability to swallow" = "Unable to swallow" or "Specify Throat problem" = "Membrane on throat")
 */
 define "DL-I-CL1-05":
-    C."Age >= 2 months to <60 months"  and C."Fever" = true and "OBSdefine.EmCare.B17S1.DE01" = true and ("OBSdefine.EmCare.B7.DE09" = true or "OBSdefine.EmCare.B17S1.DE07" = val."Unable to swallow" or "OBSdefine.EmCare.B17S1.DE02" = val."Membrane on throat")
+    C."Age >= 2 months to <60 months"  and C."Fever" = true and "OBSdefine.EmCare.B17S1.DE01" = true and ("OBSdefine.EmCare.B7.DE09" = true or "OBSdefine.EmCare.B17S1.DE07" ~ val."Unable to swallow" or "OBSdefine.EmCare.B17S1.DE02" ~ val."Membrane on throat")
 
 /* 
 Throat Abscess or Possible Diptheria : DL-I-CL1-05
@@ -871,7 +871,7 @@ DL-I-CL1-06 :
 C."Age >= 2 months to <60 months"  and (C."Fever" = true or "Ability to swallow" = "Difficulty in swallowing" ) and "Throat problem" = true and ("Not able to drink or breastfeed" = true or "Ability to swallow" = "Unable to swallow" or "Specify Throat problem" = "Membrane on throat") and (ToInteger("Enlarged lymph nodes on front of neck" = true )+ToInteger("Specify Throat problem" = "Red (congested) throat")+ToInteger("Specify Throat problem" = "Exudate on Throat"))>1 and "Throat Abscess or Possible Diptheria"!=true
 */
 define "DL-I-CL1-06":
-    C."Age >= 2 months to <60 months"  and (C."Fever" = true or "OBSdefine.EmCare.B17S1.DE07" = val."Difficulty in swallowing" ) and "OBSdefine.EmCare.B17S1.DE01" = true and ("OBSdefine.EmCare.B7.DE09" = true or "OBSdefine.EmCare.B17S1.DE07" = val."Unable to swallow" or "OBSdefine.EmCare.B17S1.DE02" = val."Membrane on throat") and (ToInteger("OBSdefine.EmCare.B17S1.DE06" = true )+ToInteger("OBSdefine.EmCare.B17S1.DE02" = val."Red (congested) throat")+ToInteger("OBSdefine.EmCare.B17S1.DE02" = val."Exudate on Throat"))>1 and Coalesce("Throat Abscess or Possible Diptheria",false)!=true
+    C."Age >= 2 months to <60 months"  and (C."Fever" = true or "OBSdefine.EmCare.B17S1.DE07" ~ val."Difficulty in swallowing" ) and "OBSdefine.EmCare.B17S1.DE01" = true and ("OBSdefine.EmCare.B7.DE09" = true or "OBSdefine.EmCare.B17S1.DE07" ~ val."Unable to swallow" or "OBSdefine.EmCare.B17S1.DE02" ~ val."Membrane on throat") and (ToInteger("OBSdefine.EmCare.B17S1.DE06" = true )+ToInteger("OBSdefine.EmCare.B17S1.DE02" ~ val."Red (congested) throat")+ToInteger("OBSdefine.EmCare.B17S1.DE02" ~ val."Exudate on Throat"))>1 and Coalesce("Throat Abscess or Possible Diptheria",false)!=true
 
 /* 
 Streptococcal Sore Throat : DL-I-CL1-06
@@ -885,7 +885,7 @@ DL-I-CL1-07 :
 C."Age >= 2 months to <60 months"  and ("Ability to swallow" = "Difficulty in swallowing" or "Enlarged lymph nodes on front of neck" = true or "Specify Throat problem" = "Red (congested) throat" or "Specify Throat problem" = "Exudate on Throat" ) and "Throat problem" = true and  "Throat Abscess or Possible Diptheria"!=true and "Streptococcal Sore Throat"!=true
 */
 define "DL-I-CL1-07":
-    C."Age >= 2 months to <60 months"  and ("OBSdefine.EmCare.B17S1.DE07" = val."Difficulty in swallowing" or "OBSdefine.EmCare.B17S1.DE06" = true or "OBSdefine.EmCare.B17S1.DE02" = val."Red (congested) throat" or "OBSdefine.EmCare.B17S1.DE02" = val."Exudate on Throat" ) and "OBSdefine.EmCare.B17S1.DE01" = true and  Coalesce("Throat Abscess or Possible Diptheria",false)!=true and Coalesce("Streptococcal Sore Throat",false)!=true
+    C."Age >= 2 months to <60 months"  and ("OBSdefine.EmCare.B17S1.DE07" ~ val."Difficulty in swallowing" or "OBSdefine.EmCare.B17S1.DE06" = true or "OBSdefine.EmCare.B17S1.DE02" ~ val."Red (congested) throat" or "OBSdefine.EmCare.B17S1.DE02" ~ val."Exudate on Throat" ) and "OBSdefine.EmCare.B17S1.DE01" = true and  Coalesce("Throat Abscess or Possible Diptheria",false)!=true and Coalesce("Streptococcal Sore Throat",false)!=true
 
 /* 
 Non-Streptococcal Sore Throat : DL-I-CL1-07
@@ -932,8 +932,8 @@ DL-G-CL1-74-76 :
 define "DL-G-CL1-74-76":
         (C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B13S1.DE01" = true)
          and ((    "OBSdefine.EmCare.B13S1.DE02" = true and Coalesce("Chronic Ear Infection",false)!=true)
-         or (    "OBSdefine.EmCare.B13S2.DE02" = true  and "OBSdefine.EmCare.B13S1.DE03" = true and "OBSdefine.EmCare.B13S1.DE04" = val."Less than 14 days")
-         or (    "OBSdefine.EmCare.B13S2.DE02" = true  and "OBSdefine.EmCare.B13S1.DE03" = false and "OBSdefine.EmCare.B13S2.DE03" = val."Less than 14 days"))
+         or (    "OBSdefine.EmCare.B13S2.DE02" = true  and "OBSdefine.EmCare.B13S1.DE03" = true and "OBSdefine.EmCare.B13S1.DE04" ~ val."Less than 14 days")
+         or (    "OBSdefine.EmCare.B13S2.DE02" = true  and "OBSdefine.EmCare.B13S1.DE03" = false and "OBSdefine.EmCare.B13S2.DE03" ~ val."Less than 14 days"))
 
 /* 
 Acute Ear Infection : DL-G-CL1-74-76
@@ -950,8 +950,8 @@ DL-I-CL1-11-12 :
 */
 define "DL-I-CL1-11-12":
         (C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B13S1.DE01" = true and   "OBSdefine.EmCare.B13S2.DE02" = true)
-         and ((    "OBSdefine.EmCare.B13S1.DE03" = true and "OBSdefine.EmCare.B13S1.DE04" = val."14 days or more")
-         or (    "OBSdefine.EmCare.B13S1.DE03" = false and "OBSdefine.EmCare.B13S2.DE03" = val."14 days or more"))
+         and ((    "OBSdefine.EmCare.B13S1.DE03" = true and "OBSdefine.EmCare.B13S1.DE04" ~ val."14 days or more")
+         or (    "OBSdefine.EmCare.B13S1.DE03" = false and "OBSdefine.EmCare.B13S2.DE03" ~ val."14 days or more"))
 
 /* 
 Chronic Ear Infection : DL-I-CL1-11-12
@@ -1014,7 +1014,7 @@ EmCare.B23.DE26a :
 "Fever for how long?" = "7 Days or more" and "Has Fever been present every day since the Fever started?" = true
 */
 define "EmCare.B23.DE26a":
-    "OBSdefine.EmCare.B12S1.DE03" = val."7 Days or more" and "OBSdefine.EmCare.B12S1.DE06" = true
+    "OBSdefine.EmCare.B12S1.DE03" ~ val."7 Days or more" and "OBSdefine.EmCare.B12S1.DE06" = true
 
 /* 
 Fever present every day for 7 Days or more : EmCare.B23.DE26a
@@ -1050,11 +1050,11 @@ DL-I-CL1-16-66 :
 define "DL-I-CL1-16-66":
         (C."Age >= 2 months to <60 months" and C."Fever" = true)
          and ((    (("OBSdefine.EmCare.B10S1.DE05" = true  or  "OBSdefine.EmCare.B12S2.DE05" = true or "OBSdefine.EmCare.B14S2.DE01" = true))
-             and ((    "OBSdefine.EmCare.B14S2.DE06&EmCare.B14S2.DE07" = false  and "Measles in last 3 months" = true and (C."Danger Signs" = true or  "OBSdefine.EmCare.B14S2.DE03" = true  or "OBSdefine.EmCare.B14S2.DE45" = val."Mouth Sores or Mouth Ulcers - Deep and Extensive" ))
+             and ((    "OBSdefine.EmCare.B14S2.DE06&EmCare.B14S2.DE07" = false  and "Measles in last 3 months" = true and (C."Danger Signs" = true or  "OBSdefine.EmCare.B14S2.DE03" = true  or "OBSdefine.EmCare.B14S2.DE45" ~ val."Mouth Sores or Mouth Ulcers - Deep and Extensive" ))
              or (    ("OBSdefine.EmCare.B14S2.DE06&EmCare.B14S2.DE07" = true)
-                 and ((    "OBSdefine.EmCare.B14S2.DE10" = false and "Measles in last 3 months" = true and (C."Danger Signs" = true or  "OBSdefine.EmCare.B14S2.DE03" = true  or "OBSdefine.EmCare.B14S2.DE45" = val."Mouth Sores or Mouth Ulcers - Deep and Extensive" ))
-                 or (    (C."Danger Signs" = true or  "OBSdefine.EmCare.B14S2.DE03" = true  or "OBSdefine.EmCare.B14S2.DE45" = val."Mouth Sores or Mouth Ulcers - Deep and Extensive" or  "Pneumonia"=true  or "OBSdefine.EmCare.B11S1.DE01" = true) and "OBSdefine.EmCare.B14S2.DE10" = true)))))
-         or (    "OBSdefine.EmCare.B10S1.DE05" = false  and  "OBSdefine.EmCare.B12S2.DE05" = false and "OBSdefine.EmCare.B14S2.DE01" = false and "Measles in last 3 months" = true and  (C."Danger Signs" = true or  "OBSdefine.EmCare.B14S2.DE03" = true  or "OBSdefine.EmCare.B14S2.DE45" = val."Mouth Sores or Mouth Ulcers - Deep and Extensive" )))
+                 and ((    "OBSdefine.EmCare.B14S2.DE10" = false and "Measles in last 3 months" = true and (C."Danger Signs" = true or  "OBSdefine.EmCare.B14S2.DE03" = true  or "OBSdefine.EmCare.B14S2.DE45" ~ val."Mouth Sores or Mouth Ulcers - Deep and Extensive" ))
+                 or (    (C."Danger Signs" = true or  "OBSdefine.EmCare.B14S2.DE03" = true  or "OBSdefine.EmCare.B14S2.DE45" ~ val."Mouth Sores or Mouth Ulcers - Deep and Extensive" or  "Pneumonia"=true  or "OBSdefine.EmCare.B11S1.DE01" = true) and "OBSdefine.EmCare.B14S2.DE10" = true)))))
+         or (    "OBSdefine.EmCare.B10S1.DE05" = false  and  "OBSdefine.EmCare.B12S2.DE05" = false and "OBSdefine.EmCare.B14S2.DE01" = false and "Measles in last 3 months" = true and  (C."Danger Signs" = true or  "OBSdefine.EmCare.B14S2.DE03" = true  or "OBSdefine.EmCare.B14S2.DE45" ~ val."Mouth Sores or Mouth Ulcers - Deep and Extensive" )))
 
 /* 
 Severe Complicated Measles : DL-I-CL1-16-66
@@ -1072,8 +1072,8 @@ DL-G-CL1-69-70 :
          or (    ("Generalised or Localised Skin Problem" != "Generalised Skin Problem") and "Measles in last 3 months" = true))))
 */
 define "DL-G-CL1-69-70":
-        (C."Age >= 2 months to <60 months" and C."Fever" = true   and Coalesce("Severe Complicated Measles",false)!=true and  ("OBSdefine.EmCare.B14S2.DE02" = true  or "OBSdefine.EmCare.B14S2.DE45" = val."Mouth Sores or Mouth Ulcers - Not Deep and Extensive" ))
-         and ((    "OBSdefine.EmCare.B10S1.DE05" = false  and "OBSdefine.EmCare.B12S2.DE05" = false and "OBSdefine.EmCare.B14S2.DE01" = false and "Measles in last 3 months" =true and ("OBSdefine.EmCare.B14S2.DE02" = true  or "OBSdefine.EmCare.B14S2.DE45" = val."Mouth Sores or Mouth Ulcers - Not Deep and Extensive" ))
+        (C."Age >= 2 months to <60 months" and C."Fever" = true   and Coalesce("Severe Complicated Measles",false)!=true and  ("OBSdefine.EmCare.B14S2.DE02" = true  or "OBSdefine.EmCare.B14S2.DE45" ~ val."Mouth Sores or Mouth Ulcers - Not Deep and Extensive" ))
+         and ((    "OBSdefine.EmCare.B10S1.DE05" = false  and "OBSdefine.EmCare.B12S2.DE05" = false and "OBSdefine.EmCare.B14S2.DE01" = false and "Measles in last 3 months" =true and ("OBSdefine.EmCare.B14S2.DE02" = true  or "OBSdefine.EmCare.B14S2.DE45" ~ val."Mouth Sores or Mouth Ulcers - Not Deep and Extensive" ))
          or (    (("OBSdefine.EmCare.B10S1.DE05" = true  or  "OBSdefine.EmCare.B12S2.DE05" = true or "OBSdefine.EmCare.B14S2.DE01" = true))
              and ((    ("OBSdefine.EmCare.B14S2.DE06&EmCare.B14S2.DE07" = true) and ("OBSdefine.EmCare.B14S2.DE10" = true or  ("OBSdefine.EmCare.B14S2.DE10" =false and "Measles in last 3 months" = true)))
              or (    ("OBSdefine.EmCare.B14S2.DE06&EmCare.B14S2.DE07" = false) and "Measles in last 3 months" = true))))
@@ -1104,7 +1104,7 @@ DL-G-CL1-109 :
 C."Age >= 2 months to <60 months" and ("Palmar Pallor" = "Severe Palmar Pallor" or "Mucous membrane pallor" = "Severe mucous membrane pallor" or "Hemoglobin (Hb) g/dL" < 7 'g/dL' )
 */
 define "DL-G-CL1-109":
-    C."Age >= 2 months to <60 months" and ("OBSdefine.EmCare.B15S2.DE01" = val."Severe Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE09" = val."Severe mucous membrane pallor" or "OBSdefine.EmCare.B22.DE81" < 7 'g/dL' )
+    C."Age >= 2 months to <60 months" and ("OBSdefine.EmCare.B15S2.DE01" ~ val."Severe Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE09" ~ val."Severe mucous membrane pallor" or "OBSdefine.EmCare.B22.DE81" < 7 'g/dL' )
 
 /* 
 Severe Anaemia : DL-G-CL1-109
@@ -1118,7 +1118,7 @@ DL-G-CL1-110 :
 C."Age >= 2 months to <60 months" and ("Palmar Pallor" = "Some Palmar Pallor" or "Mucous membrane pallor" = "Some mucous membrane pallor" or ("Hemoglobin (Hb) g/dL" >= 7 'g/dL' and "Hemoglobin (Hb) g/dL" < 11 'g/dL' )) and "Severe Anaemia"!=true
 */
 define "DL-G-CL1-110":
-    C."Age >= 2 months to <60 months" and ("OBSdefine.EmCare.B15S2.DE01" = val."Some Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE09" = val."Some mucous membrane pallor" or ("OBSdefine.EmCare.B22.DE81" >= 7 'g/dL' and "OBSdefine.EmCare.B22.DE81" < 11 'g/dL' )) and Coalesce("Severe Anaemia",false)!=true
+    C."Age >= 2 months to <60 months" and ("OBSdefine.EmCare.B15S2.DE01" ~ val."Some Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE09" ~ val."Some mucous membrane pallor" or ("OBSdefine.EmCare.B22.DE81" >= 7 'g/dL' and "OBSdefine.EmCare.B22.DE81" < 11 'g/dL' )) and Coalesce("Severe Anaemia",false)!=true
 
 /* 
 Anaemia : DL-G-CL1-110
@@ -1132,7 +1132,7 @@ DL-G-CL1-111 :
 C."Age >= 2 months to <60 months" and "Palmar Pallor" = "No Palmar Pallor" and "Mucous membrane pallor" = "No mucous membrane pallor" and  ("Hemoglobin (Hb) g/dL" >= 11 'g/dL' or "Hemoglobin Test Not Available"= true)
 */
 define "DL-G-CL1-111":
-    C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B15S2.DE01" = val."No Palmar Pallor" and "OBSdefine.EmCare.B15S2.DE09" = val."No mucous membrane pallor" and  ("OBSdefine.EmCare.B22.DE81" >= 11 'g/dL' or "OBSdefine.EmCare.B22.DE82"= true)
+    C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B15S2.DE01" ~ val."No Palmar Pallor" and "OBSdefine.EmCare.B15S2.DE09" ~ val."No mucous membrane pallor" and  ("OBSdefine.EmCare.B22.DE81" >= 11 'g/dL' or "OBSdefine.EmCare.B22.DE82"= true)
 
 /* 
 No Anaemia : DL-G-CL1-111
@@ -1442,7 +1442,7 @@ DL-G-CL1-106 :
 C."Age >= 2 months to <60 months" and C."Fever" = true and ("Oral Sores or Mouth Ulcers" = "Mouth Sores or Mouth Ulcers - Not Deep and Extensive" or "Oral Sores or Mouth Ulcers" = "Mouth Sores or Mouth Ulcers - Deep and Extensive" )
 */
 define "DL-G-CL1-106":
-    C."Age >= 2 months to <60 months" and C."Fever" = true and ("OBSdefine.EmCare.B14S2.DE45" = val."Mouth Sores or Mouth Ulcers - Not Deep and Extensive" or "OBSdefine.EmCare.B14S2.DE45" = val."Mouth Sores or Mouth Ulcers - Deep and Extensive" )
+    C."Age >= 2 months to <60 months" and C."Fever" = true and ("OBSdefine.EmCare.B14S2.DE45" ~ val."Mouth Sores or Mouth Ulcers - Not Deep and Extensive" or "OBSdefine.EmCare.B14S2.DE45" ~ val."Mouth Sores or Mouth Ulcers - Deep and Extensive" )
 
 /* 
 Mouth Sores or Ulcer : DL-G-CL1-106
@@ -1456,14 +1456,14 @@ EmCare.B23.DE60 :
 "Oral Sores or Mouth Ulcers" = "Mouth Sores or Mouth Ulcers - Deep and Extensive"
 */
 define "EmCare.B23.DE60":
-    "OBSdefine.EmCare.B14S2.DE45" = val."Mouth Sores or Mouth Ulcers - Deep and Extensive"
+    "OBSdefine.EmCare.B14S2.DE45" ~ val."Mouth Sores or Mouth Ulcers - Deep and Extensive"
 
 /* 
 DL-G-CL1-108 : 
 C."Age >= 2 months to <60 months" and C."Fever" = true and "Oral Sores or Mouth Ulcers"= v"Oral Thrush"
 */
 define "DL-G-CL1-108":
-    C."Age >= 2 months to <60 months" and C."Fever" = true and "OBSdefine.EmCare.B14S2.DE45"= val."Oral Thrush"
+    C."Age >= 2 months to <60 months" and C."Fever" = true and "OBSdefine.EmCare.B14S2.DE45"~ val."Oral Thrush"
 
 /* 
 Oral Thrush : DL-G-CL1-108

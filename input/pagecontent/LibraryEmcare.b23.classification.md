@@ -28,7 +28,7 @@ required for the execution
 | Observation | EmCare.B11S1.DE01 | boolean/quantity | Diarrhoea |
 | Observation | EmCare.B11S1.DE02 | boolean/quantity | Diarrhoea for how long? |
 | Observation | EmCare.B11S1.DE05 | boolean/quantity | Blood in the stool in this Illness |
-| Observation | EmCare.B6.DE01 | boolean/quantity | Axillary Temperature  (degrees Celcius) |
+| Observation | EmCare.B6.DE01 | boolean/quantity | Axillary Temperature  (degrees Celsius) |
 | Observation | EmCare.B17S1.DE01 | boolean/quantity | Throat problem |
 | Observation | EmCare.B7.DE09 | boolean/quantity | Not able to drink or breastfeed |
 | Observation | EmCare.B17S1.DE07 | boolean/quantity | Ability to swallow |

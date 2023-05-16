@@ -1,0 +1,58 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "motherpresent",
+    "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/motherpresent",
+    "name": "Mother present",
+    "title": "Mother present",
+    "status": "active",
+    "experimental": false,
+    "description": "Mother present",
+    "fhirVersion": "4.0.1",
+    "kind": "complex-type",
+    "abstract": false,
+    "context": [
+        {
+            "type": "element",
+            "expression": "Encounter"
+        }
+    ],
+    "type": "Extension",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Extension",
+                "path": "Extension",
+                "short": "motherpresent",
+                "definition": "Mother present",
+                "min": 1,
+                "max": "1"
+            },
+            {
+                "id": "Extension.extension",
+                "path": "Extension.extension",
+                "min": 1,
+                "max": "1"
+            },
+            {
+                "id": "Extension.url",
+                "path": "Extension.url",
+                "fixedUri": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/motherpresent"
+            },
+            {
+                "id": "Extension.value",
+                "path": "Extension.valueBoolean",
+                "short": "motherpresent",
+                "definition": "Mother present",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "boolean"
+                    }
+                ]
+            }
+        ]
+    }
+}

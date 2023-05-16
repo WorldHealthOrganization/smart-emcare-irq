@@ -2,13 +2,13 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareb1016signs2mp version '1.0.1.rc12.build.610'
+library emcareb1016signs2mp version '1.0.1.rc12.build.681'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.1.rc12.build.610' called Base
-include emcareobservation version '1.0.1.rc12.build.610' called obs
-include emcarevalueset version '1.0.1.rc12.build.610' called val
-include emcarecombineddataelements version '1.0.1.rc12.build.610' called clas
+include emcarebase version '1.0.1.rc12.build.681' called Base
+include emcareobservation version '1.0.1.rc12.build.681' called obs
+include emcarevalueset version '1.0.1.rc12.build.681' called val
+include emcarecombineddataelements version '1.0.1.rc12.build.681' called clas
 
 
 
@@ -59,18 +59,18 @@ define "OBSdefine.EmCare.B7.DE09":
     Base.GetObsValue('EmCare.B7.DE09')
 
 /* 
-OBSdefine.EmCare.B7.DE08 : Unconscious
-
-*/
-define "OBSdefine.EmCare.B7.DE08":
-    Base.GetObsValue('EmCare.B7.DE08')
-
-/* 
 OBSdefine.EmCare.B7.DE08a : Lethargic
 
 */
 define "OBSdefine.EmCare.B7.DE08a":
     Base.GetObsValue('EmCare.B7.DE08a')
+
+/* 
+OBSdefine.EmCare.B7.DE08 : Unconscious
+
+*/
+define "OBSdefine.EmCare.B7.DE08":
+    Base.GetObsValue('EmCare.B7.DE08')
 
 /* 
 OBSdefine.EmCare.B13S1.DE01 : Ear problem
@@ -193,10 +193,10 @@ define "Not able to drink or breastfeed":
 
 /* 
 Unconscious or Lethargic : 
-o"Unconscious" or o"Lethargic"
+o"Lethargic" or o"Unconscious"
 */
 define "Unconscious or Lethargic":
-    "OBSdefine.EmCare.B7.DE08" or "OBSdefine.EmCare.B7.DE08a"
+    "OBSdefine.EmCare.B7.DE08a" or "OBSdefine.EmCare.B7.DE08"
 
 /* 
 Fever : 

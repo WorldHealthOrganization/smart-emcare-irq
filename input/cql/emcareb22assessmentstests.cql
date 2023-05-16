@@ -2,13 +2,13 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareb22assessmentstests version '1.0.1.rc12.build.610'
+library emcareb22assessmentstests version '1.0.1.rc12.build.681'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.1.rc12.build.610' called Base
-include emcareobservation version '1.0.1.rc12.build.610' called obs
-include emcarevalueset version '1.0.1.rc12.build.610' called val
-include emcarecombineddataelements version '1.0.1.rc12.build.610' called c
+include emcarebase version '1.0.1.rc12.build.681' called Base
+include emcareobservation version '1.0.1.rc12.build.681' called obs
+include emcarevalueset version '1.0.1.rc12.build.681' called val
+include emcarecombineddataelements version '1.0.1.rc12.build.681' called c
 
 
 
@@ -165,12 +165,14 @@ define "AgeInDays":
 
 /* 
 a-BreastFeedingTest : 
-    (    AgeInMonths()>=2 and AgeInMonths()<6 and  c."Severe Classification up to assessments and tests excluding Severe Dehydration" !=true)
-     or (    AgeInMonths()<2 and   "Breastfed" = true and c."YI severe classification other than Severe Dehydration" !=true)
+    (Base."Person accompanying child today's Relationship to Client")
+     and ((    AgeInMonths()>=2 and AgeInMonths()<6 and  c."Severe Classification up to assessments and tests excluding Severe Dehydration" !=true)
+     or (    AgeInMonths()<2 and   "Breastfed" = true and c."YI severe classification other than Severe Dehydration" !=true))
 */
 define "a-BreastFeedingTest":
-        (    AgeInMonths()>=2 and AgeInMonths()<6 and  Coalesce(c."Severe Classification up to assessments and tests excluding Severe Dehydration",false)!=true)
-         or (    AgeInMonths()<2 and   "OBSdefine.EmCare.B21S1.DE06" = true and Coalesce(c."YI severe classification other than Severe Dehydration",false)!=true)
+        (Base."Person accompanying child today's Relationship to Client")
+         and ((    AgeInMonths()>=2 and AgeInMonths()<6 and  Coalesce(c."Severe Classification up to assessments and tests excluding Severe Dehydration",false)!=true)
+         or (    AgeInMonths()<2 and   "OBSdefine.EmCare.B21S1.DE06" = true and Coalesce(c."YI severe classification other than Severe Dehydration",false)!=true))
 
 /* 
 applicability-BreastFeedingTest : a-BreastFeedingTest
@@ -212,7 +214,7 @@ a-Hemoglobin :
 "Palmar Pallor" = "Some Palmar Pallor" or "Palmar Pallor" = "Severe Palmar Pallor" or "Mucous membrane pallor" = "Some mucous membrane pallor" or "Mucous membrane pallor" = "Severe mucous membrane pallor"
 */
 define "a-Hemoglobin":
-    "OBSdefine.EmCare.B15S2.DE01" = val."Some Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE01" = val."Severe Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE09" = val."Some mucous membrane pallor" or "OBSdefine.EmCare.B15S2.DE09" = val."Severe mucous membrane pallor"
+    "OBSdefine.EmCare.B15S2.DE01" ~ val."Some Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE01" ~ val."Severe Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE09" ~ val."Some mucous membrane pallor" or "OBSdefine.EmCare.B15S2.DE09" ~ val."Severe mucous membrane pallor"
 
 /* 
 applicability-Hemoglobin : a-Hemoglobin
@@ -223,10 +225,10 @@ define "applicability-Hemoglobin":
 
 /* 
 a-SecondTemperature : 
-c."PSBI other than temperature" != true and AgeInMonths()<2 and "Measured Temperature" in {v"Low",v"High", v"Very High"}
+(c."PSBI other than temperature" != true) and (AgeInMonths()<2) and ( (o"Measured Temperature" ~ v"Low") or (o"Measured Temperature" ~ v"High") or  (o"Measured Temperature" ~ v"Very High"))
 */
 define "a-SecondTemperature":
-    Coalesce(c."PSBI other than temperature",false)!=true and AgeInMonths()<2 and "OBSdefine.EmCare.B6.DE01A" in {val."Low",val."High", val."Very High"}
+    (Coalesce(c."PSBI other than temperature",false)!=true) and (AgeInMonths()<2) and ( ("OBSdefine.EmCare.B6.DE01A" ~ val."Low") or ("OBSdefine.EmCare.B6.DE01A" ~ val."High") or  ("OBSdefine.EmCare.B6.DE01A" ~ val."Very High"))
 
 /* 
 applicability-SecondTemperature : a-SecondTemperature

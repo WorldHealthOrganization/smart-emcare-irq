@@ -100,20 +100,16 @@ group emcarepatient(source src : questionnaireResponse,target tgt : Patient){
     src.item first as item  where linkId = 'EmCare.A.DE48' and answer.exists() then {
         item.answer first as a -> tgt.extension = create('Extension') as ext ,  ext.url ='https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/primarycaregiver', ext.value= create('Reference') as ref, ref.reference = 'relatated-person-id' 'aemcareade48';
     } '04772b09';
-    src.item first as itm1  where linkId =  'EmCare.A.DE21.1' then {
-        itm1.item first as item  where linkId =  'EmCare.A.DE31' and answer.exists() then {
-            item.answer first as a then {
-                a.value as val -> tgt.extension = create('Extension') as ext ,  ext.url ='https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Extension/motherVitalStatus', ext.value= val 'aemcareade31';
-            } 'aemcareade31';
-        } '7f408694';
-    } '39f45e5d';
-    src.item first as itm1  where linkId =  'EmCare.A.DE21.1' then {
-        itm1.item first as item  where linkId =  'EmCare.A.DE32' and answer.exists() then {
-            item.answer first as a then {
-                a.value as val -> tgt.extension = create('Extension') as ext ,  ext.url ='https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Extension/fatherVitalStatus', ext.value= val 'aemcareade32';
-            } 'aemcareade32';
-        } '06ec2524';
-    } 'f7424037';
+    src.item first as item  where linkId = 'EmCare.A.DE31' and answer.exists() then {
+        item.answer first as a then {
+            a.value as val -> tgt.extension = create('Extension') as ext ,  ext.url ='https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Extension/motherVitalStatus', ext.value= val 'aemcareade31';
+        } 'aemcareade31';
+    } 'c51d4b4c';
+    src.item first as item  where linkId = 'EmCare.A.DE32' and answer.exists() then {
+        item.answer first as a then {
+            a.value as val -> tgt.extension = create('Extension') as ext ,  ext.url ='https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Extension/fatherVitalStatus', ext.value= val 'aemcareade32';
+        } 'aemcareade32';
+    } '7c50806d';
 }
 
 group SetOfficalGivenNamerelatedperson(source src,target tgt){

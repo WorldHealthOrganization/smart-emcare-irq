@@ -59,7 +59,7 @@
                 }
             ],
             "linkId": "EmCare.B6.DE01",
-            "text": "Axillary Temperature  (degrees Celcius)",
+            "text": "Axillary Temperature  (degrees Celsius)",
             "type": "quantity",
             "required": true,
             "repeats": false,
@@ -79,7 +79,7 @@
                         }
                     ],
                     "linkId": "EmCare.B6.DE01-help",
-                    "text": "The client&#8217;s axillary temperature in degrees Celcius (temperature taken under the armpit)<br />\nWarning/error if above 45 and below 32 degrees Celcius.",
+                    "text": "The client&#8217;s axillary temperature in degrees Celsius (temperature taken under the armpit)<br />\nWarning/error if above 45 and below 32 degrees Celsius.",
                     "type": "display"
                 }
             ]
@@ -179,7 +179,7 @@
                         }
                     ],
                     "linkId": "EmCare.B6.DE01A-help",
-                    "text": "The client&#8217;s axillary temperature in degrees Celcius (temperature taken under the armpit)",
+                    "text": "The client&#8217;s axillary temperature in degrees Celsius (temperature taken under the armpit)",
                     "type": "display"
                 }
             ]
@@ -747,7 +747,7 @@
                             "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                             "valueExpression": {
                                 "language": "text/fhirpath",
-                                "expression": "%resource.repeat(item).where(linkId='AgeInMonths').answer.first().value>=2 and %resource.repeat(item).where(linkId='EmCare.B6.DE07').answer.first().value =true and %resource.repeat(item).where(linkId='pastWeightActualised').answer.first().empty() and (%resource.repeat(item).where(linkId='AgeInMonths').answer.first().value < 6 'months' or (%resource.repeat(item).where(linkId='AgeInMonths').answer.first().value >=6 'months' and %resource.repeat(item).where(linkId='HeightOrLength').repeat(item).where(linkId='EmCare.B6.DE17').answer.first().empty()))"
+                                "expression": "%resource.repeat(item).where(linkId='AgeInMonths').answer.first().value>=2 and (%resource.repeat(item).where(linkId='AgeInMonths').answer.first().value < 6 'months' or (%resource.repeat(item).where(linkId='AgeInMonths').answer.first().value >=6 'months' and %resource.repeat(item).where(linkId='HeightOrLength').repeat(item).where(linkId='EmCare.B6.DE17').answer.first().empty()))"
                             }
                         }
                     ],

@@ -3,7 +3,7 @@
     "id": "emcare.b22.secondtemperature",
     "text": {
         "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><pre>map &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcare.b22.secondtemperature&quot; = &quot;emcare.b22.secondtemperature&quot;\r\n\r\n\r\nuses &quot;http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse&quot; alias 'questionnaireResponse' as source\r\nuses &quot;http://hl7.org/fhir/StructureDefinition/Bundle&quot; alias 'Bundle' as target\r\nuses &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/observation&quot; alias 'Observation' as target\r\nuses &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation&quot; alias 'EmCare Observation' as produced\r\n\r\ngroup bundletrans(source src : questionnaireResponse, target bundle : Bundle) {\r\n  src -&gt; bundle.id = uuid() &quot;id&quot;;\r\n  src -&gt; bundle.type = 'batch' &quot;type&quot;;\r\n  src.item first as item where (linkId = 'EmCare.B22.DE47') and answer.exists() then {\r\n    src -&gt; bundle.entry as entry then {\r\n      src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n      src -&gt; entry.resource = create('Observation') as tgt then {\r\n        src -&gt; tgt then emcareobservationemcareb22de47(src, tgt) &quot;27e1ae58&quot;;\r\n      } &quot;68ad31bf&quot;;\r\n    } &quot;6ac0c1c9&quot;;\r\n  } &quot;921b6c4e&quot;;\r\n  src.item first as item where (linkId = 'EmCare.B22.DE46') and answer.exists() then {\r\n    src -&gt; bundle.entry as entry then {\r\n      src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n      src -&gt; entry.resource = create('Observation') as tgt then {\r\n        src -&gt; tgt then emcareobservationemcareb22de46(src, tgt) &quot;d4ea6333&quot;;\r\n      } &quot;1ee0adeb&quot;;\r\n    } &quot;9266b262&quot;;\r\n  } &quot;822ffc0d&quot;;\r\n  src.item first as item where (linkId = 'EmCare.B22.DE50') and answer.exists() then {\r\n    src -&gt; bundle.entry as entry then {\r\n      src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n      src -&gt; entry.resource = create('Observation') as tgt then {\r\n        src -&gt; tgt then emcareobservationemcareb22de50(src, tgt) &quot;b5c48578&quot;;\r\n      } &quot;1d3deeec&quot;;\r\n    } &quot;82120e52&quot;;\r\n  } &quot;7a077eb8&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb22de47(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareb22de47&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B22.DE47' &quot;code-emcareb22de47&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src.item first as item where (linkId = 'EmCare.B22.DE47') and answer.exists() then {\r\n    item.answer first as a then {\r\n      a.value as val -&gt;  tgt.value = val,  tgt.status = 'final' &quot;afa0ccc0&quot;;\r\n    } &quot;d40466ff&quot;;\r\n  } &quot;48393240&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb22de46(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareb22de46&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B22.DE46' &quot;code-emcareb22de46&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src.item first as item where (linkId = 'EmCare.B22.DE46') and answer.exists() then {\r\n    item.answer first as a then {\r\n      a.value as val then {\r\n        val where val.code = 'true' -&gt;  tgt.status = 'final',  tgt.value = true &quot;8a65aaa5&quot;;\r\n      } &quot;26c2c8c7&quot;;\r\n    } &quot;721205d5&quot;;\r\n  } &quot;a4475795&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb22de50(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareb22de50&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B22.DE50' &quot;code-emcareb22de50&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src.item first as item where (linkId = 'EmCare.B22.DE50') and answer.exists() then {\r\n    item.answer first as a then {\r\n      a.value as val then {\r\n        val -&gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = create('Coding') as c,  c.code = val,  c.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  tgt.status = 'final' &quot;759a9a54&quot;;\r\n      } &quot;1b820ab0&quot;;\r\n    } &quot;d39f9088&quot;;\r\n  } &quot;7972a70f&quot;;\r\n}\r\n\r\n</pre></div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><pre>map &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcare.b22.secondtemperature&quot; = &quot;emcare.b22.secondtemperature&quot;\r\n\r\n\r\nuses &quot;http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse&quot; alias 'questionnaireResponse' as source\r\nuses &quot;http://hl7.org/fhir/StructureDefinition/Bundle&quot; alias 'Bundle' as target\r\nuses &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/observation&quot; alias 'Observation' as target\r\nuses &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation&quot; alias 'EmCare Observation' as produced\r\n\r\ngroup bundletrans(source src : questionnaireResponse, target bundle : Bundle) {\r\n  src -&gt; bundle.id = uuid() &quot;id&quot;;\r\n  src -&gt; bundle.type = 'batch' &quot;type&quot;;\r\n  src.item first as item where (linkId = 'EmCare.B22.DE47') and answer.exists() then {\r\n    src -&gt; bundle.entry as entry then {\r\n      src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n      src -&gt; entry.resource = create('Observation') as tgt then {\r\n        src -&gt; tgt then emcareobservationemcareb22de47(src, tgt) &quot;27e1ae58&quot;;\r\n      } &quot;68ad31bf&quot;;\r\n    } &quot;6ac0c1c9&quot;;\r\n  } &quot;921b6c4e&quot;;\r\n  src.item first as item where (linkId = 'EmCare.B22.DE46') and answer.exists() then {\r\n    src -&gt; bundle.entry as entry then {\r\n      src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n      src -&gt; entry.resource = create('Observation') as tgt then {\r\n        src -&gt; tgt then emcareobservationemcareb22de46(src, tgt) &quot;d4ea6333&quot;;\r\n      } &quot;1ee0adeb&quot;;\r\n    } &quot;9266b262&quot;;\r\n  } &quot;822ffc0d&quot;;\r\n  src.item first as item where (linkId = 'EmCare.B22.DE50') and answer.exists() then {\r\n    src -&gt; bundle.entry as entry then {\r\n      src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n      src -&gt; entry.resource = create('Observation') as tgt then {\r\n        src -&gt; tgt then emcareobservationemcareb22de50(src, tgt) &quot;b5c48578&quot;;\r\n      } &quot;1d3deeec&quot;;\r\n    } &quot;82120e52&quot;;\r\n  } &quot;7a077eb8&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb22de47(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareb22de47&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B22.DE47' &quot;code-emcareb22de47&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src.item first as item where (linkId = 'EmCare.B22.DE47') and answer.exists() then {\r\n    item.answer first as a then {\r\n      a.value as val -&gt;  tgt.value = val,  tgt.status = 'final' &quot;afa0ccc0&quot;;\r\n    } &quot;d40466ff&quot;;\r\n  } &quot;48393240&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb22de46(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareb22de46&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B22.DE46' &quot;code-emcareb22de46&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src.item first as item where (linkId = 'EmCare.B22.DE46') and answer.exists() then {\r\n    item.answer first as a then {\r\n      a.value as val then {\r\n        val where val.code = 'true' -&gt;  tgt.status = 'final',  tgt.value = true &quot;8a65aaa5&quot;;\r\n      } &quot;26c2c8c7&quot;;\r\n    } &quot;721205d5&quot;;\r\n  } &quot;a4475795&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb22de50(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareobservationemcareb22de50&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B22.DE50' &quot;code-emcareobservationemcareb22de50&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src.item first as item where (linkId = 'EmCare.B22.DE50') and answer.exists() then {\r\n    item.answer first as a then {\r\n      a where value = 'Low' then {\r\n        a -&gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = create('Coding') as c,  c.code = 'Low',  c.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  tgt.status = 'final' &quot;39bed5a8&quot;;\r\n      } &quot;0d62a7d5&quot;;\r\n      a where value = 'Normal' then {\r\n        a -&gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = create('Coding') as c,  c.code = 'Normal',  c.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  tgt.status = 'final' &quot;b8751742&quot;;\r\n      } &quot;bb598fe1&quot;;\r\n      a where value = 'High' then {\r\n        a -&gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = create('Coding') as c,  c.code = 'High',  c.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  tgt.status = 'final' &quot;132dd3b6&quot;;\r\n      } &quot;a686e7ab&quot;;\r\n      a where value = 'Very High' then {\r\n        a -&gt;  tgt.value = create('CodeableConcept') as cc,  cc.coding = create('Coding') as c,  c.code = 'Very High',  c.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  tgt.status = 'final' &quot;88cecd22&quot;;\r\n      } &quot;309aca0d&quot;;\r\n    } &quot;fa15cb3f&quot;;\r\n  } &quot;d97eb376&quot;;\r\n}\r\n\r\n</pre></div>"
     },
     "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcare.b22.secondtemperature",
     "name": "emcare.b22.secondtemperature",
@@ -1152,7 +1152,7 @@
             ],
             "rule": [
                 {
-                    "name": "id-emcareb22de50",
+                    "name": "id-emcareobservationemcareb22de50",
                     "source": [
                         {
                             "context": "src"
@@ -1236,7 +1236,7 @@
                     ]
                 },
                 {
-                    "name": "code-emcareb22de50",
+                    "name": "code-emcareobservationemcareb22de50",
                     "source": [
                         {
                             "context": "src",
@@ -1400,7 +1400,7 @@
                     ]
                 },
                 {
-                    "name": "7972a70f",
+                    "name": "d97eb376",
                     "source": [
                         {
                             "context": "src",
@@ -1412,7 +1412,7 @@
                     ],
                     "rule": [
                         {
-                            "name": "d39f9088",
+                            "name": "fa15cb3f",
                             "source": [
                                 {
                                     "context": "item",
@@ -1423,20 +1423,19 @@
                             ],
                             "rule": [
                                 {
-                                    "name": "1b820ab0",
+                                    "name": "0d62a7d5",
                                     "source": [
                                         {
                                             "context": "a",
-                                            "element": "value",
-                                            "variable": "val"
+                                            "condition": "value = 'Low'"
                                         }
                                     ],
                                     "rule": [
                                         {
-                                            "name": "759a9a54",
+                                            "name": "39bed5a8",
                                             "source": [
                                                 {
-                                                    "context": "val"
+                                                    "context": "a"
                                                 }
                                             ],
                                             "target": [
@@ -1471,7 +1470,241 @@
                                                     "transform": "copy",
                                                     "parameter": [
                                                         {
-                                                            "valueId": "val"
+                                                            "valueString": "Low"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "context": "c",
+                                                    "contextType": "variable",
+                                                    "element": "system",
+                                                    "transform": "copy",
+                                                    "parameter": [
+                                                        {
+                                                            "valueString": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "context": "tgt",
+                                                    "contextType": "variable",
+                                                    "element": "status",
+                                                    "transform": "copy",
+                                                    "parameter": [
+                                                        {
+                                                            "valueString": "final"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "bb598fe1",
+                                    "source": [
+                                        {
+                                            "context": "a",
+                                            "condition": "value = 'Normal'"
+                                        }
+                                    ],
+                                    "rule": [
+                                        {
+                                            "name": "b8751742",
+                                            "source": [
+                                                {
+                                                    "context": "a"
+                                                }
+                                            ],
+                                            "target": [
+                                                {
+                                                    "context": "tgt",
+                                                    "contextType": "variable",
+                                                    "element": "value",
+                                                    "variable": "cc",
+                                                    "transform": "create",
+                                                    "parameter": [
+                                                        {
+                                                            "valueString": "CodeableConcept"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "context": "cc",
+                                                    "contextType": "variable",
+                                                    "element": "coding",
+                                                    "variable": "c",
+                                                    "transform": "create",
+                                                    "parameter": [
+                                                        {
+                                                            "valueString": "Coding"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "context": "c",
+                                                    "contextType": "variable",
+                                                    "element": "code",
+                                                    "transform": "copy",
+                                                    "parameter": [
+                                                        {
+                                                            "valueString": "Normal"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "context": "c",
+                                                    "contextType": "variable",
+                                                    "element": "system",
+                                                    "transform": "copy",
+                                                    "parameter": [
+                                                        {
+                                                            "valueString": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "context": "tgt",
+                                                    "contextType": "variable",
+                                                    "element": "status",
+                                                    "transform": "copy",
+                                                    "parameter": [
+                                                        {
+                                                            "valueString": "final"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "a686e7ab",
+                                    "source": [
+                                        {
+                                            "context": "a",
+                                            "condition": "value = 'High'"
+                                        }
+                                    ],
+                                    "rule": [
+                                        {
+                                            "name": "132dd3b6",
+                                            "source": [
+                                                {
+                                                    "context": "a"
+                                                }
+                                            ],
+                                            "target": [
+                                                {
+                                                    "context": "tgt",
+                                                    "contextType": "variable",
+                                                    "element": "value",
+                                                    "variable": "cc",
+                                                    "transform": "create",
+                                                    "parameter": [
+                                                        {
+                                                            "valueString": "CodeableConcept"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "context": "cc",
+                                                    "contextType": "variable",
+                                                    "element": "coding",
+                                                    "variable": "c",
+                                                    "transform": "create",
+                                                    "parameter": [
+                                                        {
+                                                            "valueString": "Coding"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "context": "c",
+                                                    "contextType": "variable",
+                                                    "element": "code",
+                                                    "transform": "copy",
+                                                    "parameter": [
+                                                        {
+                                                            "valueString": "High"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "context": "c",
+                                                    "contextType": "variable",
+                                                    "element": "system",
+                                                    "transform": "copy",
+                                                    "parameter": [
+                                                        {
+                                                            "valueString": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "context": "tgt",
+                                                    "contextType": "variable",
+                                                    "element": "status",
+                                                    "transform": "copy",
+                                                    "parameter": [
+                                                        {
+                                                            "valueString": "final"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "309aca0d",
+                                    "source": [
+                                        {
+                                            "context": "a",
+                                            "condition": "value = 'Very High'"
+                                        }
+                                    ],
+                                    "rule": [
+                                        {
+                                            "name": "88cecd22",
+                                            "source": [
+                                                {
+                                                    "context": "a"
+                                                }
+                                            ],
+                                            "target": [
+                                                {
+                                                    "context": "tgt",
+                                                    "contextType": "variable",
+                                                    "element": "value",
+                                                    "variable": "cc",
+                                                    "transform": "create",
+                                                    "parameter": [
+                                                        {
+                                                            "valueString": "CodeableConcept"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "context": "cc",
+                                                    "contextType": "variable",
+                                                    "element": "coding",
+                                                    "variable": "c",
+                                                    "transform": "create",
+                                                    "parameter": [
+                                                        {
+                                                            "valueString": "Coding"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "context": "c",
+                                                    "contextType": "variable",
+                                                    "element": "code",
+                                                    "transform": "copy",
+                                                    "parameter": [
+                                                        {
+                                                            "valueString": "Very High"
                                                         }
                                                     ]
                                                 },

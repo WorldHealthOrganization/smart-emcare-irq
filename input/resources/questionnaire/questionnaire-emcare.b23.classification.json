@@ -2668,6 +2668,62 @@
                         "display": "Disagree"
                     }
                 }
+            ],
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-display-category",
+                                        "code": "instructions"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                            "valueExpression": {
+                                "language": "text/fhirpath",
+                                "expression": "%resource.repeat(item).where(linkId='EmCare.B23.DE48').answer.first().value = true"
+                            }
+                        }
+                    ],
+                    "linkId": "DL-G-CL1-94",
+                    "text": "with eye involvement",
+                    "type": "display",
+                    "required": false,
+                    "repeats": false
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-display-category",
+                                        "code": "instructions"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                            "valueExpression": {
+                                "language": "text/fhirpath",
+                                "expression": "%resource.repeat(item).where(linkId='EmCare.B23.DE48a').answer.first().value = true"
+                            }
+                        }
+                    ],
+                    "linkId": "DL-I-CL1-17XX",
+                    "text": "with Disseminated Herpes Zoste",
+                    "type": "display",
+                    "required": false,
+                    "repeats": false
+                }
             ]
         },
         {
@@ -2696,33 +2752,6 @@
         {
             "extension": [
                 {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory",
-                    "valueCodeableConcept": {
-                        "coding": [
-                            {
-                                "system": "http://hl7.org/fhir/questionnaire-display-category",
-                                "code": "instructions"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
-                    "valueExpression": {
-                        "language": "text/fhirpath",
-                        "expression": "%resource.repeat(item).where(linkId='EmCare.B23.DE48').answer.first().value = true"
-                    }
-                }
-            ],
-            "linkId": "DL-G-CL1-94",
-            "text": "with eye involvement",
-            "type": "display",
-            "required": false,
-            "repeats": false
-        },
-        {
-            "extension": [
-                {
                     "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
                     "valueCode": "horizontal"
                 },
@@ -2740,33 +2769,6 @@
             ],
             "linkId": "EmCare.B23.DE48a",
             "type": "boolean",
-            "required": false,
-            "repeats": false
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory",
-                    "valueCodeableConcept": {
-                        "coding": [
-                            {
-                                "system": "http://hl7.org/fhir/questionnaire-display-category",
-                                "code": "instructions"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
-                    "valueExpression": {
-                        "language": "text/fhirpath",
-                        "expression": "%resource.repeat(item).where(linkId='EmCare.B23.DE48a').answer.first().value = true"
-                    }
-                }
-            ],
-            "linkId": "DL-I-CL1-17XX",
-            "text": "with Disseminated Herpes Zoste",
-            "type": "display",
             "required": false,
             "repeats": false
         },

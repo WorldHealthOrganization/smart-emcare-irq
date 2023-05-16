@@ -8,7 +8,7 @@
             "value": "emcare.b18-21.symptoms.2m.m"
         }
     ],
-    "version": "1.0.1.rc12.build.610",
+    "version": "1.0.1.rc12.build.681",
     "name": "emcareb1821symptoms2mm",
     "title": "EmCare.B18-21.Symptoms.2m.m",
     "status": "active",
@@ -40,6 +40,11 @@
     ],
     "parameter": [
         {
+            "name": "AgeInMonths",
+            "use": "out",
+            "type": "integer"
+        },
+        {
             "name": "Convulsing Now",
             "use": "out",
             "type": "boolean"
@@ -49,7 +54,7 @@
         {
             "id": "ig-loader-emcareb1821symptoms2mm.cql",
             "contentType": "text/cql",
-            "data": "LyoKQGF1dGhvcjogUGF0cmljayBEZWxjcm9peApAZGVzY3JpcHRpb246IFRoaXMgbGlicmFyeSBpcyBwYXJ0IG9mIHRoZSBwcm9qZWN0IEVtQ2FyZQoqLwpsaWJyYXJ5IGVtY2FyZWIxODIxc3ltcHRvbXMybW0gdmVyc2lvbiAnMS4wLjEucmMxMi5idWlsZC42MTAnCnVzaW5nIEZISVIgdmVyc2lvbiAnNC4wLjEnCmluY2x1ZGUgRkhJUkhlbHBlcnMgdmVyc2lvbiAnNC4wLjEnIGNhbGxlZCBGSElSSGVscGVycyAKaW5jbHVkZSBlbWNhcmViYXNlIHZlcnNpb24gJzEuMC4xLnJjMTIuYnVpbGQuNjEwJyBjYWxsZWQgQmFzZQppbmNsdWRlIGVtY2FyZW9ic2VydmF0aW9uIHZlcnNpb24gJzEuMC4xLnJjMTIuYnVpbGQuNjEwJyBjYWxsZWQgb2JzCmluY2x1ZGUgZW1jYXJldmFsdWVzZXQgdmVyc2lvbiAnMS4wLjEucmMxMi5idWlsZC42MTAnIGNhbGxlZCB2YWwKCgoKCmNvbnRleHQgUGF0aWVudAoKCi8qIApPQlNkZWZpbmUuRW1DYXJlLkI3LkRFMDIgOiBDb252dWxzaW5nIE5vdwoKKi8KZGVmaW5lICJPQlNkZWZpbmUuRW1DYXJlLkI3LkRFMDIiOgogICAgQmFzZS5HZXRPYnNWYWx1ZSgnRW1DYXJlLkI3LkRFMDInKQoKLyogCkNvbnZ1bHNpbmcgTm93IDogCm8iQ29udnVsc2luZyBOb3ciCiovCmRlZmluZSAiQ29udnVsc2luZyBOb3ciOgogICAgIk9CU2RlZmluZS5FbUNhcmUuQjcuREUwMiIKCi8qIApCYWNrUmVmZXJlbmNlIDogCmJhY2sgcmVmZXJlbmNlIHRvIHJlc291cmNlCiovCmRlZmluZSAiQmFja1JlZmVyZW5jZSI6CiAgICBSZWZlcmVuY2Uge3JlZmVyZW5jZTogc3RyaW5nIHsgdmFsdWU6ICdRdWVzdGlvbm5haXJlL0VtQ2FyZS5CMTgtMjEuU3ltcHRvbXMuMm0ubSd9fQo="
+            "data": "LyoKQGF1dGhvcjogUGF0cmljayBEZWxjcm9peApAZGVzY3JpcHRpb246IFRoaXMgbGlicmFyeSBpcyBwYXJ0IG9mIHRoZSBwcm9qZWN0IEVtQ2FyZQoqLwpsaWJyYXJ5IGVtY2FyZWIxODIxc3ltcHRvbXMybW0gdmVyc2lvbiAnMS4wLjEucmMxMi5idWlsZC42ODEnCnVzaW5nIEZISVIgdmVyc2lvbiAnNC4wLjEnCmluY2x1ZGUgRkhJUkhlbHBlcnMgdmVyc2lvbiAnNC4wLjEnIGNhbGxlZCBGSElSSGVscGVycyAKaW5jbHVkZSBlbWNhcmViYXNlIHZlcnNpb24gJzEuMC4xLnJjMTIuYnVpbGQuNjgxJyBjYWxsZWQgQmFzZQppbmNsdWRlIGVtY2FyZW9ic2VydmF0aW9uIHZlcnNpb24gJzEuMC4xLnJjMTIuYnVpbGQuNjgxJyBjYWxsZWQgb2JzCmluY2x1ZGUgZW1jYXJldmFsdWVzZXQgdmVyc2lvbiAnMS4wLjEucmMxMi5idWlsZC42ODEnIGNhbGxlZCB2YWwKCgoKCmNvbnRleHQgUGF0aWVudAoKCi8qIApPQlNkZWZpbmUuRW1DYXJlLkI3LkRFMDIgOiBDb252dWxzaW5nIE5vdwoKKi8KZGVmaW5lICJPQlNkZWZpbmUuRW1DYXJlLkI3LkRFMDIiOgogICAgQmFzZS5HZXRPYnNWYWx1ZSgnRW1DYXJlLkI3LkRFMDInKQoKLyogCkFnZUluTW9udGhzIDogCkFnZUluTW9udGhzKCkKKi8KZGVmaW5lICJBZ2VJbk1vbnRocyI6CiAgICBBZ2VJbk1vbnRocygpCgovKiAKQWdlIGluIE1vbnRoIDogQWdlSW5Nb250aHMKQWxpYXMKKi8KZGVmaW5lICJBZ2UgaW4gTW9udGgiOgogICAgIkFnZUluTW9udGhzIgoKLyogCkNvbnZ1bHNpbmcgTm93IDogCm8iQ29udnVsc2luZyBOb3ciCiovCmRlZmluZSAiQ29udnVsc2luZyBOb3ciOgogICAgIk9CU2RlZmluZS5FbUNhcmUuQjcuREUwMiIKCi8qIApCYWNrUmVmZXJlbmNlIDogCmJhY2sgcmVmZXJlbmNlIHRvIHJlc291cmNlCiovCmRlZmluZSAiQmFja1JlZmVyZW5jZSI6CiAgICBSZWZlcmVuY2Uge3JlZmVyZW5jZTogc3RyaW5nIHsgdmFsdWU6ICdRdWVzdGlvbm5haXJlL0VtQ2FyZS5CMTgtMjEuU3ltcHRvbXMuMm0ubSd9fQo="
         }
     ]
 }

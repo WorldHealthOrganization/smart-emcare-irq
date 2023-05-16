@@ -3,7 +3,7 @@
 @description: This library is part of the project EmCare Project, its allows standardisation for the observation processing
 */
 
-library emcarebase version '1.0.1.rc12.build.610'
+library emcarebase version '1.0.1.rc12.build.681'
 
 using FHIR version '4.0.1'
 
@@ -47,10 +47,18 @@ define getEncounter:
 
 define function EmCareExtensions(element Patient, id String):
   element.extension E
-      where E.url = ('https://fhir.dk.swisstph-mis.ch/matchbox/fhir//StructureDefinition/' + id)
+      where E.url = ('https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/' + id)
       return E
 
 define function EmCareExtension(element Patient, id String):
+  singleton from EmCareExtensions(element, id)
+
+define function EmCareExtensions(element Encounter, id String):
+  element.extension E
+      where E.url = ('https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/' + id)
+      return E
+
+define function EmCareExtension(element Encounter, id String):
   singleton from EmCareExtensions(element, id)
 
 define getPrimaryCareGiverReference:
@@ -82,7 +90,9 @@ define getRelatedPersonAccompanyingTheChild:
 
 
 define "Person accompanying child today's Relationship to Client":
-  getRelatedPersonAccompanyingTheChild.relationship
+//WORKARROUND   getRelatedPersonAccompanyingTheChild.relationship
+  EmCareExtension(getEncounter, 'motherpresent').value
+
 
 
 

@@ -150,7 +150,7 @@
                         }
                     ],
                     "linkId": "EmCare.C10.IT.DE05",
-                    "text": "<h1>Severe Dehydration</h1>\n\n\t<p>\u27a2 If child has no other severe classification:* Give fluid for Severe Dehydration (plan C) OR</p>\n\n\t<p>\u27a2 <b>If child also has another severe classification:</b></p>\n\n    * <b>Refer <span class=\"caps\">URGENTLY</span> to hospital with mother giving frequent sips of <span class=\"caps\">ORS</span> on the way.</b>\n    * <b>Advise the mother to continue breastfeeding.</b>\n\n\t<p>\u27a2If child is 2 years or older and there is cholera in your area, give oral co-trimoxazole twice daily for 3 days or oral erythromycin 4 times a day for 3 days for cholera.</p>",
+                    "text": "<h1>Severe Dehydration</h1>\n\n\t<p>\u27a2 If child has no other severe classification:</p>\n\n\t<ul>\n\t\t<li>Give fluid for Severe Dehydration (plan C) OR</li>\n\t</ul>\n\n\t<p>\u27a2 <b>If child also has another severe classification:</b></p>\n\n\t<ul>\n\t\t<li><b>Refer <span class=\"caps\">URGENTLY</span> to hospital with mother giving frequent sips of <span class=\"caps\">ORS</span> on the way.</b></li>\n\t\t<li><b>Advise the mother to continue breastfeeding.</b></li>\n\t</ul>\n\n\t<p>\u27a2If child is 2 years or older and there is cholera in your area, give oral co-trimoxazole twice daily for 3 days or oral erythromycin 4 times a day for 3 days for cholera.</p>",
                     "type": "display",
                     "required": false,
                     "repeats": false
@@ -342,7 +342,7 @@
                         }
                     ],
                     "linkId": "EmCare.C10.IT.DE17",
-                    "text": "<h1>Acute Ear Infection</h1>\n\n\t<p>\u27a2 <b>Give an appropriate oral antibiotic:</b></p>\n\n\t<p>\u00a0\u00a0\u00a0\u00a0 * <b>First-line: Oral Amoxicillin twice daily for 10 days</b>\n\u00a0\u00a0\u00a0\u00a0 * <b>Second-line: Oral Co-trimoxazole twice daily for 10 days</b>\n\u00a0\u00a0\u00a0\u00a0 * <b>If allergic to amoxicillin and co-trimoxazole, give Oral Erythromycin 4 times daily for 10 days</b></p>\n\n\t<p>\u27a2 <b>Give oral paracetamol for pain or high fever (38.5\u00b0C or above), continue to give every 6 hours (4 times / day) until pain/high fever gone.</b></p>\n\n\t<p>\u27a2 If Ear discharge: Dry the ear by wicking at least 3 times daily</p>\n\n\t<p>\u27a2 Advise the mother when to return immediately.</p>\n\n\t<p>\u27a2 Follow-up in 5 days</p>",
+                    "text": "<h1>Acute Ear Infection</h1>\n\n\t<p>\u27a2 <b>Give an appropriate oral antibiotic:</b></p>\n\n\t<ul>\n\t\t<li><b>First-line: Oral Amoxicillin twice daily for 10 days</b></li>\n\t\t<li><b>Second-line: Oral Co-trimoxazole twice daily for 10 days</b></li>\n\t\t<li><b>If allergic to amoxicillin and co-trimoxazole, give Oral Erythromycin 4 times daily for 10 days</b></li>\n\t</ul>\n\n\t<p>\u27a2 <b>Give oral paracetamol for pain or high fever (38.5\u00b0C or above), continue to give every 6 hours (4 times / day) until pain/high fever gone.</b></p>\n\n\t<p>\u27a2 If Ear discharge: Dry the ear by wicking at least 3 times daily</p>\n\n\t<p>\u27a2 Advise the mother when to return immediately.</p>\n\n\t<p>\u27a2 Follow-up in 5 days</p>",
                     "type": "display",
                     "required": false,
                     "repeats": false

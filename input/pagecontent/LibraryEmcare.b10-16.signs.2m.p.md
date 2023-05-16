@@ -10,8 +10,8 @@ required for the execution
 | Observation | EmCare.B22.DE08&EmCare.B22.DE14a | boolean/quantity | Oral Fluid Test Results:Completely Unable to Drink or Vomits Immediately / Everything |
 | Observation | EmCare.B11S1.DE01 | boolean/quantity | Diarrhoea |
 | Observation | EmCare.B7.DE09 | boolean/quantity | Not able to drink or breastfeed |
-| Observation | EmCare.B7.DE08 | boolean/quantity | Unconscious |
 | Observation | EmCare.B7.DE08a | boolean/quantity | Lethargic |
+| Observation | EmCare.B7.DE08 | boolean/quantity | Unconscious |
 | Observation | EmCare.B13S1.DE01 | boolean/quantity | Ear problem |
 | Observation | EmCare.B14S1.DE03 | boolean/quantity | Eye Problem |
 | Observation | EmCare.B14S1.DE01 | boolean/quantity | Skin Problem |

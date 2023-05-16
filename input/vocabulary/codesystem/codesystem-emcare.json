@@ -94,6 +94,11 @@
             "definition": "The relationship of the Caregiver to the client"
         },
         {
+            "code": "EmCare.A.DE38",
+            "display": "Caregiver wants to receive SMS or other messages regarding the child's visits and health status",
+            "definition": "The Caregiver wants to receive SMS or other messages regarding the client's contacts/visits and health status"
+        },
+        {
             "code": "EmCare.A.DE31",
             "display": "Biological Mother Vital Status",
             "definition": "The client's mother and father's vital status"
@@ -102,11 +107,6 @@
             "code": "EmCare.A.DE32",
             "display": "Biological Father Vital Status",
             "definition": "The client's mother and father's vital status"
-        },
-        {
-            "code": "EmCare.A.DE38",
-            "display": "Caregiver wants to receive SMS or other messages regarding the child's visits and health status",
-            "definition": "The Caregiver wants to receive SMS or other messages regarding the client's contacts/visits and health status"
         },
         {
             "code": "EmCare.B3.DE01",
@@ -122,6 +122,33 @@
             "code": "EmCare.B3.DE06",
             "display": "Type of Consultation",
             "definition": "The client's visit is for a new consultation"
+        },
+        {
+            "code": "EmCare.A.DE39",
+            "display": "Is the mother accompanying the child today?"
+        },
+        {
+            "code": "emcarerelatedpersoncaregiverid"
+        },
+        {
+            "code": "EmCare.A.DE40",
+            "display": "Person/People accompanying child First Name",
+            "definition": "The client's Caregiver's first name"
+        },
+        {
+            "code": "EmCare.A.DE41",
+            "display": "Person/People accompanying child Middle Name",
+            "definition": "The client's Caregiver's middle name"
+        },
+        {
+            "code": "EmCare.A.DE42",
+            "display": "Person/People accompanying child Last Name",
+            "definition": "The client's Caregiver's last name"
+        },
+        {
+            "code": "EmCare.A.DE43",
+            "display": "Person/People accompanying child's Relationship to Client",
+            "definition": "The relationship of the Caregiver to the client"
         },
         {
             "code": "EmCare.B7.DE02",
@@ -140,18 +167,8 @@
         },
         {
             "code": "EmCare.B7.DE08b",
-            "display": "Specify whether unconscious or lethargic",
+            "display": "Specify whether unconscious or Lethargic",
             "definition": "The client is unconcious or Lethargic"
-        },
-        {
-            "code": "EmCare.B7.DE08",
-            "display": "Unconscious",
-            "definition": "The client is unconcious"
-        },
-        {
-            "code": "EmCare.B7.DE08a",
-            "display": "Lethargic",
-            "definition": "The client is lethargic"
         },
         {
             "code": "EmCare.B7.DE09",
@@ -165,7 +182,7 @@
         },
         {
             "code": "EmCare.B6.DE01",
-            "display": "Axillary Temperature  (degrees Celcius)",
+            "display": "Axillary Temperature  (degrees Celsius)",
             "definition": "The client's axillary temperature in degrees Celsius (temperature taken under the armpit)"
         },
         {
@@ -270,7 +287,7 @@
         },
         {
             "code": "EmCare.B18S2.DE08",
-            "display": "Movements",
+            "display": "Infant's Movements",
             "definition": "The health care worker's assessments of the client's Movements"
         },
         {
@@ -772,10 +789,6 @@
             "display": "Fast Breathing (post inhaled bronchodilator trial)"
         },
         {
-            "code": "EmCare.B22.DE21",
-            "display": "No Fast Breathing and No Chest Indrawing (post Inhaled Bronchodilator Trial)"
-        },
-        {
             "code": "EmCare.B22.DE27",
             "display": "Breastfeeding Assessment",
             "definition": "Breastfeeding Assessment to ensure the client does not have difficulty breastfeeding"
@@ -786,39 +799,12 @@
             "definition": "The breastfeeding assessment was not possible"
         },
         {
-            "code": "EmCare.B22.DE31",
-            "display": "Chin Touching Breast",
-            "definition": "The client's chin is touching the breast"
-        },
-        {
-            "code": "EmCare.B22.DE32",
-            "display": "Mouth Wide Open",
-            "definition": "The client's mouth is wide open"
-        },
-        {
-            "code": "EmCare.B22.DE33",
-            "display": "Lower Lip Turned Outwards",
-            "definition": "The client's lower lip is turned outwards"
-        },
-        {
-            "code": "EmCare.B22.DE34",
-            "display": "More Areola Visible above than below the Mouth",
-            "definition": "The mother has more areola visible above than below the client's mouth"
-        },
-        {
-            "code": "EmCare.B22.DE35",
-            "display": "Slow Deep Sucks, Sometimes Pausing",
-            "definition": "The client is taking slow deep sucks, sometimes pausing"
-        },
-        {
-            "code": "EmCare.B22.DE36",
-            "display": "Breastfeeding Assessment Results",
-            "definition": "The client's breastfeeding results"
-        },
-        {
             "code": "EmCare.B22.DE42",
-            "display": "Difficulty Breastfeeding Reported",
-            "definition": "The breastfeeding assessment was not observed however the caregiver has reported difficulty breastfeeding"
+            "display": "Difficulty Breastfeeding Reported"
+        },
+        {
+            "code": "EmCare.B22.DE42b",
+            "display": "No Difficulty Breastfeeding Reported"
         },
         {
             "code": "EmCare.B22.DE44",
@@ -826,9 +812,14 @@
             "definition": "The healthcare worker has observed that the client has difficulty breastfeeding"
         },
         {
+            "code": "EmCare.B22.DE36",
+            "display": "Breastfeeding Assessment Results",
+            "definition": "The client's breastfeeding results"
+        },
+        {
             "code": "EmCare.B22.DE47",
-            "display": "Axillary Temperature (second measurement, degrees Celcius)",
-            "definition": "The client's Axillary Temperature (second measurement, degrees Celcius) in degrees Celcius (temperature taken under the armpit)"
+            "display": "Axillary Temperature (second measurement, degrees Celsius)",
+            "definition": "The client's Axillary Temperature (second measurement, degrees Celsius) in degrees Celsius (temperature taken under the armpit)"
         },
         {
             "code": "EmCare.B22.DE46",
@@ -1894,11 +1885,6 @@
             "definition": "The health care worker would like to add an Eye problem"
         },
         {
-            "code": "row",
-            "display": "No - Do not add a Skin or Mouth or Eye Problem",
-            "definition": "The healthcare worker would not like to add a Skin or Mouth or Eye Problem"
-        },
-        {
             "code": "EmCare.B21S2.DE29",
             "display": "No Breastmilk at all",
             "definition": "The caregiver does not give the client any breastmilk at all"
@@ -1914,24 +1900,12 @@
             "definition": "The care giver is giving appropriate  replacement milk"
         },
         {
-            "code": "EmCare.B22.DE18",
-            "display": "Chest Indrawing (post inhaled bronchodilator trial)"
+            "code": "EmCare.B7.DE08",
+            "display": "Unconscious"
         },
         {
-            "code": "EmCare.B22.DE19",
-            "display": "Respiratory Rate (post inhaled bronchodilator trial)"
-        },
-        {
-            "code": "EmCare.B22.DE20",
-            "display": "Fast Breathing (post inhaled bronchodilator trial)"
-        },
-        {
-            "code": "EmCare.B22.DE21",
-            "display": "No Fast Breathing and No Chest Indrawing (post Inhaled Bronchodilator Trial)"
-        },
-        {
-            "code": "EmCare.B22.DE22",
-            "display": "Inhaled Bronchodilator Trial Not Feasible or Available"
+            "code": "EmCare.B7.DE08a",
+            "display": "Lethargic"
         }
     ]
 }
