@@ -66,9 +66,6 @@
             "definition": "the child could have been created from the mother therefore a relatedpersom may already exist\nselect_one RelatedPerson\ncandidateExpression"
         },
         {
-            "code": "emcarerelatedpersoncaregiverid"
-        },
-        {
             "code": "EmCare.A.DE21",
             "display": "Caregiver First Name",
             "definition": "The client's Caregiver's first name"
@@ -367,13 +364,8 @@
         },
         {
             "code": "EmCare.B21S2.DE15",
-            "display": "How much milk is given at each feed (ml)?",
+            "display": "How much milk is given at each feed?",
             "definition": "The amount of milk given to the client at each feed"
-        },
-        {
-            "code": "EmCare.B21S2.DE16",
-            "display": "Sufficient replacement feeds",
-            "definition": "The care giver is giving sufficient replacement feeds"
         },
         {
             "code": "EmCare.B21S2.DE18",
@@ -523,9 +515,9 @@
             "definition": "The client's oxygen saturation measurement"
         },
         {
-            "code": "EmCare.B10S2.DE08",
-            "display": "Oxygen Saturation < 90 %",
-            "definition": "The client's oxygen saturation is less than 90 %"
+            "code": "EmCare.B10S2.DE09",
+            "display": "Oxygen saturation not measured",
+            "definition": "The clients oxygen saturation was not measured"
         },
         {
             "code": "EmCare.B11S2.DE01",
@@ -759,12 +751,12 @@
         },
         {
             "code": "EmCare.B22.DE04",
-            "display": "Respiratory Rate Second Count (breaths per minute)",
+            "display": "Respiratory Rate (Second Count) (breaths per minute)",
             "definition": "The client's respiratory rate for the second Count"
         },
         {
             "code": "EmCare.B22.DE05",
-            "display": "Respiratory Rate Second Count Not Possible",
+            "display": "Respiratory Rate (Second Count) Not Possible",
             "definition": "The client's respiratory rate for the second Count was not possible"
         },
         {
@@ -1005,12 +997,16 @@
             "display": "Fever: possible bacterial infection"
         },
         {
-            "code": "EmCare.B23.DE26a_l",
+            "code": "EmCare.B23.DE26a_l1",
             "display": "Fever present every day for 7 Days or more"
         },
         {
             "code": "EmCare.B23.DE105",
             "display": "Fever: bacterial infection unlikely"
+        },
+        {
+            "code": "EmCare.B23.DE26a_l2",
+            "display": "Fever present every day for 7 Days or more"
         },
         {
             "code": "EmCare.B23.DE27",
@@ -1279,12 +1275,12 @@
         },
         {
             "code": "agree",
-            "display": "Agree",
+            "display": "Confirm",
             "definition": "Agree"
         },
         {
             "code": "disagree",
-            "display": "Disagree",
+            "display": "Reject",
             "definition": "Disagree"
         },
         {
@@ -1348,6 +1344,14 @@
         {
             "code": "Very High",
             "display": "Very High"
+        },
+        {
+            "code": "EmCare.B21S2.DE16",
+            "display": "Sufficient replacement feeds"
+        },
+        {
+            "code": "EmCare.B21S2.DE17",
+            "display": "Insufficient replacement feeds"
         },
         {
             "code": "EmCare.B20S2.DE03",
@@ -1463,6 +1467,21 @@
             "code": "EmCare.B21S2.DE28",
             "display": "Breastmilk also given",
             "definition": "Breastmilk is also given to the client by the care giver"
+        },
+        {
+            "code": "EmCare.B21S2.DE29",
+            "display": "No Breastmilk at all",
+            "definition": "The caregiver does not give the client any breastmilk at all"
+        },
+        {
+            "code": "EmCare.B21S2.DE11",
+            "display": "Inappropriate replacement milk",
+            "definition": "The care giver is giving inappropriate replacement milk"
+        },
+        {
+            "code": "EmCare.B21S2.DE10",
+            "display": "Appropriate replacement milk",
+            "definition": "The care giver is giving appropriate  replacement milk"
         },
         {
             "code": "EmCare.B7-B8-B9.DE03",
@@ -1730,21 +1749,6 @@
             "definition": "The client's Microscopy species result is no species reported"
         },
         {
-            "code": "EmCare.B17S1.DE03",
-            "display": "Red (congested) throat",
-            "definition": "The client has a Red (congested) throat"
-        },
-        {
-            "code": "EmCare.B17S1.DE04",
-            "display": "Exudate on Throat",
-            "definition": "The client has Exudate on Throat"
-        },
-        {
-            "code": "EmCare.B17S1.DE05",
-            "display": "Membrane on throat",
-            "definition": "The client has Membrane on throat"
-        },
-        {
             "code": "none",
             "display": "None of the listed throat problems observed",
             "definition": "The client has None of the listed throat problems observed"
@@ -1885,27 +1889,27 @@
             "definition": "The health care worker would like to add an Eye problem"
         },
         {
-            "code": "EmCare.B21S2.DE29",
-            "display": "No Breastmilk at all",
-            "definition": "The caregiver does not give the client any breastmilk at all"
-        },
-        {
-            "code": "EmCare.B21S2.DE11",
-            "display": "Inappropriate replacement milk",
-            "definition": "The care giver is giving inappropriate replacement milk"
-        },
-        {
-            "code": "EmCare.B21S2.DE10",
-            "display": "Appropriate replacement milk",
-            "definition": "The care giver is giving appropriate  replacement milk"
-        },
-        {
             "code": "EmCare.B7.DE08",
             "display": "Unconscious"
         },
         {
             "code": "EmCare.B7.DE08a",
             "display": "Lethargic"
+        },
+        {
+            "code": "EmCare.B17S1.DE03",
+            "display": "Red (congested) throat",
+            "definition": "The client has a Red (congested) throat"
+        },
+        {
+            "code": "EmCare.B17S1.DE04",
+            "display": "Exudate on Throat",
+            "definition": "The client has Exudate on Throat"
+        },
+        {
+            "code": "EmCare.B17S1.DE05",
+            "display": "Membrane on throat",
+            "definition": "The client has Membrane on throat"
         }
     ]
 }

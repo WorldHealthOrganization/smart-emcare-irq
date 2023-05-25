@@ -2,14 +2,14 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareb23classification version '1.0.1.rc12.build.681'
+library emcareb23classification version '1.0.2'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.1.rc12.build.681' called Base
-include emcareobservation version '1.0.1.rc12.build.681' called obs
-include emcarevalueset version '1.0.1.rc12.build.681' called val
-include emcarezscore version '1.0.1.rc12.build.681' called Z
-include emcarecombineddataelements version '1.0.1.rc12.build.681' called C
+include emcarebase version '1.0.2' called Base
+include emcareobservation version '1.0.2' called obs
+include emcarevalueset version '1.0.2' called val
+include emcarezscore version '1.0.2' called Z
+include emcarecombineddataelements version '1.0.2' called C
 
 
 
@@ -214,11 +214,11 @@ define "OBSdefine.EmCare.B17S1.DE07":
     Base.GetObsValue('EmCare.B17S1.DE07')
 
 /* 
-OBSdefine.EmCare.B17S1.DE02 : Specify Throat problem
+OBSdefine.EmCare.B17S1.DE05 : Membrane on throat
 
 */
-define "OBSdefine.EmCare.B17S1.DE02":
-    Base.GetObsValue('EmCare.B17S1.DE02')
+define "OBSdefine.EmCare.B17S1.DE05":
+    Base.GetObsValue('EmCare.B17S1.DE05')
 
 /* 
 OBSdefine.EmCare.B17S1.DE06 : Enlarged lymph nodes on front of neck
@@ -226,6 +226,20 @@ OBSdefine.EmCare.B17S1.DE06 : Enlarged lymph nodes on front of neck
 */
 define "OBSdefine.EmCare.B17S1.DE06":
     Base.GetObsValue('EmCare.B17S1.DE06')
+
+/* 
+OBSdefine.EmCare.B17S1.DE03 : Red (congested) throat
+
+*/
+define "OBSdefine.EmCare.B17S1.DE03":
+    Base.GetObsValue('EmCare.B17S1.DE03')
+
+/* 
+OBSdefine.EmCare.B17S1.DE04 : Exudate on Throat
+
+*/
+define "OBSdefine.EmCare.B17S1.DE04":
+    Base.GetObsValue('EmCare.B17S1.DE04')
 
 /* 
 OBSdefine.EmCare.B13S1.DE01 : Ear problem
@@ -445,18 +459,18 @@ define "OBSdefine.EmCare.B14S2.DE12":
     Base.GetObsValue('EmCare.B14S2.DE12')
 
 /* 
-OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE22 : Type of Skin Problem
-
-*/
-define "OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE22":
-    Base.GetObsValue('EmCare.B14S2.DE13&EmCare.B14S2.DE22')
-
-/* 
 OBSdefine.EmCare.B14S2.DE22A : Severe rash
 
 */
 define "OBSdefine.EmCare.B14S2.DE22A":
     Base.GetObsValue('EmCare.B14S2.DE22A')
+
+/* 
+OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE22 : Type of Skin Problem
+
+*/
+define "OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE22":
+    Base.GetObsValue('EmCare.B14S2.DE13&EmCare.B14S2.DE22')
 
 /* 
 OBSdefine.EmCare.B14S2.DE06&EmCare.B14S2.DE08 : Generalised or Localised Skin Problem
@@ -854,10 +868,10 @@ define "Possible Shigella":
 
 /* 
 DL-I-CL1-05 : 
-C."Age >= 2 months to <60 months"  and C."Fever" = true and o"Throat problem" = true and ("Not able to drink or breastfeed" = true or "Ability to swallow" = "Unable to swallow" or "Specify Throat problem" = "Membrane on throat")
+C."Age >= 2 months to <60 months"  and C."Fever" = true and o"Throat problem" = true and ("Not able to drink or breastfeed" = true or "Ability to swallow" = "Unable to swallow" or  "Membrane on throat"=true)
 */
 define "DL-I-CL1-05":
-    C."Age >= 2 months to <60 months"  and C."Fever" = true and "OBSdefine.EmCare.B17S1.DE01" = true and ("OBSdefine.EmCare.B7.DE09" = true or "OBSdefine.EmCare.B17S1.DE07" ~ val."Unable to swallow" or "OBSdefine.EmCare.B17S1.DE02" ~ val."Membrane on throat")
+    C."Age >= 2 months to <60 months"  and C."Fever" = true and "OBSdefine.EmCare.B17S1.DE01" = true and ("OBSdefine.EmCare.B7.DE09" = true or "OBSdefine.EmCare.B17S1.DE07" ~ val."Unable to swallow" or  "OBSdefine.EmCare.B17S1.DE05"=true)
 
 /* 
 Throat Abscess or Possible Diptheria : DL-I-CL1-05
@@ -868,10 +882,10 @@ define "Throat Abscess or Possible Diptheria":
 
 /* 
 DL-I-CL1-06 : 
-C."Age >= 2 months to <60 months"  and (C."Fever" = true or "Ability to swallow" = "Difficulty in swallowing" ) and "Throat problem" = true and ("Not able to drink or breastfeed" = true or "Ability to swallow" = "Unable to swallow" or "Specify Throat problem" = "Membrane on throat") and (ToInteger("Enlarged lymph nodes on front of neck" = true )+ToInteger("Specify Throat problem" = "Red (congested) throat")+ToInteger("Specify Throat problem" = "Exudate on Throat"))>1 and "Throat Abscess or Possible Diptheria"!=true
+C."Age >= 2 months to <60 months"  and (C."Fever" = true or "Ability to swallow" = "Difficulty in swallowing" ) and "Throat problem" = true and ("Not able to drink or breastfeed" = true or "Ability to swallow" = "Unable to swallow" or  "Membrane on throat" = true) and ( ToInteger("Enlarged lymph nodes on front of neck" = true ) + ToInteger( "Red (congested) throat" = true) + ToInteger( "Exudate on Throat"=true ) )>1 and "Throat Abscess or Possible Diptheria"!=true
 */
 define "DL-I-CL1-06":
-    C."Age >= 2 months to <60 months"  and (C."Fever" = true or "OBSdefine.EmCare.B17S1.DE07" ~ val."Difficulty in swallowing" ) and "OBSdefine.EmCare.B17S1.DE01" = true and ("OBSdefine.EmCare.B7.DE09" = true or "OBSdefine.EmCare.B17S1.DE07" ~ val."Unable to swallow" or "OBSdefine.EmCare.B17S1.DE02" ~ val."Membrane on throat") and (ToInteger("OBSdefine.EmCare.B17S1.DE06" = true )+ToInteger("OBSdefine.EmCare.B17S1.DE02" ~ val."Red (congested) throat")+ToInteger("OBSdefine.EmCare.B17S1.DE02" ~ val."Exudate on Throat"))>1 and Coalesce("Throat Abscess or Possible Diptheria",false)!=true
+    C."Age >= 2 months to <60 months"  and (C."Fever" = true or "OBSdefine.EmCare.B17S1.DE07" ~ val."Difficulty in swallowing" ) and "OBSdefine.EmCare.B17S1.DE01" = true and ("OBSdefine.EmCare.B7.DE09" = true or "OBSdefine.EmCare.B17S1.DE07" ~ val."Unable to swallow" or  "OBSdefine.EmCare.B17S1.DE05" = true) and ( ToInteger(Coalesce("OBSdefine.EmCare.B17S1.DE06" = true ,false)) + ToInteger(Coalesce( "OBSdefine.EmCare.B17S1.DE03" = true,false)) + ToInteger(Coalesce( "OBSdefine.EmCare.B17S1.DE04"=true ,false)) )>1 and Coalesce("Throat Abscess or Possible Diptheria",false)!=true
 
 /* 
 Streptococcal Sore Throat : DL-I-CL1-06
@@ -882,10 +896,10 @@ define "Streptococcal Sore Throat":
 
 /* 
 DL-I-CL1-07 : 
-C."Age >= 2 months to <60 months"  and ("Ability to swallow" = "Difficulty in swallowing" or "Enlarged lymph nodes on front of neck" = true or "Specify Throat problem" = "Red (congested) throat" or "Specify Throat problem" = "Exudate on Throat" ) and "Throat problem" = true and  "Throat Abscess or Possible Diptheria"!=true and "Streptococcal Sore Throat"!=true
+C."Age >= 2 months to <60 months"  and ("Ability to swallow" = "Difficulty in swallowing" or "Enlarged lymph nodes on front of neck" = true or  "Red (congested) throat" =true or  "Exudate on Throat"=true ) and "Throat problem" = true and  "Throat Abscess or Possible Diptheria"!=true and "Streptococcal Sore Throat"!=true
 */
 define "DL-I-CL1-07":
-    C."Age >= 2 months to <60 months"  and ("OBSdefine.EmCare.B17S1.DE07" ~ val."Difficulty in swallowing" or "OBSdefine.EmCare.B17S1.DE06" = true or "OBSdefine.EmCare.B17S1.DE02" ~ val."Red (congested) throat" or "OBSdefine.EmCare.B17S1.DE02" ~ val."Exudate on Throat" ) and "OBSdefine.EmCare.B17S1.DE01" = true and  Coalesce("Throat Abscess or Possible Diptheria",false)!=true and Coalesce("Streptococcal Sore Throat",false)!=true
+    C."Age >= 2 months to <60 months"  and ("OBSdefine.EmCare.B17S1.DE07" ~ val."Difficulty in swallowing" or "OBSdefine.EmCare.B17S1.DE06" = true or  "OBSdefine.EmCare.B17S1.DE03" =true or  "OBSdefine.EmCare.B17S1.DE04"=true ) and "OBSdefine.EmCare.B17S1.DE01" = true and  Coalesce("Throat Abscess or Possible Diptheria",false)!=true and Coalesce("Streptococcal Sore Throat",false)!=true
 
 /* 
 Non-Streptococcal Sore Throat : DL-I-CL1-07
@@ -1243,10 +1257,10 @@ define "Scabies":
 
 /* 
 DL-G-CL1-93 : 
-C."Age >= 2 months to <60 months" and "Skin Problem" = true and "Itchy Skin" = true and "Generalised or Localised Skin Problem" = "Generalised Skin Problem" and "Blisters, Sores or Pustules" = true and "Type of Skin Problem"= v"Chickenpox"
+C."Age >= 2 months to <60 months" and "Skin Problem" = true and "Itchy Skin" = true and "Generalised or Localised Skin Problem" = "Generalised Skin Problem" and ("Blisters, Sores or Pustules" = true or "Severe rash"= true ) and "Type of Skin Problem"= v"Chickenpox"
 */
 define "DL-G-CL1-93":
-    C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B14S1.DE01" = true and "OBSdefine.EmCare.B14S1.DE02" = true and "OBSdefine.EmCare.B14S2.DE06&EmCare.B14S2.DE07" = true and "OBSdefine.EmCare.B14S2.DE12" = true and "OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE22" = true
+    C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B14S1.DE01" = true and "OBSdefine.EmCare.B14S1.DE02" = true and "OBSdefine.EmCare.B14S2.DE06&EmCare.B14S2.DE07" = true and ("OBSdefine.EmCare.B14S2.DE12" = true or "OBSdefine.EmCare.B14S2.DE22A"= true ) and "OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE22" = true
 
 /* 
 Chickenpox : DL-G-CL1-93

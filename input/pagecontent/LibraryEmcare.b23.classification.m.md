@@ -5,12 +5,6 @@ required for the execution
 | type | code / path | valueType | Description |
 |---|---|---|---|
 | Observation | EmCare.B22.DE50 | boolean/quantity | Measured Temperature (second measurement) |
-| Observation | EmCare.B7.DE03 | boolean/quantity | Convulsion(s) in this Illness |
-| Observation | EmCare.B18S2.DE07 | boolean/quantity | Severe Chest Indrawing |
-| Observation | EmCare.B18S2.DE08 | boolean/quantity | Infant's Movements |
-| Observation | EmCare.B18S1.DE02 | boolean/quantity | Difficulty with Feeding |
-| Observation | EmCare.B6.DE01A | boolean/quantity | Measured Temperature |
-| Observation | EmCare.B22.DE46 | boolean/quantity | Second Temperature Measurement Not Feasible |
 | Observation | EmCare.B22.DE07 | boolean/quantity | Fast Breathing |
 | Observation | EmCare.B18S2.DE12 | boolean/quantity | Umbilicus Red or Pus Draining |
 | Observation | EmCare.B18S2.DE13 | boolean/quantity | Skin Pustules |
@@ -19,12 +13,12 @@ required for the execution
 | Observation | EmCare.B19S2.DE04 | boolean/quantity | When did the Jaundice first appear? |
 | Observation | EmCare.B19S2.DE02 | boolean/quantity | Yellow Palms or Yellow Soles |
 | Observation | EmCare.B11S1.DE01 | boolean/quantity | Diarrhoea |
+| Observation | EmCare.B21S2.DE09 | boolean/quantity | What milk is being given as a replacement feed? |
 | Observation | EmCare.B21S2.DE13 | boolean/quantity | Sufficient replacement feeds (in 24 hours) |
-| Observation | EmCare.B21S2.DE16 | boolean/quantity | Sufficient replacement feeds |
+| Observation | EmCare.B21S2.DE15 | boolean/quantity | How much milk is given at each feed? |
 | Observation | EmCare.B21S2.DE18 | boolean/quantity | How is the milk prepared? |
 | Observation | EmCare.B21S2.DE21 | boolean/quantity | How is the milk given? |
 | Observation | EmCare.B21S2.DE24 | boolean/quantity | How are the feeding utensils cleaned? |
-| Observation | EmCare.B21S2.DE09&EmCare.B21S2.DE11 | boolean/quantity | What milk is being given as a replacement feed? |
 | Observation | EmCare.B22.DE44 | boolean/quantity | Difficulty Breastfeeding Observed |
 | Observation | EmCare.B22.DE42 | boolean/quantity | Difficulty Breastfeeding Reported |
 | Observation | EmCare.B21S2.DE06 | boolean/quantity | Sufficient feeds |

@@ -176,10 +176,10 @@ group emcareobservationemcareb6de04(source src,target tgt){
     src.item first as item  where linkId = 'EmCare.B6.DE04' and answer.exists() then {
         item.answer first as a then {
             a.value as val then {
-                val where val.code = 'true' -> tgt.status = 'final',tgt.value = true  '8a65aaa5';
-            } '26c2c8c7';
-        } '721205d5';
-    } 'a27d71d0';
+                val where val.code = 'EmCare.B6.DE04' -> tgt.status = 'final',tgt.value = true  'ebeeb89e';
+            } '3afc00a4';
+        } 'b50ec20e';
+    } '1c6c9ead';
 }
 
 group emcareobservationemcareb6de05(source src,target tgt){
@@ -355,11 +355,11 @@ group emcareobservationemcareb6de11(source src,target tgt){
         itm1.item first as item  where linkId =  'EmCare.B6.DE11' and answer.exists() then {
             item.answer first as a then {
                 a.value as val then {
-                    val where val.code = 'true' -> tgt.status = 'final',tgt.value = true  '8a65aaa5';
-                } '26c2c8c7';
-            } '721205d5';
-        } 'd64ae780';
-    } '9a6a0b00';
+                    val where val.code = 'EmCare.B6.DE11' -> tgt.status = 'final',tgt.value = true  'c79f7ab3';
+                } '45fd436a';
+            } '32eb679b';
+        } '40b41a71';
+    } 'aca409e5';
 }
 
 group emcareobservationemcareb6de12(source src,target tgt){
@@ -474,11 +474,11 @@ group emcareobservationemcareb6de17a(source src,target tgt){
         itm1.item first as item  where linkId =  'EmCare.B6.DE17a' and answer.exists() then {
             item.answer first as a then {
                 a.value as val then {
-                    val where val.code = 'true' -> tgt.status = 'final',tgt.value = true  '8a65aaa5';
-                } '26c2c8c7';
-            } '721205d5';
-        } 'a25ca60a';
-    } '04002c97';
+                    val where val.code = 'EmCare.B6.DE17a' -> tgt.status = 'final',tgt.value = true  'd0b69d81';
+                } 'c3bc1fa2';
+            } 'd82506bf';
+        } '41157e16';
+    } 'd70d75ba';
 }
 
 group emcareobservationemcareb6de18(source src,target tgt){

@@ -32,8 +32,10 @@ required for the execution
 | Observation | EmCare.B17S1.DE01 | boolean/quantity | Throat problem |
 | Observation | EmCare.B7.DE09 | boolean/quantity | Not able to drink or breastfeed |
 | Observation | EmCare.B17S1.DE07 | boolean/quantity | Ability to swallow |
-| Observation | EmCare.B17S1.DE02 | boolean/quantity | Specify Throat problem |
+| Observation | EmCare.B17S1.DE05 | boolean/quantity | Membrane on throat |
 | Observation | EmCare.B17S1.DE06 | boolean/quantity | Enlarged lymph nodes on front of neck |
+| Observation | EmCare.B17S1.DE03 | boolean/quantity | Red (congested) throat |
+| Observation | EmCare.B17S1.DE04 | boolean/quantity | Exudate on Throat |
 | Observation | EmCare.B13S1.DE01 | boolean/quantity | Ear problem |
 | Observation | EmCare.B13S2.DE01 | boolean/quantity | Tender swelling behind the ear |
 | Observation | EmCare.B13S1.DE02 | boolean/quantity | Ear pain |
@@ -65,8 +67,8 @@ required for the execution
 | Observation | EmCare.B14S2.DE19a | boolean/quantity | Scalp Infection (tinea capitis) |
 | Observation | EmCare.B14S2.DE13&EmCare.B14S2.DE21 | boolean/quantity | Type of Skin Problem |
 | Observation | EmCare.B14S2.DE12 | boolean/quantity | Blisters, Sores or Pustules |
-| Observation | EmCare.B14S2.DE13&EmCare.B14S2.DE22 | boolean/quantity | Type of Skin Problem |
 | Observation | EmCare.B14S2.DE22A | boolean/quantity | Severe rash |
+| Observation | EmCare.B14S2.DE13&EmCare.B14S2.DE22 | boolean/quantity | Type of Skin Problem |
 | Observation | EmCare.B14S2.DE06&EmCare.B14S2.DE08 | boolean/quantity | Generalised or Localised Skin Problem |
 | Observation | EmCare.B14S2.DE13&EmCare.B14S2.DE23 | boolean/quantity | Type of Skin Problem |
 | Observation | EmCare.B14S2.DE24 | boolean/quantity | Eye Involvement |

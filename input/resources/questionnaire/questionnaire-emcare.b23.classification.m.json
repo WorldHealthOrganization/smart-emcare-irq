@@ -29,7 +29,7 @@
         },
         {
             "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
-            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb23classificationm"
+            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb23classificationm|1.0.2"
         }
     ],
     "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b23.classification.m",
@@ -172,14 +172,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -228,14 +228,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -284,14 +284,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -339,14 +339,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -394,14 +394,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -420,11 +420,11 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
-                        "expression": "DL-G-CL2-13-14"
+                        "expression": "DL-G-CL2-13-a-14"
                     }
                 }
             ],
-            "linkId": "DL-G-CL2-13-14",
+            "linkId": "DL-G-CL2-13-a-14",
             "text": "Severe Jaundice",
             "type": "boolean",
             "required": false,
@@ -436,7 +436,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
-                        "expression": "%resource.repeat(item).where(linkId='DL-G-CL2-13-14').answer.first().value=true"
+                        "expression": "%resource.repeat(item).where(linkId='DL-G-CL2-13-a-14').answer.first().value=true"
                     }
                 }
             ],
@@ -450,14 +450,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -481,6 +481,30 @@
                 }
             ],
             "linkId": "DL-G-CL2-15-43",
+            "text": "Jaundice",
+            "type": "boolean",
+            "required": false,
+            "repeats": false
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+                    "valueCode": "horizontal"
+                },
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                    "valueBoolean": true
+                },
+                {
+                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                    "valueExpression": {
+                        "language": "text/cql-identifier",
+                        "expression": "EmCare.B23.DE88A"
+                    }
+                }
+            ],
+            "linkId": "EmCare.B23.DE88A",
             "type": "boolean",
             "required": false,
             "repeats": false
@@ -505,15 +529,33 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
+                }
+            ],
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                            "valueExpression": {
+                                "language": "text/fhirpath",
+                                "expression": "%resource.repeat(item).where(linkId='EmCare.B23.DE88A').answer.first().value = true"
+                            }
+                        }
+                    ],
+                    "linkId": "morethan21",
+                    "text": "With Prolonged Jaundice",
+                    "type": "display",
+                    "required": false,
+                    "repeats": false
                 }
             ]
         },
@@ -560,14 +602,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -616,14 +658,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -672,14 +714,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -728,14 +770,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -922,14 +964,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ],
@@ -1060,14 +1102,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]

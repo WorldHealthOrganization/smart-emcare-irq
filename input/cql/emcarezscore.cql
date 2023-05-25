@@ -2,13 +2,13 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcarezscore version '1.0.1.rc12.build.681'
+library emcarezscore version '1.0.2'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.1.rc12.build.681' called Base
-include WeightForAge version '1.0.0' called wfa
-include WeightForLength version '1.0.0' called wfl
-include WeightForHeight version '1.0.0' called wfh
+include emcarebase version '1.0.2' called Base
+include WeightForAge version '1.0.2' called wfa
+include WeightForLength version '1.0.2' called wfl
+include WeightForHeight version '1.0.2' called wfh
 
 
 
@@ -45,16 +45,15 @@ define "Severely Underweight":
 
 /* pastweight : Previous Weight*/
 define "pastweight":
-    if AgeInMonths()< 4 and Base.HasObsHistory("Weight", 63) is not null then
-      Base.HasObsHistory("Weight", 63)  as FHIR.Quantity
-    else  if AgeInMonths()< 6 and Base.HasObsHistory("Weight", 94)   is not null then
-      Base.HasObsHistory("Weight", 94)  as  FHIR.Quantity
-    else if AgeInMonths()< 6 and Base.HasObsHistory("Weight", 126)   is not null then
-       Base.HasObsHistory("Weight", 126)  as FHIR.Quantity
-    else if Base.HasObsHistory("Weight", 201)  is not null then
-       Base.HasObsHistory("Weight", 201)  as FHIR.Quantity
-    else
-      null
+    if AgeInMonths()< 4  then
+      Base.HasObsHistory("Weight", 60)
+    else if AgeInMonths()< 6  then
+      Base.HasObsHistory("Weight", 91)
+    else if AgeInMonths()< 12  then
+      Base.HasObsHistory("Weight", 121)
+    else 
+      Base.HasObsHistory("Weight", 180)
+
 
 
 /* patientsex : Patient sex*/

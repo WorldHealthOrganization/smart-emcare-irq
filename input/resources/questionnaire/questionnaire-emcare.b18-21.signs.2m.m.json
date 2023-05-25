@@ -29,7 +29,7 @@
         },
         {
             "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
-            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb1821signs2mm"
+            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb1821signs2mm|1.0.2"
         }
     ],
     "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b18-21.signs.2m.m",
@@ -497,7 +497,7 @@
                                 }
                             ],
                             "linkId": "EmCare.B22.DE04",
-                            "text": "Respiratory Rate Second Count (breaths per minute)",
+                            "text": "Respiratory Rate (Second Count) (breaths per minute)",
                             "type": "quantity",
                             "required": false,
                             "repeats": false,
@@ -553,7 +553,7 @@
                                 {
                                     "valueCoding": {
                                         "code": "EmCare.B22.DE05",
-                                        "display": "Respiratory Rate Second Count Not Possible"
+                                        "display": "Respiratory Rate (Second Count) Not Possible"
                                     }
                                 }
                             ]
@@ -581,7 +581,7 @@
                             "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
                             "valueExpression": {
                                 "language": "text/fhirpath",
-                                "expression": "iif(%resource.repeat(item).where(linkId='Fast Breathing profile').answer.first().empty() and (%resource.repeat(item).where(linkId='AgeInMonths').answer.first().value >= 2 or %resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='second').repeat(item).where(linkId='EmCare.B22.DE04').answer.first().exists() or ( %resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='second').repeat(item).where(linkId='EmCare.B22.DE05').answer.first().exists() and  (%resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='EmCare.B22.DE01').answer.first().value < 60 '{Breaths}/min' or %resource.repeat(item).where(linkId='Respiratory Rate profile').answer.first().value  >= 60 '{Breaths}/min'  ) and %resource.repeat(item).where(linkId='force-collection').answer.first().value=true )),iif((%resource.repeat(item).where(linkId='AgeInMonths').answer.first().value<2 and (%resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='second').repeat(item).where(linkId='EmCare.B22.DE04').answer.first().value >= 60 '{Breaths}/min' or (%resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='second').repeat(item).where(linkId='EmCare.B22.DE05').answer.first().exists()  and ( %resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='EmCare.B22.DE01').answer.first().value  >= 60 '{Breaths}/min'  or %resource.repeat(item).where(linkId='Respiratory Rate profile').answer.first().value  >= 60 '{Breaths}/min' ) ) ) )or (%resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='EmCare.B22.DE01').answer.first().value >= 50 '{Breaths}/min' and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value < 12 and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value >= 2)or (%resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='EmCare.B22.DE01').answer.first().value >= 40 '{Breaths}/min' and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value>=12 and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value < 60), true, false),{})"
+                                "expression": "iif(%resource.repeat(item).where(linkId='Fast Breathing profile').answer.first().empty() and (%resource.repeat(item).where(linkId='AgeInMonths').answer.first().value >= 2 or %resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='second').repeat(item).where(linkId='EmCare.B22.DE04').answer.first().exists() or %resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='EmCare.B22.DE01').answer.first().value < 60 '{Breaths}/min' or ( %resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='second').repeat(item).where(linkId='EmCare.B22.DE05').answer.first().exists() and  ( %resource.repeat(item).where(linkId='Respiratory Rate profile').answer.first().value  >= 60 '{Breaths}/min'  ) and %resource.repeat(item).where(linkId='force-collection').answer.first().value=true )),iif((%resource.repeat(item).where(linkId='AgeInMonths').answer.first().value<2 and (%resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='second').repeat(item).where(linkId='EmCare.B22.DE04').answer.first().value >= 60 '{Breaths}/min' or (%resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='second').repeat(item).where(linkId='EmCare.B22.DE05').answer.first().exists()  and ( %resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='EmCare.B22.DE01').answer.first().value  >= 60 '{Breaths}/min'  or %resource.repeat(item).where(linkId='Respiratory Rate profile').answer.first().value  >= 60 '{Breaths}/min' ) ) ) )or (%resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='EmCare.B22.DE01').answer.first().value >= 50 '{Breaths}/min' and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value < 12 and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value >= 2)or (%resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='EmCare.B22.DE01').answer.first().value >= 40 '{Breaths}/min' and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value>=12 and %resource.repeat(item).where(linkId='AgeInMonths').answer.first().value < 60), true, false),{})"
                             }
                         }
                     ],
@@ -886,7 +886,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
-                        "expression": "%resource.repeat(item).where(linkId='AgeInDays').answer.first().value >1 and  %resource.repeat(item).where(linkId='EmCare.B19S2.DE01').answer.first().value = true and %resource.repeat(item).where(linkId='EmCare.B19S2.DE02').answer.first().value = false and  %resource.repeat(item).where(linkId='AgeInDays').answer.first().value < 21"
+                        "expression": "%resource.repeat(item).where(linkId='AgeInDays').answer.first().value >=1 and  %resource.repeat(item).where(linkId='EmCare.B19S2.DE01').answer.first().value = true and %resource.repeat(item).where(linkId='EmCare.B19S2.DE02').answer.first().value = false and  %resource.repeat(item).where(linkId='AgeInDays').answer.first().value < 21"
                     }
                 }
             ],
@@ -1230,11 +1230,11 @@
                         "coding": [
                             {
                                 "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                "code": "check-box",
-                                "display": "Check-box"
+                                "code": "radio-button",
+                                "display": "Radio Button"
                             }
                         ],
-                        "text": "Check-box"
+                        "text": "Radio Button"
                     }
                 },
                 {
@@ -1249,7 +1249,7 @@
             "text": "What milk is being given as a replacement feed?",
             "type": "choice",
             "required": true,
-            "repeats": true,
+            "repeats": false,
             "answerOption": [
                 {
                     "valueCoding": {
@@ -1350,13 +1350,6 @@
         {
             "extension": [
                 {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
-                    "valueCoding": {
-                        "system": "http://unitsofmeasure.org",
-                        "code": "ml"
-                    }
-                },
-                {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
@@ -1365,10 +1358,26 @@
                 }
             ],
             "linkId": "EmCare.B21S2.DE15",
-            "text": "How much milk is given at each feed (ml)?",
-            "type": "quantity",
+            "text": "How much milk is given at each feed?",
+            "type": "choice",
             "required": true,
             "repeats": false,
+            "answerOption": [
+                {
+                    "valueCoding": {
+                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+                        "code": "EmCare.B21S2.DE16",
+                        "display": "Sufficient replacement feeds"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+                        "code": "EmCare.B21S2.DE17",
+                        "display": "Insufficient replacement feeds"
+                    }
+                }
+            ],
             "item": [
                 {
                     "extension": [
@@ -1389,30 +1398,6 @@
                     "type": "display"
                 }
             ]
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
-                    "valueCode": "horizontal"
-                },
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
-                    "valueBoolean": true
-                },
-                {
-                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
-                    "valueExpression": {
-                        "language": "text/fhirpath",
-                        "expression": "iif(%resource.repeat(item).where(linkId='AgeInDays').answer.first().value < 29, %resource.repeat(item).where(linkId='EmCare.B21S2.DE15').answer.first().value>=60 'ml', %resource.repeat(item).where(linkId='EmCare.B21S2.DE15').answer.first().value>=90 'ml' )"
-                    }
-                }
-            ],
-            "linkId": "EmCare.B21S2.DE16",
-            "text": "Sufficient replacement feeds",
-            "type": "boolean",
-            "required": true,
-            "repeats": false
         },
         {
             "extension": [

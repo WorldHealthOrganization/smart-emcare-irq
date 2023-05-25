@@ -2,7 +2,7 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcarevalueset version '1.0.1.rc12.build.681'
+library emcarevalueset version '1.0.2'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
 
@@ -33,8 +33,8 @@ code "Routine visit (Well child/infant)": 'EmCare.B3.DE04' from "EmCare" display
 code "Yes": 'yes' from "EmCare" display 'Yes'
 code "No": 'no' from "EmCare" display 'No'
 code "Unknown": 'EmCare.A.DE33' from "EmCare" display 'Unknown'
-code "Agree": 'agree' from "EmCare" display 'Agree'
-code "Disagree": 'disagree' from "EmCare" display 'Disagree'
+code "Confirm": 'agree' from "EmCare" display 'Confirm'
+code "Reject": 'disagree' from "EmCare" display 'Reject'
 code "Initial visit": 'EmCare.B3.DE07' from "EmCare" display 'Initial visit'
 code "Follow Up": 'EmCare.B3.DE08' from "EmCare" display 'Follow Up'
 code "7 Days or more": 'EmCare.B12S1.DE05' from "EmCare" display '7 Days or more'
@@ -48,6 +48,8 @@ code "Low": 'Low' from "EmCare" display 'Low'
 code "Normal": 'Normal' from "EmCare" display 'Normal'
 code "High": 'High' from "EmCare" display 'High'
 code "Very High": 'Very High' from "EmCare" display 'Very High'
+code "Sufficient replacement feeds": 'EmCare.B21S2.DE16' from "EmCare" display 'Sufficient replacement feeds'
+code "Insufficient replacement feeds": 'EmCare.B21S2.DE17' from "EmCare" display 'Insufficient replacement feeds'
 code "Skin Pinch goes back very slowly (More than 2 seconds)": 'EmCare.B20S2.DE03' from "EmCare" display 'Skin Pinch goes back very slowly (More than 2 seconds)'
 code "Skin Pinch goes back slowly (2 seconds or fewer, but not immediately)": 'EmCare.B20S2.DE04' from "EmCare" display 'Skin Pinch goes back slowly (2 seconds or fewer, but not immediately)'
 code "Skin Pinch goes back Normally (immediately)": 'EmCare.B20S2.DE05' from "EmCare" display 'Skin Pinch goes back Normally (immediately)'
@@ -71,6 +73,9 @@ code "Very Low Weight for Age": 'EmCare.B21S2.DE02' from "EmCare" display 'Very 
 code "Low Weight for Age": 'EmCare.B21S2.DE03' from "EmCare" display 'Low Weight for Age'
 code "Normal Weight for Age": 'EmCare.B21S2.DE04' from "EmCare" display 'Normal Weight for Age'
 code "Breastmilk also given": 'EmCare.B21S2.DE28' from "EmCare" display 'Breastmilk also given'
+code "No Breastmilk at all": 'EmCare.B21S2.DE29' from "EmCare" display 'No Breastmilk at all'
+code "Inappropriate replacement milk": 'EmCare.B21S2.DE11' from "EmCare" display 'Inappropriate replacement milk'
+code "Appropriate replacement milk": 'EmCare.B21S2.DE10' from "EmCare" display 'Appropriate replacement milk'
 code "End consultation": 'EmCare.B7-B8-B9.DE03' from "EmCare" display 'End consultation'
 code "Stabilised, continue consultation": 'EmCare.B7-B8-B9.DE02' from "EmCare" display 'Stabilised, continue consultation'
 code "Mother HIV Positive": 'EmCare.B21S1.DE02' from "EmCare" display 'Mother HIV Positive'
@@ -122,9 +127,6 @@ code "Good Attachment": 'EmCare.B22.DE38' from "EmCare" display 'Good Attachment
 code "Not Sucking Effectively": 'EmCare.B22.DE39' from "EmCare" display 'Not Sucking Effectively'
 code "Sucking Effectively": 'EmCare.B22.DE40' from "EmCare" display 'Sucking Effectively'
 code "No Species Reported": 'EmCare.B22.DE75' from "EmCare" display 'No Species Reported'
-code "Red (congested) throat": 'EmCare.B17S1.DE03' from "EmCare" display 'Red (congested) throat'
-code "Exudate on Throat": 'EmCare.B17S1.DE04' from "EmCare" display 'Exudate on Throat'
-code "Membrane on throat": 'EmCare.B17S1.DE05' from "EmCare" display 'Membrane on throat'
 code "None of the listed throat problems observed": 'none' from "EmCare" display 'None of the listed throat problems observed'
 code "Yes, without difficulty": 'EmCare.B17S1.DE08' from "EmCare" display 'Yes, without difficulty'
 code "Difficulty in swallowing": 'EmCare.B17S1.DE09' from "EmCare" display 'Difficulty in swallowing'

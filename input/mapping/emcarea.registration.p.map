@@ -3,10 +3,8 @@ uses 'http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse' 
 uses 'http://hl7.org/fhir/StructureDefinition/Bundle' alias 'Bundle' as target
 uses 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/patient' alias 'Patient' as target
 uses 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/relatedperson' alias 'RelatedPerson' as target
-uses 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/communicationrequest' alias 'CommunicationRequest' as target
 uses 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcarepatient' alias 'EmCare Patient' as produced
 uses 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/relatedperson' alias 'RelatedPerson' as produced
-uses 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/communicationrequest' alias 'CommunicationRequest' as produced
 group bundletrans(source src : questionnaireResponse,target bundle : Bundle){
     src -> bundle.id = uuid() 'id';
     src -> bundle.type = 'batch' 'type';
@@ -28,16 +26,6 @@ group bundletrans(source src : questionnaireResponse,target bundle : Bundle){
             } '00574b8e';
         } '74cc3511';
     } '54daac33';
-    src.item first as itm1  where linkId =  'EmCare.A.DE21.1' then {
-        itm1.item first as item  where linkId =  'EmCare.A.DE38' and answer.exists() then {
-            src -> bundle.entry as entry  then {
-                src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/CommunicationRequest/', uuid) 'e5343f50';
-                src -> entry.resource = create('CommunicationRequest') as tgt then {
-                    src -> tgt then communicationrequestemcareade38(src, tgt) '82d8a873';
-                } '33eeb100';
-            } 'd4cd942b';
-        } '5ca7be0f';
-    } 'b78fbe33';
 }
 
 group SetOfficalGivenNameemcarepatient(source src,target tgt){
@@ -174,24 +162,8 @@ group relatedperson(source src : questionnaireResponse,target tgt : RelatedPerso
             item.answer first as a -> tgt then {src.subject as subject -> tgt.patient = subject  'patient';} 'arelatedpersonid';
         } 'd79d72db';
     } 'd50c1aed';
-    src.item first as itm1  where linkId =  'EmCare.A.DE21.1' then {
-        itm1.item first as item  where linkId =  'EmCare.A.DE24' and answer.exists() then {
-            item.answer first as a then MapValueSetExtCodeemcareade24(a, tgt) '24e5e488';
-        } '6adb811a';
-    } '92a0e955';
-}
-
-group communicationrequestemcareade38(source src,target tgt){
-    src ->  tgt.category = create('CodeableConcept') as cc, cc.coding = create('Coding') as c, c.system ='http://hl7.org/fhir/ValueSet/communication-category', c.code = 'notification' '053233cd';
-    src.questionnaire as q ->   tgt.about = create('Reference') as ref, ref.type ='Questionnaire', ref.reference = q 'quest';
-    src.subject as subject ->   tgt.subject = subject  'fe3bec4d';
-    src ->   tgt.recipient =create('Reference') as ref  then {
-        src -> ref.type = 'RelatedPerson' 'c26ab31f';
-        src.item first as item where linkId  =  'emcarerelatedpersonCaregiveruuid' -> tgt then {
-            item.answer first as a ->  tgt then {
-                a.value as val ->  ref.reference = append('/RelatedPerson/', val) '25b16148';
-            } '00b2016a';
-        } '3c6c4c80';
-    } 'eaa7d3cf';
+    src.item first as item  where linkId = 'EmCare.A.DE24' and answer.exists() then {
+        item.answer first as a then MapValueSetExtCodeemcareade24(a, tgt) '24e5e488';
+    } 'e9135511';
 }
 

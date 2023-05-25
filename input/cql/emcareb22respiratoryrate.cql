@@ -2,12 +2,12 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareb22respiratoryrate version '1.0.1.rc12.build.681'
+library emcareb22respiratoryrate version '1.0.2'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.1.rc12.build.681' called Base
-include emcareobservation version '1.0.1.rc12.build.681' called obs
-include emcarevalueset version '1.0.1.rc12.build.681' called val
+include emcarebase version '1.0.2' called Base
+include emcareobservation version '1.0.2' called obs
+include emcarevalueset version '1.0.2' called val
 
 
 
@@ -23,7 +23,7 @@ define "OBSdefine.EmCare.B22.DE01":
     Base.GetObsValue('EmCare.B22.DE01')
 
 /* 
-OBSdefine.EmCare.B22.DE04 : Respiratory Rate Second Count (breaths per minute)
+OBSdefine.EmCare.B22.DE04 : Respiratory Rate (Second Count) (breaths per minute)
 
 */
 define "OBSdefine.EmCare.B22.DE04":
@@ -66,7 +66,7 @@ define "force-collection":
 
 /* 
 Respiratory Rate Second Count Profile : 
-o"Respiratory Rate Second Count (breaths per minute)"
+o"Respiratory Rate (Second Count) (breaths per minute)"
 */
 define "Respiratory Rate Second Count Profile":
     "OBSdefine.EmCare.B22.DE04"

@@ -101,10 +101,10 @@ group emcareobservationemcareb22de14(source src,target tgt){
     src.item first as item  where linkId = 'EmCare.B22.DE14' and answer.exists() then {
         item.answer first as a then {
             a.value as val then {
-                val where val.code = 'true' -> tgt.status = 'final',tgt.value = true  '8a65aaa5';
-            } '26c2c8c7';
-        } '721205d5';
-    } '0ac7445d';
+                val where val.code = 'EmCare.B22.DE14' -> tgt.status = 'final',tgt.value = true  '0a349f11';
+            } '11497480';
+        } 'b2d7e868';
+    } '62c99830';
 }
 
 group emcareobservationemcareb22de14a(source src,target tgt){

@@ -2,13 +2,13 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcaretreatment version '1.0.1.rc12.build.681'
+library emcaretreatment version '1.0.2'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.1.rc12.build.681' called Base
-include emcareobservation version '1.0.1.rc12.build.681' called obs
-include emcarevalueset version '1.0.1.rc12.build.681' called val
-include emcarecondition version '1.0.1.rc12.build.681' called cond
+include emcarebase version '1.0.2' called Base
+include emcareobservation version '1.0.2' called obs
+include emcarevalueset version '1.0.2' called val
+include emcarecondition version '1.0.2' called cond
 
 
 

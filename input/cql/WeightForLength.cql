@@ -1,7 +1,7 @@
 
-library WeightForLength version '1.0.0'
+library WeightForLength version '1.0.2'
 using FHIR version '4.0.1'
-include anthrobase version '1.0.0' called base
+include anthrobase version '1.0.2' called base
 include FHIRHelpers version '4.0.1' called FHIRHelpers
 // Antrho library for WeightForLength  Z-Score from the wflanthro files
 codesystem "administrative-gender": 'http://hl7.org/fhir/administrative-gender'
@@ -1319,27 +1319,27 @@ define WeightForLengthMale:
 }
 
 
-define function ZscoreWeightForLengthtables(sex String, Length Decimal):
-		if sex = 'female' then  First(WeightForLengthFemale c where c.y = Length )
-		else First(WeightForLengthMale c where  c.y = Length)
+define function ZscoreWeightForLengthtables(sex String, length Decimal):
+		if sex = 'female' then  First(WeightForLengthFemale c where c.y = length )
+		else First(WeightForLengthMale c where  c.y = length)
             
-define function generateZScoreWeightForLength(sex System.String, Length System.Decimal, weight  System.Decimal)  : 
-	if ZscoreWeightForLengthtables(sex,Length) is not null then 
+define function generateZScoreWeightForLength(sex System.String, length System.Decimal, weight  System.Decimal)  : 
+	if ZscoreWeightForLengthtables(sex,length) is not null then 
         base.computeZScore(
             weight,
-            (ZscoreWeightForLengthtables(sex,Length).m ), 
-            (ZscoreWeightForLengthtables(sex,Length).l ),
-            (ZscoreWeightForLengthtables(sex,Length).s )
+            (ZscoreWeightForLengthtables(sex,length).m ), 
+            (ZscoreWeightForLengthtables(sex,length).l ),
+            (ZscoreWeightForLengthtables(sex,length).s )
         )
     else null
 
-define function generateWeightFromLength(sex System.String, Length System.Decimal, zscore  System.Decimal) : 
-	if ZscoreWeightForLengthtables(sex,Length) is not null then 
+define function generateWeightFromLength(sex System.String, length System.Decimal, zscore  System.Decimal) : 
+	if ZscoreWeightForLengthtables(sex,length) is not null then 
         base.computeReverseZScore(
             zscore,
-            (ZscoreWeightForLengthtables(sex,Length).m ), 
-            (ZscoreWeightForLengthtables(sex,Length).l ),
-            (ZscoreWeightForLengthtables(sex,Length).s )
+            (ZscoreWeightForLengthtables(sex,length).m ), 
+            (ZscoreWeightForLengthtables(sex,length).l ),
+            (ZscoreWeightForLengthtables(sex,length).s )
         )
     else null    
 

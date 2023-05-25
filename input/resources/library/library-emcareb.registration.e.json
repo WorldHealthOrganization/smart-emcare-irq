@@ -8,7 +8,7 @@
             "value": "emcareb.registration.e"
         }
     ],
-    "version": "1.0.1.rc12.build.681",
+    "version": "1.0.2",
     "name": "emcarebregistratione",
     "title": "EmCareB.Registration.E",
     "status": "active",
@@ -49,7 +49,7 @@
         {
             "id": "ig-loader-emcarebregistratione.cql",
             "contentType": "text/cql",
-            "data": "LyoKQGF1dGhvcjogUGF0cmljayBEZWxjcm9peApAZGVzY3JpcHRpb246IFRoaXMgbGlicmFyeSBpcyBwYXJ0IG9mIHRoZSBwcm9qZWN0IEVtQ2FyZQoqLwpsaWJyYXJ5IGVtY2FyZWJyZWdpc3RyYXRpb25lIHZlcnNpb24gJzEuMC4xLnJjMTIuYnVpbGQuNjgxJwp1c2luZyBGSElSIHZlcnNpb24gJzQuMC4xJwppbmNsdWRlIEZISVJIZWxwZXJzIHZlcnNpb24gJzQuMC4xJyBjYWxsZWQgRkhJUkhlbHBlcnMgCmluY2x1ZGUgZW1jYXJlYmFzZSB2ZXJzaW9uICcxLjAuMS5yYzEyLmJ1aWxkLjY4MScgY2FsbGVkIEJhc2UKaW5jbHVkZSBlbWNhcmVvYnNlcnZhdGlvbiB2ZXJzaW9uICcxLjAuMS5yYzEyLmJ1aWxkLjY4MScgY2FsbGVkIG9icwppbmNsdWRlIGVtY2FyZXZhbHVlc2V0IHZlcnNpb24gJzEuMC4xLnJjMTIuYnVpbGQuNjgxJyBjYWxsZWQgdmFsCgoKCgpjb250ZXh0IFBhdGllbnQKCgovKiAKQmFja1JlZmVyZW5jZSA6IApiYWNrIHJlZmVyZW5jZSB0byByZXNvdXJjZQoqLwpkZWZpbmUgIkJhY2tSZWZlcmVuY2UiOgogICAgUmVmZXJlbmNlIHtyZWZlcmVuY2U6IHN0cmluZyB7IHZhbHVlOiAnUXVlc3Rpb25uYWlyZS9FbUNhcmVCLlJlZ2lzdHJhdGlvbi5FJ319Cg=="
+            "data": "LyoKQGF1dGhvcjogUGF0cmljayBEZWxjcm9peApAZGVzY3JpcHRpb246IFRoaXMgbGlicmFyeSBpcyBwYXJ0IG9mIHRoZSBwcm9qZWN0IEVtQ2FyZQoqLwpsaWJyYXJ5IGVtY2FyZWJyZWdpc3RyYXRpb25lIHZlcnNpb24gJzEuMC4yJwp1c2luZyBGSElSIHZlcnNpb24gJzQuMC4xJwppbmNsdWRlIEZISVJIZWxwZXJzIHZlcnNpb24gJzQuMC4xJyBjYWxsZWQgRkhJUkhlbHBlcnMgCmluY2x1ZGUgZW1jYXJlYmFzZSB2ZXJzaW9uICcxLjAuMicgY2FsbGVkIEJhc2UKaW5jbHVkZSBlbWNhcmVvYnNlcnZhdGlvbiB2ZXJzaW9uICcxLjAuMicgY2FsbGVkIG9icwppbmNsdWRlIGVtY2FyZXZhbHVlc2V0IHZlcnNpb24gJzEuMC4yJyBjYWxsZWQgdmFsCgoKCgpjb250ZXh0IFBhdGllbnQKCgovKiAKQmFja1JlZmVyZW5jZSA6IApiYWNrIHJlZmVyZW5jZSB0byByZXNvdXJjZQoqLwpkZWZpbmUgIkJhY2tSZWZlcmVuY2UiOgogICAgUmVmZXJlbmNlIHtyZWZlcmVuY2U6IHN0cmluZyB7IHZhbHVlOiAnUXVlc3Rpb25uYWlyZS9FbUNhcmVCLlJlZ2lzdHJhdGlvbi5FJ319Cg=="
         }
     ]
 }

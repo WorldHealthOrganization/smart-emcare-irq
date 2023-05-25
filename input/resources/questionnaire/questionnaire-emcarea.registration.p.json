@@ -93,7 +93,7 @@
         },
         {
             "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
-            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcarearegistrationp"
+            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcarearegistrationp|1.0.2"
         }
     ],
     "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcarea.registration.p",
@@ -762,7 +762,7 @@
                     "valueBoolean": true
                 }
             ],
-            "linkId": "relatedpersonuuid",
+            "linkId": "emcarerelatedpersoncaregiverid",
             "type": "string",
             "required": false,
             "repeats": false,
@@ -771,25 +771,6 @@
                     "valueString": "uuid()"
                 }
             ]
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
-                    "valueBoolean": true
-                },
-                {
-                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
-                    "valueExpression": {
-                        "language": "text/fhirpath",
-                        "expression": "iif(%resource.repeat(item).where(linkId='newrelatedperson').answer.first().exists(), %resource.repeat(item).where(linkId='relatedpersonuuid').answer.first().value,{})"
-                    }
-                }
-            ],
-            "linkId": "emcarerelatedpersoncaregiverid",
-            "type": "string",
-            "required": false,
-            "repeats": false
         },
         {
             "extension": [
@@ -807,6 +788,12 @@
             "repeats": false,
             "item": [
                 {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                            "valueBoolean": true
+                        }
+                    ],
                     "linkId": "EmCare.A.DE21",
                     "text": "Caregiver First Name",
                     "type": "string",
@@ -814,6 +801,12 @@
                     "repeats": false
                 },
                 {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                            "valueBoolean": true
+                        }
+                    ],
                     "linkId": "EmCare.A.DE22",
                     "text": "Caregiver Middle Name",
                     "type": "string",
@@ -821,6 +814,12 @@
                     "repeats": false
                 },
                 {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                            "valueBoolean": true
+                        }
+                    ],
                     "linkId": "EmCare.A.DE23",
                     "text": "Caregiver Last Name",
                     "type": "string",
@@ -845,6 +844,10 @@
                                 ],
                                 "text": "Number Only"
                             }
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                            "valueBoolean": true
                         }
                     ],
                     "linkId": "EmCare.A.DE35",
@@ -871,66 +874,6 @@
                     "type": "string",
                     "required": false,
                     "repeats": false
-                },
-                {
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
-                            "valueExpression": {
-                                "language": "text/fhirpath",
-                                "expression": "%resource.repeat(item).where(linkId='EmCare.A.DE48').answer.first().empty()"
-                            }
-                        }
-                    ],
-                    "linkId": "EmCare.A.DE24",
-                    "text": "Caregiver&#8217;s Relationship to Client",
-                    "type": "choice",
-                    "required": true,
-                    "repeats": false,
-                    "answerOption": [
-                        {
-                            "valueCoding": {
-                                "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
-                                "code": "EmCare.A.DE25",
-                                "display": "Mother"
-                            }
-                        },
-                        {
-                            "valueCoding": {
-                                "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
-                                "code": "EmCare.A.DE26",
-                                "display": "Father"
-                            }
-                        },
-                        {
-                            "valueCoding": {
-                                "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
-                                "code": "EmCare.A.DE27",
-                                "display": "Sibling"
-                            }
-                        },
-                        {
-                            "valueCoding": {
-                                "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
-                                "code": "EmCare.A.DE28",
-                                "display": "Extended family"
-                            }
-                        },
-                        {
-                            "valueCoding": {
-                                "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
-                                "code": "EmCare.A.DE29",
-                                "display": "Legal Guardian"
-                            }
-                        },
-                        {
-                            "valueCoding": {
-                                "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
-                                "code": "EmCare.A.DE30",
-                                "display": "Not Related"
-                            }
-                        }
-                    ]
                 },
                 {
                     "extension": [
@@ -976,7 +919,67 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
-                        "expression": "%resource.repeat(item).where(linkId='EmCare.A.DE21.1').repeat(item).where(linkId='EmCare.A.DE24').answer.first().value.code != 'EmCare.A.DE25'"
+                        "expression": "%resource.repeat(item).where(linkId='EmCare.A.DE48').answer.first().empty()"
+                    }
+                }
+            ],
+            "linkId": "EmCare.A.DE24",
+            "text": "Caregiver&#8217;s Relationship to Client",
+            "type": "choice",
+            "required": true,
+            "repeats": false,
+            "answerOption": [
+                {
+                    "valueCoding": {
+                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+                        "code": "EmCare.A.DE25",
+                        "display": "Mother"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+                        "code": "EmCare.A.DE26",
+                        "display": "Father"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+                        "code": "EmCare.A.DE27",
+                        "display": "Sibling"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+                        "code": "EmCare.A.DE28",
+                        "display": "Extended family"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+                        "code": "EmCare.A.DE29",
+                        "display": "Legal Guardian"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+                        "code": "EmCare.A.DE30",
+                        "display": "Not Related"
+                    }
+                }
+            ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                    "valueExpression": {
+                        "language": "text/fhirpath",
+                        "expression": "%resource.repeat(item).where(linkId='EmCare.A.DE24').answer.first().value.code != 'EmCare.A.DE25'"
                     }
                 }
             ],
@@ -1040,7 +1043,7 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
-                        "expression": "%resource.repeat(item).where(linkId='EmCare.A.DE21.1').repeat(item).where(linkId='EmCare.A.DE24').answer.first().value.code != 'EmCare.A.DE26'"
+                        "expression": "%resource.repeat(item).where(linkId='EmCare.A.DE24').answer.first().value.code != 'EmCare.A.DE26'"
                     }
                 }
             ],

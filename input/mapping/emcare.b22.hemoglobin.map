@@ -74,9 +74,9 @@ group emcareobservationemcareb22de82(source src,target tgt){
     src.item first as item  where linkId = 'EmCare.B22.DE82' and answer.exists() then {
         item.answer first as a then {
             a.value as val then {
-                val where val.code = 'true' -> tgt.status = 'final',tgt.value = true  '8a65aaa5';
-            } '26c2c8c7';
-        } '721205d5';
-    } 'cc79d81a';
+                val where val.code = 'EmCare.B22.DE82' -> tgt.status = 'final',tgt.value = true  'f3396dcf';
+            } '84308e24';
+        } 'ce63be3a';
+    } 'af158a77';
 }
 

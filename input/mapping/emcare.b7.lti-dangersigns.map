@@ -461,12 +461,12 @@ group emcareobservationemcareb22de14(source src,target tgt){
             itm2.item first as item  where linkId =  'EmCare.B22.DE14' and answer.exists() then {
                 item.answer first as a then {
                     a.value as val then {
-                        val where val.code = 'true' -> tgt.status = 'final',tgt.value = true  '8a65aaa5';
-                    } '26c2c8c7';
-                } '721205d5';
-            } 'b72aac92';
-        } 'e7d47de7';
-    } '0204726e';
+                        val where val.code = 'EmCare.B22.DE14' -> tgt.status = 'final',tgt.value = true  '0a349f11';
+                    } '11497480';
+                } 'b2d7e868';
+            } '75e3960f';
+        } 'ec816681';
+    } '31ad2865';
 }
 
 group emcareobservationemcareb22de14a(source src,target tgt){

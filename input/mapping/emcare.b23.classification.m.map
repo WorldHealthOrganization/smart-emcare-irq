@@ -291,14 +291,14 @@ group emcareconditionemcareb23de83(source src,source item,target tgt){
             src -> tgt.code = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'EmCare.B23.DE83', ccs.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes' '8e761921';
         } 'a10c1e7b';
     } '13fd46f9';
-    item.answer first as a where value.code = 'agree' then {
+    item.answer first as a where value.code = 'agree' or value = true then {
          a -> tgt.clinicalStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'active', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-clinical' 'b7901585';
          a -> tgt.verificationStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'confirmed', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status' '50fa6601';
-    } '68090597';
-    item.answer first as a where value.code = 'disagree' then {
+    } '066abca1';
+    item.answer first as a where value.code = 'disagree' or value = false then {
          a -> tgt.clinicalStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'inactive', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-clinical' '91ff87cb';
          a -> tgt.verificationStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'refuted', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status' '0bb513b4';
-    } '34819e13';
+    } 'b86247eb';
 }
 
 group emcareconditionemcareb23de06(source src,source item,target tgt){
@@ -314,14 +314,14 @@ group emcareconditionemcareb23de06(source src,source item,target tgt){
             src -> tgt.code = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'EmCare.B23.DE06', ccs.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes' 'dd0fd01c';
         } '8ef845b0';
     } '558d6c0d';
-    item.answer first as a where value.code = 'agree' then {
+    item.answer first as a where value.code = 'agree' or value = true then {
          a -> tgt.clinicalStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'active', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-clinical' 'b7901585';
          a -> tgt.verificationStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'confirmed', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status' '50fa6601';
-    } '68090597';
-    item.answer first as a where value.code = 'disagree' then {
+    } '066abca1';
+    item.answer first as a where value.code = 'disagree' or value = false then {
          a -> tgt.clinicalStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'inactive', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-clinical' '91ff87cb';
          a -> tgt.verificationStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'refuted', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status' '0bb513b4';
-    } '34819e13';
+    } 'b86247eb';
 }
 
 group emcareconditionemcareb23de85(source src,source item,target tgt){
@@ -337,14 +337,14 @@ group emcareconditionemcareb23de85(source src,source item,target tgt){
             src -> tgt.code = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'EmCare.B23.DE85', ccs.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes' 'edf923c3';
         } 'a2ce3a97';
     } '6f3a3752';
-    item.answer first as a where value.code = 'agree' then {
+    item.answer first as a where value.code = 'agree' or value = true then {
          a -> tgt.clinicalStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'active', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-clinical' 'b7901585';
          a -> tgt.verificationStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'confirmed', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status' '50fa6601';
-    } '68090597';
-    item.answer first as a where value.code = 'disagree' then {
+    } '066abca1';
+    item.answer first as a where value.code = 'disagree' or value = false then {
          a -> tgt.clinicalStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'inactive', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-clinical' '91ff87cb';
          a -> tgt.verificationStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'refuted', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status' '0bb513b4';
-    } '34819e13';
+    } 'b86247eb';
 }
 
 group emcareconditionemcareb23de86(source src,source item,target tgt){
@@ -360,14 +360,14 @@ group emcareconditionemcareb23de86(source src,source item,target tgt){
             src -> tgt.code = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'EmCare.B23.DE86', ccs.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes' '342850aa';
         } '9338b358';
     } 'fc719a3c';
-    item.answer first as a where value.code = 'agree' then {
+    item.answer first as a where value.code = 'agree' or value = true then {
          a -> tgt.clinicalStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'active', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-clinical' 'b7901585';
          a -> tgt.verificationStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'confirmed', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status' '50fa6601';
-    } '68090597';
-    item.answer first as a where value.code = 'disagree' then {
+    } '066abca1';
+    item.answer first as a where value.code = 'disagree' or value = false then {
          a -> tgt.clinicalStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'inactive', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-clinical' '91ff87cb';
          a -> tgt.verificationStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'refuted', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status' '0bb513b4';
-    } '34819e13';
+    } 'b86247eb';
 }
 
 group emcareconditionemcareb23de106(source src,source item,target tgt){
@@ -383,14 +383,14 @@ group emcareconditionemcareb23de106(source src,source item,target tgt){
             src -> tgt.code = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'EmCare.B23.DE106', ccs.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes' '70f0a4fa';
         } 'd8d6d130';
     } '671ed411';
-    item.answer first as a where value.code = 'agree' then {
+    item.answer first as a where value.code = 'agree' or value = true then {
          a -> tgt.clinicalStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'active', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-clinical' 'b7901585';
          a -> tgt.verificationStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'confirmed', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status' '50fa6601';
-    } '68090597';
-    item.answer first as a where value.code = 'disagree' then {
+    } '066abca1';
+    item.answer first as a where value.code = 'disagree' or value = false then {
          a -> tgt.clinicalStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'inactive', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-clinical' '91ff87cb';
          a -> tgt.verificationStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'refuted', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status' '0bb513b4';
-    } '34819e13';
+    } 'b86247eb';
 }
 
 group emcareconditionemcareb23de87(source src,source item,target tgt){
@@ -406,14 +406,14 @@ group emcareconditionemcareb23de87(source src,source item,target tgt){
             src -> tgt.code = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'EmCare.B23.DE87', ccs.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes' '01f1ca5f';
         } '62727c30';
     } '9ff74c9e';
-    item.answer first as a where value.code = 'agree' then {
+    item.answer first as a where value.code = 'agree' or value = true then {
          a -> tgt.clinicalStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'active', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-clinical' 'b7901585';
          a -> tgt.verificationStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'confirmed', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status' '50fa6601';
-    } '68090597';
-    item.answer first as a where value.code = 'disagree' then {
+    } '066abca1';
+    item.answer first as a where value.code = 'disagree' or value = false then {
          a -> tgt.clinicalStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'inactive', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-clinical' '91ff87cb';
          a -> tgt.verificationStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'refuted', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status' '0bb513b4';
-    } '34819e13';
+    } 'b86247eb';
 }
 
 group emcareconditionemcareb23de88(source src,source item,target tgt){
@@ -429,14 +429,19 @@ group emcareconditionemcareb23de88(source src,source item,target tgt){
             src -> tgt.code = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'EmCare.B23.DE88', ccs.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes' '2803d2d8';
         } '360a74b4';
     } '36ea706b';
-    item.answer first as a where value.code = 'agree' then {
+    item.answer first as a where value.code = 'agree' or value = true then {
          a -> tgt.clinicalStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'active', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-clinical' 'b7901585';
          a -> tgt.verificationStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'confirmed', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status' '50fa6601';
-    } '68090597';
-    item.answer first as a where value.code = 'disagree' then {
+    } '066abca1';
+    item.answer first as a where value.code = 'disagree' or value = false then {
          a -> tgt.clinicalStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'inactive', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-clinical' '91ff87cb';
          a -> tgt.verificationStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'refuted', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status' '0bb513b4';
-    } '34819e13';
+    } 'b86247eb';
+    src.item first as item  where linkId = 'EmCare.B23.DE88A' and answer.exists() then {
+        item.answer first as a where a.value=true then {
+            src -> tgt.extension  = create('Extension') as ext ,  ext.url ='https://fhir.dk.swisstph-mis.ch/matchbox/fhir//StructureDefinition/postcoordination',  ext.value =  create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'EmCare.B23.DE88A', ccs.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes' '7a6b02aa';
+        } '705518ea';
+    } '5077abaf';
 }
 
 group emcareconditionemcareb23de89(source src,source item,target tgt){
@@ -452,14 +457,14 @@ group emcareconditionemcareb23de89(source src,source item,target tgt){
             src -> tgt.code = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'EmCare.B23.DE89', ccs.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes' 'd0ba1006';
         } '10f03284';
     } '0d943b47';
-    item.answer first as a where value.code = 'agree' then {
+    item.answer first as a where value.code = 'agree' or value = true then {
          a -> tgt.clinicalStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'active', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-clinical' 'b7901585';
          a -> tgt.verificationStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'confirmed', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status' '50fa6601';
-    } '68090597';
-    item.answer first as a where value.code = 'disagree' then {
+    } '066abca1';
+    item.answer first as a where value.code = 'disagree' or value = false then {
          a -> tgt.clinicalStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'inactive', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-clinical' '91ff87cb';
          a -> tgt.verificationStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'refuted', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status' '0bb513b4';
-    } '34819e13';
+    } 'b86247eb';
 }
 
 group emcareconditionemcareb23de13(source src,source item,target tgt){
@@ -475,14 +480,14 @@ group emcareconditionemcareb23de13(source src,source item,target tgt){
             src -> tgt.code = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'EmCare.B23.DE13', ccs.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes' '0b87b4e7';
         } '6cc1c549';
     } 'dc54929c';
-    item.answer first as a where value.code = 'agree' then {
+    item.answer first as a where value.code = 'agree' or value = true then {
          a -> tgt.clinicalStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'active', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-clinical' 'b7901585';
          a -> tgt.verificationStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'confirmed', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status' '50fa6601';
-    } '68090597';
-    item.answer first as a where value.code = 'disagree' then {
+    } '066abca1';
+    item.answer first as a where value.code = 'disagree' or value = false then {
          a -> tgt.clinicalStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'inactive', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-clinical' '91ff87cb';
          a -> tgt.verificationStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'refuted', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status' '0bb513b4';
-    } '34819e13';
+    } 'b86247eb';
 }
 
 group emcareconditionemcareb23de14(source src,source item,target tgt){
@@ -498,14 +503,14 @@ group emcareconditionemcareb23de14(source src,source item,target tgt){
             src -> tgt.code = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'EmCare.B23.DE14', ccs.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes' 'c77e81e6';
         } 'a3de578a';
     } 'd565e84e';
-    item.answer first as a where value.code = 'agree' then {
+    item.answer first as a where value.code = 'agree' or value = true then {
          a -> tgt.clinicalStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'active', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-clinical' 'b7901585';
          a -> tgt.verificationStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'confirmed', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status' '50fa6601';
-    } '68090597';
-    item.answer first as a where value.code = 'disagree' then {
+    } '066abca1';
+    item.answer first as a where value.code = 'disagree' or value = false then {
          a -> tgt.clinicalStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'inactive', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-clinical' '91ff87cb';
          a -> tgt.verificationStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'refuted', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status' '0bb513b4';
-    } '34819e13';
+    } 'b86247eb';
 }
 
 group emcareconditionemcareb23de15(source src,source item,target tgt){
@@ -521,14 +526,14 @@ group emcareconditionemcareb23de15(source src,source item,target tgt){
             src -> tgt.code = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'EmCare.B23.DE15', ccs.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes' '16e4a2c3';
         } '088a39f1';
     } 'b194144a';
-    item.answer first as a where value.code = 'agree' then {
+    item.answer first as a where value.code = 'agree' or value = true then {
          a -> tgt.clinicalStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'active', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-clinical' 'b7901585';
          a -> tgt.verificationStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'confirmed', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status' '50fa6601';
-    } '68090597';
-    item.answer first as a where value.code = 'disagree' then {
+    } '066abca1';
+    item.answer first as a where value.code = 'disagree' or value = false then {
          a -> tgt.clinicalStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'inactive', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-clinical' '91ff87cb';
          a -> tgt.verificationStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'refuted', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status' '0bb513b4';
-    } '34819e13';
+    } 'b86247eb';
 }
 
 group emcareconditionemcareb23de94(source src,source item,target tgt){
@@ -544,14 +549,14 @@ group emcareconditionemcareb23de94(source src,source item,target tgt){
             src -> tgt.code = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'EmCare.B23.DE94', ccs.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes' '61234ed0';
         } 'ba5673dd';
     } 'b957f076';
-    item.answer first as a where value.code = 'agree' then {
+    item.answer first as a where value.code = 'agree' or value = true then {
          a -> tgt.clinicalStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'active', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-clinical' 'b7901585';
          a -> tgt.verificationStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'confirmed', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status' '50fa6601';
-    } '68090597';
-    item.answer first as a where value.code = 'disagree' then {
+    } '066abca1';
+    item.answer first as a where value.code = 'disagree' or value = false then {
          a -> tgt.clinicalStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'inactive', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-clinical' '91ff87cb';
          a -> tgt.verificationStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'refuted', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status' '0bb513b4';
-    } '34819e13';
+    } 'b86247eb';
     src.item first as item  where linkId = 'DL-G-CL2-42' and answer.exists() then {
         item.answer first as a where a.value=true then {
             src -> tgt.extension  = create('Extension') as ext ,  ext.url ='https://fhir.dk.swisstph-mis.ch/matchbox/fhir//StructureDefinition/postcoordination',  ext.value =  create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'DL-G-CL2-42', ccs.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes' '348823e4';
@@ -572,14 +577,14 @@ group emcareconditionemcareb23de98(source src,source item,target tgt){
             src -> tgt.code = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'EmCare.B23.DE98', ccs.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes' '11d6b9d2';
         } 'cbe98666';
     } '98163aba';
-    item.answer first as a where value.code = 'agree' then {
+    item.answer first as a where value.code = 'agree' or value = true then {
          a -> tgt.clinicalStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'active', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-clinical' 'b7901585';
          a -> tgt.verificationStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'confirmed', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status' '50fa6601';
-    } '68090597';
-    item.answer first as a where value.code = 'disagree' then {
+    } '066abca1';
+    item.answer first as a where value.code = 'disagree' or value = false then {
          a -> tgt.clinicalStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'inactive', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-clinical' '91ff87cb';
          a -> tgt.verificationStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'refuted', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status' '0bb513b4';
-    } '34819e13';
+    } 'b86247eb';
 }
 
 group emcareconditioncollectoremcareb23de83(source src,source item,target tgt){

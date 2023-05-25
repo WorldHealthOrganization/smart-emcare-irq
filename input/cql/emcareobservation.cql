@@ -2,7 +2,7 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareobservation version '1.0.1.rc12.build.681'
+library emcareobservation version '1.0.2'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
 
@@ -52,8 +52,7 @@ code "Young Infant receives food or fluids other than breast milk": 'EmCare.B21S
 code "What milk is being given as a replacement feed?": 'EmCare.B21S2.DE09' from "EmCare" display 'What milk is being given as a replacement feed?'
 code "How many replacement feeds during the day and night (24 hours)?": 'EmCare.B21S2.DE12' from "EmCare" display 'How many replacement feeds during the day and night (24 hours)?'
 code "Sufficient replacement feeds (in 24 hours)": 'EmCare.B21S2.DE13' from "EmCare" display 'Sufficient replacement feeds (in 24 hours)'
-code "How much milk is given at each feed (ml)?": 'EmCare.B21S2.DE15' from "EmCare" display 'How much milk is given at each feed (ml)?'
-code "Sufficient replacement feeds": 'EmCare.B21S2.DE16' from "EmCare" display 'Sufficient replacement feeds'
+code "How much milk is given at each feed?": 'EmCare.B21S2.DE15' from "EmCare" display 'How much milk is given at each feed?'
 code "How is the milk prepared?": 'EmCare.B21S2.DE18' from "EmCare" display 'How is the milk prepared?'
 code "How is the milk given?": 'EmCare.B21S2.DE21' from "EmCare" display 'How is the milk given?'
 code "How are the feeding utensils cleaned?": 'EmCare.B21S2.DE24' from "EmCare" display 'How are the feeding utensils cleaned?'
@@ -82,6 +81,7 @@ code "Stridor in a calm child": 'EmCare.B10S2.DE04' from "EmCare" display 'Strid
 code "Wheezing": 'EmCare.B10S2.DE05' from "EmCare" display 'Wheezing'
 code "Recurrent Wheeze": 'EmCare.B10S2.DE06' from "EmCare" display 'Recurrent Wheeze'
 code "Oxygen Saturation": 'EmCare.B10S2.DE07' from "EmCare" display 'Oxygen Saturation'
+code "Oxygen saturation not measured": 'EmCare.B10S2.DE09' from "EmCare" display 'Oxygen saturation not measured'
 code "Sunken eyes": 'EmCare.B11S2.DE01' from "EmCare" display 'Sunken eyes'
 code "Throat problem": 'EmCare.B17S1.DE01' from "EmCare" display 'Throat problem'
 code "Specify Throat problem": 'EmCare.B17S1.DE02' from "EmCare" display 'Specify Throat problem'
@@ -126,8 +126,8 @@ code "Has the Child had anything to drink today?": 'EmCare.B22.DE15' from "EmCar
 code "How did the child last drink": 'EmCare.B22.DE16' from "EmCare" display 'How did the child last drink'
 code "Respiratory Rate (breaths per minute)": 'EmCare.B22.DE01' from "EmCare" display 'Respiratory Rate (breaths per minute)'
 code "Unable to perform Respiratory Rate at this time": 'EmCare.B22.DE02' from "EmCare" display 'Unable to perform Respiratory Rate at this time'
-code "Respiratory Rate Second Count (breaths per minute)": 'EmCare.B22.DE04' from "EmCare" display 'Respiratory Rate Second Count (breaths per minute)'
-code "Respiratory Rate Second Count Not Possible": 'EmCare.B22.DE05' from "EmCare" display 'Respiratory Rate Second Count Not Possible'
+code "Respiratory Rate (Second Count) (breaths per minute)": 'EmCare.B22.DE04' from "EmCare" display 'Respiratory Rate (Second Count) (breaths per minute)'
+code "Respiratory Rate (Second Count) Not Possible": 'EmCare.B22.DE05' from "EmCare" display 'Respiratory Rate (Second Count) Not Possible'
 code "Fast Breathing": 'EmCare.B22.DE07' from "EmCare" display 'Fast Breathing'
 code "Inhaled Bronchodilator Trial Not Feasible or Available": 'EmCare.B22.DE22' from "EmCare" display 'Inhaled Bronchodilator Trial Not Feasible or Available'
 code "Chest Indrawing (post inhaled bronchodilator trial)": 'EmCare.B22.DE18' from "EmCare" display 'Chest Indrawing (post inhaled bronchodilator trial)'

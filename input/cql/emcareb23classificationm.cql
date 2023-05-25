@@ -2,14 +2,14 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareb23classificationm version '1.0.1.rc12.build.681'
+library emcareb23classificationm version '1.0.2'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.1.rc12.build.681' called Base
-include emcareobservation version '1.0.1.rc12.build.681' called obs
-include emcarevalueset version '1.0.1.rc12.build.681' called val
-include emcarezscore version '1.0.1.rc12.build.681' called Z
-include emcarecombineddataelements version '1.0.1.rc12.build.681' called C
+include emcarebase version '1.0.2' called Base
+include emcareobservation version '1.0.2' called obs
+include emcarevalueset version '1.0.2' called val
+include emcarezscore version '1.0.2' called Z
+include emcarecombineddataelements version '1.0.2' called C
 
 
 
@@ -23,48 +23,6 @@ OBSdefine.EmCare.B22.DE50 : Measured Temperature (second measurement)
 */
 define "OBSdefine.EmCare.B22.DE50":
     Base.GetObsValue('EmCare.B22.DE50')
-
-/* 
-OBSdefine.EmCare.B7.DE03 : Convulsion(s) in this Illness
-
-*/
-define "OBSdefine.EmCare.B7.DE03":
-    Base.GetObsValue('EmCare.B7.DE03')
-
-/* 
-OBSdefine.EmCare.B18S2.DE07 : Severe Chest Indrawing
-
-*/
-define "OBSdefine.EmCare.B18S2.DE07":
-    Base.GetObsValue('EmCare.B18S2.DE07')
-
-/* 
-OBSdefine.EmCare.B18S2.DE08 : Infant's Movements
-
-*/
-define "OBSdefine.EmCare.B18S2.DE08":
-    Base.GetObsValue('EmCare.B18S2.DE08')
-
-/* 
-OBSdefine.EmCare.B18S1.DE02 : Difficulty with Feeding
-
-*/
-define "OBSdefine.EmCare.B18S1.DE02":
-    Base.GetObsValue('EmCare.B18S1.DE02')
-
-/* 
-OBSdefine.EmCare.B6.DE01A : Measured Temperature
-
-*/
-define "OBSdefine.EmCare.B6.DE01A":
-    Base.GetObsValue('EmCare.B6.DE01A')
-
-/* 
-OBSdefine.EmCare.B22.DE46 : Second Temperature Measurement Not Feasible
-
-*/
-define "OBSdefine.EmCare.B22.DE46":
-    Base.GetObsValue('EmCare.B22.DE46')
 
 /* 
 OBSdefine.EmCare.B22.DE07 : Fast Breathing
@@ -123,6 +81,13 @@ define "OBSdefine.EmCare.B11S1.DE01":
     Base.GetObsValue('EmCare.B11S1.DE01')
 
 /* 
+OBSdefine.EmCare.B21S2.DE09 : What milk is being given as a replacement feed?
+
+*/
+define "OBSdefine.EmCare.B21S2.DE09":
+    Base.GetObsValue('EmCare.B21S2.DE09')
+
+/* 
 OBSdefine.EmCare.B21S2.DE13 : Sufficient replacement feeds (in 24 hours)
 
 */
@@ -130,11 +95,11 @@ define "OBSdefine.EmCare.B21S2.DE13":
     Base.GetObsValue('EmCare.B21S2.DE13')
 
 /* 
-OBSdefine.EmCare.B21S2.DE16 : Sufficient replacement feeds
+OBSdefine.EmCare.B21S2.DE15 : How much milk is given at each feed?
 
 */
-define "OBSdefine.EmCare.B21S2.DE16":
-    Base.GetObsValue('EmCare.B21S2.DE16')
+define "OBSdefine.EmCare.B21S2.DE15":
+    Base.GetObsValue('EmCare.B21S2.DE15')
 
 /* 
 OBSdefine.EmCare.B21S2.DE18 : How is the milk prepared?
@@ -156,13 +121,6 @@ OBSdefine.EmCare.B21S2.DE24 : How are the feeding utensils cleaned?
 */
 define "OBSdefine.EmCare.B21S2.DE24":
     Base.GetObsValue('EmCare.B21S2.DE24')
-
-/* 
-OBSdefine.EmCare.B21S2.DE09&EmCare.B21S2.DE11 : What milk is being given as a replacement feed?
-
-*/
-define "OBSdefine.EmCare.B21S2.DE09&EmCare.B21S2.DE11":
-    Base.GetObsValue('EmCare.B21S2.DE09&EmCare.B21S2.DE11')
 
 /* 
 OBSdefine.EmCare.B22.DE44 : Difficulty Breastfeeding Observed
@@ -229,18 +187,10 @@ define "Measured Temperature (second measurement)":
 
 /* 
 DL-G-CL2-04-08 : 
-    (    ("ageinmonths"<2)
-         and ((    "Convulsion(s) in this Illness"  or "Severe Chest Indrawing"  or "Infant's Movements" = "Movement only when stimulated but then stops" or "Infant's Movements" = "No movement at all"  or "Difficulty with Feeding" = "Not Able to Feed At All" or "Difficulty with Feeding" = "Not Feeding Well")
-         or (    ("Measured Temperature" = "High" or  "Measured Temperature" ="Very High" or "Measured Temperature" = "Low") and  ( "Second Temperature Measurement Not Feasible" = true or "Measured Temperature (second measurement)" != "Normal" ))
-         or (    "Measured Temperature" = "Low" and( "Second Temperature Measurement Not Feasible" = true or "Measured Temperature (second measurement)" != "Normal" ))))
-     or (    "ageindays"<7 and "Fast Breathing")
+C."PSBI"
 */
 define "DL-G-CL2-04-08":
-        (    ("ageinmonths"<2)
-             and ((    "OBSdefine.EmCare.B7.DE03"  or "OBSdefine.EmCare.B18S2.DE07"  or "OBSdefine.EmCare.B18S2.DE08" ~ val."Movement only when stimulated but then stops" or "OBSdefine.EmCare.B18S2.DE08" ~ val."No movement at all"  or "OBSdefine.EmCare.B18S1.DE02" ~ val."Not Able to Feed At All" or "OBSdefine.EmCare.B18S1.DE02" ~ val."Not Feeding Well")
-             or (    ("OBSdefine.EmCare.B6.DE01A" ~ val."High" or  "OBSdefine.EmCare.B6.DE01A" =val."Very High" or "OBSdefine.EmCare.B6.DE01A" ~ val."Low") and  ( "OBSdefine.EmCare.B22.DE46" = true or "Measured Temperature (second measurement)" !~ val."Normal" ))
-             or (    "OBSdefine.EmCare.B6.DE01A" ~ val."Low" and( "OBSdefine.EmCare.B22.DE46" = true or "Measured Temperature (second measurement)" !~ val."Normal" ))))
-         or (    "ageindays"<7 and "OBSdefine.EmCare.B22.DE07")
+    C."PSBI"
 
 /* 
 Possible Serious Bacterial Infection OR Very Severe Disease : DL-G-CL2-04-08
@@ -251,10 +201,10 @@ define "Possible Serious Bacterial Infection OR Very Severe Disease":
 
 /* 
 DL-G-CL2-10 : 
-"Fast Breathing" = "Yes" and "ageinmonths"<2 and "ageindays">=7 and "DL-G-CL2-04-08" = false
+"Fast Breathing" = true and "ageinmonths"<2 and "ageindays">=7 and "DL-G-CL2-04-08" !=true
 */
 define "DL-G-CL2-10":
-    "OBSdefine.EmCare.B22.DE07" = true and "ageinmonths"<2 and "ageindays">=7 and "DL-G-CL2-04-08" = false
+    "OBSdefine.EmCare.B22.DE07" = true and "ageinmonths"<2 and "ageindays">=7 and Coalesce("DL-G-CL2-04-08",false)!=true
 
 /* 
 Pneumonia : DL-G-CL2-10
@@ -265,10 +215,10 @@ define "Pneumonia":
 
 /* 
 DL-G-CL2-11 : 
-"ageinmonths"<2 and ("Umbilicus Red or Pus Draining" or "Skin Pustules")
+"ageinmonths"<2 and ("Umbilicus Red or Pus Draining"  = true or "Skin Pustules" = true)
 */
 define "DL-G-CL2-11":
-    "ageinmonths"<2 and ("OBSdefine.EmCare.B18S2.DE12" or "OBSdefine.EmCare.B18S2.DE13")
+    "ageinmonths"<2 and ("OBSdefine.EmCare.B18S2.DE12"  = true or "OBSdefine.EmCare.B18S2.DE13" = true)
 
 /* 
 Local Infection : DL-G-CL2-11
@@ -292,42 +242,56 @@ define "DL-G-CL2-26":
     "ageindays"<7  and "OBSdefine.EmCare.B21S2.DE01" ~ val."Very Low Weight for Age"
 
 /* 
-DL-G-CL2-13-14 : 
-    ("Yellow Skin" = true)
-     and ((    "ageindays" < 21  and  "When did the Jaundice first appear?" = "Within less than 24 hours of birth")
-     or (    "ageindays" < 1)
-     or (    "ageinmonths"<2 and  "Yellow Palms or Yellow Soles" = true))
+DL-G-CL2-13-a-14 : 
+    (    ("Yellow Skin" = true)
+         and ((    "ageindays" < 21  and  "When did the Jaundice first appear?" = "Within less than 24 hours of birth")
+         or (    "ageindays" < 1)))
+     or (    "ageinmonths"<2 and  "Yellow Palms or Yellow Soles" = true)
 */
-define "DL-G-CL2-13-14":
-        ("OBSdefine.EmCare.B19S2.DE01" = true)
-         and ((    "ageindays" < 21  and  "OBSdefine.EmCare.B19S2.DE04" ~ val."Within less than 24 hours of birth")
-         or (    "ageindays" < 1)
-         or (    "ageinmonths"<2 and  "OBSdefine.EmCare.B19S2.DE02" = true))
+define "DL-G-CL2-13-a-14":
+        (    ("OBSdefine.EmCare.B19S2.DE01" = true)
+             and ((    "ageindays" < 21  and  "OBSdefine.EmCare.B19S2.DE04" ~ val."Within less than 24 hours of birth")
+             or (    "ageindays" < 1)))
+         or (    "ageinmonths"<2 and  "OBSdefine.EmCare.B19S2.DE02" = true)
 
 /* 
-Severe Jaundice : DL-G-CL2-13-14
+Severe Jaundice : DL-G-CL2-13-a-14
 Alias
 */
 define "Severe Jaundice":
-    "DL-G-CL2-13-14"
+    "DL-G-CL2-13-a-14"
 
 /* 
 DL-G-CL2-15-43 : 
-    ("Yellow Palms or Yellow Soles" = false)
-     and ((    "ageindays" > 1 and "ageindays" < 21 and "Yellow Skin" = true and ("When did the Jaundice first appear?" = "24 hours or more after birth"  or "When did the Jaundice first appear?" = "Unknown when Jaundice first appeared"))
-     or (    "ageindays" < 21  and "Yellow Skin" = true))
+    ("Severe Jaundice" != true and "Yellow Skin" = true)
+     and ((    "ageindays" < 21 and ("When did the Jaundice first appear?" = "24 hours or more after birth"  or "When did the Jaundice first appear?" = "Unknown when Jaundice first appeared"))
+     or (    "ageindays" > 21))
 */
 define "DL-G-CL2-15-43":
-        ("OBSdefine.EmCare.B19S2.DE02" = false)
-         and ((    "ageindays" > 1 and "ageindays" < 21 and "OBSdefine.EmCare.B19S2.DE01" = true and ("OBSdefine.EmCare.B19S2.DE04" ~ val."24 hours or more after birth"  or "OBSdefine.EmCare.B19S2.DE04" ~ val."Unknown when Jaundice first appeared"))
-         or (    "ageindays" < 21  and "OBSdefine.EmCare.B19S2.DE01" = true))
+        (Coalesce("Severe Jaundice",false)!=true and "OBSdefine.EmCare.B19S2.DE01" = true)
+         and ((    "ageindays" < 21 and ("OBSdefine.EmCare.B19S2.DE04" ~ val."24 hours or more after birth"  or "OBSdefine.EmCare.B19S2.DE04" ~ val."Unknown when Jaundice first appeared"))
+         or (    "ageindays" > 21))
+
+/* 
+Jaundice : DL-G-CL2-15-43
+Alias
+*/
+define "Jaundice":
+    "DL-G-CL2-15-43"
+
+/* 
+EmCare.B23.DE88A : 
+"ageindays" > 21
+*/
+define "EmCare.B23.DE88A":
+    "ageindays" > 21
 
 /* 
 DL-G-CL2-17 : 
-"Yellow Skin" = false and "Yellow Palms or Yellow Soles" = false
+"Yellow Skin" = false and "Yellow Palms or Yellow Soles" = false and "Severe Jaundice"!= true and "Jaundice"!= true
 */
 define "DL-G-CL2-17":
-    "OBSdefine.EmCare.B19S2.DE01" = false and "OBSdefine.EmCare.B19S2.DE02" = false
+    "OBSdefine.EmCare.B19S2.DE01" = false and "OBSdefine.EmCare.B19S2.DE02" = false and Coalesce("Severe Jaundice",false)!=true and Coalesce("Jaundice",false)!=true
 
 /* 
 DL-G-CL2-18 : 
@@ -377,7 +341,7 @@ DL-I-CL2-04 :
 or
 "Sufficient replacement feeds (in 24 hours)"=false
 or
-"Sufficient replacement feeds"=false
+"How much milk is given at each feed?" = "Insufficient replacement feeds"
 or
 "How is the milk prepared?" = "Incorrect or unhygienic feed preparation"
 or
@@ -386,11 +350,11 @@ or
 "How are the feeding utensils cleaned?" = "Feeding utensils not cleaned hygienically"
 */
 define "DL-I-CL2-04":
-    "OBSdefine.EmCare.B21S2.DE09&EmCare.B21S2.DE11" = true
+    "OBSdefine.EmCare.B21S2.DE09" ~ val."Inappropriate replacement milk"
     or
     "OBSdefine.EmCare.B21S2.DE13"=false
     or
-    "OBSdefine.EmCare.B21S2.DE16"=false
+    "OBSdefine.EmCare.B21S2.DE15" ~ val."Insufficient replacement feeds"
     or
     "OBSdefine.EmCare.B21S2.DE18" ~ val."Incorrect or unhygienic feed preparation"
     or
@@ -400,17 +364,17 @@ define "DL-I-CL2-04":
 
 /* 
 DL-G-CL2-29 : 
-Base."isMotherPrimaryCareGiver"=true
+Base.isMotherPrimaryCareGiver=true or Base."Person accompanying child today's Relationship to Client".code= 'MTH'
 */
 define "DL-G-CL2-29":
-    Base."isMotherPrimaryCareGiver"=true
+    Base.isMotherPrimaryCareGiver=true or Base."Person accompanying child today's Relationship to Client".code= 'MTH'
 
 /* 
 DL-G-CL2-30 : 
-"Difficulty Breastfeeding Observed" = true  or "Difficulty Breastfeeding Reported" = true or "Sufficient feeds"=false or "Young Infant receives food or fluids other than breast milk" = false
+"Difficulty Breastfeeding Observed" = true  or "Difficulty Breastfeeding Reported" = true or "Sufficient feeds"=false or "Young Infant receives food or fluids other than breast milk" = true
 */
 define "DL-G-CL2-30":
-    "OBSdefine.EmCare.B22.DE44" = true  or "OBSdefine.EmCare.B22.DE42" = true or "OBSdefine.EmCare.B21S2.DE06"=false or "OBSdefine.EmCare.B21S2.DE08" = false
+    "OBSdefine.EmCare.B22.DE44" = true  or "OBSdefine.EmCare.B22.DE42" = true or "OBSdefine.EmCare.B21S2.DE06"=false or "OBSdefine.EmCare.B21S2.DE08" = true
 
 /* 
 DL-G-CL2-49 : 
@@ -421,10 +385,10 @@ define "DL-G-CL2-49":
 
 /* 
 DL-G-CL2-32 : 
-"Weight Status" = "Low Weight for Age"
+"Weight Status" = v"Low Weight for Age" or "Weight Status" = v"Very Low Weight for Age"
 */
 define "DL-G-CL2-32":
-    "OBSdefine.EmCare.B21S2.DE01" ~ val."Low Weight for Age"
+    "OBSdefine.EmCare.B21S2.DE01" ~ val."Low Weight for Age" or "OBSdefine.EmCare.B21S2.DE01" ~ val."Very Low Weight for Age"
 
 /* 
 DL-G-CL2-42 : 

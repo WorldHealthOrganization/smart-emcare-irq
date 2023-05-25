@@ -23,7 +23,7 @@ required for the execution
 | Observation | EmCare.B12S2.DE01 | boolean/quantity | Stiff neck |
 | Observation | EmCare.B17S1.DE01 | boolean/quantity | Throat problem |
 | Observation | EmCare.B17S1.DE07 | boolean/quantity | Ability to swallow |
-| Observation | EmCare.B17S1.DE02 | boolean/quantity | Specify Throat problem |
+| Observation | EmCare.B17S1.DE05 | boolean/quantity | Membrane on throat |
 | Observation | EmCare.B7.DE08 | boolean/quantity | Unconscious |
 | Observation | EmCare.B11S2.DE02 | boolean/quantity | Skin pinch of Abdomen |
 | Observation | EmCare.B11S2.DE06 | boolean/quantity | Restless and Irritable |

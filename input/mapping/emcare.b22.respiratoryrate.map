@@ -102,10 +102,10 @@ group emcareobservationemcareb22de02(source src,target tgt){
     src.item first as item  where linkId = 'EmCare.B22.DE02' and answer.exists() then {
         item.answer first as a then {
             a.value as val then {
-                val where val.code = 'true' -> tgt.status = 'final',tgt.value = true  '8a65aaa5';
-            } '26c2c8c7';
-        } '721205d5';
-    } '3b9acb5e';
+                val where val.code = 'EmCare.B22.DE02' -> tgt.status = 'final',tgt.value = true  'eaac9f2a';
+            } '529ea5b3';
+        } '2a253a74';
+    } 'faa6cca9';
 }
 
 group emcareobservationemcareb22de04(source src,target tgt){
@@ -161,11 +161,11 @@ group emcareobservationemcareb22de05(source src,target tgt){
         itm1.item first as item  where linkId =  'EmCare.B22.DE05' and answer.exists() then {
             item.answer first as a then {
                 a.value as val then {
-                    val where val.code = 'true' -> tgt.status = 'final',tgt.value = true  '8a65aaa5';
-                } '26c2c8c7';
-            } '721205d5';
-        } '64195ab2';
-    } 'e7a272dd';
+                    val where val.code = 'EmCare.B22.DE05' -> tgt.status = 'final',tgt.value = true  '0e808fd2';
+                } 'aa5e7176';
+            } 'e9ed38a3';
+        } 'c5905390';
+    } '294aec2b';
 }
 
 group emcareobservationemcareb22de07(source src,target tgt){

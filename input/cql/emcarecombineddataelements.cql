@@ -2,12 +2,12 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcarecombineddataelements version '1.0.1.rc12.build.681'
+library emcarecombineddataelements version '1.0.2'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.1.rc12.build.681' called Base
-include emcareobservation version '1.0.1.rc12.build.681' called obs
-include emcarevalueset version '1.0.1.rc12.build.681' called val
+include emcarebase version '1.0.2' called Base
+include emcareobservation version '1.0.2' called obs
+include emcarevalueset version '1.0.2' called val
 
 
 
@@ -149,11 +149,11 @@ define "OBSdefine.EmCare.B17S1.DE07":
     Base.GetObsValue('EmCare.B17S1.DE07')
 
 /* 
-OBSdefine.EmCare.B17S1.DE02 : Specify Throat problem
+OBSdefine.EmCare.B17S1.DE05 : Membrane on throat
 
 */
-define "OBSdefine.EmCare.B17S1.DE02":
-    Base.GetObsValue('EmCare.B17S1.DE02')
+define "OBSdefine.EmCare.B17S1.DE05":
+    Base.GetObsValue('EmCare.B17S1.DE05')
 
 /* 
 OBSdefine.EmCare.B7.DE08 : Unconscious
@@ -385,7 +385,7 @@ EmCare.B.G.DE05 :
      or (    "Stridor in a calm child" = true)
      or (    "Oxygen Saturation" <=  90 '%')
      or (    "Stiff neck" = true)
-     or (    "Fever" = true and "Throat problem" = true and ("Ability to swallow" = "Unable to swallow" or "Specify Throat problem" = "Membrane on throat"))
+     or (    "Fever" = true and "Throat problem" = true and ("Ability to swallow" = "Unable to swallow" or  "Membrane on throat"))
      or (    "Tender swelling behind the ear" = true)
      or (    ("Palmar Pallor" = "Severe Palmar Pallor" or "Mucous membrane pallor"="Severe mucous membrane pallor" or "Hemoglobin (Hb) g/dL"  < 7 'g/dL'))
 */
@@ -394,7 +394,7 @@ define "EmCare.B.G.DE05":
          or (    "OBSdefine.EmCare.B10S2.DE04" = true)
          or (    "OBSdefine.EmCare.B10S2.DE07" <=  90 '%')
          or (    "OBSdefine.EmCare.B12S2.DE01" = true)
-         or (    "Fever" = true and "OBSdefine.EmCare.B17S1.DE01" = true and ("OBSdefine.EmCare.B17S1.DE07" ~ val."Unable to swallow" or "OBSdefine.EmCare.B17S1.DE02" ~ val."Membrane on throat"))
+         or (    "Fever" = true and "OBSdefine.EmCare.B17S1.DE01" = true and ("OBSdefine.EmCare.B17S1.DE07" ~ val."Unable to swallow" or  "OBSdefine.EmCare.B17S1.DE05"))
          or (    "OBSdefine.EmCare.B13S2.DE01" = true)
          or (    ("OBSdefine.EmCare.B15S2.DE01" ~ val."Severe Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE09"=val."Severe mucous membrane pallor" or "OBSdefine.EmCare.B22.DE81"  < 7 'g/dL'))
 
@@ -414,17 +414,19 @@ DL-G-CL1-23-30 :
          or (    (ToInteger("Unconscious" = true or  "Lethargic" = true) + ToInteger("Sunken Eyes" = true) +ToInteger("Skin pinch of Abdomen" = "Skin Pinch goes back very slowly (More than 2 seconds)" )+ToInteger( "Oral Fluid Test Results" = "Completely Unable to Drink" )+ToInteger(  "Oral Fluid Test Results" = "Vomits Immediately / Everything")  + ToInteger(  "Completely Unable to Drink or Vomits Immediately / Everything"=true )+ToInteger( "Oral Fluid Test Results" = "Drinks Poorly") )>1)))
      or (    (AgeInMonths()<2)
          and ((    (ToInteger("Sunken Eyes"=true) +  ToInteger("Skin pinch of Abdomen" = "Skin Pinch goes back very slowly (More than 2 seconds)") + ToInteger("Infant's Movements" = "Movement only when stimulated but then stops") +ToInteger("Infant's Movements" = "No movement at all"))>1)
-         or (    "Skin pinch of Abdomen" = "Skin Pinch goes back very slowly (More than 2 seconds)" and ("Infant's Movements" = "Movement only when stimulated but then stops"  or "Infant's Movements" = "No movement at all" )))))
+         or (    "Skin pinch of Abdomen" = "Skin Pinch goes back slowly (2 seconds or fewer, but not immediately)" and ("Infant's Movements" = "Movement only when stimulated but then stops"  or "Infant's Movements" = "No movement at all" ))
+         or (    "Skin pinch of Abdomen" = "Skin Pinch goes back very slowly (More than 2 seconds)" and "Restless and Irritable" = true))))
 */
 define "DL-G-CL1-23-30":
         ("OBSdefine.EmCare.B11S1.DE01" = true)
          and ((    ("Age >= 2 months to <60 months")
              and ((    "OBSdefine.EmCare.B7.DE08" = true and "OBSdefine.EmCare.B11S2.DE02" ~ val."Skin Pinch goes back slowly (2 seconds or fewer, but not immediately)")
              or (    ("OBSdefine.EmCare.B11S2.DE06" = true or "OBSdefine.EmCare.B11S2.DE02" ~ val."Skin Pinch goes back slowly (2 seconds or fewer, but not immediately)" ) and ("OBSdefine.EmCare.B22.DE08" ~ val."Completely Unable to Drink" or "OBSdefine.EmCare.B22.DE08" ~ val."Vomits Immediately / Everything" or  "OBSdefine.EmCare.B22.DE14a"=true))
-             or (    (ToInteger("OBSdefine.EmCare.B7.DE08" = true or  "OBSdefine.EmCare.B7.DE08a" = true) + ToInteger("OBSdefine.EmCare.B11S2.DE01" = true) +ToInteger("OBSdefine.EmCare.B11S2.DE02" ~ val."Skin Pinch goes back very slowly (More than 2 seconds)" )+ToInteger( "OBSdefine.EmCare.B22.DE08" ~ val."Completely Unable to Drink" )+ToInteger(  "OBSdefine.EmCare.B22.DE08" ~ val."Vomits Immediately / Everything")  + ToInteger(  "OBSdefine.EmCare.B22.DE14a"=true )+ToInteger( "OBSdefine.EmCare.B22.DE08" ~ val."Drinks Poorly") )>1)))
+             or (    (ToInteger(Coalesce("OBSdefine.EmCare.B7.DE08" = true or  "OBSdefine.EmCare.B7.DE08a" = true,false)) + ToInteger(Coalesce("OBSdefine.EmCare.B11S2.DE01" = true,false)) +ToInteger(Coalesce("OBSdefine.EmCare.B11S2.DE02" ~ val."Skin Pinch goes back very slowly (More than 2 seconds)" ,false))+ToInteger(Coalesce( "OBSdefine.EmCare.B22.DE08" ~ val."Completely Unable to Drink" ,false))+ToInteger(Coalesce(  "OBSdefine.EmCare.B22.DE08" ~ val."Vomits Immediately / Everything",false))  + ToInteger(Coalesce(  "OBSdefine.EmCare.B22.DE14a"=true ,false))+ToInteger(Coalesce( "OBSdefine.EmCare.B22.DE08" ~ val."Drinks Poorly",false)) )>1)))
          or (    (AgeInMonths()<2)
-             and ((    (ToInteger("OBSdefine.EmCare.B11S2.DE01"=true) +  ToInteger("OBSdefine.EmCare.B11S2.DE02" ~ val."Skin Pinch goes back very slowly (More than 2 seconds)") + ToInteger("OBSdefine.EmCare.B18S2.DE08" ~ val."Movement only when stimulated but then stops") +ToInteger("OBSdefine.EmCare.B18S2.DE08" ~ val."No movement at all"))>1)
-             or (    "OBSdefine.EmCare.B11S2.DE02" ~ val."Skin Pinch goes back very slowly (More than 2 seconds)" and ("OBSdefine.EmCare.B18S2.DE08" ~ val."Movement only when stimulated but then stops"  or "OBSdefine.EmCare.B18S2.DE08" ~ val."No movement at all" )))))
+             and ((    (ToInteger(Coalesce("OBSdefine.EmCare.B11S2.DE01"=true,false)) +  ToInteger(Coalesce("OBSdefine.EmCare.B11S2.DE02" ~ val."Skin Pinch goes back very slowly (More than 2 seconds)",false)) + ToInteger(Coalesce("OBSdefine.EmCare.B18S2.DE08" ~ val."Movement only when stimulated but then stops",false)) +ToInteger(Coalesce("OBSdefine.EmCare.B18S2.DE08" ~ val."No movement at all",false)))>1)
+             or (    "OBSdefine.EmCare.B11S2.DE02" ~ val."Skin Pinch goes back slowly (2 seconds or fewer, but not immediately)" and ("OBSdefine.EmCare.B18S2.DE08" ~ val."Movement only when stimulated but then stops"  or "OBSdefine.EmCare.B18S2.DE08" ~ val."No movement at all" ))
+             or (    "OBSdefine.EmCare.B11S2.DE02" ~ val."Skin Pinch goes back very slowly (More than 2 seconds)" and "OBSdefine.EmCare.B11S2.DE06" = true))))
 
 /* 
 Severe Dehydration : DL-G-CL1-23-30
@@ -443,7 +445,7 @@ DL-G-CL1-24-32 :
 */
 define "DL-G-CL1-24-32":
         ("OBSdefine.EmCare.B11S1.DE01" = true and  Coalesce("Severe Dehydration",false)!=true)
-         and ((    (ToInteger("OBSdefine.EmCare.B11S2.DE06" = true) + ToInteger("OBSdefine.EmCare.B11S2.DE01" = true) + ToInteger("OBSdefine.EmCare.B11S2.DE02" ~ val."Skin Pinch goes back slowly (2 seconds or fewer, but not immediately)" ) + ToInteger("OBSdefine.EmCare.B22.DE08" ~ val."Drinks Eagerly / Thirstily" ))>1)
+         and ((    (ToInteger(Coalesce("OBSdefine.EmCare.B11S2.DE06" = true,false)) + ToInteger(Coalesce("OBSdefine.EmCare.B11S2.DE01" = true,false)) + ToInteger(Coalesce("OBSdefine.EmCare.B11S2.DE02" ~ val."Skin Pinch goes back slowly (2 seconds or fewer, but not immediately)" ,false)) + ToInteger(Coalesce("OBSdefine.EmCare.B22.DE08" ~ val."Drinks Eagerly / Thirstily" ,false)))>1)
          or (    ("Age >= 2 months to <60 months")
              and ((    "OBSdefine.EmCare.B11S2.DE06" = true and ("OBSdefine.EmCare.B22.DE08" ~ val."Drinks Poorly" or  "OBSdefine.EmCare.B11S2.DE02" ~ val."Skin Pinch goes back very slowly (More than 2 seconds)" ))
              or (    ("OBSdefine.EmCare.B7.DE08a" = true or "OBSdefine.EmCare.B22.DE08" ~ val."Drinks Poorly") and ("OBSdefine.EmCare.B11S2.DE02" ~ val."Skin Pinch goes back slowly (2 seconds or fewer, but not immediately)" )))))

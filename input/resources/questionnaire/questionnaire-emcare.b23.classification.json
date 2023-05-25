@@ -29,7 +29,7 @@
         },
         {
             "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
-            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb23classification"
+            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb23classification|1.0.2"
         }
     ],
     "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b23.classification",
@@ -177,14 +177,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -308,10 +308,6 @@
         {
             "extension": [
                 {
-                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
-                    "valueString": "background-color: pink;"
-                },
-                {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
@@ -329,14 +325,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ],
@@ -441,14 +437,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ],
@@ -553,14 +549,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ],
@@ -665,14 +661,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -721,14 +717,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -777,14 +773,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -833,14 +829,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -889,14 +885,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -945,14 +941,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -1001,14 +997,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -1057,14 +1053,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -1113,14 +1109,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -1169,14 +1165,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -1225,14 +1221,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -1281,14 +1277,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -1337,14 +1333,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -1416,14 +1412,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ],
@@ -1501,14 +1497,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -1557,14 +1553,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -1637,14 +1633,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ],
@@ -1670,7 +1666,7 @@
                             }
                         }
                     ],
-                    "linkId": "EmCare.B23.DE26a_l",
+                    "linkId": "EmCare.B23.DE26a_l1",
                     "text": "Fever present every day for 7 Days or more",
                     "type": "display",
                     "required": false,
@@ -1722,15 +1718,44 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
+                }
+            ],
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-display-category",
+                                        "code": "instructions"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                            "valueExpression": {
+                                "language": "text/fhirpath",
+                                "expression": "%resource.repeat(item).where(linkId='EmCare.B23.DE26a').answer.first().value = true"
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B23.DE26a_l2",
+                    "text": "Fever present every day for 7 Days or more",
+                    "type": "display",
+                    "required": false,
+                    "repeats": false
                 }
             ]
         },
@@ -1778,14 +1803,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -1834,14 +1859,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -1890,14 +1915,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -1946,14 +1971,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -2002,14 +2027,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -2058,14 +2083,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -2114,14 +2139,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -2170,14 +2195,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ],
@@ -2279,14 +2304,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -2335,14 +2360,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ],
@@ -2444,14 +2469,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -2500,14 +2525,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ],
@@ -2658,14 +2683,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ],
@@ -2816,14 +2841,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ],
@@ -2974,14 +2999,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ],
@@ -3082,14 +3107,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ],
@@ -3190,14 +3215,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ],
@@ -3297,14 +3322,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -3352,14 +3377,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ],
@@ -3560,14 +3585,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -3616,14 +3641,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ],
@@ -3724,14 +3749,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -3780,14 +3805,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -3836,14 +3861,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]
@@ -3892,14 +3917,14 @@
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "agree",
-                        "display": "Agree"
+                        "display": "Confirm"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "disagree",
-                        "display": "Disagree"
+                        "display": "Reject"
                     }
                 }
             ]

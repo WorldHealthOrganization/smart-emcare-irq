@@ -29,7 +29,7 @@
         },
         {
             "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
-            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcaretreatment"
+            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcaretreatment|1.0.2"
         }
     ],
     "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.treatment",
@@ -919,7 +919,7 @@
                         }
                     ],
                     "linkId": "EmCare.C10.IT.DE52",
-                    "text": "Severe Jaundice</p>\n\n\t<p>\u27a2 <b>Treat to prevent low blood sugar</b></p>\n\n\t<p>\u27a2 <b>Advise the mother how to keep the infant warm on the way to the hospital</b></p>\n\n\t<p>\u27a2 <b>Refer <span class=\"caps\">URGENTLY</span> to hospital</b>",
+                    "text": "<h1>Severe Jaundice</h1>\n\n\t<p>\u27a2 <b>Treat to prevent low blood sugar</b></p>\n\n\t<p>\u27a2 <b>Advise the mother how to keep the infant warm on the way to the hospital</b></p>\n\n\t<p>\u27a2 <b>Refer <span class=\"caps\">URGENTLY</span> to hospital</b></p>",
                     "type": "display",
                     "required": false,
                     "repeats": false

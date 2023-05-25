@@ -4,7 +4,7 @@
     "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.b22.respiratoryrate",
     "status": "active",
     "library": [
-        "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb22respiratoryrate|1.0.1.rc12.build.681"
+        "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb22respiratoryrate|1.0.2"
     ],
     "kind": "Task",
     "dynamicValue": [

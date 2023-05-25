@@ -2,13 +2,13 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareb22assessmentstests version '1.0.1.rc12.build.681'
+library emcareb22assessmentstests version '1.0.2'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.1.rc12.build.681' called Base
-include emcareobservation version '1.0.1.rc12.build.681' called obs
-include emcarevalueset version '1.0.1.rc12.build.681' called val
-include emcarecombineddataelements version '1.0.1.rc12.build.681' called c
+include emcarebase version '1.0.2' called Base
+include emcareobservation version '1.0.2' called obs
+include emcarevalueset version '1.0.2' called val
+include emcarecombineddataelements version '1.0.2' called c
 
 
 
@@ -73,6 +73,13 @@ define "OBSdefine.EmCare.B10S2.DE07":
     Base.GetObsValue('EmCare.B10S2.DE07')
 
 /* 
+OBSdefine.EmCare.B10S2.DE09 : Oxygen saturation not measured
+
+*/
+define "OBSdefine.EmCare.B10S2.DE09":
+    Base.GetObsValue('EmCare.B10S2.DE09')
+
+/* 
 OBSdefine.EmCare.B15S2.DE01 : Palmar Pallor
 
 */
@@ -115,7 +122,7 @@ define "OBSdefine.EmCare.B22.DE01":
     Base.GetObsValue('EmCare.B22.DE01')
 
 /* 
-OBSdefine.EmCare.B22.DE04 : Respiratory Rate Second Count (breaths per minute)
+OBSdefine.EmCare.B22.DE04 : Respiratory Rate (Second Count) (breaths per minute)
 
 */
 define "OBSdefine.EmCare.B22.DE04":
@@ -197,10 +204,10 @@ define "applicability-RespiratoryRate":
 
 /* 
 a-BronchodilatorTest : 
-("Cough" = true or "Difficulty Breathing" = true) and "Wheezing" = true and (o"Fast Breathing" = true or "Chest Indrawing" = true) and  c."Danger Signs" != true and "Stridor in a calm child"= false and "Oxygen Saturation" >= 90 '%'
+("Cough" = true or "Difficulty Breathing" = true) and "Wheezing" = true and (o"Fast Breathing" = true or "Chest Indrawing" = true) and c."Danger Signs" != true and "Stridor in a calm child"= false and ("Oxygen Saturation" >= 90 '%' or "Oxygen saturation not measured" =true)
 */
 define "a-BronchodilatorTest":
-    ("OBSdefine.EmCare.B10S1.DE05" = true or "OBSdefine.EmCare.B10S1.DE01" = true) and "OBSdefine.EmCare.B10S2.DE05" = true and ("OBSdefine.EmCare.B22.DE07" = true or "OBSdefine.EmCare.B10S2.DE03" = true) and  Coalesce(c."Danger Signs",false)!=true and "OBSdefine.EmCare.B10S2.DE04"= false and "OBSdefine.EmCare.B10S2.DE07" >= 90 '%'
+    ("OBSdefine.EmCare.B10S1.DE05" = true or "OBSdefine.EmCare.B10S1.DE01" = true) and "OBSdefine.EmCare.B10S2.DE05" = true and ("OBSdefine.EmCare.B22.DE07" = true or "OBSdefine.EmCare.B10S2.DE03" = true) and Coalesce(c."Danger Signs",false)!=true and "OBSdefine.EmCare.B10S2.DE04"= false and ("OBSdefine.EmCare.B10S2.DE07" >= 90 '%' or "OBSdefine.EmCare.B10S2.DE09" =true)
 
 /* 
 applicability-BronchodilatorTest : a-BronchodilatorTest
@@ -225,7 +232,7 @@ define "applicability-Hemoglobin":
 
 /* 
 a-SecondTemperature : 
-(c."PSBI other than temperature" != true) and (AgeInMonths()<2) and ( (o"Measured Temperature" ~ v"Low") or (o"Measured Temperature" ~ v"High") or  (o"Measured Temperature" ~ v"Very High"))
+(c."PSBI other than temperature" != true) and (AgeInMonths()<2) and ( (o"Measured Temperature" = v"Low") or (o"Measured Temperature" = v"High") or  (o"Measured Temperature" = v"Very High"))
 */
 define "a-SecondTemperature":
     (Coalesce(c."PSBI other than temperature",false)!=true) and (AgeInMonths()<2) and ( ("OBSdefine.EmCare.B6.DE01A" ~ val."Low") or ("OBSdefine.EmCare.B6.DE01A" ~ val."High") or  ("OBSdefine.EmCare.B6.DE01A" ~ val."Very High"))
@@ -260,7 +267,7 @@ define "Respiratory Rate profile":
 
 /* 
 Respiratory Rate Second Count Profile : 
-o"Respiratory Rate Second Count (breaths per minute)"
+o"Respiratory Rate (Second Count) (breaths per minute)"
 */
 define "Respiratory Rate Second Count Profile":
     "OBSdefine.EmCare.B22.DE04"

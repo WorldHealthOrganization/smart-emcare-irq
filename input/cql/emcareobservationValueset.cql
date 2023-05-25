@@ -2,7 +2,7 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareobservationValueset version '1.0.1.rc12.build.681'
+library emcareobservationValueset version '1.0.2'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
 
@@ -30,8 +30,8 @@ code "Steven Johnson Syndrome (SJS)": 'EmCare.B14S2.DE37' from "EmCare" display 
 code "Skin Problem": 'EmCare.B14S2.DE44' from "EmCare" display 'Skin Problem'
 code "Oral Sores or Mouth Ulcers": 'EmCare.B14S2.DE45' from "EmCare" display 'Oral Sores or Mouth Ulcers'
 code "Eye Problem": 'EmCare.B14S2.DE46' from "EmCare" display 'Eye Problem'
-code "No Breastmilk at all": 'EmCare.B21S2.DE29' from "EmCare" display 'No Breastmilk at all'
-code "Inappropriate replacement milk": 'EmCare.B21S2.DE11' from "EmCare" display 'Inappropriate replacement milk'
-code "Appropriate replacement milk": 'EmCare.B21S2.DE10' from "EmCare" display 'Appropriate replacement milk'
 code "Unconscious": 'EmCare.B7.DE08' from "EmCare" display 'Unconscious'
 code "Lethargic": 'EmCare.B7.DE08a' from "EmCare" display 'Lethargic'
+code "Red (congested) throat": 'EmCare.B17S1.DE03' from "EmCare" display 'Red (congested) throat'
+code "Exudate on Throat": 'EmCare.B17S1.DE04' from "EmCare" display 'Exudate on Throat'
+code "Membrane on throat": 'EmCare.B17S1.DE05' from "EmCare" display 'Membrane on throat'

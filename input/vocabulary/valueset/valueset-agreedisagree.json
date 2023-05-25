@@ -14,7 +14,7 @@
                 "concept": [
                     {
                         "code": "agree",
-                        "display": "Agree",
+                        "display": "Confirm",
                         "designation": [
                             {
                                 "value": "Agree"
@@ -23,7 +23,7 @@
                     },
                     {
                         "code": "disagree",
-                        "display": "Disagree",
+                        "display": "Reject",
                         "designation": [
                             {
                                 "value": "Disagree"
