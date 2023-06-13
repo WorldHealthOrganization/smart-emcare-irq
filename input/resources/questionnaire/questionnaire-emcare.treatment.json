@@ -1051,6 +1051,22 @@
                     "type": "display",
                     "required": false,
                     "repeats": false
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                            "valueExpression": {
+                                "language": "text/fhirpath",
+                                "expression": "%resource.repeat(item).where(linkId='load-EmCare.C10.IT.DE62').answer.first().value=true"
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.C10.IT.DE62",
+                    "text": "<h1>Advice for caregivers of sick young infants</h1>\n\n\t<p>\u27a2 Assess other problems <br />\n\u27a2 Assess the mother&#8217;s health needs<br />\n\u27a2Advise the mother on giving home care to the sick young infant</p>\n\n\t<p>1. <span class=\"caps\">EXCLUSIVELY</span> <span class=\"caps\">BREASTFEED</span> <span class=\"caps\">THE</span> <span class=\"caps\">YOUNG</span> <span class=\"caps\">INFANT</span> (for breastfeeding mothers)</p>\n\n\t<ul>\n\t\t<li>Give only breastmilk to the young infant</li>\n\t\t<li>Breastfeed frequently, as often and for as long as the infant wants, day and night, when sick and healthy</li>\n\t</ul>\n\n\t<p>2. <span class=\"caps\">MAKE</span> <span class=\"caps\">SURE</span> <span class=\"caps\">THAT</span> <span class=\"caps\">THE</span> <span class=\"caps\">YOUNG</span> <span class=\"caps\">INFANT</span> IS <span class=\"caps\">KEPT</span> <span class=\"caps\">WARM</span> AT <span class=\"caps\">ALL</span> <span class=\"caps\">TIMES</span>.</p>\n\n\t<ul>\n\t\t<li>In cool weather, cover the infant\u2019s head and feet, and add extra clothing</li>\n\t</ul>\n\n\t<p>3. <span class=\"caps\">KNOW</span> <span class=\"caps\">WHEN</span> TO <span class=\"caps\">RETURN</span>: </p>\n\n\t<ul>\n\t\t<li>Return for follow-up visit as per the recommendation for the infant&#8217;s illness(es) or problem(s)</li>\n\t\t<li>Advise the caretaker to return immediately if the young infant has any of these signs:\n\t\t<ul>\n\t\t\t<li>Breastfeeding poorly</li>\n\t\t\t<li>Reduced activity</li>\n\t\t\t<li>Becomes sicker\n     &#8212;Develops a fever\n     &#8212;Feels unusually cold\n     &#8212;Develops fast breathing\n     &#8212;Develops difficult breathing\n     &#8212;Palms or soles appear yellow</li>\n\t\t</ul></li>\n\t\t</ul>",
+                    "type": "display",
+                    "required": false,
+                    "repeats": false
                 }
             ]
         },
@@ -2315,6 +2331,29 @@
                 }
             ],
             "linkId": "load-EmCare.C10.IT.DE60",
+            "type": "boolean",
+            "required": false,
+            "repeats": false
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+                    "valueCode": "horizontal"
+                },
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                    "valueBoolean": true
+                },
+                {
+                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                    "valueExpression": {
+                        "language": "text/cql-identifier",
+                        "expression": "load-EmCare.C10.IT.DE62"
+                    }
+                }
+            ],
+            "linkId": "load-EmCare.C10.IT.DE62",
             "type": "boolean",
             "required": false,
             "repeats": false

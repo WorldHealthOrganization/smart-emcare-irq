@@ -1,8 +1,9 @@
 
-library LengthForAge version '1.0.2'
+library LengthForAge version '1.0.4'
 using FHIR version '4.0.1'
-include anthrobase version '1.0.2' called base
+include anthrobase version '1.0.4' called base
 include FHIRHelpers version '4.0.1' called FHIRHelpers
+
 // Antrho library for LengthForAge  Z-Score from the lenanthro files
 codesystem "administrative-gender": 'http://hl7.org/fhir/administrative-gender'
 //code "Female" : 'female' from "administrative-gender"  display 'Female'
@@ -70,6 +71,7 @@ define LengthForAgeFemale:
 	{y:57.0,l:1.0,s:0.03576,m:56.6788},
 	{y:58.0,l:1.0,s:0.03574,m:56.78},
 	{y:59.0,l:1.0,s:0.03572,m:56.8806},
+	{y:60.0,l:1.0,s:0.0357,m:56.9805},
 	{y:63.0,l:1.0,s:0.03564,m:57.2761},
 	{y:70.0,l:1.0,s:0.03552,m:57.9436},
 	{y:77.0,l:1.0,s:0.0354,m:58.5816},
@@ -87,6 +89,7 @@ define LengthForAgeFemale:
 	{y:161.0,l:1.0,s:0.03457,m:64.5422},
 	{y:168.0,l:1.0,s:0.03454,m:64.9366},
 	{y:175.0,l:1.0,s:0.03451,m:65.3214},
+	{y:182.0,l:1.0,s:0.03448,m:65.6978},
 	{y:197.0,l:1.0,s:0.03444,m:66.4802},
 	{y:227.0,l:1.0,s:0.0344,m:67.9667},
 	{y:257.0,l:1.0,s:0.03441,m:69.3755},
@@ -207,6 +210,7 @@ define LengthForAgeMale:
 	{y:57.0,l:1.0,s:0.03438,m:58.0003},
 	{y:58.0,l:1.0,s:0.03434,m:58.1109},
 	{y:59.0,l:1.0,s:0.03431,m:58.2207},
+	{y:60.0,l:1.0,s:0.03427,m:58.3299},
 	{y:63.0,l:1.0,s:0.03416,m:58.6536},
 	{y:70.0,l:1.0,s:0.03392,m:59.3872},
 	{y:77.0,l:1.0,s:0.03369,m:60.0894},
@@ -224,6 +228,7 @@ define LengthForAgeMale:
 	{y:161.0,l:1.0,s:0.03191,m:66.4256},
 	{y:168.0,l:1.0,s:0.03182,m:66.8254},
 	{y:175.0,l:1.0,s:0.03174,m:67.2132},
+	{y:182.0,l:1.0,s:0.03166,m:67.5904},
 	{y:197.0,l:1.0,s:0.03152,m:68.3685},
 	{y:227.0,l:1.0,s:0.03131,m:69.8316},
 	{y:257.0,l:1.0,s:0.0312,m:71.2138},
@@ -283,27 +288,38 @@ define LengthForAgeMale:
 }
 
 
+
+
 define function ZscoreLengthForAgetables(sex String, age Decimal):
-		if sex = 'female' then  First(LengthForAgeFemale c where c.y = age )
-		else First(LengthForAgeMale c where  c.y = age)
+	if sex = 'female' then  
+        First(LengthForAgeFemale c where c.y = base.AgeToMini(age) )
+	else 
+        First(LengthForAgeMale c where  c.y = base.AgeToMini(age))
             
 define function generateZScoreLengthForAge(sex System.String, age System.Decimal, weight  System.Decimal)  : 
-	if ZscoreLengthForAgetables(sex,age) is not null then 
+	 generateZScoreLengthForAgedet(ZscoreLengthForAgetables(sex,age), weight )
+
+define function generateZScoreLengthForAgedet(row Tuple {y System.Decimal,l System.Decimal,s System.Decimal,m System.Decimal}, weight  System.Decimal):
+    if row is not null then 
         base.computeZScore(
             weight,
-            (ZscoreLengthForAgetables(sex,base.AgeToMini(age)).m ), 
-            (ZscoreLengthForAgetables(sex,base.AgeToMini(age)).l ),
-            (ZscoreLengthForAgetables(sex,base.AgeToMini(age)).s )
+            row.m , 
+            row.l ,
+            row.s 
         )
     else null
 
+
 define function generateLengthFromAge(sex System.String, age System.Decimal, zscore  System.Decimal) : 
-	if ZscoreLengthForAgetables(sex,age) is not null then 
+	 generateLengthFromAgedet(ZscoreLengthForAgetables(sex,age),zscore  )
+
+define function generateLengthFromAgedet(row Tuple {y System.Decimal,l System.Decimal,s System.Decimal,m System.Decimal},zscore  System.Decimal) : 
+    if row is not null then 
         base.computeReverseZScore(
             zscore,
-            (ZscoreLengthForAgetables(sex,base.AgeToMini(age)).m ), 
-            (ZscoreLengthForAgetables(sex,base.AgeToMini(age)).l ),
-            (ZscoreLengthForAgetables(sex,base.AgeToMini(age)).s )
+            row.m , 
+            row.l ,
+            row.s 
         )
     else null    
 

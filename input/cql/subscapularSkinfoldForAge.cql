@@ -1,8 +1,9 @@
 
-library subscapularSkinfoldForAge version '1.0.2'
+library subscapularSkinfoldForAge version '1.0.4'
 using FHIR version '4.0.1'
-include anthrobase version '1.0.2' called base
+include anthrobase version '1.0.4' called base
 include FHIRHelpers version '4.0.1' called FHIRHelpers
+
 // Antrho library for subscapularSkinfoldForAge  Z-Score from the ssanthro files
 codesystem "administrative-gender": 'http://hl7.org/fhir/administrative-gender'
 //code "Female" : 'female' from "administrative-gender"  display 'Female'
@@ -23,6 +24,7 @@ define subscapularSkinfoldForAgeFemale:
 	{y:161.0,l:-0.3135,s:0.18427,m:7.2853},
 	{y:168.0,l:-0.3222,s:0.18427,m:7.2446},
 	{y:175.0,l:-0.3306,s:0.18426,m:7.2052},
+	{y:182.0,l:-0.3387,s:0.18426,m:7.167},
 	{y:197.0,l:-0.3553,s:0.18424,m:7.0892},
 	{y:227.0,l:-0.3854,s:0.18418,m:6.9493},
 	{y:257.0,l:-0.4123,s:0.18406,m:6.8285},
@@ -96,6 +98,7 @@ define subscapularSkinfoldForAgeMale:
 	{y:161.0,l:-0.3565,s:0.17186,m:7.2724},
 	{y:168.0,l:-0.3613,s:0.17201,m:7.2349},
 	{y:175.0,l:-0.3661,s:0.17216,m:7.1981},
+	{y:182.0,l:-0.3708,s:0.17231,m:7.162},
 	{y:197.0,l:-0.3806,s:0.17261,m:7.087},
 	{y:227.0,l:-0.3996,s:0.1732,m:6.9469},
 	{y:257.0,l:-0.4177,s:0.17377,m:6.8195},
@@ -155,27 +158,38 @@ define subscapularSkinfoldForAgeMale:
 }
 
 
+
+
 define function ZscoresubscapularSkinfoldForAgetables(sex String, age Decimal):
-		if sex = 'female' then  First(subscapularSkinfoldForAgeFemale c where c.y = age )
-		else First(subscapularSkinfoldForAgeMale c where  c.y = age)
+	if sex = 'female' then  
+        First(subscapularSkinfoldForAgeFemale c where c.y = base.AgeToMini(age) )
+	else 
+        First(subscapularSkinfoldForAgeMale c where  c.y = base.AgeToMini(age))
             
 define function generateZScoresubscapularSkinfoldForAge(sex System.String, age System.Decimal, weight  System.Decimal)  : 
-	if ZscoresubscapularSkinfoldForAgetables(sex,age) is not null then 
+	 generateZScoresubscapularSkinfoldForAgedet(ZscoresubscapularSkinfoldForAgetables(sex,age), weight )
+
+define function generateZScoresubscapularSkinfoldForAgedet(row Tuple {y System.Decimal,l System.Decimal,s System.Decimal,m System.Decimal}, weight  System.Decimal):
+    if row is not null then 
         base.computeZScore(
             weight,
-            (ZscoresubscapularSkinfoldForAgetables(sex,base.AgeToMini(age)).m ), 
-            (ZscoresubscapularSkinfoldForAgetables(sex,base.AgeToMini(age)).l ),
-            (ZscoresubscapularSkinfoldForAgetables(sex,base.AgeToMini(age)).s )
+            row.m , 
+            row.l ,
+            row.s 
         )
     else null
 
+
 define function generatesubscapularSkinfoldFromAge(sex System.String, age System.Decimal, zscore  System.Decimal) : 
-	if ZscoresubscapularSkinfoldForAgetables(sex,age) is not null then 
+	 generatesubscapularSkinfoldFromAgedet(ZscoresubscapularSkinfoldForAgetables(sex,age),zscore  )
+
+define function generatesubscapularSkinfoldFromAgedet(row Tuple {y System.Decimal,l System.Decimal,s System.Decimal,m System.Decimal},zscore  System.Decimal) : 
+    if row is not null then 
         base.computeReverseZScore(
             zscore,
-            (ZscoresubscapularSkinfoldForAgetables(sex,base.AgeToMini(age)).m ), 
-            (ZscoresubscapularSkinfoldForAgetables(sex,base.AgeToMini(age)).l ),
-            (ZscoresubscapularSkinfoldForAgetables(sex,base.AgeToMini(age)).s )
+            row.m , 
+            row.l ,
+            row.s 
         )
     else null    
 

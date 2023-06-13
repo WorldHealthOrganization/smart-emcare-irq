@@ -265,12 +265,12 @@ define "Severe Jaundice":
 DL-G-CL2-15-43 : 
     ("Severe Jaundice" != true and "Yellow Skin" = true)
      and ((    "ageindays" < 21 and ("When did the Jaundice first appear?" = "24 hours or more after birth"  or "When did the Jaundice first appear?" = "Unknown when Jaundice first appeared"))
-     or (    "ageindays" > 21))
+     or (    "ageindays" >= 21))
 */
 define "DL-G-CL2-15-43":
         (Coalesce("Severe Jaundice",false)!=true and "OBSdefine.EmCare.B19S2.DE01" = true)
          and ((    "ageindays" < 21 and ("OBSdefine.EmCare.B19S2.DE04" ~ val."24 hours or more after birth"  or "OBSdefine.EmCare.B19S2.DE04" ~ val."Unknown when Jaundice first appeared"))
-         or (    "ageindays" > 21))
+         or (    "ageindays" >= 21))
 
 /* 
 Jaundice : DL-G-CL2-15-43
@@ -281,10 +281,10 @@ define "Jaundice":
 
 /* 
 EmCare.B23.DE88A : 
-"ageindays" > 21
+"ageindays" >= 21
 */
 define "EmCare.B23.DE88A":
-    "ageindays" > 21
+    "ageindays" >= 21
 
 /* 
 DL-G-CL2-17 : 
@@ -419,10 +419,10 @@ define "Feeding Problem and / or Low Weight for Age":
 
 /* 
 DL-G-CL2-50 : 
-"Weight Status" = v"Normal Weight for Age"  and  "Feeding Problem and / or Low Weight for Age"!= true
+"Weight Status" = v"Normal Weight for Age"  and  "Feeding Problem and / or Low Weight for Age"!= true and "Severe Jaundice"!=true and "Possible Serious Bacterial Infection OR Very Severe Disease"!=true
 */
 define "DL-G-CL2-50":
-    "OBSdefine.EmCare.B21S2.DE01" ~ val."Normal Weight for Age"  and  Coalesce("Feeding Problem and / or Low Weight for Age",false)!=true
+    "OBSdefine.EmCare.B21S2.DE01" ~ val."Normal Weight for Age"  and  Coalesce("Feeding Problem and / or Low Weight for Age",false)!=true and Coalesce("Severe Jaundice",false)!=true and Coalesce("Possible Serious Bacterial Infection OR Very Severe Disease",false)!=true
 
 /* 
 BackReference : 

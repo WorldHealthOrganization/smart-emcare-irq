@@ -38,13 +38,6 @@ define "pastWeightActualised":
     Z."pastweightactualised"
 
 /* 
-Weight based on the previous mesurements : pastWeightActualised
-Alias
-*/
-define "Weight based on the previous mesurements":
-    "pastWeightActualised"
-
-/* 
 AgeInMonths : 
 AgeInMonths()
 */

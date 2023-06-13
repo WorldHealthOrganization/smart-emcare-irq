@@ -22,14 +22,6 @@ group bundletrans(source src : questionnaireResponse,target bundle : Bundle){
             } '213a0dca';
         } '56a5bbd9';
     } '36bdb5b8';
-    src.item first as item  where linkId = 'EmCare.B22.DE42b' and answer.exists() then {
-        src -> bundle.entry as entry  then {
-            src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Observation/', uuid) 'b50ac4c5';
-            src -> entry.resource = create('Observation') as tgt then {
-                src -> tgt then emcareobservationemcareb22de42b(src, tgt) '7e7ab8ef';
-            } '43191f28';
-        } 'fec08213';
-    } '092d69cb';
     src.item first as item  where linkId = 'EmCare.B22.DE44' and answer.exists() then {
         src -> bundle.entry as entry  then {
             src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Observation/', uuid) 'b50ac4c5';
@@ -103,34 +95,6 @@ group emcareobservationemcareb22de42(source src,target tgt){
             a  where a.value = false -> tgt.status = 'cancelled', tgt.value = false 'notfound-emcareb22de42';
         } 'bdab9370';
     } 'da98ddbd';
-}
-
-group emcareobservationemcareb22de42b(source src,target tgt){
-        src -> tgt.identifier = create('Identifier') as CodeID,
-            CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',
-            CodeID.use =  'official',
-            CodeID.value = 'uuid',
-            CodeID.id = uuid()
-         'id-emcareb22de42b';
-    src.encounter as encounter -> tgt.encounter = encounter '35bc6b82';
-        src.subject as subject -> tgt.subject = subject,
-            tgt.meta = create('Meta') as newMeta, newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',
-            tgt.code = create('CodeableConcept') as concept, concept.coding = create('Coding') as coding,
-                coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',
-                coding.code = 'EmCare.B22.DE42b'
-         'code-emcareb22de42b';
-    src.item as itemtimestamp where linkId  =  'timestamp' then {
-        itemtimestamp.answer first as atimestamp then {
-            atimestamp.value as val -> tgt.issued = val  '5af77f2c';
-        } '7f22f29f';
-    } 'aae7a11d';
-    src.subject as subject -> tgt.subject = subject  'patient';
-    src.item first as item  where linkId = 'EmCare.B22.DE42b' and answer.exists() then {
-        item.answer first as a then {
-            a  where a.value = true -> tgt.status = 'final', tgt.value = true 'final-emcareb22de42b';
-            a  where a.value = false -> tgt.status = 'cancelled', tgt.value = false 'notfound-emcareb22de42b';
-        } 'bdab9370';
-    } '3261abca';
 }
 
 group emcareobservationemcareb22de44(source src,target tgt){

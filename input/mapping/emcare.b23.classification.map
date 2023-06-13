@@ -1,21 +1,11 @@
 map 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcare.b23.classification' = 'emcare.b23.classification'
 uses 'http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse' alias 'questionnaireResponse' as source
 uses 'http://hl7.org/fhir/StructureDefinition/Bundle' alias 'Bundle' as target
-uses 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/observation' alias 'Observation' as target
 uses 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/condition' alias 'Condition' as target
-uses 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation' alias 'EmCare Observation' as produced
 uses 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcarecondition' alias 'EmCare Condition' as produced
 group bundletrans(source src : questionnaireResponse,target bundle : Bundle){
     src -> bundle.id = uuid() 'id';
     src -> bundle.type = 'batch' 'type';
-    src.item first as item  where linkId = 'EmCare.B6.DE08' and answer.exists() then {
-        src -> bundle.entry as entry  then {
-            src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Observation/', uuid) 'b50ac4c5';
-            src -> entry.resource = create('Observation') as tgt then {
-                src -> tgt then emcareobservationemcareb6de08(src, tgt) '6bb35e76';
-            } 'eb449882';
-        } 'e71738d1';
-    } 'b739680e';
     src.item first as item  where linkId = 'EmCare.B23.DE01' and answer.exists() then {
         src -> bundle.entry as entry  then {
             src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
@@ -486,513 +476,476 @@ group bundletrans(source src : questionnaireResponse,target bundle : Bundle){
             } 'f9f042d3';
         } 'aa990e3b';
     } '62bc2a23';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE01')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE01')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de01(src,item,tgt) '64b9f2ed';
-                } '8ac761e7';
-            } '4d3c5911';
-        } '8a9e262f';
-    } '1a7bd4e6';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE03')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de01(src,item,tgt) '296e24d6';
+                } '5c40d213';
+            } '46243e50';
+        } '8c830a0f';
+    } 'f0974de9';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE03')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de03(src,item,tgt) 'b1c1cd66';
-                } '010509dd';
-            } 'd18e6c9c';
-        } '0ddf1e04';
-    } 'b4ab6b36';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE06')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de03(src,item,tgt) 'c348b809';
+                } '85509142';
+            } '7dbdc54f';
+        } '7a495a56';
+    } '3eb5fe38';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE06')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de06(src,item,tgt) 'ab6f052f';
-                } 'e87439ac';
-            } '37d42e73';
-        } '7708b4b0';
-    } 'ca7b518e';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE10')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de06(src,item,tgt) 'eb5a91c6';
+                } '43827566';
+            } 'a4074241';
+        } 'b194b3e5';
+    } '9ba161a1';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE10')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de10(src,item,tgt) '0b7e0dd8';
-                } '2addbd30';
-            } '944a4843';
-        } '0e6c6c5e';
-    } '624540df';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE13')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de10(src,item,tgt) '0b77bd4d';
+                } '064ecdc6';
+            } 'c918ac58';
+        } 'ab19169d';
+    } 'b45a6114';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE13')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de13(src,item,tgt) 'ca1c2344';
-                } 'e291ac38';
-            } 'a3790ce2';
-        } 'df1da7ee';
-    } 'db30808b';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE14')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de13(src,item,tgt) '5b391351';
+                } 'd8787575';
+            } '8a2e867d';
+        } 'd39b626c';
+    } '9a1ddb04';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE14')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de14(src,item,tgt) 'd2d217d7';
-                } '71ec8c01';
-            } 'eec21165';
-        } '4bec0867';
-    } 'b6cebe17';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE15')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de14(src,item,tgt) '72296d81';
+                } 'ce417aa1';
+            } '94bdc979';
+        } '603ec0c2';
+    } '3ddf7ab7';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE15')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de15(src,item,tgt) 'd06cdfa3';
-                } '78497d5c';
-            } '5f0e524b';
-        } '84c7d9e0';
-    } '5fb77efc';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE16')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de15(src,item,tgt) '2c6d3aa2';
+                } '27340861';
+            } 'cd470538';
+        } '355330fa';
+    } '0481f8de';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE16')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de16(src,item,tgt) '694adbe8';
-                } 'b4ffe6d7';
-            } '019739d6';
-        } 'f03364f0';
-    } '80b4094a';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE17')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de16(src,item,tgt) 'f3d4d143';
+                } 'fdeff11d';
+            } '70bd4c14';
+        } '639e8c67';
+    } '56c8baf2';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE17')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de17(src,item,tgt) 'cc19d396';
-                } '18e9e9c8';
-            } 'c03c1182';
-        } '77b63bab';
-    } 'ff70de9a';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE18')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de17(src,item,tgt) 'ca1e4650';
+                } 'a7b49a77';
+            } '032a2b6f';
+        } '87070c06';
+    } 'afc5b598';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE18')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de18(src,item,tgt) '7bb9024b';
-                } '68fe032f';
-            } 'ed54cd94';
-        } '8b8510f5';
-    } '632cb525';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE18.a')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de18(src,item,tgt) '9f19bcc5';
+                } 'cf679ad8';
+            } '5059ab6e';
+        } '6aaf84fa';
+    } 'eb3811a0';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE18.a')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de18a(src,item,tgt) 'b60dcb5b';
-                } 'b812de89';
-            } '7e16782b';
-        } '2e857828';
-    } '44580a8e';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE100')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de18a(src,item,tgt) '6e5f9e2b';
+                } 'e97e0ed1';
+            } 'f83aae6f';
+        } '754e8689';
+    } 'bf49c635';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE100')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de100(src,item,tgt) '630c1b4f';
-                } '41d237f0';
-            } 'ac9a35e1';
-        } '490124cb';
-    } '3cac9099';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE6101')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de100(src,item,tgt) '1637ed07';
+                } '7ce443ba';
+            } '7365b8d8';
+        } '37cd04dc';
+    } '9d1a909f';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE6101')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de6101(src,item,tgt) 'b8a94b6b';
-                } 'c5e81286';
-            } 'f91c76bc';
-        } '004bae37';
-    } '0fefd9c9';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE6102')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de6101(src,item,tgt) '65e4c0f1';
+                } '02382ea6';
+            } '1a010da6';
+        } 'dfa5d898';
+    } '2d0b5aa5';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE6102')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de6102(src,item,tgt) '7660041a';
-                } 'b83d5bd8';
-            } 'afa6d915';
-        } 'e56c0843';
-    } '1cfede52';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE6103')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de6102(src,item,tgt) 'ea6d66fd';
+                } 'af4f1890';
+            } 'c7eaf4a6';
+        } 'a5f15d36';
+    } '93ba3ef7';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE6103')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de6103(src,item,tgt) '4acf003e';
-                } '052597db';
-            } '0d306c2e';
-        } 'bde18a8c';
-    } '9e8a0879';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE30')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de6103(src,item,tgt) '964bfc11';
+                } '6b80f491';
+            } '9d179041';
+        } '0b308f9c';
+    } 'e72185ef';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE30')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de30(src,item,tgt) '6aa7cf7e';
-                } '21ed2b92';
-            } 'b950cabe';
-        } '38dc397b';
-    } 'a771b576';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE31')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de30(src,item,tgt) 'e1faef64';
+                } '0f5b6ff5';
+            } '50f40768';
+        } '1bd64e73';
+    } '1499ee0a';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE31')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de31(src,item,tgt) '0b62776c';
-                } '718d4b87';
-            } 'a826c054';
-        } '50550799';
-    } '2fb7bb3e';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE32')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de31(src,item,tgt) '413eee9c';
+                } '82f226c9';
+            } '8edff8f1';
+        } '8f03e498';
+    } '26e8583d';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE32')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de32(src,item,tgt) '8d2e2b23';
-                } '85fecf83';
-            } '115750dd';
-        } '130e1c53';
-    } 'ac3dd1e5';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE33')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de32(src,item,tgt) '18d05bb6';
+                } 'f11e1e2a';
+            } '022136d6';
+        } 'd719cf89';
+    } '50672bfa';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE33')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de33(src,item,tgt) '30d2abfe';
-                } 'e6a31cdd';
-            } 'd1297d3e';
-        } 'ef3283c2';
-    } 'b5d854cd';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE19')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de33(src,item,tgt) 'e45486d7';
+                } '6af9884c';
+            } 'ea8a8db6';
+        } 'ff199d51';
+    } 'e4bdbfc8';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE19')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de19(src,item,tgt) '9d939c47';
-                } 'b6456e02';
-            } '88264770';
-        } '18e9b3aa';
-    } '4af8b98f';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE104')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de19(src,item,tgt) '34ef50c5';
+                } 'ad7e6427';
+            } '49b1e6db';
+        } '05d06fca';
+    } '5180f0f0';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE104')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de104(src,item,tgt) '7124044e';
-                } '6dd0b0f1';
-            } '362898cd';
-        } '6ee2f034';
-    } '87957a8c';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE105')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de104(src,item,tgt) '8ec632be';
+                } '9b6c7250';
+            } '9159664f';
+        } '606a2ce0';
+    } '761a996c';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE105')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de105(src,item,tgt) '565f9699';
-                } 'deccc025';
-            } '6ffe0a40';
-        } 'ca66f70c';
-    } '4981fb26';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE27')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de105(src,item,tgt) 'c3ae7f5a';
+                } '650865e9';
+            } '7bb8fc14';
+        } 'b581685d';
+    } 'f19426a9';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE27')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de27(src,item,tgt) '0da758bb';
-                } '240424fd';
-            } '42ac4364';
-        } '14da060d';
-    } 'ad5837c4';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE28')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de27(src,item,tgt) '410c830c';
+                } 'e025deae';
+            } '353c5928';
+        } 'e5b2d3bb';
+    } '2015d559';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE28')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de28(src,item,tgt) 'f02ea85f';
-                } '9674e4f8';
-            } '4215cfc9';
-        } 'cc83a9a6';
-    } '10b29f3a';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE29')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de28(src,item,tgt) 'e5411a4d';
+                } '5921d9e7';
+            } '3721bb72';
+        } 'be041473';
+    } 'c907c668';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE29')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de29(src,item,tgt) '30518e39';
-                } '443496d9';
-            } '4b8a2cfa';
-        } '45aa51e3';
-    } '29a1e48b';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE62')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de29(src,item,tgt) '1a7ae515';
+                } 'e5fdd431';
+            } 'dacc1b6f';
+        } '827808d2';
+    } '2b7011eb';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE62')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de62(src,item,tgt) '923ea559';
-                } '253ad99c';
-            } 'e1d211b3';
-        } '66d2ac7f';
-    } '34070da4';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE63')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de62(src,item,tgt) '66765f5c';
+                } '87cbe7de';
+            } 'cf397d4f';
+        } '4a3a1a88';
+    } '64cd9bc2';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE63')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de63(src,item,tgt) '2cba00a0';
-                } '7431d7aa';
-            } 'dd159d2b';
-        } '6088497e';
-    } '6d937c64';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE64')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de63(src,item,tgt) '9dc0b402';
+                } 'ff790290';
+            } 'db32ac14';
+        } '33e14882';
+    } '335a7afd';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE64')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de64(src,item,tgt) '1bdeb81e';
-                } '823b626d';
-            } '6c269ed8';
-        } 'c0166a2f';
-    } 'ef32feea';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE34')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de64(src,item,tgt) '9724f186';
+                } 'b9abcedf';
+            } 'ff60c20c';
+        } '8233dc1e';
+    } 'eff28bb9';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE34')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de34(src,item,tgt) '1b5079e7';
-                } 'e3eec4b3';
-            } 'c0170815';
-        } '9a1a4b51';
-    } '02fb5c32';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE35')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de34(src,item,tgt) '3597e0a7';
+                } 'd7ad8411';
+            } '80373bc1';
+        } 'b66c0ac0';
+    } 'bf5fb299';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE35')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de35(src,item,tgt) '359aadb6';
-                } '8752dcf9';
-            } '5587f633';
-        } '436512de';
-    } 'f74fb871';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE41')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de35(src,item,tgt) 'd85be2c1';
+                } '29950efa';
+            } '9c325025';
+        } 'b16946dc';
+    } '63c981db';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE41')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de41(src,item,tgt) '6b245d77';
-                } '7880e418';
-            } '31ed2847';
-        } '69bddf54';
-    } 'f3925752';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE42')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de41(src,item,tgt) 'cfb642e6';
+                } '09c80378';
+            } 'f889bd56';
+        } '743f2370';
+    } '96998e83';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE42')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de42(src,item,tgt) 'a013ff50';
-                } 'a1112e83';
-            } '80f89c3b';
-        } 'c28e55f5';
-    } '5a4f405d';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE44')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de42(src,item,tgt) 'a98ea229';
+                } 'c80dcbdc';
+            } '1a40dec5';
+        } '7b723084';
+    } 'da1da329';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE44')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de44(src,item,tgt) '2e18a455';
-                } '05602096';
-            } '14ff0531';
-        } 'e4d8d14c';
-    } '106b8412';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE45')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de44(src,item,tgt) '4fe8acab';
+                } '4e3835f5';
+            } '13426b62';
+        } 'dde541ab';
+    } 'd65a9073';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE45')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de45(src,item,tgt) 'b7776d8c';
-                } '0161a3e1';
-            } '9041cce3';
-        } 'd5a11665';
-    } 'fa69f51a';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE47')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de45(src,item,tgt) '046bfb98';
+                } '38ef8f8e';
+            } 'bdd14bad';
+        } '1d815bb2';
+    } '141fa5e9';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE47')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de47(src,item,tgt) '3ef4c39a';
-                } 'cc30da8e';
-            } '3c571f7a';
-        } '9c46143a';
-    } '7ce713b2';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE49')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de47(src,item,tgt) 'fae9dc31';
+                } 'e40d285e';
+            } '05592505';
+        } 'bfd45cf3';
+    } 'c6a9d19a';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE49')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de49(src,item,tgt) '9422f693';
-                } '270f01c9';
-            } '2e5719c3';
-        } '86381b92';
-    } 'dba4472f';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE52')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de49(src,item,tgt) 'cbe77adc';
+                } '386f3795';
+            } '5ae58167';
+        } '945bd61d';
+    } '84d84796';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE52')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de52(src,item,tgt) '4dc5850c';
-                } '1305ff09';
-            } '1e7a4f1d';
-        } '823dad96';
-    } 'f8980fc9';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE53')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de52(src,item,tgt) '201d6deb';
+                } '1689cad6';
+            } 'febff954';
+        } '56982059';
+    } '80991c1e';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE53')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de53(src,item,tgt) 'f3ebb24f';
-                } '8a06bf9b';
-            } '82127571';
-        } '438bfa1e';
-    } 'a6b3b052';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE54')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de53(src,item,tgt) '9dcc795b';
+                } 'a7cc5f70';
+            } 'cec20a4b';
+        } 'e4dc2340';
+    } 'ed338140';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE54')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de54(src,item,tgt) '7d9b72a9';
-                } '57b6a17c';
-            } '3f0c44e2';
-        } '9176d48e';
-    } '472d138a';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE56')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de54(src,item,tgt) 'c7900dec';
+                } '8455ec58';
+            } '5b335818';
+        } '44c5dc9e';
+    } '88b6c3a5';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE56')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de56(src,item,tgt) '171d0d02';
-                } 'a8403d8d';
-            } '933c8359';
-        } '29b48437';
-    } '8633ecac';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE57')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de56(src,item,tgt) 'da8d731c';
+                } '486c6d6d';
+            } '341195a0';
+        } '9594af4d';
+    } 'a95419aa';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE57')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de57(src,item,tgt) '28c69067';
-                } '712614f8';
-            } 'f5aa3751';
-        } 'b4b69b8b';
-    } '275e0558';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE58')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de57(src,item,tgt) '7fdde569';
+                } '7989e5a5';
+            } '8ae0e16a';
+        } '3b703855';
+    } 'ebb4852b';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE58')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de58(src,item,tgt) '1ecfb370';
-                } 'a5d3fb11';
-            } 'abbb00cd';
-        } '5c12666c';
-    } '9ee9a18a';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE59')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de58(src,item,tgt) 'fa4e5623';
+                } 'ca523d4f';
+            } '77a6df69';
+        } '4e32bacb';
+    } '7eb417c3';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE59')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de59(src,item,tgt) 'f3cc5dd6';
-                } 'c2af2708';
-            } '420f3c42';
-        } '940b499b';
-    } '77bb110d';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE61')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de59(src,item,tgt) 'b30b4b0a';
+                } '1f309ff4';
+            } 'd0de90b5';
+        } 'a5f98aea';
+    } '61b764cf';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE61')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de61(src,item,tgt) '3ee47ea8';
-                } '14a2cbce';
-            } '69da036c';
-        } '8d2fc1e7';
-    } '5baa46cb';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE106')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de61(src,item,tgt) '3dde9590';
+                } 'f8af8cbe';
+            } '2395419e';
+        } 'dc177219';
+    } 'd920cefa';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE106')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de106(src,item,tgt) '5f3c80c3';
-                } '8a9ab3d6';
-            } 'b3badac5';
-        } '8aec9c45';
-    } '332b8a91';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE107')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de106(src,item,tgt) '27c9acfe';
+                } '27c42eac';
+            } 'f25091ba';
+        } '7f6ba175';
+    } '92530604';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE107')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de107(src,item,tgt) 'd7ceb954';
-                } '62594d12';
-            } '6660c144';
-        } '897c260c';
-    } '4dfafc7a';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'EmCare.B23.DE108')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
+                    src then emcareconditioncollectorcemcareb23de107(src,item,tgt) '325906af';
+                } 'ec383559';
+            } '7d4015bf';
+        } '07d62574';
+    } '1b59accd';
+    src where src.item.where(linkId='collector-c').answer.where(value.code = 'EmCare.B23.DE108')  then {
+        src.item first as item  where linkId = 'collector-c' and answer.exists() then {
             src -> bundle.entry as entry  then {
                 src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
                 src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectoremcareb23de108(src,item,tgt) 'ed29c4d5';
-                } 'a304721d';
-            } 'f9a90d39';
-        } '031643b1';
-    } 'f52a6f86';
-    src where src.item.where(linkId='collector').answer.where(value.code = 'collector')  then {
-        src.item first as item  where linkId = 'collector' and answer.exists() then {
-            src -> bundle.entry as entry  then {
-                src -> entry.request as request, request.method = 'POST' , uuid() as uuid, request.url = append('/Condition/', uuid) '9805d737';
-                src -> entry.resource = create('Condition') as tgt then {
-                    src then emcareconditioncollectorcollector(src,item,tgt) 'dee30196';
-                } 'dbad65ac';
-            } '652cfd04';
-        } '63e7ab00';
-    } 'd596b39a';
-}
-
-group emcareobservationemcareb6de08(source src,target tgt){
-        src -> tgt.identifier = create('Identifier') as CodeID,
-            CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',
-            CodeID.use =  'official',
-            CodeID.value = 'uuid',
-            CodeID.id = uuid()
-         'id-emcareb6de08';
-    src.encounter as encounter -> tgt.encounter = encounter '35bc6b82';
-        src.subject as subject -> tgt.subject = subject,
-            tgt.meta = create('Meta') as newMeta, newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',
-            tgt.code = create('CodeableConcept') as concept, concept.coding = create('Coding') as coding,
-                coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',
-                coding.code = 'EmCare.B6.DE08'
-         'code-emcareb6de08';
-    src.item as itemtimestamp where linkId  =  'timestamp' then {
-        itemtimestamp.answer first as atimestamp then {
-            atimestamp.value as val -> tgt.issued = val  '5af77f2c';
-        } '7f22f29f';
-    } 'aae7a11d';
-    src.subject as subject -> tgt.subject = subject  'patient';
-    src.item first as item  where linkId = 'EmCare.B6.DE08' and answer.exists() then {
-        item.answer first as a then {
-            a.value as val -> tgt.value = val, tgt.status = 'final' 'afa0ccc0';
-        } 'd40466ff';
-    } 'dc896557';
+                    src then emcareconditioncollectorcemcareb23de108(src,item,tgt) '138dd10f';
+                } '188c1368';
+            } '7a43a9fb';
+        } 'b4ecdc53';
+    } '409fc5a4';
 }
 
 group emcareconditionemcareb23de01(source src,source item,target tgt){
@@ -2158,7 +2111,7 @@ group emcareconditionemcareb23de108(source src,source item,target tgt){
     } 'b86247eb';
 }
 
-group emcareconditioncollectoremcareb23de01(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de01(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2175,7 +2128,7 @@ group emcareconditioncollectoremcareb23de01(source src,source item,target tgt){
     } '9ef26449';
 }
 
-group emcareconditioncollectoremcareb23de03(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de03(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2192,7 +2145,7 @@ group emcareconditioncollectoremcareb23de03(source src,source item,target tgt){
     } 'cfd7a9f6';
 }
 
-group emcareconditioncollectoremcareb23de06(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de06(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2209,7 +2162,7 @@ group emcareconditioncollectoremcareb23de06(source src,source item,target tgt){
     } '8ede6446';
 }
 
-group emcareconditioncollectoremcareb23de10(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de10(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2226,7 +2179,7 @@ group emcareconditioncollectoremcareb23de10(source src,source item,target tgt){
     } '91de6eff';
 }
 
-group emcareconditioncollectoremcareb23de13(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de13(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2243,7 +2196,7 @@ group emcareconditioncollectoremcareb23de13(source src,source item,target tgt){
     } '39e0fe5e';
 }
 
-group emcareconditioncollectoremcareb23de14(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de14(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2260,7 +2213,7 @@ group emcareconditioncollectoremcareb23de14(source src,source item,target tgt){
     } 'da0791a5';
 }
 
-group emcareconditioncollectoremcareb23de15(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de15(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2277,7 +2230,7 @@ group emcareconditioncollectoremcareb23de15(source src,source item,target tgt){
     } 'b16e2ac9';
 }
 
-group emcareconditioncollectoremcareb23de16(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de16(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2294,7 +2247,7 @@ group emcareconditioncollectoremcareb23de16(source src,source item,target tgt){
     } '56c3513e';
 }
 
-group emcareconditioncollectoremcareb23de17(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de17(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2311,7 +2264,7 @@ group emcareconditioncollectoremcareb23de17(source src,source item,target tgt){
     } 'bcc64d8c';
 }
 
-group emcareconditioncollectoremcareb23de18(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de18(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2328,7 +2281,7 @@ group emcareconditioncollectoremcareb23de18(source src,source item,target tgt){
     } 'c59123ce';
 }
 
-group emcareconditioncollectoremcareb23de18a(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de18a(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2345,7 +2298,7 @@ group emcareconditioncollectoremcareb23de18a(source src,source item,target tgt){
     } '25273533';
 }
 
-group emcareconditioncollectoremcareb23de100(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de100(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2362,7 +2315,7 @@ group emcareconditioncollectoremcareb23de100(source src,source item,target tgt){
     } '8c3a108e';
 }
 
-group emcareconditioncollectoremcareb23de6101(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de6101(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2379,7 +2332,7 @@ group emcareconditioncollectoremcareb23de6101(source src,source item,target tgt)
     } 'bcd054c6';
 }
 
-group emcareconditioncollectoremcareb23de6102(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de6102(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2396,7 +2349,7 @@ group emcareconditioncollectoremcareb23de6102(source src,source item,target tgt)
     } 'd067f021';
 }
 
-group emcareconditioncollectoremcareb23de6103(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de6103(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2413,7 +2366,7 @@ group emcareconditioncollectoremcareb23de6103(source src,source item,target tgt)
     } '63883e24';
 }
 
-group emcareconditioncollectoremcareb23de30(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de30(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2430,7 +2383,7 @@ group emcareconditioncollectoremcareb23de30(source src,source item,target tgt){
     } 'a68b918e';
 }
 
-group emcareconditioncollectoremcareb23de31(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de31(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2447,7 +2400,7 @@ group emcareconditioncollectoremcareb23de31(source src,source item,target tgt){
     } '822b0f6f';
 }
 
-group emcareconditioncollectoremcareb23de32(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de32(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2464,7 +2417,7 @@ group emcareconditioncollectoremcareb23de32(source src,source item,target tgt){
     } 'd4c988ea';
 }
 
-group emcareconditioncollectoremcareb23de33(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de33(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2481,7 +2434,7 @@ group emcareconditioncollectoremcareb23de33(source src,source item,target tgt){
     } 'fe5543e1';
 }
 
-group emcareconditioncollectoremcareb23de19(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de19(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2498,7 +2451,7 @@ group emcareconditioncollectoremcareb23de19(source src,source item,target tgt){
     } '70cc0dd3';
 }
 
-group emcareconditioncollectoremcareb23de104(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de104(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2515,7 +2468,7 @@ group emcareconditioncollectoremcareb23de104(source src,source item,target tgt){
     } '20bd1c4d';
 }
 
-group emcareconditioncollectoremcareb23de105(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de105(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2532,7 +2485,7 @@ group emcareconditioncollectoremcareb23de105(source src,source item,target tgt){
     } 'fef353a9';
 }
 
-group emcareconditioncollectoremcareb23de27(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de27(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2549,7 +2502,7 @@ group emcareconditioncollectoremcareb23de27(source src,source item,target tgt){
     } '0290fee9';
 }
 
-group emcareconditioncollectoremcareb23de28(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de28(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2566,7 +2519,7 @@ group emcareconditioncollectoremcareb23de28(source src,source item,target tgt){
     } '83be838f';
 }
 
-group emcareconditioncollectoremcareb23de29(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de29(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2583,7 +2536,7 @@ group emcareconditioncollectoremcareb23de29(source src,source item,target tgt){
     } '6e4bf79f';
 }
 
-group emcareconditioncollectoremcareb23de62(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de62(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2600,7 +2553,7 @@ group emcareconditioncollectoremcareb23de62(source src,source item,target tgt){
     } '57723227';
 }
 
-group emcareconditioncollectoremcareb23de63(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de63(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2617,7 +2570,7 @@ group emcareconditioncollectoremcareb23de63(source src,source item,target tgt){
     } '33888f75';
 }
 
-group emcareconditioncollectoremcareb23de64(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de64(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2634,7 +2587,7 @@ group emcareconditioncollectoremcareb23de64(source src,source item,target tgt){
     } '1cf80989';
 }
 
-group emcareconditioncollectoremcareb23de34(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de34(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2651,7 +2604,7 @@ group emcareconditioncollectoremcareb23de34(source src,source item,target tgt){
     } 'd108e57f';
 }
 
-group emcareconditioncollectoremcareb23de35(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de35(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2668,7 +2621,7 @@ group emcareconditioncollectoremcareb23de35(source src,source item,target tgt){
     } '1b6c2929';
 }
 
-group emcareconditioncollectoremcareb23de41(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de41(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2685,7 +2638,7 @@ group emcareconditioncollectoremcareb23de41(source src,source item,target tgt){
     } '6346630d';
 }
 
-group emcareconditioncollectoremcareb23de42(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de42(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2702,7 +2655,7 @@ group emcareconditioncollectoremcareb23de42(source src,source item,target tgt){
     } '8bdb0925';
 }
 
-group emcareconditioncollectoremcareb23de44(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de44(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2719,7 +2672,7 @@ group emcareconditioncollectoremcareb23de44(source src,source item,target tgt){
     } '01ad58f9';
 }
 
-group emcareconditioncollectoremcareb23de45(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de45(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2736,7 +2689,7 @@ group emcareconditioncollectoremcareb23de45(source src,source item,target tgt){
     } '8d718fac';
 }
 
-group emcareconditioncollectoremcareb23de47(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de47(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2753,7 +2706,7 @@ group emcareconditioncollectoremcareb23de47(source src,source item,target tgt){
     } '0403cb73';
 }
 
-group emcareconditioncollectoremcareb23de49(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de49(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2770,7 +2723,7 @@ group emcareconditioncollectoremcareb23de49(source src,source item,target tgt){
     } '01b77ffc';
 }
 
-group emcareconditioncollectoremcareb23de52(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de52(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2787,7 +2740,7 @@ group emcareconditioncollectoremcareb23de52(source src,source item,target tgt){
     } '4f42555c';
 }
 
-group emcareconditioncollectoremcareb23de53(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de53(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2804,7 +2757,7 @@ group emcareconditioncollectoremcareb23de53(source src,source item,target tgt){
     } '28aceb4b';
 }
 
-group emcareconditioncollectoremcareb23de54(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de54(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2821,7 +2774,7 @@ group emcareconditioncollectoremcareb23de54(source src,source item,target tgt){
     } '4a7c61b0';
 }
 
-group emcareconditioncollectoremcareb23de56(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de56(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2838,7 +2791,7 @@ group emcareconditioncollectoremcareb23de56(source src,source item,target tgt){
     } '0a350e2a';
 }
 
-group emcareconditioncollectoremcareb23de57(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de57(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2855,7 +2808,7 @@ group emcareconditioncollectoremcareb23de57(source src,source item,target tgt){
     } '4581b0aa';
 }
 
-group emcareconditioncollectoremcareb23de58(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de58(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2872,7 +2825,7 @@ group emcareconditioncollectoremcareb23de58(source src,source item,target tgt){
     } '52e04bef';
 }
 
-group emcareconditioncollectoremcareb23de59(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de59(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2889,7 +2842,7 @@ group emcareconditioncollectoremcareb23de59(source src,source item,target tgt){
     } '4fd3684b';
 }
 
-group emcareconditioncollectoremcareb23de61(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de61(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2906,7 +2859,7 @@ group emcareconditioncollectoremcareb23de61(source src,source item,target tgt){
     } 'ebbc1c98';
 }
 
-group emcareconditioncollectoremcareb23de106(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de106(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2923,7 +2876,7 @@ group emcareconditioncollectoremcareb23de106(source src,source item,target tgt){
     } 'c5746d18';
 }
 
-group emcareconditioncollectoremcareb23de107(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de107(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2940,7 +2893,7 @@ group emcareconditioncollectoremcareb23de107(source src,source item,target tgt){
     } '1df42064';
 }
 
-group emcareconditioncollectoremcareb23de108(source src,source item,target tgt){
+group emcareconditioncollectorcemcareb23de108(source src,source item,target tgt){
     item.answer first as a then {
         src.subject as sub -> tgt.subject = sub '23252e10';
         src.encounter as en -> tgt.encounter = en '553aae7e';
@@ -2955,22 +2908,5 @@ group emcareconditioncollectoremcareb23de108(source src,source item,target tgt){
          a -> tgt.clinicalStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'active', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-clinical' 'b7901585';
          a -> tgt.verificationStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'unconfirmed', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status' '3e544e1e';
     } '474da804';
-}
-
-group emcareconditioncollectorcollector(source src,source item,target tgt){
-    item.answer first as a then {
-        src.subject as sub -> tgt.subject = sub '23252e10';
-        src.encounter as en -> tgt.encounter = en '553aae7e';
-        src.item as itemtimestamp where linkId  =  'timestamp' then {
-            itemtimestamp.answer first as atimestamp then {
-                atimestamp.value as val -> tgt.recordedDate = val  'ea256bb4';
-            } '46018ce4';
-        } 'cce2a9b1';
-        src -> tgt.code = create('CodeableConcept') as cs then {
-            src -> tgt.code = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'collector', ccs.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes' 'ab5440b5';
-        } '6fc817a4';
-         a -> tgt.clinicalStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'active', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-clinical' 'b7901585';
-         a -> tgt.verificationStatus = create('CodeableConcept') as cs, cs.coding = create('Coding') as ccs, ccs.code= 'unconfirmed', ccs.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status' '3e544e1e';
-    } 'd8e38123';
 }
 

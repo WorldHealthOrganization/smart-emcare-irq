@@ -1,8 +1,9 @@
 
-library HeadCircumferenceForAge version '1.0.2'
+library HeadCircumferenceForAge version '1.0.4'
 using FHIR version '4.0.1'
-include anthrobase version '1.0.2' called base
+include anthrobase version '1.0.4' called base
 include FHIRHelpers version '4.0.1' called FHIRHelpers
+
 // Antrho library for HeadCircumferenceForAge  Z-Score from the hcanthro files
 codesystem "administrative-gender": 'http://hl7.org/fhir/administrative-gender'
 //code "Female" : 'female' from "administrative-gender"  display 'Female'
@@ -70,6 +71,7 @@ define HeadCircumferenceForAgeFemale:
 	{y:57.0,l:1.0,s:0.03172,m:38.0658},
 	{y:58.0,l:1.0,s:0.03171,m:38.1145},
 	{y:59.0,l:1.0,s:0.0317,m:38.1628},
+	{y:60.0,l:1.0,s:0.03169,m:38.2106},
 	{y:63.0,l:1.0,s:0.03166,m:38.3516},
 	{y:70.0,l:1.0,s:0.03158,m:38.6673},
 	{y:77.0,l:1.0,s:0.03152,m:38.9661},
@@ -87,6 +89,7 @@ define HeadCircumferenceForAgeFemale:
 	{y:161.0,l:1.0,s:0.03098,m:41.6861},
 	{y:168.0,l:1.0,s:0.03094,m:41.8589},
 	{y:175.0,l:1.0,s:0.03091,m:42.0253},
+	{y:182.0,l:1.0,s:0.03088,m:42.1855},
 	{y:197.0,l:1.0,s:0.03081,m:42.5093},
 	{y:227.0,l:1.0,s:0.03069,m:43.0857},
 	{y:257.0,l:1.0,s:0.03059,m:43.5808},
@@ -207,6 +210,7 @@ define HeadCircumferenceForAgeMale:
 	{y:57.0,l:1.0,s:0.0301,m:38.9258},
 	{y:58.0,l:1.0,s:0.03007,m:38.9788},
 	{y:59.0,l:1.0,s:0.03003,m:39.0313},
+	{y:60.0,l:1.0,s:0.03,m:39.0834},
 	{y:63.0,l:1.0,s:0.0299,m:39.2368},
 	{y:70.0,l:1.0,s:0.02969,m:39.5797},
 	{y:77.0,l:1.0,s:0.0295,m:39.9033},
@@ -224,6 +228,7 @@ define HeadCircumferenceForAgeMale:
 	{y:161.0,l:1.0,s:0.0283,m:42.7957},
 	{y:168.0,l:1.0,s:0.02825,m:42.9762},
 	{y:175.0,l:1.0,s:0.02821,m:43.1495},
+	{y:182.0,l:1.0,s:0.02817,m:43.316},
 	{y:197.0,l:1.0,s:0.0281,m:43.6513},
 	{y:227.0,l:1.0,s:0.028,m:44.2432},
 	{y:257.0,l:1.0,s:0.02794,m:44.7472},
@@ -283,27 +288,38 @@ define HeadCircumferenceForAgeMale:
 }
 
 
+
+
 define function ZscoreHeadCircumferenceForAgetables(sex String, age Decimal):
-		if sex = 'female' then  First(HeadCircumferenceForAgeFemale c where c.y = age )
-		else First(HeadCircumferenceForAgeMale c where  c.y = age)
+	if sex = 'female' then  
+        First(HeadCircumferenceForAgeFemale c where c.y = base.AgeToMini(age) )
+	else 
+        First(HeadCircumferenceForAgeMale c where  c.y = base.AgeToMini(age))
             
 define function generateZScoreHeadCircumferenceForAge(sex System.String, age System.Decimal, weight  System.Decimal)  : 
-	if ZscoreHeadCircumferenceForAgetables(sex,age) is not null then 
+	 generateZScoreHeadCircumferenceForAgedet(ZscoreHeadCircumferenceForAgetables(sex,age), weight )
+
+define function generateZScoreHeadCircumferenceForAgedet(row Tuple {y System.Decimal,l System.Decimal,s System.Decimal,m System.Decimal}, weight  System.Decimal):
+    if row is not null then 
         base.computeZScore(
             weight,
-            (ZscoreHeadCircumferenceForAgetables(sex,base.AgeToMini(age)).m ), 
-            (ZscoreHeadCircumferenceForAgetables(sex,base.AgeToMini(age)).l ),
-            (ZscoreHeadCircumferenceForAgetables(sex,base.AgeToMini(age)).s )
+            row.m , 
+            row.l ,
+            row.s 
         )
     else null
 
+
 define function generateHeadCircumferenceFromAge(sex System.String, age System.Decimal, zscore  System.Decimal) : 
-	if ZscoreHeadCircumferenceForAgetables(sex,age) is not null then 
+	 generateHeadCircumferenceFromAgedet(ZscoreHeadCircumferenceForAgetables(sex,age),zscore  )
+
+define function generateHeadCircumferenceFromAgedet(row Tuple {y System.Decimal,l System.Decimal,s System.Decimal,m System.Decimal},zscore  System.Decimal) : 
+    if row is not null then 
         base.computeReverseZScore(
             zscore,
-            (ZscoreHeadCircumferenceForAgetables(sex,base.AgeToMini(age)).m ), 
-            (ZscoreHeadCircumferenceForAgetables(sex,base.AgeToMini(age)).l ),
-            (ZscoreHeadCircumferenceForAgetables(sex,base.AgeToMini(age)).s )
+            row.m , 
+            row.l ,
+            row.s 
         )
     else null    
 

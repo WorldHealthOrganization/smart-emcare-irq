@@ -244,80 +244,6 @@
         {
             "extension": [
                 {
-                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
-                    "valueExpression": {
-                        "language": "text/fhirpath",
-                        "expression": "%resource.repeat(item).where(linkId='EmCare.B22.DE41').answer.first().exists() and %resource.repeat(item).where(linkId='EmCare.B22.DE30').answer.first().value = true"
-                    }
-                }
-            ],
-            "linkId": "EmCare.B22.DE42a",
-            "text": "Difficulty Breastfeeding Reported",
-            "type": "display",
-            "required": true,
-            "repeats": false,
-            "readOnly": true,
-            "item": [
-                {
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                            "valueCodeableConcept": {
-                                "coding": [
-                                    {
-                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                        "code": "help"
-                                    }
-                                ]
-                            }
-                        }
-                    ],
-                    "linkId": "EmCare.B22.DE42a-help",
-                    "text": "The breastfeeding assessment was not observed however the caregiver has reported difficulty breastfeeding",
-                    "type": "display"
-                }
-            ]
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
-                    "valueExpression": {
-                        "language": "text/fhirpath",
-                        "expression": "%resource.repeat(item).where(linkId='EmCare.B22.DE41').answer.first().exists() and %resource.repeat(item).where(linkId='EmCare.B22.DE30').answer.first().value = false"
-                    }
-                }
-            ],
-            "linkId": "EmCare.B22.DE42b",
-            "text": "No Difficulty Breastfeeding Reported",
-            "type": "display",
-            "required": true,
-            "repeats": false,
-            "readOnly": true,
-            "item": [
-                {
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                            "valueCodeableConcept": {
-                                "coding": [
-                                    {
-                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                        "code": "help"
-                                    }
-                                ]
-                            }
-                        }
-                    ],
-                    "linkId": "EmCare.B22.DE42b-help",
-                    "text": "The breastfeeding assessment was not observed however the caregiver has reported difficulty breastfeeding",
-                    "type": "display"
-                }
-            ]
-        },
-        {
-            "extension": [
-                {
                     "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
                     "valueCode": "horizontal"
                 },
@@ -338,40 +264,6 @@
             "type": "boolean",
             "required": false,
             "repeats": false
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
-                    "valueExpression": {
-                        "language": "text/fhirpath",
-                        "expression": "%resource.repeat(item).where(linkId='EmCare.B22.DE44').answer.first().value =true"
-                    }
-                }
-            ],
-            "linkId": "EmCare.B22.DE44a",
-            "text": "Difficulty Breastfeeding Observed",
-            "type": "display",
-            "required": false,
-            "repeats": false,
-            "readOnly": true
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
-                    "valueExpression": {
-                        "language": "text/fhirpath",
-                        "expression": "%resource.repeat(item).where(linkId='EmCare.B22.DE44').answer.first().value =false"
-                    }
-                }
-            ],
-            "linkId": "EmCare.B22.DE44b",
-            "text": "No Difficulty Breastfeeding Observed",
-            "type": "display",
-            "required": false,
-            "repeats": false,
-            "readOnly": true
         },
         {
             "extension": [

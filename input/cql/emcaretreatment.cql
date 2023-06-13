@@ -409,6 +409,13 @@ define "load-EmCare.C10.IT.DE60":
     Base.HasCond(cond."feeding problem and / or low weight for age")
 
 /* 
+load-EmCare.C10.IT.DE62 : 
+HasCond(cond."Possible Serious Bacterial Infection OR Very Severe Disease") = false and HasCond(cond."Severe Jaundice") = false and HasCond(cond."Very Low Weight for Age") = false
+*/
+define "load-EmCare.C10.IT.DE62":
+    Base.HasCond(cond."Possible Serious Bacterial Infection OR Very Severe Disease") = false and Base.HasCond(cond."Severe Jaundice") = false and Base.HasCond(cond."Very Low Weight for Age") = false
+
+/* 
 BackReference : 
 back reference to resource
 */

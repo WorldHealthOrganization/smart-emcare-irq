@@ -1,8 +1,9 @@
 
-library WeightForLength version '1.0.2'
+library WeightForLength version '1.0.4'
 using FHIR version '4.0.1'
-include anthrobase version '1.0.2' called base
+include anthrobase version '1.0.4' called base
 include FHIRHelpers version '4.0.1' called FHIRHelpers
+
 // Antrho library for WeightForLength  Z-Score from the wflanthro files
 codesystem "administrative-gender": 'http://hl7.org/fhir/administrative-gender'
 //code "Female" : 'female' from "administrative-gender"  display 'Female'
@@ -1319,27 +1320,38 @@ define WeightForLengthMale:
 }
 
 
+
+
 define function ZscoreWeightForLengthtables(sex String, length Decimal):
-		if sex = 'female' then  First(WeightForLengthFemale c where c.y = length )
-		else First(WeightForLengthMale c where  c.y = length)
+	if sex = 'female' then  
+        First(WeightForLengthFemale c where c.y = length )
+	else 
+        First(WeightForLengthMale c where  c.y = length)
             
 define function generateZScoreWeightForLength(sex System.String, length System.Decimal, weight  System.Decimal)  : 
-	if ZscoreWeightForLengthtables(sex,length) is not null then 
+	 generateZScoreWeightForLengthdet(ZscoreWeightForLengthtables(sex,length), weight )
+
+define function generateZScoreWeightForLengthdet(row Tuple {y System.Decimal,l System.Decimal,s System.Decimal,m System.Decimal}, weight  System.Decimal):
+    if row is not null then 
         base.computeZScore(
             weight,
-            (ZscoreWeightForLengthtables(sex,length).m ), 
-            (ZscoreWeightForLengthtables(sex,length).l ),
-            (ZscoreWeightForLengthtables(sex,length).s )
+            row.m , 
+            row.l ,
+            row.s 
         )
     else null
 
+
 define function generateWeightFromLength(sex System.String, length System.Decimal, zscore  System.Decimal) : 
-	if ZscoreWeightForLengthtables(sex,length) is not null then 
+	 generateWeightFromLengthdet(ZscoreWeightForLengthtables(sex,length),zscore  )
+
+define function generateWeightFromLengthdet(row Tuple {y System.Decimal,l System.Decimal,s System.Decimal,m System.Decimal},zscore  System.Decimal) : 
+    if row is not null then 
         base.computeReverseZScore(
             zscore,
-            (ZscoreWeightForLengthtables(sex,length).m ), 
-            (ZscoreWeightForLengthtables(sex,length).l ),
-            (ZscoreWeightForLengthtables(sex,length).s )
+            row.m , 
+            row.l ,
+            row.s 
         )
     else null    
 

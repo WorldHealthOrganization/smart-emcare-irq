@@ -1,8 +1,9 @@
 
-library tricepsSkinfoldForAge version '1.0.2'
+library tricepsSkinfoldForAge version '1.0.4'
 using FHIR version '4.0.1'
-include anthrobase version '1.0.2' called base
+include anthrobase version '1.0.4' called base
 include FHIRHelpers version '4.0.1' called FHIRHelpers
+
 // Antrho library for tricepsSkinfoldForAge  Z-Score from the tsanthro files
 codesystem "administrative-gender": 'http://hl7.org/fhir/administrative-gender'
 //code "Female" : 'female' from "administrative-gender"  display 'Female'
@@ -23,6 +24,7 @@ define tricepsSkinfoldForAgeFemale:
 	{y:161.0,l:0.0635,s:0.19175,m:9.3008},
 	{y:168.0,l:0.0539,s:0.19301,m:9.2429},
 	{y:175.0,l:0.0446,s:0.19419,m:9.1842},
+	{y:182.0,l:0.0357,s:0.1953,m:9.1247},
 	{y:197.0,l:0.0176,s:0.19743,m:8.9969},
 	{y:227.0,l:-0.0148,s:0.20068,m:8.7491},
 	{y:257.0,l:-0.0429,s:0.20268,m:8.5268},
@@ -96,6 +98,7 @@ define tricepsSkinfoldForAgeMale:
 	{y:161.0,l:-0.0368,s:0.17972,m:9.3275},
 	{y:168.0,l:-0.0401,s:0.18085,m:9.278},
 	{y:175.0,l:-0.0433,s:0.18192,m:9.2279},
+	{y:182.0,l:-0.0463,s:0.18295,m:9.1775},
 	{y:197.0,l:-0.0526,s:0.18496,m:9.0689},
 	{y:227.0,l:-0.0643,s:0.18826,m:8.8555},
 	{y:257.0,l:-0.075,s:0.19065,m:8.656},
@@ -155,27 +158,38 @@ define tricepsSkinfoldForAgeMale:
 }
 
 
+
+
 define function ZscoretricepsSkinfoldForAgetables(sex String, age Decimal):
-		if sex = 'female' then  First(tricepsSkinfoldForAgeFemale c where c.y = age )
-		else First(tricepsSkinfoldForAgeMale c where  c.y = age)
+	if sex = 'female' then  
+        First(tricepsSkinfoldForAgeFemale c where c.y = base.AgeToMini(age) )
+	else 
+        First(tricepsSkinfoldForAgeMale c where  c.y = base.AgeToMini(age))
             
 define function generateZScoretricepsSkinfoldForAge(sex System.String, age System.Decimal, weight  System.Decimal)  : 
-	if ZscoretricepsSkinfoldForAgetables(sex,age) is not null then 
+	 generateZScoretricepsSkinfoldForAgedet(ZscoretricepsSkinfoldForAgetables(sex,age), weight )
+
+define function generateZScoretricepsSkinfoldForAgedet(row Tuple {y System.Decimal,l System.Decimal,s System.Decimal,m System.Decimal}, weight  System.Decimal):
+    if row is not null then 
         base.computeZScore(
             weight,
-            (ZscoretricepsSkinfoldForAgetables(sex,base.AgeToMini(age)).m ), 
-            (ZscoretricepsSkinfoldForAgetables(sex,base.AgeToMini(age)).l ),
-            (ZscoretricepsSkinfoldForAgetables(sex,base.AgeToMini(age)).s )
+            row.m , 
+            row.l ,
+            row.s 
         )
     else null
 
+
 define function generatetricepsSkinfoldFromAge(sex System.String, age System.Decimal, zscore  System.Decimal) : 
-	if ZscoretricepsSkinfoldForAgetables(sex,age) is not null then 
+	 generatetricepsSkinfoldFromAgedet(ZscoretricepsSkinfoldForAgetables(sex,age),zscore  )
+
+define function generatetricepsSkinfoldFromAgedet(row Tuple {y System.Decimal,l System.Decimal,s System.Decimal,m System.Decimal},zscore  System.Decimal) : 
+    if row is not null then 
         base.computeReverseZScore(
             zscore,
-            (ZscoretricepsSkinfoldForAgetables(sex,base.AgeToMini(age)).m ), 
-            (ZscoretricepsSkinfoldForAgetables(sex,base.AgeToMini(age)).l ),
-            (ZscoretricepsSkinfoldForAgetables(sex,base.AgeToMini(age)).s )
+            row.m , 
+            row.l ,
+            row.s 
         )
     else null    
 

@@ -108,13 +108,6 @@ define "OBSdefine.EmCare.B13S1.DE04":
     Base.GetObsValue('EmCare.B13S1.DE04')
 
 /* 
-OBSdefine.EmCare.B14S1.DE02 : Itchy Skin
-
-*/
-define "OBSdefine.EmCare.B14S1.DE02":
-    Base.GetObsValue('EmCare.B14S1.DE02')
-
-/* 
 OBSdefine.EmCare.B22.DE01 : Respiratory Rate (breaths per minute)
 
 */
@@ -239,13 +232,6 @@ o"Ear discharge for how long?"
 */
 define "Ear discharge for how long?":
     "OBSdefine.EmCare.B13S1.DE04"
-
-/* 
-Itchy Skin : 
-o"Itchy Skin"
-*/
-define "Itchy Skin":
-    "OBSdefine.EmCare.B14S1.DE02"
 
 /* 
 Respiratory Rate profile : 

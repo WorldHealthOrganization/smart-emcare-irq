@@ -60,13 +60,6 @@ define "OBSdefine.EmCare.B22.DE08":
     Base.GetObsValue('EmCare.B22.DE08')
 
 /* 
-OBSdefine.EmCare.B6.DE06 : Weight (Kg)
-
-*/
-define "OBSdefine.EmCare.B6.DE06":
-    Base.GetObsValue('EmCare.B6.DE06')
-
-/* 
 OBSdefine.EmCare.B10S1.DE05 : Cough
 
 */
@@ -221,7 +214,7 @@ define "OBSdefine.EmCare.B17S1.DE05":
     Base.GetObsValue('EmCare.B17S1.DE05')
 
 /* 
-OBSdefine.EmCare.B17S1.DE06 : Enlarged lymph nodes on front of neck
+OBSdefine.EmCare.B17S1.DE06 : Enlarged tender lymph node(s) on front of the neck
 
 */
 define "OBSdefine.EmCare.B17S1.DE06":
@@ -361,6 +354,13 @@ define "OBSdefine.EmCare.B14S2.DE02":
     Base.GetObsValue('EmCare.B14S2.DE02')
 
 /* 
+OBSdefine.EmCare.B22.DE82 : Hemoglobin Test Not Available
+
+*/
+define "OBSdefine.EmCare.B22.DE82":
+    Base.GetObsValue('EmCare.B22.DE82')
+
+/* 
 OBSdefine.EmCare.B15S2.DE01 : Palmar Pallor
 
 */
@@ -380,13 +380,6 @@ OBSdefine.EmCare.B22.DE81 : Hemoglobin (Hb) g/dL
 */
 define "OBSdefine.EmCare.B22.DE81":
     Base.GetObsValue('EmCare.B22.DE81')
-
-/* 
-OBSdefine.EmCare.B22.DE82 : Hemoglobin Test Not Available
-
-*/
-define "OBSdefine.EmCare.B22.DE82":
-    Base.GetObsValue('EmCare.B22.DE82')
 
 /* 
 OBSdefine.EmCare.B14S1.DE03 : Eye Problem
@@ -620,6 +613,13 @@ define "OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE37":
     Base.GetObsValue('EmCare.B14S2.DE13&EmCare.B14S2.DE37')
 
 /* 
+OBSdefine.EmCare.B6.DE06 : Weight (Kg)
+
+*/
+define "OBSdefine.EmCare.B6.DE06":
+    Base.GetObsValue('EmCare.B6.DE06')
+
+/* 
 OBSdefine.EmCare.B6.DE17 : MUAC (mm)
 
 */
@@ -651,48 +651,6 @@ define "DL-XXXX":
          or (    "OBSdefine.EmCare.B7.DE08a" = true)
          or (    "OBSdefine.EmCare.B22.DE08" ~ val."Completely Unable to Drink")
          or (    "OBSdefine.EmCare.B22.DE08" ~ val."Vomits Immediately / Everything"))
-
-/* 
-EmCare.B6.DE06 : 
-o"Weight (Kg)"
-*/
-define "EmCare.B6.DE06":
-    "OBSdefine.EmCare.B6.DE06"
-
-/* 
-Weight : EmCare.B6.DE06
-Alias
-*/
-define "Weight":
-    "EmCare.B6.DE06"
-
-/* 
-EmCare.B6.DE08-old : 
-o"Weight (Kg)"
-*/
-define "EmCare.B6.DE08-old":
-    "OBSdefine.EmCare.B6.DE06"
-
-/* 
-Profile Weight : EmCare.B6.DE08-old
-Alias
-*/
-define "Profile Weight":
-    "EmCare.B6.DE08-old"
-
-/* 
-EmCare.B6.DE08 : 
-o"Weight (Kg)"
-*/
-define "EmCare.B6.DE08":
-    "OBSdefine.EmCare.B6.DE06"
-
-/* 
-Estimated Weight : EmCare.B6.DE08
-Alias
-*/
-define "Estimated Weight":
-    "EmCare.B6.DE08"
 
 /* 
 DL-G-CL1-07 : 
@@ -882,7 +840,7 @@ define "Throat Abscess or Possible Diptheria":
 
 /* 
 DL-I-CL1-06 : 
-C."Age >= 2 months to <60 months"  and (C."Fever" = true or "Ability to swallow" = "Difficulty in swallowing" ) and "Throat problem" = true and ("Not able to drink or breastfeed" = true or "Ability to swallow" = "Unable to swallow" or  "Membrane on throat" = true) and ( ToInteger("Enlarged lymph nodes on front of neck" = true ) + ToInteger( "Red (congested) throat" = true) + ToInteger( "Exudate on Throat"=true ) )>1 and "Throat Abscess or Possible Diptheria"!=true
+C."Age >= 2 months to <60 months"  and (C."Fever" = true or "Ability to swallow" = "Difficulty in swallowing" ) and "Throat problem" = true and ("Not able to drink or breastfeed" = true or "Ability to swallow" = "Unable to swallow" or  "Membrane on throat" = true) and ( ToInteger("Enlarged tender lymph node(s) on front of the neck" = true ) + ToInteger( "Red (congested) throat" = true) + ToInteger( "Exudate on Throat"=true ) )>1 and "Throat Abscess or Possible Diptheria"!=true
 */
 define "DL-I-CL1-06":
     C."Age >= 2 months to <60 months"  and (C."Fever" = true or "OBSdefine.EmCare.B17S1.DE07" ~ val."Difficulty in swallowing" ) and "OBSdefine.EmCare.B17S1.DE01" = true and ("OBSdefine.EmCare.B7.DE09" = true or "OBSdefine.EmCare.B17S1.DE07" ~ val."Unable to swallow" or  "OBSdefine.EmCare.B17S1.DE05" = true) and ( ToInteger(Coalesce("OBSdefine.EmCare.B17S1.DE06" = true ,false)) + ToInteger(Coalesce( "OBSdefine.EmCare.B17S1.DE03" = true,false)) + ToInteger(Coalesce( "OBSdefine.EmCare.B17S1.DE04"=true ,false)) )>1 and Coalesce("Throat Abscess or Possible Diptheria",false)!=true
@@ -896,7 +854,7 @@ define "Streptococcal Sore Throat":
 
 /* 
 DL-I-CL1-07 : 
-C."Age >= 2 months to <60 months"  and ("Ability to swallow" = "Difficulty in swallowing" or "Enlarged lymph nodes on front of neck" = true or  "Red (congested) throat" =true or  "Exudate on Throat"=true ) and "Throat problem" = true and  "Throat Abscess or Possible Diptheria"!=true and "Streptococcal Sore Throat"!=true
+C."Age >= 2 months to <60 months"  and ("Ability to swallow" = "Difficulty in swallowing" or "Enlarged tender lymph node(s) on front of the neck" = true or  "Red (congested) throat" =true or  "Exudate on Throat"=true ) and "Throat problem" = true and  "Throat Abscess or Possible Diptheria"!=true and "Streptococcal Sore Throat"!=true
 */
 define "DL-I-CL1-07":
     C."Age >= 2 months to <60 months"  and ("OBSdefine.EmCare.B17S1.DE07" ~ val."Difficulty in swallowing" or "OBSdefine.EmCare.B17S1.DE06" = true or  "OBSdefine.EmCare.B17S1.DE03" =true or  "OBSdefine.EmCare.B17S1.DE04"=true ) and "OBSdefine.EmCare.B17S1.DE01" = true and  Coalesce("Throat Abscess or Possible Diptheria",false)!=true and Coalesce("Streptococcal Sore Throat",false)!=true
@@ -910,10 +868,10 @@ define "Non-Streptococcal Sore Throat":
 
 /* 
 DL-I-CL1-09 : 
-C."Age >= 2 months to <60 months" and "Throat problem" = true and  "Throat Abscess or Possible Diptheria"!=true and "Streptococcal Sore Throat"!=true and "Non-Streptococcal Sore Throat"!=true
+C."Age >= 2 months to <60 months" and ("Throat problem" = true and  "Throat Abscess or Possible Diptheria"!=true and "Streptococcal Sore Throat"!=true and "Non-Streptococcal Sore Throat"!=true) or "Throat problem" = false
 */
 define "DL-I-CL1-09":
-    C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B17S1.DE01" = true and  Coalesce("Throat Abscess or Possible Diptheria",false)!=true and Coalesce("Streptococcal Sore Throat",false)!=true and Coalesce("Non-Streptococcal Sore Throat",false)!=true
+    C."Age >= 2 months to <60 months" and ("OBSdefine.EmCare.B17S1.DE01" = true and  Coalesce("Throat Abscess or Possible Diptheria",false)!=true and Coalesce("Streptococcal Sore Throat",false)!=true and Coalesce("Non-Streptococcal Sore Throat",false)!=true) or "OBSdefine.EmCare.B17S1.DE01" = false
 
 /* 
 No Throat Problem : DL-I-CL1-09
@@ -1115,10 +1073,12 @@ define "Possible Measles":
 
 /* 
 DL-G-CL1-109 : 
-C."Age >= 2 months to <60 months" and ("Palmar Pallor" = "Severe Palmar Pallor" or "Mucous membrane pallor" = "Severe mucous membrane pallor" or "Hemoglobin (Hb) g/dL" < 7 'g/dL' )
+    (    "Hemoglobin Test Not Available" = true  and ("Palmar Pallor" = "Severe Palmar Pallor" or "Mucous membrane pallor" = "Severe mucous membrane pallor"))
+     or (    "Hemoglobin (Hb) g/dL" < 7 'g/dL'  and ("Palmar Pallor" = "Severe Palmar Pallor" or "Mucous membrane pallor" = "Severe mucous membrane pallor" or "Palmar Pallor" = "Some Palmar Pallor" or "Mucous membrane pallor" = "Some mucous membrane pallor"))
 */
 define "DL-G-CL1-109":
-    C."Age >= 2 months to <60 months" and ("OBSdefine.EmCare.B15S2.DE01" ~ val."Severe Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE09" ~ val."Severe mucous membrane pallor" or "OBSdefine.EmCare.B22.DE81" < 7 'g/dL' )
+        (    "OBSdefine.EmCare.B22.DE82" = true  and ("OBSdefine.EmCare.B15S2.DE01" ~ val."Severe Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE09" ~ val."Severe mucous membrane pallor"))
+         or (    "OBSdefine.EmCare.B22.DE81" < 7 'g/dL'  and ("OBSdefine.EmCare.B15S2.DE01" ~ val."Severe Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE09" ~ val."Severe mucous membrane pallor" or "OBSdefine.EmCare.B15S2.DE01" ~ val."Some Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE09" ~ val."Some mucous membrane pallor"))
 
 /* 
 Severe Anaemia : DL-G-CL1-109
@@ -1129,10 +1089,14 @@ define "Severe Anaemia":
 
 /* 
 DL-G-CL1-110 : 
-C."Age >= 2 months to <60 months" and ("Palmar Pallor" = "Some Palmar Pallor" or "Mucous membrane pallor" = "Some mucous membrane pallor" or ("Hemoglobin (Hb) g/dL" >= 7 'g/dL' and "Hemoglobin (Hb) g/dL" < 11 'g/dL' )) and "Severe Anaemia"!=true
+    ("Severe Anaemia"!=true)
+     and ((    ("Hemoglobin (Hb) g/dL" >= 7 'g/dL' and "Hemoglobin (Hb) g/dL" < 11 'g/dL' )  and ("Palmar Pallor" = "Severe Palmar Pallor" or "Mucous membrane pallor" = "Severe mucous membrane pallor" or "Palmar Pallor" = "Some Palmar Pallor" or "Mucous membrane pallor" = "Some mucous membrane pallor"))
+     or (    "Hemoglobin Test Not Available" = true  and ("Palmar Pallor" = "Some Palmar Pallor" or "Mucous membrane pallor" = "Some mucous membrane pallor" )))
 */
 define "DL-G-CL1-110":
-    C."Age >= 2 months to <60 months" and ("OBSdefine.EmCare.B15S2.DE01" ~ val."Some Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE09" ~ val."Some mucous membrane pallor" or ("OBSdefine.EmCare.B22.DE81" >= 7 'g/dL' and "OBSdefine.EmCare.B22.DE81" < 11 'g/dL' )) and Coalesce("Severe Anaemia",false)!=true
+        (Coalesce("Severe Anaemia",false)!=true)
+         and ((    ("OBSdefine.EmCare.B22.DE81" >= 7 'g/dL' and "OBSdefine.EmCare.B22.DE81" < 11 'g/dL' )  and ("OBSdefine.EmCare.B15S2.DE01" ~ val."Severe Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE09" ~ val."Severe mucous membrane pallor" or "OBSdefine.EmCare.B15S2.DE01" ~ val."Some Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE09" ~ val."Some mucous membrane pallor"))
+         or (    "OBSdefine.EmCare.B22.DE82" = true  and ("OBSdefine.EmCare.B15S2.DE01" ~ val."Some Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE09" ~ val."Some mucous membrane pallor" )))
 
 /* 
 Anaemia : DL-G-CL1-110
@@ -1143,10 +1107,14 @@ define "Anaemia":
 
 /* 
 DL-G-CL1-111 : 
-C."Age >= 2 months to <60 months" and "Palmar Pallor" = "No Palmar Pallor" and "Mucous membrane pallor" = "No mucous membrane pallor" and  ("Hemoglobin (Hb) g/dL" >= 11 'g/dL' or "Hemoglobin Test Not Available"= true)
+    ("Severe Anaemia"!=true and "Anaemia"!=true)
+     and ((    "Hemoglobin (Hb) g/dL" >= 11 'g/dL'   and ("Palmar Pallor" = "Severe Palmar Pallor" or "Mucous membrane pallor" = "Severe mucous membrane pallor" or "Palmar Pallor" = "Some Palmar Pallor" or "Mucous membrane pallor" = "Some mucous membrane pallor"))
+     or (    "Palmar Pallor" = "No Palmar Pallor" and "Mucous membrane pallor" = "No mucous membrane pallor"))
 */
 define "DL-G-CL1-111":
-    C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B15S2.DE01" ~ val."No Palmar Pallor" and "OBSdefine.EmCare.B15S2.DE09" ~ val."No mucous membrane pallor" and  ("OBSdefine.EmCare.B22.DE81" >= 11 'g/dL' or "OBSdefine.EmCare.B22.DE82"= true)
+        (Coalesce("Severe Anaemia",false)!=true and Coalesce("Anaemia",false)!=true)
+         and ((    "OBSdefine.EmCare.B22.DE81" >= 11 'g/dL'   and ("OBSdefine.EmCare.B15S2.DE01" ~ val."Severe Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE09" ~ val."Severe mucous membrane pallor" or "OBSdefine.EmCare.B15S2.DE01" ~ val."Some Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE09" ~ val."Some mucous membrane pallor"))
+         or (    "OBSdefine.EmCare.B15S2.DE01" ~ val."No Palmar Pallor" and "OBSdefine.EmCare.B15S2.DE09" ~ val."No mucous membrane pallor"))
 
 /* 
 No Anaemia : DL-G-CL1-111

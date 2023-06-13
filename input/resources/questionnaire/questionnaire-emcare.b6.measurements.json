@@ -261,7 +261,27 @@
             "text": "Estimated Weight",
             "type": "quantity",
             "required": false,
-            "repeats": false
+            "repeats": false,
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "help"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B6.DE08-help",
+                    "text": "Weight based on the previous mesurements",
+                    "type": "display"
+                }
+            ]
         },
         {
             "extension": [
@@ -286,11 +306,8 @@
         {
             "extension": [
                 {
-                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
-                    "valueExpression": {
-                        "language": "text/fhirpath",
-                        "expression": "%resource.repeat(item).where(linkId='EmCare.B6.DE08').answer.first().exists()"
-                    }
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                    "valueBoolean": true
                 },
                 {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
@@ -301,11 +318,9 @@
                 }
             ],
             "linkId": "pastWeightActualised",
-            "text": "Weight based on the previous mesurements",
             "type": "quantity",
             "required": false,
-            "repeats": false,
-            "readOnly": true
+            "repeats": false
         },
         {
             "extension": [
@@ -427,7 +442,7 @@
                     ],
                     "linkId": "EmCare.B6.DE10",
                     "type": "choice",
-                    "required": true,
+                    "required": false,
                     "repeats": true,
                     "answerOption": [
                         {
@@ -490,7 +505,7 @@
                     ],
                     "linkId": "EmCare.B6.DE11",
                     "type": "choice",
-                    "required": false,
+                    "required": true,
                     "repeats": true,
                     "answerOption": [
                         {

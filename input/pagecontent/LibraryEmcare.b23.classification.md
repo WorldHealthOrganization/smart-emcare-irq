@@ -10,7 +10,6 @@ required for the execution
 | Observation | EmCare.B7.DE08 | boolean/quantity | Unconscious |
 | Observation | EmCare.B7.DE08a | boolean/quantity | Lethargic |
 | Observation | EmCare.B22.DE08 | boolean/quantity | Oral Fluid Test Results |
-| Observation | EmCare.B6.DE06 | boolean/quantity | Weight (Kg) |
 | Observation | EmCare.B10S1.DE05 | boolean/quantity | Cough |
 | Observation | EmCare.B10S1.DE01 | boolean/quantity | Difficulty Breathing |
 | Observation | EmCare.B10S2.DE04 | boolean/quantity | Stridor in a calm child |
@@ -33,7 +32,7 @@ required for the execution
 | Observation | EmCare.B7.DE09 | boolean/quantity | Not able to drink or breastfeed |
 | Observation | EmCare.B17S1.DE07 | boolean/quantity | Ability to swallow |
 | Observation | EmCare.B17S1.DE05 | boolean/quantity | Membrane on throat |
-| Observation | EmCare.B17S1.DE06 | boolean/quantity | Enlarged lymph nodes on front of neck |
+| Observation | EmCare.B17S1.DE06 | boolean/quantity | Enlarged tender lymph node(s) on front of the neck |
 | Observation | EmCare.B17S1.DE03 | boolean/quantity | Red (congested) throat |
 | Observation | EmCare.B17S1.DE04 | boolean/quantity | Exudate on Throat |
 | Observation | EmCare.B13S1.DE01 | boolean/quantity | Ear problem |
@@ -53,10 +52,10 @@ required for the execution
 | Observation | EmCare.B14S2.DE10 | boolean/quantity | Measles Rash |
 | Observation | EmCare.B14S2.DE06&EmCare.B14S2.DE07 | boolean/quantity | Generalised or Localised Skin Problem |
 | Observation | EmCare.B14S2.DE02 | boolean/quantity | Pus Draining from Eye |
+| Observation | EmCare.B22.DE82 | boolean/quantity | Hemoglobin Test Not Available |
 | Observation | EmCare.B15S2.DE01 | boolean/quantity | Palmar Pallor |
 | Observation | EmCare.B15S2.DE09 | boolean/quantity | Mucous membrane pallor |
 | Observation | EmCare.B22.DE81 | boolean/quantity | Hemoglobin (Hb) g/dL |
-| Observation | EmCare.B22.DE82 | boolean/quantity | Hemoglobin Test Not Available |
 | Observation | EmCare.B14S1.DE03 | boolean/quantity | Eye Problem |
 | Observation | EmCare.B14S2.DE04 | boolean/quantity | Is Clouding of the Cornea a new problem |
 | Observation | EmCare.B14S2.DE05 | boolean/quantity | Has Clouding of the Cornea previously been treated |
@@ -90,6 +89,7 @@ required for the execution
 | Observation | EmCare.B14S2.DE36a | boolean/quantity | Secondary bacterial infection of eczema |
 | Observation | EmCare.B14S2.DE36c | boolean/quantity | Secondary herpes infection of eczema (eczema herpeticum) |
 | Observation | EmCare.B14S2.DE13&EmCare.B14S2.DE37 | boolean/quantity | Type of Skin Problem |
+| Observation | EmCare.B6.DE06 | boolean/quantity | Weight (Kg) |
 | Observation | EmCare.B6.DE17 | boolean/quantity | MUAC (mm) |
 | Observation | EmCare.B6.DE17a | boolean/quantity | MUAC cannot be measured |
 

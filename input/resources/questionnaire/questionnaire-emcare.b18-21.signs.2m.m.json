@@ -393,13 +393,6 @@
                                 "language": "text/fhirpath",
                                 "expression": "%resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='EmCare.B22.DE02').answer.first().empty() and %resource.repeat(item).where(linkId='Respiratory Rate profile').answer.first().empty()"
                             }
-                        },
-                        {
-                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
-                            "valueExpression": {
-                                "language": "text/fhirpath",
-                                "expression": "iif(%resource.repeat(item).where(linkId='Respiratory Rate profile').answer.first().exists(), %resource.repeat(item).where(linkId='Respiratory Rate profile').answer.first().value,{})"
-                            }
                         }
                     ],
                     "linkId": "EmCare.B22.DE01",

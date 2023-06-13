@@ -238,15 +238,6 @@
                         ]
                     },
                     {
-                        "code": "EmCare.B12S1.DE05",
-                        "display": "7 Days or more",
-                        "designation": [
-                            {
-                                "value": "The client has had fever for 7 days or more"
-                            }
-                        ]
-                    },
-                    {
                         "code": "EmCare.B12S1.DE04",
                         "display": "Less than 7 days",
                         "designation": [
@@ -256,11 +247,11 @@
                         ]
                     },
                     {
-                        "code": "EmCare.B10S1.DE08",
-                        "display": "14 days or more",
+                        "code": "EmCare.B12S1.DE05",
+                        "display": "7 Days or more",
                         "designation": [
                             {
-                                "value": "The client has had Ear discharge for 14 days or more"
+                                "value": "The client has had fever for 7 days or more"
                             }
                         ]
                     },
@@ -270,6 +261,15 @@
                         "designation": [
                             {
                                 "value": "The client has had Ear discharge for less than 14 days"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B10S1.DE08",
+                        "display": "14 days or more",
+                        "designation": [
+                            {
+                                "value": "The client has had Ear discharge for 14 days or more"
                             }
                         ]
                     },

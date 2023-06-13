@@ -17,7 +17,6 @@ required for the execution
 | Observation | EmCare.B14S1.DE01 | boolean/quantity | Skin Problem |
 | Observation | EmCare.B13S1.DE03 | boolean/quantity | Ear discharge |
 | Observation | EmCare.B13S1.DE04 | boolean/quantity | Ear discharge for how long? |
-| Observation | EmCare.B14S1.DE02 | boolean/quantity | Itchy Skin |
 | Observation | EmCare.B22.DE01 | boolean/quantity | Respiratory Rate (breaths per minute) |
 | Observation | EmCare.B22.DE04 | boolean/quantity | Respiratory Rate (Second Count) (breaths per minute) |
 | Observation | EmCare.B22.DE07 | boolean/quantity | Fast Breathing |

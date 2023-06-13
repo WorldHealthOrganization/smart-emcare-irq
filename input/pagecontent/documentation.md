@@ -17,13 +17,18 @@ The PlanDefinition will compute the task (implementation of an activity) require
 
 the picture above shows the posssiblity to replace the data collection proposed in that IG (FHIR questionnaire) by any other tasks given the task will create the required outputs expected later in the Encounter
 
-Most, if not 100% of the logic depicted in the image above is located in CQL libraries
+Most, if not 100%, of the logic depicted in the image above is located in CQL libraries, those library could be reused by other task than the "cpg-collectWith" ones, for example the classification library could be reused to have the cases definiton of EMcare classification
+
+The questionnaire are for data collection but the question display logic plays a role in the consultation because a based on answer outpout may or may not be collected which would impact the decision logic later on.
+
+
+
 
 ### Encounter Activities
 
 Each activity within an Encounter follows those steps:
 - Identifiy the patient (managed by the L4)
-- Retrieve relevant patient information (Observations and Conditions) collected during the encounter or in the past (FHIR library  are used)
+- Retrieve relevant patient information (Observations and Conditions) collected during the encounter or in the past (FHIR CQL library are used)
 - if Required, Collect additionnal information relevant with regard to the already collected information (both within and outside the activity); the default data-collection takes the form of a FHIR Questionnaire
 - Export result into the FHIR data store (mainly Observation and Condition)
 
@@ -33,11 +38,11 @@ Each activity may require those artefacts:
 - Questionnaire
 - Library
 - StructureMap
-- *task
+- *Task
 
 #### Sequence Diagrams
 
-Diagram picturing the relation between activities
+Diagram picturing the relation between activities for this IG
 
 <img style="width:100%" src="assets/images/activities-sequence.png"/>
 
@@ -47,47 +52,46 @@ The key activities for Clinical Care in Crises (EmCare) are the following
 
 |Code|Description|Applicability | predecessor |
 |---|---|---|---|
-|[EmCareA.Registration.P](ActivityDefinition-emcarea.registration.p.json) | New Patient registration  [NEED_INPUT] | Any | New Patient |
-|[EmCareA.Registration.E ](ActivityDefinition-emcarea.registration.e.json)| New Encounter registration  [NEED_INPUT] | Any | New Encounter |
-|[EmCare.B7.LTI-DangerSigns ](ActivityDefinition-emcare.b7.lti.dangersigns.json )|Danger signs [NEED_INPUT] | >= 2 months | Registration |
-|[EmCare.B6.Measurements](ActivityDefinition-emcare.b6.measurements.json )| Measurement [NEED_INPUT] | Any | Danger Signs |
-|[EmCare.B18-21.Symptoms.2m.m](ActivityDefinition-emcare.b18-21.symptoms.2m.m.json)|[NEED_INPUT]|_futurework_| Measurements |
-|[EmCare.B10-14.Symptoms.2m.p](ActivityDefinition-emcare.b10-14.symptoms.2m.p.json)|[NEED_INPUT] | >= 2 months|Measurements|
-|[EmCare.B18-21.Signs.2m.m](ActivityDefinition-emcare.b18-21.signs.2m.m.json)|[NEED_INPUT]|< 2 months|Symptoms|
-|[EmCare.B10-16.Signs.2m.p](ActivityDefinition-emcare.b10-16.signs.2m.p.json)|[NEED_INPUT]|>= 2 months| Symptoms|
-|[EmCare.B22.AssessmentsTests](ActivityDefinition-emcare.b22.assessmentstests.json)|[NEED_INPUT]| See details below | Any |
-|[EmCare.B23.Classification.2m.m](ActivityDefinition-emcare.b23.classification.m.json)|[NEED_INPUT]|< 2 months|Assessement-test|
-|[EmCare.B23.Classification.2m.p](ActivityDefinition-emcare.b23.classification.json)|[NEED_INPUT]|>= 2 months|>= 2 months|
-|[EmCare.Treatment](ActivityDefinition-emcare.treatment.json)|[NEED_INPUT]|Any|Any|
+|[EmCareA.Registration.P](ActivityDefinition-emcarea.registration.p.html) | New Patient registration  [NEED_INPUT] | Any | New Patient |
+|[EmCareA.Registration.E ](ActivityDefinition-emcarea.registration.e.html)| New Encounter registration  [NEED_INPUT] | Any | New Encounter |
+|[EmCare.B7.LTI-DangerSigns ](ActivityDefinition-emcare.b7.lti.dangersigns.html )|Danger signs [NEED_INPUT] | >= 2 months | Registration |
+|[EmCare.B6.Measurements](ActivityDefinition-emcare.b6.measurements.html )| Measurement [NEED_INPUT] | Any | Danger Signs |
+|[EmCare.B18-21.Symptoms.2m.m](ActivityDefinition-emcare.b18-21.symptoms.2m.m.html)| Signs infant [NEED_INPUT]|_futurework_| Measurements |
+|[EmCare.B10-14.Symptoms.2m.p](ActivityDefinition-emcare.b10-14.symptoms.2m.p.html)|Signs Child [NEED_INPUT] | >= 2 months|Measurements|
+|[EmCare.B18-21.Signs.2m.m](ActivityDefinition-emcare.b18-21.signs.2m.m.html)|Symptoms infant [NEED_INPUT]|< 2 months|Symptoms|
+|[EmCare.B10-16.Signs.2m.p](ActivityDefinition-emcare.b10-16.signs.2m.p.html)|Symptoms child [NEED_INPUT]|>= 2 months| Symptoms|
+|[EmCare.B22.AssessmentsTests](ActivityDefinition-emcare.b22.assessmentstests.html)| Assessemnt-Test [NEED_INPUT]| See details below | Any |
+|[EmCare.B23.Classification.2m.m](ActivityDefinition-emcare.b23.classification.m.html)|Classification infant [NEED_INPUT]|< 2 months|Assessement-test|
+|[EmCare.B23.Classification.2m.p](ActivityDefinition-emcare.b23.classification.html)|Classification Child[NEED_INPUT]|>= 2 months|>= 2 months|
+|[EmCare.Treatment](ActivityDefinition-emcare.treatment.html)|Treatment [NEED_INPUT]|Any|Any|
 
 ##### Assessement and test sub-activities
 
 |Code|Description|Applicability|
 |---|---|---|
-|[Breastfeeding](ActivityDefinition-emcare.b22.breastfeeding.json)|[NEED_INPUT]|AgeInMonths >=2 and AgeInMonths  <6 and "severe classification up to assessments and tests excluding severe dehydration" !=true OR AgeInMonths <2 and  "Breastfed" = true and "yi severe classification other than severe dehydration" !=true |
-|[Respiratory Rate](ActivityDefinition-emcare.b22.respiratoryrate.json)|[NEED_INPUT]|("Cough" = true or "Difficulty Breathing" = true or "AgeInMonths"<2) and "Fast Breathing" is null |
-|[Bronchodilator](ActivityDefinition-emcare.b22.bronchodilatortest.json)|[NEED_INPUT]|("Cough" = true or "Difficulty Breathing" = true) and "Wheezing" = true and ("Fast Breathing" = true or "Chest Indrawing" = true) and  "danger signs" != true and "Stridor in a calm child"= false and "Oxygen Saturation" >= 90 '%'|
-|[Hemoglobin](ActivityDefinition-emcare.b22.hemoglobin.json)|[NEED_INPUT]|"Palmar pallor" = "Some palmar pallor" or "Palmar Pallor" = "Severe Palmar Pallor" or "Mucous membrane pallor" = "Some mucous membrane pallor" or "Mucous membrane pallor" = "Severe mucous membrane pallor"|
-|[Second Temperature](ActivityDefinition-emcare.b22.secondtemperature.json)|[NEED_INPUT]|"psbi other than temperature" != true and AgeInMonths()<2 and "Axillary Temperature  (degrees Celcius)" > 38.5 'Cel'| 
-|[FluidTest](ActivityDefinition-emcare.b22.fluidtest.json)|[NEED_INPUT]|("Not able to drink or breastfeed" = true or "Vomiting Everything" = true or "Diarrhoea" = true) and "Oral Fluid Test Results" is null|
+|[Breastfeeding](ActivityDefinition-emcare.b22.breastfeeding.html)|[NEED_INPUT]|AgeInMonths >=2 and AgeInMonths  <6 and "severe classification up to assessments and tests excluding severe dehydration" !=true OR AgeInMonths <2 and  "Breastfed" = true and "yi severe classification other than severe dehydration" !=true |
+|[Respiratory Rate](ActivityDefinition-emcare.b22.respiratoryrate.html)|[NEED_INPUT]|("Cough" = true or "Difficulty Breathing" = true or "AgeInMonths"<2) and "Fast Breathing" is null |
+|[Bronchodilator](ActivityDefinition-emcare.b22.bronchodilatortest.html)|[NEED_INPUT]|("Cough" = true or "Difficulty Breathing" = true) and "Wheezing" = true and ("Fast Breathing" = true or "Chest Indrawing" = true) and  "danger signs" != true and "Stridor in a calm child"= false and "Oxygen Saturation" >= 90 '%'|
+|[Hemoglobin](ActivityDefinition-emcare.b22.hemoglobin.html)|[NEED_INPUT]|"Palmar pallor" = "Some palmar pallor" or "Palmar Pallor" = "Severe Palmar Pallor" or "Mucous membrane pallor" = "Some mucous membrane pallor" or "Mucous membrane pallor" = "Severe mucous membrane pallor"|
+|[Second Temperature](ActivityDefinition-emcare.b22.secondtemperature.html)|[NEED_INPUT]|"psbi other than temperature" != true and AgeInMonths()<2 and "Axillary Temperature  (degrees Celcius)" > 38.5 'Cel'| 
+|[FluidTest](ActivityDefinition-emcare.b22.fluidtest.html)|[NEED_INPUT]|("Not able to drink or breastfeed" = true or "Vomiting Everything" = true or "Diarrhoea" = true) and "Oral Fluid Test Results" is null|
 
 ### Data Elements
 
-Data elements are represented within this implementation guide using a codessystem  of the appropriate resource as well as libraries of associated calculation logic for calculated, or inferred, data elements.
+Data elements are represented within this implementation guide using a codesystem  of the appropriate resource as well as libraries of associated calculation logic for calculated, or inferred, data elements.
 
 Note that some "Data elements" from the perspective of the Data Dictionary presented in the DAK are actually rollups. For example, Patient last name is a specific data element within the DAK, but is represented as one of many elements in the EmCare Patient profile.
 
 #### Data Element Processing
 
-The following diagram illustrates the processing used to derive FHIR terminology and profile resources from the data dictionary:
+The following diagram illustrates the processing used to derive FHIR terminology and profile resources from the data dictionary using [pyfhirsdc](https://github.com/SwissTPH/pyfhirsdc)
 
 <img style="width:100%" src="assets/images/dak-processing.png"/>
 
 The inputs on the left consist of:
 
 1. Data elements in the data dictionary, defining a unique _label_ for each, along with other metadata such as definition, data type, and input options.
-2. Terminology mappings for each element to several standard terminologies, including SNOMED, LOINC, and ICD-10 and -11.
-3. FHIR mappings for each element, establishing a path to a FHIR resource type and element, as well as a base profile and establishing contexts for the element
+2. FHIR mappings for each element, establishing a path to a FHIR resource type and element, as well as a base profile and establishing contexts for the element, Alias of Mapping snippet could be used for better readability
 
 NOTE: The FHIR mappings are not part of the Digital Adaptation Kit, but are introduced as part of this implementation guide. The xls_form_iraq_v1.xlsx spreadsheet in the `input/l2` folder is the source for these mappings, and was created by copying the WHO L2 spreadsheet from the Digital Adaptation Kit following the pyfhirsdc format, and then adding the FHIR mapping columns and providing the individual data element mappings.
 
@@ -111,9 +115,9 @@ The model for data elements represented within this implementation guide is base
 
 |Profile|
 |---|
-|[EmCare Condition](structuredefinition-emcare-condition.html)|
-|[EmCare Observation](structuredefinition-emcare-observation.html)|
-|[EmCare Patient](structuredefinition-emcare-patient.html)|
+|[EmCare Condition](StructureDefinition-emcare-condition.html)|
+|[EmCare Observation](StructureDefinition-emcare-observation.html)|
+|[EmCare Patient](StructureDefinition-emcare-patient.html)|
 
 
 #### Data Elements by Activity

@@ -1,8 +1,9 @@
 
-library ArmCircumferenceForAge version '1.0.2'
+library ArmCircumferenceForAge version '1.0.4'
 using FHIR version '4.0.1'
-include anthrobase version '1.0.2' called base
+include anthrobase version '1.0.4' called base
 include FHIRHelpers version '4.0.1' called FHIRHelpers
+
 // Antrho library for ArmCircumferenceForAge  Z-Score from the acanthro files
 codesystem "administrative-gender": 'http://hl7.org/fhir/administrative-gender'
 //code "Female" : 'female' from "administrative-gender"  display 'Female'
@@ -23,6 +24,7 @@ define ArmCircumferenceForAgeFemale:
 	{y:161.0,l:-0.1733,s:0.08331,m:13.6616},
 	{y:168.0,l:-0.1733,s:0.08336,m:13.7019},
 	{y:175.0,l:-0.1733,s:0.0834,m:13.7394},
+	{y:182.0,l:-0.1733,s:0.08343,m:13.7741},
 	{y:197.0,l:-0.1733,s:0.08348,m:13.8407},
 	{y:227.0,l:-0.1733,s:0.08352,m:13.9477},
 	{y:257.0,l:-0.1733,s:0.08348,m:14.0292},
@@ -96,6 +98,7 @@ define ArmCircumferenceForAgeMale:
 	{y:161.0,l:0.299,s:0.07577,m:14.117},
 	{y:168.0,l:0.2912,s:0.07585,m:14.1597},
 	{y:175.0,l:0.2836,s:0.07593,m:14.1992},
+	{y:182.0,l:0.2762,s:0.076,m:14.2358},
 	{y:197.0,l:0.2609,s:0.07615,m:14.3053},
 	{y:227.0,l:0.2325,s:0.0764,m:14.4135},
 	{y:257.0,l:0.2064,s:0.07657,m:14.4907},
@@ -155,27 +158,38 @@ define ArmCircumferenceForAgeMale:
 }
 
 
+
+
 define function ZscoreArmCircumferenceForAgetables(sex String, age Decimal):
-		if sex = 'female' then  First(ArmCircumferenceForAgeFemale c where c.y = age )
-		else First(ArmCircumferenceForAgeMale c where  c.y = age)
+	if sex = 'female' then  
+        First(ArmCircumferenceForAgeFemale c where c.y = base.AgeToMini(age) )
+	else 
+        First(ArmCircumferenceForAgeMale c where  c.y = base.AgeToMini(age))
             
 define function generateZScoreArmCircumferenceForAge(sex System.String, age System.Decimal, weight  System.Decimal)  : 
-	if ZscoreArmCircumferenceForAgetables(sex,age) is not null then 
+	 generateZScoreArmCircumferenceForAgedet(ZscoreArmCircumferenceForAgetables(sex,age), weight )
+
+define function generateZScoreArmCircumferenceForAgedet(row Tuple {y System.Decimal,l System.Decimal,s System.Decimal,m System.Decimal}, weight  System.Decimal):
+    if row is not null then 
         base.computeZScore(
             weight,
-            (ZscoreArmCircumferenceForAgetables(sex,base.AgeToMini(age)).m ), 
-            (ZscoreArmCircumferenceForAgetables(sex,base.AgeToMini(age)).l ),
-            (ZscoreArmCircumferenceForAgetables(sex,base.AgeToMini(age)).s )
+            row.m , 
+            row.l ,
+            row.s 
         )
     else null
 
+
 define function generateArmCircumferenceFromAge(sex System.String, age System.Decimal, zscore  System.Decimal) : 
-	if ZscoreArmCircumferenceForAgetables(sex,age) is not null then 
+	 generateArmCircumferenceFromAgedet(ZscoreArmCircumferenceForAgetables(sex,age),zscore  )
+
+define function generateArmCircumferenceFromAgedet(row Tuple {y System.Decimal,l System.Decimal,s System.Decimal,m System.Decimal},zscore  System.Decimal) : 
+    if row is not null then 
         base.computeReverseZScore(
             zscore,
-            (ZscoreArmCircumferenceForAgetables(sex,base.AgeToMini(age)).m ), 
-            (ZscoreArmCircumferenceForAgetables(sex,base.AgeToMini(age)).l ),
-            (ZscoreArmCircumferenceForAgetables(sex,base.AgeToMini(age)).s )
+            row.m , 
+            row.l ,
+            row.s 
         )
     else null    
 

@@ -1,8 +1,9 @@
 
-library BMIForAge version '1.0.2'
+library BMIForAge version '1.0.4'
 using FHIR version '4.0.1'
-include anthrobase version '1.0.2' called base
+include anthrobase version '1.0.4' called base
 include FHIRHelpers version '4.0.1' called FHIRHelpers
+
 // Antrho library for BMIForAge  Z-Score from the bmianthro files
 codesystem "administrative-gender": 'http://hl7.org/fhir/administrative-gender'
 //code "Female" : 'female' from "administrative-gender"  display 'Female'
@@ -70,6 +71,7 @@ define BMIForAgeFemale:
 	{y:57.0,l:0.192,s:0.09389,m:15.6604},
 	{y:58.0,l:0.1875,s:0.09385,m:15.689},
 	{y:59.0,l:0.183,s:0.0938,m:15.717},
+	{y:60.0,l:0.1787,s:0.09375,m:15.7444},
 	{y:63.0,l:0.1658,s:0.09361,m:15.8232},
 	{y:70.0,l:0.1377,s:0.09332,m:15.9874},
 	{y:77.0,l:0.1118,s:0.09304,m:16.1277},
@@ -87,6 +89,7 @@ define BMIForAgeFemale:
 	{y:161.0,l:-0.1037,s:0.09077,m:16.8677},
 	{y:168.0,l:-0.1169,s:0.09063,m:16.8854},
 	{y:175.0,l:-0.1296,s:0.0905,m:16.8987},
+	{y:182.0,l:-0.1418,s:0.09037,m:16.9077},
 	{y:197.0,l:-0.1668,s:0.09011,m:16.9135},
 	{y:227.0,l:-0.2119,s:0.08963,m:16.8795},
 	{y:257.0,l:-0.2518,s:0.0892,m:16.7999},
@@ -207,6 +210,7 @@ define BMIForAgeMale:
 	{y:57.0,l:0.128,s:0.08708,m:16.2021},
 	{y:58.0,l:0.1238,s:0.087,m:16.2336},
 	{y:59.0,l:0.1196,s:0.08692,m:16.2642},
+	{y:60.0,l:0.1154,s:0.08684,m:16.2941},
 	{y:63.0,l:0.1032,s:0.08661,m:16.3787},
 	{y:70.0,l:0.0766,s:0.08612,m:16.5494},
 	{y:77.0,l:0.052,s:0.08569,m:16.6882},
@@ -224,6 +228,7 @@ define BMIForAgeMale:
 	{y:161.0,l:-0.1536,s:0.08277,m:17.3139},
 	{y:168.0,l:-0.1663,s:0.08262,m:17.3268},
 	{y:175.0,l:-0.1785,s:0.08248,m:17.3361},
+	{y:182.0,l:-0.1903,s:0.08235,m:17.3419},
 	{y:197.0,l:-0.2144,s:0.08209,m:17.3431},
 	{y:227.0,l:-0.2581,s:0.08163,m:17.3048},
 	{y:257.0,l:-0.2972,s:0.08122,m:17.2242},
@@ -283,27 +288,38 @@ define BMIForAgeMale:
 }
 
 
+
+
 define function ZscoreBMIForAgetables(sex String, age Decimal):
-		if sex = 'female' then  First(BMIForAgeFemale c where c.y = age )
-		else First(BMIForAgeMale c where  c.y = age)
+	if sex = 'female' then  
+        First(BMIForAgeFemale c where c.y = base.AgeToMini(age) )
+	else 
+        First(BMIForAgeMale c where  c.y = base.AgeToMini(age))
             
 define function generateZScoreBMIForAge(sex System.String, age System.Decimal, weight  System.Decimal)  : 
-	if ZscoreBMIForAgetables(sex,age) is not null then 
+	 generateZScoreBMIForAgedet(ZscoreBMIForAgetables(sex,age), weight )
+
+define function generateZScoreBMIForAgedet(row Tuple {y System.Decimal,l System.Decimal,s System.Decimal,m System.Decimal}, weight  System.Decimal):
+    if row is not null then 
         base.computeZScore(
             weight,
-            (ZscoreBMIForAgetables(sex,base.AgeToMini(age)).m ), 
-            (ZscoreBMIForAgetables(sex,base.AgeToMini(age)).l ),
-            (ZscoreBMIForAgetables(sex,base.AgeToMini(age)).s )
+            row.m , 
+            row.l ,
+            row.s 
         )
     else null
 
+
 define function generateBMIFromAge(sex System.String, age System.Decimal, zscore  System.Decimal) : 
-	if ZscoreBMIForAgetables(sex,age) is not null then 
+	 generateBMIFromAgedet(ZscoreBMIForAgetables(sex,age),zscore  )
+
+define function generateBMIFromAgedet(row Tuple {y System.Decimal,l System.Decimal,s System.Decimal,m System.Decimal},zscore  System.Decimal) : 
+    if row is not null then 
         base.computeReverseZScore(
             zscore,
-            (ZscoreBMIForAgetables(sex,base.AgeToMini(age)).m ), 
-            (ZscoreBMIForAgetables(sex,base.AgeToMini(age)).l ),
-            (ZscoreBMIForAgetables(sex,base.AgeToMini(age)).s )
+            row.m , 
+            row.l ,
+            row.s 
         )
     else null    
 

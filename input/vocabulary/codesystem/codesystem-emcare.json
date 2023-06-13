@@ -12,7 +12,7 @@
     "concept": [
         {
             "code": "EmCare.A.DE01",
-            "display": "National Unique identification",
+            "display": "Family Number",
             "definition": "Unique identifier provided or a universal ID, if used in the country"
         },
         {
@@ -481,11 +481,6 @@
             "definition": "The client is reported to have or has had a skin problem"
         },
         {
-            "code": "EmCare.B14S1.DE02",
-            "display": "Itchy Skin",
-            "definition": "The client is reported to have itchy skin"
-        },
-        {
             "code": "EmCare.B22.RespiratoryRate",
             "definition": "The client's respiratory rate"
         },
@@ -546,7 +541,7 @@
         },
         {
             "code": "EmCare.B17S1.DE06",
-            "display": "Enlarged lymph nodes on front of neck",
+            "display": "Enlarged tender lymph node(s) on front of the neck",
             "definition": "The client has enlarged lymph node(s) on the front of the neck"
         },
         {
@@ -607,7 +602,7 @@
         {
             "code": "EmCare.B14S2.DE06",
             "display": "Generalised or Localised Skin Problem",
-            "definition": "The client has a generalised or localised skin problem"
+            "definition": "The client has a Generalised or Localised Skin Problem"
         },
         {
             "code": "EmCare.B14S2.DE10",
@@ -618,6 +613,11 @@
             "code": "EmCare.B14S2.DE11",
             "display": "Measles within the last 3 months",
             "definition": "The client has had measles in the last 3 months"
+        },
+        {
+            "code": "EmCare.B14S1.DE02",
+            "display": "Itchy Skin",
+            "definition": "The client is reported to have itchy skin"
         },
         {
             "code": "EmCare.B14S2.DE12",
@@ -793,10 +793,6 @@
         {
             "code": "EmCare.B22.DE42",
             "display": "Difficulty Breastfeeding Reported"
-        },
-        {
-            "code": "EmCare.B22.DE42b",
-            "display": "No Difficulty Breastfeeding Reported"
         },
         {
             "code": "EmCare.B22.DE44",
@@ -1294,24 +1290,24 @@
             "definition": "The client's visit is for a follow up consultation"
         },
         {
-            "code": "EmCare.B12S1.DE05",
-            "display": "7 Days or more",
-            "definition": "The client has had fever for 7 days or more"
-        },
-        {
             "code": "EmCare.B12S1.DE04",
             "display": "Less than 7 days",
             "definition": "The client has had fever for less than 7 days"
         },
         {
-            "code": "EmCare.B10S1.DE08",
-            "display": "14 days or more",
-            "definition": "The client has had Ear discharge for 14 days or more"
+            "code": "EmCare.B12S1.DE05",
+            "display": "7 Days or more",
+            "definition": "The client has had fever for 7 days or more"
         },
         {
             "code": "EmCare.B10S1.DE07",
             "display": "Less than 14 days",
             "definition": "The client has had Ear discharge for less than 14 days"
+        },
+        {
+            "code": "EmCare.B10S1.DE08",
+            "display": "14 days or more",
+            "definition": "The client has had Ear discharge for 14 days or more"
         },
         {
             "code": "EmCare.B10S2.DE09",

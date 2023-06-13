@@ -287,13 +287,6 @@
                                 "language": "text/fhirpath",
                                 "expression": "%resource.repeat(item).where(linkId='EmCare.B22.RespiratoryRate').repeat(item).where(linkId='EmCare.B22.DE02').answer.first().empty() and %resource.repeat(item).where(linkId='Respiratory Rate profile').answer.first().empty()"
                             }
-                        },
-                        {
-                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
-                            "valueExpression": {
-                                "language": "text/fhirpath",
-                                "expression": "iif(%resource.repeat(item).where(linkId='Respiratory Rate profile').answer.first().exists(), %resource.repeat(item).where(linkId='Respiratory Rate profile').answer.first().value,{})"
-                            }
                         }
                     ],
                     "linkId": "EmCare.B22.DE01",
@@ -813,6 +806,33 @@
             "repeats": false,
             "item": [
                 {
+                    "linkId": "EmCare.B22.DE17",
+                    "text": "Inhaled Bronchodilator Trial",
+                    "type": "display",
+                    "required": false,
+                    "repeats": false,
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "EmCare.B22.DE17-help",
+                            "text": "<h4>To administer a bronchodilator trial:</h4>\n\n\t<ul>\n\t\t<li>Give 2 puffs from salbutamol metered dose inhaler (100 \u03bcg/puff) using a spacer*</li>\n\t\t<li>Repeat up to 3 times every 15\u201320 minutes</li>\n\t\t<li>Reassess respiratory rate and chest indrawing</li>\n\t</ul>\n\n\t<p>*A spacer is a way of delivering the bronchodilator medicines effectively into the lungs. A spacer works as well as a nebuliser if correctly used. No child under 5 should be given an inhaler without a spacer.</p>\n\n\t<p>If commercial spacers are not available, spacers can be easily made with a drink bottle (500 ml) or something similar. Using a sharp knife, cut a hole in the bottle base in the same shape as the mouthpiece of the inhaler. Cut the bottle between the upper quarter and the lower \u00be. Disregard the upper quarter of the bottle. Cut a small V in the border of the large open part of the bottle to fit to the child\u2019s nose and be used as a mask. Flame the edge of the cut bottle with a candle or a lighter to soften it. In a small baby, a mask can be made by making a similar<br />\nhole in a plastic (not polystyrene) cup.</p>\n\n\t<p>To use an inhaler with a spacer:</p>\n\n\t<ul>\n\t\t<li>Remove the inhaler cap. Shake the inhaler well.</li>\n\t\t<li>Insert mouthpiece of the inhaler through the hole in the bottle or plastic cup.</li>\n\t\t<li>The child should put the opening of the bottle into his mouth and breath in and out through the mouth.</li>\n\t\t<li>A carer then presses down the inhaler and sprays into the bottle while the child continues to breath normally.</li>\n\t\t<li>Wait for three to four breaths and repeat.</li>\n\t\t<li>For younger children place the cup over the child\u2019s mouth and use as a spacer in the same way.</li>\n\t\t<li>If a spacer is being used for the first time, prime with 4-5 extra puffs from the inhaler.</li>\n\t</ul>",
+                            "type": "display"
+                        }
+                    ]
+                },
+                {
                     "extension": [
                         {
                             "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
@@ -846,6 +866,44 @@
                                 "display": "Inhaled Bronchodilator Trial Not Feasible or Available"
                             }
                         }
+                    ],
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "EmCare.B22.DE22-help",
+                            "text": "- Give 2 puffs from salbutamol metered dose inhaler (100 \u03bcg/puff) using a spacer*",
+                            "type": "display"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-display-category",
+                                                "code": "instructions"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "EmCare.B22.DE22-instruction",
+                            "text": "help",
+                            "type": "display"
+                        }
                     ]
                 },
                 {
@@ -866,7 +924,27 @@
                     "text": "Chest Indrawing (post inhaled bronchodilator trial)",
                     "type": "boolean",
                     "required": false,
-                    "repeats": false
+                    "repeats": false,
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "EmCare.B22.DE18-help",
+                            "text": "- Repeat up to 3 times every 15\u201320 minutes",
+                            "type": "display"
+                        }
+                    ]
                 },
                 {
                     "extension": [
@@ -889,7 +967,27 @@
                     "text": "Respiratory Rate (post inhaled bronchodilator trial)",
                     "type": "quantity",
                     "required": false,
-                    "repeats": false
+                    "repeats": false,
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "EmCare.B22.DE19-help",
+                            "text": "- Reassess respiratory rate and chest indrawing",
+                            "type": "display"
+                        }
+                    ]
                 },
                 {
                     "extension": [
@@ -930,7 +1028,27 @@
                     "type": "display",
                     "required": false,
                     "repeats": false,
-                    "readOnly": true
+                    "readOnly": true,
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "EmCare.B22.DE20-l-help",
+                            "text": "*A spacer is a way of delivering the bronchodilator medicines effectively into the lungs. A spacer works as well as a nebuliser if correctly used. No child under 5 should be given an inhaler without a spacer.",
+                            "type": "display"
+                        }
+                    ]
                 },
                 {
                     "extension": [
@@ -1153,80 +1271,6 @@
                 {
                     "extension": [
                         {
-                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
-                            "valueExpression": {
-                                "language": "text/fhirpath",
-                                "expression": "%resource.repeat(item).where(linkId='EmCare.B22.BreastFeeding').repeat(item).where(linkId='EmCare.B22.DE41').answer.first().exists() and %resource.repeat(item).where(linkId='EmCare.B22.BreastFeeding').repeat(item).where(linkId='EmCare.B22.DE30').answer.first().value = true"
-                            }
-                        }
-                    ],
-                    "linkId": "EmCare.B22.DE42a",
-                    "text": "Difficulty Breastfeeding Reported",
-                    "type": "display",
-                    "required": true,
-                    "repeats": false,
-                    "readOnly": true,
-                    "item": [
-                        {
-                            "extension": [
-                                {
-                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                                    "valueCodeableConcept": {
-                                        "coding": [
-                                            {
-                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                                "code": "help"
-                                            }
-                                        ]
-                                    }
-                                }
-                            ],
-                            "linkId": "EmCare.B22.DE42a-help",
-                            "text": "The breastfeeding assessment was not observed however the caregiver has reported difficulty breastfeeding",
-                            "type": "display"
-                        }
-                    ]
-                },
-                {
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
-                            "valueExpression": {
-                                "language": "text/fhirpath",
-                                "expression": "%resource.repeat(item).where(linkId='EmCare.B22.BreastFeeding').repeat(item).where(linkId='EmCare.B22.DE41').answer.first().exists() and %resource.repeat(item).where(linkId='EmCare.B22.BreastFeeding').repeat(item).where(linkId='EmCare.B22.DE30').answer.first().value = false"
-                            }
-                        }
-                    ],
-                    "linkId": "EmCare.B22.DE42b",
-                    "text": "No Difficulty Breastfeeding Reported",
-                    "type": "display",
-                    "required": true,
-                    "repeats": false,
-                    "readOnly": true,
-                    "item": [
-                        {
-                            "extension": [
-                                {
-                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                                    "valueCodeableConcept": {
-                                        "coding": [
-                                            {
-                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                                "code": "help"
-                                            }
-                                        ]
-                                    }
-                                }
-                            ],
-                            "linkId": "EmCare.B22.DE42b-help",
-                            "text": "The breastfeeding assessment was not observed however the caregiver has reported difficulty breastfeeding",
-                            "type": "display"
-                        }
-                    ]
-                },
-                {
-                    "extension": [
-                        {
                             "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
                             "valueCode": "horizontal"
                         },
@@ -1247,40 +1291,6 @@
                     "type": "boolean",
                     "required": false,
                     "repeats": false
-                },
-                {
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
-                            "valueExpression": {
-                                "language": "text/fhirpath",
-                                "expression": "%resource.repeat(item).where(linkId='EmCare.B22.BreastFeeding').repeat(item).where(linkId='EmCare.B22.DE44').answer.first().value =true"
-                            }
-                        }
-                    ],
-                    "linkId": "EmCare.B22.DE44a",
-                    "text": "Difficulty Breastfeeding Observed",
-                    "type": "display",
-                    "required": false,
-                    "repeats": false,
-                    "readOnly": true
-                },
-                {
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
-                            "valueExpression": {
-                                "language": "text/fhirpath",
-                                "expression": "%resource.repeat(item).where(linkId='EmCare.B22.BreastFeeding').repeat(item).where(linkId='EmCare.B22.DE44').answer.first().value =false"
-                            }
-                        }
-                    ],
-                    "linkId": "EmCare.B22.DE44b",
-                    "text": "No Difficulty Breastfeeding Observed",
-                    "type": "display",
-                    "required": false,
-                    "repeats": false,
-                    "readOnly": true
                 },
                 {
                     "extension": [
