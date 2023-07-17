@@ -18,7 +18,7 @@
                         "display": "Correct and hygienic feed preparation",
                         "designation": [
                             {
-                                "value": "The care giver is preparing the milk correctly and hygenically"
+                                "value": "The caregiver is preparing the milk correctly and hygenically"
                             }
                         ]
                     },
@@ -27,7 +27,7 @@
                         "display": "Incorrect or unhygienic feed preparation",
                         "designation": [
                             {
-                                "value": "The care giver is not preparing the milk correctly and hygenically"
+                                "value": "The caregiver is not preparing the milk correctly and hygenically"
                             }
                         ]
                     }

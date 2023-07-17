@@ -3,10 +3,9 @@
     "id": "mucus-membrane-pallor",
     "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/mucus-membrane-pallor",
     "name": "valueset-mucus-membrane-pallor",
-    "title": "EmCare.B15S2.DE09",
     "status": "draft",
     "experimental": false,
-    "description": "Mucous membrane pallor",
+    "description": "Codes representing possible values for the Provide an estimated age or estimated date of birth element",
     "immutable": true,
     "compose": {
         "include": [
@@ -18,7 +17,7 @@
                         "display": "Severe mucous membrane pallor",
                         "designation": [
                             {
-                                "value": "The client has severe mucous membrane pallor"
+                                "value": "The child has severe mucous membrane pallor"
                             }
                         ]
                     },
@@ -27,7 +26,7 @@
                         "display": "Some mucous membrane pallor",
                         "designation": [
                             {
-                                "value": "The client has some mucous membrane pallor"
+                                "value": "The child has some mucous membrane pallor"
                             }
                         ]
                     },
@@ -36,7 +35,7 @@
                         "display": "No mucous membrane pallor",
                         "designation": [
                             {
-                                "value": "The client has no mucous membrane pallor"
+                                "value": "The child has no mucous membrane pallor"
                             }
                         ]
                     }

@@ -93,11 +93,6 @@ group emcarepatient(source src : questionnaireResponse,target tgt : Patient){
             a.value as val -> tgt.extension = create('Extension') as ext ,  ext.url ='https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Extension/motherVitalStatus', ext.value= val 'aemcareade31';
         } 'aemcareade31';
     } 'c51d4b4c';
-    src.item first as item  where linkId = 'EmCare.A.DE32' and answer.exists() then {
-        item.answer first as a then {
-            a.value as val -> tgt.extension = create('Extension') as ext ,  ext.url ='https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Extension/fatherVitalStatus', ext.value= val 'aemcareade32';
-        } 'aemcareade32';
-    } '7c50806d';
 }
 
 group SetOfficalGivenNamerelatedperson(source src,target tgt){

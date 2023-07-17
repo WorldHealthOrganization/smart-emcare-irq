@@ -29,7 +29,7 @@
         },
         {
             "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
-            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb22respiratoryrate|1.0.2"
+            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb22respiratoryrate|1.0.3.build.245"
         }
     ],
     "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b22.respiratoryrate",
@@ -183,7 +183,7 @@
                         }
                     ],
                     "linkId": "EmCare.B22.DE01-help",
-                    "text": "<b>Count the number of breaths the child takes per minute</b> to determine if fast breathing is present.<br />\nIt is <b>very important that the child is calm</b> and still. If the child is moving or crying, you will not be able to get an accurate count of breaths. <br />\n<b>To count the breaths per minute,</b> use a watch with a second hand or a digital watch. Look for the breathing movement anywhere on the child\u2019s chest or abdomen. <br />\nThe number of breaths for <b>\u2018fast breathing\u2019 depends on the child\u2019s age.</b></p>\n\n\t<ul>\n\t\t<li>Under 2 months: More than 60 breaths per minute*</li>\n\t\t<li>2 to 11 months: More than 50 breaths per minute</li>\n\t\t<li>12 to 59 months: More than 40 breaths per minute</li>\n\t</ul>\n\n\t<p>*In young infants, a second measurement should be taken to confirm, unless there is already another sign of possible serious bacterial infection",
+                    "text": "<p><b>Count the number of breaths the child takes per minute</b> to determine if fast breathing is present.<br />\nIt is <b>very important that the child is calm</b> and still. If the child is moving or crying, you will not be able to get an accurate count of breaths. <br />\n<b>To count the breaths per minute,</b> use a watch with a second hand or a digital watch. Look for the breathing movement anywhere on the child\u2019s chest or abdomen. </p>\n\n\t<p>Caution: The rise and fall of the chest or abdomen counts as one breath, not two.</p>\n\n\t<p>The number of breaths for <b>\u2018fast breathing\u2019 depends on the child\u2019s age.</b> </p>\n\n\t<ul>\n\t\t<li>Under 2 months: Greater than or equal to 60 breaths per minute*</li>\n\t\t<li>2 to 11 months: Greater than or equal to 50 breaths per minute</li>\n\t\t<li>12 to 59 months: Greater than or equal to 40 breaths per minute</li>\n\t</ul>\n\n\t<p>*In young infants, a second measurement should be taken to confirm, unless there is already another sign of possible serious bacterial infection</p>",
                     "type": "display"
                 }
             ]
@@ -212,6 +212,7 @@
                 }
             ],
             "linkId": "EmCare.B22.DE02",
+            "text": " ",
             "type": "choice",
             "required": false,
             "repeats": true,
@@ -221,6 +222,26 @@
                         "code": "EmCare.B22.DE02",
                         "display": "Unable to perform Respiratory Rate at this time"
                     }
+                }
+            ],
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "help"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B22.DE02-help",
+                    "text": "If the child is not calm and it is not possible to measure the respiratory rate, ask the mother to help calm the child and measure later in the consultation.",
+                    "type": "display"
                 }
             ]
         },
@@ -277,7 +298,7 @@
                                 }
                             ],
                             "linkId": "EmCare.B22.DE04-help",
-                            "text": "<b>Count the number of breaths the child takes per minute</b> to determine if fast breathing is present.<br />\nIt is <b>very important that the child is calm</b> and still. If the child is moving or crying, you will not be able to get an accurate count of breaths. <br />\n<b>To count the breaths per minute,</b> use a watch with a second hand or a digital watch. Look for the breathing movement anywhere on the child\u2019s chest or abdomen. <br />\nThe number of breaths for <b>\u2018fast breathing\u2019 depends on the child\u2019s age.</b></p>\n\n\t<ul>\n\t\t<li>Under 2 months: More than 60 breaths per minute*</li>\n\t\t<li>2 to 11 months: More than 50 breaths per minute</li>\n\t\t<li>12 to 59 months: More than 40 breaths per minute</li>\n\t</ul>\n\n\t<p>*In young infants, a second measurement should be taken to confirm, unless there is already another sign of possible serious bacterial infection",
+                            "text": "<p>In young infants, <b>a second respiratory rate measurement should be taken to confirm fast breathing</b> (60 breaths a minute or more) found at the first measurement, unless there is already another sign of possible serious bacterial infection. Fast breathing is confirmed if respiratory rate is 60 breaths a minute or more at the second count. </p>\n\n\t<p>To measure the respiratory rate:<br />\n<b>Count the number of breaths the child takes per minute</b> to determine if fast breathing is present.<br />\nIt is <b>very important that the child is calm</b> and still. If the child is moving or crying, you will not be able to get an accurate count of breaths. <br />\n<b>To count the breaths per minute,</b> use a watch with a second hand or a digital watch. Look for the breathing movement anywhere on the child\u2019s chest or abdomen.</p>",
                             "type": "display"
                         }
                     ]
@@ -306,6 +327,7 @@
                         }
                     ],
                     "linkId": "EmCare.B22.DE05",
+                    "text": " ",
                     "type": "choice",
                     "required": false,
                     "repeats": true,
@@ -315,6 +337,26 @@
                                 "code": "EmCare.B22.DE05",
                                 "display": "Respiratory Rate (Second Count) Not Possible"
                             }
+                        }
+                    ],
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "EmCare.B22.DE05-help",
+                            "text": "The child&#8217;s second respiratory rate is not possible to measure",
+                            "type": "display"
                         }
                     ]
                 }
@@ -382,7 +424,7 @@
                         }
                     ],
                     "linkId": "fastbreathing-True-help",
-                    "text": "The number of breaths for <b>\u2018fast breathing\u2019 depends on the child\u2019s age.</b>   </p>\n\n\t<ul>\n\t\t<li>Under 2 months: More than 60 breaths per minute(*)</li>\n\t\t<li>2 to 11 months: More than 50 breaths per minute</li>\n\t\t<li>12 to 59 months: More than 40 breaths per minute</li>\n\t</ul>\n\n\t<p>*In young infants, a second measurement should be taken to confirm, unless there is already another sign of possible serious bacterial infection",
+                    "text": "<p>Fast breathing is auto-calculated based on the respiratory rate and the child&#8217;s age: </p>\n\n\t<ul>\n\t\t<li>Under 2 months: Greater than or equal to 60 breaths per minute*</li>\n\t\t<li>2 to 11 months: Greater than or equal to 50 breaths per minute</li>\n\t\t<li>12 to 59 months: Greater than or equal to 40 breaths per minute</li>\n\t</ul>\n\n\t<p>*In young infants, a second measurement should be taken to confirm, unless there is already another sign of possible serious bacterial infection</p>",
                     "type": "display"
                 }
             ]
@@ -418,7 +460,7 @@
                         }
                     ],
                     "linkId": "fastbreathing-False-help",
-                    "text": "The number of breaths for <b>\u2018fast breathing\u2019 depends on the child\u2019s age.</b>   </p>\n\n\t<ul>\n\t\t<li>Under 2 months: More than 60 breaths per minute(*)</li>\n\t\t<li>2 to 11 months: More than 50 breaths per minute</li>\n\t\t<li>12 to 59 months: More than 40 breaths per minute</li>\n\t</ul>\n\n\t<p>*In young infants, a second measurement should be taken to confirm, unless there is already another sign of possible serious bacterial infection",
+                    "text": "<p>Fast breathing is auto-calculated based on the respiratory rate and the child&#8217;s age: </p>\n\n\t<ul>\n\t\t<li>Under 2 months: Greater than or equal to 60 breaths per minute*</li>\n\t\t<li>2 to 11 months: Greater than or equal to 50 breaths per minute</li>\n\t\t<li>12 to 59 months: Greater than or equal to 40 breaths per minute</li>\n\t</ul>\n\n\t<p>*In young infants, a second measurement should be taken to confirm, unless there is already another sign of possible serious bacterial infection</p>",
                     "type": "display"
                 }
             ]

@@ -27,7 +27,7 @@ required for the execution
 | Observation | EmCare.B7.DE08 | boolean/quantity | Unconscious |
 | Observation | EmCare.B11S2.DE02 | boolean/quantity | Skin pinch of Abdomen |
 | Observation | EmCare.B11S2.DE06 | boolean/quantity | Restless and Irritable |
-| Observation | EmCare.B11S2.DE01 | boolean/quantity | Sunken Eyes |
+| Observation | EmCare.B11S2.DE01 | boolean/quantity | Sunken eyes |
 | Observation | EmCare.B18S2.DE08 | boolean/quantity | Infant's Movements |
 | Observation | EmCare.B18S1.DE02 | boolean/quantity | Difficulty with Feeding |
 | Observation | EmCare.B18S2.DE07 | boolean/quantity | Severe Chest Indrawing |

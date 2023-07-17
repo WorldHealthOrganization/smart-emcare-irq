@@ -1,0 +1,46 @@
+{
+    "resourceType": "ValueSet",
+    "id": "vitamin-a",
+    "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/vitamin-a",
+    "name": "valueset-vitamin-a",
+    "status": "draft",
+    "experimental": false,
+    "description": "Codes representing possible values for the Provide an estimated age or estimated date of birth element",
+    "immutable": true,
+    "compose": {
+        "include": [
+            {
+                "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+                "concept": [
+                    {
+                        "code": "EmCare.C1.PC.DE07",
+                        "display": "Yes - Vitamin A received in the last month",
+                        "designation": [
+                            {
+                                "value": "The client has received Vitamin A in the last month"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.C1.PC.DE08",
+                        "display": "No Vitamin A received in the last month",
+                        "designation": [
+                            {
+                                "value": "The client has not received Vitamin A in the last month"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.C1.PC.DE09",
+                        "display": "Unknown",
+                        "designation": [
+                            {
+                                "value": "It is unknown if the client has received vitamin A in the last month"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

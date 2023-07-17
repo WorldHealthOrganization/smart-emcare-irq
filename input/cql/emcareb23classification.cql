@@ -2,14 +2,14 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareb23classification version '1.0.2'
+library emcareb23classification version '1.0.3.build.245'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.2' called Base
-include emcareobservation version '1.0.2' called obs
-include emcarevalueset version '1.0.2' called val
-include emcarezscore version '1.0.2' called Z
-include emcarecombineddataelements version '1.0.2' called C
+include emcarebase version '1.0.3.build.245' called Base
+include emcarevalueset version '1.0.3.build.245' called val
+include emcarezscore version '1.0.3.build.245' called Z
+include emcarecombineddataelements version '1.0.3.build.245' called C
+include emcareobservation version '1.0.3.build.245' called obs
 
 
 
@@ -298,7 +298,7 @@ define "OBSdefine.EmCare.B12S1.DE03":
     Base.GetObsValue('EmCare.B12S1.DE03')
 
 /* 
-OBSdefine.EmCare.B12S1.DE06 : Has Fever been present every day since the Fever started?
+OBSdefine.EmCare.B12S1.DE06 : Has Fever been present every day for more than 7 days
 
 */
 define "OBSdefine.EmCare.B12S1.DE06":
@@ -326,11 +326,11 @@ define "OBSdefine.EmCare.B14S2.DE03":
     Base.GetObsValue('EmCare.B14S2.DE03')
 
 /* 
-OBSdefine.EmCare.B14S2.DE45 : Oral Sores or Mouth Ulcers
+OBSdefine.EmCare.B14S2.DE38 : Oral Sores or Mouth Ulcers
 
 */
-define "OBSdefine.EmCare.B14S2.DE45":
-    Base.GetObsValue('EmCare.B14S2.DE45')
+define "OBSdefine.EmCare.B14S2.DE38":
+    Base.GetObsValue('EmCare.B14S2.DE38')
 
 /* 
 OBSdefine.EmCare.B14S2.DE10 : Measles Rash
@@ -410,25 +410,25 @@ define "OBSdefine.EmCare.B14S1.DE01":
     Base.GetObsValue('EmCare.B14S1.DE01')
 
 /* 
-OBSdefine.EmCare.B14S1.DE02 : Itchy Skin
+OBSdefine.EmCare.B14S1.DE02 : Itchy skin
 
 */
 define "OBSdefine.EmCare.B14S1.DE02":
     Base.GetObsValue('EmCare.B14S1.DE02')
 
 /* 
-OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE18 : Type of Skin Problem
+OBSdefine.EmCare.B14S2.DE18 : Papular Urticaria or Papular Pruritic Eruptions
 
 */
-define "OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE18":
-    Base.GetObsValue('EmCare.B14S2.DE13&EmCare.B14S2.DE18')
+define "OBSdefine.EmCare.B14S2.DE18":
+    Base.GetObsValue('EmCare.B14S2.DE18')
 
 /* 
-OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE19 : Type of Skin Problem
+OBSdefine.EmCare.B14S2.DE19 : Ringworm (Tinea)
 
 */
-define "OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE19":
-    Base.GetObsValue('EmCare.B14S2.DE13&EmCare.B14S2.DE19')
+define "OBSdefine.EmCare.B14S2.DE19":
+    Base.GetObsValue('EmCare.B14S2.DE19')
 
 /* 
 OBSdefine.EmCare.B14S2.DE19a : Scalp Infection (tinea capitis)
@@ -438,11 +438,11 @@ define "OBSdefine.EmCare.B14S2.DE19a":
     Base.GetObsValue('EmCare.B14S2.DE19a')
 
 /* 
-OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE21 : Type of Skin Problem
+OBSdefine.EmCare.B14S2.DE21 : Scabies
 
 */
-define "OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE21":
-    Base.GetObsValue('EmCare.B14S2.DE13&EmCare.B14S2.DE21')
+define "OBSdefine.EmCare.B14S2.DE21":
+    Base.GetObsValue('EmCare.B14S2.DE21')
 
 /* 
 OBSdefine.EmCare.B14S2.DE12 : Blisters, Sores or Pustules
@@ -452,6 +452,13 @@ define "OBSdefine.EmCare.B14S2.DE12":
     Base.GetObsValue('EmCare.B14S2.DE12')
 
 /* 
+OBSdefine.EmCare.B14S2.DE22 : Chickenpox
+
+*/
+define "OBSdefine.EmCare.B14S2.DE22":
+    Base.GetObsValue('EmCare.B14S2.DE22')
+
+/* 
 OBSdefine.EmCare.B14S2.DE22A : Severe rash
 
 */
@@ -459,11 +466,11 @@ define "OBSdefine.EmCare.B14S2.DE22A":
     Base.GetObsValue('EmCare.B14S2.DE22A')
 
 /* 
-OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE22 : Type of Skin Problem
+OBSdefine.EmCare.B14S2.DE23 : Herpes Zoster
 
 */
-define "OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE22":
-    Base.GetObsValue('EmCare.B14S2.DE13&EmCare.B14S2.DE22')
+define "OBSdefine.EmCare.B14S2.DE23":
+    Base.GetObsValue('EmCare.B14S2.DE23')
 
 /* 
 OBSdefine.EmCare.B14S2.DE06&EmCare.B14S2.DE08 : Generalised or Localised Skin Problem
@@ -471,13 +478,6 @@ OBSdefine.EmCare.B14S2.DE06&EmCare.B14S2.DE08 : Generalised or Localised Skin Pr
 */
 define "OBSdefine.EmCare.B14S2.DE06&EmCare.B14S2.DE08":
     Base.GetObsValue('EmCare.B14S2.DE06&EmCare.B14S2.DE08')
-
-/* 
-OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE23 : Type of Skin Problem
-
-*/
-define "OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE23":
-    Base.GetObsValue('EmCare.B14S2.DE13&EmCare.B14S2.DE23')
 
 /* 
 OBSdefine.EmCare.B14S2.DE24 : Eye Involvement
@@ -494,11 +494,11 @@ define "OBSdefine.EmCare.B14S2.DE23a":
     Base.GetObsValue('EmCare.B14S2.DE23a')
 
 /* 
-OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE25 : Type of Skin Problem
+OBSdefine.EmCare.B14S2.DE25 : Impetigo
 
 */
-define "OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE25":
-    Base.GetObsValue('EmCare.B14S2.DE13&EmCare.B14S2.DE25')
+define "OBSdefine.EmCare.B14S2.DE25":
+    Base.GetObsValue('EmCare.B14S2.DE25')
 
 /* 
 OBSdefine.EmCare.B14S2.DE30 : Skin Infection extends to Muscle
@@ -522,11 +522,11 @@ define "OBSdefine.EmCare.B14S2.DE30b":
     Base.GetObsValue('EmCare.B14S2.DE30b')
 
 /* 
-OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE31 : Type of Skin Problem
+OBSdefine.EmCare.B14S2.DE31 : Molluscum Contagiosum
 
 */
-define "OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE31":
-    Base.GetObsValue('EmCare.B14S2.DE13&EmCare.B14S2.DE31')
+define "OBSdefine.EmCare.B14S2.DE31":
+    Base.GetObsValue('EmCare.B14S2.DE31')
 
 /* 
 OBSdefine.EmCare.B14S2.DE31a : Extensive molluscum lesions
@@ -543,11 +543,11 @@ define "OBSdefine.EmCare.B14S2.DE31b":
     Base.GetObsValue('EmCare.B14S2.DE31b')
 
 /* 
-OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE32 : Type of Skin Problem
+OBSdefine.EmCare.B14S2.DE32 : Warts
 
 */
-define "OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE32":
-    Base.GetObsValue('EmCare.B14S2.DE13&EmCare.B14S2.DE32')
+define "OBSdefine.EmCare.B14S2.DE32":
+    Base.GetObsValue('EmCare.B14S2.DE32')
 
 /* 
 OBSdefine.EmCare.B14S2.DE32a : Extensive warts
@@ -557,11 +557,11 @@ define "OBSdefine.EmCare.B14S2.DE32a":
     Base.GetObsValue('EmCare.B14S2.DE32a')
 
 /* 
-OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE33 : Type of Skin Problem
+OBSdefine.EmCare.B14S2.DE33 : Seborrhoeic Dermatitis
 
 */
-define "OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE33":
-    Base.GetObsValue('EmCare.B14S2.DE13&EmCare.B14S2.DE33')
+define "OBSdefine.EmCare.B14S2.DE33":
+    Base.GetObsValue('EmCare.B14S2.DE33')
 
 /* 
 OBSdefine.EmCare.B14S2.DE34 : Severe Seborrhoeic Dermatitis
@@ -571,18 +571,18 @@ define "OBSdefine.EmCare.B14S2.DE34":
     Base.GetObsValue('EmCare.B14S2.DE34')
 
 /* 
-OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE35 : Type of Skin Problem
+OBSdefine.EmCare.B14S2.DE35 : Fixed Drug Reaction
 
 */
-define "OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE35":
-    Base.GetObsValue('EmCare.B14S2.DE13&EmCare.B14S2.DE35')
+define "OBSdefine.EmCare.B14S2.DE35":
+    Base.GetObsValue('EmCare.B14S2.DE35')
 
 /* 
-OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE36 : Type of Skin Problem
+OBSdefine.EmCare.B14S2.DE36 : Eczema
 
 */
-define "OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE36":
-    Base.GetObsValue('EmCare.B14S2.DE13&EmCare.B14S2.DE36')
+define "OBSdefine.EmCare.B14S2.DE36":
+    Base.GetObsValue('EmCare.B14S2.DE36')
 
 /* 
 OBSdefine.EmCare.B14S2.DE36b : Severe acute moist or weeping eczema
@@ -606,11 +606,11 @@ define "OBSdefine.EmCare.B14S2.DE36c":
     Base.GetObsValue('EmCare.B14S2.DE36c')
 
 /* 
-OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE37 : Type of Skin Problem
+OBSdefine.EmCare.B14S2.DE37 : Steven Johnson Syndrome (SJS)
 
 */
-define "OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE37":
-    Base.GetObsValue('EmCare.B14S2.DE13&EmCare.B14S2.DE37')
+define "OBSdefine.EmCare.B14S2.DE37":
+    Base.GetObsValue('EmCare.B14S2.DE37')
 
 /* 
 OBSdefine.EmCare.B6.DE06 : Weight (Kg)
@@ -728,10 +728,10 @@ define "Cough or Cold":
 
 /* 
 DL-G-CL1-23-30 : 
-C."Severe Dehydration"
+C."Severe Dehydration" and C."Age >= 2 months to <60 months"
 */
 define "DL-G-CL1-23-30":
-    C."Severe Dehydration"
+    C."Severe Dehydration" and C."Age >= 2 months to <60 months"
 
 /* 
 Severe Dehydration : DL-G-CL1-23-30
@@ -742,10 +742,10 @@ define "Severe Dehydration":
 
 /* 
 DL-G-CL1-24-32 : 
-C."Some Dehydration"
+C."Some Dehydration" and C."Age >= 2 months to <60 months"
 */
 define "DL-G-CL1-24-32":
-    C."Some Dehydration"
+    C."Some Dehydration" and C."Age >= 2 months to <60 months"
 
 /* 
 Some Dehydration : DL-G-CL1-24-32
@@ -868,10 +868,10 @@ define "Non-Streptococcal Sore Throat":
 
 /* 
 DL-I-CL1-09 : 
-C."Age >= 2 months to <60 months" and ("Throat problem" = true and  "Throat Abscess or Possible Diptheria"!=true and "Streptococcal Sore Throat"!=true and "Non-Streptococcal Sore Throat"!=true) or "Throat problem" = false
+C."Age >= 2 months to <60 months" and ("Throat problem" = true and  "Throat Abscess or Possible Diptheria"!=true and "Streptococcal Sore Throat"!=true and "Non-Streptococcal Sore Throat"!=true or "Throat problem" = false)
 */
 define "DL-I-CL1-09":
-    C."Age >= 2 months to <60 months" and ("OBSdefine.EmCare.B17S1.DE01" = true and  Coalesce("Throat Abscess or Possible Diptheria",false)!=true and Coalesce("Streptococcal Sore Throat",false)!=true and Coalesce("Non-Streptococcal Sore Throat",false)!=true) or "OBSdefine.EmCare.B17S1.DE01" = false
+    C."Age >= 2 months to <60 months" and ("OBSdefine.EmCare.B17S1.DE01" = true and  Coalesce("Throat Abscess or Possible Diptheria",false)!=true and Coalesce("Streptococcal Sore Throat",false)!=true and Coalesce("Non-Streptococcal Sore Throat",false)!=true or "OBSdefine.EmCare.B17S1.DE01" = false)
 
 /* 
 No Throat Problem : DL-I-CL1-09
@@ -983,7 +983,7 @@ define "Fever: possible bacterial infection":
 
 /* 
 EmCare.B23.DE26a : 
-"Fever for how long?" = "7 Days or more" and "Has Fever been present every day since the Fever started?" = true
+"Fever for how long?" = "7 Days or more" and "Has Fever been present every day for more than 7 days" = true
 */
 define "EmCare.B23.DE26a":
     "OBSdefine.EmCare.B12S1.DE03" ~ val."7 Days or more" and "OBSdefine.EmCare.B12S1.DE06" = true
@@ -1022,11 +1022,11 @@ DL-I-CL1-16-66 :
 define "DL-I-CL1-16-66":
         (C."Age >= 2 months to <60 months" and C."Fever" = true)
          and ((    (("OBSdefine.EmCare.B10S1.DE05" = true  or  "OBSdefine.EmCare.B12S2.DE05" = true or "OBSdefine.EmCare.B14S2.DE01" = true))
-             and ((    "OBSdefine.EmCare.B14S2.DE06&EmCare.B14S2.DE07" = false  and "Measles in last 3 months" = true and (C."Danger Signs" = true or  "OBSdefine.EmCare.B14S2.DE03" = true  or "OBSdefine.EmCare.B14S2.DE45" ~ val."Mouth Sores or Mouth Ulcers - Deep and Extensive" ))
+             and ((    "OBSdefine.EmCare.B14S2.DE06&EmCare.B14S2.DE07" = false  and "Measles in last 3 months" = true and (C."Danger Signs" = true or  "OBSdefine.EmCare.B14S2.DE03" = true  or "OBSdefine.EmCare.B14S2.DE38" ~ val."Mouth Sores or Mouth Ulcers - Deep and Extensive" ))
              or (    ("OBSdefine.EmCare.B14S2.DE06&EmCare.B14S2.DE07" = true)
-                 and ((    "OBSdefine.EmCare.B14S2.DE10" = false and "Measles in last 3 months" = true and (C."Danger Signs" = true or  "OBSdefine.EmCare.B14S2.DE03" = true  or "OBSdefine.EmCare.B14S2.DE45" ~ val."Mouth Sores or Mouth Ulcers - Deep and Extensive" ))
-                 or (    (C."Danger Signs" = true or  "OBSdefine.EmCare.B14S2.DE03" = true  or "OBSdefine.EmCare.B14S2.DE45" ~ val."Mouth Sores or Mouth Ulcers - Deep and Extensive" or  "Pneumonia"=true  or "OBSdefine.EmCare.B11S1.DE01" = true) and "OBSdefine.EmCare.B14S2.DE10" = true)))))
-         or (    "OBSdefine.EmCare.B10S1.DE05" = false  and  "OBSdefine.EmCare.B12S2.DE05" = false and "OBSdefine.EmCare.B14S2.DE01" = false and "Measles in last 3 months" = true and  (C."Danger Signs" = true or  "OBSdefine.EmCare.B14S2.DE03" = true  or "OBSdefine.EmCare.B14S2.DE45" ~ val."Mouth Sores or Mouth Ulcers - Deep and Extensive" )))
+                 and ((    "OBSdefine.EmCare.B14S2.DE10" = false and "Measles in last 3 months" = true and (C."Danger Signs" = true or  "OBSdefine.EmCare.B14S2.DE03" = true  or "OBSdefine.EmCare.B14S2.DE38" ~ val."Mouth Sores or Mouth Ulcers - Deep and Extensive" ))
+                 or (    (C."Danger Signs" = true or  "OBSdefine.EmCare.B14S2.DE03" = true  or "OBSdefine.EmCare.B14S2.DE38" ~ val."Mouth Sores or Mouth Ulcers - Deep and Extensive" or  "Pneumonia"=true  or "OBSdefine.EmCare.B11S1.DE01" = true) and "OBSdefine.EmCare.B14S2.DE10" = true)))))
+         or (    "OBSdefine.EmCare.B10S1.DE05" = false  and  "OBSdefine.EmCare.B12S2.DE05" = false and "OBSdefine.EmCare.B14S2.DE01" = false and "Measles in last 3 months" = true and  (C."Danger Signs" = true or  "OBSdefine.EmCare.B14S2.DE03" = true  or "OBSdefine.EmCare.B14S2.DE38" ~ val."Mouth Sores or Mouth Ulcers - Deep and Extensive" )))
 
 /* 
 Severe Complicated Measles : DL-I-CL1-16-66
@@ -1044,8 +1044,8 @@ DL-G-CL1-69-70 :
          or (    ("Generalised or Localised Skin Problem" != "Generalised Skin Problem") and "Measles in last 3 months" = true))))
 */
 define "DL-G-CL1-69-70":
-        (C."Age >= 2 months to <60 months" and C."Fever" = true   and Coalesce("Severe Complicated Measles",false)!=true and  ("OBSdefine.EmCare.B14S2.DE02" = true  or "OBSdefine.EmCare.B14S2.DE45" ~ val."Mouth Sores or Mouth Ulcers - Not Deep and Extensive" ))
-         and ((    "OBSdefine.EmCare.B10S1.DE05" = false  and "OBSdefine.EmCare.B12S2.DE05" = false and "OBSdefine.EmCare.B14S2.DE01" = false and "Measles in last 3 months" =true and ("OBSdefine.EmCare.B14S2.DE02" = true  or "OBSdefine.EmCare.B14S2.DE45" ~ val."Mouth Sores or Mouth Ulcers - Not Deep and Extensive" ))
+        (C."Age >= 2 months to <60 months" and C."Fever" = true   and Coalesce("Severe Complicated Measles",false)!=true and  ("OBSdefine.EmCare.B14S2.DE02" = true  or "OBSdefine.EmCare.B14S2.DE38" ~ val."Mouth Sores or Mouth Ulcers - Not Deep and Extensive" ))
+         and ((    "OBSdefine.EmCare.B10S1.DE05" = false  and "OBSdefine.EmCare.B12S2.DE05" = false and "OBSdefine.EmCare.B14S2.DE01" = false and "Measles in last 3 months" =true and ("OBSdefine.EmCare.B14S2.DE02" = true  or "OBSdefine.EmCare.B14S2.DE38" ~ val."Mouth Sores or Mouth Ulcers - Not Deep and Extensive" ))
          or (    (("OBSdefine.EmCare.B10S1.DE05" = true  or  "OBSdefine.EmCare.B12S2.DE05" = true or "OBSdefine.EmCare.B14S2.DE01" = true))
              and ((    ("OBSdefine.EmCare.B14S2.DE06&EmCare.B14S2.DE07" = true) and ("OBSdefine.EmCare.B14S2.DE10" = true or  ("OBSdefine.EmCare.B14S2.DE10" =false and "Measles in last 3 months" = true)))
              or (    ("OBSdefine.EmCare.B14S2.DE06&EmCare.B14S2.DE07" = false) and "Measles in last 3 months" = true))))
@@ -1073,12 +1073,14 @@ define "Possible Measles":
 
 /* 
 DL-G-CL1-109 : 
-    (    "Hemoglobin Test Not Available" = true  and ("Palmar Pallor" = "Severe Palmar Pallor" or "Mucous membrane pallor" = "Severe mucous membrane pallor"))
-     or (    "Hemoglobin (Hb) g/dL" < 7 'g/dL'  and ("Palmar Pallor" = "Severe Palmar Pallor" or "Mucous membrane pallor" = "Severe mucous membrane pallor" or "Palmar Pallor" = "Some Palmar Pallor" or "Mucous membrane pallor" = "Some mucous membrane pallor"))
+    (C."Age >= 2 months to <60 months")
+     and ((    "Hemoglobin Test Not Available" = true  and ("Palmar Pallor" = "Severe Palmar Pallor" or "Mucous membrane pallor" = "Severe mucous membrane pallor"))
+     or (    "Hemoglobin (Hb) g/dL" < 7 'g/dL'  and ("Palmar Pallor" = "Severe Palmar Pallor" or "Mucous membrane pallor" = "Severe mucous membrane pallor" or "Palmar Pallor" = "Some Palmar Pallor" or "Mucous membrane pallor" = "Some mucous membrane pallor")))
 */
 define "DL-G-CL1-109":
-        (    "OBSdefine.EmCare.B22.DE82" = true  and ("OBSdefine.EmCare.B15S2.DE01" ~ val."Severe Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE09" ~ val."Severe mucous membrane pallor"))
-         or (    "OBSdefine.EmCare.B22.DE81" < 7 'g/dL'  and ("OBSdefine.EmCare.B15S2.DE01" ~ val."Severe Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE09" ~ val."Severe mucous membrane pallor" or "OBSdefine.EmCare.B15S2.DE01" ~ val."Some Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE09" ~ val."Some mucous membrane pallor"))
+        (C."Age >= 2 months to <60 months")
+         and ((    "OBSdefine.EmCare.B22.DE82" = true  and ("OBSdefine.EmCare.B15S2.DE01" ~ val."Severe Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE09" ~ val."Severe mucous membrane pallor"))
+         or (    "OBSdefine.EmCare.B22.DE81" < 7 'g/dL'  and ("OBSdefine.EmCare.B15S2.DE01" ~ val."Severe Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE09" ~ val."Severe mucous membrane pallor" or "OBSdefine.EmCare.B15S2.DE01" ~ val."Some Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE09" ~ val."Some mucous membrane pallor")))
 
 /* 
 Severe Anaemia : DL-G-CL1-109
@@ -1089,13 +1091,13 @@ define "Severe Anaemia":
 
 /* 
 DL-G-CL1-110 : 
-    ("Severe Anaemia"!=true)
-     and ((    ("Hemoglobin (Hb) g/dL" >= 7 'g/dL' and "Hemoglobin (Hb) g/dL" < 11 'g/dL' )  and ("Palmar Pallor" = "Severe Palmar Pallor" or "Mucous membrane pallor" = "Severe mucous membrane pallor" or "Palmar Pallor" = "Some Palmar Pallor" or "Mucous membrane pallor" = "Some mucous membrane pallor"))
+    ("Severe Anaemia"!=true and C."Age >= 2 months to <60 months")
+     and ((    "Hemoglobin (Hb) g/dL" >= 7 'g/dL' and "Hemoglobin (Hb) g/dL" < 11 'g/dL')
      or (    "Hemoglobin Test Not Available" = true  and ("Palmar Pallor" = "Some Palmar Pallor" or "Mucous membrane pallor" = "Some mucous membrane pallor" )))
 */
 define "DL-G-CL1-110":
-        (Coalesce("Severe Anaemia",false)!=true)
-         and ((    ("OBSdefine.EmCare.B22.DE81" >= 7 'g/dL' and "OBSdefine.EmCare.B22.DE81" < 11 'g/dL' )  and ("OBSdefine.EmCare.B15S2.DE01" ~ val."Severe Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE09" ~ val."Severe mucous membrane pallor" or "OBSdefine.EmCare.B15S2.DE01" ~ val."Some Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE09" ~ val."Some mucous membrane pallor"))
+        (Coalesce("Severe Anaemia",false)!=true and C."Age >= 2 months to <60 months")
+         and ((    "OBSdefine.EmCare.B22.DE81" >= 7 'g/dL' and "OBSdefine.EmCare.B22.DE81" < 11 'g/dL')
          or (    "OBSdefine.EmCare.B22.DE82" = true  and ("OBSdefine.EmCare.B15S2.DE01" ~ val."Some Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE09" ~ val."Some mucous membrane pallor" )))
 
 /* 
@@ -1107,13 +1109,13 @@ define "Anaemia":
 
 /* 
 DL-G-CL1-111 : 
-    ("Severe Anaemia"!=true and "Anaemia"!=true)
-     and ((    "Hemoglobin (Hb) g/dL" >= 11 'g/dL'   and ("Palmar Pallor" = "Severe Palmar Pallor" or "Mucous membrane pallor" = "Severe mucous membrane pallor" or "Palmar Pallor" = "Some Palmar Pallor" or "Mucous membrane pallor" = "Some mucous membrane pallor"))
+    ("Severe Anaemia"!=true and "Anaemia"!=true  and C."Age >= 2 months to <60 months")
+     and ((    "Hemoglobin (Hb) g/dL" >= 11 'g/dL')
      or (    "Palmar Pallor" = "No Palmar Pallor" and "Mucous membrane pallor" = "No mucous membrane pallor"))
 */
 define "DL-G-CL1-111":
-        (Coalesce("Severe Anaemia",false)!=true and Coalesce("Anaemia",false)!=true)
-         and ((    "OBSdefine.EmCare.B22.DE81" >= 11 'g/dL'   and ("OBSdefine.EmCare.B15S2.DE01" ~ val."Severe Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE09" ~ val."Severe mucous membrane pallor" or "OBSdefine.EmCare.B15S2.DE01" ~ val."Some Palmar Pallor" or "OBSdefine.EmCare.B15S2.DE09" ~ val."Some mucous membrane pallor"))
+        (Coalesce("Severe Anaemia",false)!=true and Coalesce("Anaemia",false)!=true  and C."Age >= 2 months to <60 months")
+         and ((    "OBSdefine.EmCare.B22.DE81" >= 11 'g/dL')
          or (    "OBSdefine.EmCare.B15S2.DE01" ~ val."No Palmar Pallor" and "OBSdefine.EmCare.B15S2.DE09" ~ val."No mucous membrane pallor"))
 
 /* 
@@ -1153,12 +1155,14 @@ define "Clouding of the Cornea":
 
 /* 
 EmCare.B23.DE36 : 
-    (    "Is Clouding of the Cornea a new problem" = true)
-     or (    "Is Clouding of the Cornea a new problem" = false and "Has Clouding of the Cornea previously been treated" = false)
+    (C."Age >= 2 months to <60 months")
+     and ((    "Is Clouding of the Cornea a new problem" = true)
+     or (    "Is Clouding of the Cornea a new problem" = false and "Has Clouding of the Cornea previously been treated" = false))
 */
 define "EmCare.B23.DE36":
-        (    "OBSdefine.EmCare.B14S2.DE04" = true)
-         or (    "OBSdefine.EmCare.B14S2.DE04" = false and "OBSdefine.EmCare.B14S2.DE05" = false)
+        (C."Age >= 2 months to <60 months")
+         and ((    "OBSdefine.EmCare.B14S2.DE04" = true)
+         or (    "OBSdefine.EmCare.B14S2.DE04" = false and "OBSdefine.EmCare.B14S2.DE05" = false))
 
 /* 
 New or not previously treated : EmCare.B23.DE36
@@ -1169,10 +1173,10 @@ define "New or not previously treated":
 
 /* 
 DL-G-CL1-88 : 
-C."Age >= 2 months to <60 months" and "Skin Problem" = true and "Itchy Skin" = true and "Type of Skin Problem"= v"Papular Urticaria or Papular Pruritic Eruptions"
+C."Age >= 2 months to <60 months" and "Skin Problem" = true and "Itchy skin" = true and o"Papular Urticaria or Papular Pruritic Eruptions" = true
 */
 define "DL-G-CL1-88":
-    C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B14S1.DE01" = true and "OBSdefine.EmCare.B14S1.DE02" = true and "OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE18" = true
+    C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B14S1.DE01" = true and "OBSdefine.EmCare.B14S1.DE02" = true and "OBSdefine.EmCare.B14S2.DE18" = true
 
 /* 
 Papular Urticaria or Papular Pruritic Eruptions : DL-G-CL1-88
@@ -1183,10 +1187,10 @@ define "Papular Urticaria or Papular Pruritic Eruptions":
 
 /* 
 DL-G-CL1-90 : 
-C."Age >= 2 months to <60 months" and "Skin Problem" = true and "Type of Skin Problem"= v"Ringworm (Tinea)"
+C."Age >= 2 months to <60 months" and "Skin Problem" = true and o"Ringworm (Tinea)" = true
 */
 define "DL-G-CL1-90":
-    C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B14S1.DE01" = true and "OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE19" = true
+    C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B14S1.DE01" = true and "OBSdefine.EmCare.B14S2.DE19" = true
 
 /* 
 Ringworm (Tinea) : DL-G-CL1-90
@@ -1211,10 +1215,10 @@ define "Scalp Infection (tinea capitis)":
 
 /* 
 DL-G-CL1-91 : 
-C."Age >= 2 months to <60 months" and "Skin Problem" = true and "Itchy Skin" = true and "Type of Skin Problem"= v"Scabies"
+C."Age >= 2 months to <60 months" and "Skin Problem" = true and "Itchy skin" = true and o"Scabies" = true
 */
 define "DL-G-CL1-91":
-    C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B14S1.DE01" = true and "OBSdefine.EmCare.B14S1.DE02" = true and "OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE21" = true
+    C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B14S1.DE01" = true and "OBSdefine.EmCare.B14S1.DE02" = true and "OBSdefine.EmCare.B14S2.DE21" = true
 
 /* 
 Scabies : DL-G-CL1-91
@@ -1225,10 +1229,10 @@ define "Scabies":
 
 /* 
 DL-G-CL1-93 : 
-C."Age >= 2 months to <60 months" and "Skin Problem" = true and "Itchy Skin" = true and "Generalised or Localised Skin Problem" = "Generalised Skin Problem" and ("Blisters, Sores or Pustules" = true or "Severe rash"= true ) and "Type of Skin Problem"= v"Chickenpox"
+C."Age >= 2 months to <60 months" and "Skin Problem" = true and "Itchy skin" = true and "Generalised or Localised Skin Problem" = "Generalised Skin Problem" and ("Blisters, Sores or Pustules" = true ) and o"Chickenpox" = true
 */
 define "DL-G-CL1-93":
-    C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B14S1.DE01" = true and "OBSdefine.EmCare.B14S1.DE02" = true and "OBSdefine.EmCare.B14S2.DE06&EmCare.B14S2.DE07" = true and ("OBSdefine.EmCare.B14S2.DE12" = true or "OBSdefine.EmCare.B14S2.DE22A"= true ) and "OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE22" = true
+    C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B14S1.DE01" = true and "OBSdefine.EmCare.B14S1.DE02" = true and "OBSdefine.EmCare.B14S2.DE06&EmCare.B14S2.DE07" = true and ("OBSdefine.EmCare.B14S2.DE12" = true ) and "OBSdefine.EmCare.B14S2.DE22" = true
 
 /* 
 Chickenpox : DL-G-CL1-93
@@ -1253,10 +1257,10 @@ define "EmCare.B23.DE46":
 
 /* 
 DL-G-CL1-95 : 
-C."Age >= 2 months to <60 months" and "Skin Problem" = true  and "Generalised or Localised Skin Problem" = "Localised Skin Problem" and "Blisters, Sores or Pustules" = true and "Type of Skin Problem"= v"Herpes Zoster"
+C."Age >= 2 months to <60 months" and "Skin Problem" = true  and "Generalised or Localised Skin Problem" = "Localised Skin Problem" and "Blisters, Sores or Pustules" = true and o"Herpes Zoster" = true
 */
 define "DL-G-CL1-95":
-    C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B14S1.DE01" = true  and "OBSdefine.EmCare.B14S2.DE06&EmCare.B14S2.DE08" = true and "OBSdefine.EmCare.B14S2.DE12" = true and "OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE23" = true
+    C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B14S1.DE01" = true  and "OBSdefine.EmCare.B14S2.DE06&EmCare.B14S2.DE08" = true and "OBSdefine.EmCare.B14S2.DE12" = true and "OBSdefine.EmCare.B14S2.DE23" = true
 
 /* 
 Herpes Zoster : DL-G-CL1-95
@@ -1281,10 +1285,10 @@ define "EmCare.B23.DE48a":
 
 /* 
 DL-G-CL1-98 : 
-C."Age >= 2 months to <60 months" and "Skin Problem" = true   and "Blisters, Sores or Pustules" = true and "Type of Skin Problem"= v"Impetigo"
+C."Age >= 2 months to <60 months" and "Skin Problem" = true   and "Blisters, Sores or Pustules" = true and o"Impetigo" = true
 */
 define "DL-G-CL1-98":
-    C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B14S1.DE01" = true   and "OBSdefine.EmCare.B14S2.DE12" = true and "OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE25" = true
+    C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B14S1.DE01" = true   and "OBSdefine.EmCare.B14S2.DE12" = true and "OBSdefine.EmCare.B14S2.DE25" = true
 
 /* 
 Impetigo : DL-G-CL1-98
@@ -1309,10 +1313,10 @@ define "EmCare.B23.DE50a":
 
 /* 
 DL-G-CL1-99 : 
-C."Age >= 2 months to <60 months" and "Skin Problem" = true   and "Type of Skin Problem"= v"Molluscum Contagiosum"
+C."Age >= 2 months to <60 months" and "Skin Problem" = true   and o"Molluscum Contagiosum" = true
 */
 define "DL-G-CL1-99":
-    C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B14S1.DE01" = true   and "OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE31" = true
+    C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B14S1.DE01" = true   and "OBSdefine.EmCare.B14S2.DE31" = true
 
 /* 
 Molluscum Contagiosum : DL-G-CL1-99
@@ -1330,10 +1334,10 @@ define "EmCare.B23.DE52a":
 
 /* 
 DL-G-CL1-100 : 
-C."Age >= 2 months to <60 months" and "Skin Problem" = true   and "Generalised or Localised Skin Problem" = "Localised Skin Problem" and "Type of Skin Problem"= v"Warts"
+C."Age >= 2 months to <60 months" and "Skin Problem" = true   and "Generalised or Localised Skin Problem" = "Localised Skin Problem" and o"Warts" = true
 */
 define "DL-G-CL1-100":
-    C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B14S1.DE01" = true   and "OBSdefine.EmCare.B14S2.DE06&EmCare.B14S2.DE08" = true and "OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE32" = true
+    C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B14S1.DE01" = true   and "OBSdefine.EmCare.B14S2.DE06&EmCare.B14S2.DE08" = true and "OBSdefine.EmCare.B14S2.DE32" = true
 
 /* 
 Warts : DL-G-CL1-100
@@ -1351,10 +1355,10 @@ define "EmCare.B23.DE53a":
 
 /* 
 DL-G-CL1-102 : 
-C."Age >= 2 months to <60 months" and "Skin Problem" = true   and "Generalised or Localised Skin Problem" = "Localised Skin Problem" and "Blisters, Sores or Pustules" = false and "Type of Skin Problem"= v"Seborrhoeic Dermatitis"
+C."Age >= 2 months to <60 months" and "Skin Problem" = true   and "Generalised or Localised Skin Problem" = "Localised Skin Problem" and "Blisters, Sores or Pustules" = false and o"Seborrhoeic Dermatitis" = true
 */
 define "DL-G-CL1-102":
-    C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B14S1.DE01" = true   and "OBSdefine.EmCare.B14S2.DE06&EmCare.B14S2.DE08" = true and "OBSdefine.EmCare.B14S2.DE12" = false and "OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE33" = true
+    C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B14S1.DE01" = true   and "OBSdefine.EmCare.B14S2.DE06&EmCare.B14S2.DE08" = true and "OBSdefine.EmCare.B14S2.DE12" = false and "OBSdefine.EmCare.B14S2.DE33" = true
 
 /* 
 Seborrhoeic Dermatitis : DL-G-CL1-102
@@ -1372,17 +1376,17 @@ define "EmCare.B23.DE55":
 
 /* 
 DL-G-CL1-103 : 
-C."Age >= 2 months to <60 months" and "Skin Problem" = true   and "Type of Skin Problem"= v"Fixed Drug Reaction"
+C."Age >= 2 months to <60 months" and "Skin Problem" = true   and o"Fixed Drug Reaction" = true
 */
 define "DL-G-CL1-103":
-    C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B14S1.DE01" = true   and "OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE35" = true
+    C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B14S1.DE01" = true   and "OBSdefine.EmCare.B14S2.DE35" = true
 
 /* 
 DL-G-CL1-104 : 
-C."Age >= 2 months to <60 months" and "Skin Problem" = true   and "Type of Skin Problem"= v"Eczema"
+C."Age >= 2 months to <60 months" and "Skin Problem" = true   and o"Eczema" = true
 */
 define "DL-G-CL1-104":
-    C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B14S1.DE01" = true   and "OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE36" = true
+    C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B14S1.DE01" = true   and "OBSdefine.EmCare.B14S2.DE36" = true
 
 /* 
 EmCare.B23.DE57a : 
@@ -1407,10 +1411,10 @@ define "EmCare.B23.DE57c":
 
 /* 
 DL-G-CL1-105 : 
-C."Age >= 2 months to <60 months" and "Skin Problem" = true   and "Generalised or Localised Skin Problem" = "Generalised Skin Problem" and "Blisters, Sores or Pustules" = true and "Type of Skin Problem"= v"Steven Johnson Syndrome (SJS)"
+C."Age >= 2 months to <60 months" and "Skin Problem" = true   and "Generalised or Localised Skin Problem" = "Generalised Skin Problem" and "Blisters, Sores or Pustules" = true and o"Steven Johnson Syndrome (SJS)" = true
 */
 define "DL-G-CL1-105":
-    C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B14S1.DE01" = true   and "OBSdefine.EmCare.B14S2.DE06&EmCare.B14S2.DE07" = true and "OBSdefine.EmCare.B14S2.DE12" = true and "OBSdefine.EmCare.B14S2.DE13&EmCare.B14S2.DE37" = true
+    C."Age >= 2 months to <60 months" and "OBSdefine.EmCare.B14S1.DE01" = true   and "OBSdefine.EmCare.B14S2.DE06&EmCare.B14S2.DE07" = true and "OBSdefine.EmCare.B14S2.DE12" = true and "OBSdefine.EmCare.B14S2.DE37" = true
 
 /* 
 Steven Johnson Syndrome (SJS) : DL-G-CL1-105
@@ -1424,7 +1428,7 @@ DL-G-CL1-106 :
 C."Age >= 2 months to <60 months" and C."Fever" = true and ("Oral Sores or Mouth Ulcers" = "Mouth Sores or Mouth Ulcers - Not Deep and Extensive" or "Oral Sores or Mouth Ulcers" = "Mouth Sores or Mouth Ulcers - Deep and Extensive" )
 */
 define "DL-G-CL1-106":
-    C."Age >= 2 months to <60 months" and C."Fever" = true and ("OBSdefine.EmCare.B14S2.DE45" ~ val."Mouth Sores or Mouth Ulcers - Not Deep and Extensive" or "OBSdefine.EmCare.B14S2.DE45" ~ val."Mouth Sores or Mouth Ulcers - Deep and Extensive" )
+    C."Age >= 2 months to <60 months" and C."Fever" = true and ("OBSdefine.EmCare.B14S2.DE38" ~ val."Mouth Sores or Mouth Ulcers - Not Deep and Extensive" or "OBSdefine.EmCare.B14S2.DE38" ~ val."Mouth Sores or Mouth Ulcers - Deep and Extensive" )
 
 /* 
 Mouth Sores or Ulcer : DL-G-CL1-106
@@ -1438,14 +1442,14 @@ EmCare.B23.DE60 :
 "Oral Sores or Mouth Ulcers" = "Mouth Sores or Mouth Ulcers - Deep and Extensive"
 */
 define "EmCare.B23.DE60":
-    "OBSdefine.EmCare.B14S2.DE45" ~ val."Mouth Sores or Mouth Ulcers - Deep and Extensive"
+    "OBSdefine.EmCare.B14S2.DE38" ~ val."Mouth Sores or Mouth Ulcers - Deep and Extensive"
 
 /* 
 DL-G-CL1-108 : 
 C."Age >= 2 months to <60 months" and C."Fever" = true and "Oral Sores or Mouth Ulcers"= v"Oral Thrush"
 */
 define "DL-G-CL1-108":
-    C."Age >= 2 months to <60 months" and C."Fever" = true and "OBSdefine.EmCare.B14S2.DE45"~ val."Oral Thrush"
+    C."Age >= 2 months to <60 months" and C."Fever" = true and "OBSdefine.EmCare.B14S2.DE38"~ val."Oral Thrush"
 
 /* 
 Oral Thrush : DL-G-CL1-108
@@ -1456,10 +1460,10 @@ define "Oral Thrush":
 
 /* 
 DL-I-CL1-28 : 
-Z."WAZ"<-3
+Z."WAZ"<-3 and C."Age >= 2 months to <60 months"
 */
 define "DL-I-CL1-28":
-    Z."WAZ"<-3
+    Z."WAZ"<-3 and C."Age >= 2 months to <60 months"
 
 /* 
 Very Low Weight for Age : DL-I-CL1-28
@@ -1470,10 +1474,10 @@ define "Very Low Weight for Age":
 
 /* 
 DL-I-CL1-33 : 
-Z."WAZ">=-3 and Z."WAZ"<-2
+Z."WAZ">=-3 and Z."WAZ"<-2 and C."Age >= 2 months to <60 months"
 */
 define "DL-I-CL1-33":
-    Z."WAZ">=-3 and Z."WAZ"<-2
+    Z."WAZ">=-3 and Z."WAZ"<-2 and C."Age >= 2 months to <60 months"
 
 /* 
 Low Weight for Age : DL-I-CL1-33
@@ -1484,10 +1488,10 @@ define "Low Weight for Age":
 
 /* 
 DL-I-CL1-34 : 
-o"Weight (Kg)" is null and ((AgeInMonths()> 6 and  "MUAC (mm)" < 12.5 'cm' ) or (AgeInMonths()<= 6 and "MUAC cannot be measured"=true))
+o"Weight (Kg)" is null and ((AgeInMonths()> 6 and  "MUAC (mm)" < 12.5 'cm' ) or (AgeInMonths()<= 6 and "MUAC cannot be measured"=true)) and C."Age >= 2 months to <60 months"
 */
 define "DL-I-CL1-34":
-    "OBSdefine.EmCare.B6.DE06" is null and ((AgeInMonths()> 6 and  "OBSdefine.EmCare.B6.DE17" < 12.5 'cm' ) or (AgeInMonths()<= 6 and "OBSdefine.EmCare.B6.DE17a"=true))
+    "OBSdefine.EmCare.B6.DE06" is null and ((AgeInMonths()> 6 and  "OBSdefine.EmCare.B6.DE17" < 12.5 'cm' ) or (AgeInMonths()<= 6 and "OBSdefine.EmCare.B6.DE17a"=true)) and C."Age >= 2 months to <60 months"
 
 /* 
 Low MUAC or visual report of wasting : DL-I-CL1-34
@@ -1501,4 +1505,4 @@ BackReference :
 back reference to resource
 */
 define "BackReference":
-    Reference {reference: string { value: 'Questionnaire/EmCare.B23.Classification'}}
+    Reference {reference: string { value: 'Questionnaire/emcare.b23.classification'}}

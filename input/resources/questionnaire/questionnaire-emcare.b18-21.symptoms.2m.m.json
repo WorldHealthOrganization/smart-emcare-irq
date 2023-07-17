@@ -29,12 +29,12 @@
         },
         {
             "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
-            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb1821symptoms2mm|1.0.2"
+            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb1821symptoms2mm|1.0.3.build.245"
         }
     ],
     "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b18-21.symptoms.2m.m",
     "name": "EmCare.B18-21.Symptoms.2m.m",
-    "title": "EmCare.B18-21.Symptoms.2m.m",
+    "title": "Symptoms",
     "status": "active",
     "experimental": false,
     "subjectType": [
@@ -119,7 +119,7 @@
                         }
                     ],
                     "linkId": "EmCare.B7.DE03-help",
-                    "text": "Use words the caregiver understands. For example, the caregiver may know<br />\nconvulsions as \u201cfits\u201d or \u201cspasms\u201d.<br />\nDuring a convulsion, the young infant\u2019s arms and legs may become stiff. The infant<br />\nmay stop breathing and become blue. Many times there may only be rhythmic<br />\nInfant&#8217;s Movements of a part of the body, such as rhythmic twitching of the mouth or<br />\nblinking of eyes. The young infant may lose consciousness",
+                    "text": "Use words the mother understands. For example, the caregiver may know convulsions as \u201cfits\u201d or \u201cspasms.\u201d During a convulsion, the young infant\u2019s arms and legs may become stiff. The infant may stop breathing and become blue. Many times there may only be rhythmic movements of a part of the body, such as rhythmic twitching of the mouth or blinking of eyes. The young infant may lose consciousness.",
                     "type": "display"
                 }
             ]
@@ -169,7 +169,7 @@
                         }
                     ],
                     "linkId": "EmCare.B18S1.DE02-help",
-                    "text": "Any difficulty mentioned by the mother is important. A newborn that has not been able to feed since birth may be premature or may have<br />\ncomplications such as birth asphyxia. These infants who are either not able to<br />\nfeed or are Not Feeding Well should be referred urgently to hospital.</p>\n\n\t<p>The caregiver may also mention difficulties such as: her infant feeds too frequently<br />\n(or not frequently enough), she does not have enough milk, her nipples are sore,<br />\nor she has flat or inverted nipples. You will assess these difficulties later during<br />\nbreastfeeding assessment. These problems do not mean the infant is Not Feeding Well or not feeding at all.",
+                    "text": "<p>Any difficulty mentioned by the mother is important. A newborn that has not been able to feed since birth may be premature or may have complications such as birth asphyxia. These infants who are either not able to feed or are not feeding well should be referred urgently to hospital.</p>\n\n\t<p>The caregiver may also mention difficulties such as: her infant feeds too frequently (or not frequently enough), she does not have enough milk, her nipples are sore, or she has flat or inverted nipples. You will assess these difficulties later during breastfeeding assessment. These problems do not mean the infant is not feeding well or not feeding at all.</p>",
                     "type": "display"
                 }
             ]
@@ -202,7 +202,7 @@
                         }
                     ],
                     "linkId": "EmCare.B11S1.DE01-help",
-                    "text": "A young infant has diarrhoea if the stools have changed from the usual pattern, and are many and watery. This means more water than faecal matter. The normally frequent or semi-solid stools of a breastfed baby are not diarrhoea.<br />\nThe mother of a breastfed young infant can recognize diarrhoea because the consistency or frequency of the stools is different than normal.",
+                    "text": "A young infant has diarrhoea if the stools have changed from the usual pattern, and are many and watery. This means more water than faecal matter. The normally frequent or semi-solid stools of a breastfed baby are not diarrhoea. The mother of a breastfed young infant can recognize diarrhoea because the consistency or frequency of the stools is different than normal.",
                     "type": "display"
                 }
             ]

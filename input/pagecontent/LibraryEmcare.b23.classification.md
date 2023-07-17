@@ -44,11 +44,11 @@ required for the execution
 | Observation | EmCare.B13S2.DE03 | boolean/quantity | Pus Seen Draining from the Ear for how long? |
 | Observation | EmCare.B12S2.DE01 | boolean/quantity | Stiff neck |
 | Observation | EmCare.B12S1.DE03 | boolean/quantity | Fever for how long? |
-| Observation | EmCare.B12S1.DE06 | boolean/quantity | Has Fever been present every day since the Fever started? |
+| Observation | EmCare.B12S1.DE06 | boolean/quantity | Has Fever been present every day for more than 7 days |
 | Observation | EmCare.B12S2.DE05 | boolean/quantity | Runny nose |
 | Observation | EmCare.B14S2.DE01 | boolean/quantity | Red eyes |
 | Observation | EmCare.B14S2.DE03 | boolean/quantity | Clouding of the Cornea |
-| Observation | EmCare.B14S2.DE45 | boolean/quantity | Oral Sores or Mouth Ulcers |
+| Observation | EmCare.B14S2.DE38 | boolean/quantity | Oral Sores or Mouth Ulcers |
 | Observation | EmCare.B14S2.DE10 | boolean/quantity | Measles Rash |
 | Observation | EmCare.B14S2.DE06&EmCare.B14S2.DE07 | boolean/quantity | Generalised or Localised Skin Problem |
 | Observation | EmCare.B14S2.DE02 | boolean/quantity | Pus Draining from Eye |
@@ -60,35 +60,35 @@ required for the execution
 | Observation | EmCare.B14S2.DE04 | boolean/quantity | Is Clouding of the Cornea a new problem |
 | Observation | EmCare.B14S2.DE05 | boolean/quantity | Has Clouding of the Cornea previously been treated |
 | Observation | EmCare.B14S1.DE01 | boolean/quantity | Skin Problem |
-| Observation | EmCare.B14S1.DE02 | boolean/quantity | Itchy Skin |
-| Observation | EmCare.B14S2.DE13&EmCare.B14S2.DE18 | boolean/quantity | Type of Skin Problem |
-| Observation | EmCare.B14S2.DE13&EmCare.B14S2.DE19 | boolean/quantity | Type of Skin Problem |
+| Observation | EmCare.B14S1.DE02 | boolean/quantity | Itchy skin |
+| Observation | EmCare.B14S2.DE18 | boolean/quantity | Papular Urticaria or Papular Pruritic Eruptions |
+| Observation | EmCare.B14S2.DE19 | boolean/quantity | Ringworm (Tinea) |
 | Observation | EmCare.B14S2.DE19a | boolean/quantity | Scalp Infection (tinea capitis) |
-| Observation | EmCare.B14S2.DE13&EmCare.B14S2.DE21 | boolean/quantity | Type of Skin Problem |
+| Observation | EmCare.B14S2.DE21 | boolean/quantity | Scabies |
 | Observation | EmCare.B14S2.DE12 | boolean/quantity | Blisters, Sores or Pustules |
+| Observation | EmCare.B14S2.DE22 | boolean/quantity | Chickenpox |
 | Observation | EmCare.B14S2.DE22A | boolean/quantity | Severe rash |
-| Observation | EmCare.B14S2.DE13&EmCare.B14S2.DE22 | boolean/quantity | Type of Skin Problem |
+| Observation | EmCare.B14S2.DE23 | boolean/quantity | Herpes Zoster |
 | Observation | EmCare.B14S2.DE06&EmCare.B14S2.DE08 | boolean/quantity | Generalised or Localised Skin Problem |
-| Observation | EmCare.B14S2.DE13&EmCare.B14S2.DE23 | boolean/quantity | Type of Skin Problem |
 | Observation | EmCare.B14S2.DE24 | boolean/quantity | Eye Involvement |
 | Observation | EmCare.B14S2.DE23a | boolean/quantity | Disseminated Herpes Zoster |
-| Observation | EmCare.B14S2.DE13&EmCare.B14S2.DE25 | boolean/quantity | Type of Skin Problem |
+| Observation | EmCare.B14S2.DE25 | boolean/quantity | Impetigo |
 | Observation | EmCare.B14S2.DE30 | boolean/quantity | Skin Infection extends to Muscle |
 | Observation | EmCare.B6.DE01A | boolean/quantity | Measured Temperature |
 | Observation | EmCare.B14S2.DE30b | boolean/quantity | Extensive impetigo lesions |
-| Observation | EmCare.B14S2.DE13&EmCare.B14S2.DE31 | boolean/quantity | Type of Skin Problem |
+| Observation | EmCare.B14S2.DE31 | boolean/quantity | Molluscum Contagiosum |
 | Observation | EmCare.B14S2.DE31a | boolean/quantity | Extensive molluscum lesions |
 | Observation | EmCare.B14S2.DE31b | boolean/quantity | Molluscum lesions close to the eye |
-| Observation | EmCare.B14S2.DE13&EmCare.B14S2.DE32 | boolean/quantity | Type of Skin Problem |
+| Observation | EmCare.B14S2.DE32 | boolean/quantity | Warts |
 | Observation | EmCare.B14S2.DE32a | boolean/quantity | Extensive warts |
-| Observation | EmCare.B14S2.DE13&EmCare.B14S2.DE33 | boolean/quantity | Type of Skin Problem |
+| Observation | EmCare.B14S2.DE33 | boolean/quantity | Seborrhoeic Dermatitis |
 | Observation | EmCare.B14S2.DE34 | boolean/quantity | Severe Seborrhoeic Dermatitis |
-| Observation | EmCare.B14S2.DE13&EmCare.B14S2.DE35 | boolean/quantity | Type of Skin Problem |
-| Observation | EmCare.B14S2.DE13&EmCare.B14S2.DE36 | boolean/quantity | Type of Skin Problem |
+| Observation | EmCare.B14S2.DE35 | boolean/quantity | Fixed Drug Reaction |
+| Observation | EmCare.B14S2.DE36 | boolean/quantity | Eczema |
 | Observation | EmCare.B14S2.DE36b | boolean/quantity | Severe acute moist or weeping eczema |
 | Observation | EmCare.B14S2.DE36a | boolean/quantity | Secondary bacterial infection of eczema |
 | Observation | EmCare.B14S2.DE36c | boolean/quantity | Secondary herpes infection of eczema (eczema herpeticum) |
-| Observation | EmCare.B14S2.DE13&EmCare.B14S2.DE37 | boolean/quantity | Type of Skin Problem |
+| Observation | EmCare.B14S2.DE37 | boolean/quantity | Steven Johnson Syndrome (SJS) |
 | Observation | EmCare.B6.DE06 | boolean/quantity | Weight (Kg) |
 | Observation | EmCare.B6.DE17 | boolean/quantity | MUAC (mm) |
 | Observation | EmCare.B6.DE17a | boolean/quantity | MUAC cannot be measured |

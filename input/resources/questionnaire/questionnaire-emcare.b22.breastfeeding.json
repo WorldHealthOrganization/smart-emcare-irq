@@ -29,7 +29,7 @@
         },
         {
             "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
-            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb22breastfeeding|1.0.2"
+            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb22breastfeeding|1.0.3.build.245"
         }
     ],
     "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b22.breastfeeding",
@@ -83,7 +83,7 @@
                         }
                     ],
                     "linkId": "EmCare.B22.DE27-help",
-                    "text": "If a breastfeeding assessment and an Oral Fluid test is recommended for a child that is only breastfed then a pop up is required to ensure that the health care worker observes the signs for both and provides results for both tests.",
+                    "text": "If the infant has not fed in the previous hour, he may be willing to breastfeed. Ask the mother to put her infant to the breast. Observe a whole breastfeed if possible, or observe for at least 4 minutes.<br />\nSit quietly and watch the infant breastfeed.",
                     "type": "display"
                 }
             ]
@@ -105,6 +105,7 @@
                 }
             ],
             "linkId": "EmCare.B22.DE41",
+            "text": " ",
             "type": "choice",
             "required": false,
             "repeats": true,
@@ -114,6 +115,26 @@
                         "code": "EmCare.B22.DE41",
                         "display": "Breastfeeding Assessment Not Possible"
                     }
+                }
+            ],
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "help"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B22.DE41-help",
+                    "text": "The breastfeeding assessment was not possible",
+                    "type": "display"
                 }
             ]
         },
@@ -135,7 +156,27 @@
             "text": "Caregiver reports difficulty breastfeeding",
             "type": "boolean",
             "required": true,
-            "repeats": false
+            "repeats": false,
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "help"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B22.DE30-help",
+                    "text": "The caregiver may also mention feeding difficulties such as: her infant feeds too frequently (or not frequently enough), she does not have enough milk, her nipples are sore, or she has flat or inverted nipples",
+                    "type": "display"
+                }
+            ]
         },
         {
             "extension": [
@@ -172,7 +213,7 @@
                         }
                     ],
                     "linkId": "EmCare.B22.DE38-help",
-                    "text": "The infant is considered to have good attachment if all four of the following signs are present:</p>\n\n\t<p>- more areola seen above infant\u2019s top lip than below bottom lip<br />\n- mouth wide open<br />\n- lower lip turned outwards<br />\n- chin touching breast",
+                    "text": "The infant is considered to have good attachment if all four of the following signs are present:<br />\n- more areola seen above infant\u2019s top lip than below bottom lip<br />\n- mouth wide open<br />\n- lower lip turned outwards<br />\n- chin touching breast",
                     "type": "display"
                 }
             ]
@@ -212,7 +253,7 @@
                         }
                     ],
                     "linkId": "EmCare.B22.DE40-help",
-                    "text": "The infant is sucking effectively (slow deep sucks, sometimes pausing)",
+                    "text": "The infant is sucking effectively if there are taking slow, deep sucks, sometimes pausing",
                     "type": "display"
                 }
             ]
@@ -239,7 +280,27 @@
             "text": "Difficulty Breastfeeding Reported",
             "type": "boolean",
             "required": false,
-            "repeats": false
+            "repeats": false,
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "help"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B22.DE42-help",
+                    "text": "The breastfeeding assessment was not observed however the caregiver has reported difficulty breastfeeding",
+                    "type": "display"
+                }
+            ]
         },
         {
             "extension": [
@@ -263,7 +324,27 @@
             "text": "Difficulty Breastfeeding Observed",
             "type": "boolean",
             "required": false,
-            "repeats": false
+            "repeats": false,
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "help"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B22.DE44-help",
+                    "text": "The healthcare worker has observed that the infant has difficulty breastfeeding",
+                    "type": "display"
+                }
+            ]
         },
         {
             "extension": [

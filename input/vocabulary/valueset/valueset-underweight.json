@@ -3,9 +3,10 @@
     "id": "underweight",
     "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/underweight",
     "name": "valueset-underweight",
+    "title": "EmCare.B6.DE18",
     "status": "draft",
     "experimental": false,
-    "description": "Codes representing possible values for the Provide an estimated age or estimated date of birth element",
+    "description": "Visually assess for whether underweight (for drug dose calculation)",
     "immutable": true,
     "compose": {
         "include": [
@@ -14,28 +15,28 @@
                 "concept": [
                     {
                         "code": "EmCare.B6.DE19",
-                        "display": "Does not appear to be Underweight",
+                        "display": "The child is visually assessed for whether underweight by the health care worker and does not appear to be underweight (estimated weight based on height or age would be equivalent to WHZ= 0 / WAZ= 0)\n(for drug dosing calculations)",
                         "designation": [
                             {
-                                "value": "The client is visually assessed for whether underweight by the health care worker and does not appear to be underweight (estimated weight based on height or age would be equivalent to WHZ= 0 / WAZ= 0)"
+                                "value": "The child is visually assessed for whether underweight by the health care worker and does not appear to be underweight (estimated weight based on height or age would be equivalent to WHZ= 0 / WAZ= 0)\n(for drug dosing calculations)"
                             }
                         ]
                     },
                     {
                         "code": "EmCare.B6.DE20",
-                        "display": "Appears to be Underweight",
+                        "display": "The child is visually assessed for whether underweight by the health care worker and appears to be underweight (as an aide for dosing calculations) (estimated weight based on height or age would be equivalent to WHZ= -1 / WAZ= -1)\n(for drug dosing calculations)",
                         "designation": [
                             {
-                                "value": "The client is visually assessed for whether underweight by the health care worker and appears to be underweight (as an aide for dosing calculations) (estimated weight based on height or age would be equivalent to WHZ= -1 / WAZ= -1)"
+                                "value": "The child is visually assessed for whether underweight by the health care worker and appears to be underweight (as an aide for dosing calculations) (estimated weight based on height or age would be equivalent to WHZ= -1 / WAZ= -1)\n(for drug dosing calculations)"
                             }
                         ]
                     },
                     {
                         "code": "EmCare.B6.DE21",
-                        "display": "Appears to be Severely Underweight",
+                        "display": "The child is visually assessed for whether underweight and appears to be severely underweight (as an aide for dosing calculations) (estimated weight based on height or age would be equivalent to WHZ= -2 / WAZ= -2)\n(for drug dosing calculations)",
                         "designation": [
                             {
-                                "value": "The client is visually assessed for whether underweight and appears to be severely underweight (as an aide for dosing calculations) (estimated weight based on height or age would be equivalent to WHZ= -2 / WAZ= -2)"
+                                "value": "The child is visually assessed for whether underweight and appears to be severely underweight (as an aide for dosing calculations) (estimated weight based on height or age would be equivalent to WHZ= -2 / WAZ= -2)\n(for drug dosing calculations)"
                             }
                         ]
                     }

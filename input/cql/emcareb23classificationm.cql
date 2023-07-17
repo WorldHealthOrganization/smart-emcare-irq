@@ -2,14 +2,14 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareb23classificationm version '1.0.2'
+library emcareb23classificationm version '1.0.3.build.245'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.2' called Base
-include emcareobservation version '1.0.2' called obs
-include emcarevalueset version '1.0.2' called val
-include emcarezscore version '1.0.2' called Z
-include emcarecombineddataelements version '1.0.2' called C
+include emcarebase version '1.0.3.build.245' called Base
+include emcarevalueset version '1.0.3.build.245' called val
+include emcarezscore version '1.0.3.build.245' called Z
+include emcarecombineddataelements version '1.0.3.build.245' called C
+include emcareobservation version '1.0.3.build.245' called obs
 
 
 
@@ -44,13 +44,6 @@ OBSdefine.EmCare.B18S2.DE13 : Skin Pustules
 */
 define "OBSdefine.EmCare.B18S2.DE13":
     Base.GetObsValue('EmCare.B18S2.DE13')
-
-/* 
-OBSdefine.EmCare.B21S2.DE01 : Weight Status
-
-*/
-define "OBSdefine.EmCare.B21S2.DE01":
-    Base.GetObsValue('EmCare.B21S2.DE01')
 
 /* 
 OBSdefine.EmCare.B19S2.DE01 : Yellow Skin
@@ -158,6 +151,13 @@ define "OBSdefine.EmCare.B21S2.DE30":
     Base.GetObsValue('EmCare.B21S2.DE30')
 
 /* 
+OBSdefine.EmCare.B21S2.DE01 : Weight Status
+
+*/
+define "OBSdefine.EmCare.B21S2.DE01":
+    Base.GetObsValue('EmCare.B21S2.DE01')
+
+/* 
 OBSdefine.EmCare.B21S1.DE06 : Breastfed
 
 */
@@ -187,10 +187,10 @@ define "Measured Temperature (second measurement)":
 
 /* 
 DL-G-CL2-04-08 : 
-C."PSBI"
+C."PSBI" and "ageinmonths" < 2
 */
 define "DL-G-CL2-04-08":
-    C."PSBI"
+    C."PSBI" and "ageinmonths" < 2
 
 /* 
 Possible Serious Bacterial Infection OR Very Severe Disease : DL-G-CL2-04-08
@@ -235,24 +235,19 @@ define "DL-G-CL2-12":
     "ageinmonths"<2 and Coalesce("Possible Serious Bacterial Infection OR Very Severe Disease",false)!=true and Coalesce("Pneumonia",false)!=true and  Coalesce("Local Infection",false)!=true
 
 /* 
-DL-G-CL2-26 : 
-"ageindays"<7  and "Weight Status" = v"Very Low Weight for Age"
-*/
-define "DL-G-CL2-26":
-    "ageindays"<7  and "OBSdefine.EmCare.B21S2.DE01" ~ val."Very Low Weight for Age"
-
-/* 
 DL-G-CL2-13-a-14 : 
-    (    ("Yellow Skin" = true)
+    ("ageinmonths" < 2)
+     and ((    ("Yellow Skin" = true)
          and ((    "ageindays" < 21  and  "When did the Jaundice first appear?" = "Within less than 24 hours of birth")
          or (    "ageindays" < 1)))
-     or (    "ageinmonths"<2 and  "Yellow Palms or Yellow Soles" = true)
+     or (    "Yellow Palms or Yellow Soles" = true))
 */
 define "DL-G-CL2-13-a-14":
-        (    ("OBSdefine.EmCare.B19S2.DE01" = true)
+        ("ageinmonths" < 2)
+         and ((    ("OBSdefine.EmCare.B19S2.DE01" = true)
              and ((    "ageindays" < 21  and  "OBSdefine.EmCare.B19S2.DE04" ~ val."Within less than 24 hours of birth")
              or (    "ageindays" < 1)))
-         or (    "ageinmonths"<2 and  "OBSdefine.EmCare.B19S2.DE02" = true)
+         or (    "OBSdefine.EmCare.B19S2.DE02" = true))
 
 /* 
 Severe Jaundice : DL-G-CL2-13-a-14
@@ -263,14 +258,14 @@ define "Severe Jaundice":
 
 /* 
 DL-G-CL2-15-43 : 
-    ("Severe Jaundice" != true and "Yellow Skin" = true)
+    ("Severe Jaundice" != true and "Yellow Skin" = true and "ageinmonths" < 2)
      and ((    "ageindays" < 21 and ("When did the Jaundice first appear?" = "24 hours or more after birth"  or "When did the Jaundice first appear?" = "Unknown when Jaundice first appeared"))
-     or (    "ageindays" >= 21))
+     or (    "ageindays" >= 21 and "ageinmonths" < 2))
 */
 define "DL-G-CL2-15-43":
-        (Coalesce("Severe Jaundice",false)!=true and "OBSdefine.EmCare.B19S2.DE01" = true)
+        (Coalesce("Severe Jaundice",false)!=true and "OBSdefine.EmCare.B19S2.DE01" = true and "ageinmonths" < 2)
          and ((    "ageindays" < 21 and ("OBSdefine.EmCare.B19S2.DE04" ~ val."24 hours or more after birth"  or "OBSdefine.EmCare.B19S2.DE04" ~ val."Unknown when Jaundice first appeared"))
-         or (    "ageindays" >= 21))
+         or (    "ageindays" >= 21 and "ageinmonths" < 2))
 
 /* 
 Jaundice : DL-G-CL2-15-43
@@ -295,10 +290,10 @@ define "DL-G-CL2-17":
 
 /* 
 DL-G-CL2-18 : 
-C."Severe Dehydration"
+C."Severe Dehydration" and "ageinmonths" < 2
 */
 define "DL-G-CL2-18":
-    C."Severe Dehydration"
+    C."Severe Dehydration" and "ageinmonths" < 2
 
 /* 
 Severe Dehydration : DL-G-CL2-18
@@ -309,10 +304,10 @@ define "Severe Dehydration":
 
 /* 
 DL-G-CL2-19 : 
-C."Some Dehydration"
+C."Some Dehydration" and "ageinmonths" < 2
 */
 define "DL-G-CL2-19":
-    C."Some Dehydration"
+    C."Some Dehydration" and "ageinmonths" < 2
 
 /* 
 Some Dehydration : DL-G-CL2-19
@@ -323,10 +318,10 @@ define "Some Dehydration":
 
 /* 
 DL-G-CL2-25 : 
-"Diarrhoea" = true and  "Severe Dehydration"!=true  and  "Some Dehydration"!=true
+"Diarrhoea" = true and  "Severe Dehydration"!=true  and  "Some Dehydration"!=true and "ageinmonths" < 2
 */
 define "DL-G-CL2-25":
-    "OBSdefine.EmCare.B11S1.DE01" = true and  Coalesce("Severe Dehydration",false)!=true  and  Coalesce("Some Dehydration",false)!=true
+    "OBSdefine.EmCare.B11S1.DE01" = true and  Coalesce("Severe Dehydration",false)!=true  and  Coalesce("Some Dehydration",false)!=true and "ageinmonths" < 2
 
 /* 
 No Dehydration : DL-G-CL2-25
@@ -399,16 +394,18 @@ define "DL-G-CL2-42":
 
 /* 
 DL-I-CL2-04-42 : 
-    (    "Breastfed" = true and "DL-G-CL2-30" = true)
+    ("Very Low Weight for Age" != true and "ageinmonths" < 2)
+     and ((    "Breastfed" = true and "DL-G-CL2-30" = true)
      or (    "DL-G-CL2-32" = true)
      or (    "Breastfed" = false and "DL-I-CL2-04" = true)
-     or (    "DL-G-CL2-42" = true)
+     or (    "DL-G-CL2-42" = true))
 */
 define "DL-I-CL2-04-42":
-        (    "OBSdefine.EmCare.B21S1.DE06" = true and "DL-G-CL2-30" = true)
+        (Coalesce("Very Low Weight for Age",false)!=true and "ageinmonths" < 2)
+         and ((    "OBSdefine.EmCare.B21S1.DE06" = true and "DL-G-CL2-30" = true)
          or (    "DL-G-CL2-32" = true)
          or (    "OBSdefine.EmCare.B21S1.DE06" = false and "DL-I-CL2-04" = true)
-         or (    "DL-G-CL2-42" = true)
+         or (    "DL-G-CL2-42" = true))
 
 /* 
 Feeding Problem and / or Low Weight for Age : DL-I-CL2-04-42
@@ -418,15 +415,29 @@ define "Feeding Problem and / or Low Weight for Age":
     "DL-I-CL2-04-42"
 
 /* 
+DL-G-CL2-26 : 
+"Weight Status" = v"Very Low Weight for Age" and "ageindays" < 7
+*/
+define "DL-G-CL2-26":
+    "OBSdefine.EmCare.B21S2.DE01" ~ val."Very Low Weight for Age" and "ageindays" < 7
+
+/* 
+Very Low Weight for Age : DL-G-CL2-26
+Alias
+*/
+define "Very Low Weight for Age":
+    "DL-G-CL2-26"
+
+/* 
 DL-G-CL2-50 : 
-"Weight Status" = v"Normal Weight for Age"  and  "Feeding Problem and / or Low Weight for Age"!= true and "Severe Jaundice"!=true and "Possible Serious Bacterial Infection OR Very Severe Disease"!=true
+"Weight Status" = v"Normal Weight for Age"  and  "Feeding Problem and / or Low Weight for Age"!= true and "Severe Jaundice"!=true and "Possible Serious Bacterial Infection OR Very Severe Disease"!=true and "ageinmonths" < 2
 */
 define "DL-G-CL2-50":
-    "OBSdefine.EmCare.B21S2.DE01" ~ val."Normal Weight for Age"  and  Coalesce("Feeding Problem and / or Low Weight for Age",false)!=true and Coalesce("Severe Jaundice",false)!=true and Coalesce("Possible Serious Bacterial Infection OR Very Severe Disease",false)!=true
+    "OBSdefine.EmCare.B21S2.DE01" ~ val."Normal Weight for Age"  and  Coalesce("Feeding Problem and / or Low Weight for Age",false)!=true and Coalesce("Severe Jaundice",false)!=true and Coalesce("Possible Serious Bacterial Infection OR Very Severe Disease",false)!=true and "ageinmonths" < 2
 
 /* 
 BackReference : 
 back reference to resource
 */
 define "BackReference":
-    Reference {reference: string { value: 'Questionnaire/EmCare.B23.Classification.m'}}
+    Reference {reference: string { value: 'Questionnaire/emcare.b23.classification.m'}}

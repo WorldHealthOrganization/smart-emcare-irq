@@ -29,7 +29,7 @@
         },
         {
             "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
-            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb22bronchodilatortest|1.0.2"
+            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb22bronchodilatortest|1.0.3.build.245"
         }
     ],
     "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b22.bronchodilatortest",
@@ -112,6 +112,7 @@
                 }
             ],
             "linkId": "EmCare.B22.DE22",
+            "text": " ",
             "type": "choice",
             "required": false,
             "repeats": true,
@@ -140,24 +141,6 @@
                     ],
                     "linkId": "EmCare.B22.DE22-help",
                     "text": "- Give 2 puffs from salbutamol metered dose inhaler (100 \u03bcg/puff) using a spacer*",
-                    "type": "display"
-                },
-                {
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory",
-                            "valueCodeableConcept": {
-                                "coding": [
-                                    {
-                                        "system": "http://hl7.org/fhir/questionnaire-display-category",
-                                        "code": "instructions"
-                                    }
-                                ]
-                            }
-                        }
-                    ],
-                    "linkId": "EmCare.B22.DE22-instruction",
-                    "text": "help",
                     "type": "display"
                 }
             ]
@@ -197,7 +180,7 @@
                         }
                     ],
                     "linkId": "EmCare.B22.DE18-help",
-                    "text": "- Repeat up to 3 times every 15\u201320 minutes",
+                    "text": "<p><b><span class=\"caps\">NORMAL</span>:</b> When child breaths <b>IN,</b> chest wall moves <b><span class=\"caps\">OUT</span></b><br />\n<b><span class=\"caps\">CHEST</span> <span class=\"caps\">INDRAWING</span>:</b> When child breaths <b>IN,</b> chest wall moves <b>IN</b></p>\n\n\t<p>Chest indrawing occurs when the child needs to make a greater effort than normal to breathe in. <b>You will look for chest indrawing when the child breathes IN.</b></p>\n\n\t<p>In normal breathing, the whole chest wall (upper and lower) and the abdomen move <span class=\"caps\">OUT</span> when the child breathes IN. <b>The child has chest indrawing if the lower chest wall (lower ribs) goes IN when the child breathes IN.</b></p>",
                     "type": "display"
                 }
             ]
@@ -240,7 +223,7 @@
                         }
                     ],
                     "linkId": "EmCare.B22.DE19-help",
-                    "text": "- Reassess respiratory rate and chest indrawing",
+                    "text": "<b>Count the number of breaths the child takes per minute</b> to determine if fast breathing is present post-bronchodilator trial.<br />\nIt is <b>very important that the child is calm</b> and still. If the child is moving or crying, you will not be able to get an accurate count of breaths. <br />\n<b>To count the breaths per minute,</b> use a watch with a second hand or a digital watch. Look for the breathing movement anywhere on the child\u2019s chest or abdomen. <br />\nThe number of breaths for <b>\u2018fast breathing\u2019 depends on the child\u2019s age.</b><br />\n- 2 to 11 months: More than 50 breaths per minute<br />\n- 12 to 59 months: More than 40 breaths per minute",
                     "type": "display"
                 }
             ]
@@ -301,7 +284,7 @@
                         }
                     ],
                     "linkId": "EmCare.B22.DE20-l-help",
-                    "text": "*A spacer is a way of delivering the bronchodilator medicines effectively into the lungs. A spacer works as well as a nebuliser if correctly used. No child under 5 should be given an inhaler without a spacer.",
+                    "text": "Fast breathing post-bronchodilator trial is auto-calculated based on the respiratory rate and the child&#8217;s age: </p>\n\n\t<ul>\n\t\t<li>2 to 11 months: More than 50 breaths per minute</li>\n\t\t<li>12 to 59 months: More than 40 breaths per minute</li>\n\t<",
                     "type": "display"
                 }
             ]
@@ -321,7 +304,27 @@
             "type": "display",
             "required": false,
             "repeats": false,
-            "readOnly": true
+            "readOnly": true,
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "help"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B22.DE21-help",
+                    "text": "Fast breathing post-bronchodilator trial is auto-calculated based on the respiratory rate and the child&#8217;s age: </p>\n\n\t<ul>\n\t\t<li>2 to 11 months: More than 50 breaths per minute</li>\n\t\t<li>12 to 59 months: More than 40 breaths per minute</li>\n\t<",
+                    "type": "display"
+                }
+            ]
         },
         {
             "extension": [

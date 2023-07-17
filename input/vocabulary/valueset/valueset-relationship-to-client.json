@@ -18,7 +18,7 @@
                         "display": "Mother",
                         "designation": [
                             {
-                                "value": "The Caregiver is the client's mother"
+                                "value": "The Caregiver is the child's mother"
                             }
                         ]
                     },
@@ -27,7 +27,7 @@
                         "display": "Father",
                         "designation": [
                             {
-                                "value": "The Caregiver is the client's father"
+                                "value": "The Caregiver is the child's father"
                             }
                         ]
                     },
@@ -36,7 +36,7 @@
                         "display": "Sibling",
                         "designation": [
                             {
-                                "value": "The Caregiver is the client's sibling"
+                                "value": "The Caregiver is the child's sibling"
                             }
                         ]
                     },
@@ -45,7 +45,7 @@
                         "display": "Extended family",
                         "designation": [
                             {
-                                "value": "The Caregiver is the client's extended family"
+                                "value": "The Caregiver is the child's extended family"
                             }
                         ]
                     },
@@ -54,7 +54,7 @@
                         "display": "Legal Guardian",
                         "designation": [
                             {
-                                "value": "The Caregiver is the client's legal guardian"
+                                "value": "The Caregiver is the child's legal guardian"
                             }
                         ]
                     },
@@ -63,7 +63,7 @@
                         "display": "Not Related",
                         "designation": [
                             {
-                                "value": "The Caregiver is not related to the client"
+                                "value": "The Caregiver is not related to the child"
                             }
                         ]
                     }

@@ -29,7 +29,7 @@
         },
         {
             "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
-            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb22fluidtest|1.0.2"
+            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb22fluidtest|1.0.3.build.245"
         }
     ],
     "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b22.fluidtest",
@@ -181,7 +181,7 @@
                         }
                     ],
                     "linkId": "EmCare.B22.DE08-help",
-                    "text": "If the child is unconscious, do not try to carry out an oral fluid test as it could cause the child to choke or fluid to go into their lungs.<br />\nAsk the mother to offer the child some water in a cup or spoon (or breastfeed for a child under 6 months). Watch the child drink. <br />\nA child is not able to drink if he is not able to suck or swallow when offered a drink. A child may not be able to drink because he is lethargic or unconscious.<br />\nA child is drinking poorly if the child is weak and cannot drink without help. He may be able to swallow only if fluid is put in his mouth.<br />\nA child has the sign drinking eagerly and acts thirsty if it is clear that the child wants to drink. Look to see if the child reaches out for the cup or spoon when you offer him water. When the water is taken away, see if the child is unhappy because he wants to drink more.<br />\nIf the child takes a drink only with encouragement and does not want to drink more, he does not have the sign drinking eagerly, thirsty.",
+                    "text": "If the child is unconscious, do not try to carry out an oral fluid test as it could cause the child to choke or fluid to go into their lungs.<br />\nAsk the mother to offer the child some water in a cup or spoon (or breastfeed for a child under 6 months). Watch the child drink. <br />\nA child is <b>not able to drink</b> if he is not able to suck or swallow when offered a drink. A child may not be able to drink because he is lethargic or unconscious.<br />\nA child is <b>drinking poorly</b> if the child is weak and cannot drink without help. He may be able to swallow only if fluid is put in his mouth.<br />\nA child has the sign <b>drinking eagerly and acts thirsty</b> if it is clear that the child wants to drink. Look to see if the child reaches out for the cup or spoon when you offer him water. When the water is taken away, see if the child is unhappy because he wants to drink more.<br />\nIf the child takes a drink only with encouragement and does not want to drink more, he does not have the sign drinking eagerly, thirsty.",
                     "type": "display"
                 }
             ]
@@ -210,6 +210,7 @@
                 }
             ],
             "linkId": "EmCare.B22.DE14",
+            "text": " ",
             "type": "choice",
             "required": true,
             "repeats": true,
@@ -219,6 +220,26 @@
                         "code": "EmCare.B22.DE14",
                         "display": "Unable to Perform Oral Fluid Test"
                     }
+                }
+            ],
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "help"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B22.DE14-help",
+                    "text": "The healthcare worker is unable to perform oral fluid test",
+                    "type": "display"
                 }
             ]
         },
@@ -251,7 +272,27 @@
             "text": "Completely Unable to Drink or Vomits Immediately / Everything",
             "type": "boolean",
             "required": false,
-            "repeats": false
+            "repeats": false,
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "help"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B22.DE14a-help",
+                    "text": "When Danger Signs are present when the healthcare worker is Unable to Perform Oral Fluid Test it is assumed that the child is completely unable to drink or vomits everything",
+                    "type": "display"
+                }
+            ]
         },
         {
             "extension": [
@@ -271,7 +312,27 @@
             "text": "Has the Child had anything to drink today?",
             "type": "boolean",
             "required": false,
-            "repeats": false
+            "repeats": false,
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "help"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B22.DE15-help",
+                    "text": "When it is not possible to conduct an oral fluid test, ask when the child last drank as part of dehydration assessment",
+                    "type": "display"
+                }
+            ]
         },
         {
             "extension": [
@@ -323,6 +384,26 @@
                         "code": "EmCare.B22.DE13",
                         "display": "Drinks Normally"
                     }
+                }
+            ],
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "help"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B22.DE16-help",
+                    "text": "When it is not possible to conduct an oral fluid test, ask how the child last drank as part of dehydration assessment",
+                    "type": "display"
                 }
             ]
         },

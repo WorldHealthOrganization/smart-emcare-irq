@@ -2,7 +2,7 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcarecondition version '1.0.2'
+library emcarecondition version '1.0.3.build.245'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
 
@@ -20,8 +20,6 @@ code "Local Infection": 'EmCare.B23.DE85' from "EmCare" display 'Local Infection
 code "local infection": 'EmCare.B23.DE85' from "EmCare" display 'local infection'
 code "Infection Unlikely": 'EmCare.B23.DE86' from "EmCare" display 'Infection Unlikely'
 code "infection unlikely": 'EmCare.B23.DE86' from "EmCare" display 'infection unlikely'
-code "Very Low Weight for Age": 'EmCare.B23.DE106' from "EmCare" display 'Very Low Weight for Age'
-code "very low weight for age": 'EmCare.B23.DE106' from "EmCare" display 'very low weight for age'
 code "Severe Jaundice": 'EmCare.B23.DE87' from "EmCare" display 'Severe Jaundice'
 code "severe jaundice": 'EmCare.B23.DE87' from "EmCare" display 'severe jaundice'
 code "Jaundice": 'EmCare.B23.DE88' from "EmCare" display 'Jaundice'
@@ -36,6 +34,8 @@ code "No Dehydration": 'EmCare.B23.DE15' from "EmCare" display 'No Dehydration'
 code "no dehydration": 'EmCare.B23.DE15' from "EmCare" display 'no dehydration'
 code "Feeding Problem and / or Low Weight for Age": 'EmCare.B23.DE94' from "EmCare" display 'Feeding Problem and / or Low Weight for Age'
 code "feeding problem and / or low weight for age": 'EmCare.B23.DE94' from "EmCare" display 'feeding problem and / or low weight for age'
+code "Very Low Weight for Age": 'EmCare.B23.DE93' from "EmCare" display 'Very Low Weight for Age'
+code "very low weight for age": 'EmCare.B23.DE93' from "EmCare" display 'very low weight for age'
 code "No Feeding Problem": 'EmCare.B23.DE98' from "EmCare" display 'No Feeding Problem'
 code "no feeding problem": 'EmCare.B23.DE98' from "EmCare" display 'no feeding problem'
 code "Add other classifications": 'collector-yi' from "EmCare" display 'Add other classifications'

@@ -29,12 +29,12 @@
         },
         {
             "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
-            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb1821signs2mm|1.0.2"
+            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb1821signs2mm|1.0.3.build.245"
         }
     ],
     "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b18-21.signs.2m.m",
     "name": "EmCare.B18-21.Signs.2m.m",
-    "title": "EmCare.B18-21.Signs.2m.m",
+    "title": "Signs",
     "status": "active",
     "experimental": false,
     "subjectType": [
@@ -60,6 +60,7 @@
                 }
             ],
             "linkId": "Fever",
+            "text": " ",
             "type": "boolean",
             "required": false,
             "repeats": false,
@@ -80,24 +81,6 @@
                     ],
                     "linkId": "Fever-help",
                     "text": "The client is reported to have or has had fever",
-                    "type": "display"
-                },
-                {
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory",
-                            "valueCodeableConcept": {
-                                "coding": [
-                                    {
-                                        "system": "http://hl7.org/fhir/questionnaire-display-category",
-                                        "code": "instructions"
-                                    }
-                                ]
-                            }
-                        }
-                    ],
-                    "linkId": "Fever-instruction",
-                    "text": "help",
                     "type": "display"
                 }
             ]
@@ -416,7 +399,7 @@
                                 }
                             ],
                             "linkId": "EmCare.B22.DE01-help",
-                            "text": "<b>Count the number of breaths the child takes per minute</b> to determine if fast breathing is present.<br />\nIt is <b>very important that the child is calm</b> and still. If the child is moving or crying, you will not be able to get an accurate count of breaths. <br />\n<b>To count the breaths per minute,</b> use a watch with a second hand or a digital watch. Look for the breathing movement anywhere on the child\u2019s chest or abdomen. <br />\nThe number of breaths for <b>\u2018fast breathing\u2019 depends on the child\u2019s age.</b></p>\n\n\t<ul>\n\t\t<li>Under 2 months: More than 60 breaths per minute*</li>\n\t\t<li>2 to 11 months: More than 50 breaths per minute</li>\n\t\t<li>12 to 59 months: More than 40 breaths per minute</li>\n\t</ul>\n\n\t<p>*In young infants, a second measurement should be taken to confirm, unless there is already another sign of possible serious bacterial infection",
+                            "text": "<p><b>Count the number of breaths the child takes per minute</b> to determine if fast breathing is present.<br />\nIt is <b>very important that the child is calm</b> and still. If the child is moving or crying, you will not be able to get an accurate count of breaths. <br />\n<b>To count the breaths per minute,</b> use a watch with a second hand or a digital watch. Look for the breathing movement anywhere on the child\u2019s chest or abdomen. </p>\n\n\t<p>Caution: The rise and fall of the chest or abdomen counts as one breath, not two.</p>\n\n\t<p>The number of breaths for <b>\u2018fast breathing\u2019 depends on the child\u2019s age.</b> </p>\n\n\t<ul>\n\t\t<li>Under 2 months: Greater than or equal to 60 breaths per minute*</li>\n\t\t<li>2 to 11 months: Greater than or equal to 50 breaths per minute</li>\n\t\t<li>12 to 59 months: Greater than or equal to 40 breaths per minute</li>\n\t</ul>\n\n\t<p>*In young infants, a second measurement should be taken to confirm, unless there is already another sign of possible serious bacterial infection</p>",
                             "type": "display"
                         }
                     ]
@@ -445,6 +428,7 @@
                         }
                     ],
                     "linkId": "EmCare.B22.DE02",
+                    "text": " ",
                     "type": "choice",
                     "required": false,
                     "repeats": true,
@@ -454,6 +438,26 @@
                                 "code": "EmCare.B22.DE02",
                                 "display": "Unable to perform Respiratory Rate at this time"
                             }
+                        }
+                    ],
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "EmCare.B22.DE02-help",
+                            "text": "If the child is not calm and it is not possible to measure the respiratory rate, ask the mother to help calm the child and measure later in the consultation.",
+                            "type": "display"
                         }
                     ]
                 },
@@ -510,7 +514,7 @@
                                         }
                                     ],
                                     "linkId": "EmCare.B22.DE04-help",
-                                    "text": "<b>Count the number of breaths the child takes per minute</b> to determine if fast breathing is present.<br />\nIt is <b>very important that the child is calm</b> and still. If the child is moving or crying, you will not be able to get an accurate count of breaths. <br />\n<b>To count the breaths per minute,</b> use a watch with a second hand or a digital watch. Look for the breathing movement anywhere on the child\u2019s chest or abdomen. <br />\nThe number of breaths for <b>\u2018fast breathing\u2019 depends on the child\u2019s age.</b></p>\n\n\t<ul>\n\t\t<li>Under 2 months: More than 60 breaths per minute*</li>\n\t\t<li>2 to 11 months: More than 50 breaths per minute</li>\n\t\t<li>12 to 59 months: More than 40 breaths per minute</li>\n\t</ul>\n\n\t<p>*In young infants, a second measurement should be taken to confirm, unless there is already another sign of possible serious bacterial infection",
+                                    "text": "<p>In young infants, <b>a second respiratory rate measurement should be taken to confirm fast breathing</b> (60 breaths a minute or more) found at the first measurement, unless there is already another sign of possible serious bacterial infection. Fast breathing is confirmed if respiratory rate is 60 breaths a minute or more at the second count. </p>\n\n\t<p>To measure the respiratory rate:<br />\n<b>Count the number of breaths the child takes per minute</b> to determine if fast breathing is present.<br />\nIt is <b>very important that the child is calm</b> and still. If the child is moving or crying, you will not be able to get an accurate count of breaths. <br />\n<b>To count the breaths per minute,</b> use a watch with a second hand or a digital watch. Look for the breathing movement anywhere on the child\u2019s chest or abdomen.</p>",
                                     "type": "display"
                                 }
                             ]
@@ -539,6 +543,7 @@
                                 }
                             ],
                             "linkId": "EmCare.B22.DE05",
+                            "text": " ",
                             "type": "choice",
                             "required": false,
                             "repeats": true,
@@ -548,6 +553,26 @@
                                         "code": "EmCare.B22.DE05",
                                         "display": "Respiratory Rate (Second Count) Not Possible"
                                     }
+                                }
+                            ],
+                            "item": [
+                                {
+                                    "extension": [
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                            "valueCodeableConcept": {
+                                                "coding": [
+                                                    {
+                                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                        "code": "help"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "linkId": "EmCare.B22.DE05-help",
+                                    "text": "The child&#8217;s second respiratory rate is not possible to measure",
+                                    "type": "display"
                                 }
                             ]
                         }
@@ -615,7 +640,7 @@
                                 }
                             ],
                             "linkId": "fastbreathing-True-help",
-                            "text": "The number of breaths for <b>\u2018fast breathing\u2019 depends on the child\u2019s age.</b>   </p>\n\n\t<ul>\n\t\t<li>Under 2 months: More than 60 breaths per minute(*)</li>\n\t\t<li>2 to 11 months: More than 50 breaths per minute</li>\n\t\t<li>12 to 59 months: More than 40 breaths per minute</li>\n\t</ul>\n\n\t<p>*In young infants, a second measurement should be taken to confirm, unless there is already another sign of possible serious bacterial infection",
+                            "text": "<p>Fast breathing is auto-calculated based on the respiratory rate and the child&#8217;s age: </p>\n\n\t<ul>\n\t\t<li>Under 2 months: Greater than or equal to 60 breaths per minute*</li>\n\t\t<li>2 to 11 months: Greater than or equal to 50 breaths per minute</li>\n\t\t<li>12 to 59 months: Greater than or equal to 40 breaths per minute</li>\n\t</ul>\n\n\t<p>*In young infants, a second measurement should be taken to confirm, unless there is already another sign of possible serious bacterial infection</p>",
                             "type": "display"
                         }
                     ]
@@ -651,7 +676,7 @@
                                 }
                             ],
                             "linkId": "fastbreathing-False-help",
-                            "text": "The number of breaths for <b>\u2018fast breathing\u2019 depends on the child\u2019s age.</b>   </p>\n\n\t<ul>\n\t\t<li>Under 2 months: More than 60 breaths per minute(*)</li>\n\t\t<li>2 to 11 months: More than 50 breaths per minute</li>\n\t\t<li>12 to 59 months: More than 40 breaths per minute</li>\n\t</ul>\n\n\t<p>*In young infants, a second measurement should be taken to confirm, unless there is already another sign of possible serious bacterial infection",
+                            "text": "<p>Fast breathing is auto-calculated based on the respiratory rate and the child&#8217;s age: </p>\n\n\t<ul>\n\t\t<li>Under 2 months: Greater than or equal to 60 breaths per minute*</li>\n\t\t<li>2 to 11 months: Greater than or equal to 50 breaths per minute</li>\n\t\t<li>12 to 59 months: Greater than or equal to 40 breaths per minute</li>\n\t</ul>\n\n\t<p>*In young infants, a second measurement should be taken to confirm, unless there is already another sign of possible serious bacterial infection</p>",
                             "type": "display"
                         }
                     ]
@@ -663,6 +688,13 @@
                 {
                     "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
                     "valueCode": "horizontal"
+                },
+                {
+                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemMedia",
+                    "valueAttachment": {
+                        "contentType": "image/jpeg",
+                        "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Binary/chest-indrawing"
+                    }
                 }
             ],
             "linkId": "EmCare.B18S2.DE07",
@@ -686,7 +718,7 @@
                         }
                     ],
                     "linkId": "EmCare.B18S2.DE07-help",
-                    "text": "The young infant must be calm while you assess for Severe Chest Indrawing.\u00a0 Lift the young infant\u2019s shirt. </p>\n\n\t<p>Look for Chest Indrawing when the young infant breathes in. Lower chest wall indrawing is the inward movement of the bony structure of the chest wall <br />\nwhen the child breathes in. Look at the lower chest wall (lower ribs). The child has Chest Indrawing if the lower chest wall goes IN when the child breathes IN.<br />\nIn normal breathing, the whole chest wall (upper and lower) and the abdomen move <span class=\"caps\">OUT</span> when the child breathes IN. </p>\n\n\t<p>Mild Chest Indrawing is normal in a young infant because the chest wall is soft. Severe Chest Indrawing is very deep and easy to see.",
+                    "text": "<p>The young infant must be calm while you assess for severe chest indrawing.  Lift the young infant\u2019s shirt. </p>\n\n\t<p>Look for chest indrawing when the young infant breathes in. Lower chest wall indrawing is the inward movement of the bony structure of the chest wall <br />\nwhen the child breathes in. Look at the lower chest wall (lower ribs). The child has chest indrawing if the lower chest wall goes IN when the child breathes IN.<br />\nIn normal breathing, the whole chest wall (upper and lower) and the abdomen move <span class=\"caps\">OUT</span> when the child breathes IN. </p>\n\n\t<p>Mild chest indrawing is normal in a young infant because the chest wall is soft. Severe chest indrawing is very deep and easy to see.<br />\nLink here for image</p>",
                     "type": "display"
                 }
             ]
@@ -736,7 +768,7 @@
                         }
                     ],
                     "linkId": "EmCare.B18S2.DE08-help",
-                    "text": "Look at the young Infant&#8217;s Movementss. Does the young infant move on his/her own? Does the infant move only when stimulated but then stops? Does the infant not move at all?<br />\nYoung infants often sleep most of the time, and this is not a sign of illness. It is not necessary for the infant to be awake if he/she is moving spontaneously. <br />\nIf a young infant is not moving spontaneously and does not wake up during the assessment, ask the mother to wake him. An awake young infant will normally move his arms or legs or turn his head several times in a\u00a0 minute if you watch him closely. If the infant is awake but has no spontaneous Movements, gently stimulate the young infant. Stimulation\u00a0 is a gentle, painless touching of the baby with enough pressure that would evoke Movements, sound making and eye opening. The presence of any movement such as a grimace of the face, eye-opening or movement of a limb will qualify &#8220;Movement only when stimulated but then stops&#8221;.\u00a0 An infant who cannot be woken up even after stimulation is considered to have the sign &#8220;Does not move even with stimulation. &#8220; ",
+                    "text": "Look at the young infant\u2019s movements. Does the young infant move on his/her own? Does the infant move only when stimulated but then stops? Does the infant not move at all?<br />\nYoung infants often sleep most of the time, and this is not a sign of illness. It is not necessary for the infant to be awake if he/she is moving spontaneously. <br />\nIf a young infant is not moving spontaneously and does not wake up during the assessment, ask the caregiver to wake him. An awake young infant will normally move his arms or legs or turn his head several times in a  minute if you watch him closely. If the infant is awake but has no spontaneous movements, gently stimulate the young infant. Stimulation  is a gentle, painless touching of the baby with enough pressure that would evoke movements, sound making and eye opening. The presence of any movement such as a grimace of the face, eye-opening or movement of a limb will qualify &#8220;&#8220;Movement only when stimulated but then stops&#8221;&#8220;.  An infant who cannot be woken up even after stimulation is considered to have the sign &#8220;&#8220;Does not move even with stimulation. &#8220;&#8221;&#8220; ",
                     "type": "display"
                 }
             ]
@@ -769,7 +801,7 @@
                         }
                     ],
                     "linkId": "EmCare.B18S2.DE12-help",
-                    "text": "&#8220;The umbilical cord usually separates one week after birth and the wound heals within 15 days.  Redness of the end of the umbilicus or pus draining from the umbilicus are signs of umbilical  infection.&#8221; ",
+                    "text": "The umbilical cord usually separates one week after birth and the wound heals within 15 days. <br />\nRedness of the end of the umbilicus or pus draining from the umbilicus are signs of umbilical <br />\ninfection.",
                     "type": "display"
                 }
             ]
@@ -835,7 +867,7 @@
                         }
                     ],
                     "linkId": "EmCare.B19S2.DE01-help",
-                    "text": "Jaundice is a yellow discoloration of skin and mucus membranes. It is important to look for jaundice in natural light. To look for jaundice, press the  infant\u2019s skin over the forehead with your fingers to blanch, remove your fingers and look for yellow discolouration. If there is yellow discoloration, the infant has jaundice",
+                    "text": "Jaundice is a yellow discoloration of skin and mucus membranes. It is important to look for jaundice in natural light. To look for jaundice, press the <br />\ninfant\u2019s skin over the forehead with your fingers to blanch, remove your fingers and look for yellow discolouration. If there is yellow discoloration, the infant has jaundice",
                     "type": "display"
                 }
             ]
@@ -868,7 +900,7 @@
                         }
                     ],
                     "linkId": "EmCare.B19S2.DE02-help",
-                    "text": "Jaundice is a yellow discoloration of skin and mucus membranes. Jaundice in the palms of hands or soles of feet is a sign of Severe Jaundice.\u00a0 It is important to look for jaundice in natural light. To assess for severe jaundice, press the infant&#8217;s skin in the palm of there hand and then in the sole of their feet with your fingers to blanch, remove your finders and look for yellow dicoulouration in the palm or the sole. If there is yellow discoloration of the palm or sole, the infant has severe jaundice.",
+                    "text": "Jaundice is a yellow discoloration of skin and mucus membranes. Jaundice in the palms of hands or soles of feet is a sign of Severe Jaundice.  It is important to look for jaundice in natural light. To assess for severe jaundice, press the infant&#8217;s skin in the palm of there hand and then in the sole of their feet with your fingers to blanch, remove your finders and look for yellow dicoulouration in the palm or the sole. If there is yellow discoloration of the palm or sole, the infant has severe jaundice.",
                     "type": "display"
                 }
             ]
@@ -927,7 +959,7 @@
                         }
                     ],
                     "linkId": "EmCare.B19S2.DE04-help",
-                    "text": "Ask the caregiver when the baby&#8217;s skin first turned yellowish. If the caregiver didn&#8217;t notice the yellow discolouration or can&#8217;t remember when it started, select &#8220;don&#8217;t know&#8221;. <br />\nJaundice that appears in less than 24 hours after birth is always due to an underlying disease. These babies should be referred urgently. <br />\nMany normal babies, particularly small babies, may have jaundice during the first week of life. This jaundice usually appears on the third or fourth day of life and is mild and disappears before the age of two to\u00a0 three weeks. It does not need any treatment.",
+                    "text": "Ask the caregiver when the baby&#8217;s skin first turned yellowish. If the caregiver didn&#8217;t notice the yellow discolouration or can&#8217;t remember when it started, select &#8220;don&#8217;t know&#8221;. <br />\nJaundice that appears in less than 24 hours after birth is always due to an underlying disease. These babies should be referred urgently. <br />\nMany normal babies, particularly small babies, may have jaundice during the first week of life. This jaundice usually appears on the third or fourth day of life and is mild and disappears before the age of two to  three weeks. It does not need any treatment.",
                     "type": "display"
                 }
             ]
@@ -947,7 +979,7 @@
                 }
             ],
             "linkId": "EmCare.B11S2.DE01",
-            "text": "Sunken Eyes",
+            "text": "Sunken eyes",
             "type": "boolean",
             "required": true,
             "repeats": false,
@@ -967,13 +999,20 @@
                         }
                     ],
                     "linkId": "EmCare.B11S2.DE01-help",
-                    "text": "The eyes of a dehydrated infant may look sunken. In a low-weight infant, the eyes may always look sunken, even if the young infant is not dehydrated. Even though the sign \u201csunken eyes\u201d is less reliable in a low-weight infant, it can still be used to classify the young infant\u2018s dehydration. </p>\n\n\t<p>Decide if you think the eyes are sunken. Then ask the mother if she thinks her child\u2019s eyes look unusual. Her opinion can help you confirm.",
+                    "text": "<p>The eyes of a dehydrated infant may look sunken. In a low-weight infant, the eyes may always look sunken, even if the young infant is not dehydrated. Even though the sign \u201cSunken eyes\u201d is less reliable in a low-weight infant, it can still be used to classify the young infant\u2018s dehydration. Link</p>\n\n\t<p>Decide if you think the eyes are sunken. Then ask the mother if she thinks her child\u2019s eyes look unusual. Her opinion can help you confirm.</p>",
                     "type": "display"
                 }
             ]
         },
         {
             "extension": [
+                {
+                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemMedia",
+                    "valueAttachment": {
+                        "contentType": "image/jpeg",
+                        "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Binary/Skin-pinch-of-abdomen"
+                    }
+                },
                 {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
@@ -1026,7 +1065,7 @@
                         }
                     ],
                     "linkId": "EmCare.B11S2.DE02-help",
-                    "text": "Locate the area on the infant\u2019s abdomen halfway between the umbilicus and the side of the abdomen. To do the skin pinch, use your thumb and first finger. Do not use your fingertips because this will cause pain. Place <br />\nyour hand so that when you pinch the skin, the fold of skin will be in a line up and down the child\u2019s body and not across the child\u2019s <br />\nbody. Firmly pick up all of the layers of skin and the tissue under them. Pinch the skin for <br />\none second and then release it. When you release the skin, look to see if the skin pinch <br />\ngoes back:</p>\n\n\t<p>\u2022 very slowly (longer than 2 seconds)<br />\n\u2022 slowly<br />\n\u2022 immediately<br />\nIf the skin stays up for even a brief time after you release it, decide that the skin pinch goes back slowly",
+                    "text": "<p>Locate the area on the infant\u2019s abdomen halfway between the umbilicus and the side of the abdomen. To do the skin pinch, use your thumb and first finger. Do not use your fingertips because this will cause pain. Place your hand so that when you pinch the skin, the fold of skin will be in a line up and down the child\u2019s body and not across the child\u2019s body. Firmly pick up all of the layers of skin and the tissue under them. Pinch the skin for one second and then release it. When you release the skin, look to see if the skin pinch goes back:</p>\n\n\t<ul>\n\t\t<li>immediately</li>\n\t\t<li>slowly (2 seconds or fewer, but not immediately)</li>\n\t\t<li>very slowly (longer than 2 seconds)</li>\n\t</ul>\n\n\t<p>If the skin stays up for even a brief time after you release it, decide that the skin pinch goes back slowly<br />\nLink here for image</p>",
                     "type": "display"
                 }
             ]
@@ -1066,7 +1105,7 @@
                         }
                     ],
                     "linkId": "EmCare.B11S2.DE06-help",
-                    "text": "Look at the young infant&#8217;s general condition Is the infant restles and irritable? <br />\nAn infant has teh sign &#8220;Restless and Irritable&#8221; if the infant is Restless and Irritable all the time or every time he is touched and handled. If an infant is calm when breastfeeding but again <br />\nRestless and Irritable when he stops breastfeeding, he has the sign \u201cRestless and Irritable\u201d. A healthy infant will be consoled when put on the breast.",
+                    "text": "Look at the young infant&#8217;s general condition Is the infant restles and irritable? <br />\nAn infant has teh sign &#8220;restless and irritable&#8221; if the infant is restless and irritable all the time or every time he is touched and handled. If an infant is calm when breastfeeding but again <br />\nrestless and irritable when he stops breastfeeding, he has the sign \u201crestless and irritable\u201d. A healthy infant will be consoled when put on the breast.",
                     "type": "display"
                 }
             ]
@@ -1110,7 +1149,7 @@
                         }
                     ],
                     "linkId": "EmCare.B21S2.DE01-help",
-                    "text": "Weight status is calculated based on the young infant&#8217;s weight for age Z-score, which is determined from a standardized chart for weight -for-age for the infant&#8217;s sex. <br />\nA young infant is low weight for age if the z-score is below -2. <br />\nA young infant who is less than 7 days old and weighs less than 2 kg is considered very low weight.<br />\nSome young infants who are low weight for age were born with low birth weight. Some did not gain weight well after birth.",
+                    "text": "Weight status is auto-calculated based on the young infant&#8217;s weight for age Z-score, which is determined from a standardized chart for weight -for-age for the infant&#8217;s sex. <br />\nA young infant is low weight for age if the z-score is below -2. <br />\nA young infant who is less than 7 days old and weighs less than 2 kg is considered very low weight.<br />\nSome young infants who are low weight for age were born with low birth weight. Some did not gain weight well after birth.",
                     "type": "display"
                 }
             ]
@@ -1146,7 +1185,7 @@
                         }
                     ],
                     "linkId": "EmCare.B21S2.DE05-help",
-                    "text": "Ask the caregiver how many times in 24 hours (one day and one night) they usually breastfeed the young infant. The recommendation is that the young infant be breastfed as often and for as long as the <br />\ninfant wants, day and night. This should be 8 or more times in 24 hours.",
+                    "text": "Ask the caregiver how many times in 24 hours (one day and one night) they usually breastfeed the young infant. The recommendation is that the young infant be breastfed as often and for as long as the infant wants, day and night. This should be 8 or more times in 24 hours.",
                     "type": "display"
                 }
             ]
@@ -1311,7 +1350,7 @@
                         }
                     ],
                     "linkId": "EmCare.B21S2.DE12-help",
-                    "text": "A young infant up to one month of age should be fed 8 times and a young infant between 1 <br />\nand 2 months of age should be fed 7 times in 24 hours.",
+                    "text": "A young infant up to one month of age should be fed 8 times and a young infant between 1 and 2 months of age should be fed 7 times in 24 hours.",
                     "type": "display"
                 }
             ]
@@ -1624,6 +1663,7 @@
                 }
             ],
             "linkId": "EmCare.B21S2.DE31",
+            "text": " ",
             "type": "choice",
             "required": false,
             "repeats": true,
@@ -1633,6 +1673,26 @@
                         "code": "EmCare.B21S2.DE31",
                         "display": "Unable to check if Ulcers or White Patches in Mouth"
                     }
+                }
+            ],
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "help"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B21S2.DE31-help",
+                    "text": "The healthcare worker is unable to check if the young infant has ulcers or white patches in the mouth",
+                    "type": "display"
                 }
             ]
         },

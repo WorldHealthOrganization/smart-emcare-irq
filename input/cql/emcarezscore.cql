@@ -2,10 +2,10 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcarezscore version '1.0.2'
+library emcarezscore version '1.0.3.build.245'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.2' called Base
+include emcarebase version '1.0.3.build.245' called Base
 include WeightForAge version '1.0.4' called wfa
 include WeightForLength version '1.0.4' called wfl
 include WeightForHeight version '1.0.4' called wfh
@@ -153,3 +153,20 @@ define "WAZ":
         zscorefromvisual
     else null
 
+define "WLZ":
+    if existingweight is not null then
+         wfl.generateZScoreWeightForLength("patientsex", (existinglength.value * ( 1.0 as System.Decimal )) ,  (existingweight.value * ( 1.0 as System.Decimal )))
+    else if existingmuac is not null then
+        zscorefrommuac
+    else if existingvisual then
+        zscorefromvisual
+    else null
+
+define "WHZ":
+    if existingweight is not null then
+         wfh.generateZScoreWeightForHeight("patientsex", (existingheight.value * ( 1.0 as System.Decimal )) ,  (existingweight.value * ( 1.0 as System.Decimal )))
+    else if existingmuac is not null then
+        zscorefrommuac
+    else if existingvisual then
+        zscorefromvisual
+    else null

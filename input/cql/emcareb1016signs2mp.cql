@@ -2,13 +2,13 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareb1016signs2mp version '1.0.2'
+library emcareb1016signs2mp version '1.0.3.build.245'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.2' called Base
-include emcareobservation version '1.0.2' called obs
-include emcarevalueset version '1.0.2' called val
-include emcarecombineddataelements version '1.0.2' called clas
+include emcarebase version '1.0.3.build.245' called Base
+include emcarevalueset version '1.0.3.build.245' called val
+include emcarecombineddataelements version '1.0.3.build.245' called clas
+include emcareobservation version '1.0.3.build.245' called obs
 
 
 
@@ -206,17 +206,17 @@ define "Ear problem":
     "OBSdefine.EmCare.B13S1.DE01"
 
 /* 
-Eye Problem : 
+eye problem : 
 o"Eye Problem"
 */
-define "Eye Problem":
+define "eye problem":
     "OBSdefine.EmCare.B14S1.DE03"
 
 /* 
-Skin Problem : 
+skin problem : 
 o"Skin Problem"
 */
-define "Skin Problem":
+define "skin problem":
     "OBSdefine.EmCare.B14S1.DE01"
 
 /* 
@@ -266,4 +266,4 @@ BackReference :
 back reference to resource
 */
 define "BackReference":
-    Reference {reference: string { value: 'Questionnaire/EmCare.B10-16.Signs.2m.p'}}
+    Reference {reference: string { value: 'Questionnaire/emcare.b10-16.signs.2m.p'}}

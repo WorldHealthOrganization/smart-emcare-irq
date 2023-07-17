@@ -17,7 +17,7 @@
                         "display": "Red (congested) throat",
                         "designation": [
                             {
-                                "value": "The client has a Red (congested) throat"
+                                "value": "The child has a Red (congested) throat"
                             }
                         ]
                     },
@@ -26,7 +26,7 @@
                         "display": "Exudate on Throat",
                         "designation": [
                             {
-                                "value": "The client has Exudate on Throat"
+                                "value": "The child exudate on the  throat"
                             }
                         ]
                     },
@@ -35,7 +35,7 @@
                         "display": "Membrane on throat",
                         "designation": [
                             {
-                                "value": "The client has Membrane on throat"
+                                "value": "The child has Membrane on throat"
                             }
                         ]
                     },
@@ -44,7 +44,7 @@
                         "display": "None of the listed throat problems observed",
                         "designation": [
                             {
-                                "value": "The client has None of the listed throat problems observed"
+                                "value": "The child has None of the listed throat problems"
                             }
                         ]
                     }

@@ -41,19 +41,19 @@
                     },
                     {
                         "code": "EmCare.A.DE13",
-                        "display": "Estimated age in years/months for child (2 months or older)",
+                        "display": "Estimate Age - Years/Months for a child",
                         "designation": [
                             {
-                                "value": "The age of the client is estimated based on physical evidence"
+                                "value": "The Caregiver provides the age in Years, Months, Days"
                             }
                         ]
                     },
                     {
                         "code": "EmCare.A.DE14",
-                        "display": "Estimated age in weeks/days for young infant (under 2 months old)",
+                        "display": "Estimate Age - Weeks/Days for young infant",
                         "designation": [
                             {
-                                "value": "The Caregiver provides the age in weeks/days/hours"
+                                "value": "The Caregiver provides the age in  Weeks, Days"
                             }
                         ]
                     },
@@ -62,7 +62,7 @@
                         "display": "Estimated Date of Birth",
                         "designation": [
                             {
-                                "value": "Estimated Date of Birth of the Client"
+                                "value": "The Caregiver provides the estimated date of birth using calendar"
                             }
                         ]
                     },
@@ -71,7 +71,7 @@
                         "display": "Mother",
                         "designation": [
                             {
-                                "value": "The Caregiver is the client's mother"
+                                "value": "The Caregiver is the child's mother"
                             }
                         ]
                     },
@@ -80,7 +80,7 @@
                         "display": "Father",
                         "designation": [
                             {
-                                "value": "The Caregiver is the client's father"
+                                "value": "The Caregiver is the child's father"
                             }
                         ]
                     },
@@ -89,7 +89,7 @@
                         "display": "Sibling",
                         "designation": [
                             {
-                                "value": "The Caregiver is the client's sibling"
+                                "value": "The Caregiver is the child's sibling"
                             }
                         ]
                     },
@@ -98,7 +98,7 @@
                         "display": "Extended family",
                         "designation": [
                             {
-                                "value": "The Caregiver is the client's extended family"
+                                "value": "The Caregiver is the child's extended family"
                             }
                         ]
                     },
@@ -107,7 +107,7 @@
                         "display": "Legal Guardian",
                         "designation": [
                             {
-                                "value": "The Caregiver is the client's legal guardian"
+                                "value": "The Caregiver is the child's legal guardian"
                             }
                         ]
                     },
@@ -116,7 +116,7 @@
                         "display": "Not Related",
                         "designation": [
                             {
-                                "value": "The Caregiver is not related to the client"
+                                "value": "The Caregiver is not related to the child"
                             }
                         ]
                     },
@@ -323,18 +323,28 @@
                     },
                     {
                         "code": "EmCare.B21S2.DE16",
-                        "display": "Sufficient replacement feeds"
+                        "display": "Sufficient replacement feeds",
+                        "designation": [
+                            {
+                                "value": "The caregiver is giving sufficient replacement feeds (approximately 60 ml per feed, 8 times per day for a young infant up to one month of age; approximately 90 ml per feed, 7 times per day for a young infant between 1 and 2 months of age)"
+                            }
+                        ]
                     },
                     {
                         "code": "EmCare.B21S2.DE17",
-                        "display": "Insufficient replacement feeds"
+                        "display": "Insufficient replacement feeds",
+                        "designation": [
+                            {
+                                "value": "The caregiver is not giving sufficient replacement feeds (i.e. less than 60 ml per feed, 8 times per day for a young infant up to one month of age; less than 90 ml per feed, 7 times per day for a young infant between 1 and 2 months of age)"
+                            }
+                        ]
                     },
                     {
                         "code": "EmCare.B20S2.DE03",
                         "display": "Skin Pinch goes back very slowly (More than 2 seconds)",
                         "designation": [
                             {
-                                "value": "The client's skin goes back very slowly after Skin pinch of Abdomen (More than 2 seconds)"
+                                "value": "The child's skin goes back very slowly after skin pinch of abdomen (More than 2 seconds)"
                             }
                         ]
                     },
@@ -343,7 +353,7 @@
                         "display": "Skin Pinch goes back slowly (2 seconds or fewer, but not immediately)",
                         "designation": [
                             {
-                                "value": "The client's skin goes back slowly after Skin pinch of Abdomen (2 seconds or fewer, but not immediately)"
+                                "value": "The child's skin goes back slowly after skin pinch of abdomen (2 seconds or fewer, but not immediately)"
                             }
                         ]
                     },
@@ -352,7 +362,7 @@
                         "display": "Skin Pinch goes back Normally (immediately)",
                         "designation": [
                             {
-                                "value": "The client's skin goes back normally after Skin pinch of Abdomen (immediately)"
+                                "value": "The child's skin goes back normally (immediately) after skin pinch of abdomen"
                             }
                         ]
                     },
@@ -361,7 +371,7 @@
                         "display": "Mouth Sores or Mouth Ulcers - Deep and Extensive",
                         "designation": [
                             {
-                                "value": "The client has mouth sores or mouth ulcers that are deep and extensive"
+                                "value": "The child has mouth sores or ulcers which are deep and extensive  (severe, requiring referral)"
                             }
                         ]
                     },
@@ -370,7 +380,7 @@
                         "display": "Mouth Sores or Mouth Ulcers - Not Deep and Extensive",
                         "designation": [
                             {
-                                "value": "The client has mouth sores or mouth ulcers that are not deep and extensive"
+                                "value": "The child has mouth sores or ulcers which are not deep and extensive (not severe, not requiring referral)"
                             }
                         ]
                     },
@@ -379,7 +389,7 @@
                         "display": "Oral Thrush",
                         "designation": [
                             {
-                                "value": "The client has oral thrush"
+                                "value": "The child has oral thrush"
                             }
                         ]
                     },
@@ -388,7 +398,16 @@
                         "display": "No Oral Sores or Mouth Ulcers",
                         "designation": [
                             {
-                                "value": "The client is not reported to have oral sores or mouth ulcers"
+                                "value": "The child does not have oral sores or mouth ulcers"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.B14S2.DE47",
+                        "display": "No - Do not add a Skin or Mouth or Eye Problem",
+                        "designation": [
+                            {
+                                "value": "A Skin or Mouth or Eye Problem does not need to be added"
                             }
                         ]
                     },
@@ -397,7 +416,7 @@
                         "display": "Severe Palmar Pallor",
                         "designation": [
                             {
-                                "value": "The client has severe Palmar Pallor"
+                                "value": "The child has severe palmar pallor if the skin of the palm is very pale or so pale that it looks white."
                             }
                         ]
                     },
@@ -406,7 +425,7 @@
                         "display": "Some Palmar Pallor",
                         "designation": [
                             {
-                                "value": "The client has some Palmar Pallor"
+                                "value": "The child has some palmar pallor if the skin of the child\u2019s palm is pale but not very pale or so pale that it looks white."
                             }
                         ]
                     },
@@ -415,7 +434,7 @@
                         "display": "No Palmar Pallor",
                         "designation": [
                             {
-                                "value": "The client has no Palmar Pallor"
+                                "value": "The child does not have palmar pallor"
                             }
                         ]
                     },
@@ -424,7 +443,7 @@
                         "display": "Not Able to Feed At All",
                         "designation": [
                             {
-                                "value": "The client is reported not to be able to feed at all"
+                                "value": "The infant is reported not to be able to feed at all"
                             }
                         ]
                     },
@@ -433,7 +452,7 @@
                         "display": "Not Feeding Well",
                         "designation": [
                             {
-                                "value": "The client is reported to not be Feeding Well"
+                                "value": "The infant is reported to not be feeding well"
                             }
                         ]
                     },
@@ -442,7 +461,7 @@
                         "display": "Feeding Well",
                         "designation": [
                             {
-                                "value": "The client is reported to be Feeding Well"
+                                "value": "The infant is reported to be feeding well"
                             }
                         ]
                     },
@@ -451,7 +470,7 @@
                         "display": "Moves on his or her own or moves spontaneously or without stimulation",
                         "designation": [
                             {
-                                "value": "The client Moves on his or her own or moves spontaneously or without stimulation"
+                                "value": "The young infant moves on his or her own or moves spontaneously or without stimulation"
                             }
                         ]
                     },
@@ -460,7 +479,7 @@
                         "display": "Movement only when stimulated but then stops",
                         "designation": [
                             {
-                                "value": "The client has movement but only when stimulated and then movement stops"
+                                "value": "The young infant has movement but only when stimulated and then movement stops"
                             }
                         ]
                     },
@@ -469,7 +488,7 @@
                         "display": "No movement at all",
                         "designation": [
                             {
-                                "value": "The client has No movement at all even after stimulation"
+                                "value": "The young infant has no movement at all even after stimulation"
                             }
                         ]
                     },
@@ -478,7 +497,7 @@
                         "display": "Within less than 24 hours of birth",
                         "designation": [
                             {
-                                "value": "The client's Jaundice appeared less than 24 hours after birth"
+                                "value": "The young infant's Jaundice appeared less than 24 hours after birth"
                             }
                         ]
                     },
@@ -487,7 +506,7 @@
                         "display": "24 hours or more after birth",
                         "designation": [
                             {
-                                "value": "The client's Jaundice appeared 24 hours or more after birth"
+                                "value": "The young infant's Jaundice appeared 24 hours or more after birth"
                             }
                         ]
                     },
@@ -568,7 +587,7 @@
                         "display": "End consultation",
                         "designation": [
                             {
-                                "value": "The client has not been stabilised and the healthcare worker willend the consultation"
+                                "value": "The child has been stabilised and the healthcare worker will continue the consultation"
                             }
                         ]
                     },
@@ -577,7 +596,7 @@
                         "display": "Stabilised, continue consultation",
                         "designation": [
                             {
-                                "value": "The client has been stabilised and the healthcare worker will continue the consultation"
+                                "value": "The child has not been stabilised and the healthcare worker willend the consultation"
                             }
                         ]
                     },
@@ -622,7 +641,7 @@
                         "display": "Correct and hygienic feed preparation",
                         "designation": [
                             {
-                                "value": "The care giver is preparing the milk correctly and hygenically"
+                                "value": "The caregiver is preparing the milk correctly and hygenically"
                             }
                         ]
                     },
@@ -631,7 +650,7 @@
                         "display": "Incorrect or unhygienic feed preparation",
                         "designation": [
                             {
-                                "value": "The care giver is not preparing the milk correctly and hygenically"
+                                "value": "The caregiver is not preparing the milk correctly and hygenically"
                             }
                         ]
                     },
@@ -640,7 +659,7 @@
                         "display": "Cup",
                         "designation": [
                             {
-                                "value": "The milk is given to the client using a cup"
+                                "value": "The milk is given to the young infant using a cup"
                             }
                         ]
                     },
@@ -649,7 +668,7 @@
                         "display": "Bottle",
                         "designation": [
                             {
-                                "value": "The milk is given to the client using a bottle"
+                                "value": "The milk is given to the young infant using a bottle"
                             }
                         ]
                     },
@@ -658,7 +677,7 @@
                         "display": "Feeding utensils not cleaned hygienically",
                         "designation": [
                             {
-                                "value": "The care giver is not cleaning the feeding utensils hygienically"
+                                "value": "The caregiver is not cleaning the feeding utensils hygienically"
                             }
                         ]
                     },
@@ -667,7 +686,7 @@
                         "display": "Feeding utensils cleaned hygienically",
                         "designation": [
                             {
-                                "value": "The care giver is cleaning the feeding utensils hygienically"
+                                "value": "The caregiver is cleaning the feeding utensils hygienically"
                             }
                         ]
                     },
@@ -1045,7 +1064,7 @@
                         "display": "None of the listed throat problems observed",
                         "designation": [
                             {
-                                "value": "The client has None of the listed throat problems observed"
+                                "value": "The child has None of the listed throat problems"
                             }
                         ]
                     },
@@ -1054,7 +1073,7 @@
                         "display": "Yes, without difficulty",
                         "designation": [
                             {
-                                "value": "The client can swallow without difficulty"
+                                "value": "The child can swallow without difficulty"
                             }
                         ]
                     },
@@ -1063,7 +1082,7 @@
                         "display": "Difficulty in swallowing",
                         "designation": [
                             {
-                                "value": "The client has Difficulty in swallowing"
+                                "value": "The child has Difficulty in swallowing"
                             }
                         ]
                     },
@@ -1072,34 +1091,34 @@
                         "display": "Unable to swallow",
                         "designation": [
                             {
-                                "value": "The client is Unable to swallow"
+                                "value": "The child is Unable to swallow"
                             }
                         ]
                     },
                     {
                         "code": "EmCare.B6.DE19",
-                        "display": "Does not appear to be Underweight",
+                        "display": "The child is visually assessed for whether underweight by the health care worker and does not appear to be underweight (estimated weight based on height or age would be equivalent to WHZ= 0 / WAZ= 0)\n(for drug dosing calculations)",
                         "designation": [
                             {
-                                "value": "The client is visually assessed for whether underweight by the health care worker and does not appear to be underweight (estimated weight based on height or age would be equivalent to WHZ= 0 / WAZ= 0)"
+                                "value": "The child is visually assessed for whether underweight by the health care worker and does not appear to be underweight (estimated weight based on height or age would be equivalent to WHZ= 0 / WAZ= 0)\n(for drug dosing calculations)"
                             }
                         ]
                     },
                     {
                         "code": "EmCare.B6.DE20",
-                        "display": "Appears to be Underweight",
+                        "display": "The child is visually assessed for whether underweight by the health care worker and appears to be underweight (as an aide for dosing calculations) (estimated weight based on height or age would be equivalent to WHZ= -1 / WAZ= -1)\n(for drug dosing calculations)",
                         "designation": [
                             {
-                                "value": "The client is visually assessed for whether underweight by the health care worker and appears to be underweight (as an aide for dosing calculations) (estimated weight based on height or age would be equivalent to WHZ= -1 / WAZ= -1)"
+                                "value": "The child is visually assessed for whether underweight by the health care worker and appears to be underweight (as an aide for dosing calculations) (estimated weight based on height or age would be equivalent to WHZ= -1 / WAZ= -1)\n(for drug dosing calculations)"
                             }
                         ]
                     },
                     {
                         "code": "EmCare.B6.DE21",
-                        "display": "Appears to be Severely Underweight",
+                        "display": "The child is visually assessed for whether underweight and appears to be severely underweight (as an aide for dosing calculations) (estimated weight based on height or age would be equivalent to WHZ= -2 / WAZ= -2)\n(for drug dosing calculations)",
                         "designation": [
                             {
-                                "value": "The client is visually assessed for whether underweight and appears to be severely underweight (as an aide for dosing calculations) (estimated weight based on height or age would be equivalent to WHZ= -2 / WAZ= -2)"
+                                "value": "The child is visually assessed for whether underweight and appears to be severely underweight (as an aide for dosing calculations) (estimated weight based on height or age would be equivalent to WHZ= -2 / WAZ= -2)\n(for drug dosing calculations)"
                             }
                         ]
                     },
@@ -1108,7 +1127,7 @@
                         "display": "Severe mucous membrane pallor",
                         "designation": [
                             {
-                                "value": "The client has severe mucous membrane pallor"
+                                "value": "The child has severe mucous membrane pallor"
                             }
                         ]
                     },
@@ -1117,7 +1136,7 @@
                         "display": "Some mucous membrane pallor",
                         "designation": [
                             {
-                                "value": "The client has some mucous membrane pallor"
+                                "value": "The child has some mucous membrane pallor"
                             }
                         ]
                     },
@@ -1126,7 +1145,34 @@
                         "display": "No mucous membrane pallor",
                         "designation": [
                             {
-                                "value": "The client has no mucous membrane pallor"
+                                "value": "The child has no mucous membrane pallor"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.C1.PC.DE07",
+                        "display": "Yes - Vitamin A received in the last month",
+                        "designation": [
+                            {
+                                "value": "The client has received Vitamin A in the last month"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.C1.PC.DE08",
+                        "display": "No Vitamin A received in the last month",
+                        "designation": [
+                            {
+                                "value": "The client has not received Vitamin A in the last month"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "EmCare.C1.PC.DE09",
+                        "display": "Unknown",
+                        "designation": [
+                            {
+                                "value": "It is unknown if the client has received vitamin A in the last month"
                             }
                         ]
                     }

@@ -2,7 +2,7 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcarevalueset version '1.0.2'
+library emcarevalueset version '1.0.3.build.245'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
 
@@ -15,8 +15,8 @@ codesystem "EmCare" : 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/
 code "Female": 'EmCare.A.DE17' from "EmCare" display 'Female'
 code "Male": 'EmCare.A.DE18' from "EmCare" display 'Male'
 code "Not Specified": 'EmCare.A.DE19' from "EmCare" display 'Not Specified'
-code "Estimated age in years/months for child (2 months or older)": 'EmCare.A.DE13' from "EmCare" display 'Estimated age in years/months for child (2 months or older)'
-code "Estimated age in weeks/days for young infant (under 2 months old)": 'EmCare.A.DE14' from "EmCare" display 'Estimated age in weeks/days for young infant (under 2 months old)'
+code "Estimate Age - Years/Months for a child": 'EmCare.A.DE13' from "EmCare" display 'Estimate Age - Years/Months for a child'
+code "Estimate Age - Weeks/Days for young infant": 'EmCare.A.DE14' from "EmCare" display 'Estimate Age - Weeks/Days for young infant'
 code "Estimated Date of Birth": 'EmCare.A.DE15' from "EmCare" display 'Estimated Date of Birth'
 code "Mother": 'EmCare.A.DE25' from "EmCare" display 'Mother'
 code "Father": 'EmCare.A.DE26' from "EmCare" display 'Father'
@@ -57,6 +57,7 @@ code "Mouth Sores or Mouth Ulcers - Deep and Extensive": 'EmCare.B14S2.DE41' fro
 code "Mouth Sores or Mouth Ulcers - Not Deep and Extensive": 'EmCare.B14S2.DE42' from "EmCare" display 'Mouth Sores or Mouth Ulcers - Not Deep and Extensive'
 code "Oral Thrush": 'EmCare.B14S2.DE40' from "EmCare" display 'Oral Thrush'
 code "No Oral Sores or Mouth Ulcers": 'EmCare.B14S2.DE39' from "EmCare" display 'No Oral Sores or Mouth Ulcers'
+code "No - Do not add a Skin or Mouth or Eye Problem": 'EmCare.B14S2.DE47' from "EmCare" display 'No - Do not add a Skin or Mouth or Eye Problem'
 code "Severe Palmar Pallor": 'EmCare.B15S2.DE02' from "EmCare" display 'Severe Palmar Pallor'
 code "Some Palmar Pallor": 'EmCare.B15S2.DE03' from "EmCare" display 'Some Palmar Pallor'
 code "No Palmar Pallor": 'EmCare.B15S2.DE04' from "EmCare" display 'No Palmar Pallor'
@@ -131,9 +132,17 @@ code "None of the listed throat problems observed": 'none' from "EmCare" display
 code "Yes, without difficulty": 'EmCare.B17S1.DE08' from "EmCare" display 'Yes, without difficulty'
 code "Difficulty in swallowing": 'EmCare.B17S1.DE09' from "EmCare" display 'Difficulty in swallowing'
 code "Unable to swallow": 'EmCare.B17S1.DE10' from "EmCare" display 'Unable to swallow'
-code "Does not appear to be Underweight": 'EmCare.B6.DE19' from "EmCare" display 'Does not appear to be Underweight'
-code "Appears to be Underweight": 'EmCare.B6.DE20' from "EmCare" display 'Appears to be Underweight'
-code "Appears to be Severely Underweight": 'EmCare.B6.DE21' from "EmCare" display 'Appears to be Severely Underweight'
+code "The child is visually assessed for whether underweight by the health care worker and does not appear to be underweight (estimated weight based on height or age would be equivalent to WHZ= 0 / WAZ= 0)
+(for drug dosing calculations)": 'EmCare.B6.DE19' from "EmCare" display 'The child is visually assessed for whether underweight by the health care worker and does not appear to be underweight (estimated weight based on height or age would be equivalent to WHZ= 0 / WAZ= 0)
+(for drug dosing calculations)'
+code "The child is visually assessed for whether underweight by the health care worker and appears to be underweight (as an aide for dosing calculations) (estimated weight based on height or age would be equivalent to WHZ= -1 / WAZ= -1)
+(for drug dosing calculations)": 'EmCare.B6.DE20' from "EmCare" display 'The child is visually assessed for whether underweight by the health care worker and appears to be underweight (as an aide for dosing calculations) (estimated weight based on height or age would be equivalent to WHZ= -1 / WAZ= -1)
+(for drug dosing calculations)'
+code "The child is visually assessed for whether underweight and appears to be severely underweight (as an aide for dosing calculations) (estimated weight based on height or age would be equivalent to WHZ= -2 / WAZ= -2)
+(for drug dosing calculations)": 'EmCare.B6.DE21' from "EmCare" display 'The child is visually assessed for whether underweight and appears to be severely underweight (as an aide for dosing calculations) (estimated weight based on height or age would be equivalent to WHZ= -2 / WAZ= -2)
+(for drug dosing calculations)'
 code "Severe mucous membrane pallor": 'EmCare.B15S2.DE10' from "EmCare" display 'Severe mucous membrane pallor'
 code "Some mucous membrane pallor": 'EmCare.B15S2.DE11' from "EmCare" display 'Some mucous membrane pallor'
 code "No mucous membrane pallor": 'EmCare.B15S2.DE12' from "EmCare" display 'No mucous membrane pallor'
+code "Yes - Vitamin A received in the last month": 'EmCare.C1.PC.DE07' from "EmCare" display 'Yes - Vitamin A received in the last month'
+code "No Vitamin A received in the last month": 'EmCare.C1.PC.DE08' from "EmCare" display 'No Vitamin A received in the last month'

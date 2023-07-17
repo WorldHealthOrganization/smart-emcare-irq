@@ -18,7 +18,7 @@
                         "display": "Cup",
                         "designation": [
                             {
-                                "value": "The milk is given to the client using a cup"
+                                "value": "The milk is given to the young infant using a cup"
                             }
                         ]
                     },
@@ -27,7 +27,7 @@
                         "display": "Bottle",
                         "designation": [
                             {
-                                "value": "The milk is given to the client using a bottle"
+                                "value": "The milk is given to the young infant using a bottle"
                             }
                         ]
                     }

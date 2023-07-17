@@ -8,7 +8,7 @@
             "value": "emcare.b18-21.symptoms.2m.m"
         }
     ],
-    "version": "1.0.2",
+    "version": "1.0.3.build.245",
     "name": "emcareb1821symptoms2mm",
     "title": "EmCare.B18-21.Symptoms.2m.m",
     "status": "active",
@@ -31,11 +31,11 @@
         },
         {
             "type": "depends-on",
-            "resource": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareobservation"
+            "resource": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcarevalueset"
         },
         {
             "type": "depends-on",
-            "resource": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcarevalueset"
+            "resource": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareobservation"
         }
     ],
     "parameter": [
@@ -54,7 +54,7 @@
         {
             "id": "ig-loader-emcareb1821symptoms2mm.cql",
             "contentType": "text/cql",
-            "data": "LyoKQGF1dGhvcjogUGF0cmljayBEZWxjcm9peApAZGVzY3JpcHRpb246IFRoaXMgbGlicmFyeSBpcyBwYXJ0IG9mIHRoZSBwcm9qZWN0IEVtQ2FyZQoqLwpsaWJyYXJ5IGVtY2FyZWIxODIxc3ltcHRvbXMybW0gdmVyc2lvbiAnMS4wLjInCnVzaW5nIEZISVIgdmVyc2lvbiAnNC4wLjEnCmluY2x1ZGUgRkhJUkhlbHBlcnMgdmVyc2lvbiAnNC4wLjEnIGNhbGxlZCBGSElSSGVscGVycyAKaW5jbHVkZSBlbWNhcmViYXNlIHZlcnNpb24gJzEuMC4yJyBjYWxsZWQgQmFzZQppbmNsdWRlIGVtY2FyZW9ic2VydmF0aW9uIHZlcnNpb24gJzEuMC4yJyBjYWxsZWQgb2JzCmluY2x1ZGUgZW1jYXJldmFsdWVzZXQgdmVyc2lvbiAnMS4wLjInIGNhbGxlZCB2YWwKCgoKCmNvbnRleHQgUGF0aWVudAoKCi8qIApPQlNkZWZpbmUuRW1DYXJlLkI3LkRFMDIgOiBDb252dWxzaW5nIE5vdwoKKi8KZGVmaW5lICJPQlNkZWZpbmUuRW1DYXJlLkI3LkRFMDIiOgogICAgQmFzZS5HZXRPYnNWYWx1ZSgnRW1DYXJlLkI3LkRFMDInKQoKLyogCkFnZUluTW9udGhzIDogCkFnZUluTW9udGhzKCkKKi8KZGVmaW5lICJBZ2VJbk1vbnRocyI6CiAgICBBZ2VJbk1vbnRocygpCgovKiAKQWdlIGluIE1vbnRoIDogQWdlSW5Nb250aHMKQWxpYXMKKi8KZGVmaW5lICJBZ2UgaW4gTW9udGgiOgogICAgIkFnZUluTW9udGhzIgoKLyogCkNvbnZ1bHNpbmcgTm93IDogCm8iQ29udnVsc2luZyBOb3ciCiovCmRlZmluZSAiQ29udnVsc2luZyBOb3ciOgogICAgIk9CU2RlZmluZS5FbUNhcmUuQjcuREUwMiIKCi8qIApCYWNrUmVmZXJlbmNlIDogCmJhY2sgcmVmZXJlbmNlIHRvIHJlc291cmNlCiovCmRlZmluZSAiQmFja1JlZmVyZW5jZSI6CiAgICBSZWZlcmVuY2Uge3JlZmVyZW5jZTogc3RyaW5nIHsgdmFsdWU6ICdRdWVzdGlvbm5haXJlL0VtQ2FyZS5CMTgtMjEuU3ltcHRvbXMuMm0ubSd9fQo="
+            "data": "LyoKQGF1dGhvcjogUGF0cmljayBEZWxjcm9peApAZGVzY3JpcHRpb246IFRoaXMgbGlicmFyeSBpcyBwYXJ0IG9mIHRoZSBwcm9qZWN0IEVtQ2FyZQoqLwpsaWJyYXJ5IGVtY2FyZWIxODIxc3ltcHRvbXMybW0gdmVyc2lvbiAnMS4wLjMuYnVpbGQuMjQ1Jwp1c2luZyBGSElSIHZlcnNpb24gJzQuMC4xJwppbmNsdWRlIEZISVJIZWxwZXJzIHZlcnNpb24gJzQuMC4xJyBjYWxsZWQgRkhJUkhlbHBlcnMgCmluY2x1ZGUgZW1jYXJlYmFzZSB2ZXJzaW9uICcxLjAuMy5idWlsZC4yNDUnIGNhbGxlZCBCYXNlCmluY2x1ZGUgZW1jYXJldmFsdWVzZXQgdmVyc2lvbiAnMS4wLjMuYnVpbGQuMjQ1JyBjYWxsZWQgdmFsCmluY2x1ZGUgZW1jYXJlb2JzZXJ2YXRpb24gdmVyc2lvbiAnMS4wLjMuYnVpbGQuMjQ1JyBjYWxsZWQgb2JzCgoKCgpjb250ZXh0IFBhdGllbnQKCgovKiAKT0JTZGVmaW5lLkVtQ2FyZS5CNy5ERTAyIDogQ29udnVsc2luZyBOb3cKCiovCmRlZmluZSAiT0JTZGVmaW5lLkVtQ2FyZS5CNy5ERTAyIjoKICAgIEJhc2UuR2V0T2JzVmFsdWUoJ0VtQ2FyZS5CNy5ERTAyJykKCi8qIApBZ2VJbk1vbnRocyA6IApBZ2VJbk1vbnRocygpCiovCmRlZmluZSAiQWdlSW5Nb250aHMiOgogICAgQWdlSW5Nb250aHMoKQoKLyogCkFnZSBpbiBNb250aCA6IEFnZUluTW9udGhzCkFsaWFzCiovCmRlZmluZSAiQWdlIGluIE1vbnRoIjoKICAgICJBZ2VJbk1vbnRocyIKCi8qIApDb252dWxzaW5nIE5vdyA6IApvIkNvbnZ1bHNpbmcgTm93IgoqLwpkZWZpbmUgIkNvbnZ1bHNpbmcgTm93IjoKICAgICJPQlNkZWZpbmUuRW1DYXJlLkI3LkRFMDIiCgovKiAKQmFja1JlZmVyZW5jZSA6IApiYWNrIHJlZmVyZW5jZSB0byByZXNvdXJjZQoqLwpkZWZpbmUgIkJhY2tSZWZlcmVuY2UiOgogICAgUmVmZXJlbmNlIHtyZWZlcmVuY2U6IHN0cmluZyB7IHZhbHVlOiAnUXVlc3Rpb25uYWlyZS9lbWNhcmUuYjE4LTIxLnN5bXB0b21zLjJtLm0nfX0K"
         }
     ]
 }

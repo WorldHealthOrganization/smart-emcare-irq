@@ -29,12 +29,12 @@
         },
         {
             "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
-            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb1014symptoms2mp|1.0.2"
+            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb1014symptoms2mp|1.0.3.build.245"
         }
     ],
     "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b10-14.symptoms.2m.p",
     "name": "EmCare.B10-14.Symptoms.2m.p",
-    "title": "EmCare.B10-14.Symptoms.2m.p",
+    "title": "Symptoms",
     "status": "active",
     "experimental": false,
     "subjectType": [
@@ -118,7 +118,27 @@
             "text": "Cough",
             "type": "boolean",
             "required": true,
-            "repeats": false
+            "repeats": false,
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "help"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B10S1.DE05-help",
+                    "text": "The caregiver reports that the child has a cough, or you see that the child has a cough.",
+                    "type": "display"
+                }
+            ]
         },
         {
             "extension": [
@@ -150,6 +170,26 @@
                         "display": "14 days or more"
                     }
                 }
+            ],
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "help"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B10S1.DE06-help",
+                    "text": "Length of time the child has had the cough<br />\n- Less than 14 days (2 weeks or less)<br />\n- 14 days or more (more than 2 weeks)",
+                    "type": "display"
+                }
             ]
         },
         {
@@ -180,7 +220,7 @@
                         }
                     ],
                     "linkId": "EmCare.B10S1.DE01-help",
-                    "text": "Difficult breathing is any unusual pattern of breathing. Caregivers describe this<br />\nin different ways. They may say that their child\u2019s breathing is \u201cfast\u201d or \u201cnoisy\u201d or \u201cinterrupted.\u201d If a mother answers no, look to see if you think the child has cough or difficult breathing.",
+                    "text": "<b>Difficult breathing is any unusual pattern of breathing.</b> Caregivers describe this in different ways. They may say that their child\u2019s breathing is \u201cfast\u201d or \u201cnoisy\u201d or \u201cinterrupted.\u201d If a mother answers no, <b>look</b> to see if <b>you</b> think the child has cough or difficult breathing.",
                     "type": "display"
                 }
             ]
@@ -215,6 +255,26 @@
                         "display": "14 days or more"
                     }
                 }
+            ],
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "help"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B10S1.DE02-help",
+                    "text": "Length of time the child has had the difficulty in breathing<br />\n- Less than 14 days (2 weeks or less)<br />\n- 14 days or more (more than 2 weeks)",
+                    "type": "display"
+                }
             ]
         },
         {
@@ -245,7 +305,7 @@
                         }
                     ],
                     "linkId": "EmCare.B11S1.DE01-help",
-                    "text": "Diarrhoea occurs when stools contain more water than normal, and are loose or watery.  Diarrhoea is defined as three or more loose or watery stools in a 24-hour period.",
+                    "text": "Diarrhoea occurs when stools contain more water than normal, and are <b>loose or watery.</b>  <br />\nIn <b>children,</b> diarrhoea is defined as three or more loose or watery stools in a 24-hour period.<br />\nIn <b>young infants,</b> diarrhoea is defined as stools which have changed from the usual pattern, and are many and watery. This means more water than faecal matter. The normally frequent or semi-solid stools of a breastfed baby are not diarrhoea.",
                     "type": "display"
                 }
             ]
@@ -279,6 +339,26 @@
                         "code": "EmCare.B10S1.DE08",
                         "display": "14 days or more"
                     }
+                }
+            ],
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "help"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B11S1.DE02-help",
+                    "text": "Length of time the child has had diarrhoea<br />\n- less than 14 days (less than 2 weeks)<br />\n- 14 days or more (2 weeks or more)",
+                    "type": "display"
                 }
             ]
         },
@@ -317,7 +397,7 @@
                         }
                     ],
                     "linkId": "EmCare.B11S1.DE05-help",
-                    "text": "Ask the mother if she has seen blood in the stools at any time during this episode of diarrhoea. Dysentery is diarrhoea with blood in the stool, with or without mucus. The most common cause of dysentery is Shigella bacteria. Dysentery will require specific treatments.",
+                    "text": "The child has had blood in the stool in this illness",
                     "type": "display"
                 }
             ]
@@ -350,7 +430,7 @@
                         }
                     ],
                     "linkId": "EmCare.B12S1.DE02-help",
-                    "text": "Ask the caregiver: \u201cDoes the child have fever?\u201d The child has a history of fever if the child has had any fever with this illness",
+                    "text": "The child has &#8220;Fever Reported&#8221; (history of fever) if the child has had any fever with this illness",
                     "type": "display"
                 }
             ]
@@ -385,6 +465,26 @@
                         "display": "7 Days or more"
                     }
                 }
+            ],
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "help"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B12S1.DE03-l-help",
+                    "text": "Length of time the child has had fever<br />\n- 7 days or less (1 week or less)<br />\n- More than 7 days (more than 1 week)",
+                    "type": "display"
+                }
             ]
         },
         {
@@ -397,31 +497,15 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
-                        "expression": "iif(%resource.repeat(item).where(linkId='EmCare.B.G.DE06').answer.first().value= true and %resource.repeat(item).where(linkId='EmCare.B12S1.DE02').answer.first().value=false,'EmCare.B12S1.DE04',%resource.repeat(item).where(linkId='EmCare.B12S1.DE03-l').answer.first().value)"
+                        "expression": "iif(%resource.repeat(item).where(linkId='EmCare.B.G.DE06').answer.first().value= true and %resource.repeat(item).where(linkId='EmCare.B12S1.DE02').answer.first().value=false,'EmCare.B12S1.DE04',%resource.repeat(item).where(linkId='EmCare.B12S1.DE03-l').answer.first().value.code)"
                     }
                 }
             ],
             "linkId": "EmCare.B12S1.DE03",
             "text": "Fever for how long?",
-            "type": "choice",
+            "type": "string",
             "required": false,
-            "repeats": false,
-            "answerOption": [
-                {
-                    "valueCoding": {
-                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
-                        "code": "EmCare.B12S1.DE04",
-                        "display": "Less than 7 days"
-                    }
-                },
-                {
-                    "valueCoding": {
-                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
-                        "code": "EmCare.B12S1.DE05",
-                        "display": "7 Days or more"
-                    }
-                }
-            ]
+            "repeats": false
         },
         {
             "extension": [
@@ -462,10 +546,30 @@
                 }
             ],
             "linkId": "EmCare.B12S1.DE06",
-            "text": "Has Fever been present every day since the Fever started?",
+            "text": "Has Fever been present every day for more than 7 days",
             "type": "boolean",
             "required": false,
-            "repeats": false
+            "repeats": false,
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "help"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B12S1.DE06-help",
+                    "text": "If the fever has been present for more than 7 days, ask if the fever has been present every day. **A fever that has been present every day for more than 7 days can mean that the<br />\nchild has a more severe disease** such as typhoid fever. The child will need referral for further assessment.",
+                    "type": "display"
+                }
+            ]
         },
         {
             "extension": [
@@ -478,7 +582,27 @@
             "text": "Ear problem",
             "type": "boolean",
             "required": true,
-            "repeats": false
+            "repeats": false,
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "help"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B13S1.DE01-help",
+                    "text": "To determine if a child has an ear problem, you should ask, look, and feel.<br />\nEar problems are common. Though ear infections rarely cause death, they are the main cause of deafness and can cause learning problems at school. It is very important to assess, classify, and treat ear problems to prevent pain in the short term, and more serious consequences in the long-term.",
+                    "type": "display"
+                }
+            ]
         },
         {
             "extension": [
@@ -515,7 +639,7 @@
                         }
                     ],
                     "linkId": "EmCare.B13S1.DE02-help",
-                    "text": "If the carIf the caregiver is not sure that the child has Ear pain, ask if the child has been irritable and rubbing his ear. egiver is not sure that the child has Ear pain, ask if the child has been irritable and rubbing his ear.",
+                    "text": "Ear pain can mean that the child has an ear infection. If the caregiver is not sure that the child has ear pain, ask if the child has been irritable and rubbing his ear.",
                     "type": "display"
                 }
             ]
@@ -538,7 +662,27 @@
             "text": "Ear discharge",
             "type": "boolean",
             "required": false,
-            "repeats": false
+            "repeats": false,
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "help"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B13S1.DE03-help",
+                    "text": "The child is reported or appears to have pus discharging from the ear. Use words the caregiver understands.",
+                    "type": "display"
+                }
+            ]
         },
         {
             "extension": [
@@ -570,6 +714,26 @@
                         "display": "14 days or more"
                     }
                 }
+            ],
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "help"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B13S1.DE04-help",
+                    "text": "How long the child has had the discharge from the ear. <br />\n- Less than 14 days (Less than 2 weeks)<br />\n- 14 days or more (2 weeks or more)",
+                    "type": "display"
+                }
             ]
         },
         {
@@ -583,7 +747,27 @@
             "text": "Eye Problem",
             "type": "boolean",
             "required": true,
-            "repeats": false
+            "repeats": false,
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "help"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B14S1.DE03-help",
+                    "text": "The child is reported to have or appears to have an eye problem",
+                    "type": "display"
+                }
+            ]
         },
         {
             "extension": [
@@ -603,7 +787,27 @@
             "text": "Skin Problem",
             "type": "boolean",
             "required": true,
-            "repeats": false
+            "repeats": false,
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "help"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B14S1.DE01-help",
+                    "text": "The child is reported to have or appears to have a skin problem",
+                    "type": "display"
+                }
+            ]
         },
         {
             "extension": [

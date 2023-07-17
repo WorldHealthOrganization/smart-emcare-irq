@@ -29,7 +29,7 @@
         },
         {
             "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
-            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb22hemoglobin|1.0.2"
+            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb22hemoglobin|1.0.3.build.245"
         }
     ],
     "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b22.hemoglobin",
@@ -44,6 +44,22 @@
         {
             "extension": [
                 {
+                    "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                    "valueQuantity": {
+                        "value": 25,
+                        "system": "http://unitsofmeasure.org",
+                        "code": "g/L"
+                    }
+                },
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                    "valueQuantity": {
+                        "value": 200,
+                        "system": "http://unitsofmeasure.org",
+                        "code": "g/L"
+                    }
+                },
+                {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
@@ -55,7 +71,27 @@
             "text": "Hemoglobin (Hb) g/dL",
             "type": "quantity",
             "required": true,
-            "repeats": false
+            "repeats": false,
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "help"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B22.DE81-help",
+                    "text": "The child&#8217;s Hemoglobin (Hb) result",
+                    "type": "display"
+                }
+            ]
         },
         {
             "extension": [
@@ -81,6 +117,7 @@
                 }
             ],
             "linkId": "EmCare.B22.DE82",
+            "text": " ",
             "type": "choice",
             "required": true,
             "repeats": true,
@@ -90,6 +127,26 @@
                         "code": "EmCare.B22.DE82",
                         "display": "Hemoglobin Test Not Available"
                     }
+                }
+            ],
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "help"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B22.DE82-help",
+                    "text": "There is no Hemoglobin test available for the child",
+                    "type": "display"
                 }
             ]
         },

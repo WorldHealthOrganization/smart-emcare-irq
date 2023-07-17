@@ -14,11 +14,21 @@
                 "concept": [
                     {
                         "code": "EmCare.B7.DE08",
-                        "display": "Unconscious"
+                        "display": "Unconscious",
+                        "designation": [
+                            {
+                                "value": "An **unconscious child cannot be wakened.** He does not respond when he is touched, shaken, or spoken to. Ask the caregiver if the child seems unusually sleepy or if she cannot wake the child. Look to see if the child wakens when the caregiver talks or shakes the child or when you clap your hands."
+                            }
+                        ]
                     },
                     {
                         "code": "EmCare.B7.DE08a",
-                        "display": "Lethargic"
+                        "display": "Lethargic",
+                        "designation": [
+                            {
+                                "value": "A **lethargic child is not awake and alert when she should be.** The child is drowsy and does not show interest in what is happening around her.\n\nOften the lethargic child does not look at his caregiver or watch your face when you talk, or will not respond if you clap or snap your fingers. The child may stare blankly and appear not to notice what is going on around him."
+                            }
+                        ]
                     },
                     {
                         "code": "none",

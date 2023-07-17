@@ -2,12 +2,12 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcarecombineddataelements version '1.0.2'
+library emcarecombineddataelements version '1.0.3.build.245'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.2' called Base
-include emcareobservation version '1.0.2' called obs
-include emcarevalueset version '1.0.2' called val
+include emcarebase version '1.0.3.build.245' called Base
+include emcarevalueset version '1.0.3.build.245' called val
+include emcareobservation version '1.0.3.build.245' called obs
 
 
 
@@ -177,7 +177,7 @@ define "OBSdefine.EmCare.B11S2.DE06":
     Base.GetObsValue('EmCare.B11S2.DE06')
 
 /* 
-OBSdefine.EmCare.B11S2.DE01 : Sunken Eyes
+OBSdefine.EmCare.B11S2.DE01 : Sunken eyes
 
 */
 define "OBSdefine.EmCare.B11S2.DE01":
@@ -411,9 +411,9 @@ DL-G-CL1-23-30 :
      and ((    ("Age >= 2 months to <60 months")
          and ((    "Unconscious" = true and "Skin pinch of Abdomen" = "Skin Pinch goes back slowly (2 seconds or fewer, but not immediately)")
          or (    ("Restless and Irritable" = true or "Skin pinch of Abdomen" = "Skin Pinch goes back slowly (2 seconds or fewer, but not immediately)" ) and ("Oral Fluid Test Results" = "Completely Unable to Drink" or "Oral Fluid Test Results" = "Vomits Immediately / Everything" or  "Completely Unable to Drink or Vomits Immediately / Everything"=true))
-         or (    (ToInteger("Unconscious" = true or  "Lethargic" = true) + ToInteger("Sunken Eyes" = true) +ToInteger("Skin pinch of Abdomen" = "Skin Pinch goes back very slowly (More than 2 seconds)" )+ToInteger( "Oral Fluid Test Results" = "Completely Unable to Drink" )+ToInteger(  "Oral Fluid Test Results" = "Vomits Immediately / Everything")  + ToInteger(  "Completely Unable to Drink or Vomits Immediately / Everything"=true )+ToInteger( "Oral Fluid Test Results" = "Drinks Poorly") )>1)))
+         or (    (ToInteger("Unconscious" = true or  "Lethargic" = true) + ToInteger("Sunken eyes" = true) +ToInteger("Skin pinch of Abdomen" = "Skin Pinch goes back very slowly (More than 2 seconds)" )+ToInteger( "Oral Fluid Test Results" = "Completely Unable to Drink" )+ToInteger(  "Oral Fluid Test Results" = "Vomits Immediately / Everything")  + ToInteger(  "Completely Unable to Drink or Vomits Immediately / Everything"=true )+ToInteger( "Oral Fluid Test Results" = "Drinks Poorly") )>1)))
      or (    (AgeInMonths()<2)
-         and ((    (ToInteger("Sunken Eyes"=true) +  ToInteger("Skin pinch of Abdomen" = "Skin Pinch goes back very slowly (More than 2 seconds)") + ToInteger("Infant's Movements" = "Movement only when stimulated but then stops") +ToInteger("Infant's Movements" = "No movement at all"))>1)
+         and ((    (ToInteger("Sunken eyes"=true) +  ToInteger("Skin pinch of Abdomen" = "Skin Pinch goes back very slowly (More than 2 seconds)") + ToInteger("Infant's Movements" = "Movement only when stimulated but then stops") +ToInteger("Infant's Movements" = "No movement at all"))>1)
          or (    "Skin pinch of Abdomen" = "Skin Pinch goes back slowly (2 seconds or fewer, but not immediately)" and ("Infant's Movements" = "Movement only when stimulated but then stops"  or "Infant's Movements" = "No movement at all" ))
          or (    "Skin pinch of Abdomen" = "Skin Pinch goes back very slowly (More than 2 seconds)" and "Restless and Irritable" = true))))
 */
@@ -438,7 +438,7 @@ define "Severe Dehydration":
 /* 
 DL-G-CL1-24-32 : 
     ("Diarrhoea" = true and  "Severe Dehydration"!=true)
-     and ((    (ToInteger("Restless and Irritable" = true) + ToInteger("Sunken Eyes" = true) + ToInteger("Skin pinch of Abdomen" = "Skin Pinch goes back slowly (2 seconds or fewer, but not immediately)" ) + ToInteger("Oral Fluid Test Results" = "Drinks Eagerly / Thirstily" ))>1)
+     and ((    (ToInteger("Restless and Irritable" = true) + ToInteger("Sunken eyes" = true) + ToInteger("Skin pinch of Abdomen" = "Skin Pinch goes back slowly (2 seconds or fewer, but not immediately)" ) + ToInteger("Oral Fluid Test Results" = "Drinks Eagerly / Thirstily" ))>1)
      or (    ("Age >= 2 months to <60 months")
          and ((    "Restless and Irritable" = true and ("Oral Fluid Test Results" = "Drinks Poorly" or  "Skin pinch of Abdomen" = "Skin Pinch goes back very slowly (More than 2 seconds)" ))
          or (    ("Lethargic" = true or "Oral Fluid Test Results" = "Drinks Poorly") and ("Skin pinch of Abdomen" = "Skin Pinch goes back slowly (2 seconds or fewer, but not immediately)" )))))
@@ -486,7 +486,7 @@ YI severe classification other than Severe Dehydration :
         or
         "Yellow Palms or Yellow Soles" = true or ("Yellow Skin" = true and "Age <24 hours") or ("Yellow Skin" = true and "Age  >= 24 hours" and AgeInDays() < 21  and "When did the Jaundice first appear?" = "Within less than 24 hours of birth")
         or
-        "Diarrhoea" = true and (("Restless and Irritable" = "Yes" and "Skin pinch of Abdomen" = "Skin Pinch goes back very slowly (More than 2 seconds)") or ("Sunken Eyes" = "Yes" and "Skin pinch of Abdomen" = "Skin Pinch goes back very slowly (More than 2 seconds)"))
+        "Diarrhoea" = true and (("Restless and Irritable" = "Yes" and "Skin pinch of Abdomen" = "Skin Pinch goes back very slowly (More than 2 seconds)") or ("Sunken eyes" = "Yes" and "Skin pinch of Abdomen" = "Skin Pinch goes back very slowly (More than 2 seconds)"))
         or
         "Weight Status" = "Very Low Weight for Age"))
 */
@@ -507,7 +507,7 @@ YI severe classification :
         or
         "Yellow Palms or Yellow Soles" = true or ("Yellow Skin" = true and "Age <24 hours") or ("Yellow Skin" = true and "Age  >= 24 hours" and AgeInDays() < 21  and "When did the Jaundice first appear?" = "Within less than 24 hours of birth")
         or
-        "Diarrhoea" = true and (("Restless and Irritable" = "Yes" and "Skin pinch of Abdomen" = "Skin Pinch goes back very slowly (More than 2 seconds)") or ("Sunken Eyes" = "Yes" and "Skin pinch of Abdomen" = "Skin Pinch goes back very slowly (More than 2 seconds)"))
+        "Diarrhoea" = true and (("Restless and Irritable" = "Yes" and "Skin pinch of Abdomen" = "Skin Pinch goes back very slowly (More than 2 seconds)") or ("Sunken eyes" = "Yes" and "Skin pinch of Abdomen" = "Skin Pinch goes back very slowly (More than 2 seconds)"))
         or
         "Weight Status" = "Very Low Weight for Age"))
 */
@@ -540,4 +540,4 @@ BackReference :
 back reference to resource
 */
 define "BackReference":
-    Reference {reference: string { value: 'Questionnaire/EmCare.CombinedDataElements'}}
+    Reference {reference: string { value: 'Questionnaire/emcare.combineddataelements'}}

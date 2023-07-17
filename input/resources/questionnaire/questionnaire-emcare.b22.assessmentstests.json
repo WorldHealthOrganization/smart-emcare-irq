@@ -29,12 +29,12 @@
         },
         {
             "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
-            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb22assessmentstests|1.0.2"
+            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb22assessmentstests|1.0.3.build.245"
         }
     ],
     "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b22.assessmentstests",
     "name": "EmCare.B22.AssessmentsTests",
-    "title": "EmCare.B22.AssessmentsTests",
+    "title": "Assesments-Tests",
     "status": "active",
     "experimental": false,
     "subjectType": [
@@ -310,7 +310,7 @@
                                 }
                             ],
                             "linkId": "EmCare.B22.DE01-help",
-                            "text": "<b>Count the number of breaths the child takes per minute</b> to determine if fast breathing is present.<br />\nIt is <b>very important that the child is calm</b> and still. If the child is moving or crying, you will not be able to get an accurate count of breaths. <br />\n<b>To count the breaths per minute,</b> use a watch with a second hand or a digital watch. Look for the breathing movement anywhere on the child\u2019s chest or abdomen. <br />\nThe number of breaths for <b>\u2018fast breathing\u2019 depends on the child\u2019s age.</b></p>\n\n\t<ul>\n\t\t<li>Under 2 months: More than 60 breaths per minute*</li>\n\t\t<li>2 to 11 months: More than 50 breaths per minute</li>\n\t\t<li>12 to 59 months: More than 40 breaths per minute</li>\n\t</ul>\n\n\t<p>*In young infants, a second measurement should be taken to confirm, unless there is already another sign of possible serious bacterial infection",
+                            "text": "<p><b>Count the number of breaths the child takes per minute</b> to determine if fast breathing is present.<br />\nIt is <b>very important that the child is calm</b> and still. If the child is moving or crying, you will not be able to get an accurate count of breaths. <br />\n<b>To count the breaths per minute,</b> use a watch with a second hand or a digital watch. Look for the breathing movement anywhere on the child\u2019s chest or abdomen. </p>\n\n\t<p>Caution: The rise and fall of the chest or abdomen counts as one breath, not two.</p>\n\n\t<p>The number of breaths for <b>\u2018fast breathing\u2019 depends on the child\u2019s age.</b> </p>\n\n\t<ul>\n\t\t<li>Under 2 months: Greater than or equal to 60 breaths per minute*</li>\n\t\t<li>2 to 11 months: Greater than or equal to 50 breaths per minute</li>\n\t\t<li>12 to 59 months: Greater than or equal to 40 breaths per minute</li>\n\t</ul>\n\n\t<p>*In young infants, a second measurement should be taken to confirm, unless there is already another sign of possible serious bacterial infection</p>",
                             "type": "display"
                         }
                     ]
@@ -339,6 +339,7 @@
                         }
                     ],
                     "linkId": "EmCare.B22.DE02",
+                    "text": " ",
                     "type": "choice",
                     "required": false,
                     "repeats": true,
@@ -348,6 +349,26 @@
                                 "code": "EmCare.B22.DE02",
                                 "display": "Unable to perform Respiratory Rate at this time"
                             }
+                        }
+                    ],
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "EmCare.B22.DE02-help",
+                            "text": "If the child is not calm and it is not possible to measure the respiratory rate, ask the mother to help calm the child and measure later in the consultation.",
+                            "type": "display"
                         }
                     ]
                 },
@@ -404,7 +425,7 @@
                                         }
                                     ],
                                     "linkId": "EmCare.B22.DE04-help",
-                                    "text": "<b>Count the number of breaths the child takes per minute</b> to determine if fast breathing is present.<br />\nIt is <b>very important that the child is calm</b> and still. If the child is moving or crying, you will not be able to get an accurate count of breaths. <br />\n<b>To count the breaths per minute,</b> use a watch with a second hand or a digital watch. Look for the breathing movement anywhere on the child\u2019s chest or abdomen. <br />\nThe number of breaths for <b>\u2018fast breathing\u2019 depends on the child\u2019s age.</b></p>\n\n\t<ul>\n\t\t<li>Under 2 months: More than 60 breaths per minute*</li>\n\t\t<li>2 to 11 months: More than 50 breaths per minute</li>\n\t\t<li>12 to 59 months: More than 40 breaths per minute</li>\n\t</ul>\n\n\t<p>*In young infants, a second measurement should be taken to confirm, unless there is already another sign of possible serious bacterial infection",
+                                    "text": "<p>In young infants, <b>a second respiratory rate measurement should be taken to confirm fast breathing</b> (60 breaths a minute or more) found at the first measurement, unless there is already another sign of possible serious bacterial infection. Fast breathing is confirmed if respiratory rate is 60 breaths a minute or more at the second count. </p>\n\n\t<p>To measure the respiratory rate:<br />\n<b>Count the number of breaths the child takes per minute</b> to determine if fast breathing is present.<br />\nIt is <b>very important that the child is calm</b> and still. If the child is moving or crying, you will not be able to get an accurate count of breaths. <br />\n<b>To count the breaths per minute,</b> use a watch with a second hand or a digital watch. Look for the breathing movement anywhere on the child\u2019s chest or abdomen.</p>",
                                     "type": "display"
                                 }
                             ]
@@ -433,6 +454,7 @@
                                 }
                             ],
                             "linkId": "EmCare.B22.DE05",
+                            "text": " ",
                             "type": "choice",
                             "required": false,
                             "repeats": true,
@@ -442,6 +464,26 @@
                                         "code": "EmCare.B22.DE05",
                                         "display": "Respiratory Rate (Second Count) Not Possible"
                                     }
+                                }
+                            ],
+                            "item": [
+                                {
+                                    "extension": [
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                            "valueCodeableConcept": {
+                                                "coding": [
+                                                    {
+                                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                        "code": "help"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "linkId": "EmCare.B22.DE05-help",
+                                    "text": "The child&#8217;s second respiratory rate is not possible to measure",
+                                    "type": "display"
                                 }
                             ]
                         }
@@ -509,7 +551,7 @@
                                 }
                             ],
                             "linkId": "fastbreathing-True-help",
-                            "text": "The number of breaths for <b>\u2018fast breathing\u2019 depends on the child\u2019s age.</b>   </p>\n\n\t<ul>\n\t\t<li>Under 2 months: More than 60 breaths per minute(*)</li>\n\t\t<li>2 to 11 months: More than 50 breaths per minute</li>\n\t\t<li>12 to 59 months: More than 40 breaths per minute</li>\n\t</ul>\n\n\t<p>*In young infants, a second measurement should be taken to confirm, unless there is already another sign of possible serious bacterial infection",
+                            "text": "<p>Fast breathing is auto-calculated based on the respiratory rate and the child&#8217;s age: </p>\n\n\t<ul>\n\t\t<li>Under 2 months: Greater than or equal to 60 breaths per minute*</li>\n\t\t<li>2 to 11 months: Greater than or equal to 50 breaths per minute</li>\n\t\t<li>12 to 59 months: Greater than or equal to 40 breaths per minute</li>\n\t</ul>\n\n\t<p>*In young infants, a second measurement should be taken to confirm, unless there is already another sign of possible serious bacterial infection</p>",
                             "type": "display"
                         }
                     ]
@@ -545,7 +587,7 @@
                                 }
                             ],
                             "linkId": "fastbreathing-False-help",
-                            "text": "The number of breaths for <b>\u2018fast breathing\u2019 depends on the child\u2019s age.</b>   </p>\n\n\t<ul>\n\t\t<li>Under 2 months: More than 60 breaths per minute(*)</li>\n\t\t<li>2 to 11 months: More than 50 breaths per minute</li>\n\t\t<li>12 to 59 months: More than 40 breaths per minute</li>\n\t</ul>\n\n\t<p>*In young infants, a second measurement should be taken to confirm, unless there is already another sign of possible serious bacterial infection",
+                            "text": "<p>Fast breathing is auto-calculated based on the respiratory rate and the child&#8217;s age: </p>\n\n\t<ul>\n\t\t<li>Under 2 months: Greater than or equal to 60 breaths per minute*</li>\n\t\t<li>2 to 11 months: Greater than or equal to 50 breaths per minute</li>\n\t\t<li>12 to 59 months: Greater than or equal to 40 breaths per minute</li>\n\t</ul>\n\n\t<p>*In young infants, a second measurement should be taken to confirm, unless there is already another sign of possible serious bacterial infection</p>",
                             "type": "display"
                         }
                     ]
@@ -639,7 +681,7 @@
                                 }
                             ],
                             "linkId": "EmCare.B22.DE08-help",
-                            "text": "If the child is unconscious, do not try to carry out an oral fluid test as it could cause the child to choke or fluid to go into their lungs.<br />\nAsk the mother to offer the child some water in a cup or spoon (or breastfeed for a child under 6 months). Watch the child drink. <br />\nA child is not able to drink if he is not able to suck or swallow when offered a drink. A child may not be able to drink because he is lethargic or unconscious.<br />\nA child is drinking poorly if the child is weak and cannot drink without help. He may be able to swallow only if fluid is put in his mouth.<br />\nA child has the sign drinking eagerly and acts thirsty if it is clear that the child wants to drink. Look to see if the child reaches out for the cup or spoon when you offer him water. When the water is taken away, see if the child is unhappy because he wants to drink more.<br />\nIf the child takes a drink only with encouragement and does not want to drink more, he does not have the sign drinking eagerly, thirsty.",
+                            "text": "If the child is unconscious, do not try to carry out an oral fluid test as it could cause the child to choke or fluid to go into their lungs.<br />\nAsk the mother to offer the child some water in a cup or spoon (or breastfeed for a child under 6 months). Watch the child drink. <br />\nA child is <b>not able to drink</b> if he is not able to suck or swallow when offered a drink. A child may not be able to drink because he is lethargic or unconscious.<br />\nA child is <b>drinking poorly</b> if the child is weak and cannot drink without help. He may be able to swallow only if fluid is put in his mouth.<br />\nA child has the sign <b>drinking eagerly and acts thirsty</b> if it is clear that the child wants to drink. Look to see if the child reaches out for the cup or spoon when you offer him water. When the water is taken away, see if the child is unhappy because he wants to drink more.<br />\nIf the child takes a drink only with encouragement and does not want to drink more, he does not have the sign drinking eagerly, thirsty.",
                             "type": "display"
                         }
                     ]
@@ -668,6 +710,7 @@
                         }
                     ],
                     "linkId": "EmCare.B22.DE14",
+                    "text": " ",
                     "type": "choice",
                     "required": true,
                     "repeats": true,
@@ -677,6 +720,26 @@
                                 "code": "EmCare.B22.DE14",
                                 "display": "Unable to Perform Oral Fluid Test"
                             }
+                        }
+                    ],
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "EmCare.B22.DE14-help",
+                            "text": "The healthcare worker is unable to perform oral fluid test",
+                            "type": "display"
                         }
                     ]
                 },
@@ -709,7 +772,27 @@
                     "text": "Completely Unable to Drink or Vomits Immediately / Everything",
                     "type": "boolean",
                     "required": false,
-                    "repeats": false
+                    "repeats": false,
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "EmCare.B22.DE14a-help",
+                            "text": "When Danger Signs are present when the healthcare worker is Unable to Perform Oral Fluid Test it is assumed that the child is completely unable to drink or vomits everything",
+                            "type": "display"
+                        }
+                    ]
                 },
                 {
                     "extension": [
@@ -729,7 +812,27 @@
                     "text": "Has the Child had anything to drink today?",
                     "type": "boolean",
                     "required": false,
-                    "repeats": false
+                    "repeats": false,
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "EmCare.B22.DE15-help",
+                            "text": "When it is not possible to conduct an oral fluid test, ask when the child last drank as part of dehydration assessment",
+                            "type": "display"
+                        }
+                    ]
                 },
                 {
                     "extension": [
@@ -781,6 +884,26 @@
                                 "code": "EmCare.B22.DE13",
                                 "display": "Drinks Normally"
                             }
+                        }
+                    ],
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "EmCare.B22.DE16-help",
+                            "text": "When it is not possible to conduct an oral fluid test, ask how the child last drank as part of dehydration assessment",
+                            "type": "display"
                         }
                     ]
                 }
@@ -856,6 +979,7 @@
                         }
                     ],
                     "linkId": "EmCare.B22.DE22",
+                    "text": " ",
                     "type": "choice",
                     "required": false,
                     "repeats": true,
@@ -884,24 +1008,6 @@
                             ],
                             "linkId": "EmCare.B22.DE22-help",
                             "text": "- Give 2 puffs from salbutamol metered dose inhaler (100 \u03bcg/puff) using a spacer*",
-                            "type": "display"
-                        },
-                        {
-                            "extension": [
-                                {
-                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory",
-                                    "valueCodeableConcept": {
-                                        "coding": [
-                                            {
-                                                "system": "http://hl7.org/fhir/questionnaire-display-category",
-                                                "code": "instructions"
-                                            }
-                                        ]
-                                    }
-                                }
-                            ],
-                            "linkId": "EmCare.B22.DE22-instruction",
-                            "text": "help",
                             "type": "display"
                         }
                     ]
@@ -941,7 +1047,7 @@
                                 }
                             ],
                             "linkId": "EmCare.B22.DE18-help",
-                            "text": "- Repeat up to 3 times every 15\u201320 minutes",
+                            "text": "<p><b><span class=\"caps\">NORMAL</span>:</b> When child breaths <b>IN,</b> chest wall moves <b><span class=\"caps\">OUT</span></b><br />\n<b><span class=\"caps\">CHEST</span> <span class=\"caps\">INDRAWING</span>:</b> When child breaths <b>IN,</b> chest wall moves <b>IN</b></p>\n\n\t<p>Chest indrawing occurs when the child needs to make a greater effort than normal to breathe in. <b>You will look for chest indrawing when the child breathes IN.</b></p>\n\n\t<p>In normal breathing, the whole chest wall (upper and lower) and the abdomen move <span class=\"caps\">OUT</span> when the child breathes IN. <b>The child has chest indrawing if the lower chest wall (lower ribs) goes IN when the child breathes IN.</b></p>",
                             "type": "display"
                         }
                     ]
@@ -984,7 +1090,7 @@
                                 }
                             ],
                             "linkId": "EmCare.B22.DE19-help",
-                            "text": "- Reassess respiratory rate and chest indrawing",
+                            "text": "<b>Count the number of breaths the child takes per minute</b> to determine if fast breathing is present post-bronchodilator trial.<br />\nIt is <b>very important that the child is calm</b> and still. If the child is moving or crying, you will not be able to get an accurate count of breaths. <br />\n<b>To count the breaths per minute,</b> use a watch with a second hand or a digital watch. Look for the breathing movement anywhere on the child\u2019s chest or abdomen. <br />\nThe number of breaths for <b>\u2018fast breathing\u2019 depends on the child\u2019s age.</b><br />\n- 2 to 11 months: More than 50 breaths per minute<br />\n- 12 to 59 months: More than 40 breaths per minute",
                             "type": "display"
                         }
                     ]
@@ -1045,7 +1151,7 @@
                                 }
                             ],
                             "linkId": "EmCare.B22.DE20-l-help",
-                            "text": "*A spacer is a way of delivering the bronchodilator medicines effectively into the lungs. A spacer works as well as a nebuliser if correctly used. No child under 5 should be given an inhaler without a spacer.",
+                            "text": "Fast breathing post-bronchodilator trial is auto-calculated based on the respiratory rate and the child&#8217;s age: </p>\n\n\t<ul>\n\t\t<li>2 to 11 months: More than 50 breaths per minute</li>\n\t\t<li>12 to 59 months: More than 40 breaths per minute</li>\n\t<",
                             "type": "display"
                         }
                     ]
@@ -1065,7 +1171,27 @@
                     "type": "display",
                     "required": false,
                     "repeats": false,
-                    "readOnly": true
+                    "readOnly": true,
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "EmCare.B22.DE21-help",
+                            "text": "Fast breathing post-bronchodilator trial is auto-calculated based on the respiratory rate and the child&#8217;s age: </p>\n\n\t<ul>\n\t\t<li>2 to 11 months: More than 50 breaths per minute</li>\n\t\t<li>12 to 59 months: More than 40 breaths per minute</li>\n\t<",
+                            "type": "display"
+                        }
+                    ]
                 }
             ]
         },
@@ -1110,7 +1236,7 @@
                                 }
                             ],
                             "linkId": "EmCare.B22.DE27-help",
-                            "text": "If a breastfeeding assessment and an Oral Fluid test is recommended for a child that is only breastfed then a pop up is required to ensure that the health care worker observes the signs for both and provides results for both tests.",
+                            "text": "If the infant has not fed in the previous hour, he may be willing to breastfeed. Ask the mother to put her infant to the breast. Observe a whole breastfeed if possible, or observe for at least 4 minutes.<br />\nSit quietly and watch the infant breastfeed.",
                             "type": "display"
                         }
                     ]
@@ -1132,6 +1258,7 @@
                         }
                     ],
                     "linkId": "EmCare.B22.DE41",
+                    "text": " ",
                     "type": "choice",
                     "required": false,
                     "repeats": true,
@@ -1141,6 +1268,26 @@
                                 "code": "EmCare.B22.DE41",
                                 "display": "Breastfeeding Assessment Not Possible"
                             }
+                        }
+                    ],
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "EmCare.B22.DE41-help",
+                            "text": "The breastfeeding assessment was not possible",
+                            "type": "display"
                         }
                     ]
                 },
@@ -1162,7 +1309,27 @@
                     "text": "Caregiver reports difficulty breastfeeding",
                     "type": "boolean",
                     "required": true,
-                    "repeats": false
+                    "repeats": false,
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "EmCare.B22.DE30-help",
+                            "text": "The caregiver may also mention feeding difficulties such as: her infant feeds too frequently (or not frequently enough), she does not have enough milk, her nipples are sore, or she has flat or inverted nipples",
+                            "type": "display"
+                        }
+                    ]
                 },
                 {
                     "extension": [
@@ -1199,7 +1366,7 @@
                                 }
                             ],
                             "linkId": "EmCare.B22.DE38-help",
-                            "text": "The infant is considered to have good attachment if all four of the following signs are present:</p>\n\n\t<p>- more areola seen above infant\u2019s top lip than below bottom lip<br />\n- mouth wide open<br />\n- lower lip turned outwards<br />\n- chin touching breast",
+                            "text": "The infant is considered to have good attachment if all four of the following signs are present:<br />\n- more areola seen above infant\u2019s top lip than below bottom lip<br />\n- mouth wide open<br />\n- lower lip turned outwards<br />\n- chin touching breast",
                             "type": "display"
                         }
                     ]
@@ -1239,7 +1406,7 @@
                                 }
                             ],
                             "linkId": "EmCare.B22.DE40-help",
-                            "text": "The infant is sucking effectively (slow deep sucks, sometimes pausing)",
+                            "text": "The infant is sucking effectively if there are taking slow, deep sucks, sometimes pausing",
                             "type": "display"
                         }
                     ]
@@ -1266,7 +1433,27 @@
                     "text": "Difficulty Breastfeeding Reported",
                     "type": "boolean",
                     "required": false,
-                    "repeats": false
+                    "repeats": false,
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "EmCare.B22.DE42-help",
+                            "text": "The breastfeeding assessment was not observed however the caregiver has reported difficulty breastfeeding",
+                            "type": "display"
+                        }
+                    ]
                 },
                 {
                     "extension": [
@@ -1290,7 +1477,27 @@
                     "text": "Difficulty Breastfeeding Observed",
                     "type": "boolean",
                     "required": false,
-                    "repeats": false
+                    "repeats": false,
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "EmCare.B22.DE44-help",
+                            "text": "The healthcare worker has observed that the infant has difficulty breastfeeding",
+                            "type": "display"
+                        }
+                    ]
                 },
                 {
                     "extension": [
@@ -1343,6 +1550,22 @@
                 {
                     "extension": [
                         {
+                            "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                            "valueQuantity": {
+                                "value": 25,
+                                "system": "http://unitsofmeasure.org",
+                                "code": "g/L"
+                            }
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                            "valueQuantity": {
+                                "value": 200,
+                                "system": "http://unitsofmeasure.org",
+                                "code": "g/L"
+                            }
+                        },
+                        {
                             "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                             "valueExpression": {
                                 "language": "text/fhirpath",
@@ -1354,7 +1577,27 @@
                     "text": "Hemoglobin (Hb) g/dL",
                     "type": "quantity",
                     "required": true,
-                    "repeats": false
+                    "repeats": false,
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "EmCare.B22.DE81-help",
+                            "text": "The child&#8217;s Hemoglobin (Hb) result",
+                            "type": "display"
+                        }
+                    ]
                 },
                 {
                     "extension": [
@@ -1380,6 +1623,7 @@
                         }
                     ],
                     "linkId": "EmCare.B22.DE82",
+                    "text": " ",
                     "type": "choice",
                     "required": true,
                     "repeats": true,
@@ -1389,6 +1633,26 @@
                                 "code": "EmCare.B22.DE82",
                                 "display": "Hemoglobin Test Not Available"
                             }
+                        }
+                    ],
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "EmCare.B22.DE82-help",
+                            "text": "There is no Hemoglobin test available for the child",
+                            "type": "display"
                         }
                     ]
                 }
@@ -1431,7 +1695,7 @@
                         }
                     ],
                     "linkId": "EmCare.B22.DE47",
-                    "text": "Axillary Temperature (second measurement, degrees Celsius)",
+                    "text": "Axillary Temperature (second measurement) (degrees Celcius)",
                     "type": "quantity",
                     "required": false,
                     "repeats": false,
@@ -1451,7 +1715,7 @@
                                 }
                             ],
                             "linkId": "EmCare.B22.DE47-help",
-                            "text": "The client&#8217;s axillary temperature in degrees Celsius (temperature taken under the armpit)<br />\nWarning/error if above 45 and below 32 degrees Celsius.",
+                            "text": "<p>The infant&#8217;s axillary temperature (temperature taken under the armpit), measured in degrees Celcius.<br />\nA second temperature measurement is required to confirm fever or low body temperature in a young infant, if it is the only severe sign (of possible Severe Bacterial Infection), 30 minutes (after the first measurement and after removing cloting to let the baby who has fever cool, or wrapping the baby who has low body temperature)</p>\n\n\t<p>Temperature ranges for young infants under 2 months:</p>\n\n\t<ul>\n\t\t<li>Under 35.5 : hypothermia (low body temperature)</li>\n\t\t<li>35.5 to 37.9 : normal</li>\n\t\t<li>38.0 and above: fever</li>\n\t</ul>",
                             "type": "display"
                         }
                     ]
@@ -1480,6 +1744,7 @@
                         }
                     ],
                     "linkId": "EmCare.B22.DE46",
+                    "text": " ",
                     "type": "choice",
                     "required": false,
                     "repeats": true,
@@ -1489,6 +1754,26 @@
                                 "code": "EmCare.B22.DE46",
                                 "display": "Second Temperature Measurement Not Feasible"
                             }
+                        }
+                    ],
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "EmCare.B22.DE46-help",
+                            "text": "The second temperature measurement is not feasible",
+                            "type": "display"
                         }
                     ]
                 },
@@ -1514,7 +1799,27 @@
                     "type": "string",
                     "required": false,
                     "repeats": false,
-                    "readOnly": true
+                    "readOnly": true,
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "EmCare.B22.DE50-help",
+                            "text": "<p>Autocalculated temperature range based on axillary temperature in degrees Celcius (add 0.5 for rectal temperature)</p>\n\n\t<p>Temperature ranges for young infants under 2 months:<br />\n- Under 35.5: low body temperature (hypothermia)<br />\n- 35.5 to 37.9: normal<br />\n- 38.0 and above: fever</p>\n\n\t<p>If the infant has fever, remove a layer of clothing and let the baby cool. If the body temperature is low, wrap the baby in additional clothing to warm her.</p>",
+                            "type": "display"
+                        }
+                    ]
                 }
             ]
         },

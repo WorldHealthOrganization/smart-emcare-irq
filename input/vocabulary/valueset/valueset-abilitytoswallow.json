@@ -17,7 +17,7 @@
                         "display": "Yes, without difficulty",
                         "designation": [
                             {
-                                "value": "The client can swallow without difficulty"
+                                "value": "The child can swallow without difficulty"
                             }
                         ]
                     },
@@ -26,7 +26,7 @@
                         "display": "Difficulty in swallowing",
                         "designation": [
                             {
-                                "value": "The client has Difficulty in swallowing"
+                                "value": "The child has Difficulty in swallowing"
                             }
                         ]
                     },
@@ -35,7 +35,7 @@
                         "display": "Unable to swallow",
                         "designation": [
                             {
-                                "value": "The client is Unable to swallow"
+                                "value": "The child is Unable to swallow"
                             }
                         ]
                     }

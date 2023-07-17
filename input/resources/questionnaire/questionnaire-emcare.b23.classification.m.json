@@ -29,12 +29,12 @@
         },
         {
             "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
-            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb23classificationm|1.0.2"
+            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb23classificationm|1.0.3.build.245"
         }
     ],
     "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b23.classification.m",
     "name": "EmCare.B23.Classification.m",
-    "title": "EmCare.B23.Classification.m",
+    "title": "Classification",
     "status": "active",
     "experimental": false,
     "subjectType": [
@@ -155,6 +155,10 @@
         {
             "extension": [
                 {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFC0CB;"
+                },
+                {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
@@ -210,6 +214,10 @@
         },
         {
             "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFFF00;"
+                },
                 {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
@@ -267,6 +275,10 @@
         {
             "extension": [
                 {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFFF00;"
+                },
+                {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
@@ -322,6 +334,10 @@
         {
             "extension": [
                 {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #008000;"
+                },
+                {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
@@ -331,61 +347,6 @@
             ],
             "linkId": "EmCare.B23.DE86",
             "text": "Infection Unlikely",
-            "type": "choice",
-            "required": true,
-            "repeats": false,
-            "answerOption": [
-                {
-                    "valueCoding": {
-                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
-                        "code": "agree",
-                        "display": "Confirm"
-                    }
-                },
-                {
-                    "valueCoding": {
-                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
-                        "code": "disagree",
-                        "display": "Reject"
-                    }
-                }
-            ]
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
-                    "valueCode": "horizontal"
-                },
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
-                    "valueBoolean": true
-                },
-                {
-                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
-                    "valueExpression": {
-                        "language": "text/cql-identifier",
-                        "expression": "DL-G-CL2-26"
-                    }
-                }
-            ],
-            "linkId": "DL-G-CL2-26",
-            "type": "boolean",
-            "required": false,
-            "repeats": false
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
-                    "valueExpression": {
-                        "language": "text/fhirpath",
-                        "expression": "%resource.repeat(item).where(linkId='DL-G-CL2-26').answer.first().value = true"
-                    }
-                }
-            ],
-            "linkId": "EmCare.B23.DE106",
-            "text": "Very Low Weight for Age",
             "type": "choice",
             "required": true,
             "repeats": false,
@@ -432,6 +393,10 @@
         },
         {
             "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFFF00;"
+                },
                 {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
@@ -511,6 +476,10 @@
         },
         {
             "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFC0CB;"
+                },
                 {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
@@ -596,6 +565,10 @@
         {
             "extension": [
                 {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #008000;"
+                },
+                {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
@@ -651,6 +624,10 @@
         },
         {
             "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFC0CB;"
+                },
                 {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
@@ -708,6 +685,10 @@
         {
             "extension": [
                 {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFFF00;"
+                },
+                {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
@@ -763,6 +744,10 @@
         },
         {
             "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #008000;"
+                },
                 {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
@@ -1084,6 +1069,136 @@
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
                     "valueExpression": {
                         "language": "text/cql-identifier",
+                        "expression": "DL-G-CL2-26"
+                    }
+                }
+            ],
+            "linkId": "DL-G-CL2-26",
+            "text": "Very Low Weight for Age",
+            "type": "boolean",
+            "required": false,
+            "repeats": false
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFC0CB;"
+                },
+                {
+                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                    "valueExpression": {
+                        "language": "text/fhirpath",
+                        "expression": "%resource.repeat(item).where(linkId='DL-G-CL2-26').answer.first().value = true"
+                    }
+                }
+            ],
+            "linkId": "EmCare.B23.DE93",
+            "text": "Very Low Weight for Age",
+            "type": "choice",
+            "required": true,
+            "repeats": true,
+            "answerOption": [
+                {
+                    "valueCoding": {
+                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+                        "code": "EmCare.B23.DE83",
+                        "display": "Possible Serious Bacterial Infection OR Very Severe Disease"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+                        "code": "EmCare.B23.DE06",
+                        "display": "Pneumonia"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+                        "code": "EmCare.B23.DE85",
+                        "display": "Local Infection"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+                        "code": "EmCare.B23.DE86",
+                        "display": "Infection Unlikely"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+                        "code": "EmCare.B23.DE87",
+                        "display": "Severe Jaundice"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+                        "code": "EmCare.B23.DE88",
+                        "display": "Jaundice"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+                        "code": "EmCare.B23.DE89",
+                        "display": "No Jaundice"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+                        "code": "EmCare.B23.DE13",
+                        "display": "Severe Dehydration"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+                        "code": "EmCare.B23.DE14",
+                        "display": "Some Dehydration"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+                        "code": "EmCare.B23.DE15",
+                        "display": "No Dehydration"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+                        "code": "EmCare.B23.DE94",
+                        "display": "Feeding Problem and / or Low Weight for Age"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
+                        "code": "EmCare.B23.DE98",
+                        "display": "No Feeding Problem"
+                    }
+                }
+            ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+                    "valueCode": "horizontal"
+                },
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                    "valueBoolean": true
+                },
+                {
+                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                    "valueExpression": {
+                        "language": "text/cql-identifier",
                         "expression": "DL-G-CL2-50"
                     }
                 }
@@ -1095,6 +1210,10 @@
         },
         {
             "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #008000;"
+                },
                 {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
@@ -1163,13 +1282,6 @@
                 {
                     "valueCoding": {
                         "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
-                        "code": "EmCare.B23.DE106",
-                        "display": "Very Low Weight for Age"
-                    }
-                },
-                {
-                    "valueCoding": {
-                        "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                         "code": "EmCare.B23.DE87",
                         "display": "Severe Jaundice"
                     }
@@ -1224,6 +1336,22 @@
                     }
                 }
             ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                    "valueExpression": {
+                        "language": "text/fhirpath",
+                        "expression": "%resource.repeat(item).where(answer.value = true).empty()"
+                    }
+                }
+            ],
+            "linkId": "none",
+            "text": "Assess other problems&#8221;, &#8220;Assess the mother&#8217;s health needs&#8221; &#8220;Advise the caregiver on when to return immediately",
+            "type": "display",
+            "required": false,
+            "repeats": false
         },
         {
             "extension": [

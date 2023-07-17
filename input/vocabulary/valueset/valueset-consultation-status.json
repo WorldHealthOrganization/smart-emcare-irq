@@ -3,10 +3,10 @@
     "id": "consultation-status",
     "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/consultation-status",
     "name": "valueset-consultation-status",
-    "title": "Continue to Assess Sick Child",
+    "title": "EmCare.B7.B8.B9.DE01",
     "status": "draft",
     "experimental": false,
-    "description": "Codes representing possible values for the Provide an estimated age or estimated date of birth element",
+    "description": "Continue to Assess Sick Child",
     "immutable": true,
     "compose": {
         "include": [
@@ -18,7 +18,7 @@
                         "display": "End consultation",
                         "designation": [
                             {
-                                "value": "The client has not been stabilised and the healthcare worker willend the consultation"
+                                "value": "The child has been stabilised and the healthcare worker will continue the consultation"
                             }
                         ]
                     },
@@ -27,7 +27,7 @@
                         "display": "Stabilised, continue consultation",
                         "designation": [
                             {
-                                "value": "The client has been stabilised and the healthcare worker will continue the consultation"
+                                "value": "The child has not been stabilised and the healthcare worker willend the consultation"
                             }
                         ]
                     }

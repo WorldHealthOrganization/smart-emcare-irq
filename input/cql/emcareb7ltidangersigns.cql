@@ -2,13 +2,13 @@
 @author: Patrick Delcroix
 @description: This library is part of the project EmCare
 */
-library emcareb7ltidangersigns version '1.0.2'
+library emcareb7ltidangersigns version '1.0.3.build.245'
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers 
-include emcarebase version '1.0.2' called Base
-include emcareobservation version '1.0.2' called obs
-include emcarevalueset version '1.0.2' called val
-include emcarecombineddataelements version '1.0.2' called c
+include emcarebase version '1.0.3.build.245' called Base
+include emcarevalueset version '1.0.3.build.245' called val
+include emcarecombineddataelements version '1.0.3.build.245' called c
+include emcareobservation version '1.0.3.build.245' called obs
 
 
 
@@ -63,4 +63,4 @@ BackReference :
 back reference to resource
 */
 define "BackReference":
-    Reference {reference: string { value: 'Questionnaire/EmCare.B7.LTI-DangerSigns'}}
+    Reference {reference: string { value: 'Questionnaire/emcare.b7.lti-dangersigns'}}

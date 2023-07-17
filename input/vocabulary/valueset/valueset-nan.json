@@ -1,0 +1,10 @@
+{
+    "resourceType": "ValueSet",
+    "id": "nan",
+    "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ValueSet/nan",
+    "name": "valueset-nan",
+    "status": "draft",
+    "experimental": false,
+    "description": "Codes representing possible values for the Provide an estimated age or estimated date of birth element",
+    "immutable": true
+}

@@ -18,7 +18,7 @@
                         "display": "Mouth Sores or Mouth Ulcers - Deep and Extensive",
                         "designation": [
                             {
-                                "value": "The client has mouth sores or mouth ulcers that are deep and extensive"
+                                "value": "The child has mouth sores or ulcers which are deep and extensive  (severe, requiring referral)"
                             }
                         ]
                     },
@@ -27,7 +27,7 @@
                         "display": "Mouth Sores or Mouth Ulcers - Not Deep and Extensive",
                         "designation": [
                             {
-                                "value": "The client has mouth sores or mouth ulcers that are not deep and extensive"
+                                "value": "The child has mouth sores or ulcers which are not deep and extensive (not severe, not requiring referral)"
                             }
                         ]
                     },
@@ -36,7 +36,7 @@
                         "display": "Oral Thrush",
                         "designation": [
                             {
-                                "value": "The client has oral thrush"
+                                "value": "The child has oral thrush"
                             }
                         ]
                     },
@@ -45,7 +45,7 @@
                         "display": "No Oral Sores or Mouth Ulcers",
                         "designation": [
                             {
-                                "value": "The client is not reported to have oral sores or mouth ulcers"
+                                "value": "The child does not have oral sores or mouth ulcers"
                             }
                         ]
                     }

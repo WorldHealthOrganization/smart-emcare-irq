@@ -18,7 +18,7 @@
                         "display": "Generalised Skin Problem",
                         "designation": [
                             {
-                                "value": "The client has a generalised skin problem"
+                                "value": "The child has a generalised skin problem which affects  the whole body, a large area of the body, or several parts of the body."
                             }
                         ]
                     },
@@ -27,7 +27,7 @@
                         "display": "Localised Skin Problem",
                         "designation": [
                             {
-                                "value": "The client has a localised skin problem"
+                                "value": "The child has a a localised skin problem which is limited to one area of the body."
                             }
                         ]
                     },
@@ -36,7 +36,7 @@
                         "display": "No Problem",
                         "designation": [
                             {
-                                "value": "The client does not have a generalised or localised skin problem"
+                                "value": "The child does not have a skin problem on examination"
                             }
                         ]
                     }

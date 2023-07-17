@@ -3,7 +3,7 @@
     "id": "emcareb.registration.e",
     "text": {
         "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><pre>map &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcareb.registration.e&quot; = &quot;emcareb.registration.e&quot;\r\n\r\n\r\nuses &quot;http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse&quot; alias 'questionnaireResponse' as source\r\nuses &quot;http://hl7.org/fhir/StructureDefinition/Bundle&quot; alias 'Bundle' as target\r\nuses &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/encounter&quot; alias 'Encounter' as target\r\nuses &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/observation&quot; alias 'Observation' as target\r\nuses &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareencounter&quot; alias 'EmCare Encounter' as produced\r\nuses &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation&quot; alias 'EmCare Observation' as produced\r\n\r\ngroup bundletrans(source src : questionnaireResponse, target bundle : Bundle) {\r\n  src -&gt; bundle.id = uuid() &quot;id&quot;;\r\n  src -&gt; bundle.type = 'batch' &quot;type&quot;;\r\n  src -&gt; bundle.entry as entry then {\r\n    src.encounter as encounter then {\r\n      encounter.id as idval -&gt;  entry.request as request,  request.method = 'PUT',  request.url = append('/Encounter/', idval) &quot;f7ed42d5&quot;;\r\n    } &quot;49f4ed45&quot;;\r\n    src -&gt; entry.resource = create('Encounter') as tgt then {\r\n      src -&gt; tgt then emcareencounter(src, tgt) &quot;fd415ba8&quot;;\r\n      src.subject as sub -&gt; tgt.subject = sub &quot;23252e10&quot;;\r\n    } &quot;8f0160c6&quot;;\r\n  } &quot;put-emcareencounter&quot;;\r\n  src.item first as item where (linkId = 'EmCare.B3.DE05') and answer.exists() then {\r\n    src -&gt; bundle.entry as entry then {\r\n      src -&gt;  entry.request as request,  request.method = 'POST',  uuid() as uuid,  request.url = append('/Observation/', uuid) &quot;b50ac4c5&quot;;\r\n      src -&gt; entry.resource = create('Observation') as tgt then {\r\n        src -&gt; tgt then emcareobservationemcareb3de05(src, tgt) &quot;918130f9&quot;;\r\n      } &quot;172606cb&quot;;\r\n    } &quot;a322e7db&quot;;\r\n  } &quot;1af195c5&quot;;\r\n}\r\n\r\ngroup emcareencounter(source src : questionnaireResponse, target tgt : Encounter) {\r\n  src.item first as item where (linkId = 'EmCare.B3.DE01') and answer.exists() then {\r\n    item.answer first as a then {\r\n      a.value as val -&gt;  tgt.reasonCode = create('CodeableConcept') as CC,  CC.text = 'new consultation',  CC.coding = val &quot;aemcareb3de01&quot;;\r\n    } &quot;aemcareb3de01&quot;;\r\n  } &quot;5ea28a7f&quot;;\r\n  src.item first as item where (linkId = 'EmCare.B3.DE06') and answer.exists() then {\r\n    item.answer first as a then {\r\n      a.value as val -&gt;  tgt.type = create('CodeableConcept') as CC,  CC.text = 'new consultation',  CC.coding = val &quot;aemcareb3de06&quot;;\r\n    } &quot;aemcareb3de06&quot;;\r\n  } &quot;58ee7f8b&quot;;\r\n  src.item first as item where (linkId = 'EmCare.A.DE39') and answer.exists() then {\r\n    item.answer first as a then {\r\n      a.value as val -&gt;  tgt.extension = create('Extension') as ext,  ext.url = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/motherpresent',  ext.value = val &quot;aemcareade39&quot;;\r\n    } &quot;aemcareade39&quot;;\r\n  } &quot;ea532e19&quot;;\r\n}\r\n\r\ngroup emcareobservationemcareb3de05(source src, target tgt) {\r\n  src -&gt;  tgt.identifier = create('Identifier') as CodeID,  CodeID.system = 'http://hl7.org/fhir/namingsystem-identifier-type',  CodeID.use = 'official',  CodeID.value = 'uuid',  CodeID.id = uuid() &quot;id-emcareb3de05&quot;;\r\n  src.encounter as encounter -&gt; tgt.encounter = encounter &quot;35bc6b82&quot;;\r\n  src.subject as subject -&gt;  tgt.subject = subject,  tgt.meta = create('Meta') as newMeta,  newMeta.profile = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation',  tgt.code = create('CodeableConcept') as concept,  concept.coding = create('Coding') as coding,  coding.system = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes',  coding.code = 'EmCare.B3.DE05' &quot;code-emcareb3de05&quot;;\r\n  src.item as itemtimestamp where linkId = 'timestamp' then {\r\n    itemtimestamp.answer first as atimestamp then {\r\n      atimestamp.value as val -&gt; tgt.issued = val &quot;5af77f2c&quot;;\r\n    } &quot;7f22f29f&quot;;\r\n  } &quot;aae7a11d&quot;;\r\n  src.subject as subject -&gt; tgt.subject = subject &quot;patient&quot;;\r\n  src.item first as item where (linkId = 'EmCare.B3.DE05') and answer.exists() then {\r\n    item.answer first as a then {\r\n      a where a.value = true -&gt;  tgt.status = 'final',  tgt.value = true &quot;final-emcareb3de05&quot;;\r\n      a where a.value = false -&gt;  tgt.status = 'cancelled',  tgt.value = false &quot;notfound-emcareb3de05&quot;;\r\n    } &quot;bdab9370&quot;;\r\n  } &quot;5cf8dcb4&quot;;\r\n}\r\n\r\n</pre></div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><pre>map &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcareb.registration.e&quot; = &quot;emcareb.registration.e&quot;\r\n\r\n\r\nuses &quot;http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse&quot; alias 'questionnaireResponse' as source\r\nuses &quot;http://hl7.org/fhir/StructureDefinition/Bundle&quot; alias 'Bundle' as target\r\nuses &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/encounter&quot; alias 'Encounter' as target\r\nuses &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/relatedperson&quot; alias 'RelatedPerson' as target\r\nuses &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareencounter&quot; alias 'EmCare Encounter' as produced\r\nuses &quot;https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/relatedperson&quot; alias 'RelatedPerson' as produced\r\n\r\ngroup bundletrans(source src : questionnaireResponse, target bundle : Bundle) {\r\n  src -&gt; bundle.id = uuid() &quot;id&quot;;\r\n  src -&gt; bundle.type = 'batch' &quot;type&quot;;\r\n  src -&gt; bundle.entry as entry then {\r\n    src.encounter as encounter then {\r\n      encounter.id as idval -&gt;  entry.request as request,  request.method = 'PUT',  request.url = append('/Encounter/', idval) &quot;f7ed42d5&quot;;\r\n    } &quot;49f4ed45&quot;;\r\n    src -&gt; entry.resource = create('Encounter') as tgt then {\r\n      src -&gt; tgt then emcareencounter(src, tgt) &quot;fd415ba8&quot;;\r\n      src.subject as sub -&gt; tgt.subject = sub &quot;23252e10&quot;;\r\n    } &quot;8f0160c6&quot;;\r\n  } &quot;put-emcareencounter&quot;;\r\n  src.item first as item where (linkId = 'relatedpersonid') and answer.exists() then {\r\n    src -&gt;  bundle.entry as entry,  entry.request as request,  request.method = 'POST',  entry.resource = create('RelatedPerson') as tgt then {\r\n      src -&gt; tgt then relatedperson(src, tgt) &quot;8f0b9602&quot;;\r\n      item.answer first as a then {\r\n        a.value as val -&gt; request.url = append('/RelatedPerson/', val) &quot;78d8bc69&quot;;\r\n      } &quot;eec70023&quot;;\r\n    } &quot;00574b8e&quot;;\r\n  } &quot;cd8fced6&quot;;\r\n}\r\n\r\ngroup emcareencounter(source src : questionnaireResponse, target tgt : Encounter) {\r\n  src.item first as item where (linkId = 'EmCare.A.DE39') and answer.exists() then {\r\n    item.answer first as a then {\r\n      a.value as val -&gt;  tgt.extension = create('Extension') as ext,  ext.url = 'https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/motherpresent',  ext.value = val &quot;aemcareade39&quot;;\r\n    } &quot;aemcareade39&quot;;\r\n  } &quot;ea532e19&quot;;\r\n  src.item first as item where (linkId = 'relatedpersonid') and answer.exists() then {\r\n    item.answer first as a -&gt;  tgt.participant = create('Participant') as p,  p.type = CALLBCK,  p.individual = a &quot;arelatedpersonid&quot;;\r\n  } &quot;7d2c3bc5&quot;;\r\n}\r\n\r\ngroup SetOfficalGivenNamerelatedperson(source src, target tgt) {\r\n  src -&gt; tgt.use = 'official' then {\r\n    src.item first as itm1 where linkId = 'EmCare.A.DE39.1' then {\r\n      itm1.item first as item where (linkId = 'EmCare.A.DE40') and answer.exists() then {\r\n        item.answer first as a then {\r\n          a.value as val -&gt; tgt.family = val &quot;77d1bd4f&quot;;\r\n        } &quot;e0827d5d&quot;;\r\n      } &quot;30f43417&quot;;\r\n    } &quot;c012ff9d&quot;;\r\n    src.item first as itm1 where linkId = 'EmCare.A.DE39.1' then {\r\n      itm1.item first as item where (linkId = 'EmCare.A.DE41') and answer.exists() then {\r\n        item.answer first as a then {\r\n          a.value as val -&gt; tgt.given = val &quot;5d3d44f6&quot;;\r\n        } &quot;18edd234&quot;;\r\n      } &quot;225ee38b&quot;;\r\n    } &quot;ac4b9bb1&quot;;\r\n    src.item first as itm1 where linkId = 'EmCare.A.DE39.1' then {\r\n      itm1.item first as item where (linkId = 'EmCare.A.DE42') and answer.exists() then {\r\n        item.answer first as a then {\r\n          a.value as val -&gt; tgt.given = val &quot;5d3d44f6&quot;;\r\n        } &quot;18edd234&quot;;\r\n      } &quot;b7e54230&quot;;\r\n    } &quot;e5d6e802&quot;;\r\n  } &quot;9afc0de4&quot;;\r\n}\r\n\r\ngroup MapValueSetExtCodeemcareade43(source src, target tgt) {\r\n  src -&gt; tgt then {\r\n    src -&gt;  tgt.relationship = create('CodeableConcept') as cc,  cc.coding = create('Coding') as coding then {\r\n      src where value.code = 'EmCare.A.DE25' -&gt;  coding.code = 'MTH',  coding.system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' &quot;abd34a78&quot;;\r\n      src where value.code = 'EmCare.A.DE26' -&gt;  coding.code = 'FTH',  coding.system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' &quot;b53d1d15&quot;;\r\n      src where value.code = 'EmCare.A.DE27' -&gt;  coding.code = 'SIB',  coding.system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' &quot;949ee35f&quot;;\r\n      src where value.code = 'EmCare.A.DE28' -&gt;  coding.code = 'EXT',  coding.system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' &quot;7c5a4400&quot;;\r\n      src where value.code = 'EmCare.A.DE29' -&gt;  coding.code = 'PRNINLAW',  coding.system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' &quot;544df0cc&quot;;\r\n      src where value.code = 'EmCare.A.DE30' -&gt;  coding.code = 'U',  coding.system = 'http://terminology.hl7.org/CodeSystem/v2-0131' &quot;8c2d96fc&quot;;\r\n    } &quot;4a251df5&quot;;\r\n  } &quot;1b7b6d7a&quot;;\r\n}\r\n\r\ngroup relatedperson(source src : questionnaireResponse, target tgt : RelatedPerson) {\r\n  src.item first as itm1 where linkId = 'EmCare.A.DE39.1' then {\r\n    itm1.item first as item where (linkId = 'EmCare.A.DE40') or (linkId = 'EmCare.A.DE41') or ((linkId = 'EmCare.A.DE42') and answer.exists()) then {\r\n      src -&gt;  tgt as target,  target.name as name then SetOfficalGivenNamerelatedperson(src, name) &quot;8e1455ea&quot;;\r\n    } &quot;fc1f6b4f&quot;;\r\n  } &quot;411cb7a4&quot;;\r\n  src.item first as itm1 where linkId = 'EmCare.A.DE39.1' then {\r\n    itm1.item first as item where (linkId = 'rppatientid') and answer.exists() then {\r\n      item.answer first as a -&gt; tgt then {\r\n        src.subject as subject -&gt; tgt.patient = subject &quot;patient&quot;;\r\n      } &quot;arppatientid&quot;;\r\n    } &quot;8f06e4ac&quot;;\r\n  } &quot;5fb4db5d&quot;;\r\n  src.item first as itm1 where linkId = 'EmCare.A.DE39.1' then {\r\n    itm1.item first as item where (linkId = 'EmCare.A.DE43') and answer.exists() then {\r\n      item.answer first as a then MapValueSetExtCodeemcareade43(a, tgt) &quot;0118f802&quot;;\r\n    } &quot;4c15cef7&quot;;\r\n  } &quot;7c977fe2&quot;;\r\n}\r\n\r\n</pre></div>"
     },
     "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureMap/emcareb.registration.e",
     "name": "emcareb.registration.e",
@@ -25,9 +25,9 @@
             "alias": "'Encounter'"
         },
         {
-            "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/observation",
+            "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/relatedperson",
             "mode": "target",
-            "alias": "'Observation'"
+            "alias": "'RelatedPerson'"
         },
         {
             "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareencounter",
@@ -35,9 +35,9 @@
             "alias": "'EmCare Encounter'"
         },
         {
-            "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation",
+            "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/relatedperson",
             "mode": "produced",
-            "alias": "'EmCare Observation'"
+            "alias": "'RelatedPerson'"
         }
     ],
     "group": [
@@ -243,19 +243,19 @@
                     ]
                 },
                 {
-                    "name": "1af195c5",
+                    "name": "cd8fced6",
                     "source": [
                         {
                             "context": "src",
                             "element": "item",
                             "listMode": "first",
                             "variable": "item",
-                            "condition": "(linkId = 'EmCare.B3.DE05') and answer.exists()"
+                            "condition": "(linkId = 'relatedpersonid') and answer.exists()"
                         }
                     ],
                     "rule": [
                         {
-                            "name": "a322e7db",
+                            "name": "00574b8e",
                             "source": [
                                 {
                                     "context": "src"
@@ -267,11 +267,40 @@
                                     "contextType": "variable",
                                     "element": "entry",
                                     "variable": "entry"
+                                },
+                                {
+                                    "context": "entry",
+                                    "contextType": "variable",
+                                    "element": "request",
+                                    "variable": "request"
+                                },
+                                {
+                                    "context": "request",
+                                    "contextType": "variable",
+                                    "element": "method",
+                                    "transform": "copy",
+                                    "parameter": [
+                                        {
+                                            "valueString": "POST"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "context": "entry",
+                                    "contextType": "variable",
+                                    "element": "resource",
+                                    "variable": "tgt",
+                                    "transform": "create",
+                                    "parameter": [
+                                        {
+                                            "valueString": "RelatedPerson"
+                                        }
+                                    ]
                                 }
                             ],
                             "rule": [
                                 {
-                                    "name": "b50ac4c5",
+                                    "name": "8f0b9602",
                                     "source": [
                                         {
                                             "context": "src"
@@ -279,89 +308,58 @@
                                     ],
                                     "target": [
                                         {
-                                            "context": "entry",
                                             "contextType": "variable",
-                                            "element": "request",
-                                            "variable": "request"
-                                        },
-                                        {
-                                            "context": "request",
-                                            "contextType": "variable",
-                                            "element": "method",
                                             "transform": "copy",
                                             "parameter": [
                                                 {
-                                                    "valueString": "POST"
+                                                    "valueId": "tgt"
                                                 }
                                             ]
-                                        },
+                                        }
+                                    ],
+                                    "dependent": [
                                         {
-                                            "contextType": "variable",
-                                            "variable": "uuid",
-                                            "transform": "uuid"
-                                        },
-                                        {
-                                            "context": "request",
-                                            "contextType": "variable",
-                                            "element": "url",
-                                            "transform": "append",
-                                            "parameter": [
-                                                {
-                                                    "valueString": "/Observation/"
-                                                },
-                                                {
-                                                    "valueId": "uuid"
-                                                }
+                                            "name": "relatedperson",
+                                            "variable": [
+                                                "src",
+                                                "tgt"
                                             ]
                                         }
                                     ]
                                 },
                                 {
-                                    "name": "172606cb",
+                                    "name": "eec70023",
                                     "source": [
                                         {
-                                            "context": "src"
-                                        }
-                                    ],
-                                    "target": [
-                                        {
-                                            "context": "entry",
-                                            "contextType": "variable",
-                                            "element": "resource",
-                                            "variable": "tgt",
-                                            "transform": "create",
-                                            "parameter": [
-                                                {
-                                                    "valueString": "Observation"
-                                                }
-                                            ]
+                                            "context": "item",
+                                            "element": "answer",
+                                            "listMode": "first",
+                                            "variable": "a"
                                         }
                                     ],
                                     "rule": [
                                         {
-                                            "name": "918130f9",
+                                            "name": "78d8bc69",
                                             "source": [
                                                 {
-                                                    "context": "src"
+                                                    "context": "a",
+                                                    "element": "value",
+                                                    "variable": "val"
                                                 }
                                             ],
                                             "target": [
                                                 {
+                                                    "context": "request",
                                                     "contextType": "variable",
-                                                    "transform": "copy",
+                                                    "element": "url",
+                                                    "transform": "append",
                                                     "parameter": [
                                                         {
-                                                            "valueId": "tgt"
+                                                            "valueString": "/RelatedPerson/"
+                                                        },
+                                                        {
+                                                            "valueId": "val"
                                                         }
-                                                    ]
-                                                }
-                                            ],
-                                            "dependent": [
-                                                {
-                                                    "name": "emcareobservationemcareb3de05",
-                                                    "variable": [
-                                                        "src",
-                                                        "tgt"
                                                     ]
                                                 }
                                             ]
@@ -390,152 +388,6 @@
                 }
             ],
             "rule": [
-                {
-                    "name": "5ea28a7f",
-                    "source": [
-                        {
-                            "context": "src",
-                            "element": "item",
-                            "listMode": "first",
-                            "variable": "item",
-                            "condition": "(linkId = 'EmCare.B3.DE01') and answer.exists()"
-                        }
-                    ],
-                    "rule": [
-                        {
-                            "name": "aemcareb3de01",
-                            "source": [
-                                {
-                                    "context": "item",
-                                    "element": "answer",
-                                    "listMode": "first",
-                                    "variable": "a"
-                                }
-                            ],
-                            "rule": [
-                                {
-                                    "name": "aemcareb3de01",
-                                    "source": [
-                                        {
-                                            "context": "a",
-                                            "element": "value",
-                                            "variable": "val"
-                                        }
-                                    ],
-                                    "target": [
-                                        {
-                                            "context": "tgt",
-                                            "contextType": "variable",
-                                            "element": "reasonCode",
-                                            "variable": "CC",
-                                            "transform": "create",
-                                            "parameter": [
-                                                {
-                                                    "valueString": "CodeableConcept"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "context": "CC",
-                                            "contextType": "variable",
-                                            "element": "text",
-                                            "transform": "copy",
-                                            "parameter": [
-                                                {
-                                                    "valueString": "new consultation"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "context": "CC",
-                                            "contextType": "variable",
-                                            "element": "coding",
-                                            "transform": "copy",
-                                            "parameter": [
-                                                {
-                                                    "valueId": "val"
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "58ee7f8b",
-                    "source": [
-                        {
-                            "context": "src",
-                            "element": "item",
-                            "listMode": "first",
-                            "variable": "item",
-                            "condition": "(linkId = 'EmCare.B3.DE06') and answer.exists()"
-                        }
-                    ],
-                    "rule": [
-                        {
-                            "name": "aemcareb3de06",
-                            "source": [
-                                {
-                                    "context": "item",
-                                    "element": "answer",
-                                    "listMode": "first",
-                                    "variable": "a"
-                                }
-                            ],
-                            "rule": [
-                                {
-                                    "name": "aemcareb3de06",
-                                    "source": [
-                                        {
-                                            "context": "a",
-                                            "element": "value",
-                                            "variable": "val"
-                                        }
-                                    ],
-                                    "target": [
-                                        {
-                                            "context": "tgt",
-                                            "contextType": "variable",
-                                            "element": "type",
-                                            "variable": "CC",
-                                            "transform": "create",
-                                            "parameter": [
-                                                {
-                                                    "valueString": "CodeableConcept"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "context": "CC",
-                                            "contextType": "variable",
-                                            "element": "text",
-                                            "transform": "copy",
-                                            "parameter": [
-                                                {
-                                                    "valueString": "new consultation"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "context": "CC",
-                                            "contextType": "variable",
-                                            "element": "coding",
-                                            "transform": "copy",
-                                            "parameter": [
-                                                {
-                                                    "valueId": "val"
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                },
                 {
                     "name": "ea532e19",
                     "source": [
@@ -608,11 +460,72 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "name": "7d2c3bc5",
+                    "source": [
+                        {
+                            "context": "src",
+                            "element": "item",
+                            "listMode": "first",
+                            "variable": "item",
+                            "condition": "(linkId = 'relatedpersonid') and answer.exists()"
+                        }
+                    ],
+                    "rule": [
+                        {
+                            "name": "arelatedpersonid",
+                            "source": [
+                                {
+                                    "context": "item",
+                                    "element": "answer",
+                                    "listMode": "first",
+                                    "variable": "a"
+                                }
+                            ],
+                            "target": [
+                                {
+                                    "context": "tgt",
+                                    "contextType": "variable",
+                                    "element": "participant",
+                                    "variable": "p",
+                                    "transform": "create",
+                                    "parameter": [
+                                        {
+                                            "valueString": "Participant"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "context": "p",
+                                    "contextType": "variable",
+                                    "element": "type",
+                                    "transform": "copy",
+                                    "parameter": [
+                                        {
+                                            "valueId": "CALLBCK"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "context": "p",
+                                    "contextType": "variable",
+                                    "element": "individual",
+                                    "transform": "copy",
+                                    "parameter": [
+                                        {
+                                            "valueId": "a"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         },
         {
-            "name": "emcareobservationemcareb3de05",
+            "name": "SetOfficalGivenNamerelatedperson",
             "typeMode": "none",
             "input": [
                 {
@@ -626,7 +539,7 @@
             ],
             "rule": [
                 {
-                    "name": "id-emcareb3de05",
+                    "name": "9afc0de4",
                     "source": [
                         {
                             "context": "src"
@@ -636,29 +549,6 @@
                         {
                             "context": "tgt",
                             "contextType": "variable",
-                            "element": "identifier",
-                            "variable": "CodeID",
-                            "transform": "create",
-                            "parameter": [
-                                {
-                                    "valueString": "Identifier"
-                                }
-                            ]
-                        },
-                        {
-                            "context": "CodeID",
-                            "contextType": "variable",
-                            "element": "system",
-                            "transform": "copy",
-                            "parameter": [
-                                {
-                                    "valueString": "http://hl7.org/fhir/namingsystem-identifier-type"
-                                }
-                            ]
-                        },
-                        {
-                            "context": "CodeID",
-                            "contextType": "variable",
                             "element": "use",
                             "transform": "copy",
                             "parameter": [
@@ -666,181 +556,194 @@
                                     "valueString": "official"
                                 }
                             ]
-                        },
-                        {
-                            "context": "CodeID",
-                            "contextType": "variable",
-                            "element": "value",
-                            "transform": "copy",
-                            "parameter": [
-                                {
-                                    "valueString": "uuid"
-                                }
-                            ]
-                        },
-                        {
-                            "context": "CodeID",
-                            "contextType": "variable",
-                            "element": "id",
-                            "transform": "uuid"
-                        }
-                    ]
-                },
-                {
-                    "name": "35bc6b82",
-                    "source": [
-                        {
-                            "context": "src",
-                            "element": "encounter",
-                            "variable": "encounter"
-                        }
-                    ],
-                    "target": [
-                        {
-                            "context": "tgt",
-                            "contextType": "variable",
-                            "element": "encounter",
-                            "transform": "copy",
-                            "parameter": [
-                                {
-                                    "valueId": "encounter"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "code-emcareb3de05",
-                    "source": [
-                        {
-                            "context": "src",
-                            "element": "subject",
-                            "variable": "subject"
-                        }
-                    ],
-                    "target": [
-                        {
-                            "context": "tgt",
-                            "contextType": "variable",
-                            "element": "subject",
-                            "transform": "copy",
-                            "parameter": [
-                                {
-                                    "valueId": "subject"
-                                }
-                            ]
-                        },
-                        {
-                            "context": "tgt",
-                            "contextType": "variable",
-                            "element": "meta",
-                            "variable": "newMeta",
-                            "transform": "create",
-                            "parameter": [
-                                {
-                                    "valueString": "Meta"
-                                }
-                            ]
-                        },
-                        {
-                            "context": "newMeta",
-                            "contextType": "variable",
-                            "element": "profile",
-                            "transform": "copy",
-                            "parameter": [
-                                {
-                                    "valueString": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/StructureDefinition/emcareobservation"
-                                }
-                            ]
-                        },
-                        {
-                            "context": "tgt",
-                            "contextType": "variable",
-                            "element": "code",
-                            "variable": "concept",
-                            "transform": "create",
-                            "parameter": [
-                                {
-                                    "valueString": "CodeableConcept"
-                                }
-                            ]
-                        },
-                        {
-                            "context": "concept",
-                            "contextType": "variable",
-                            "element": "coding",
-                            "variable": "coding",
-                            "transform": "create",
-                            "parameter": [
-                                {
-                                    "valueString": "Coding"
-                                }
-                            ]
-                        },
-                        {
-                            "context": "coding",
-                            "contextType": "variable",
-                            "element": "system",
-                            "transform": "copy",
-                            "parameter": [
-                                {
-                                    "valueString": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes"
-                                }
-                            ]
-                        },
-                        {
-                            "context": "coding",
-                            "contextType": "variable",
-                            "element": "code",
-                            "transform": "copy",
-                            "parameter": [
-                                {
-                                    "valueString": "EmCare.B3.DE05"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "aae7a11d",
-                    "source": [
-                        {
-                            "context": "src",
-                            "element": "item",
-                            "variable": "itemtimestamp",
-                            "condition": "linkId = 'timestamp'"
                         }
                     ],
                     "rule": [
                         {
-                            "name": "7f22f29f",
+                            "name": "c012ff9d",
                             "source": [
                                 {
-                                    "context": "itemtimestamp",
-                                    "element": "answer",
+                                    "context": "src",
+                                    "element": "item",
                                     "listMode": "first",
-                                    "variable": "atimestamp"
+                                    "variable": "itm1",
+                                    "condition": "linkId = 'EmCare.A.DE39.1'"
                                 }
                             ],
                             "rule": [
                                 {
-                                    "name": "5af77f2c",
+                                    "name": "30f43417",
                                     "source": [
                                         {
-                                            "context": "atimestamp",
-                                            "element": "value",
-                                            "variable": "val"
+                                            "context": "itm1",
+                                            "element": "item",
+                                            "listMode": "first",
+                                            "variable": "item",
+                                            "condition": "(linkId = 'EmCare.A.DE40') and answer.exists()"
                                         }
                                     ],
-                                    "target": [
+                                    "rule": [
                                         {
-                                            "context": "tgt",
-                                            "contextType": "variable",
-                                            "element": "issued",
-                                            "transform": "copy",
-                                            "parameter": [
+                                            "name": "e0827d5d",
+                                            "source": [
                                                 {
-                                                    "valueId": "val"
+                                                    "context": "item",
+                                                    "element": "answer",
+                                                    "listMode": "first",
+                                                    "variable": "a"
+                                                }
+                                            ],
+                                            "rule": [
+                                                {
+                                                    "name": "77d1bd4f",
+                                                    "source": [
+                                                        {
+                                                            "context": "a",
+                                                            "element": "value",
+                                                            "variable": "val"
+                                                        }
+                                                    ],
+                                                    "target": [
+                                                        {
+                                                            "context": "tgt",
+                                                            "contextType": "variable",
+                                                            "element": "family",
+                                                            "transform": "copy",
+                                                            "parameter": [
+                                                                {
+                                                                    "valueId": "val"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "ac4b9bb1",
+                            "source": [
+                                {
+                                    "context": "src",
+                                    "element": "item",
+                                    "listMode": "first",
+                                    "variable": "itm1",
+                                    "condition": "linkId = 'EmCare.A.DE39.1'"
+                                }
+                            ],
+                            "rule": [
+                                {
+                                    "name": "225ee38b",
+                                    "source": [
+                                        {
+                                            "context": "itm1",
+                                            "element": "item",
+                                            "listMode": "first",
+                                            "variable": "item",
+                                            "condition": "(linkId = 'EmCare.A.DE41') and answer.exists()"
+                                        }
+                                    ],
+                                    "rule": [
+                                        {
+                                            "name": "18edd234",
+                                            "source": [
+                                                {
+                                                    "context": "item",
+                                                    "element": "answer",
+                                                    "listMode": "first",
+                                                    "variable": "a"
+                                                }
+                                            ],
+                                            "rule": [
+                                                {
+                                                    "name": "5d3d44f6",
+                                                    "source": [
+                                                        {
+                                                            "context": "a",
+                                                            "element": "value",
+                                                            "variable": "val"
+                                                        }
+                                                    ],
+                                                    "target": [
+                                                        {
+                                                            "context": "tgt",
+                                                            "contextType": "variable",
+                                                            "element": "given",
+                                                            "transform": "copy",
+                                                            "parameter": [
+                                                                {
+                                                                    "valueId": "val"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "e5d6e802",
+                            "source": [
+                                {
+                                    "context": "src",
+                                    "element": "item",
+                                    "listMode": "first",
+                                    "variable": "itm1",
+                                    "condition": "linkId = 'EmCare.A.DE39.1'"
+                                }
+                            ],
+                            "rule": [
+                                {
+                                    "name": "b7e54230",
+                                    "source": [
+                                        {
+                                            "context": "itm1",
+                                            "element": "item",
+                                            "listMode": "first",
+                                            "variable": "item",
+                                            "condition": "(linkId = 'EmCare.A.DE42') and answer.exists()"
+                                        }
+                                    ],
+                                    "rule": [
+                                        {
+                                            "name": "18edd234",
+                                            "source": [
+                                                {
+                                                    "context": "item",
+                                                    "element": "answer",
+                                                    "listMode": "first",
+                                                    "variable": "a"
+                                                }
+                                            ],
+                                            "rule": [
+                                                {
+                                                    "name": "5d3d44f6",
+                                                    "source": [
+                                                        {
+                                                            "context": "a",
+                                                            "element": "value",
+                                                            "variable": "val"
+                                                        }
+                                                    ],
+                                                    "target": [
+                                                        {
+                                                            "context": "tgt",
+                                                            "contextType": "variable",
+                                                            "element": "given",
+                                                            "transform": "copy",
+                                                            "parameter": [
+                                                                {
+                                                                    "valueId": "val"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
                                                 }
                                             ]
                                         }
@@ -849,115 +752,474 @@
                             ]
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "name": "MapValueSetExtCodeemcareade43",
+            "typeMode": "none",
+            "input": [
+                {
+                    "name": "src",
+                    "mode": "source"
                 },
                 {
-                    "name": "patient",
+                    "name": "tgt",
+                    "mode": "target"
+                }
+            ],
+            "rule": [
+                {
+                    "name": "1b7b6d7a",
                     "source": [
                         {
-                            "context": "src",
-                            "element": "subject",
-                            "variable": "subject"
+                            "context": "src"
                         }
                     ],
                     "target": [
                         {
-                            "context": "tgt",
                             "contextType": "variable",
-                            "element": "subject",
                             "transform": "copy",
                             "parameter": [
                                 {
-                                    "valueId": "subject"
+                                    "valueId": "tgt"
                                 }
                             ]
-                        }
-                    ]
-                },
-                {
-                    "name": "5cf8dcb4",
-                    "source": [
-                        {
-                            "context": "src",
-                            "element": "item",
-                            "listMode": "first",
-                            "variable": "item",
-                            "condition": "(linkId = 'EmCare.B3.DE05') and answer.exists()"
                         }
                     ],
                     "rule": [
                         {
-                            "name": "bdab9370",
+                            "name": "4a251df5",
                             "source": [
                                 {
-                                    "context": "item",
-                                    "element": "answer",
-                                    "listMode": "first",
-                                    "variable": "a"
+                                    "context": "src"
+                                }
+                            ],
+                            "target": [
+                                {
+                                    "context": "tgt",
+                                    "contextType": "variable",
+                                    "element": "relationship",
+                                    "variable": "cc",
+                                    "transform": "create",
+                                    "parameter": [
+                                        {
+                                            "valueString": "CodeableConcept"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "context": "cc",
+                                    "contextType": "variable",
+                                    "element": "coding",
+                                    "variable": "coding",
+                                    "transform": "create",
+                                    "parameter": [
+                                        {
+                                            "valueString": "Coding"
+                                        }
+                                    ]
                                 }
                             ],
                             "rule": [
                                 {
-                                    "name": "final-emcareb3de05",
+                                    "name": "abd34a78",
                                     "source": [
                                         {
-                                            "context": "a",
-                                            "condition": "a.value = true"
+                                            "context": "src",
+                                            "condition": "value.code = 'EmCare.A.DE25'"
                                         }
                                     ],
                                     "target": [
                                         {
-                                            "context": "tgt",
+                                            "context": "coding",
                                             "contextType": "variable",
-                                            "element": "status",
+                                            "element": "code",
                                             "transform": "copy",
                                             "parameter": [
                                                 {
-                                                    "valueString": "final"
+                                                    "valueString": "MTH"
                                                 }
                                             ]
                                         },
                                         {
-                                            "context": "tgt",
+                                            "context": "coding",
                                             "contextType": "variable",
-                                            "element": "value",
+                                            "element": "system",
                                             "transform": "copy",
                                             "parameter": [
                                                 {
-                                                    "valueBoolean": true
+                                                    "valueString": "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
                                                 }
                                             ]
                                         }
                                     ]
                                 },
                                 {
-                                    "name": "notfound-emcareb3de05",
+                                    "name": "b53d1d15",
                                     "source": [
                                         {
-                                            "context": "a",
-                                            "condition": "a.value = false"
+                                            "context": "src",
+                                            "condition": "value.code = 'EmCare.A.DE26'"
                                         }
                                     ],
                                     "target": [
                                         {
-                                            "context": "tgt",
+                                            "context": "coding",
                                             "contextType": "variable",
-                                            "element": "status",
+                                            "element": "code",
                                             "transform": "copy",
                                             "parameter": [
                                                 {
-                                                    "valueString": "cancelled"
+                                                    "valueString": "FTH"
                                                 }
                                             ]
                                         },
                                         {
-                                            "context": "tgt",
+                                            "context": "coding",
                                             "contextType": "variable",
-                                            "element": "value",
+                                            "element": "system",
                                             "transform": "copy",
                                             "parameter": [
                                                 {
-                                                    "valueBoolean": false
+                                                    "valueString": "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
                                                 }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "949ee35f",
+                                    "source": [
+                                        {
+                                            "context": "src",
+                                            "condition": "value.code = 'EmCare.A.DE27'"
+                                        }
+                                    ],
+                                    "target": [
+                                        {
+                                            "context": "coding",
+                                            "contextType": "variable",
+                                            "element": "code",
+                                            "transform": "copy",
+                                            "parameter": [
+                                                {
+                                                    "valueString": "SIB"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "context": "coding",
+                                            "contextType": "variable",
+                                            "element": "system",
+                                            "transform": "copy",
+                                            "parameter": [
+                                                {
+                                                    "valueString": "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "7c5a4400",
+                                    "source": [
+                                        {
+                                            "context": "src",
+                                            "condition": "value.code = 'EmCare.A.DE28'"
+                                        }
+                                    ],
+                                    "target": [
+                                        {
+                                            "context": "coding",
+                                            "contextType": "variable",
+                                            "element": "code",
+                                            "transform": "copy",
+                                            "parameter": [
+                                                {
+                                                    "valueString": "EXT"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "context": "coding",
+                                            "contextType": "variable",
+                                            "element": "system",
+                                            "transform": "copy",
+                                            "parameter": [
+                                                {
+                                                    "valueString": "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "544df0cc",
+                                    "source": [
+                                        {
+                                            "context": "src",
+                                            "condition": "value.code = 'EmCare.A.DE29'"
+                                        }
+                                    ],
+                                    "target": [
+                                        {
+                                            "context": "coding",
+                                            "contextType": "variable",
+                                            "element": "code",
+                                            "transform": "copy",
+                                            "parameter": [
+                                                {
+                                                    "valueString": "PRNINLAW"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "context": "coding",
+                                            "contextType": "variable",
+                                            "element": "system",
+                                            "transform": "copy",
+                                            "parameter": [
+                                                {
+                                                    "valueString": "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "8c2d96fc",
+                                    "source": [
+                                        {
+                                            "context": "src",
+                                            "condition": "value.code = 'EmCare.A.DE30'"
+                                        }
+                                    ],
+                                    "target": [
+                                        {
+                                            "context": "coding",
+                                            "contextType": "variable",
+                                            "element": "code",
+                                            "transform": "copy",
+                                            "parameter": [
+                                                {
+                                                    "valueString": "U"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "context": "coding",
+                                            "contextType": "variable",
+                                            "element": "system",
+                                            "transform": "copy",
+                                            "parameter": [
+                                                {
+                                                    "valueString": "http://terminology.hl7.org/CodeSystem/v2-0131"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "relatedperson",
+            "typeMode": "none",
+            "input": [
+                {
+                    "name": "src",
+                    "type": "questionnaireResponse",
+                    "mode": "source"
+                },
+                {
+                    "name": "tgt",
+                    "type": "RelatedPerson",
+                    "mode": "target"
+                }
+            ],
+            "rule": [
+                {
+                    "name": "411cb7a4",
+                    "source": [
+                        {
+                            "context": "src",
+                            "element": "item",
+                            "listMode": "first",
+                            "variable": "itm1",
+                            "condition": "linkId = 'EmCare.A.DE39.1'"
+                        }
+                    ],
+                    "rule": [
+                        {
+                            "name": "fc1f6b4f",
+                            "source": [
+                                {
+                                    "context": "itm1",
+                                    "element": "item",
+                                    "listMode": "first",
+                                    "variable": "item",
+                                    "condition": "(linkId = 'EmCare.A.DE40') or (linkId = 'EmCare.A.DE41') or ((linkId = 'EmCare.A.DE42') and answer.exists())"
+                                }
+                            ],
+                            "rule": [
+                                {
+                                    "name": "8e1455ea",
+                                    "source": [
+                                        {
+                                            "context": "src"
+                                        }
+                                    ],
+                                    "target": [
+                                        {
+                                            "contextType": "variable",
+                                            "variable": "target",
+                                            "transform": "copy",
+                                            "parameter": [
+                                                {
+                                                    "valueId": "tgt"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "context": "target",
+                                            "contextType": "variable",
+                                            "element": "name",
+                                            "variable": "name"
+                                        }
+                                    ],
+                                    "dependent": [
+                                        {
+                                            "name": "SetOfficalGivenNamerelatedperson",
+                                            "variable": [
+                                                "src",
+                                                "name"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "5fb4db5d",
+                    "source": [
+                        {
+                            "context": "src",
+                            "element": "item",
+                            "listMode": "first",
+                            "variable": "itm1",
+                            "condition": "linkId = 'EmCare.A.DE39.1'"
+                        }
+                    ],
+                    "rule": [
+                        {
+                            "name": "8f06e4ac",
+                            "source": [
+                                {
+                                    "context": "itm1",
+                                    "element": "item",
+                                    "listMode": "first",
+                                    "variable": "item",
+                                    "condition": "(linkId = 'rppatientid') and answer.exists()"
+                                }
+                            ],
+                            "rule": [
+                                {
+                                    "name": "arppatientid",
+                                    "source": [
+                                        {
+                                            "context": "item",
+                                            "element": "answer",
+                                            "listMode": "first",
+                                            "variable": "a"
+                                        }
+                                    ],
+                                    "target": [
+                                        {
+                                            "contextType": "variable",
+                                            "transform": "copy",
+                                            "parameter": [
+                                                {
+                                                    "valueId": "tgt"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "rule": [
+                                        {
+                                            "name": "patient",
+                                            "source": [
+                                                {
+                                                    "context": "src",
+                                                    "element": "subject",
+                                                    "variable": "subject"
+                                                }
+                                            ],
+                                            "target": [
+                                                {
+                                                    "context": "tgt",
+                                                    "contextType": "variable",
+                                                    "element": "patient",
+                                                    "transform": "copy",
+                                                    "parameter": [
+                                                        {
+                                                            "valueId": "subject"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "7c977fe2",
+                    "source": [
+                        {
+                            "context": "src",
+                            "element": "item",
+                            "listMode": "first",
+                            "variable": "itm1",
+                            "condition": "linkId = 'EmCare.A.DE39.1'"
+                        }
+                    ],
+                    "rule": [
+                        {
+                            "name": "4c15cef7",
+                            "source": [
+                                {
+                                    "context": "itm1",
+                                    "element": "item",
+                                    "listMode": "first",
+                                    "variable": "item",
+                                    "condition": "(linkId = 'EmCare.A.DE43') and answer.exists()"
+                                }
+                            ],
+                            "rule": [
+                                {
+                                    "name": "0118f802",
+                                    "source": [
+                                        {
+                                            "context": "item",
+                                            "element": "answer",
+                                            "listMode": "first",
+                                            "variable": "a"
+                                        }
+                                    ],
+                                    "dependent": [
+                                        {
+                                            "name": "MapValueSetExtCodeemcareade43",
+                                            "variable": [
+                                                "a",
+                                                "tgt"
                                             ]
                                         }
                                     ]

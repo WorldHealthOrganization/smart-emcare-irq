@@ -1,0 +1,85 @@
+{
+    "resourceType": "Library",
+    "id": "treatmentconditions",
+    "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/treatmentconditions",
+    "identifier": [
+        {
+            "use": "official",
+            "value": "treatment.conditions"
+        }
+    ],
+    "version": "1.0.3.build.245",
+    "name": "treatmentconditions",
+    "title": "Treatment.conditions",
+    "status": "active",
+    "type": {
+        "coding": [
+            {
+                "system": "http://hl7.org/fhir/ValueSet/library-type",
+                "code": "logic-library"
+            }
+        ]
+    },
+    "relatedArtifact": [
+        {
+            "type": "depends-on",
+            "resource": "http://fhir.org/guides/who/anc-cds/Library/FHIRHelpers"
+        },
+        {
+            "type": "depends-on",
+            "resource": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcarebase"
+        },
+        {
+            "type": "depends-on",
+            "resource": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcarevalueset"
+        },
+        {
+            "type": "depends-on",
+            "resource": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcarecondition"
+        }
+    ],
+    "parameter": [
+        {
+            "name": "AgeInMonth",
+            "use": "out",
+            "type": "integer"
+        },
+        {
+            "name": "Severe Dehydration",
+            "use": "out",
+            "type": "boolean"
+        },
+        {
+            "name": "Severe Complicated Measles",
+            "use": "out",
+            "type": "boolean"
+        },
+        {
+            "name": "Measles with Eye or Mouth Complication",
+            "use": "out",
+            "type": "boolean"
+        },
+        {
+            "name": "Measles",
+            "use": "out",
+            "type": "boolean"
+        },
+        {
+            "name": "Persistent Diarrhoea",
+            "use": "out",
+            "type": "boolean"
+        },
+        {
+            "name": "Clouding of the Cornea",
+            "use": "out",
+            "type": "boolean"
+        }
+    ],
+    "content": [
+        {
+            "id": "ig-loader-treatmentconditions.cql",
+            "contentType": "text/cql",
+            "data": "LyoKQGF1dGhvcjogUGF0cmljayBEZWxjcm9peApAZGVzY3JpcHRpb246IFRoaXMgbGlicmFyeSBpcyBwYXJ0IG9mIHRoZSBwcm9qZWN0IEVtQ2FyZQoqLwpsaWJyYXJ5IHRyZWF0bWVudGNvbmRpdGlvbnMgdmVyc2lvbiAnMS4wLjMuYnVpbGQuMjQ1Jwp1c2luZyBGSElSIHZlcnNpb24gJzQuMC4xJwppbmNsdWRlIEZISVJIZWxwZXJzIHZlcnNpb24gJzQuMC4xJyBjYWxsZWQgRkhJUkhlbHBlcnMgCmluY2x1ZGUgZW1jYXJlYmFzZSB2ZXJzaW9uICcxLjAuMy5idWlsZC4yNDUnIGNhbGxlZCBCYXNlCmluY2x1ZGUgZW1jYXJldmFsdWVzZXQgdmVyc2lvbiAnMS4wLjMuYnVpbGQuMjQ1JyBjYWxsZWQgdmFsCmluY2x1ZGUgZW1jYXJlY29uZGl0aW9uIHZlcnNpb24gJzEuMC4zLmJ1aWxkLjI0NScgY2FsbGVkIGNvbmQKCgoKCmNvbnRleHQgUGF0aWVudAoKCi8qIApBZ2VJbk1vbnRoIDogCkFnZUluTW9udGhzKCkKKi8KZGVmaW5lICJBZ2VJbk1vbnRoIjoKICAgIEFnZUluTW9udGhzKCkKCi8qIApTZXZlcmUgRGVoeWRyYXRpb24gOiAKSGFzQ29uZChjb25kLiJTZXZlcmUgRGVoeWRyYXRpb24iKQoqLwpkZWZpbmUgIlNldmVyZSBEZWh5ZHJhdGlvbiI6CiAgICBCYXNlLkhhc0NvbmQoY29uZC4iU2V2ZXJlIERlaHlkcmF0aW9uIikKCi8qIApTZXZlcmUgQ29tcGxpY2F0ZWQgTWVhc2xlcyA6IApIYXNDb25kKGNvbmQuIlNldmVyZSBDb21wbGljYXRlZCBNZWFzbGVzIikKKi8KZGVmaW5lICJTZXZlcmUgQ29tcGxpY2F0ZWQgTWVhc2xlcyI6CiAgICBCYXNlLkhhc0NvbmQoY29uZC4iU2V2ZXJlIENvbXBsaWNhdGVkIE1lYXNsZXMiKQoKLyogCk1lYXNsZXMgd2l0aCBFeWUgb3IgTW91dGggQ29tcGxpY2F0aW9uIDogCkhhc0NvbmQoY29uZC4iTWVhc2xlcyB3aXRoIEV5ZSBvciBNb3V0aCBDb21wbGljYXRpb24iKQoqLwpkZWZpbmUgIk1lYXNsZXMgd2l0aCBFeWUgb3IgTW91dGggQ29tcGxpY2F0aW9uIjoKICAgIEJhc2UuSGFzQ29uZChjb25kLiJNZWFzbGVzIHdpdGggRXllIG9yIE1vdXRoIENvbXBsaWNhdGlvbiIpCgovKiAKTWVhc2xlcyA6IApIYXNDb25kKGNvbmQuIlBvc3NpYmxlIE1lYXNsZXMiKQoqLwpkZWZpbmUgIk1lYXNsZXMiOgogICAgQmFzZS5IYXNDb25kKGNvbmQuIlBvc3NpYmxlIE1lYXNsZXMiKQoKLyogClBlcnNpc3RlbnQgRGlhcnJob2VhIDogCkhhc0NvbmQoY29uZC4iUGVyc2lzdGVudCBEaWFycmhvZWEiKQoqLwpkZWZpbmUgIlBlcnNpc3RlbnQgRGlhcnJob2VhIjoKICAgIEJhc2UuSGFzQ29uZChjb25kLiJQZXJzaXN0ZW50IERpYXJyaG9lYSIpCgovKiAKQ2xvdWRpbmcgb2YgdGhlIENvcm5lYSA6IApIYXNDb25kKGNvbmQuIkNsb3VkaW5nIG9mIHRoZSBDb3JuZWEiKQoqLwpkZWZpbmUgIkNsb3VkaW5nIG9mIHRoZSBDb3JuZWEiOgogICAgQmFzZS5IYXNDb25kKGNvbmQuIkNsb3VkaW5nIG9mIHRoZSBDb3JuZWEiKQoKLyogCkJhY2tSZWZlcmVuY2UgOiAKYmFjayByZWZlcmVuY2UgdG8gcmVzb3VyY2UKKi8KZGVmaW5lICJCYWNrUmVmZXJlbmNlIjoKICAgIFJlZmVyZW5jZSB7cmVmZXJlbmNlOiBzdHJpbmcgeyB2YWx1ZTogJ1F1ZXN0aW9ubmFpcmUvdHJlYXRtZW50LmNvbmRpdGlvbnMnfX0K"
+        }
+    ]
+}

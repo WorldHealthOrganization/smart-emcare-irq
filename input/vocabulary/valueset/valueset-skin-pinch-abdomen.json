@@ -18,7 +18,7 @@
                         "display": "Skin Pinch goes back very slowly (More than 2 seconds)",
                         "designation": [
                             {
-                                "value": "The client's skin goes back very slowly after Skin pinch of Abdomen (More than 2 seconds)"
+                                "value": "The child's skin goes back very slowly after skin pinch of abdomen (More than 2 seconds)"
                             }
                         ]
                     },
@@ -27,7 +27,7 @@
                         "display": "Skin Pinch goes back slowly (2 seconds or fewer, but not immediately)",
                         "designation": [
                             {
-                                "value": "The client's skin goes back slowly after Skin pinch of Abdomen (2 seconds or fewer, but not immediately)"
+                                "value": "The child's skin goes back slowly after skin pinch of abdomen (2 seconds or fewer, but not immediately)"
                             }
                         ]
                     },
@@ -36,7 +36,7 @@
                         "display": "Skin Pinch goes back Normally (immediately)",
                         "designation": [
                             {
-                                "value": "The client's skin goes back normally after Skin pinch of Abdomen (immediately)"
+                                "value": "The child's skin goes back normally (immediately) after skin pinch of abdomen"
                             }
                         ]
                     }

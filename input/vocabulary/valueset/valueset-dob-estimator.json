@@ -15,19 +15,19 @@
                 "concept": [
                     {
                         "code": "EmCare.A.DE13",
-                        "display": "Estimated age in years/months for child (2 months or older)",
+                        "display": "Estimate Age - Years/Months for a child",
                         "designation": [
                             {
-                                "value": "The age of the client is estimated based on physical evidence"
+                                "value": "The Caregiver provides the age in Years, Months, Days"
                             }
                         ]
                     },
                     {
                         "code": "EmCare.A.DE14",
-                        "display": "Estimated age in weeks/days for young infant (under 2 months old)",
+                        "display": "Estimate Age - Weeks/Days for young infant",
                         "designation": [
                             {
-                                "value": "The Caregiver provides the age in weeks/days/hours"
+                                "value": "The Caregiver provides the age in  Weeks, Days"
                             }
                         ]
                     },
@@ -36,7 +36,7 @@
                         "display": "Estimated Date of Birth",
                         "designation": [
                             {
-                                "value": "Estimated Date of Birth of the Client"
+                                "value": "The Caregiver provides the estimated date of birth using calendar"
                             }
                         ]
                     }

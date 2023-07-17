@@ -29,12 +29,12 @@
         },
         {
             "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
-            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb6measurements|1.0.2"
+            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb6measurements|1.0.3.build.245"
         }
     ],
     "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b6.measurements",
     "name": "EmCare.B6.Measurements",
-    "title": "EmCare.B6.Measurements",
+    "title": "Measurements",
     "status": "active",
     "experimental": false,
     "subjectType": [
@@ -43,6 +43,22 @@
     "item": [
         {
             "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                    "valueQuantity": {
+                        "value": 32,
+                        "system": "http://unitsofmeasure.org",
+                        "code": "Cel"
+                    }
+                },
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                    "valueQuantity": {
+                        "value": 45,
+                        "system": "http://unitsofmeasure.org",
+                        "code": "Cel"
+                    }
+                },
                 {
                     "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
                     "valueCoding": {
@@ -79,7 +95,7 @@
                         }
                     ],
                     "linkId": "EmCare.B6.DE01-help",
-                    "text": "The client&#8217;s axillary temperature in degrees Celsius (temperature taken under the armpit)<br />\nWarning/error if above 45 and below 32 degrees Celsius.",
+                    "text": "<p>The child&#8217;s axillary temperature (temperature taken under the armpit), measured in degrees Celsius.</p>\n\n\t<p><b>Temperature ranges for children 2 &#8211; 59 months:</b></p>\n\n\t<ul>\n\t\t<li>Under 35.5 : hypothermia (low body temperature)</li>\n\t\t<li>35.5 to 37.4 : normal</li>\n\t\t<li>37.5 to 38.4 : fever</li>\n\t\t<li>38.5 and above : high fever</li>\n\t</ul>\n\n\t<p>If hypothermia, keep the child warm. If high fever, give paracetamol</p>\n\n\t<p><b>Temperature ranges for young infants under 2 months:</b></p>\n\n\t<ul>\n\t\t<li>Under 35.5 : hypothermia (low body temperature)</li>\n\t\t<li>35.5 to 37.9 : normal</li>\n\t\t<li>38.0 and above: fever</li>\n\t</ul>\n\n\t<p>If the high or low temperature is the only severe sign, repeat the measurement after 30 minutes. In the meantime, remove clothing and let the baby who has fever cool. If the baby has hypothermia in winter, wrap the baby to warm her. Use the second reading to decide if the infant has fever or low temperature.</p>",
                     "type": "display"
                 }
             ]
@@ -108,6 +124,7 @@
                 }
             ],
             "linkId": "EmCare.B6.DE04",
+            "text": " ",
             "type": "choice",
             "required": true,
             "repeats": true,
@@ -117,6 +134,26 @@
                         "code": "EmCare.B6.DE04",
                         "display": "Thermometer not available"
                     }
+                }
+            ],
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "help"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B6.DE04-help",
+                    "text": "A thermometer is not available to measure the child&#8217;s temperature",
+                    "type": "display"
                 }
             ]
         },
@@ -138,7 +175,27 @@
             "text": "Hot to Touch",
             "type": "boolean",
             "required": true,
-            "repeats": false
+            "repeats": false,
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "help"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B6.DE05-help",
+                    "text": "The child is hot to touch",
+                    "type": "display"
+                }
+            ]
         },
         {
             "extension": [
@@ -179,13 +236,29 @@
                         }
                     ],
                     "linkId": "EmCare.B6.DE01A-help",
-                    "text": "The client&#8217;s axillary temperature in degrees Celsius (temperature taken under the armpit)",
+                    "text": "<p>Autocalculated temperature range based on axillary temperature in degrees Celcius (add 0.5 for rectal temperature)</p>\n\n\t<p>For children 2 &#8211; 59 months:<br />\n- Under 35.5 : low<br />\n- 35.5 to 37.4 : normal <br />\n- 37.5 to 38.4 : high<br />\n- 38.5 and above : very high</p>\n\n\t<p>For young infants under 2 months:<br />\n- Under 35.5: low body temperature (hypothermia)<br />\n- 35.5 to 37.9: normal<br />\n- 38.0 and above: fever</p>\n\n\t<p>If the infant has fever, remove a layer of clothing and let the baby cool. If the body temperature is low, wrap the baby in additional clothing to warm her. If there are no other signs of severe illness indicating need for urgent referral besides fever or low body temperature, retake the temperature again in 30 minutes. Use the second reading to decide if the infant has fever or low body temperature.</p>",
                     "type": "display"
                 }
             ]
         },
         {
             "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                    "valueQuantity": {
+                        "value": 500,
+                        "system": "http://unitsofmeasure.org",
+                        "code": "g"
+                    }
+                },
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                    "valueQuantity": {
+                        "value": 40.0,
+                        "system": "http://unitsofmeasure.org",
+                        "code": "kg"
+                    }
+                },
                 {
                     "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
                     "valueCoding": {
@@ -205,7 +278,27 @@
             "text": "Weight (Kg)",
             "type": "quantity",
             "required": true,
-            "repeats": false
+            "repeats": false,
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "help"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B6.DE06-help",
+                    "text": "The child&#8217;s weight in Kilograms, to one decimal place",
+                    "type": "display"
+                }
+            ]
         },
         {
             "extension": [
@@ -231,6 +324,7 @@
                 }
             ],
             "linkId": "EmCare.B6.DE07",
+            "text": " ",
             "type": "choice",
             "required": true,
             "repeats": true,
@@ -240,6 +334,26 @@
                         "code": "EmCare.B6.DE07",
                         "display": "Weight cannot be measured"
                     }
+                }
+            ],
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "help"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "EmCare.B6.DE07-help",
+                    "text": "The child&#8217;s weight cannot be measured today. This should only be selected if there are no scales available to properly weight the child. An estimated weight will be calculated for the purposes of medication dosing.",
+                    "type": "display"
                 }
             ]
         },
@@ -397,6 +511,22 @@
                 {
                     "extension": [
                         {
+                            "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                            "valueQuantity": {
+                                "value": 0.35,
+                                "system": "http://unitsofmeasure.org",
+                                "code": "m"
+                            }
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                            "valueQuantity": {
+                                "value": 1.4,
+                                "system": "http://unitsofmeasure.org",
+                                "code": "m"
+                            }
+                        },
+                        {
                             "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
                             "valueCoding": {
                                 "system": "http://unitsofmeasure.org",
@@ -415,7 +545,27 @@
                     "text": "Height (cm)",
                     "type": "quantity",
                     "required": true,
-                    "repeats": false
+                    "repeats": false,
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "Height Q-help",
+                            "text": "<p>The child&#8217;s height, measured in centimetres.<br />\nHeight is used for children 2 years and older. The assistant should<br />\nhold the child\u2019s knees to keep the legs straight with one hand, and the other hand on the shins to keep the heels against the back and base of the board. The measurer should hold one hand the child\u2019s chin and the other on the head-piece to read the height. The child\u2019s eyes should the in horizontal level and the body flat against the board.</p>\n\n\t<p>Provided that weight has been measured, height for weight z-score will be calculated automatically</p>",
+                            "type": "display"
+                        }
+                    ]
                 },
                 {
                     "extension": [
@@ -441,6 +591,7 @@
                         }
                     ],
                     "linkId": "EmCare.B6.DE10",
+                    "text": " ",
                     "type": "choice",
                     "required": false,
                     "repeats": true,
@@ -450,6 +601,26 @@
                                 "code": "EmCare.B6.DE10",
                                 "display": "Prefer to measure length"
                             }
+                        }
+                    ],
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "EmCare.B6.DE10-help",
+                            "text": "Length is automatically prompted for children under 2 years of age. For children 2 years of age and older, length can be measured if the child is unable to stand.<br />\nIf length is measured instead of height, 0.7cm will automatically be subtracted before z-score calculation",
+                            "type": "display"
                         }
                     ]
                 },
@@ -504,6 +675,7 @@
                         }
                     ],
                     "linkId": "EmCare.B6.DE11",
+                    "text": " ",
                     "type": "choice",
                     "required": true,
                     "repeats": true,
@@ -514,10 +686,46 @@
                                 "display": "Height cannot be measured"
                             }
                         }
+                    ],
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "EmCare.B6.DE11-help",
+                            "text": "The child&#8217;s height cannot be measured",
+                            "type": "display"
+                        }
                     ]
                 },
                 {
                     "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                            "valueQuantity": {
+                                "value": 0.35,
+                                "system": "http://unitsofmeasure.org",
+                                "code": "m"
+                            }
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                            "valueQuantity": {
+                                "value": 1.4,
+                                "system": "http://unitsofmeasure.org",
+                                "code": "m"
+                            }
+                        },
                         {
                             "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
                             "valueCoding": {
@@ -537,7 +745,27 @@
                     "text": "Length (cm)",
                     "type": "quantity",
                     "required": true,
-                    "repeats": false
+                    "repeats": false,
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "Length Q-help",
+                            "text": "<p>The child&#8217;s length, measured in centimetres.<br />\nLength is used for children under 2 years, or those too weak or unable to stand. One assistant should hold the child\u2019s head over the ears and with straight arms. The measurer hold one hand on the child\u2019s knees keeping the legs straight and the other on the foot-place to read the length. The child should lie flat on the board.</p>\n\n\t<p>Provided that weight has been measured, length for weight z-score will be calculated automatically</p>",
+                            "type": "display"
+                        }
+                    ]
                 },
                 {
                     "extension": [
@@ -590,6 +818,7 @@
                         }
                     ],
                     "linkId": "EmCare.B6.DE13",
+                    "text": " ",
                     "type": "choice",
                     "required": true,
                     "repeats": true,
@@ -599,6 +828,26 @@
                                 "code": "EmCare.B6.DE13",
                                 "display": "Length cannot be measured"
                             }
+                        }
+                    ],
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "EmCare.B6.DE13-help",
+                            "text": "The child&#8217;s length cannot be measured",
+                            "type": "display"
                         }
                     ]
                 },
@@ -626,6 +875,7 @@
                         }
                     ],
                     "linkId": "EmCare.B6.DE12a",
+                    "text": " ",
                     "type": "choice",
                     "required": false,
                     "repeats": true,
@@ -635,6 +885,26 @@
                                 "code": "EmCare.B6.DE12a",
                                 "display": "Prefer to measure height"
                             }
+                        }
+                    ],
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "EmCare.B6.DE12a-help",
+                            "text": "The health care worker would prefer to measure the client using height",
+                            "type": "display"
                         }
                     ]
                 },
@@ -696,7 +966,7 @@
                                 }
                             ],
                             "linkId": "EmCare.B6.DE17-help",
-                            "text": "Mid Upper Arm Circumference",
+                            "text": "Mid-upper arm circumference (<span class=\"caps\">MUAC</span>) is an important indicator of acute malnutrition in a child for children 6\u201359 months.<br />\nTo measure:<br />\n- Find the mid-point of the child\u2019s upper arm between the shoulder and elbow.<br />\n- Use <span class=\"caps\">MUAC</span> tape to mark the midpoint on the child\u2019s arm.<br />\n- Hold the large end of the strap against the arm at the midpoint of the arm.<br />\n- Put the other end of the strap around the child\u2019s arm. Thread the end up through the second small slit in the strap. The end will come from behind.<br />\n- Pull both ends until the strap fits closely. It should not be so tight that it makes<br />\nfolds in the skin. It should also not be too loose.<br />\n- Gently press the window. At the marks note the measurement and colour",
                             "type": "display"
                         }
                     ]
@@ -725,6 +995,7 @@
                         }
                     ],
                     "linkId": "EmCare.B6.DE17a",
+                    "text": " ",
                     "type": "choice",
                     "required": true,
                     "repeats": true,
@@ -734,6 +1005,26 @@
                                 "code": "EmCare.B6.DE17a",
                                 "display": "MUAC cannot be measured"
                             }
+                        }
+                    ],
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "EmCare.B6.DE17a-help",
+                            "text": "The child&#8217;s Mid Upper Arm Circumference cannot be measured",
+                            "type": "display"
                         }
                     ]
                 },
@@ -770,22 +1061,42 @@
                             "valueCoding": {
                                 "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                                 "code": "EmCare.B6.DE19",
-                                "display": "Does not appear to be Underweight"
+                                "display": "The child is visually assessed for whether underweight by the health care worker and does not appear to be underweight (estimated weight based on height or age would be equivalent to WHZ= 0 / WAZ= 0)\n(for drug dosing calculations)"
                             }
                         },
                         {
                             "valueCoding": {
                                 "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                                 "code": "EmCare.B6.DE20",
-                                "display": "Appears to be Underweight"
+                                "display": "The child is visually assessed for whether underweight by the health care worker and appears to be underweight (as an aide for dosing calculations) (estimated weight based on height or age would be equivalent to WHZ= -1 / WAZ= -1)\n(for drug dosing calculations)"
                             }
                         },
                         {
                             "valueCoding": {
                                 "system": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/CodeSystem/emcare-custom-codes",
                                 "code": "EmCare.B6.DE21",
-                                "display": "Appears to be Severely Underweight"
+                                "display": "The child is visually assessed for whether underweight and appears to be severely underweight (as an aide for dosing calculations) (estimated weight based on height or age would be equivalent to WHZ= -2 / WAZ= -2)\n(for drug dosing calculations)"
                             }
+                        }
+                    ],
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "help"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "EmCare.B6.DE18-help",
+                            "text": "The health care worker visually assesses for whether underweight (to help estimate weight for medication dosing)",
+                            "type": "display"
                         }
                     ]
                 }

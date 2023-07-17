@@ -29,12 +29,12 @@
         },
         {
             "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
-            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb23classification|1.0.2"
+            "valueCanonical": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcareb23classification|1.0.3.build.245"
         }
     ],
     "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Questionnaire/emcare.b23.classification",
     "name": "EmCare.B23.Classification",
-    "title": "EmCare.B23.Classification",
+    "title": "Classification",
     "status": "active",
     "experimental": false,
     "subjectType": [
@@ -66,6 +66,10 @@
         },
         {
             "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFC0CB;"
+                },
                 {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
@@ -215,6 +219,10 @@
         {
             "extension": [
                 {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFC0CB;"
+                },
+                {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
@@ -326,6 +334,10 @@
         },
         {
             "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFFF00;"
+                },
                 {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
@@ -439,6 +451,10 @@
         {
             "extension": [
                 {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #008000;"
+                },
+                {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
@@ -551,6 +567,10 @@
         {
             "extension": [
                 {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFC0CB;"
+                },
+                {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
@@ -606,6 +626,10 @@
         },
         {
             "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFFF00;"
+                },
                 {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
@@ -663,6 +687,10 @@
         {
             "extension": [
                 {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #008000;"
+                },
+                {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
@@ -718,6 +746,10 @@
         },
         {
             "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFC0CB;"
+                },
                 {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
@@ -775,6 +807,10 @@
         {
             "extension": [
                 {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFFF00;"
+                },
+                {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
@@ -830,6 +866,10 @@
         },
         {
             "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFFF00;"
+                },
                 {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
@@ -887,6 +927,10 @@
         {
             "extension": [
                 {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFC0CB;"
+                },
+                {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
@@ -942,6 +986,10 @@
         },
         {
             "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFC0CB;"
+                },
                 {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
@@ -999,6 +1047,10 @@
         {
             "extension": [
                 {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFFF00;"
+                },
+                {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
@@ -1054,6 +1106,10 @@
         },
         {
             "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #008000;"
+                },
                 {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
@@ -1111,6 +1167,10 @@
         {
             "extension": [
                 {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #008000;"
+                },
+                {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
@@ -1167,6 +1227,10 @@
         {
             "extension": [
                 {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFC0CB;"
+                },
+                {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
@@ -1222,6 +1286,10 @@
         },
         {
             "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFFF00;"
+                },
                 {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
@@ -1301,6 +1369,10 @@
         },
         {
             "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFFF00;"
+                },
                 {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
@@ -1387,6 +1459,10 @@
         {
             "extension": [
                 {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #008000;"
+                },
+                {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
@@ -1442,6 +1518,10 @@
         },
         {
             "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFC0CB;"
+                },
                 {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
@@ -1522,6 +1602,10 @@
         },
         {
             "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #008000;"
+                },
                 {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
@@ -1608,6 +1692,10 @@
         {
             "extension": [
                 {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #008000;"
+                },
+                {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
@@ -1693,6 +1781,10 @@
         {
             "extension": [
                 {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFC0CB;"
+                },
+                {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
@@ -1748,6 +1840,10 @@
         },
         {
             "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFFF00;"
+                },
                 {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
@@ -1805,6 +1901,10 @@
         {
             "extension": [
                 {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #008000;"
+                },
+                {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
@@ -1860,6 +1960,10 @@
         },
         {
             "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFC0CB;"
+                },
                 {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
@@ -1917,6 +2021,10 @@
         {
             "extension": [
                 {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFFF00;"
+                },
+                {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
@@ -1972,6 +2080,10 @@
         },
         {
             "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #008000;"
+                },
                 {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
@@ -2116,6 +2228,10 @@
             "item": [
                 {
                     "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                            "valueString": "style::background-color: #FFC0CB;"
+                        },
                         {
                             "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory",
                             "valueCodeableConcept": {
@@ -2415,6 +2531,10 @@
         {
             "extension": [
                 {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFC0CB;"
+                },
+                {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
@@ -2447,6 +2567,10 @@
                 {
                     "extension": [
                         {
+                            "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                            "valueString": "style::background-color: #FFC0CB;"
+                        },
+                        {
                             "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory",
                             "valueCodeableConcept": {
                                 "coding": [
@@ -2473,6 +2597,10 @@
                 },
                 {
                     "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                            "valueString": "style::background-color: #FFC0CB;"
+                        },
                         {
                             "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory",
                             "valueCodeableConcept": {
@@ -2573,6 +2701,10 @@
         {
             "extension": [
                 {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFC0CB;"
+                },
+                {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
@@ -2605,6 +2737,10 @@
                 {
                     "extension": [
                         {
+                            "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                            "valueString": "style::background-color: #FFC0CB;"
+                        },
+                        {
                             "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory",
                             "valueCodeableConcept": {
                                 "coding": [
@@ -2631,6 +2767,10 @@
                 },
                 {
                     "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                            "valueString": "style::background-color: #FFC0CB;"
+                        },
                         {
                             "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory",
                             "valueCodeableConcept": {
@@ -2762,6 +2902,10 @@
             "item": [
                 {
                     "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                            "valueString": "style::background-color: #FFC0CB;"
+                        },
                         {
                             "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory",
                             "valueCodeableConcept": {
@@ -3137,6 +3281,10 @@
                 {
                     "extension": [
                         {
+                            "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                            "valueString": "style::background-color: #FFC0CB;"
+                        },
+                        {
                             "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory",
                             "valueCodeableConcept": {
                                 "coding": [
@@ -3475,6 +3623,10 @@
         {
             "extension": [
                 {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFC0CB;"
+                },
+                {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
                         "language": "text/fhirpath",
@@ -3562,6 +3714,10 @@
             "item": [
                 {
                     "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                            "valueString": "style::background-color: #FFC0CB;"
+                        },
                         {
                             "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory",
                             "valueCodeableConcept": {
@@ -3694,6 +3850,10 @@
         },
         {
             "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+                    "valueString": "style::background-color: #FFC0CB;"
+                },
                 {
                     "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                     "valueExpression": {
@@ -4173,6 +4333,22 @@
                     }
                 }
             ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
+                    "valueExpression": {
+                        "language": "text/fhirpath",
+                        "expression": "%resource.repeat(item).where(answer.value = true).empty()"
+                    }
+                }
+            ],
+            "linkId": "none",
+            "text": "Assess other problems&#8221;, &#8220;Assess the mother&#8217;s health needs&#8221; &#8220;Advise the caregiver on when to return immediately",
+            "type": "display",
+            "required": false,
+            "repeats": false
         },
         {
             "extension": [

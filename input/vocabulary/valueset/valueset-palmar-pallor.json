@@ -6,7 +6,7 @@
     "title": "EmCare.B15S2.DE01",
     "status": "draft",
     "experimental": false,
-    "description": "The client has Palmar Pallor",
+    "description": "The child has Palmar Pallor",
     "immutable": true,
     "compose": {
         "include": [
@@ -18,7 +18,7 @@
                         "display": "Severe Palmar Pallor",
                         "designation": [
                             {
-                                "value": "The client has severe Palmar Pallor"
+                                "value": "The child has severe palmar pallor if the skin of the palm is very pale or so pale that it looks white."
                             }
                         ]
                     },
@@ -27,7 +27,7 @@
                         "display": "Some Palmar Pallor",
                         "designation": [
                             {
-                                "value": "The client has some Palmar Pallor"
+                                "value": "The child has some palmar pallor if the skin of the child\u2019s palm is pale but not very pale or so pale that it looks white."
                             }
                         ]
                     },
@@ -36,7 +36,7 @@
                         "display": "No Palmar Pallor",
                         "designation": [
                             {
-                                "value": "The client has no Palmar Pallor"
+                                "value": "The child does not have palmar pallor"
                             }
                         ]
                     }

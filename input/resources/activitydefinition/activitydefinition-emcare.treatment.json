@@ -4,7 +4,7 @@
     "url": "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/ActivityDefinition/emcare.treatment",
     "status": "active",
     "library": [
-        "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcaretreatment|1.0.2"
+        "https://fhir.dk.swisstph-mis.ch/matchbox/fhir/Library/emcaretreatment|1.0.3.build.245"
     ],
     "kind": "Task",
     "dynamicValue": [
